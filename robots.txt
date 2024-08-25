@@ -1,1 +1,1 @@
-Sitemap: https://michaelhaaf.github.io/quarto-course-template/sitemap.xml
+Sitemap: https://John-Abbott-College.github.io/1N6-Notes/sitemap.xml

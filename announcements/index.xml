@@ -6,19 +6,19 @@
       version="2.0">
 <channel>
 <title>{{&lt; var course.title &gt;}}</title>
-<link>https://michaelhaaf.github.io/quarto-course-template/announcements/</link>
-<atom:link href="https://michaelhaaf.github.io/quarto-course-template/announcements/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://John-Abbott-College.github.io/1N6-Notes/announcements/</link>
+<atom:link href="https://John-Abbott-College.github.io/1N6-Notes/announcements/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <image>
-<url>https://michaelhaaf.github.io/quarto-course-template/_assets/icon-lightbg.svg</url>
+<url>https://John-Abbott-College.github.io/1N6-Notes/_assets/icon-lightbg.svg</url>
 <title>{{&lt; var course.title &gt;}}</title>
-<link>https://michaelhaaf.github.io/quarto-course-template/announcements/</link>
+<link>https://John-Abbott-College.github.io/1N6-Notes/announcements/</link>
 </image>
 <generator>quarto-1.5.56</generator>
 <lastBuildDate>Mon, 26 Aug 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Sample announcement</title>
-  <link>https://michaelhaaf.github.io/quarto-course-template/announcements/2024-08-26-sample-announcement.html</link>
+  <link>https://John-Abbott-College.github.io/1N6-Notes/announcements/2024-08-26-sample-announcement.html</link>
   <description><![CDATA[ 
 
 
@@ -29,7 +29,7 @@
 
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <guid>https://michaelhaaf.github.io/quarto-course-template/announcements/2024-08-26-sample-announcement.html</guid>
+  <guid>https://John-Abbott-College.github.io/1N6-Notes/announcements/2024-08-26-sample-announcement.html</guid>
   <pubDate>Mon, 26 Aug 2024 00:00:00 GMT</pubDate>
 </item>
 </channel>
