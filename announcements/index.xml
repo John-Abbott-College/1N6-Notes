@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>{{&lt; var course.title &gt;}}</title>
+<link>https://michaelhaaf.github.io/quarto-course-template/announcements/</link>
+<atom:link href="https://michaelhaaf.github.io/quarto-course-template/announcements/index.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<image>
+<url>https://michaelhaaf.github.io/quarto-course-template/_assets/icon-lightbg.svg</url>
+<title>{{&lt; var course.title &gt;}}</title>
+<link>https://michaelhaaf.github.io/quarto-course-template/announcements/</link>
+</image>
+<generator>quarto-1.5.56</generator>
+<lastBuildDate>Mon, 26 Aug 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Sample announcement</title>
+  <link>https://michaelhaaf.github.io/quarto-course-template/announcements/2024-08-26-sample-announcement.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Announcement text</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <guid>https://michaelhaaf.github.io/quarto-course-template/announcements/2024-08-26-sample-announcement.html</guid>
+  <pubDate>Mon, 26 Aug 2024 00:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,1 @@
+Sitemap: https://michaelhaaf.github.io/quarto-course-template/sitemap.xml

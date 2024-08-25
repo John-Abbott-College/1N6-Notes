@@ -1,0 +1,34 @@
+[
+  {
+    "listing": "/topics/all-lectures.html",
+    "items": [
+      "/topics/sample-topic/sample-lecture.html"
+    ]
+  },
+  {
+    "listing": "/topics/sample-topic/index.html",
+    "items": [
+      "/topics/sample-topic/sample-lecture.html"
+    ]
+  },
+  {
+    "listing": "/about/index.html",
+    "items": [
+      "/about/this-site.html",
+      "/about/calendar.html",
+      "/about/syllabus.html"
+    ]
+  },
+  {
+    "listing": "/topics/index.html",
+    "items": [
+      "/topics/sample-topic/index.html"
+    ]
+  },
+  {
+    "listing": "/announcements/index.html",
+    "items": [
+      "/announcements/2024-08-26-sample-announcement.html"
+    ]
+  }
+]
