@@ -1,0 +1,9 @@
+---
+title: "Topics"
+subtitle: "Directory listing for all topics covered in this course."
+listing: 
+  type: default
+  fields: [image, title, subtitle, categories]
+  include:
+    filename: "*index.qmd"
+---

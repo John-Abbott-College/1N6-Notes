@@ -1,0 +1,34 @@
+---
+title: Syllabus
+subtitle: "Course description outlining goals, expectations, resources, and other important information."
+---
+
+{{< include /_reference-links.md >}}
+
+![This comic may be smarmy, but is it usually true... Image <a href="https://jorgecham.com/">&copy; jorge cham</a>, retreived from <a href="https://phdcomics.com/comics.php?f=1583">PHD Comics</a>.](_assets/itsInTheSyllabus.png "Time doesn't have to be your downfall, if you plan ahead."){fig-alt="Captain Hook holds a timepiece high with one hand, and points at the clock hands with his hook hand."} 
+
+## Overview
+
+From the course outline:
+
+> In this course students learn to install hardware and software and provide technical support and training to users. Topics include installing, configuring, and uninstalling hardware devices and device drivers, installing and uninstalling system and application software, backing up and restoring software, hard disk partitioning and formatting, help desk, user training.
+
+## Logistics
+
+- **Office:** {{< var instructor.office >}}
+- **Office hours:** {{< var instructor.office-hours >}}
+- **Email:** {{< var instructor.email >}}
+- **Timetable:** {{< var course.timetable >}}
+- **Course webpage:** This website for all content, [Omnivox][omnivox] for assignment submissions.
+
+### Communication
+- Teams - For communicating (fastest, most reliable that I will check it same-day)
+- MIO - For communicating (non-time-critical)
+- Email - For communicating (time-critical).  Will aim for <24hr response.
+- [Omnivox][omnivox] - For receiving & submitting exercises/assignments/project and getting marks
+
+### Assessment
+
+- 60% Assignments and Labs
+- 20% Test 1 
+- 20% Test 2

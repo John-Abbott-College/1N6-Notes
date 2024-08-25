@@ -1,0 +1,6 @@
+---
+title: "Sample announcement"
+date: 2024-08-26
+---
+
+Announcement text

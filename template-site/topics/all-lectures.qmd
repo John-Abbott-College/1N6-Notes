@@ -1,0 +1,16 @@
+---
+title: "All lectures"
+subtitle: "Listing for all lecture material provided in this course."
+listing: 
+  type: table
+  fields: [date, title, subtitle]
+  filter-ui: true
+  sort-ui: [date, title]
+  sort: date
+  date-format: iso
+  categories: true
+  exclude:
+    filename: "*index.qmd"
+---
+
+This index file tracks all .qmd files in the "topics" directory, to provide a flat view of all lectures that can be organized by date/title/topic/etc.

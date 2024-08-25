@@ -1,0 +1,26 @@
+---
+title: Calendar
+subtitle: "Roadmap for course deliverables; record of lectures & activites we have covered along the way."
+---
+
+{{< include /_reference-links.md >}}
+
+![The focused pupil keeps watch on Time. Image retrieved from <a href="https://www.pinterest.com/ricodetroit/">Bryan Superfreak Magnum</a> on <a href="https://www.pinterest.com/pin/papieren-poppen--573646071282497294/">Pinterest</a>.](_assets/ticktock.jpg "Time doesn't have to be your downfall, if you plan ahead."){fig-alt="Captain Hook holds a timepiece high with one hand, and points at the clock hands with his hook hand."} 
+
+This is the authoritative calendar for content covered in class, and for content you should expect to see covered as we continue through the course.
+
+You can compare this calendar with the calendar from the [Course Outline][course-outline] to see where this course has deviated from the original outline.
+
+## August & September
+
+### Deliverables
+
+1. **Lab 1:** TBD
+2. **Assignment 1:** TBD
+
+### Schedule
+
+- **Aug 22:** Intro to course
+- **Aug 26:** Intro to course
+- **Aug 27:** TBD
+- **Aug 29:** TBD

@@ -1,0 +1,56 @@
+project:
+  type: website
+
+website:
+  title: "{{< var course.title >}}"
+  favicon: "_assets/favicons/favicon.ico"
+  image: "_assets/icon-lightbg.svg"
+  open-graph: true
+  page-navigation: true
+  back-to-top-navigation: true
+  bread-crumbs: true
+
+  search:
+    show-item-context: true
+    type: overlay
+    copy-button: true
+
+  page-footer:
+    center:
+      - text: "About"
+        href: about/index.qmd
+
+  navbar:
+    logo: "_assets/icon-lightbg.svg"
+    left:
+      - index.qmd
+      - text: "Announcements"
+        href: announcements/index.qmd
+      - text: "Calendar"
+        href: about/calendar.qmd
+      - text: "Syllabus"
+        href: about/syllabus.qmd
+      - text: "Lectures"
+        href: topics/all-lectures.qmd
+      - text: "{{< iconify simple-icons moodle >}}"
+        href: https://moodle.johnabbott.qc.ca/course/view.php?id=807
+      - text: "{{< iconify fa6-brands github >}}"
+        href: https://github.com/john-abbott-college/quarto-course-template
+
+  sidebar:
+    style: "floating"
+    align: center
+    contents: 
+      - index.qmd
+      - announcements/index.qmd
+      - section: "About"
+        contents: about/**
+      - section: "Topics"
+        contents: topics/**
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    date-modified: last-modified
