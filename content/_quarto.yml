@@ -4,7 +4,7 @@ project:
 website:
   title: "{{< var course.title >}}"
   favicon: "_assets/favicons/favicon.ico"
-  image: "_assets/icon-lightbg.svg"
+  image: "_assets/favicons/favicon-32x32.png"
   open-graph: true
   page-navigation: true
   back-to-top-navigation: true
@@ -50,7 +50,9 @@ website:
 
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    css: _assets/css/styles.css
     toc: true
     date-modified: last-modified
+    theme: 
+      dark: [solar, _assets/css/customizations-dark.scss]
+      light: [cosmo, _assets/css/customizations-light.scss]

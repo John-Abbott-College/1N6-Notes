@@ -1,0 +1,42 @@
+/*-- scss:defaults --*/
+@import 'common';
+@import 'colors-solar.scss';
+
+// Font
+$body-color: $gray-400;
+
+// Navigation
+$navbar-bg: $gray-900;
+
+// Breadcrumbs
+$breadcrumb-bg: $gray-900;
+$breadcrumb-padding-y: 0;
+$breadcrumb-padding-x: 0;
+
+// Code blocks
+// $code-block-bg:	rgba($primary, 0.1) !default;
+// $code-block-border-left: $primary;
+// $code-block-border-left-size: 0.5rem;
+// $code-block-bg-alpha: -.9;
+// $btn-code-copy-color: $white;
+// $btn-code-copy-color-active: $primary;
+
+// $code-bg: rgba($secondary, 0.1) !default;
+// $code-color: $light !default;
+
+// $callout-border-width: 0.5rem;
+// $callout-border-scale: 50%;
+
+// // Tables
+// $table-dark-bg:               $dark !default;
+// $table-dark-border-color:     darken($dark, 5%) !default;
+
+// Indicators
+// .badge {
+//   &.bg-light {
+//     color: $body-color;
+//   }
+// }
+
+// Panels
+// $nav-tabs-link-active-color: $body-color;
