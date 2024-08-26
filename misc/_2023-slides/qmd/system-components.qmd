@@ -1,0 +1,662 @@
+# Technical Support (420-1N6-AB)System Unit Components
+
+# Fall 2023
+
+# System Unit – Main Inner Components
+
+# Instructor prep
+
+* Take apart a computer and bring it in class
+* Have additional components ready to circulate
+  * PSU
+  * Motherboard with a different form factor
+  * CPU PGA
+  * CPU LDA
+  * RAM
+  * HHD
+  * SSD
+  * Heat sink
+
+# Outline
+
+* System Unit Main Components:
+  * Case
+  * Power Supply Unit
+  * Connectors
+  * Motherboard
+    * Expansion slots
+    * Buses
+    * CPU
+    * Cooling Devices
+    * Chipset
+    * RAM
+  * GPU
+  * Storage Device
+
+# Question for you?
+
+Have you ever looked inside your own computer?
+
+\(or someone else’s\)
+
+For what reason?
+
+What did you see inside?
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components0.png)
+
+# Inside A Computer – The system unit
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components1.gif)
+
+Case
+
+Power Supply
+
+Motherboard
+
+Connectors
+
+Cooling Devices
+
+Processor \(CPU\)
+
+Chipset
+
+Buses
+
+Memory \(RAM\)
+
+Storage Devices
+
+# Case
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components2.png)
+
+* Provides protection and cooling for the internal components\.
+* Also prevents damage from  <span style="color:#0055A4">static electricity </span> \(components grounded via attachment to case\)\.
+* Usually made of plastic\, steel or aluminum\.
+* Fans move air through the case:
+  * to replace warm air with cold air to keep components at stable temperatures
+  * to prevent build\-up of dust
+  * There exist many guides/studies for optimal airflow\. E\.g\.  _[https://voltcave\.com/pc\-airflow\-guide/](https://voltcave.com/pc-airflow-guide/)_
+
+# 2) Power Supply
+
+__Main purpose: __ Converts AC power \(alternating current\) from wall socket to DC power \(direct current\)\. Direct current \(0 or 5V\) is used to power digital circuits\.
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components3.jpg)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components4.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components5.gif)
+
+<span style="color:#FF0000">Note: PSU have their own fans:</span>
+
+<span style="color:#FF0000">Energy conversion releases a lot of heat\!</span>
+
+# Activity: Feeling Your Way
+
+With a partner\, take it in turns to close your eyes and feel around the back of a PC\.
+
+Try and identify the connectors  you find\. Your partner can help you by confirming your guesses\.
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components6.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components7.png)
+
+# Uninterruptible Power Supply
+
+In the case of a power outage\, an Uninterruptible Power Supply \(UPS\) can keep a computer running for a few minutes to several hours depending on the sophistication of the UPS\. See  <span style="color:#0563C1"> _[https://www\.wikihow\.com/Buy\-and\-Use\-an\-Uninterruptible\-Power\-Supply](https://www.wikihow.com/Buy-and-Use-an-Uninterruptible-Power-Supply)_ </span>  for an example
+
+We will talk more about uninterruptible power supply when we start speaking about server hardware\.
+
+# 2) Power Supply
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components8.png)
+
+* Computers can only tolerate slight fluctuations in power without  __needing to shut down__
+  * \.
+* Important:  <span style="color:#FF0000"> __Never open a power supply\!__ </span>  The capacitors contained within can keep a dangerous high voltage\, high power charge long after being unplugged\.
+
+<span style="color:#FF0000">Demo: PSU What are the supported DV outputs?</span>
+
+# Power Supply Connectors
+
+* Most power supply connectors are : 20 \+ 4 pins
+* Usually made up of wires of various colors:
+  * Yellow 12V
+  * Red 5V
+  * Orange 3\.3V
+  * Other colors may be ground 0V
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components9.png)
+
+# Power Supply Ratings
+
+* <span style="color:#FF0000"> __Useful for Assignment 1__ </span>
+* Ratings:
+  * Wattage \(amount of power delivered\, must be greater than the sum of power required by all parts\, some power supplies can provide more power than others\)
+  * Efficiency \(Law of thermodynamics: 100% power input cannot be converted to 100% power output; some power supplies have higher efficiency ratings than others\)
+  * For more detailed explanation:  <span style="color:#0563C1"> _[https://www\.newegg\.com/insider/how\-to\-choose\-a\-pc\-power\-supply\-buying\-guide/](https://www.newegg.com/insider/how-to-choose-a-pc-power-supply-buying-guide/)_ </span>
+
+# 3) Connectors
+
+These connect specific components to various ports on the motherboard\.
+
+Most connectors are  __keyed__  \(can only be inserted one way\)\.
+
+Note: Always check the pins if you have trouble with a connector\. “If it doesn’t go in like butter\, it doesn’t go in at all” \-\- never force a connection\! you are likely going to damage the pins\.
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components10.png)
+
+# Types of connectors
+
+Floppy drive connectors \(old days\)
+
+SATA Cables \(for hard drives\)
+
+Molex – Less used but still present
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components11.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components12.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components13.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components14.png)
+
+PCIe \(Video Cards\)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components15.png)
+
+# 4) Motherboard (overview)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components16.png)
+
+Connects the CPU\, RAM\, Expansion ports\.
+
+Composed of various chips all combined into  __north __ and  __south__  bridges
+
+More on those in a few weeks\.\.\.
+
+# 4) Motherboard - Form Factors
+
+Main circuit board and controls the electrical pathways \( <span style="color:#0055A4">buses</span> \) found in a computer\.
+
+The buses allow data to travel between the various components of a computer\.
+
+Various form factors\, e\.g\. AT\, ATX\, LPX\, BTX\, ITX\.
+
+2001
+
+<span style="color:#000000">9\.6" x 9\.6"</span>
+
+IBM 1980s
+
+Huge 12 x 13"\, no ports
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components17.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components18.png)
+
+---
+
+ITX – used for imbedded systems such as routers
+
+You'll notice that the I/O Ports on the mother board is always located around the same area\.
+
+This is to keep certain consistency across manufacturer and regardless of the form factors
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components19.png)
+
+* __AT __
+  * Invented by IBM in early 1980s\, now obsolete\.
+  * Huge in size \(approximately 12 x 13 inches\)\.
+  * Needed lots of space for power supply and its various chips\.
+  * Lacked external ports\, only allowed for monitor and keyboard\.
+* __ATX__
+  * Created in 1995 to meet the need for more connectors\.
+  * Got off to a slow start but by 1998 became the most common form factor\.
+  * Biggest change to AT was the rear panel with standard set of ports for expansion\.
+  * Power supply position for better airflow\, CPU and RAM positioned for easier access\.
+  * Variations 12x9in \(full size\)\, 9\.6x9\.6in \(microATX\)\, 9x7\.5in \(FlexATX no longer used\)\.
+
+---
+
+Extra slide for studying
+
+* __ITX__
+  * Created in 2001 to meet the demand for smaller computers\.
+  * ITX failed but led to development of  smaller form factor \(SSF\) motherboards\.
+  * MiniITX \(6\.7x6\.7in\)\, NanoITX \(4\.7x4\.7in\) and PicoITX \(3\.8x2\.8in\)
+  * Commonly used for embedded systems and specialized devices such as routers\.
+  * Require very little power\, therefore produce less heat\.
+* __Proprietary__
+  * Some computer manufacturers make motherboards that work only with their cases\.
+  * Services and upgrades usually need to be handled by authorized dealers\.
+  * Often hard to get replacement parts and they are usually expensive\.
+
+---
+
+Extra slide for studying
+
+
+# 4.1) Motherboard – CPU Socket
+
+Let’s have a closer look at the CPU Socket: This is where the CPU will sit
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components20.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components21.png)
+
+# 5) CPU
+
+* Most important element of the computer in terms of computing power\.
+  * Brains of the computer\.
+  * Responsible for  __interpreting __ and  __executing __ the commands from the software\.
+  * While the CPU is processing one step of the program\, the remaining instructions and the data are stored in a special memory called cache\.
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components22.png)
+
+<span style="color:#FF0000">More on this on week 5</span>
+
+# How to Connect a CPU?
+
+<span style="color:#7F7F7F">CPU connection on the motherboard is known as the CPU socket\.</span>
+
+<span style="color:#7F7F7F">The CPU is connected to the motherboard in one of two ways:</span>
+
+* Pin Grid Array – PGA
+  * Pins are on the CPU \(underside of the processor\)\.
+  * Socket on motherboard includes holes that line up with the CPU pins\.
+
+* Land Grid Array – LGA
+  * Pins are on the motherboard \(on socket\) instead of on the processor\.
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components23.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components24.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components25.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components26.gif)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components27.png)
+
+# CPU Brands
+
+Intel
+
+AMD
+
+Higher price CPUs
+
+Excellent for a variety of tasks
+
+Good balance in performance and heavy processing tasks
+
+Good budget CPUs for gaming
+
+Very good for PCs focused on gaming
+
+Less power consumption
+
+Less heat\.
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components28.png)
+
+<span style="color:#FF0000">Very Important for lab2</span>
+
+# CPU Core Components
+
+“Man\-in\-a\-box”
+
+Clever guy who can perform any mathematical function quickly\.
+
+He lives in a closed\-up box so it is hard to communicate with him\.
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components29.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components30.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components31.png)
+
+# CPU Analogy: “Man in a Box”
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components32.png)
+
+* Imagine we install a set of 16 lightbulbs
+  * \(8 inside\, 8 outside\)\.
+* These can be controlled by us and by the man\-in\-the\-box\.This is our external data bus \(EDB\)\.
+* We can communicate with each other as long as we agree ahead of time what each pattern of light bulbs means\.
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components33.png)
+
+# Codebook
+
+<span style="color:#0055A4"> __Codebook__ </span>
+
+This defines the commands that we can give to the man in the box\.
+
+If we both have a copy\, then we can give him commands and he can understand them\.
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components34.png)
+
+# Registers
+
+<span style="color:#0055A4"> __Registers__ </span>
+
+We can give the man some work and see what he replies\.
+
+But to do his work\, the man needs at least four workstations\.
+
+General purpose registers are the most common\. AX\, BX\, CX\, DX \(Intel\)\.
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components35.png)
+
+# Clock
+
+Now we are ready to put our man to work\.We can send him the first command by lighting up the wires on the EDB\.
+
+But how does he know when we have finished setting up the light bulbs?
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components36.png)
+
+# 6.1) Cooling Devices - Fans
+
+The flow of current between the electronic components generates heat\.  <span style="color:#FF0000">The man in the box is heating\!\!</span>
+
+<span style="color:#0055A4">Fans</span>  inside the case increase airflow and removes heat\.
+
+Occasionally video cards or other components have their own fans to cool them\.
+
+# Activity: Cooling devices Fans vs Liquid cooling
+
+With a partner take 5\-7 minutes to research the major differences between Fans and liquid cooling devices\.
+
+Add the pros and cons in [this ](https://jamboard.google.com/d/1TA_9nVlYkXINf5EjcCX3ZABHw6H2fwhBJ9cW_biNDf0/edit?usp=sharing)[jamboard](https://jamboard.google.com/d/1TA_9nVlYkXINf5EjcCX3ZABHw6H2fwhBJ9cW_biNDf0/edit?usp=sharing)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components37.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components38.png)
+
+# 6.2) Cooling Devices – Heat sinks
+
+* <span style="color:#0055A4">Heat sinks </span> also draw heat away from the CPU core\.
+  * A heat sink is a piece of copper or aluminum that resides between the processor and the CPU fan\.
+  * It absorbs the heat from the processor and the fan disperses the heat\.
+  * Increase of the surface area
+
+# Internal Components: General Overview
+
+Let's have a closer look at the RAM slots and RAM
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components39.png)
+
+# 4.2) Motherboard – RAM slots
+
+Let’s have a closer look at the RAM slots
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components40.png)
+
+# 5) Main Memory
+
+* Referred to as RAM \(Random Access Memory\)
+* RAM is a collection of integrated circuits \(chips\)\.
+* Considered the “Primary” storage for the CPU\.
+  * <span style="color:#0055A4">Temporary</span>  storage for  <span style="color:#0055A4">data</span>  and  <span style="color:#0055A4">programs</span>  that are being accessed by the CPU\.
+* Volatile memory: contents are erased when the computer is switched off\. \(or when power is lost\)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components41.png)
+
+# 5) Main Memory (cont.)
+
+More RAM means more capacity to hold and process large programs and files\.
+
+Maximum installed is limited by the  <span style="color:#FF0000">motherboard </span> and the  <span style="color:#FF0000">operating system\.</span>
+
+# 4.1) Motherboard – Expansion Slots
+
+Let’s have a closer look at what we call expansion slots\.
+
+Expansion slots are ports inside a computer found on the motherboard\. They provide the possibility to expand the hardware of your PC\.
+
+For example\, you may want to install a network card\, a sound card\, and most importantly a video card\.
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components42.png)
+
+# 5) Expansion Slots
+
+<span style="color:#0055A4">Expansion slots </span> allow us to increase the functionality of a computer by adding controllers for specific devices \(often called  <span style="color:#0055A4">adapter cards</span> \) e\.g\. sound\, video\, NIC \(network Interface Card\)\.
+
+PCI 		used in most computers\, 32 or 64 bit
+
+AGP 		designed to be used by video adapters
+
+PCIe		replacing AGP in newer computers
+
+ISA		older\, rarely used\, 8 or 16 bit
+
+EISA		older\, rarely used\, 32 bit
+
+MCA		IBM proprietary 32 bit\, older\, rarely used
+
+PCI\-X		32 bit\, can run up to four times faster than PCI
+
+MiniPCI	32 bit\, used by laptops\, has three different form factors
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components43.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components44.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components45.gif)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components46.jpg)
+
+__[AGP](https://www.computerhope.com/jargon/a/agp.htm)__  \- [Video card](https://www.computerhope.com/jargon/v/video-card.htm)\.
+
+__[AMR](https://www.computerhope.com/jargon/a/amr.htm)__  \- [Modem](https://www.computerhope.com/jargon/m/modem.htm)\, [sound card](https://www.computerhope.com/jargon/s/souncard.htm)\.
+
+__[CNR](https://www.computerhope.com/jargon/c/cnr.htm)__  \- Modem\, [network card](https://www.computerhope.com/jargon/n/nic.htm)\, sound card\.
+
+__[EISA](https://www.computerhope.com/jargon/e/eisa.htm)__  \- [SCSI](https://www.computerhope.com/jargon/s/scsi.htm)\, network card\, video card\.
+
+__[ISA](https://www.computerhope.com/jargon/i/isa.htm)__  \- Network card\, sound card\, video card\.
+
+__[PCI](https://www.computerhope.com/jargon/p/pci.htm)__  \- Network card\, SCSI\, sound card\, video card\.
+
+__[PCI Express](https://www.computerhope.com/jargon/p/pciexpre.htm)__  \- Video card\, modem\, sound card\, network card\.
+
+__[VESA](https://www.computerhope.com/jargon/v/vesa.htm)__  \- Video card\.
+
+# 7) Graphics Cards
+
+Also known as Video cards or Graphical Processing Units
+
+One of the most interesting use of expansion slots is the addition of video cards\, also known as Graphical Processing Unit\.
+
+Its speeds up the processing power of a computer\.
+
+Often useful in video gaming\, video rendering\, scientific parallel computing
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components47.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components48.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components49.png)
+
+# GPU VS CPU
+
+# CPU vs GPU
+
+GPU cannot replace the CPU because their architecture is different and meant for different purposes
+
+GPU is great to parallelize computations\!
+
+But the GPU is not as versatile as the CPU which has a larger instruction set \(code book\)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components50.png)
+
+# GPU vs CPU
+
+\(click to load the video\)
+
+# 8) Storage Devices
+
+Storage devices store data  <span style="color:#0055A4">permanently</span> \.
+
+Some are installed inside the case \(e\.g\. hard drive\);
+
+Some are removable and portable \(e\.g\. external flash drive\)\.
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components51.jpg)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components52.png)
+
+# 7) Storage Devices (cont.)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components53.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components54.jpg)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components55.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components56.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components57.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components58.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components59.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components60.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components61.jpg)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components62.png)
+
+# 7.1) Storage Devices: Floppy Drive
+
+Uses 3\.5 inch floppy disks \(or 5\.25 inch floppy disks \- older\)\.
+
+Largely obsolete\.
+
+Magnetic disks store up to 1\.44Meg of data\.
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components63.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components64.png)
+
+# 7.2) Storage Devices: Hard Drive
+
+* Hard Disk Drive \(HDD\)
+  * Traditional hard drives\.
+  * Uses magnetic\-based storage on a moving disk \(somewhat like a vinyl player\)
+  * Magnetic hard drives have drive motors that spin the magnetic platters and move the drive heads\.
+  * Speed measured in revolutions per minute
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components65.jpg)
+
+<span style="color:#FF0000">Demo: how does it look inside an HDD</span>
+
+* Solid State Drives \(SSD\)
+  * Do not have moving parts and use __ semi\-conductors__  to store data\.
+  * Non\-volatile flash memory chips manage the storage on an SSD\, resulting in faster access to data\, higher reliability and reduced power usage\.
+* Usually configured as C: drive on a Windows machine and contains the operating system and applications\. Storage capacity can range from gigabytes to terabytes\.
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components66.png)
+
+# 7.4) Storage Devices: Tape Drive
+
+Magnetic tapes are often used for backups or archiving data\. Still used/created to this day\! Very cheap per GB costs\.
+
+Data retrieval can be fast but locating specific data is slow\.
+
+Can hold many terabytes\.
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components67.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components68.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components69.png)
+
+# 7.5) Storage Devices: Optical Drive
+
+* Uses lasers to read the data on the optical media\.
+  * CD \(compact disc\) 700 Mb
+  * DVD \(digital versatile disc\) 4\-8 Gb\.
+  * BD \(Blu\-ray disc\) 25\-50 Gb\.
+* Optical media can be:
+  * Pre\-recorded \(read only\)
+  * Recordable \(write once\)
+  * Re\-recordable \(read and write multiple times\)\.
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components70.jpg)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components71.jpg)
+
+# 7.6) Storage Devices: External Flash Drive
+
+Removable storage device that connects to a USB port\.
+
+These use the same type of non\-volatile memory chips as SSDs and do not require power to maintain the data\.
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components72.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components73.png)
+
+# Storage Devices: Interfaces
+
+To install a drive internally in a computer\, the connection interface on the drive must be the same as the controller on the motherboard\.
+
+Motherboards support different types of interfaces\.
+
+# Storage Devices: Interfaces Types (In order of oldest to newest)
+
+| IDE <br />  | Integrated Drive Electronics / Advanced Technology Attachment.<br />Also called ATA.<br />Early drive controller interface, originally only supported hard drives up to 540 MB.<br />Uses a 40 pin connector, and maximum cable length of 46cm (18in). |
+| :-: | :-: |
+| EIDE | Enhanced Integrated Drive Electronics (also called ATA-2).<br />Updated version of IDE, supporting larger drives and direct memory access.<br />Uses a 40 pin connector. |
+| PATA | Parallel version of ATA.<br />Used internally due to maximum cable length of 46cm (18in).<br />Largely replaced by SATA in newer systems. |
+| SATA (most commonly used today) | Serial version of ATA, with slimmer and longer cables providing better airflow.<br />Uses 7-pin connector (less pins means less issues with electromagnetic interference).<br />SATA hard drives tend to be quieter than IDE drives. |
+
+# Storage Devices: Interfaces Types (cont.)
+
+| eSATA  | External serial ATA, provides a hot-swappable external interface for SATA. |
+| :-: | :-: |
+| SCSI | Small Computer System Interface.<br />Drive controller that can connect up to 15 drives.<br />Internal and external use, uses 25, 50 or 68 pin connector. |
+
+_Note:_  __ Hot\-swapping is the ability to connect and disconnect a device while the computer is on\.__
+
+# Computer Memory Hierarchy
+
+<span style="color:#7F7F7F">Source: https://en\.wikipedia\.org/wiki/Memory\_hierarchy </span>
+
+# Build PC: How do I choose a motherboard?
+
+Identify the user need for this PC: let's say Gamer PC
+
+2\.  Go to PC [Parts Picker](https://pcpartpicker.com/list/)
+
+3\.  Select a CPU \(that matches your needs\) and ask yourself those questions
+
+4\. What would be the most appropriate form factor?
+
+5\. What's the max RAM needed?
+
+6\. Would you need expansion ports in the future?
+
+7\. What's the aesthetic feel of the PC? LEDs? Metal built?
+
+This will restrict the types of motherboards you can use\.
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components74.png)
+
+![](_assets/Lecture%203%20-%20System%20Unit%20Components75.png)
+
+# Q & A
+
+---
+
+In Slide Show mode, click the arrow to enter the PowerPoint Getting Started Center.
+

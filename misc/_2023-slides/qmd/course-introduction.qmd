@@ -1,0 +1,178 @@
+# (420-1N6-AB) Technical Support
+
+# Fall 2023
+
+# The Teachers
+
+# Youmna Badawy (Section 2)
+
+* Office:
+  * Penfield P235
+* Office Hours:
+  * Mon: 3\-4 PM\, TUE: 10 AM – 12 PM\, WED: 1\-4 PM
+  * Other hours: By appointment on Outlook: [Booking Link](https://outlook.office.com/bookwithme/user/be6f45e6ebc4491f8e1ec3d7917a39a0@johnabbott.qc.ca?anonymous&ep=pcard)
+* Contact:
+  * MIO \(I check every day\)
+  * Teams \(I check every day\)
+* Course Website:
+  * Léa
+
+# Tell me more about you
+
+What's your name?
+
+What high school are you from?
+
+Why did you choose computer science?
+
+One fun fact about you? \(Example: I play the guitar and once got to perform in front of a large crowd\)
+
+# What this course includes?
+
+![](_assets/Lecture%200%20-%20Course%20Introduction0.png)
+
+![](_assets/Lecture%200%20-%20Course%20Introduction1.png)
+
+Intro to Networking
+
+Operating systems
+
+Computer Hardware
+
+![](_assets/Lecture%200%20-%20Course%20Introduction2.png)
+
+![](_assets/Lecture%200%20-%20Course%20Introduction3.jpg)
+
+Intro to Server Hardware
+
+![](_assets/Lecture%200%20-%20Course%20Introduction4.png)
+
+Helpdesk and Troubleshooting computers
+
+---
+
+•Each topic above is a massive field of research and industry in its own right -- you could get a PhD in each! We will be introduced to each briefly, and at a high level (overview) to come away with a better technical understanding than we had before.
+
+
+# What is this course preparing you for?
+
+![](_assets/Lecture%200%20-%20Course%20Introduction5.png)
+
+![](_assets/Lecture%200%20-%20Course%20Introduction6.jpg)
+
+# What will I learn?
+
+![](_assets/Lecture%200%20-%20Course%20Introduction7.png)
+
+Learn to troubleshoot hardware\, firmware and software\.
+
+Understand computers from binary to the use of each hardware part
+
+Understand the role of IT Helpdesk Technicians
+
+Perhaps even build your own PC\!
+
+![](_assets/Lecture%200%20-%20Course%20Introduction8.png)
+
+![](_assets/Lecture%200%20-%20Course%20Introduction9.png)
+
+# Workload
+
+2 Hours lecture
+
+4 Hours laboratory
+
+3 hours homework
+
+# Material to acquire
+
+![](_assets/Lecture%200%20-%20Course%20Introduction10.jpg)
+
+* No textbooks\!
+* Multiheaded Screwdriver x 1:
+  * For assembling computers\!
+  * Example:  _[Picquic\-88001\-Multi\-Bit\-Screwdriver\-Full\-Size](https://www.amazon.ca/Picquic-88001-Multi-Bit-Screwdriver-Full-Size/dp/B01KZ0AQDU/)_
+* \(Optional but recommended\) Anti\-static ESD bracelet band:
+  * For your safety when playing with electronics
+  * Example: [Antistatic\-Wrist\-Strap](https://www.amazon.ca/Antistatic-Wrist-Strap%EF%BC%8CAdjustable-Static-Band/dp/B09HZQ6FWX/ref=pd_rhf_d_ee_s_pd_sbs_rvi_sccl_2_4/132-2941693-8503316?pd_rd_w=kwM17&content-id=amzn1.sym.c4b12d63-26ee-451b-a00e-167063525dc5&pf_rd_p=c4b12d63-26ee-451b-a00e-167063525dc5&pf_rd_r=NS4NHVRVT92Z90171TC4&pd_rd_wg=8rydi&pd_rd_r=2d633ec8-9be5-4ad5-84f6-ce65f93b5ef0&pd_rd_i=B09HZQ6FWX&psc=1)
+* USB 3\.0 Stick with at least 16Gb\.
+  * Example: [USB 3\.0 16Gb Sticks](https://www.amazon.ca/10-Easy-Storage-ZZ-Digital-Storage/dp/B07PGSFMV2/ref=sr_1_1_sspa?crid=3JYTNTSDM7U9I&keywords=USB%2B16%2BGB&qid=1692549092&sprefix=usb%2B16%2Bgb%2Caps%2C124&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1)
+
+![](_assets/Lecture%200%20-%20Course%20Introduction11.jpg)
+
+# Classroom Policies & Student Success
+
+---
+
+Lecture notes go here
+
+# How to excel in this course?
+
+* Test 1: 20% \(Week 7\-8\)
+* Test 2: 20%  \(Week 14\-15\)
+* Assignments and Labs \(60%\)
+  * 4 assignements \(15% each\) – every 2\-3 weeks
+  * 5 or more Labs will be done\, your attendance is mandatory\!
+
+# Rule 1: Attend all classes and labs!
+
+I will freely provide my slides and as many course resources as necessary to supplement this class\.
+
+But\! My course notes are not a substitute for regular class attendance\. Hands on experience is key\!
+
+![](_assets/Lecture%200%20-%20Course%20Introduction12.jpg)
+
+# Rule 2: Consult the Support Material
+
+* Class Slides \(available on Léa\)
+* Lab and exercises in class
+* Assignments
+* Your class notes
+* Other:
+  * Handouts
+  * Suggested reading material
+  * Suggested textbooks
+
+![](_assets/Lecture%200%20-%20Course%20Introduction13.jpg)
+
+# Rule 3: Use a calendar to track all your deadlines
+
+* To stay on track for all your deadlines\, try to plan one or two weeks ahead\!
+* Complete your assignments on time
+  * But\! Endeavour to at least hand in assignments\. Better late/incomplete than never\.
+* If you miss a deadline\, please don't ignore it\!
+  * MIO me\. I’m here to help\! And that includes for late/incomplete assignments\.
+
+![](_assets/Lecture%200%20-%20Course%20Introduction14.png)
+
+# Rule 4: Reach out for help!
+
+* Reach out to me if you ever feel stuck or overwhelmed
+* Try your best to get to know other students\!
+  * Help each other out\! You will learn much more from working through the assignments yourself and from teaching eachother than you will from listening to me
+  * And\, building relationships with new peers is\, in my opinion\, the best part of school
+* Seek out help if you are struggling \(from me\, from peers\, from John Abbott student services\, etc\.\)
+
+![](_assets/Lecture%200%20-%20Course%20Introduction15.jpg)
+
+# Rule 5: Be curious!
+
+This field has a lot of support online\, videos and more\!
+
+Stay curious\, the Internet is your Oyster\!
+
+![](_assets/Lecture%200%20-%20Course%20Introduction16.jpg)
+
+# Feedback
+
+* Let me know how things are going in the course:
+  * Am I covering the material too slowly or too quickly?
+  * Are the slides material clear?
+  * Can you read my handwriting?
+  * Can you hear me well?
+  * Does my answer make sense?
+  * Do you understand theassignment questions?
+  * Etc\.
+
+![](_assets/Lecture%200%20-%20Course%20Introduction17.png)
+
