@@ -1,9 +1,7 @@
 [
   {
     "listing": "/topics/all-lectures.html",
-    "items": [
-      "/topics/hardware/course-introduction.html"
-    ]
+    "items": []
   },
   {
     "listing": "/about/index.html",
@@ -15,9 +13,7 @@
   },
   {
     "listing": "/topics/hardware/index.html",
-    "items": [
-      "/topics/hardware/course-introduction.html"
-    ]
+    "items": []
   },
   {
     "listing": "/topics/index.html",

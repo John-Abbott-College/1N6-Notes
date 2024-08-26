@@ -21,7 +21,7 @@
     "href": "topics/all-lectures.html",
     "title": "All lectures",
     "section": "",
-    "text": "This index file tracks all .qmd files in the “topics” directory, to provide a flat view of all lectures that can be organized by date/title/topic/etc.\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nSubtitle\n\n\n\n\n\n\n2024-08-26\n\n\nCourse Introduction\n\n\nSubtitle text\n\n\n\n\n\nNo matching items\n\n Back to top",
+    "text": "This index file tracks all .qmd files in the “topics” directory, to provide a flat view of all lectures that can be organized by date/title/topic/etc.\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nSubtitle\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
     "crumbs": [
       "Home",
       "Topics",
@@ -29,141 +29,27 @@
     ]
   },
   {
-    "objectID": "topics/hardware/course-introduction.html",
-    "href": "topics/hardware/course-introduction.html",
-    "title": "Course Introduction",
+    "objectID": "about/calendar.html",
+    "href": "about/calendar.html",
+    "title": "Calendar",
     "section": "",
-    "text": "Figure caption appearing below the image. Photo by Kvistholt Photography on Unsplash.",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Hardware",
-      "Course Introduction"
-    ]
-  },
-  {
-    "objectID": "topics/hardware/course-introduction.html#what-topics-does-this-course-cover",
-    "href": "topics/hardware/course-introduction.html#what-topics-does-this-course-cover",
-    "title": "Course Introduction",
-    "section": "What topics does this course cover?",
-    "text": "What topics does this course cover?\n\nComputer Hardware\nComputer Software\nHelpdesk and Troubleshooting computers\nOperating systems\nIntro to Servers and Networking\n\nEach topic above is a massive field of research and industry in its own right – you could get a PhD in each! We will be introduced to each briefly, and at a high level (overview) to come away with a better technical understanding than we had before.",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Hardware",
-      "Course Introduction"
-    ]
-  },
-  {
-    "objectID": "topics/hardware/course-introduction.html#what-is-this-course-preparing-you-for",
-    "href": "topics/hardware/course-introduction.html#what-is-this-course-preparing-you-for",
-    "title": "Course Introduction",
-    "section": "What is this course preparing you for?",
-    "text": "What is this course preparing you for?",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Hardware",
-      "Course Introduction"
-    ]
-  },
-  {
-    "objectID": "topics/hardware/course-introduction.html#what-will-i-learn",
-    "href": "topics/hardware/course-introduction.html#what-will-i-learn",
-    "title": "Course Introduction",
-    "section": "What will I learn?",
-    "text": "What will I learn?\n\nLearn to troubleshoot hardware, firmware and software.\nUnderstand computers from binary to the use of each hardware part\nUnderstand the role of IT Helpdesk Technicians\nPerhaps even build your own PC!",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Hardware",
-      "Course Introduction"
-    ]
-  },
-  {
-    "objectID": "topics/hardware/course-introduction.html#material-to-acquire",
-    "href": "topics/hardware/course-introduction.html#material-to-acquire",
-    "title": "Course Introduction",
-    "section": "Material to acquire",
-    "text": "Material to acquire\n\nMultiheaded Screwdriver x 1:\n\nFor assembling computers!\nExample: Picquic-88001-Multi-Bit-Screwdriver-Full-Size\n\n(OPTIONAL) Anti-static ESD bracelet band:\n\nFor your safety when playing with electronics\nExample: Antistatic-Wrist-Strap",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Hardware",
-      "Course Introduction"
-    ]
-  },
-  {
-    "objectID": "topics/hardware/course-introduction.html#rules-for-success-in-this-class",
-    "href": "topics/hardware/course-introduction.html#rules-for-success-in-this-class",
-    "title": "Course Introduction",
-    "section": "Rules for success in this class",
-    "text": "Rules for success in this class\n\nRule 1: Attend all classes and labs!\nI will freely provide my slides and as many course resources as necessary to supplement this class.\nBut! My course notes are not a substitute for regular class attendance. Hands on experience is key!\n\n\nRule 2: Consult the Support Material\n\nClass Slides\nLab and exercises in class\nAssignments\nYour class notes\n\n\n\nRule 3: Use a calendar to track all your deadlines\n\nTo stay on track for all your deadlines, try to plan one or two weeks ahead!\nComplete your assignments on time\n\nBut! Endeavour to at least hand in assignments. Better late/incomplete than never.\n\nIf you miss a deadline, please don’t ignore it!\n\nMIO me. I’m here to help! And that includes for late/incomplete assignments.\n\n\n\n\n\nRule 4: Reach out for help!\n\nReach out to me if you ever feel stuck or overwhelmed\nTry your best to get to know other students\n\nHelp each other out! You will learn much more from working through the assignments yourself and from teaching eachother than you will from listening to me\nLearning from others and building relationships with new peers is one of the most valuable parts of school\n\nSeek out help if you are struggling (from me, from peers, from John Abbott student services, etc.)\n\n\n\nRule 5: Be curious!\nThis field has a lot of support online. Stay curious, the internet is your Oyster!",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Hardware",
-      "Course Introduction"
-    ]
-  },
-  {
-    "objectID": "topics/hardware/course-introduction.html#feedback",
-    "href": "topics/hardware/course-introduction.html#feedback",
-    "title": "Course Introduction",
-    "section": "Feedback",
-    "text": "Feedback\nLet me know how things are going in the course:\n\nAm I covering the material too slowly or too quickly?\nAre the slides material clear?\nCan you read my handwriting?\nCan you hear me well?\nDoes my answer make sense?\nDo you understand the assignment questions?\nEtc.",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Hardware",
-      "Course Introduction"
-    ]
-  },
-  {
-    "objectID": "about/index.html",
-    "href": "about/index.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n\n\n\n\n\n\n\n\n\n\n\nAbout this website\n\n\nDescription of technologies and resources used to build this website. Acknowledgements, copyright, terms of use, etc. can be found on this page.\n\n\n\n\n\n\n\n\n\n\n\nCalendar\n\n\nRoadmap for course deliverables; record of lectures & activites we have covered along the way.\n\n\n\n\n\n\n\n\n\n\n\nSyllabus\n\n\nCourse description outlining goals, expectations, resources, and other important information.\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
-    "crumbs": [
-      "Home",
-      "About"
-    ]
-  },
-  {
-    "objectID": "about/syllabus.html",
-    "href": "about/syllabus.html",
-    "title": "Syllabus",
-    "section": "",
-    "text": "This comic may be smarmy, but is it usually true… Image © jorge cham, retreived from PHD Comics.",
+    "text": "The focused pupil keeps watch on Time. Image retrieved from Bryan Superfreak Magnum on Pinterest.\nThis is the authoritative calendar for content covered in class, and for content you should expect to see covered as we continue through the course.\nYou can compare this calendar with the calendar from the Course Outline to see where this course has deviated from the original outline.",
     "crumbs": [
       "Home",
       "About",
-      "Syllabus"
+      "Calendar"
     ]
   },
   {
-    "objectID": "about/syllabus.html#overview",
-    "href": "about/syllabus.html#overview",
-    "title": "Syllabus",
-    "section": "Overview",
-    "text": "Overview\nFrom the course outline:\n\nIn this course students learn to install hardware and software and provide technical support and training to users. Topics include installing, configuring, and uninstalling hardware devices and device drivers, installing and uninstalling system and application software, backing up and restoring software, hard disk partitioning and formatting, help desk, user training.",
+    "objectID": "about/calendar.html#august-september",
+    "href": "about/calendar.html#august-september",
+    "title": "Calendar",
+    "section": "August & September",
+    "text": "August & September\n\nDeliverables\n\nLab 1: TBD\nAssignment 1: TBD\n\n\n\nSchedule\n\nAug 22: Intro to course\nAug 26: Intro to course\nAug 27: TBD\nAug 29: TBD",
     "crumbs": [
       "Home",
       "About",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "about/syllabus.html#logistics",
-    "href": "about/syllabus.html#logistics",
-    "title": "Syllabus",
-    "section": "Logistics",
-    "text": "Logistics\n\nOffice: Penfield 311\nOffice hours: Posted on Léa and on office door\nEmail: michael DOT haaf AT johnabbott DOT qc DOT ca\nTimetable: Monday, 11.30 AM – 1.00 PM (Room P-325/P-107)Tuesday, 2.30 PM – 5.30 PM (Room P-326/P-107)Thursday, 8.30 AM – 10.00 AM (Room P-326/P-107)\nCourse webpage: This website for all content, Omnivox for assignment submissions.\n\n\nCommunication\n\nTeams - For communicating (fastest, most reliable that I will check it same-day)\nMIO - For communicating (non-time-critical)\nEmail - For communicating (time-critical).  Will aim for &lt;24hr response.\nOmnivox - For receiving & submitting exercises/assignments/project and getting marks\n\n\n\nAssessment\n\n60% Assignments and Labs\n20% Test 1\n20% Test 2",
-    "crumbs": [
-      "Home",
-      "About",
-      "Syllabus"
+      "Calendar"
     ]
   },
   {
@@ -203,27 +89,110 @@
     ]
   },
   {
-    "objectID": "about/calendar.html",
-    "href": "about/calendar.html",
-    "title": "Calendar",
+    "objectID": "about/syllabus.html",
+    "href": "about/syllabus.html",
+    "title": "Syllabus",
     "section": "",
-    "text": "The focused pupil keeps watch on Time. Image retrieved from Bryan Superfreak Magnum on Pinterest.\nThis is the authoritative calendar for content covered in class, and for content you should expect to see covered as we continue through the course.\nYou can compare this calendar with the calendar from the Course Outline to see where this course has deviated from the original outline.",
+    "text": "This comic may be smarmy, but is it usually true… Image © jorge cham, retreived from PHD Comics.",
     "crumbs": [
       "Home",
       "About",
-      "Calendar"
+      "Syllabus"
     ]
   },
   {
-    "objectID": "about/calendar.html#august-september",
-    "href": "about/calendar.html#august-september",
-    "title": "Calendar",
-    "section": "August & September",
-    "text": "August & September\n\nDeliverables\n\nLab 1: TBD\nAssignment 1: TBD\n\n\n\nSchedule\n\nAug 22: Intro to course\nAug 26: Intro to course\nAug 27: TBD\nAug 29: TBD",
+    "objectID": "about/syllabus.html#logistics",
+    "href": "about/syllabus.html#logistics",
+    "title": "Syllabus",
+    "section": "Logistics",
+    "text": "Logistics\n\nOffice: Penfield 311\nOffice hours: Posted on Léa and on office door\nEmail: michael DOT haaf AT johnabbott DOT qc DOT ca\nTimetable: Monday, 11.30 AM – 1.00 PM (Room P-325/P-107)Tuesday, 2.30 PM – 5.30 PM (Room P-326/P-107)Thursday, 8.30 AM – 10.00 AM (Room P-326/P-107)\nCourse webpage: This website for all content, Omnivox for assignment submissions.\n\n\nCommunication\n\nTeams - For communicating (fastest, most reliable that I will check it same-day)\nMIO - For communicating (non-time-critical)\nEmail - For communicating (time-critical).  Will aim for &lt;24hr response.\nOmnivox - For receiving & submitting exercises/assignments/project and getting marks\n\n\n\nAssessment\n\n60% Assignments and Labs\n20% Test 1\n20% Test 2",
     "crumbs": [
       "Home",
       "About",
-      "Calendar"
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "about/syllabus.html#course-overview",
+    "href": "about/syllabus.html#course-overview",
+    "title": "Syllabus",
+    "section": "Course overview",
+    "text": "Course overview\nFrom the course outline:\n\nIn this course students learn to install hardware and software and provide technical support and training to users. Topics include installing, configuring, and uninstalling hardware devices and device drivers, installing and uninstalling system and application software, backing up and restoring software, hard disk partitioning and formatting, help desk, user training.\n\n\nWhat topics does this course cover?\n\nComputer Hardware – what computers are made of\nComputer logic – how do we make computers behave predictably and controllably?\nComputer Software – what kind of programs can we make computers run?\nHelpdesk and Troubleshooting computers – as a hobby and a profession\nOperating systems – the most important software for a computer to run\nIntro to Servers and Networking – how computers communicate with eachother\n\nEach topic above is a massive field of research and industry in its own right – you could get a PhD in each! We will be introduced to each briefly, and at a high level (overview) to come away with a better technical understanding than we had before.",
+    "crumbs": [
+      "Home",
+      "About",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "about/syllabus.html#what-is-this-course-preparing-you-for",
+    "href": "about/syllabus.html#what-is-this-course-preparing-you-for",
+    "title": "Syllabus",
+    "section": "What is this course preparing you for?",
+    "text": "What is this course preparing you for?",
+    "crumbs": [
+      "Home",
+      "About",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "about/syllabus.html#what-will-i-learn",
+    "href": "about/syllabus.html#what-will-i-learn",
+    "title": "Syllabus",
+    "section": "What will I learn?",
+    "text": "What will I learn?\n\nLearn to troubleshoot hardware, firmware and software.\nUnderstand computers from binary to the use of each hardware part\nUnderstand the role of IT Helpdesk Technicians\nPerhaps even build your own PC!",
+    "crumbs": [
+      "Home",
+      "About",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "about/syllabus.html#material-to-acquire",
+    "href": "about/syllabus.html#material-to-acquire",
+    "title": "Syllabus",
+    "section": "Material to acquire",
+    "text": "Material to acquire\n\nMultiheaded Screwdriver x 1:\n\nFor assembling computers!\nExample: Picquic-88001-Multi-Bit-Screwdriver-Full-Size\n\n(OPTIONAL) Anti-static ESD bracelet band:\n\nFor your safety when playing with electronics\nExample: Antistatic-Wrist-Strap",
+    "crumbs": [
+      "Home",
+      "About",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "about/syllabus.html#rules-for-success-in-this-class",
+    "href": "about/syllabus.html#rules-for-success-in-this-class",
+    "title": "Syllabus",
+    "section": "Rules for success in this class",
+    "text": "Rules for success in this class\n\nRule 1: Attend all classes and labs!\nI will freely provide my slides and as many course resources as necessary to supplement this class.\nBut! My course notes are not a substitute for regular class attendance. Hands on experience is key!\nNote: All of your marks come from Assignments and Tests. We will do in-class activities that are neither Assignments or Tests, but are required – completing the in-class labs will be a component of your Assignment mark. If you finish in-class labs quickly, you will have more time to work on Assignments in class, instead of at home.\n\n\nRule 2: Consult the Support Material\n\nClass Slides\nLab and exercises in class\nAssignments\nYour class notes\n\n\n\nRule 3: Use a calendar to track all your deadlines\n\nTo stay on track for all your deadlines, try to plan one or two weeks ahead!\nComplete your assignments on time\n\nBut! Endeavour to at least hand in assignments. Better late/incomplete than never.\n\nIf you miss a deadline, please don’t ignore it!\n\nMIO me. I’m here to help! And that includes for late/incomplete assignments.\n\n\n\n\n\nRule 4: Reach out for help!\n\nReach out to me if you ever feel stuck or overwhelmed\nTry your best to get to know other students\n\nHelp each other out! You will learn much more from working through the assignments yourself and from teaching eachother than you will from listening to me\nLearning from others and building relationships with new peers is one of the most valuable parts of school\n\nSeek out help if you are struggling (from me, from peers, from John Abbott student services, etc.)\n\n\n\nRule 5: Be curious!\nThis field has a lot of support online. Stay curious, the internet is your Oyster!",
+    "crumbs": [
+      "Home",
+      "About",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "about/syllabus.html#feedback",
+    "href": "about/syllabus.html#feedback",
+    "title": "Syllabus",
+    "section": "Feedback",
+    "text": "Feedback\nLet me know how things are going in the course:\n\nAm I covering the material too slowly or too quickly?\nAre the slides material clear?\nCan you read my handwriting?\nCan you hear me well?\nDoes my answer make sense?\nDo you understand the assignment questions?\nEtc.",
+    "crumbs": [
+      "Home",
+      "About",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n\n\n\n\n\n\n\n\n\n\n\nAbout this website\n\n\nDescription of technologies and resources used to build this website. Acknowledgements, copyright, terms of use, etc. can be found on this page.\n\n\n\n\n\n\n\n\n\n\n\nCalendar\n\n\nRoadmap for course deliverables; record of lectures & activites we have covered along the way.\n\n\n\n\n\n\n\n\n\n\n\nSyllabus\n\n\nCourse description outlining goals, expectations, resources, and other important information.\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
+    "crumbs": [
+      "Home",
+      "About"
     ]
   },
   {
@@ -231,7 +200,7 @@
     "href": "topics/hardware/index.html",
     "title": "Hardware",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nCourse Introduction\n\n\nSubtitle text\n\n\n\n\n\n\n\n\nAug 26, 2024\n\n\n\n\n\n\nNo matching items\n\n Back to top",
+    "text": "No matching items\n\n Back to top",
     "crumbs": [
       "Home",
       "Topics",
