@@ -7,12 +7,6 @@ subtitle: "Course description outlining goals, expectations, resources, and othe
 
 ![This comic may be smarmy, but is it usually true... Image <a href="https://jorgecham.com/">&copy; jorge cham</a>, retreived from <a href="https://phdcomics.com/comics.php?f=1583">PHD Comics</a>.](_assets/itsInTheSyllabus.png "Time doesn't have to be your downfall, if you plan ahead."){fig-alt="Captain Hook holds a timepiece high with one hand, and points at the clock hands with his hook hand."} 
 
-## Overview
-
-From the course outline:
-
-> In this course students learn to install hardware and software and provide technical support and training to users. Topics include installing, configuring, and uninstalling hardware devices and device drivers, installing and uninstalling system and application software, backing up and restoring software, hard disk partitioning and formatting, help desk, user training.
-
 ## Logistics
 
 - **Office:** {{< var instructor.office >}}
@@ -32,3 +26,100 @@ From the course outline:
 - 60% Assignments and Labs
 - 20% Test 1 
 - 20% Test 2
+
+## Course overview
+
+From the course outline:
+
+> In this course students learn to install hardware and software and provide technical support and training to users. Topics include installing, configuring, and uninstalling hardware devices and device drivers, installing and uninstalling system and application software, backing up and restoring software, hard disk partitioning and formatting, help desk, user training.
+
+### What topics does this course cover?
+
+- Computer Hardware -- what computers are made of
+- Computer logic -- how do we make computers behave predictably and controllably?
+- Computer Software -- what kind of programs can we make computers run?
+- Helpdesk and Troubleshooting computers -- as a hobby and a profession
+- Operating systems -- the most important software for a computer to run
+- Intro to Servers and Networking -- how computers communicate with eachother
+
+Each topic above is a massive field of research and industry in its own right -- you could get a PhD in each! We will be introduced to each briefly, and at a high level (overview) to come away with a better technical understanding than we had before.
+
+## What is this course preparing you for?
+
+![](_assets/Lecture%200%20-%20Course%20Introduction6.jpg)
+
+## What will I learn?
+
+- Learn to troubleshoot hardware, firmware and software.
+- Understand computers from binary to the use of each hardware part
+- Understand the role of IT Helpdesk Technicians
+- Perhaps even build your own PC!
+
+## Material to acquire
+
+* Multiheaded Screwdriver x 1:
+  * For assembling computers!
+  * Example:  _[Picquic-88001-Multi-Bit-Screwdriver-Full-Size](https://www.amazon.ca/Picquic-88001-Multi-Bit-Screwdriver-Full-Size/dp/B01KZ0AQDU/)_
+* \(OPTIONAL\) Anti\-static ESD bracelet band:
+  * For your safety when playing with electronics
+  * Example: [Antistatic\-Wrist\-Strap](https://www.amazon.ca/Antistatic-Wrist-Strap%EF%BC%8CAdjustable-Static-Band/dp/B09HZQ6FWX/ref=pd_rhf_d_ee_s_pd_sbs_rvi_sccl_2_4/132-2941693-8503316?pd_rd_w=kwM17&content-id=amzn1.sym.c4b12d63-26ee-451b-a00e-167063525dc5&pf_rd_p=c4b12d63-26ee-451b-a00e-167063525dc5&pf_rd_r=NS4NHVRVT92Z90171TC4&pd_rd_wg=8rydi&pd_rd_r=2d633ec8-9be5-4ad5-84f6-ce65f93b5ef0&pd_rd_i=B09HZQ6FWX&psc=1)
+
+![](_assets/Lecture%200%20-%20Course%20Introduction10.jpg)
+
+![](_assets/Lecture%200%20-%20Course%20Introduction11.jpg)
+
+## Rules for success in this class
+
+### Rule 1: Attend all classes and labs!
+
+I will freely provide my slides and as many course resources as necessary to supplement this class.
+
+But! My course notes are not a substitute for regular class attendance. Hands on experience is key!
+
+**Note:** All of your marks come from Assignments and Tests. We will do in-class activities that are neither Assignments or Tests, but are required -- completing the in-class labs will be a component of your Assignment mark. If you finish in-class labs quickly, you will have more time to work on Assignments in class, instead of at home.
+
+### Rule 2: Consult the Support Material
+
+* Class Slides
+* Lab and exercises in class
+* Assignments
+* Your class notes
+
+### Rule 3: Use a calendar to track all your deadlines
+
+* To stay on track for all your deadlines\, try to plan one or two weeks ahead\!
+* Complete your assignments on time
+  * But\! Endeavour to at least hand in assignments\. Better late/incomplete than never\.
+* If you miss a deadline\, please don't ignore it\!
+  * MIO me\. I’m here to help\! And that includes for late/incomplete assignments\.
+
+![](_assets/Lecture%200%20-%20Course%20Introduction14.png)
+
+### Rule 4: Reach out for help!
+
+* Reach out to me if you ever feel stuck or overwhelmed
+* Try your best to get to know other students
+  * Help each other out! You will learn much more from working through the assignments yourself and from teaching eachother than you will from listening to me
+  * Learning from others and building relationships with new peers is one of the most valuable parts of school
+* Seek out help if you are struggling \(from me\, from peers\, from John Abbott student services\, etc\.\)
+
+### Rule 5: Be curious!
+
+This field has a lot of support online. Stay curious\, the internet is your Oyster\!
+
+![](_assets/Lecture%200%20-%20Course%20Introduction16.jpg)
+
+## Feedback
+
+Let me know how things are going in the course:
+
+* Am I covering the material too slowly or too quickly?
+* Are the slides material clear?
+* Can you read my handwriting?
+* Can you hear me well?
+* Does my answer make sense?
+* Do you understand the assignment questions?
+* Etc\.
+
+![](_assets/Lecture%200%20-%20Course%20Introduction17.png)
+
