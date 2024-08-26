@@ -2,13 +2,7 @@
   {
     "listing": "/topics/all-lectures.html",
     "items": [
-      "/topics/sample-topic/sample-lecture.html"
-    ]
-  },
-  {
-    "listing": "/topics/sample-topic/index.html",
-    "items": [
-      "/topics/sample-topic/sample-lecture.html"
+      "/topics/hardware/course-introduction.html"
     ]
   },
   {
@@ -20,9 +14,15 @@
     ]
   },
   {
+    "listing": "/topics/hardware/index.html",
+    "items": [
+      "/topics/hardware/course-introduction.html"
+    ]
+  },
+  {
     "listing": "/topics/index.html",
     "items": [
-      "/topics/sample-topic/index.html"
+      "/topics/hardware/index.html"
     ]
   },
   {

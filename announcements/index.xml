@@ -10,7 +10,7 @@
 <atom:link href="https://John-Abbott-College.github.io/1N6-Notes/announcements/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <image>
-<url>https://John-Abbott-College.github.io/1N6-Notes/_assets/icon-lightbg.svg</url>
+<url>https://John-Abbott-College.github.io/1N6-Notes/_assets/favicons/favicon-32x32.png</url>
 <title>{{&lt; var course.title &gt;}}</title>
 <link>https://John-Abbott-College.github.io/1N6-Notes/announcements/</link>
 </image>
