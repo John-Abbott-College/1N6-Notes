@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n\n\n Back to top",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n\n\n Back to topReuseCC BY-NC-SA 4.0",
     "crumbs": [
       "Home"
     ]
@@ -12,16 +12,16 @@
   {
     "objectID": "announcements/2024-08-26-sample-announcement.html",
     "href": "announcements/2024-08-26-sample-announcement.html",
-    "title": "Sample announcement",
+    "title": "Class cancelled today",
     "section": "",
-    "text": "Announcement text\n\n\n\n Back to top"
+    "text": "Unforunately I am not feeling well today and would like to make sure I do not pass that along to you – I will be cancelling today’s class.\nI will be uploading today’s lecture notes shortly. The link for these will appear on LEA soon. Please read them in advance of Thursday’s class, where we will be doing in-class activities based on some of the content.\nYou can also see all of the content we’ve covered the past two days on the [course calendar][calendar].\nLet me know if you have any questions!\n\n\n\n Back to topReuseCC BY-NC-SA 4.0"
   },
   {
     "objectID": "topics/all-lectures.html",
     "href": "topics/all-lectures.html",
     "title": "All lectures",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Modified - Oldest\n        \n         \n          Modified - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nSubtitle\n\n\nModified\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Modified - Oldest\n        \n         \n          Modified - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nSubtitle\n\n\nModified\n\n\n\n\n\n\n\nNo matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
     "crumbs": [
       "Home",
       "Topics",
@@ -45,7 +45,7 @@
     "href": "about/calendar.html#august-september",
     "title": "Calendar",
     "section": "August & September",
-    "text": "August & September\n\nDeliverables\n\nLab 1: TBD\nAssignment 1: TBD\n\n\n\nSchedule\n\nAug 22: Intro to course\nAug 26: Intro to course\nAug 27: TBD\nAug 29: TBD",
+    "text": "August & September\n\nDeliverables\n\nLab 0: Introduction to Technical Support Survey\nLab 1: TBD\nAssignment 1: TBD\n\n\n\nSchedule\n\nAug 22: Introductions, icebreaker, overview of the course outline.\nAug 26: Completed Lab 0 (see above). Overview of the course syllabus and course calendar.\nAug 27: Class cancelled – please read the lecture Introduction to computers to catch up on covered material.\nAug 29: In-class activities. TBD",
     "crumbs": [
       "Home",
       "About",
@@ -189,7 +189,7 @@
     "href": "about/index.html",
     "title": "About",
     "section": "",
-    "text": "About this site\n\n\n\n\n\n\n\n\n\n\n\n\nAbout this website\n\n\nDescription of technologies and resources used to build this website. Acknowledgements, copyright, terms of use, etc. can be found on this page.\n\n\n\n\n\n\n\n\n\n\n\nCalendar\n\n\nRoadmap for course deliverables; record of lectures & activites we have covered along the way.\n\n\n\n\n\n\n\n\n\n\n\nSyllabus\n\n\nCourse description outlining goals, expectations, resources, and other important information.\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
+    "text": "About this site\n\n\n\n\n\n\n\n\n\n\n\n\nAbout this website\n\n\nDescription of technologies and resources used to build this website. Acknowledgements, copyright, terms of use, etc. can be found on this page.\n\n\n\n\n\n\n\n\n\n\n\nCalendar\n\n\nRoadmap for course deliverables; record of lectures & activites we have covered along the way.\n\n\n\n\n\n\n\n\n\n\n\nSyllabus\n\n\nCourse description outlining goals, expectations, resources, and other important information.\n\n\n\n\n\n\n\nNo matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
     "crumbs": [
       "Home",
       "About"
@@ -200,7 +200,7 @@
     "href": "topics/hardware/index.html",
     "title": "Hardware",
     "section": "",
-    "text": "No matching items\n\n Back to top",
+    "text": "No matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
     "crumbs": [
       "Home",
       "Topics",
@@ -212,7 +212,7 @@
     "href": "topics/index.html",
     "title": "Topics",
     "section": "",
-    "text": "Hardware\n\n\nAll lectures related to computer hardware can be found here.\n\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
+    "text": "Hardware\n\n\nAll lectures related to computer hardware can be found here.\n\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
     "crumbs": [
       "Home",
       "Topics"
@@ -223,7 +223,7 @@
     "href": "announcements/index.html",
     "title": "Announcements",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nSample announcement\n\n\n\n\n\n\n\n\n\n\n\nAug 26, 2024\n\n\n\n\n\n\nNo matching items\n\n Back to top",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nClass cancelled today\n\n\n\n\n\n\n\n\n\n\n\nAug 27, 2024\n\n\n\n\n\n\nNo matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
     "crumbs": [
       "Home",
       "Announcements"
