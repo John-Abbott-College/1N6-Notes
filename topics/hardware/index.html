@@ -30,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../topics/hardware/introduction-to-computers.html" rel="next">
 <link href="../../topics/all-lectures.html" rel="prev">
 <link href="../../_assets/favicons/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-listing/list.min.js"></script>
@@ -83,9 +84,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: [{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -268,12 +269,23 @@ window.Quarto = {
  <span class="menu-text">All lectures</span></a>
   </div>
 </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../topics/hardware/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Hardware</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../topics/hardware/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Hardware</span></a>
+  <a href="../../topics/hardware/introduction-to-computers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Computers</span></a>
   </div>
 </li>
+      </ul>
+  </li>
       </ul>
   </li>
     </ul>
@@ -281,9 +293,9 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    </div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -319,13 +331,53 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+     </select>
+  </div>
     <div class="input-group input-group-sm quarto-listing-filter">
       <span class="input-group-text"><i class="bi bi-search"></i></span>
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
 <div class="list quarto-listing-default">
-
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1724716800000" data-listing-file-modified-sort="1724787194519" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1235">
+<div class="thumbnail">
+<p><a href="../../topics/hardware/introduction-to-computers.html" class="no-external"></a></p><a href="../../topics/hardware/introduction-to-computers.html" class="no-external">
+<p class="card-img-top"><img src="_assets/Lecture 1 - Introduction to computers0.jpg" alt="Each of these things is either a computer, or a computer component. Can you identify them all? Click on the image to see everything in higher resolution."  class="thumbnail-image card-img"/></p>
+</a><p><a href="../../topics/hardware/introduction-to-computers.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../topics/hardware/introduction-to-computers.html" class="no-external">Introduction to Computers</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../../topics/hardware/introduction-to-computers.html" class="no-external">The fundamental properties of computers explained with examples and definitions.</a>
+</div>
+<div class="listing-description">
+<a href="../../topics/hardware/introduction-to-computers.html" class="no-external">We all interact with computers on a daily basis, whether we are aware or not. In fact, it can be said that computers, or computing devices, have been part of human society…<em></em></a>
+</div>
+</div>
+<div class="metadata">
+<a href="../../topics/hardware/introduction-to-computers.html" class="no-external">
+<div class="listing-date">
+2024-08-27
+</div>
+</a>
+</div>
+</div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items
@@ -902,6 +954,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../../topics/hardware/introduction-to-computers.html" class="pagination-link" aria-label="Introduction to Computers">
+        <span class="nav-page-text">Introduction to Computers</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

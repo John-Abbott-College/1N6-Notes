@@ -1,7 +1,9 @@
 [
   {
     "listing": "/topics/all-lectures.html",
-    "items": []
+    "items": [
+      "/topics/hardware/introduction-to-computers.html"
+    ]
   },
   {
     "listing": "/about/index.html",
@@ -13,7 +15,9 @@
   },
   {
     "listing": "/topics/hardware/index.html",
-    "items": []
+    "items": [
+      "/topics/hardware/introduction-to-computers.html"
+    ]
   },
   {
     "listing": "/topics/index.html",

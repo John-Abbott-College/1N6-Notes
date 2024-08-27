@@ -84,9 +84,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-subtitle','listing-date-modified',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-title-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -269,12 +269,23 @@ window.Quarto = {
  <span class="menu-text">All lectures</span></a>
   </div>
 </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../topics/hardware/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hardware</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../topics/hardware/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Hardware</span></a>
+  <a href="../topics/hardware/introduction-to-computers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Computers</span></a>
   </div>
 </li>
+      </ul>
+  </li>
       </ul>
   </li>
     </ul>
@@ -284,7 +295,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -331,12 +342,6 @@ window.Quarto = {
          <option value="listing-date-sort" data-direction="desc">
           Date - Newest
         </option>
-         <option value="listing-date-modified-sort" data-direction="asc">
-          Modified - Oldest
-        </option>
-         <option value="listing-date-modified-sort" data-direction="desc">
-          Modified - Newest
-        </option>
          <option value="listing-title-sort" data-direction="asc">
           Title
         </option>
@@ -359,12 +364,20 @@ window.Quarto = {
 <th>
 Subtitle
 </th>
-<th>
-<a class="sort" data-sort="listing-date-modified-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Modified</a>
-</th>
 </tr>
 </thead>
 <tbody class="list">
+<tr data-index="0" data-listing-date-sort="1724716800000" data-listing-file-modified-sort="1724787194519" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1235" data-listing-title-sort="Introduction to Computers" data-listing-filename-sort="introduction-to-computers.qmd">
+<td>
+<span class="listing-date">2024-08-27</span>
+</td>
+<td>
+<a href="../topics/hardware/introduction-to-computers.html" class="title listing-title">Introduction to Computers</a>
+</td>
+<td>
+<span class="listing-subtitle">The fundamental properties of computers explained with examples and definitions.</span>
+</td>
+</tr>
 </tbody>
 </table>
 <div class="listing-no-matching d-none">
