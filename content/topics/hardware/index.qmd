@@ -3,6 +3,6 @@ title: "Hardware"
 subtitle: "All lectures related to computer hardware can be found here."
 listing: 
   filter-ui: true
-  sort-ui: [date, title]
+  sort-ui: [date, date-modified, title]
   sort: date
 ---

@@ -1,8 +1,10 @@
-# Technical Support (420-1N6-AB)Peripheral Devices
+---
+title: External components
+subtitle: Overview of many external components, or peripheral devices, used by and for computers.
+date: 2024-08-27
+---
 
-# Fall 2023
-
-# Outline
+## Outline
 
 * Input devices:
   * Keyboards
@@ -12,19 +14,15 @@
   * Projectors
   * Printers
 
-# Hardware vs Software
+## Hardware vs Software
 
-<span style="color:#0055A4"> __Hardware__ </span>
-
-The  __physical__  components that make up a computer system\.
+ __Hardware__: The  __physical__  components that make up a computer system\.
 
 ![](_assets/Lecture%202%20-%20Peripheral%20Devices0.jpg)
 
-<span style="color:#0055A4"> __Software__ </span>
+__Software__: The  __programs__  \(instructions\) that tell the computer \(the hardware\) what to do\.
 
-The  __programs__  \(instructions\) that tell the computer \(the hardware\) what to do\.
-
-# Computer Basics
+## Computer Basics
 
 Input devices
 
@@ -38,9 +36,7 @@ Storage devices
 
 Connectors / ports
 
-<span style="color:#FF0000"> __Assignment 1 – Lab1 : activity about each__ </span>
-
-# Input Devices
+## Input Devices
 
 Allow a computer to accept data and instructions from a user\.
 
@@ -72,7 +68,7 @@ Allow a computer to accept data and instructions from a user\.
 
 ![](_assets/Lecture%202%20-%20Peripheral%20Devices14.png)
 
-# Input Devices: Mouse
+### Mouse
 
 Used to navigate the graphical user interface \(GUI\)\.
 
@@ -102,7 +98,7 @@ Good notes on history and explanation of how/why they work“Optical mice use i
 https://en.wikipedia.org/wiki/Computer_mouse 
 https://en.wikipedia.org/wiki/Optical_mouse 
 
-# Input Devices: Keyboard
+### Keyboard
 
 Used to enter text commands\.
 
@@ -124,7 +120,7 @@ KVM \("keyboard\, video and mouse"\): control multiple devices from one keyboard
 
 \* note: this is very hypocritical coming from me\. don’t mind my bad jokes\!
 
-# Input Devices: Others
+### Others
 
 Gamepads or joysticks are used for playing games and running simulations\.
 
@@ -142,7 +138,7 @@ Digital Tablets \(sometimes called Digitizers\) allow the user to create images 
 
 Media card readers read/write data from/to different types of media cards \(SD cards\, video game cartridges\, etc\.\)
 
-# Activity: How Well Do You Know Your Keyboard?
+### Activity: How Well Do You Know Your Keyboard?
 
 ![](_assets/Lecture%202%20-%20Peripheral%20Devices22.png)
 
@@ -154,7 +150,7 @@ Pick 5 keys \(that aren’t letters or numbers\) and try explain their general p
 
 [Windows ](https://support.microsoft.com/en-us/windows/windows-keyboard-shortcuts-3d444b08-3a00-abd6-67da-ecfc07e86b98)[keybpard](https://support.microsoft.com/en-us/windows/windows-keyboard-shortcuts-3d444b08-3a00-abd6-67da-ecfc07e86b98)[ ](https://support.microsoft.com/en-us/windows/windows-keyboard-shortcuts-3d444b08-3a00-abd6-67da-ecfc07e86b98)[shortcuts](https://support.microsoft.com/en-us/windows/windows-keyboard-shortcuts-3d444b08-3a00-abd6-67da-ecfc07e86b98)
 
-# Output Devices
+## Output Devices
 
 Output devices present information to the user from a computer\.
 
@@ -174,7 +170,7 @@ Headphones
 
 ![](_assets/Lecture%202%20-%20Peripheral%20Devices26.png)
 
-# Output Devices: Monitors
+### Monitors
 
 * Different types of monitors use different technologies to create an image\.
 * However\, the common principles are the same:
@@ -183,7 +179,7 @@ Headphones
   * Light from the monitor reaches us as a useful/pleasing image\.
 * The following slides are the main technologies used today \(from oldest to latest\)
 
-# Output Devices: Monitors (CRT)
+#### CRT Monitors
 
 * CRT \(Cathode ray tube\)
   * The most common type of consumer and industry television before ~2010
@@ -195,7 +191,7 @@ Headphones
 
 ![](_assets/Lecture%202%20-%20Peripheral%20Devices28.png)
 
-# Output Devices: Monitors (Plasma)
+#### Plasma Monitors
 
 * Plasma
   * Tiny cells of ionized gas that light up when stimulated by electricity\.
@@ -208,19 +204,14 @@ Headphones
 
 ![](_assets/Lecture%202%20-%20Peripheral%20Devices29.png)
 
----
-
 Plasma is a chemical state of molecules when molecules in state of gas are heated up (excited with electric charge).
 Typical Plasma displays have two glass plates sandwiching hundreds of thousands of cells containing plasma. 
 Two sets of electrodes will provide some charges which will excite the plasma 
 Which will release photons at three different wavelength (either red, green or blue)
 
-
-# Pause on Monitors- Let’s talk physics first!
-
 ![](_assets/Lecture%202%20-%20Peripheral%20Devices30.gif)
 
-# Output Devices: Monitors (LCD)
+#### LCD Monitors
 
 ![](_assets/Lecture%202%20-%20Peripheral%20Devices31.jpg)
 
@@ -244,9 +235,6 @@ Liquid crytsal is organic (made of carbone and oxygen), they can be smectic (par
 LCD TN (Twistic nematic) cheapest 
 The polarizing filter lets only one orientation of the light pass through.
 To transform the white light into colored light, a color filter is placed on the outter face ( made of pigments which will absorb all colors execept the color that is passing (red, blue or green)
-
-
-
 
 ![](_assets/Lecture%202%20-%20Peripheral%20Devices34.jpg)
 
@@ -276,7 +264,7 @@ For more information: [https://www\.youtube\.com/watch?v=xAMhX3Drq14&ab\_channel
   * Monochrome image is created using up to 1024 shades of grey\.
   * Color wheel then adds to complete the projected image\.
 
-# Output Devices: Printers
+### Printers
 
 * Printers take  __data__  from a computer and generate output on paper\.
   * Basic principles
@@ -287,7 +275,7 @@ For more information: [https://www\.youtube\.com/watch?v=xAMhX3Drq14&ab\_channel
 
 A high enough quantity of toasted bread produces the qualitative impression of a human eye in this “piece” of art\. Printers \(and monitors\) use much higher quantities of “pixels” than depicted here\!
 
-# Output Devices: Inkjet Printers
+#### Inkjet Printers
 
 Uses tiny droplets of ink to produce images\.
 
@@ -299,7 +287,7 @@ The ink liquid droplets are smaller in diameter than a human hair\! Many of thes
 
 ![](_assets/Lecture%202%20-%20Peripheral%20Devices38.gif)
 
-# Output Devices: Laser Printers
+#### Laser Printers
 
 ![](_assets/Lecture%202%20-%20Peripheral%20Devices39.png)
 
@@ -311,6 +299,3 @@ The ink liquid droplets are smaller in diameter than a human hair\! Many of thes
   * As the paper rolls by the drum\, the toner is transferred onto the paper\. A hot roller then bonds toner to the paper\.
 
 ![](_assets/Lecture%202%20-%20Peripheral%20Devices40.gif)
-
-# Output Devices: Laser Printers (cont.)
-

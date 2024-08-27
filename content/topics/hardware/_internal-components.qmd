@@ -1,23 +1,10 @@
-# Technical Support (420-1N6-AB)System Unit Components
+---
+title: Internal components
+subtitle: Overview of the main internal components of computers.
+date: 2024-08-27
+---
 
-# Fall 2023
-
-# System Unit – Main Inner Components
-
-# Instructor prep
-
-* Take apart a computer and bring it in class
-* Have additional components ready to circulate
-  * PSU
-  * Motherboard with a different form factor
-  * CPU PGA
-  * CPU LDA
-  * RAM
-  * HHD
-  * SSD
-  * Heat sink
-
-# Outline
+## Outline
 
 * System Unit Main Components:
   * Case
@@ -33,55 +20,36 @@
   * GPU
   * Storage Device
 
-# Question for you?
-
-Have you ever looked inside your own computer?
-
-\(or someone else’s\)
-
-For what reason?
-
-What did you see inside?
+## Inside A Computer
 
 ![](_assets/Lecture%203%20-%20System%20Unit%20Components0.png)
 
-# Inside A Computer – The system unit
-
 ![](_assets/Lecture%203%20-%20System%20Unit%20Components1.gif)
 
-Case
+- Case
+- Power Supply
+- Motherboard
+- Connectors
+- Cooling Devices
+- Processor \(CPU\)
+- Chipset
+- Buses
+- Memory \(RAM\)
+- Storage Devices
 
-Power Supply
-
-Motherboard
-
-Connectors
-
-Cooling Devices
-
-Processor \(CPU\)
-
-Chipset
-
-Buses
-
-Memory \(RAM\)
-
-Storage Devices
-
-# Case
+### Case
 
 ![](_assets/Lecture%203%20-%20System%20Unit%20Components2.png)
 
 * Provides protection and cooling for the internal components\.
-* Also prevents damage from  <span style="color:#0055A4">static electricity </span> \(components grounded via attachment to case\)\.
+* Also prevents damage from  static electricity  \(components grounded via attachment to case\)\.
 * Usually made of plastic\, steel or aluminum\.
 * Fans move air through the case:
   * to replace warm air with cold air to keep components at stable temperatures
   * to prevent build\-up of dust
   * There exist many guides/studies for optimal airflow\. E\.g\.  _[https://voltcave\.com/pc\-airflow\-guide/](https://voltcave.com/pc-airflow-guide/)_
 
-# 2) Power Supply
+### Power Supply
 
 __Main purpose: __ Converts AC power \(alternating current\) from wall socket to DC power \(direct current\)\. Direct current \(0 or 5V\) is used to power digital circuits\.
 
@@ -91,11 +59,9 @@ __Main purpose: __ Converts AC power \(alternating current\) from wall socket 
 
 ![](_assets/Lecture%203%20-%20System%20Unit%20Components5.gif)
 
-<span style="color:#FF0000">Note: PSU have their own fans:</span>
+Note: PSU have their own fans. Energy conversion releases a lot of heat!
 
-<span style="color:#FF0000">Energy conversion releases a lot of heat\!</span>
-
-# Activity: Feeling Your Way
+### Activity: Feeling Your Way
 
 With a partner\, take it in turns to close your eyes and feel around the back of a PC\.
 
@@ -105,13 +71,7 @@ Try and identify the connectors  you find\. Your partner can help you by con
 
 ![](_assets/Lecture%203%20-%20System%20Unit%20Components7.png)
 
-# Uninterruptible Power Supply
-
-In the case of a power outage\, an Uninterruptible Power Supply \(UPS\) can keep a computer running for a few minutes to several hours depending on the sophistication of the UPS\. See  <span style="color:#0563C1"> _[https://www\.wikihow\.com/Buy\-and\-Use\-an\-Uninterruptible\-Power\-Supply](https://www.wikihow.com/Buy-and-Use-an-Uninterruptible-Power-Supply)_ </span>  for an example
-
-We will talk more about uninterruptible power supply when we start speaking about server hardware\.
-
-# 2) Power Supply
+### Power Supply
 
 ![](_assets/Lecture%203%20-%20System%20Unit%20Components8.png)
 
@@ -121,7 +81,13 @@ We will talk more about uninterruptible power supply when we start speaking abou
 
 <span style="color:#FF0000">Demo: PSU What are the supported DV outputs?</span>
 
-# Power Supply Connectors
+#### Uninterruptible Power Supply
+
+In the case of a power outage\, an Uninterruptible Power Supply \(UPS\) can keep a computer running for a few minutes to several hours depending on the sophistication of the UPS\. See  <span style="color:#0563C1"> _[https://www\.wikihow\.com/Buy\-and\-Use\-an\-Uninterruptible\-Power\-Supply](https://www.wikihow.com/Buy-and-Use-an-Uninterruptible-Power-Supply)_ </span>  for an example
+
+We will talk more about uninterruptible power supply when we start speaking about server hardware\.
+
+#### Power Supply Connectors
 
 * Most power supply connectors are : 20 \+ 4 pins
 * Usually made up of wires of various colors:
@@ -132,7 +98,7 @@ We will talk more about uninterruptible power supply when we start speaking abou
 
 ![](_assets/Lecture%203%20-%20System%20Unit%20Components9.png)
 
-# Power Supply Ratings
+#### Power Supply Ratings
 
 * <span style="color:#FF0000"> __Useful for Assignment 1__ </span>
 * Ratings:
@@ -140,7 +106,7 @@ We will talk more about uninterruptible power supply when we start speaking abou
   * Efficiency \(Law of thermodynamics: 100% power input cannot be converted to 100% power output; some power supplies have higher efficiency ratings than others\)
   * For more detailed explanation:  <span style="color:#0563C1"> _[https://www\.newegg\.com/insider/how\-to\-choose\-a\-pc\-power\-supply\-buying\-guide/](https://www.newegg.com/insider/how-to-choose-a-pc-power-supply-buying-guide/)_ </span>
 
-# 3) Connectors
+### Connectors
 
 These connect specific components to various ports on the motherboard\.
 
@@ -653,10 +619,4 @@ This will restrict the types of motherboards you can use\.
 ![](_assets/Lecture%203%20-%20System%20Unit%20Components74.png)
 
 ![](_assets/Lecture%203%20-%20System%20Unit%20Components75.png)
-
-# Q & A
-
----
-
-In Slide Show mode, click the arrow to enter the PowerPoint Getting Started Center.
 
