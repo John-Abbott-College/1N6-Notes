@@ -52,7 +52,17 @@ format:
   html:
     css: _assets/css/styles.css
     toc: true
+    toc-depth: 4
+    toc-title: Contents
     date-modified: last-modified
     theme: 
       dark: [solar, _assets/css/customizations-dark.scss]
       light: [cosmo, _assets/css/customizations-light.scss]
+    lightbox: 
+      match: auto
+      effect: fade
+      loop: true
+    copyright:
+      holder: Michael Haaf
+      year: 2024
+    license: CC BY-NC-SA

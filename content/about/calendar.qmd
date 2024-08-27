@@ -15,12 +15,13 @@ You can compare this calendar with the calendar from the [Course Outline][course
 
 ### Deliverables
 
+0. **Lab 0:** [Introduction to Technical Support Survey](https://forms.office.com/r/7DuCvAgRfz)
 1. **Lab 1:** TBD
 2. **Assignment 1:** TBD
 
 ### Schedule
 
-- **Aug 22:** Intro to course
-- **Aug 26:** Intro to course
-- **Aug 27:** TBD
-- **Aug 29:** TBD
+- **Aug 22:** Introductions, icebreaker, overview of the [course outline][course-outline].
+- **Aug 26:** Completed Lab 0 (see above). Overview of the [course syllabus][syllabus] and [course calendar][calendar].
+- **Aug 27:** Class cancelled -- please read the lecture [Introduction to computers](/topics/hardware/introduction-to-computers.html) to catch up on covered material.
+- **Aug 29:** In-class activities. TBD
