@@ -1,0 +1,152 @@
+---
+title: Introduction to Computers
+subtitle: The fundamental properties of computers explained with examples and definitions.
+date: 2024-08-27
+---
+
+![Each of these things is either a computer, or a computer component. Can you identify them all? Click on the image to see everything in higher resolution.](_assets/Lecture%201%20-%20Introduction%20to%20computers0.jpg)
+
+## Introduction
+
+We all interact with computers on a daily basis, whether we are aware or not. In fact, it can be said that computers, or computing devices, have been part of human society (in some manner or another) for *centuries* -- even though the computers we typically think of today are relatively recent inventions from the 20th century.
+
+What is a computer? What is it that computers actually *do*? This lecture is a brief introduction to these questions. The big picture definitions we learn here will be helpful anchors for better understanding the more complicated and detailed components of modern computers that we will need to learn to understand technical support as a science and a profession.
+
+## Lesson overview
+
+- Understand what a computer is
+- Compare and contrast different types of computers by complexity and capabilities
+- Understand what modern digital computers are
+- Understand the difference between personal computing devices and servers
+
+## What is a computer?
+
+A __computer__   is an device designed to:
+
+1. __store information__
+2. __change that information__ through human or automated interactions
+
+A __computer__ almost always features: (1) a mechanism for keeping information intact and (2) interactive components to facilitate the modification of that information.
+
+## Is this a computer? Examples
+
+The above definition sounds pretty general -- and it is! What kinds of things count as computers, or follow the above two properties? Click through the tabs below to see some examples, and a discussion for each on its ability to *compute* things.
+
+::: {.panel-tabset}
+
+## Desktop
+
+Desktop computers, often referred to as the **Personal Computer (PC)**, are a classic example of a modern computing device -- these are the computers that we will be using in our labs, and upon which we will focus the majority of our study this semester.
+
+Desktop computers meet the computer definition above in many ways, but simply: (1) information is stored in **disks**, and (2) information is modified by human interaction using devices like **keyboards** and **mice**, and then modified by the computer using a **central processing unit (CPU)**.
+
+We will learn in future lectures the deep gritty detail of how devices like disks, keyboards, mice, CPUs, and others make the modern computer magic we know and love.
+
+![](_assets/Lecture%201%20-%20Introduction%20to%20computers6.jpg)
+
+## Laptops
+
+Content will appear here soon *- the admin*
+
+## Game consoles
+
+More content will appear here soon *- the admin*
+
+Game consoles such as PS5, XBOX, Switch, etc.
+
+![](_assets/Lecture%201%20-%20Introduction%20to%20computers8.jpg)
+
+## Cellphones
+
+Content will appear here soon *- the admin*
+
+## Smartphones
+
+More content will appear here soon *- the admin*
+
+![Smartphones and tablets are hand-held computers, they have all the components of a computer in a very small and light size.](_assets/Lecture%201%20-%20Introduction%20to%20computers1.jpg)
+
+## Wearables
+
+More content will appear here soon *- the admin*
+
+Wearables: Fitness trackers, smart watches, etc.
+
+![](_assets/Lecture%201%20-%20Introduction%20to%20computers7.jpg)
+
+## Appliances
+
+More content will appear here soon *- the admin*
+
+![A washing machine contains CPU, RAM and sets of codes to operate. It can even be reprogrammed and modern washing machines can be controlled using cellphones!](_assets/Lecture%201%20-%20Introduction%20to%20computers2.jpg)
+
+## "Smart" Appliances
+
+Content will appear here soon *- the admin*
+
+## Handheld electronics
+
+More content will appear here soon *- the admin*
+
+![Electronic handheld calculator](_assets/Lecture%201%20-%20Introduction%20to%20computers3.jpg)
+
+## Programmable electronics
+
+More content will appear here soon *- the admin*
+
+![Programmable handheld calculator](_assets/Lecture%201%20-%20Introduction%20to%20computers4.jpg)
+
+## Nonelectronics?
+
+Content will appear here soon *- the admin*
+
+## Microcomputers
+
+More content will appear here soon *- the admin*
+
+![Raspberry Pi](_assets/Lecture%201%20-%20Introduction%20to%20computers5.jpg)
+
+:::
+
+## Digital computers
+
+You may think the above definition is *too* general -- indeed, in the context of this class, we will almost always be talking specifically about **digital** computers when we say *computer*. What is the difference?
+
+Digital computers have the following two **additional** properies compared to general computers. They are:
+
+- **Digital**: All the "information" stored is represented by combinations of two different states (0 or 1, i.e., ON or OFF). These digital states are made possible using electrical circuitry. In order to do complex operations with these states, we can use the **binary** numbering to represent the digital states as a variety of numbers, letters, and other concepts. This digital information can be shared between devices using cables (whether electrical or optical, as we will see)
+- **Deterministic**: A given input reliably produces a defined output with every interaction. For one e.g., when you tap your OPUS card on a fare gate, you should expect that it will either let you through (if you have fare) or not (if you don't). The concept is more general: computer engineering is, in part, the study and practise of making physical interactions with computing devices **reliably and predictably** produce the same *deterministic* results under the same physical stimuli.
+
+When we study the components of computers, the above two properties will allow us to really understand *how* such devices work and why, as in every case, the device implements these two properties to give us the behavior we need.
+
+## Personal vs shared computing: What is a server?
+
+In the beginning, our focus will be on understanding individual personal computers. Yet, this barely scratches the surface of how computers are used in modern society -- we will also need to learn about how many computers can be combined to pool resources and provide services at all times of day, as this is essential to the infrastructure of the internet and a foundational concept in technical support as a profession.
+
+For now, we can just know that **servers** similar to personal computers, but use specialized hardware that is optimized for being turned on 24/7, for communicating with other servers, and for processing and managing **large** amounts of data.
+
+This is because **servers** are the necessary infrastructure for running the large popular websites and services many of us use today on a regular basis: Social Media websites like Facebook/Instragram/etc., educational resources like Omnivox/Moodle, online software like Office 365, etc. all run on **servers**, or on collections of servers, known as **server farms**.
+
+![](_assets/Lecture%201%20-%20Introduction%20to%20computers9.jpg)
+
+## Exercises
+
+None for this lecture -- stay tuned for the next two lectures!
+
+## Knowledge check
+
+The following questions invite you to reflect on the key information learned in this lesson. If you can't answer the question, you can click the corresponding link to review the topic more closely. Future assignments and tests may be based on questions like these:
+
+- What are the two main properites of computers?
+- Are video game consoles computers?
+- Are there examples of nonelectonic computers? How do nonelectronic computer *compute*?
+- Why is **binary** relevant to computers?
+- What is the property of computers that means they reliably behave the same way given the same input?
+- What is the name for the type of computer that is always on, and is specialized for processing large amounts of data and pooling many computing resources in one place?
+
+## Additional resources
+
+This section contains helpful links to related content. You aren't required to study these in detail, but it never hurts to learn more.
+
+- ["The Mother of All Demos"](https://www.dougengelbart.org/content/view/209/448/) This is a 1968 presentation that introduced many of the hardware/graphics concepts we will see today and some we will see in future lectures: the mouse, networking, video conferencing, word documents, hyperlinks, *gamer headphones*, etc. It is very cool to see the palpable excitement of the 2000+ audience tuning into a passionate presentation of a series of completely new technologies.
+- Montréal's [Musée de l'Ordinateur](http://emusee.org/) -- unfortunately the physical location has been closed since 2022, but the website is still a neat resource for reading on the history of personal computers and their evolution. The author's bias towards Bill Gates and Windows machines is quite strong (there is more to the story), but the information provided is reliable and interesting.

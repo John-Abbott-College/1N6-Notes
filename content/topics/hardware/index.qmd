@@ -3,6 +3,10 @@ title: "Hardware"
 subtitle: "All lectures related to computer hardware can be found here."
 listing: 
   filter-ui: true
-  sort-ui: [date, date-modified, title]
+  sort-ui: [date, title]
   sort: date
+  date-format: iso
+  categories: true
+  exclude:
+    filename: "*index.qmd"
 ---
