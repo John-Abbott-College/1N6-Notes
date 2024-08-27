@@ -5,7 +5,7 @@ date: 2024-08-27
 
 {{< include /_reference-links.md >}}
 
-Unforunately I am not feeling well today and would like to make sure I do not pass that along to you -- I will be cancelling today's class. 
+Unfortunately I am not feeling well today and would like to make sure I do not pass that along to you -- I will be cancelling today's class. 
 
 I will be uploading today's lecture notes shortly. The link for these will appear on LEA soon. **Please read them in advance of Thursday's class, where we will be doing in-class activities based on some of the content**.
 
