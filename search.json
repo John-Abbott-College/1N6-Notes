@@ -21,7 +21,7 @@
     "href": "topics/all-lectures.html",
     "title": "All lectures",
     "section": "",
-    "text": "This index file tracks all .qmd files in the “topics” directory, to provide a flat view of all lectures that can be organized by date/title/topic/etc.\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nSubtitle\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Modified - Oldest\n        \n         \n          Modified - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nSubtitle\n\n\nModified\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
     "crumbs": [
       "Home",
       "Topics",
