@@ -4,7 +4,17 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n\n\n Back to topReuseCC BY-NC-SA 4.0",
+    "text": "This companion site for the 420-1N6 course includes:",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#source-code",
+    "href": "index.html#source-code",
+    "title": "Home",
+    "section": "Source Code",
+    "text": "Source Code\nThis webpage is written in Markdown using the Quarto framework. The website is hosted via GitHub Pages\nSource code is open source and available on GitHub.",
     "crumbs": [
       "Home"
     ]
