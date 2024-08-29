@@ -71,7 +71,7 @@ Game consoles such as PlayStation and Xbox, as well as handheld handheld console
 
 ::: {#fig-gameconsoles layout-ncol=2}
 
-![](_assets/introduction-to-computers-n64)
+![](_assets/introduction-to-computers-n64.png)
 
 ![](_assets/introduction-to-computers-gamecube.png)
 
@@ -98,8 +98,7 @@ Video game consoles showed an interesting development in **storage technology** 
 [abacus]: https://upload.wikimedia.org/wikipedia/commons/a/af/Abacus_%28PSF%29.png
 [antikythera]: https://upload.wikimedia.org/wikipedia/commons/6/66/NAMA_Machine_d%27Anticyth%C3%A8re_1.jpg
 [diff-engine-diag]: https://upload.wikimedia.org/wikipedia/commons/9/9e/Difference_engine_plate_1853.jpg
-[diff-engine-real]: https://upload.wikimedia.org/wikipedia/commons/6/66/Differenceengine.jpg
-
+[diff-engine-real]: _assets/introduction-to-computers-differenceengine.jpg
 
 ## Computers within computers?
 

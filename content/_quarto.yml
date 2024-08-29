@@ -55,10 +55,11 @@ format:
     toc-depth: 4
     toc-title: Contents
     date-modified: last-modified
+    highlight-style: a11y
     theme: 
       dark: [solar, _assets/css/customizations-dark.scss]
       light: [cosmo, _assets/css/customizations-light.scss]
-    lightbox: 
+    lightbox:
       match: auto
       effect: fade
       loop: true
