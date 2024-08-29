@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2024-08-29">
+
+<title>Internal components – Technical Support</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../topics/hardware/introduction-to-computers.html" rel="next">
+<link href="../../topics/hardware/external-components.html" rel="prev">
+<link href="../../_assets/favicons/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": true,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": true,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../_assets/css/styles.css">
+<meta property="og:title" content="Internal components – Technical Support">
+<meta property="og:description" content="Overview of the main internal components of computers.">
+<meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/hardware/_assets/favicons/favicon-32x32.png">
+<meta property="og:site_name" content="{{< var course.title >}}">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../_assets/icon-lightbg.svg" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Technical Support</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../announcements/index.html"> 
+<span class="menu-text">Announcements</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about/calendar.html"> 
+<span class="menu-text">Calendar</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about/syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../topics/all-lectures.html"> 
+<span class="menu-text">Lectures</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://moodle.johnabbott.qc.ca/course/view.php?id=807"> 
+<span class="menu-text"><iconify-icon role="img" inline="" icon="simple-icons:moodle" aria-label="Icon moodle from simple-icons Iconify.design set." title="Icon moodle from simple-icons Iconify.design set."></iconify-icon></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/john-abbott-college/quarto-course-template"> 
+<span class="menu-text"><iconify-icon role="img" inline="" icon="fa6-brands:github" aria-label="Icon github from fa6-brands Iconify.design set." title="Icon github from fa6-brands Iconify.design set."></iconify-icon></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../topics/index.html">Topics</a></li><li class="breadcrumb-item"><a href="../../topics/hardware/index.html">Hardware</a></li><li class="breadcrumb-item"><a href="../../topics/hardware/internal-components.html">Internal components</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../announcements/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Announcements</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../about/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../about/calendar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Calendar</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../about/syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../about/this-site.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About this website</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../topics/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Topics</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/all-lectures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">All lectures</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../topics/hardware/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hardware</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/hardware/external-components.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">External components</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/hardware/internal-components.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Internal components</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/hardware/introduction-to-computers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Computers</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#outline" id="toc-outline" class="nav-link active" data-scroll-target="#outline">Outline</a></li>
+  <li><a href="#inside-a-computer" id="toc-inside-a-computer" class="nav-link" data-scroll-target="#inside-a-computer">Inside A Computer</a>
+  <ul>
+  <li><a href="#case" id="toc-case" class="nav-link" data-scroll-target="#case">Case</a></li>
+  <li><a href="#power-supply" id="toc-power-supply" class="nav-link" data-scroll-target="#power-supply">Power Supply</a></li>
+  <li><a href="#activity-feeling-your-way" id="toc-activity-feeling-your-way" class="nav-link" data-scroll-target="#activity-feeling-your-way">Activity: Feeling Your Way</a></li>
+  <li><a href="#power-supply-1" id="toc-power-supply-1" class="nav-link" data-scroll-target="#power-supply-1">Power Supply</a>
+  <ul class="collapse">
+  <li><a href="#uninterruptible-power-supply" id="toc-uninterruptible-power-supply" class="nav-link" data-scroll-target="#uninterruptible-power-supply">Uninterruptible Power Supply</a></li>
+  <li><a href="#power-supply-connectors" id="toc-power-supply-connectors" class="nav-link" data-scroll-target="#power-supply-connectors">Power Supply Connectors</a></li>
+  <li><a href="#power-supply-ratings" id="toc-power-supply-ratings" class="nav-link" data-scroll-target="#power-supply-ratings">Power Supply Ratings</a></li>
+  </ul></li>
+  <li><a href="#connectors" id="toc-connectors" class="nav-link" data-scroll-target="#connectors">Connectors</a></li>
+  </ul></li>
+  <li><a href="#types-of-connectors" id="toc-types-of-connectors" class="nav-link" data-scroll-target="#types-of-connectors">Types of connectors</a></li>
+  <li><a href="#motherboard-overview" id="toc-motherboard-overview" class="nav-link" data-scroll-target="#motherboard-overview">4) Motherboard (overview)</a></li>
+  <li><a href="#motherboard---form-factors" id="toc-motherboard---form-factors" class="nav-link" data-scroll-target="#motherboard---form-factors">4) Motherboard - Form Factors</a></li>
+  <li><a href="#motherboard-cpu-socket" id="toc-motherboard-cpu-socket" class="nav-link" data-scroll-target="#motherboard-cpu-socket">4.1) Motherboard – CPU Socket</a></li>
+  <li><a href="#cpu" id="toc-cpu" class="nav-link" data-scroll-target="#cpu">5) CPU</a></li>
+  <li><a href="#how-to-connect-a-cpu" id="toc-how-to-connect-a-cpu" class="nav-link" data-scroll-target="#how-to-connect-a-cpu">How to Connect a CPU?</a></li>
+  <li><a href="#cpu-brands" id="toc-cpu-brands" class="nav-link" data-scroll-target="#cpu-brands">CPU Brands</a></li>
+  <li><a href="#cpu-core-components" id="toc-cpu-core-components" class="nav-link" data-scroll-target="#cpu-core-components">CPU Core Components</a></li>
+  <li><a href="#cpu-analogy-man-in-a-box" id="toc-cpu-analogy-man-in-a-box" class="nav-link" data-scroll-target="#cpu-analogy-man-in-a-box">CPU Analogy: “Man in a Box”</a></li>
+  <li><a href="#codebook" id="toc-codebook" class="nav-link" data-scroll-target="#codebook">Codebook</a></li>
+  <li><a href="#registers" id="toc-registers" class="nav-link" data-scroll-target="#registers">Registers</a></li>
+  <li><a href="#clock" id="toc-clock" class="nav-link" data-scroll-target="#clock">Clock</a></li>
+  <li><a href="#cooling-devices---fans" id="toc-cooling-devices---fans" class="nav-link" data-scroll-target="#cooling-devices---fans">6.1) Cooling Devices - Fans</a></li>
+  <li><a href="#activity-cooling-devices-fans-vs-liquid-cooling" id="toc-activity-cooling-devices-fans-vs-liquid-cooling" class="nav-link" data-scroll-target="#activity-cooling-devices-fans-vs-liquid-cooling">Activity: Cooling devices Fans vs Liquid cooling</a></li>
+  <li><a href="#cooling-devices-heat-sinks" id="toc-cooling-devices-heat-sinks" class="nav-link" data-scroll-target="#cooling-devices-heat-sinks">6.2) Cooling Devices – Heat sinks</a></li>
+  <li><a href="#internal-components-general-overview" id="toc-internal-components-general-overview" class="nav-link" data-scroll-target="#internal-components-general-overview">Internal Components:&nbsp;General Overview</a></li>
+  <li><a href="#motherboard-ram-slots" id="toc-motherboard-ram-slots" class="nav-link" data-scroll-target="#motherboard-ram-slots">4.2) Motherboard – RAM slots</a></li>
+  <li><a href="#main-memory" id="toc-main-memory" class="nav-link" data-scroll-target="#main-memory">5) Main Memory</a></li>
+  <li><a href="#main-memory-cont." id="toc-main-memory-cont." class="nav-link" data-scroll-target="#main-memory-cont.">5) Main Memory (cont.)</a></li>
+  <li><a href="#motherboard-expansion-slots" id="toc-motherboard-expansion-slots" class="nav-link" data-scroll-target="#motherboard-expansion-slots">4.1) Motherboard – Expansion Slots</a></li>
+  <li><a href="#expansion-slots" id="toc-expansion-slots" class="nav-link" data-scroll-target="#expansion-slots">5) Expansion Slots</a></li>
+  <li><a href="#graphics-cards" id="toc-graphics-cards" class="nav-link" data-scroll-target="#graphics-cards">7) Graphics Cards</a></li>
+  <li><a href="#gpu-vs-cpu" id="toc-gpu-vs-cpu" class="nav-link" data-scroll-target="#gpu-vs-cpu">GPU VS CPU</a></li>
+  <li><a href="#cpu-vs-gpu" id="toc-cpu-vs-gpu" class="nav-link" data-scroll-target="#cpu-vs-gpu">CPU vs GPU</a></li>
+  <li><a href="#gpu-vs-cpu-1" id="toc-gpu-vs-cpu-1" class="nav-link" data-scroll-target="#gpu-vs-cpu-1">GPU vs CPU</a></li>
+  <li><a href="#storage-devices" id="toc-storage-devices" class="nav-link" data-scroll-target="#storage-devices">8) Storage Devices</a></li>
+  <li><a href="#storage-devices-cont." id="toc-storage-devices-cont." class="nav-link" data-scroll-target="#storage-devices-cont.">7) Storage Devices (cont.)</a></li>
+  <li><a href="#storage-devices-floppy-drive" id="toc-storage-devices-floppy-drive" class="nav-link" data-scroll-target="#storage-devices-floppy-drive">7.1) Storage Devices: Floppy Drive</a></li>
+  <li><a href="#storage-devices-hard-drive" id="toc-storage-devices-hard-drive" class="nav-link" data-scroll-target="#storage-devices-hard-drive">7.2) Storage Devices: Hard Drive</a></li>
+  <li><a href="#storage-devices-tape-drive" id="toc-storage-devices-tape-drive" class="nav-link" data-scroll-target="#storage-devices-tape-drive">7.4) Storage Devices: Tape Drive</a></li>
+  <li><a href="#storage-devices-optical-drive" id="toc-storage-devices-optical-drive" class="nav-link" data-scroll-target="#storage-devices-optical-drive">7.5) Storage Devices: Optical Drive</a></li>
+  <li><a href="#storage-devices-external-flash-drive" id="toc-storage-devices-external-flash-drive" class="nav-link" data-scroll-target="#storage-devices-external-flash-drive">7.6) Storage Devices: External Flash Drive</a></li>
+  <li><a href="#storage-devices-interfaces" id="toc-storage-devices-interfaces" class="nav-link" data-scroll-target="#storage-devices-interfaces">Storage Devices: Interfaces</a></li>
+  <li><a href="#storage-devices-interfaces-types-in-order-of-oldest-to-newest" id="toc-storage-devices-interfaces-types-in-order-of-oldest-to-newest" class="nav-link" data-scroll-target="#storage-devices-interfaces-types-in-order-of-oldest-to-newest">Storage Devices: Interfaces Types (In order of oldest to newest)</a></li>
+  <li><a href="#storage-devices-interfaces-types-cont." id="toc-storage-devices-interfaces-types-cont." class="nav-link" data-scroll-target="#storage-devices-interfaces-types-cont.">Storage Devices: Interfaces Types (cont.)</a></li>
+  <li><a href="#computer-memory-hierarchy" id="toc-computer-memory-hierarchy" class="nav-link" data-scroll-target="#computer-memory-hierarchy">Computer Memory Hierarchy</a></li>
+  <li><a href="#build-pc-how-do-i-choose-a-motherboard" id="toc-build-pc-how-do-i-choose-a-motherboard" class="nav-link" data-scroll-target="#build-pc-how-do-i-choose-a-motherboard">Build PC: How do I choose a motherboard?</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../topics/index.html">Topics</a></li><li class="breadcrumb-item"><a href="../../topics/hardware/index.html">Hardware</a></li><li class="breadcrumb-item"><a href="../../topics/hardware/internal-components.html">Internal components</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Internal components</h1>
+<p class="subtitle lead">Overview of the main internal components of computers.</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 29, 2024</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">August 29, 2024</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>The notes below are in a draft state – they may change up to Monday Sep 2</strong></p>
+<section id="outline" class="level2">
+<h2 class="anchored" data-anchor-id="outline">Outline</h2>
+<ul>
+<li>System Unit Main Components:
+<ul>
+<li>Case</li>
+<li>Power Supply Unit</li>
+<li>Connectors</li>
+<li>Motherboard
+<ul>
+<li>Expansion slots</li>
+<li>Buses</li>
+<li>CPU</li>
+<li>Cooling Devices</li>
+<li>Chipset</li>
+<li>RAM</li>
+</ul></li>
+<li>GPU</li>
+<li>Storage Device</li>
+</ul></li>
+</ul>
+</section>
+<section id="inside-a-computer" class="level2">
+<h2 class="anchored" data-anchor-id="inside-a-computer">Inside A Computer</h2>
+<p><a href="_assets/Lecture 3 - System Unit Components0.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="_assets/Lecture 3 - System Unit Components0.png" class="img-fluid"></a></p>
+<ul>
+<li>Case</li>
+<li>Power Supply</li>
+<li>Motherboard</li>
+<li>Connectors</li>
+<li>Cooling Devices</li>
+<li>Processor (CPU)</li>
+<li>Chipset</li>
+<li>Buses</li>
+<li>Memory (RAM)</li>
+<li>Storage Devices</li>
+</ul>
+<section id="case" class="level3">
+<h3 class="anchored" data-anchor-id="case">Case</h3>
+<p><a href="_assets/Lecture 3 - System Unit Components2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="_assets/Lecture 3 - System Unit Components2.png" class="img-fluid"></a></p>
+<ul>
+<li>Provides protection and cooling for the internal components.</li>
+<li>Also prevents damage from static electricity (components grounded via attachment to case).</li>
+<li>Usually made of plastic, steel or aluminum.</li>
+<li>Fans move air through the case:
+<ul>
+<li>to replace warm air with cold air to keep components at stable temperatures</li>
+<li>to prevent build-up of dust</li>
+<li>There exist many guides/studies for optimal airflow. E.g. <em><a href="https://voltcave.com/pc-airflow-guide/">https://voltcave.com/pc-airflow-guide/</a></em></li>
+</ul></li>
+</ul>
+</section>
+<section id="power-supply" class="level3">
+<h3 class="anchored" data-anchor-id="power-supply">Power Supply</h3>
+<p><strong>Main purpose:&nbsp;</strong> Converts AC power&nbsp;(alternating current) from wall socket to DC&nbsp;power (direct current). Direct current (0 or&nbsp;5V) is used to power digital circuits.</p>
+<p><a href="_assets/Lecture 3 - System Unit Components3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="_assets/Lecture 3 - System Unit Components3.jpg" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="_assets/Lecture 3 - System Unit Components4.png" class="img-fluid"></a></p>
+<p>Note: PSU have their own fans. Energy conversion releases a lot of heat!</p>
+</section>
+<section id="activity-feeling-your-way" class="level3">
+<h3 class="anchored" data-anchor-id="activity-feeling-your-way">Activity: Feeling Your Way</h3>
+<p>With a partner, take it in&nbsp;turns to close your eyes&nbsp;and feel around the back of&nbsp;a PC.</p>
+<p>Try and identify the&nbsp;connectors&nbsp; you find. Your&nbsp;partner can help you by&nbsp;confirming your guesses.</p>
+<p><a href="_assets/Lecture 3 - System Unit Components6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="_assets/Lecture 3 - System Unit Components6.png" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="_assets/Lecture 3 - System Unit Components7.png" class="img-fluid"></a></p>
+</section>
+<section id="power-supply-1" class="level3">
+<h3 class="anchored" data-anchor-id="power-supply-1">Power Supply</h3>
+<p><a href="_assets/Lecture 3 - System Unit Components8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="_assets/Lecture 3 - System Unit Components8.png" class="img-fluid"></a></p>
+<ul>
+<li>Computers can only tolerate slight fluctuations in power without <strong>needing to shut down</strong>
+<ul>
+<li>.</li>
+</ul></li>
+<li>Important: <span style="color:#FF0000"> <strong>Never open a power supply!</strong> </span> The capacitors contained within can keep a dangerous high voltage, high power charge long after being unplugged.</li>
+</ul>
+<p><span style="color:#FF0000">Demo: PSU What are the supported DV outputs?</span></p>
+<section id="uninterruptible-power-supply" class="level4">
+<h4 class="anchored" data-anchor-id="uninterruptible-power-supply">Uninterruptible Power Supply</h4>
+<p>In the case of a power outage, an Uninterruptible Power Supply (UPS) can&nbsp;keep a computer running for a&nbsp;few minutes to several hours depending on&nbsp;the sophistication of the UPS.&nbsp;See&nbsp; <span style="color:#0563C1"> <em><a href="https://www.wikihow.com/Buy-and-Use-an-Uninterruptible-Power-Supply">https://www.wikihow.com/Buy-and-Use-an-Uninterruptible-Power-Supply</a></em> </span> &nbsp;for an example</p>
+<p>We will talk more about uninterruptible power supply when we start speaking about server hardware.</p>
+</section>
+<section id="power-supply-connectors" class="level4">
+<h4 class="anchored" data-anchor-id="power-supply-connectors">Power Supply Connectors</h4>
+<ul>
+<li>Most power supply connectors are : 20 + 4 pins</li>
+<li>Usually made up of wires of various colors:
+<ul>
+<li>Yellow 12V</li>
+<li>Red 5V</li>
+<li>Orange 3.3V</li>
+<li>Other colors may be ground 0V</li>
+</ul></li>
+</ul>
+<p><a href="_assets/Lecture 3 - System Unit Components9.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="_assets/Lecture 3 - System Unit Components9.png" class="img-fluid"></a></p>
+</section>
+<section id="power-supply-ratings" class="level4">
+<h4 class="anchored" data-anchor-id="power-supply-ratings">Power Supply Ratings</h4>
+<ul>
+<li><span style="color:#FF0000"> <strong>Useful for Assignment 1</strong> </span></li>
+<li>Ratings:
+<ul>
+<li>Wattage (amount of power delivered, must be greater than the sum of&nbsp;power required by all parts, some power supplies can provide more power&nbsp;than others)</li>
+<li>Efficiency (Law of thermodynamics: 100% power input cannot be converted&nbsp;to 100% power output; some power supplies have higher efficiency ratings&nbsp;than others)</li>
+<li>For more detailed explanation:&nbsp; <span style="color:#0563C1"> <em><a href="https://www.newegg.com/insider/how-to-choose-a-pc-power-supply-buying-guide/">https://www.newegg.com/insider/how-to-choose-a-pc-power-supply-buying-guide/</a></em> </span></li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="connectors" class="level3">
+<h3 class="anchored" data-anchor-id="connectors">Connectors</h3>
+<p>These connect specific components to various ports on the motherboard.</p>
+<p>Most connectors are <strong>keyed</strong> (can only be inserted one way).</p>
+<p>Note: Always check the pins if you have trouble with a connector. “If it doesn’t go in like butter, it doesn’t go in at all” -- never force a connection! you are likely going to damage the pins.</p>
+<p><a href="_assets/Lecture 3 - System Unit Components10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="_assets/Lecture 3 - System Unit Components10.png" class="img-fluid"></a></p>
+</section>
+</section>
+<section id="types-of-connectors" class="level1">
+<h1>Types of connectors</h1>
+<p>Floppy drive connectors (old days)</p>
+<p>SATA Cables (for hard drives)</p>
+<p>Molex – Less used but still present</p>
+<p><a href="_assets/Lecture 3 - System Unit Components11.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="_assets/Lecture 3 - System Unit Components11.png" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="_assets/Lecture 3 - System Unit Components12.png" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components13.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="_assets/Lecture 3 - System Unit Components13.png" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components14.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="_assets/Lecture 3 - System Unit Components14.png" class="img-fluid"></a></p>
+<p>PCIe (Video Cards)</p>
+<p><a href="_assets/Lecture 3 - System Unit Components15.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="_assets/Lecture 3 - System Unit Components15.png" class="img-fluid"></a></p>
+</section>
+<section id="motherboard-overview" class="level1">
+<h1>4) Motherboard (overview)</h1>
+<p><a href="_assets/Lecture 3 - System Unit Components16.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="_assets/Lecture 3 - System Unit Components16.png" class="img-fluid"></a></p>
+<p>Connects the CPU, RAM, Expansion ports.</p>
+<p>Composed of various&nbsp;chips all combined into <strong>north </strong> and <strong>south</strong> &nbsp;bridges</p>
+<p>More on those in a few&nbsp;weeks...</p>
+</section>
+<section id="motherboard---form-factors" class="level1">
+<h1>4) Motherboard - Form Factors</h1>
+<p>Main circuit board and controls the electrical pathways ( <span style="color:#0055A4">buses</span> ) found in a computer.</p>
+<p>The buses allow data to travel between the various components of a computer.</p>
+<p>Various form factors, e.g. AT, ATX, LPX, BTX, ITX.</p>
+<p>2001</p>
+<p><span style="color:#000000">9.6” x 9.6”</span></p>
+<p>IBM 1980s</p>
+<p>Huge 12 x 13”, no ports</p>
+<p><a href="_assets/Lecture 3 - System Unit Components17.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="_assets/Lecture 3 - System Unit Components17.png" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components18.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="_assets/Lecture 3 - System Unit Components18.png" class="img-fluid"></a></p>
+<hr>
+<p>ITX – used for imbedded systems such as routers</p>
+<p>You’ll notice that the I/O Ports on the mother board is always located around the same area.</p>
+<p>This is&nbsp;to keep certain consistency across&nbsp;manufacturer and regardless of the form factors</p>
+<p><a href="_assets/Lecture 3 - System Unit Components19.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="_assets/Lecture 3 - System Unit Components19.png" class="img-fluid"></a></p>
+<ul>
+<li><strong>AT </strong>
+<ul>
+<li>Invented by IBM in early 1980s, now obsolete.</li>
+<li>Huge in size (approximately 12 x 13 inches).</li>
+<li>Needed lots of space for power supply and its various chips.</li>
+<li>Lacked external ports, only allowed for monitor and keyboard.</li>
+</ul></li>
+<li><strong>ATX</strong>
+<ul>
+<li>Created in 1995 to meet the need for more connectors.</li>
+<li>Got off to a slow start but by 1998 became the most common form factor.</li>
+<li>Biggest change to AT was the rear panel with standard set of ports for expansion.</li>
+<li>Power supply position for better airflow, CPU and RAM positioned for easier access.</li>
+<li>Variations 12x9in (full size), 9.6x9.6in (microATX), 9x7.5in (FlexATX no longer used).</li>
+</ul></li>
+</ul>
+<hr>
+<p>Extra slide for studying</p>
+<ul>
+<li><strong>ITX</strong>
+<ul>
+<li>Created in 2001 to meet the demand for smaller computers.</li>
+<li>ITX failed but led to development of smaller form factor (SSF) motherboards.</li>
+<li>MiniITX (6.7x6.7in), NanoITX (4.7x4.7in) and PicoITX (3.8x2.8in)</li>
+<li>Commonly used for embedded systems and specialized devices such as routers.</li>
+<li>Require very little power, therefore produce less heat.</li>
+</ul></li>
+<li><strong>Proprietary</strong>
+<ul>
+<li>Some computer manufacturers make motherboards that work only with their cases.</li>
+<li>Services and upgrades usually need to be handled by authorized dealers.</li>
+<li>Often hard to get replacement parts and they are usually expensive.</li>
+</ul></li>
+</ul>
+<hr>
+<p>Extra slide for studying</p>
+</section>
+<section id="motherboard-cpu-socket" class="level1">
+<h1>4.1) Motherboard – CPU Socket</h1>
+<p>Let’s have a closer look at the CPU Socket: This is where the CPU will sit</p>
+<p><a href="_assets/Lecture 3 - System Unit Components20.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="_assets/Lecture 3 - System Unit Components20.png" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components21.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="_assets/Lecture 3 - System Unit Components21.png" class="img-fluid"></a></p>
+</section>
+<section id="cpu" class="level1">
+<h1>5) CPU</h1>
+<ul>
+<li>Most important element of the computer in terms of computing power.
+<ul>
+<li>Brains of the computer.</li>
+<li>Responsible for <strong>interpreting </strong> and <strong>executing </strong> the commands from the software.</li>
+<li>While the CPU is processing one step of the program, the remaining instructions and the data are stored in a special memory called cache.</li>
+</ul></li>
+</ul>
+<p><a href="_assets/Lecture 3 - System Unit Components22.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="_assets/Lecture 3 - System Unit Components22.png" class="img-fluid"></a></p>
+<p><span style="color:#FF0000">More on this on week 5</span></p>
+</section>
+<section id="how-to-connect-a-cpu" class="level1">
+<h1>How to Connect a CPU?</h1>
+<p><span style="color:#7F7F7F">CPU connection on the motherboard is known as the CPU socket.</span></p>
+<p><span style="color:#7F7F7F">The CPU is connected to the motherboard in one of two ways:</span></p>
+<ul>
+<li>Pin Grid Array – PGA
+<ul>
+<li>Pins are on the CPU (underside of the processor).</li>
+<li>Socket on motherboard includes holes that line up with the CPU pins.</li>
+</ul></li>
+<li>Land Grid Array – LGA
+<ul>
+<li>Pins are on the motherboard (on socket) instead of on the processor.</li>
+</ul></li>
+</ul>
+<p><a href="_assets/Lecture 3 - System Unit Components23.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img src="_assets/Lecture 3 - System Unit Components23.png" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components24.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img src="_assets/Lecture 3 - System Unit Components24.png" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components25.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img src="_assets/Lecture 3 - System Unit Components25.png" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components27.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img src="_assets/Lecture 3 - System Unit Components27.png" class="img-fluid"></a></p>
+</section>
+<section id="cpu-brands" class="level1">
+<h1>CPU Brands</h1>
+<p>Intel</p>
+<p>AMD</p>
+<p>Higher price CPUs</p>
+<p>Excellent for a variety of tasks</p>
+<p>Good balance in performance and heavy processing tasks</p>
+<p>Good budget CPUs for gaming</p>
+<p>Very good for PCs focused on gaming</p>
+<p>Less power consumption</p>
+<p>Less heat.</p>
+<p><a href="_assets/Lecture 3 - System Unit Components28.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26"><img src="_assets/Lecture 3 - System Unit Components28.png" class="img-fluid"></a></p>
+<p><span style="color:#FF0000">Very Important for lab2</span></p>
+</section>
+<section id="cpu-core-components" class="level1">
+<h1>CPU Core Components</h1>
+<p>“Man-in-a-box”</p>
+<p>Clever guy who can perform any mathematical function quickly.</p>
+<p>He lives in a closed-up box so it is hard to communicate with him.</p>
+<p><a href="_assets/Lecture 3 - System Unit Components29.png" class="lightbox" data-gallery="quarto-lightbox-gallery-27"><img src="_assets/Lecture 3 - System Unit Components29.png" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components30.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28"><img src="_assets/Lecture 3 - System Unit Components30.png" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components31.png" class="lightbox" data-gallery="quarto-lightbox-gallery-29"><img src="_assets/Lecture 3 - System Unit Components31.png" class="img-fluid"></a></p>
+</section>
+<section id="cpu-analogy-man-in-a-box" class="level1">
+<h1>CPU Analogy: “Man in a Box”</h1>
+<p><a href="_assets/Lecture 3 - System Unit Components32.png" class="lightbox" data-gallery="quarto-lightbox-gallery-30"><img src="_assets/Lecture 3 - System Unit Components32.png" class="img-fluid"></a></p>
+<ul>
+<li>Imagine we install a set of 16 lightbulbs
+<ul>
+<li>(8 inside, 8 outside).</li>
+</ul></li>
+<li>These can be controlled by us and by the man-in-the-box.This is our external data bus (EDB).</li>
+<li>We can communicate with each other as long as we agree ahead of time what each pattern of light bulbs means.</li>
+</ul>
+<p><a href="_assets/Lecture 3 - System Unit Components33.png" class="lightbox" data-gallery="quarto-lightbox-gallery-31"><img src="_assets/Lecture 3 - System Unit Components33.png" class="img-fluid"></a></p>
+</section>
+<section id="codebook" class="level1">
+<h1>Codebook</h1>
+<p><span style="color:#0055A4"> <strong>Codebook</strong> </span></p>
+<p>This defines the commands that we can give to the man in the box.</p>
+<p>If we both have a copy, then we can give him commands and he can understand them.</p>
+<p><a href="_assets/Lecture 3 - System Unit Components34.png" class="lightbox" data-gallery="quarto-lightbox-gallery-32"><img src="_assets/Lecture 3 - System Unit Components34.png" class="img-fluid"></a></p>
+</section>
+<section id="registers" class="level1">
+<h1>Registers</h1>
+<p><span style="color:#0055A4"> <strong>Registers</strong> </span></p>
+<p>We can give the man some work and see what he replies.</p>
+<p>But to do his work, the man needs at least four workstations.</p>
+<p>General purpose registers are the most common. AX, BX, CX, DX&nbsp;(Intel).</p>
+<p><a href="_assets/Lecture 3 - System Unit Components35.png" class="lightbox" data-gallery="quarto-lightbox-gallery-33"><img src="_assets/Lecture 3 - System Unit Components35.png" class="img-fluid"></a></p>
+</section>
+<section id="clock" class="level1">
+<h1>Clock</h1>
+<p>Now we are ready to put our man to work.We can send him the first command by lighting up the wires on the EDB.</p>
+<p>But how does he know when we have finished setting up the light bulbs?</p>
+<p><a href="_assets/Lecture 3 - System Unit Components36.png" class="lightbox" data-gallery="quarto-lightbox-gallery-34"><img src="_assets/Lecture 3 - System Unit Components36.png" class="img-fluid"></a></p>
+</section>
+<section id="cooling-devices---fans" class="level1">
+<h1>6.1) Cooling Devices - Fans</h1>
+<p>The flow of current between the electronic components generates heat. <span style="color:#FF0000">The man in&nbsp;the box&nbsp;is heating!!</span></p>
+<p><span style="color:#0055A4">Fans</span> inside the case increase airflow and removes heat.</p>
+<p>Occasionally video cards or other components have their own fans to cool them.</p>
+</section>
+<section id="activity-cooling-devices-fans-vs-liquid-cooling" class="level1">
+<h1>Activity: Cooling devices Fans vs Liquid cooling</h1>
+<p>With a partner take 5-7 minutes to research the major differences between Fans and liquid cooling devices.</p>
+<p>Add&nbsp;the pros and cons in <a href="https://jamboard.google.com/d/1TA_9nVlYkXINf5EjcCX3ZABHw6H2fwhBJ9cW_biNDf0/edit?usp=sharing">this</a><a href="https://jamboard.google.com/d/1TA_9nVlYkXINf5EjcCX3ZABHw6H2fwhBJ9cW_biNDf0/edit?usp=sharing">jamboard</a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components37.png" class="lightbox" data-gallery="quarto-lightbox-gallery-35"><img src="_assets/Lecture 3 - System Unit Components37.png" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components38.png" class="lightbox" data-gallery="quarto-lightbox-gallery-36"><img src="_assets/Lecture 3 - System Unit Components38.png" class="img-fluid"></a></p>
+</section>
+<section id="cooling-devices-heat-sinks" class="level1">
+<h1>6.2) Cooling Devices – Heat sinks</h1>
+<ul>
+<li><span style="color:#0055A4">Heat sinks&nbsp;</span> also draw heat away from the CPU core.
+<ul>
+<li>A heat sink is a piece of copper or aluminum that resides between the&nbsp;processor and the CPU fan.</li>
+<li>It absorbs the heat from the processor and the fan disperses the heat.</li>
+<li>Increase of the surface area</li>
+</ul></li>
+</ul>
+</section>
+<section id="internal-components-general-overview" class="level1">
+<h1>Internal Components:&nbsp;General Overview</h1>
+<p>Let’s have a closer look at the RAM slots and RAM</p>
+<p><a href="_assets/Lecture 3 - System Unit Components39.png" class="lightbox" data-gallery="quarto-lightbox-gallery-37"><img src="_assets/Lecture 3 - System Unit Components39.png" class="img-fluid"></a></p>
+</section>
+<section id="motherboard-ram-slots" class="level1">
+<h1>4.2) Motherboard – RAM slots</h1>
+<p>Let’s have a closer look at the RAM slots</p>
+<p><a href="_assets/Lecture 3 - System Unit Components40.png" class="lightbox" data-gallery="quarto-lightbox-gallery-38"><img src="_assets/Lecture 3 - System Unit Components40.png" class="img-fluid"></a></p>
+</section>
+<section id="main-memory" class="level1">
+<h1>5) Main Memory</h1>
+<ul>
+<li>Referred to as RAM (Random Access Memory)</li>
+<li>RAM is a collection of integrated circuits (chips).</li>
+<li>Considered the “Primary” storage for the CPU.
+<ul>
+<li><span style="color:#0055A4">Temporary</span> storage for <span style="color:#0055A4">data</span> and <span style="color:#0055A4">programs</span> that are being accessed by the CPU.</li>
+</ul></li>
+<li>Volatile memory: contents are erased when the computer is switched off. (or when power is lost)</li>
+</ul>
+<p><a href="_assets/Lecture 3 - System Unit Components41.png" class="lightbox" data-gallery="quarto-lightbox-gallery-39"><img src="_assets/Lecture 3 - System Unit Components41.png" class="img-fluid"></a></p>
+</section>
+<section id="main-memory-cont." class="level1">
+<h1>5) Main Memory (cont.)</h1>
+<p>More RAM means more capacity to hold and process large programs and files.</p>
+<p>Maximum installed is limited by the <span style="color:#FF0000">motherboard </span> and the <span style="color:#FF0000">operating system.</span></p>
+</section>
+<section id="motherboard-expansion-slots" class="level1">
+<h1>4.1) Motherboard – Expansion Slots</h1>
+<p>Let’s have a closer look at what we call expansion slots.</p>
+<p>Expansion slots are ports inside a computer&nbsp;found on the motherboard. They provide&nbsp;the possibility to&nbsp;expand the hardware of your PC.</p>
+<p>For example, you may want to install a network card, a sound card, and most importantly a&nbsp;video card.</p>
+<p><a href="_assets/Lecture 3 - System Unit Components42.png" class="lightbox" data-gallery="quarto-lightbox-gallery-40"><img src="_assets/Lecture 3 - System Unit Components42.png" class="img-fluid"></a></p>
+</section>
+<section id="expansion-slots" class="level1">
+<h1>5) Expansion Slots</h1>
+<p><span style="color:#0055A4">Expansion slots </span> allow us to increase the functionality of a computer by adding controllers for specific devices (often called <span style="color:#0055A4">adapter cards</span> ) e.g. sound, video, NIC (network Interface Card).</p>
+<p>PCI used in most computers, 32 or 64 bit</p>
+<p>AGP designed to be used by video adapters</p>
+<p>PCIe replacing AGP in newer computers</p>
+<p>ISA older, rarely used, 8 or 16 bit</p>
+<p>EISA older, rarely used, 32 bit</p>
+<p>MCA IBM proprietary 32 bit, older, rarely used</p>
+<p>PCI-X 32 bit, can run up to four times faster than PCI</p>
+<p>MiniPCI 32 bit, used by laptops, has three different form factors</p>
+<p><a href="_assets/Lecture 3 - System Unit Components43.png" class="lightbox" data-gallery="quarto-lightbox-gallery-41"><img src="_assets/Lecture 3 - System Unit Components43.png" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components44.png" class="lightbox" data-gallery="quarto-lightbox-gallery-42"><img src="_assets/Lecture 3 - System Unit Components44.png" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components46.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-43"><img src="_assets/Lecture 3 - System Unit Components46.jpg" class="img-fluid"></a></p>
+<p><strong><a href="https://www.computerhope.com/jargon/a/agp.htm">AGP</a></strong> &nbsp;-&nbsp;<a href="https://www.computerhope.com/jargon/v/video-card.htm">Video card</a>.</p>
+<p><strong><a href="https://www.computerhope.com/jargon/a/amr.htm">AMR</a></strong> &nbsp;-&nbsp;<a href="https://www.computerhope.com/jargon/m/modem.htm">Modem</a>,&nbsp;<a href="https://www.computerhope.com/jargon/s/souncard.htm">sound card</a>.</p>
+<p><strong><a href="https://www.computerhope.com/jargon/c/cnr.htm">CNR</a></strong> &nbsp;- Modem,&nbsp;<a href="https://www.computerhope.com/jargon/n/nic.htm">network card</a>, sound card.</p>
+<p><strong><a href="https://www.computerhope.com/jargon/e/eisa.htm">EISA</a></strong> &nbsp;-&nbsp;<a href="https://www.computerhope.com/jargon/s/scsi.htm">SCSI</a>, network card, video card.</p>
+<p><strong><a href="https://www.computerhope.com/jargon/i/isa.htm">ISA</a></strong> &nbsp;- Network card, sound card, video card.</p>
+<p><strong><a href="https://www.computerhope.com/jargon/p/pci.htm">PCI</a></strong> &nbsp;- Network card, SCSI, sound card, video card.</p>
+<p><strong><a href="https://www.computerhope.com/jargon/p/pciexpre.htm">PCI Express</a></strong> &nbsp;- Video card, modem, sound card, network card.</p>
+<p><strong><a href="https://www.computerhope.com/jargon/v/vesa.htm">VESA</a></strong> &nbsp;- Video card.</p>
+</section>
+<section id="graphics-cards" class="level1">
+<h1>7) Graphics Cards</h1>
+<p>Also known as Video cards or Graphical&nbsp;Processing Units</p>
+<p>One of the most interesting use of expansion slots is the addition of video cards, also known as Graphical Processing Unit.</p>
+<p>Its speeds up the processing power of a computer.</p>
+<p>Often useful in video&nbsp;gaming,&nbsp;video rendering,&nbsp;scientific parallel computing</p>
+<p><a href="_assets/Lecture 3 - System Unit Components47.png" class="lightbox" data-gallery="quarto-lightbox-gallery-44"><img src="_assets/Lecture 3 - System Unit Components47.png" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components48.png" class="lightbox" data-gallery="quarto-lightbox-gallery-45"><img src="_assets/Lecture 3 - System Unit Components48.png" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components49.png" class="lightbox" data-gallery="quarto-lightbox-gallery-46"><img src="_assets/Lecture 3 - System Unit Components49.png" class="img-fluid"></a></p>
+</section>
+<section id="gpu-vs-cpu" class="level1">
+<h1>GPU VS CPU</h1>
+</section>
+<section id="cpu-vs-gpu" class="level1">
+<h1>CPU vs GPU</h1>
+<p>GPU cannot replace the CPU because their architecture is different and meant for different purposes</p>
+<p>GPU is great to parallelize computations!</p>
+<p>But the GPU is not as versatile&nbsp;as the CPU which has a larger instruction set (code book)</p>
+<p><a href="_assets/Lecture 3 - System Unit Components50.png" class="lightbox" data-gallery="quarto-lightbox-gallery-47"><img src="_assets/Lecture 3 - System Unit Components50.png" class="img-fluid"></a></p>
+</section>
+<section id="gpu-vs-cpu-1" class="level1">
+<h1>GPU vs CPU</h1>
+<p>(click to load the video)</p>
+</section>
+<section id="storage-devices" class="level1">
+<h1>8) Storage Devices</h1>
+<p>Storage devices store data <span style="color:#0055A4">permanently</span> .</p>
+<p>Some are installed inside the case (e.g. hard drive);</p>
+<p>Some are removable and portable (e.g. external flash drive).</p>
+<p><a href="_assets/Lecture 3 - System Unit Components51.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-48"><img src="_assets/Lecture 3 - System Unit Components51.jpg" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components52.png" class="lightbox" data-gallery="quarto-lightbox-gallery-49"><img src="_assets/Lecture 3 - System Unit Components52.png" class="img-fluid"></a></p>
+</section>
+<section id="storage-devices-cont." class="level1">
+<h1>7) Storage Devices (cont.)</h1>
+<p><a href="_assets/Lecture 3 - System Unit Components53.png" class="lightbox" data-gallery="quarto-lightbox-gallery-50"><img src="_assets/Lecture 3 - System Unit Components53.png" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components54.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-51"><img src="_assets/Lecture 3 - System Unit Components54.jpg" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components55.png" class="lightbox" data-gallery="quarto-lightbox-gallery-52"><img src="_assets/Lecture 3 - System Unit Components55.png" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components56.png" class="lightbox" data-gallery="quarto-lightbox-gallery-53"><img src="_assets/Lecture 3 - System Unit Components56.png" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components57.png" class="lightbox" data-gallery="quarto-lightbox-gallery-54"><img src="_assets/Lecture 3 - System Unit Components57.png" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components58.png" class="lightbox" data-gallery="quarto-lightbox-gallery-55"><img src="_assets/Lecture 3 - System Unit Components58.png" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components59.png" class="lightbox" data-gallery="quarto-lightbox-gallery-56"><img src="_assets/Lecture 3 - System Unit Components59.png" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components60.png" class="lightbox" data-gallery="quarto-lightbox-gallery-57"><img src="_assets/Lecture 3 - System Unit Components60.png" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components61.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-58"><img src="_assets/Lecture 3 - System Unit Components61.jpg" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components62.png" class="lightbox" data-gallery="quarto-lightbox-gallery-59"><img src="_assets/Lecture 3 - System Unit Components62.png" class="img-fluid"></a></p>
+</section>
+<section id="storage-devices-floppy-drive" class="level1">
+<h1>7.1) Storage Devices: Floppy Drive</h1>
+<p>Uses 3.5 inch floppy disks (or 5.25 inch floppy disks - older).</p>
+<p>Largely obsolete.</p>
+<p>Magnetic disks store up to 1.44Meg of data.</p>
+<p><a href="_assets/Lecture 3 - System Unit Components63.png" class="lightbox" data-gallery="quarto-lightbox-gallery-60"><img src="_assets/Lecture 3 - System Unit Components63.png" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components64.png" class="lightbox" data-gallery="quarto-lightbox-gallery-61"><img src="_assets/Lecture 3 - System Unit Components64.png" class="img-fluid"></a></p>
+</section>
+<section id="storage-devices-hard-drive" class="level1">
+<h1>7.2) Storage Devices: Hard Drive</h1>
+<ul>
+<li>Hard Disk Drive (HDD)
+<ul>
+<li>Traditional hard drives.</li>
+<li>Uses magnetic-based storage on a moving disk (somewhat like a vinyl player)</li>
+<li>Magnetic hard drives have drive motors that spin the magnetic platters and move the drive heads.</li>
+<li>Speed measured in revolutions per minute</li>
+</ul></li>
+</ul>
+<p><a href="_assets/Lecture 3 - System Unit Components65.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-62"><img src="_assets/Lecture 3 - System Unit Components65.jpg" class="img-fluid"></a></p>
+<p><span style="color:#FF0000">Demo: how does it look inside an HDD</span></p>
+<ul>
+<li>Solid State Drives (SSD)
+<ul>
+<li>Do not have moving parts and use __ semi-conductors__ to store data.</li>
+<li>Non-volatile flash memory chips manage the storage on an SSD, resulting in faster access to data,&nbsp;higher reliability and reduced power usage.</li>
+</ul></li>
+<li>Usually configured as C: drive on a Windows machine and contains the operating&nbsp;system and applications. Storage capacity can range from gigabytes to terabytes.</li>
+</ul>
+<p><a href="_assets/Lecture 3 - System Unit Components66.png" class="lightbox" data-gallery="quarto-lightbox-gallery-63"><img src="_assets/Lecture 3 - System Unit Components66.png" class="img-fluid"></a></p>
+</section>
+<section id="storage-devices-tape-drive" class="level1">
+<h1>7.4) Storage Devices: Tape Drive</h1>
+<p>Magnetic tapes are often used for backups or archiving data. Still used/created to this day! Very cheap per GB costs.</p>
+<p>Data retrieval can be fast but locating specific data is slow.</p>
+<p>Can hold many terabytes.</p>
+<p><a href="_assets/Lecture 3 - System Unit Components67.png" class="lightbox" data-gallery="quarto-lightbox-gallery-64"><img src="_assets/Lecture 3 - System Unit Components67.png" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components68.png" class="lightbox" data-gallery="quarto-lightbox-gallery-65"><img src="_assets/Lecture 3 - System Unit Components68.png" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components69.png" class="lightbox" data-gallery="quarto-lightbox-gallery-66"><img src="_assets/Lecture 3 - System Unit Components69.png" class="img-fluid"></a></p>
+</section>
+<section id="storage-devices-optical-drive" class="level1">
+<h1>7.5) Storage Devices: Optical Drive</h1>
+<ul>
+<li>Uses lasers to read the data on the optical media.
+<ul>
+<li>CD (compact disc) 700 Mb</li>
+<li>DVD (digital versatile disc) 4-8 Gb.</li>
+<li>BD (Blu-ray disc) 25-50 Gb.</li>
+</ul></li>
+<li>Optical media can be:
+<ul>
+<li>Pre-recorded (read only)</li>
+<li>Recordable (write once)</li>
+<li>Re-recordable (read and write multiple times).</li>
+</ul></li>
+</ul>
+<p><a href="_assets/Lecture 3 - System Unit Components70.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-67"><img src="_assets/Lecture 3 - System Unit Components70.jpg" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components71.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-68"><img src="_assets/Lecture 3 - System Unit Components71.jpg" class="img-fluid"></a></p>
+</section>
+<section id="storage-devices-external-flash-drive" class="level1">
+<h1>7.6) Storage Devices: External Flash Drive</h1>
+<p>Removable storage device that connects to a USB port.</p>
+<p>These use the same type of non-volatile memory chips as SSDs and do not require power to maintain the data.</p>
+<p><a href="_assets/Lecture 3 - System Unit Components72.png" class="lightbox" data-gallery="quarto-lightbox-gallery-69"><img src="_assets/Lecture 3 - System Unit Components72.png" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components73.png" class="lightbox" data-gallery="quarto-lightbox-gallery-70"><img src="_assets/Lecture 3 - System Unit Components73.png" class="img-fluid"></a></p>
+</section>
+<section id="storage-devices-interfaces" class="level1">
+<h1>Storage Devices: Interfaces</h1>
+<p>To install a drive internally in a computer, the connection interface on the drive must be the same as the controller on the motherboard.</p>
+<p>Motherboards support different types of interfaces.</p>
+</section>
+<section id="storage-devices-interfaces-types-in-order-of-oldest-to-newest" class="level1">
+<h1>Storage Devices: Interfaces Types (In order of oldest to newest)</h1>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">IDE <br>&nbsp;</th>
+<th style="text-align: center;">Integrated Drive Electronics / Advanced Technology Attachment.<br>Also called ATA.<br>Early drive controller interface, originally only supported hard drives up to 540 MB.<br>Uses a 40 pin connector, and maximum cable length of 46cm (18in).</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">EIDE</td>
+<td style="text-align: center;">Enhanced Integrated Drive Electronics (also called ATA-2).<br>Updated version of IDE, supporting larger drives and direct memory access.<br>Uses a 40 pin connector.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">PATA</td>
+<td style="text-align: center;">Parallel version of ATA.<br>Used internally due to maximum cable length of 46cm (18in).<br>Largely replaced by SATA in newer systems.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">SATA (most commonly used today)</td>
+<td style="text-align: center;">Serial version of ATA, with slimmer and longer cables providing better airflow.<br>Uses 7-pin connector (less pins means less issues with electromagnetic interference).<br>SATA hard drives tend to be quieter than IDE drives.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="storage-devices-interfaces-types-cont." class="level1">
+<h1>Storage Devices: Interfaces Types (cont.)</h1>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">eSATA</th>
+<th style="text-align: center;">External serial ATA, provides a hot-swappable external interface for SATA.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">SCSI</td>
+<td style="text-align: center;">Small Computer System Interface.<br>Drive controller that can connect up to 15 drives.<br>Internal and external use, uses 25, 50 or 68 pin connector.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note:</em> __ Hot-swapping is the ability to connect and disconnect a device while the computer is on.__</p>
+</section>
+<section id="computer-memory-hierarchy" class="level1">
+<h1>Computer Memory Hierarchy</h1>
+<p><span style="color:#7F7F7F">Source: https://en.wikipedia.org/wiki/Memory_hierarchy </span></p>
+</section>
+<section id="build-pc-how-do-i-choose-a-motherboard" class="level1">
+<h1>Build PC: How do I choose a motherboard?</h1>
+<p>Identify the user need for this PC: let’s say Gamer PC</p>
+<p>2.&nbsp; Go to PC <a href="https://pcpartpicker.com/list/">Parts Picker</a></p>
+<p>3.&nbsp; Select a CPU (that matches your needs)&nbsp;and&nbsp;ask&nbsp;yourself those questions</p>
+<p>4.&nbsp;What would be the most appropriate form factor?</p>
+<p>5. What’s the max RAM needed?</p>
+<p>6. Would you need expansion ports in the future?</p>
+<p>7. What’s the aesthetic feel of the PC? LEDs? Metal built?</p>
+<p>This will restrict the types of motherboards you can use.</p>
+<p><a href="_assets/Lecture 3 - System Unit Components74.png" class="lightbox" data-gallery="quarto-lightbox-gallery-71"><img src="_assets/Lecture 3 - System Unit Components74.png" class="img-fluid"></a></p>
+<p><a href="_assets/Lecture 3 - System Unit Components75.png" class="lightbox" data-gallery="quarto-lightbox-gallery-72"><img src="_assets/Lecture 3 - System Unit Components75.png" class="img-fluid"></a></p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = true;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/John-Abbott-College\.github\.io\/1N6-Notes\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../topics/hardware/external-components.html" class="pagination-link" aria-label="External components">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">External components</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../topics/hardware/introduction-to-computers.html" class="pagination-link" aria-label="Introduction to Computers">
+        <span class="nav-page-text">Introduction to Computers</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../about/index.html">
+<p>About</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"fade","descPosition":"bottom","openEffect":"fade","loop":true});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>
