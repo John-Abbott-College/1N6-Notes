@@ -14,14 +14,6 @@ date: 2024-08-27
   * Projectors
   * Printers
 
-## Hardware vs Software
-
- __Hardware__: The  __physical__  components that make up a computer system\.
-
-![](_assets/Lecture%202%20-%20Peripheral%20Devices0.jpg)
-
-__Software__: The  __programs__  \(instructions\) that tell the computer \(the hardware\) what to do\.
-
 ## Computer Basics
 
 Input devices
@@ -78,7 +70,7 @@ __Technologies__ :
 
 Mechanical mice use a ball to measure movement \(obsolete now\)
 
-Optical mice use light sources \(first LED\, then the more precise Laser\)
+Optical mice use light sources \(first LED\, then the more precise Laser\) [^1]
 
 __Purposes:__
 
@@ -94,9 +86,7 @@ Many\! “Gaming” \(many buttons\)\, Ergonomic \(optimize human comfort\)\, et
 
 ---
 
-Good notes on history and explanation of how/why they work“Optical mice use image sensors to image naturally occurring texture [on the surface they are placed].... These surfaces, when lit at a grazing angle by a light emitting diode, cast distinct shadows that resemble a hilly terrain lit at sunset. Images of these surfaces are captured in continuous succession and compared with each other to determine how far the mouse has moved. “
-https://en.wikipedia.org/wiki/Computer_mouse 
-https://en.wikipedia.org/wiki/Optical_mouse 
+[^1] Good notes on history and explanation of how/why they work "Optical mice use image sensors to image naturally occurring texture [on the surface they are placed].... These surfaces, when lit at a grazing angle by a light emitting diode, cast distinct shadows that resemble a hilly terrain lit at sunset. Images of these surfaces are captured in continuous succession and compared with each other to determine how far the mouse has moved." https://en.wikipedia.org/wiki/Computer_mouse https://en.wikipedia.org/wiki/Optical_mouse 
 
 ### Keyboard
 

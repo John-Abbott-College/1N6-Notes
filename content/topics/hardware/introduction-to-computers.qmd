@@ -85,14 +85,16 @@ Video game consoles showed an interesting development in **storage technology** 
 
 ## Nonelectronics?
 
+Even before there were consumer electronics, there were devices made to store and process data -- that is, computers! The following are three different examples of nonelectronic devices that have been used for computation.
+
 ::: {layout-nrow=2 layout-valign="bottom"}
-![**Abacus**. Image by Pearson Scott Foresman, Public domain, via Wikimedia Commons][abacus]
+![**Abacus**: The world's first calculator. Large numbers can be represented using a relatively small number of beads. Simple operations like addition and subtraction are simple to perform, but abacuses are even capable of more complex operations like multiplication, division, and square roots. Image by Pearson Scott Foresman, Public domain, via Wikimedia Commons][abacus]
 
 ![**Antikythera mechanism** fragment, dated to 80 BCE. Thought to have been part of a complex system of dozens of wheels and plates, designed by engineers to measure time based on movements of the sun, moon, and other stars and planets known at the time. Retrieved from Wikimedia Commons][antikythera]
 
-![**Difference engine** diagram, via Wikimedia Commons][diff-engine-diag]
+![**Difference engine** diagram. A theoretical computer designed in the 19th century with capabilities similar to modern computers, but using a complex system of gears and pistons to store and process data, rather than small electronic components. Image retreived from Wikimedia Commons][diff-engine-diag]
 
-![**Difference engine** built in 2002, via Wikimedia Commons][diff-engine-real]
+![**Difference engine** implemented and built in 2002 based on the original designs. Image retreived from Wikimedia Commons][diff-engine-real]
 :::
 
 [abacus]: https://upload.wikimedia.org/wikipedia/commons/a/af/Abacus_%28PSF%29.png
