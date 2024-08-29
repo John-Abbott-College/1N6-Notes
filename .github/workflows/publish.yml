@@ -19,8 +19,7 @@ jobs:
       - name: Install system dependencies
         uses: awalsh128/cache-apt-pkgs-action@latest
         with:
-          packages: rsvg-convert
-          version: 1.0
+          packages: librsvg2-bin
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
