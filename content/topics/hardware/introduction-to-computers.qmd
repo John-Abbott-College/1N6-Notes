@@ -125,10 +125,19 @@ You may think the above definition is *too* general -- indeed, in the context of
 
 Digital computers have the following two additional properties compared to general computers. They are:
 
-- **Digital**: All the "information" stored is represented by combinations of two different states (0 or 1, i.e., ON or OFF). These digital states are made possible using electrical circuitry. In order to do complex operations with these states, we can use the **binary** numbering to represent the digital states as a variety of numbers, letters, and other concepts. This digital information can be shared between devices using cables (whether electrical or optical, as we will see)
-- **Deterministic**: A given input reliably produces a defined output with every interaction. For one e.g., when you tap your OPUS card on a fare gate, you should expect that it will either let you through (if you have fare) or not (if you don't). The concept is more general: computer engineering is, in part, the study and practise of making physical interactions with computing devices **reliably and predictably** produce the same *deterministic* results under the same physical stimuli.
+- **Digital**: All the "information" stored is represented by combinations of two different states (0 or 1, i.e., ON or OFF).[^digital]
+- **Deterministic**: A given input reliably produces a defined output with every interaction.[^deterministic]
 
 When we study the components of computers, the above two properties will allow us to really understand *how* such devices work and why, as in every case, the device implements these two properties to give us the behavior we need.
+
+[^digital]: These digital states are made possible using electrical circuitry. In order to do complex operations with these states, we can use the **binary** numbering to represent the digital states as a variety of numbers, letters, and other concepts. This digital information can be shared between devices using cables (whether electrical or optical, as we will see)
+[^deterministic]: For one e.g., when you tap your OPUS card on a fare gate, you should expect that it will either let you through (if you have fare) or not (if you don't). The concept is more general: computer engineering is, in part, the study and practise of making physical interactions with computing devices **reliably and predictably** produce the same *deterministic* results under the same physical conditions.
+
+## Hardware vs Software
+
+ **Hardware**: The  **physical**  components that make up a computer system.
+
+**Software**: The  **programs**  (instructions) that tell the computer (the hardware) what to do.
 
 ## Personal vs shared computing: What is a server?
 
