@@ -201,8 +201,6 @@ Typical Plasma displays have two glass plates sandwiching hundreds of thousands 
 Two sets of electrodes will provide some charges which will excite the plasma 
 Which will release photons at three different wavelength (either red, green or blue)
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices30.gif)
-
 #### LCD Monitors
 
 ![](_assets/Lecture%202%20-%20Peripheral%20Devices31.jpg)
@@ -214,8 +212,6 @@ Which will release photons at three different wavelength (either red, green or b
 * \(\+\) Allows to have flat screens\!
 
 ![](_assets/Lecture%202%20-%20Peripheral%20Devices32.png)
-
-![](_assets/Lecture%202%20-%20Peripheral%20Devices33.gif)
 
 For more information: [https://www\.youtube\.com/watch?v=Gx\-JVoOFYhs&ab\_channel=e\-learning%C3%A9lectronique](https://www.youtube.com/watch?v=Gx-JVoOFYhs&ab_channel=e-learning%C3%A9lectronique)
 
@@ -277,8 +273,6 @@ Heat is applied to an ink reservoir\, which pushes ink bubbles through a nozzle 
 
 The ink liquid droplets are smaller in diameter than a human hair\! Many of these added together produce the quality of a coherent image\.
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices38.gif)
-
 #### Laser Printers
 
 ![](_assets/Lecture%202%20-%20Peripheral%20Devices39.png)
@@ -289,5 +283,3 @@ The ink liquid droplets are smaller in diameter than a human hair\! Many of thes
   * The drum contains a  __special coating __ to which the toner \(ink powder\) sticks\.
   * A laser beam then conveys information to the drum\,  __neutralizing__  and detaching some toner\.
   * As the paper rolls by the drum\, the toner is transferred onto the paper\. A hot roller then bonds toner to the paper\.
-
-![](_assets/Lecture%202%20-%20Peripheral%20Devices40.gif)

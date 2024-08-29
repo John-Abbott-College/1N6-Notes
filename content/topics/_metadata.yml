@@ -1,12 +1,5 @@
 format:
   html: default
-  pdf:
-    include-in-header:
-      - "../_assets/tex/pdf-formatting.tex"
-    geometry:
-      - heightrounded
-    number-sections: true
-    toc: true
   revealjs:
     theme: moon
     transition: slide
