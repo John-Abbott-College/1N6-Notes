@@ -1,10 +1,10 @@
 ---
 title: Internal components
 subtitle: Overview of the main internal components of computers.
-date: 2024-08-29
+date: 2024-09-05
 ---
 
-**The notes below are in a draft state -- they may change up to Monday Sep 2**
+**The notes below are in a draft state -- they may change up to Thursday Sep 5**
 
 ## Outline
 

@@ -1,82 +1,94 @@
 ---
 title: External components
 subtitle: Overview of many external components, or peripheral devices, used by and for computers.
-date: 2024-08-29
+date: 2024-09-03
 ---
 
-**The notes below are in a draft state -- they may change up to Monday Sep 2**
+![All of these devices, except one, would be considered in external component of a modern desktop computer. Which one is not? Figure retrieved from [Innovation it solution][main-image], original source unknown.](_assets/external-components-main.jpg)
 
-## Outline
+[main-image]: https://www.facebook.com/photo.php?fbid=677864037674852&set=pb.100063537865543.-2207520000&type=3
+
+## Introduction
+
+Last week we learned the basic behaviors that define *computers* -- their ability to **store, retrieve, and process** information. This means that many simple devices, even non-electronics, can be considered computers.
+
+The computers that we mostly are concerned with in the computer science profession, however, are generally complicated electronic devices made of many **components**. In this class, we are going to learn many of the fundamental components that make up modern computing devices.
+
+Today, we will start with the **external**, or **peripheral**, components of a computer -- each of these have their own set of interesting **behaviors** and **properties** that are worth understanding.
+
+Many **peripheral components** of a computer can broadly be divided into two categories:
+
+- **Input Devices**: devices that *accept* data and instructions *from* a user *to* a computer.
+- **Output Devices**: devices that *present* data and information *to* the user *from* a computer.
+
+We will cover many examples of each.
+
+## Lesson overview
+
+- Learn the history, behavior, and important properties of Input and Output devices
 
 * Input devices:
   * Keyboards
   * Mice
+  * Controllers
+  * Cameras
+  * Touchscreens
+  * Scanners
 * Output devices:
   * Monitors
   * Projectors
   * Printers
-
-## Computer Basics
-
-Input devices
-
-Mouse\, keyboard\, gamepads\, biometric devices\, cameras\, touchscreens\, scanners\, digitizers\, media readers\.
-
-Output devices
-
-Monitors\, printers\, speakers\.
-
-Storage devices
-
-Connectors / ports
+  * Speakers
 
 ## Input Devices
 
-Allow a computer to accept data and instructions from a user\.
+Allow a computer to accept data and instructions from a user.
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices1.jpg)
+::: {layout-ncol=4}
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices2.png)
+![](_assets/external-components-trackball.jpg)
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices3.png)
+![](_assets/external-components-ballmouse.png)
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices4.png)
+![](_assets/external-components-writingpad.png)
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices5.png)
+![](_assets/external-components-webcam.png)
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices6.png)
+![](_assets/external-components-lasermouse.png)
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices7.png)
+<!-- ![](_assets/external-components-.png) -->
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices8.jpg)
+![](_assets/external-components-barcodescanner.jpg)
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices9.png)
+![](_assets/external-components-microphone.png)
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices10.png)
+<!-- ![](_assets/external-components-.png) -->
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices11.jpg)
+![](_assets/external-components-biometric.jpg)
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices12.png)
+![](_assets/external-components-joystick.png)
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices13.png)
+![](_assets/external-components-keyboard.png)
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices14.png)
+![](_assets/external-components-keyboard.png)
 
-### Mouse
+:::
 
-Used to navigate the graphical user interface \(GUI\)\.
+## Mouse
 
-There are many types of mice\, distinguished by tracking technology and by use case
+Used to navigate the graphical user interface (GUI).
+
+There are many types of mice, distinguished by tracking technology and by use case
 
 __Technologies__ :
 
-Mechanical mice use a ball to measure movement \(obsolete now\)
+Mechanical mice use a ball to measure movement (obsolete now)
 
-Optical mice use light sources \(first LED\, then the more precise Laser\) [^1]
+Optical mice use light sources (first LED, then the more precise Laser) [^1]
 
 __Purposes:__
 
-Many\! “Gaming” \(many buttons\)\, Ergonomic \(optimize human comfort\)\, etc\.
+Many! “Gaming” (many buttons), Ergonomic (optimize human comfort), etc.
 
 ![](_assets/Lecture%202%20-%20Peripheral%20Devices15.png)
 
@@ -92,17 +104,17 @@ Many\! “Gaming” \(many buttons\)\, Ergonomic \(optimize human comfort\)\, et
 
 ### Keyboard
 
-Used to enter text commands\.
+Used to enter text commands.
 
-Most commonly used is the QWERTY layout \(1873\)\.
+Most commonly used is the QWERTY layout (1873).
 
-Other layouts include QWERTZ \(Germany/Switzerland\) and AZERTY \(France\) and DVORAK \(nerds\*\)
+Other layouts include QWERTZ (Germany/Switzerland) and AZERTY (France) and DVORAK (nerds*)
 
-Variations include wired or wireless keyboards and numeric keypads\.
+Variations include wired or wireless keyboards and numeric keypads.
 
-Ergonomic designs are recently becoming more popular\.
+Ergonomic designs are recently becoming more popular.
 
-KVM \("keyboard\, video and mouse"\): control multiple devices from one keyboard/mouse combination
+KVM ("keyboard, video and mouse"): control multiple devices from one keyboard/mouse combination
 
 ![](_assets/Lecture%202%20-%20Peripheral%20Devices19.jpg)
 
@@ -110,41 +122,29 @@ KVM \("keyboard\, video and mouse"\): control multiple devices from one keyboard
 
 ![](_assets/Lecture%202%20-%20Peripheral%20Devices21.jpg)
 
-\* note: this is very hypocritical coming from me\. don’t mind my bad jokes\!
+* note: this is very hypocritical coming from me. don’t mind my bad jokes!
 
 ### Others
 
-Gamepads or joysticks are used for playing games and running simulations\.
+Gamepads or joysticks are used for playing games and running simulations.
 
-Digital / video cameras and webcams create images and videos\.
+Digital / video cameras and webcams create images and videos.
 
 Microphones
 
-Biometric devices use features unique to an individual user \(e\.g\. fingerprint\)\.
+Biometric devices use features unique to an individual user (e.g. fingerprint).
 
-Touchscreens have a pressure\-sensitive panel\.
+Touchscreens have a pressure-sensitive panel.
 
-Scanners digitize images or documents so they can be stored as files\.
+Scanners digitize images or documents so they can be stored as files.
 
-Digital Tablets \(sometimes called Digitizers\) allow the user to create images or artwork using a stylus\.
+Digital Tablets (sometimes called Digitizers) allow the user to create images or artwork using a stylus.
 
-Media card readers read/write data from/to different types of media cards \(SD cards\, video game cartridges\, etc\.\)
-
-### Activity: How Well Do You Know Your Keyboard?
-
-![](_assets/Lecture%202%20-%20Peripheral%20Devices22.png)
-
-Fill in the blank keyboard as best as you can\. Then answer:
-
-Pick 5 keys \(that aren’t letters or numbers\) and try explain their general purpose\. Pick keys that you aren’t sure about and use your lab computer to research\!With 1 or 2 partners\, compare and discuss your answers\.
-
-![](_assets/Lecture%202%20-%20Peripheral%20Devices23.png)
-
-[Windows ](https://support.microsoft.com/en-us/windows/windows-keyboard-shortcuts-3d444b08-3a00-abd6-67da-ecfc07e86b98)[keybpard](https://support.microsoft.com/en-us/windows/windows-keyboard-shortcuts-3d444b08-3a00-abd6-67da-ecfc07e86b98)[ ](https://support.microsoft.com/en-us/windows/windows-keyboard-shortcuts-3d444b08-3a00-abd6-67da-ecfc07e86b98)[shortcuts](https://support.microsoft.com/en-us/windows/windows-keyboard-shortcuts-3d444b08-3a00-abd6-67da-ecfc07e86b98)
+Media card readers read/write data from/to different types of media cards (SD cards, video game cartridges, etc.)
 
 ## Output Devices
 
-Output devices present information to the user from a computer\.
+Output devices present information to the user from a computer.
 
 Monitors
 
@@ -164,20 +164,20 @@ Headphones
 
 ### Monitors
 
-* Different types of monitors use different technologies to create an image\.
-* However\, the common principles are the same:
+* Different types of monitors use different technologies to create an image.
+* However, the common principles are the same:
   * Digital representation of image to display is sent to the monitor
-  * The monitor produces each  __pixel__  \(the “atom” of monitor displays\) using some deterministic physical technology
-  * Light from the monitor reaches us as a useful/pleasing image\.
-* The following slides are the main technologies used today \(from oldest to latest\)
+  * The monitor produces each  __pixel__  (the “atom” of monitor displays) using some deterministic physical technology
+  * Light from the monitor reaches us as a useful/pleasing image.
+* The following slides are the main technologies used today (from oldest to latest)
 
 #### CRT Monitors
 
-* CRT \(Cathode ray tube\)
+* CRT (Cathode ray tube)
   * The most common type of consumer and industry television before ~2010
-  * A  __tungsten coil__  is heated in a vacuum until it sheds electrons\, those electrons are accelerated by an electric field and guided by magnets to hit a phosphor coated glass display to emit light in a pixel grid
-  * __Obsolete__  since today there are lighter\, simpler higher resolution technologies
-  * Still used today for some applications due to  __zero latency__ \. For instance\, I use one for playing NES Tetris\!
+  * A  __tungsten coil__  is heated in a vacuum until it sheds electrons, those electrons are accelerated by an electric field and guided by magnets to hit a phosphor coated glass display to emit light in a pixel grid
+  * __Obsolete__  since today there are lighter, simpler higher resolution technologies
+  * Still used today for some applications due to  __zero latency__ . For instance, I use one for playing NES Tetris!
 
 ![](_assets/Lecture%202%20-%20Peripheral%20Devices27.png)
 
@@ -186,13 +186,13 @@ Headphones
 #### Plasma Monitors
 
 * Plasma
-  * Tiny cells of ionized gas that light up when stimulated by electricity\.
-  * Often used in home theatre applications due to accurate video representation\.
-  * High levels of brightness\, deep black levels and very wide color range\.
-  * Have shorter life span\, susceptible to “screen burn\-in” \(this is why screensavers are called “screen savers”\! Same for CRT\)\.
-* \(\+\) Plasma cell will produce light that looks good from every angle\, it was high refresh rate \(videos are smoother\)
-* \(\-\) BUT\! Consumes a lot of electricity
-* \(\-\) Doesn’t work at high altitudes\! \(low pressure\)
+  * Tiny cells of ionized gas that light up when stimulated by electricity.
+  * Often used in home theatre applications due to accurate video representation.
+  * High levels of brightness, deep black levels and very wide color range.
+  * Have shorter life span, susceptible to “screen burn-in” (this is why screensavers are called “screen savers”! Same for CRT).
+* (+) Plasma cell will produce light that looks good from every angle, it was high refresh rate (videos are smoother)
+* (-) BUT! Consumes a lot of electricity
+* (-) Doesn’t work at high altitudes! (low pressure)
 
 ![](_assets/Lecture%202%20-%20Peripheral%20Devices29.png)
 
@@ -205,15 +205,15 @@ Which will release photons at three different wavelength (either red, green or b
 
 ![](_assets/Lecture%202%20-%20Peripheral%20Devices31.jpg)
 
-* LCD \(Liquid crystal display\)
-  * Commonly used in  __flat__  panel monitors and laptops\.
-  * Consists of a  __white__  backlight \(in light\, white = all color's combined\)\, two polarizing filters\, and liquid crystal solution between them to transform the backlight into a coherent pixel grid\.
-  * An electronic current aligns and controls the crystals so that light can pass through them\.
-* \(\+\) Allows to have flat screens\!
+* LCD (Liquid crystal display)
+  * Commonly used in  __flat__  panel monitors and laptops.
+  * Consists of a  __white__  backlight (in light, white = all color's combined), two polarizing filters, and liquid crystal solution between them to transform the backlight into a coherent pixel grid.
+  * An electronic current aligns and controls the crystals so that light can pass through them.
+* (+) Allows to have flat screens!
 
 ![](_assets/Lecture%202%20-%20Peripheral%20Devices32.png)
 
-For more information: [https://www\.youtube\.com/watch?v=Gx\-JVoOFYhs&ab\_channel=e\-learning%C3%A9lectronique](https://www.youtube.com/watch?v=Gx-JVoOFYhs&ab_channel=e-learning%C3%A9lectronique)
+For more information: [https://www.youtube.com/watch?v=Gx-JVoOFYhs&ab_channel=e-learning%C3%A9lectronique](https://www.youtube.com/watch?v=Gx-JVoOFYhs&ab_channel=e-learning%C3%A9lectronique)
 
 ---
 
@@ -226,60 +226,83 @@ To transform the white light into colored light, a color filter is placed on the
 
 ![](_assets/Lecture%202%20-%20Peripheral%20Devices34.jpg)
 
-* LED \(Light emitting diode\)
-  * Same as LCD but uses  __LED backlighting __ instead of a white backlight with crystal liquid to light the display\.
+* LED (Light emitting diode)
+  * Same as LCD but uses  __LED backlighting __ instead of a white backlight with crystal liquid to light the display.
   * The brightness of each RGB LED is controlled programmatically to produce each pixel
-  * __\(\+\) Thinner__  \(no layers\)\, lighter and brighter\, and displays better contrast
-  * __\(\+\) Lower power __ consumption\.
+  * __(+) Thinner__  (no layers), lighter and brighter, and displays better contrast
+  * __(+) Lower power __ consumption.
 
 ![](_assets/Lecture%202%20-%20Peripheral%20Devices35.jpg)
 
-For more information: [https://www\.youtube\.com/watch?v=96QwqOZ4xjE&ab\_channel=Lesics](https://www.youtube.com/watch?v=96QwqOZ4xjE&ab_channel=Lesics)
+For more information: [https://www.youtube.com/watch?v=96QwqOZ4xjE&ab_channel=Lesics](https://www.youtube.com/watch?v=96QwqOZ4xjE&ab_channel=Lesics)
 
-* OLED \(Organic LED\)
-  * Similar to LED\, but  __no backlighting __ required \-\- the material used to create these displays emits light when  __an electrical current is applied__ \.
-  * \(\+\)Allows for  __perfect representation of dark colors __ unlike all other monitor technologies\. Also allows for flexible and transparent monitors
-  * \(\-\)More expensive to produce\, more susceptible to screen\-burn\-in than LCD or LED \(but better than Plasma and CRT in this respect\)
+* OLED (Organic LED)
+  * Similar to LED, but  __no backlighting __ required -- the material used to create these displays emits light when  __an electrical current is applied__ .
+  * (+)Allows for  __perfect representation of dark colors __ unlike all other monitor technologies. Also allows for flexible and transparent monitors
+  * (-)More expensive to produce, more susceptible to screen-burn-in than LCD or LED (but better than Plasma and CRT in this respect)
 
 ![](_assets/Lecture%202%20-%20Peripheral%20Devices36.jpg)
 
-For more information: [https://www\.youtube\.com/watch?v=xAMhX3Drq14&ab\_channel=Lesics](https://www.youtube.com/watch?v=xAMhX3Drq14&ab_channel=Lesics)
+For more information: [https://www.youtube.com/watch?v=xAMhX3Drq14&ab_channel=Lesics](https://www.youtube.com/watch?v=xAMhX3Drq14&ab_channel=Lesics)
 
-* DLP \(Digital light processing\)
-  * Used in projectors\.
-  * Spinning color wheel with microprocessor\-controlled array of mirrors\.
-  * Each mirror corresponds to a specific pixel\, reflecting light\.
-  * Monochrome image is created using up to 1024 shades of grey\.
-  * Color wheel then adds to complete the projected image\.
+* DLP (Digital light processing)
+  * Used in projectors.
+  * Spinning color wheel with microprocessor-controlled array of mirrors.
+  * Each mirror corresponds to a specific pixel, reflecting light.
+  * Monochrome image is created using up to 1024 shades of grey.
+  * Color wheel then adds to complete the projected image.
 
 ### Printers
 
-* Printers take  __data__  from a computer and generate output on paper\.
+* Printers take  __data__  from a computer and generate output on paper.
   * Basic principles
-    * Similar to monitor \(high quantity of small\, well placed “pixels” → the visual quality of a coherent image\)
-    * Rather than orienting light photons on a screen\, printers deposit liquid stains on to paper\. The physical setup is different\, but the same principles are at work\.
+    * Similar to monitor (high quantity of small, well placed “pixels” → the visual quality of a coherent image)
+    * Rather than orienting light photons on a screen, printers deposit liquid stains on to paper. The physical setup is different, but the same principles are at work.
 
 ![](_assets/Lecture%202%20-%20Peripheral%20Devices37.png)
 
-A high enough quantity of toasted bread produces the qualitative impression of a human eye in this “piece” of art\. Printers \(and monitors\) use much higher quantities of “pixels” than depicted here\!
+A high enough quantity of toasted bread produces the qualitative impression of a human eye in this “piece” of art. Printers (and monitors) use much higher quantities of “pixels” than depicted here!
 
 #### Inkjet Printers
 
-Uses tiny droplets of ink to produce images\.
+Uses tiny droplets of ink to produce images.
 
-Uses cyan\, magenta and blue instead of RGB like screens\!
+Uses cyan, magenta and blue instead of RGB like screens!
 
-Heat is applied to an ink reservoir\, which pushes ink bubbles through a nozzle in a controlled manner\.
+Heat is applied to an ink reservoir, which pushes ink bubbles through a nozzle in a controlled manner.
 
-The ink liquid droplets are smaller in diameter than a human hair\! Many of these added together produce the quality of a coherent image\.
+The ink liquid droplets are smaller in diameter than a human hair! Many of these added together produce the quality of a coherent image.
 
 #### Laser Printers
 
 ![](_assets/Lecture%202%20-%20Peripheral%20Devices39.png)
 
-* Expensive when they were initially introduced\.
-* Produce high\-quality output quietly at a high speed\.
-* Produces images by directing a  __laser beam __ at a mirror which bounces the beam onto a drum\.
-  * The drum contains a  __special coating __ to which the toner \(ink powder\) sticks\.
-  * A laser beam then conveys information to the drum\,  __neutralizing__  and detaching some toner\.
-  * As the paper rolls by the drum\, the toner is transferred onto the paper\. A hot roller then bonds toner to the paper\.
+* Expensive when they were initially introduced.
+* Produce high-quality output quietly at a high speed.
+* Produces images by directing a  __laser beam __ at a mirror which bounces the beam onto a drum.
+  * The drum contains a  __special coating __ to which the toner (ink powder) sticks.
+  * A laser beam then conveys information to the drum,  __neutralizing__  and detaching some toner.
+  * As the paper rolls by the drum, the toner is transferred onto the paper. A hot roller then bonds toner to the paper.
+
+## Exercises
+
+See Lab
+
+## Knowledge check
+
+The following questions invite you to reflect on the key information learned in this lesson. If you can't answer the question, you can click the corresponding link to review the topic more closely. Future assignments and tests may be based on questions like these:
+
+- What are the two main properites of computers?
+- Are video game consoles computers?
+- Are there examples of nonelectonic computers? How do nonelectronic computer *compute*?
+- Why is **binary** relevant to computers?
+- What is the property of computers that means they reliably behave the same way given the same input?
+- What is the name for the type of computer that is always on, and is specialized for processing large amounts of data and pooling many computing resources in one place?
+
+## Additional resources
+
+This section contains helpful links to related content. You aren't required to study these in detail, but it never hurts to learn more.
+
+- [Computer Basics by GCF Global](https://edu.gcfglobal.org/en/computerbasics/): We will eventually cover almost all of the material in this free online resource; for now, **Parts 1-7** in particular are relevant to what we have learned so far.
+- ["The Mother of All Demos"](https://www.dougengelbart.org/content/view/209/448/) This is a 1968 presentation that introduced many of the hardware/graphics concepts we will see today and some we will see in future lectures: the mouse, networking, video conferencing, word documents, hyperlinks, *gamer headphones*, etc. It is very cool to see the palpable excitement of the 2000+ audience tuning into a passionate presentation of a series of completely new technologies.
+- Montréal's [Musée de l'Ordinateur](http://emusee.org/) -- unfortunately the physical location has been closed since 2022, but the website is still a neat resource for reading on the history of personal computers and their evolution. The author's bias towards Bill Gates and Windows machines is quite strong (there is *much* more to the story), but the information provided is reliable and interesting.
