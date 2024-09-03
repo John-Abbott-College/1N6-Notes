@@ -44,37 +44,35 @@ We will cover many examples of each.
 
 Allow a computer to accept data and instructions from a user.
 
-::: {layout-ncol=4}
+::: {layout-ncol=4 layout-valign="bottom"}
 
 ![](_assets/external-components-trackball.jpg)
-
-![](_assets/external-components-ballmouse.png)
 
 ![](_assets/external-components-writingpad.png)
 
 ![](_assets/external-components-webcam.png)
 
+![](_assets/external-components-keyboard.png)
+
+![](_assets/external-components-ballmouse.png)
+
+![](_assets/external-components-ledmouse.png)
+
 ![](_assets/external-components-lasermouse.png)
 
-<!-- ![](_assets/external-components-.png) -->
+![](_assets/external-components-ergonomickeyboard.jpg)
 
-![](_assets/external-components-barcodescanner.jpg)
+![](_assets/external-components-barcodescanner.png)
 
 ![](_assets/external-components-microphone.png)
 
-<!-- ![](_assets/external-components-.png) -->
-
-![](_assets/external-components-biometric.jpg)
+![](_assets/external-components-biometric.png)
 
 ![](_assets/external-components-joystick.png)
 
-![](_assets/external-components-keyboard.png)
-
-![](_assets/external-components-keyboard.png)
-
 :::
 
-## Mouse
+### Mouse
 
 Used to navigate the graphical user interface (GUI).
 
@@ -90,13 +88,17 @@ __Purposes:__
 
 Many! “Gaming” (many buttons), Ergonomic (optimize human comfort), etc.
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices15.png)
+::: {layout-ncol=2 layout-valign="bottom"}
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices16.png)
+![](_assets/external-components-woodmouse.png)
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices17.png)
+![](_assets/external-components-ballmouse.png)
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices18.png)
+![](_assets/external-components-ledmouse.png)
+
+![](_assets/external-components-lasermouse.png)
+
+:::
 
 ---
 
@@ -116,51 +118,28 @@ Ergonomic designs are recently becoming more popular.
 
 KVM ("keyboard, video and mouse"): control multiple devices from one keyboard/mouse combination
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices19.jpg)
+::: {layout-ncol=3}
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices20.png)
+![](_assets/external-components-numpad.jpg)
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices21.jpg)
+![](_assets/external-components-keyboard.png)
 
-* note: this is very hypocritical coming from me. don’t mind my bad jokes!
+![](_assets/external-components-ergonomickeyboard.jpg)
+
+:::
 
 ### Others
 
-Gamepads or joysticks are used for playing games and running simulations.
-
-Digital / video cameras and webcams create images and videos.
-
-Microphones
-
-Biometric devices use features unique to an individual user (e.g. fingerprint).
-
-Touchscreens have a pressure-sensitive panel.
-
-Scanners digitize images or documents so they can be stored as files.
-
-Digital Tablets (sometimes called Digitizers) allow the user to create images or artwork using a stylus.
-
-Media card readers read/write data from/to different types of media cards (SD cards, video game cartridges, etc.)
+- Gamepads or joysticks are used for playing games and running simulations.
+- Digital / video cameras and webcams create images and videos.
+- Microphones
+- Biometric devices use features unique to an individual user (e.g. fingerprint).
+- Touchscreens have a pressure-sensitive panel.
+- Scanners digitize images or documents so they can be stored as files.
+- Digital Tablets (sometimes called Digitizers) allow the user to create images or artwork using a stylus.
+- Media card readers read/write data from/to different types of media cards (SD cards, video game cartridges, etc.)
 
 ## Output Devices
-
-Output devices present information to the user from a computer.
-
-Monitors
-
-Projectors
-
-Printers
-
-Speakers
-
-Headphones
-
-![](_assets/Lecture%202%20-%20Peripheral%20Devices24.png)
-
-![](_assets/Lecture%202%20-%20Peripheral%20Devices25.png)
-
-![](_assets/Lecture%202%20-%20Peripheral%20Devices26.png)
 
 ### Monitors
 
@@ -179,9 +158,13 @@ Headphones
   * __Obsolete__  since today there are lighter, simpler higher resolution technologies
   * Still used today for some applications due to  __zero latency__ . For instance, I use one for playing NES Tetris!
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices27.png)
+::: {layout-ncol=2}
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices28.png)
+![](_assets/external-components-CRT1.png)
+
+![](_assets/external-components-CRT2.png)
+
+:::
 
 #### Plasma Monitors
 
@@ -194,7 +177,7 @@ Headphones
 * (-) BUT! Consumes a lot of electricity
 * (-) Doesn’t work at high altitudes! (low pressure)
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices29.png)
+![](_assets/external-components-29.png)
 
 Plasma is a chemical state of molecules when molecules in state of gas are heated up (excited with electric charge).
 Typical Plasma displays have two glass plates sandwiching hundreds of thousands of cells containing plasma. 
@@ -203,7 +186,7 @@ Which will release photons at three different wavelength (either red, green or b
 
 #### LCD Monitors
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices31.jpg)
+![](_assets/external-components-LCDvsLED.jpg)
 
 * LCD (Liquid crystal display)
   * Commonly used in  __flat__  panel monitors and laptops.
@@ -211,7 +194,7 @@ Which will release photons at three different wavelength (either red, green or b
   * An electronic current aligns and controls the crystals so that light can pass through them.
 * (+) Allows to have flat screens!
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices32.png)
+![](_assets/external-components-32.png)
 
 For more information: [https://www.youtube.com/watch?v=Gx-JVoOFYhs&ab_channel=e-learning%C3%A9lectronique](https://www.youtube.com/watch?v=Gx-JVoOFYhs&ab_channel=e-learning%C3%A9lectronique)
 
@@ -224,7 +207,7 @@ LCD TN (Twistic nematic) cheapest
 The polarizing filter lets only one orientation of the light pass through.
 To transform the white light into colored light, a color filter is placed on the outter face ( made of pigments which will absorb all colors execept the color that is passing (red, blue or green)
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices34.jpg)
+![](_assets/external-components-34.jpg)
 
 * LED (Light emitting diode)
   * Same as LCD but uses  __LED backlighting __ instead of a white backlight with crystal liquid to light the display.
@@ -232,7 +215,7 @@ To transform the white light into colored light, a color filter is placed on the
   * __(+) Thinner__  (no layers), lighter and brighter, and displays better contrast
   * __(+) Lower power __ consumption.
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices35.jpg)
+![](_assets/external-components-35.jpg)
 
 For more information: [https://www.youtube.com/watch?v=96QwqOZ4xjE&ab_channel=Lesics](https://www.youtube.com/watch?v=96QwqOZ4xjE&ab_channel=Lesics)
 
@@ -241,7 +224,7 @@ For more information: [https://www.youtube.com/watch?v=96QwqOZ4xjE&ab_channel=Le
   * (+)Allows for  __perfect representation of dark colors __ unlike all other monitor technologies. Also allows for flexible and transparent monitors
   * (-)More expensive to produce, more susceptible to screen-burn-in than LCD or LED (but better than Plasma and CRT in this respect)
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices36.jpg)
+![](_assets/external-components-36.jpg)
 
 For more information: [https://www.youtube.com/watch?v=xAMhX3Drq14&ab_channel=Lesics](https://www.youtube.com/watch?v=xAMhX3Drq14&ab_channel=Lesics)
 
@@ -259,7 +242,7 @@ For more information: [https://www.youtube.com/watch?v=xAMhX3Drq14&ab_channel=Le
     * Similar to monitor (high quantity of small, well placed “pixels” → the visual quality of a coherent image)
     * Rather than orienting light photons on a screen, printers deposit liquid stains on to paper. The physical setup is different, but the same principles are at work.
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices37.png)
+![](_assets/external-components-printerbread.png)
 
 A high enough quantity of toasted bread produces the qualitative impression of a human eye in this “piece” of art. Printers (and monitors) use much higher quantities of “pixels” than depicted here!
 
@@ -275,7 +258,7 @@ The ink liquid droplets are smaller in diameter than a human hair! Many of these
 
 #### Laser Printers
 
-![](_assets/Lecture%202%20-%20Peripheral%20Devices39.png)
+![](_assets/external-components-39.png)
 
 * Expensive when they were initially introduced.
 * Produce high-quality output quietly at a high speed.
@@ -292,17 +275,6 @@ See Lab
 
 The following questions invite you to reflect on the key information learned in this lesson. If you can't answer the question, you can click the corresponding link to review the topic more closely. Future assignments and tests may be based on questions like these:
 
-- What are the two main properites of computers?
-- Are video game consoles computers?
-- Are there examples of nonelectonic computers? How do nonelectronic computer *compute*?
-- Why is **binary** relevant to computers?
-- What is the property of computers that means they reliably behave the same way given the same input?
-- What is the name for the type of computer that is always on, and is specialized for processing large amounts of data and pooling many computing resources in one place?
-
 ## Additional resources
 
 This section contains helpful links to related content. You aren't required to study these in detail, but it never hurts to learn more.
-
-- [Computer Basics by GCF Global](https://edu.gcfglobal.org/en/computerbasics/): We will eventually cover almost all of the material in this free online resource; for now, **Parts 1-7** in particular are relevant to what we have learned so far.
-- ["The Mother of All Demos"](https://www.dougengelbart.org/content/view/209/448/) This is a 1968 presentation that introduced many of the hardware/graphics concepts we will see today and some we will see in future lectures: the mouse, networking, video conferencing, word documents, hyperlinks, *gamer headphones*, etc. It is very cool to see the palpable excitement of the 2000+ audience tuning into a passionate presentation of a series of completely new technologies.
-- Montréal's [Musée de l'Ordinateur](http://emusee.org/) -- unfortunately the physical location has been closed since 2022, but the website is still a neat resource for reading on the history of personal computers and their evolution. The author's bias towards Bill Gates and Windows machines is quite strong (there is *much* more to the story), but the information provided is reliable and interesting.
