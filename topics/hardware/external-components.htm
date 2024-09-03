@@ -9,9 +9,9 @@
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.56">
+  <meta name="generator" content="quarto-1.5.57">
 
-  <meta name="dcterms.date" content="2024-08-29">
+  <meta name="dcterms.date" content="2024-09-03">
   <title>{{&lt; var course.title &gt;}} – External components</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -338,55 +338,104 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">2024-08-29</p>
+  <p class="date">2024-09-03</p>
 </section>
 <section class="slide level2">
 
-<p><strong>The notes below are in a draft state – they may change up to Monday Sep 2</strong></p>
-</section>
-<section id="outline" class="slide level2">
-<h2>Outline</h2>
+
+<img data-src="_assets/external-components-main.jpg" class="r-stretch quarto-figure-center"><p class="caption">All of these devices, except one, would be considered in external component of a modern desktop computer. Which one is not? Figure retrieved from <a href="https://www.facebook.com/photo.php?fbid=677864037674852&amp;set=pb.100063537865543.-2207520000&amp;type=3">Innovation it solution</a>, original source unknown.</p></section>
+<section id="introduction" class="slide level2">
+<h2>Introduction</h2>
+<p>Last week we learned the basic behaviors that define <em>computers</em> – their ability to <strong>store, retrieve, and process</strong> information. This means that many simple devices, even non-electronics, can be considered computers.</p>
+<p>The computers that we mostly are concerned with in the computer science profession, however, are generally complicated electronic devices made of many <strong>components</strong>. In this class, we are going to learn many of the fundamental components that make up modern computing devices.</p>
+<p>Today, we will start with the <strong>external</strong>, or <strong>peripheral</strong>, components of a computer – each of these have their own set of interesting <strong>behaviors</strong> and <strong>properties</strong> that are worth understanding.</p>
+<p>Many <strong>peripheral components</strong> of a computer can broadly be divided into two categories:</p>
 <ul>
-<li>Input devices:
+<li><strong>Input Devices</strong>: devices that <em>accept</em> data and instructions <em>from</em> a user <em>to</em> a computer.</li>
+<li><strong>Output Devices</strong>: devices that <em>present</em> data and information <em>to</em> the user <em>from</em> a computer.</li>
+</ul>
+<p>We will cover many examples of each.</p>
+</section>
+<section id="lesson-overview" class="slide level2">
+<h2>Lesson overview</h2>
+<ul>
+<li><p>Learn the history, behavior, and important properties of Input and Output devices</p></li>
+<li><p>Input devices:</p>
 <ul>
 <li>Keyboards</li>
 <li>Mice</li>
+<li>Controllers</li>
+<li>Cameras</li>
+<li>Touchscreens</li>
+<li>Scanners</li>
 </ul></li>
-<li>Output devices:
+<li><p>Output devices:</p>
 <ul>
 <li>Monitors</li>
 <li>Projectors</li>
 <li>Printers</li>
+<li>Speakers</li>
 </ul></li>
 </ul>
-</section>
-<section id="computer-basics" class="slide level2">
-<h2>Computer Basics</h2>
-<p>Input devices</p>
-<p>Mouse, keyboard, gamepads, biometric devices, cameras, touchscreens, scanners, digitizers, media readers.</p>
-<p>Output devices</p>
-<p>Monitors, printers, speakers.</p>
-<p>Storage devices</p>
-<p>Connectors / ports</p>
 </section>
 <section id="input-devices" class="slide level2">
 <h2>Input Devices</h2>
 <p>Allow a computer to accept data and instructions from a user.</p>
-<p><img data-src="_assets/Lecture 2 - Peripheral Devices1.jpg"></p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="4">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<p><img data-src="_assets/external-components-trackball.jpg"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
 <p><img data-src="_assets/Lecture 2 - Peripheral Devices2.png"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
 <p><img data-src="_assets/Lecture 2 - Peripheral Devices3.png"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
 <p><img data-src="_assets/Lecture 2 - Peripheral Devices4.png"></p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
 <p><img data-src="_assets/Lecture 2 - Peripheral Devices5.png"></p>
-<p><img data-src="_assets/Lecture 2 - Peripheral Devices6.png"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
 <p><img data-src="_assets/Lecture 2 - Peripheral Devices7.png"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
 <p><img data-src="_assets/Lecture 2 - Peripheral Devices8.jpg"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
 <p><img data-src="_assets/Lecture 2 - Peripheral Devices9.png"></p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
 <p><img data-src="_assets/Lecture 2 - Peripheral Devices10.png"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
 <p><img data-src="_assets/Lecture 2 - Peripheral Devices11.jpg"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
 <p><img data-src="_assets/Lecture 2 - Peripheral Devices12.png"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
 <p><img data-src="_assets/Lecture 2 - Peripheral Devices13.png"></p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
 <p><img data-src="_assets/Lecture 2 - Peripheral Devices14.png"></p>
-<h3 id="mouse">Mouse</h3>
+</div>
+</div>
+</div>
+</section>
+<section id="mouse" class="slide level2">
+<h2>Mouse</h2>
 <p>Used to navigate the graphical user interface (GUI).</p>
 <p>There are many types of mice, distinguished by tracking technology and by use case</p>
 <p><strong>Technologies</strong> :</p>
@@ -412,22 +461,18 @@
 <p><img data-src="_assets/Lecture 2 - Peripheral Devices19.jpg"></p>
 <p><img data-src="_assets/Lecture 2 - Peripheral Devices20.png"></p>
 <p><img data-src="_assets/Lecture 2 - Peripheral Devices21.jpg"></p>
-<p>* note: this is very hypocritical coming from me. don’t mind my bad jokes!</p>
+<ul>
+<li>note: this is very hypocritical coming from me. don’t mind my bad jokes!</li>
+</ul>
 <h3 id="others">Others</h3>
 <p>Gamepads or joysticks are used for playing games and running simulations.</p>
 <p>Digital / video cameras and webcams create images and videos.</p>
 <p>Microphones</p>
-<p>Biometric devices use features unique to an individual user (e.g. fingerprint).</p>
+<p>Biometric devices use features unique to an individual user (e.g.&nbsp;fingerprint).</p>
 <p>Touchscreens have a pressure-sensitive panel.</p>
 <p>Scanners digitize images or documents so they can be stored as files.</p>
 <p>Digital Tablets (sometimes called Digitizers) allow the user to create images or artwork using a stylus.</p>
 <p>Media card readers read/write data from/to different types of media cards (SD cards, video game cartridges, etc.)</p>
-<h3 id="activity-how-well-do-you-know-your-keyboard">Activity: How Well Do You Know Your Keyboard?</h3>
-<p><img data-src="_assets/Lecture 2 - Peripheral Devices22.png"></p>
-<p>Fill in the blank keyboard as best as you can. Then answer:</p>
-<p>Pick 5 keys (that aren’t letters or numbers) and try explain their general purpose. Pick keys that you aren’t sure about and use your lab computer to research!With 1 or 2 partners, compare and discuss your answers.</p>
-<p><img data-src="_assets/Lecture 2 - Peripheral Devices23.png"></p>
-<p><a href="https://support.microsoft.com/en-us/windows/windows-keyboard-shortcuts-3d444b08-3a00-abd6-67da-ecfc07e86b98">Windows</a><a href="https://support.microsoft.com/en-us/windows/windows-keyboard-shortcuts-3d444b08-3a00-abd6-67da-ecfc07e86b98">keybpard</a><a href="https://support.microsoft.com/en-us/windows/windows-keyboard-shortcuts-3d444b08-3a00-abd6-67da-ecfc07e86b98"></a><a href="https://support.microsoft.com/en-us/windows/windows-keyboard-shortcuts-3d444b08-3a00-abd6-67da-ecfc07e86b98">shortcuts</a></p>
 </section>
 <section id="output-devices" class="slide level2">
 <h2>Output Devices</h2>
@@ -510,7 +555,7 @@
 <ul>
 <li>OLED (Organic LED)
 <ul>
-<li>Similar to LED, but <strong>no backlighting </strong> required -- the material used to create these displays emits light when <strong>an electrical current is applied</strong> .</li>
+<li>Similar to LED, but <strong>no backlighting </strong> required – the material used to create these displays emits light when <strong>an electrical current is applied</strong> .</li>
 <li>(+)Allows for <strong>perfect representation of dark colors </strong> unlike all other monitor technologies. Also allows for flexible and transparent monitors</li>
 <li>(-)More expensive to produce, more susceptible to screen-burn-in than LCD or LED (but better than Plasma and CRT in this respect)</li>
 </ul></li>
@@ -556,6 +601,31 @@
 <li>A laser beam then conveys information to the drum, <strong>neutralizing</strong> and detaching some toner.</li>
 <li>As the paper rolls by the drum, the toner is transferred onto the paper. A hot roller then bonds toner to the paper.</li>
 </ul></li>
+</ul>
+</section>
+<section id="exercises" class="slide level2">
+<h2>Exercises</h2>
+<p>See Lab</p>
+</section>
+<section id="knowledge-check" class="slide level2">
+<h2>Knowledge check</h2>
+<p>The following questions invite you to reflect on the key information learned in this lesson. If you can’t answer the question, you can click the corresponding link to review the topic more closely. Future assignments and tests may be based on questions like these:</p>
+<ul>
+<li>What are the two main properites of computers?</li>
+<li>Are video game consoles computers?</li>
+<li>Are there examples of nonelectonic computers? How do nonelectronic computer <em>compute</em>?</li>
+<li>Why is <strong>binary</strong> relevant to computers?</li>
+<li>What is the property of computers that means they reliably behave the same way given the same input?</li>
+<li>What is the name for the type of computer that is always on, and is specialized for processing large amounts of data and pooling many computing resources in one place?</li>
+</ul>
+</section>
+<section id="additional-resources" class="slide level2">
+<h2>Additional resources</h2>
+<p>This section contains helpful links to related content. You aren’t required to study these in detail, but it never hurts to learn more.</p>
+<ul>
+<li><a href="https://edu.gcfglobal.org/en/computerbasics/">Computer Basics by GCF Global</a>: We will eventually cover almost all of the material in this free online resource; for now, <strong>Parts 1-7</strong> in particular are relevant to what we have learned so far.</li>
+<li><a href="https://www.dougengelbart.org/content/view/209/448/">“The Mother of All Demos”</a> This is a 1968 presentation that introduced many of the hardware/graphics concepts we will see today and some we will see in future lectures: the mouse, networking, video conferencing, word documents, hyperlinks, <em>gamer headphones</em>, etc. It is very cool to see the palpable excitement of the 2000+ audience tuning into a passionate presentation of a series of completely new technologies.</li>
+<li>Montréal’s <a href="http://emusee.org/">Musée de l’Ordinateur</a> – unfortunately the physical location has been closed since 2022, but the website is still a neat resource for reading on the history of personal computers and their evolution. The author’s bias towards Bill Gates and Windows machines is quite strong (there is <em>much</em> more to the story), but the information provided is reliable and interesting.</li>
 </ul>
 
 <div class="quarto-auto-generated-content">
