@@ -1,5 +1,92 @@
 [
   {
+    "objectID": "announcements/2024-08-27-class-cancelled.html",
+    "href": "announcements/2024-08-27-class-cancelled.html",
+    "title": "Class cancelled today",
+    "section": "",
+    "text": "Unfortunately I am not feeling well today and would like to make sure I do not pass that along to you – I will be cancelling today’s class.\nI will be uploading today’s lecture notes shortly. The link for these will appear on LEA soon. (EDIT: you can now find them here. Please read them in advance of Thursday’s class, where we will be doing in-class activities based on some of the content.\nYou can also see all of the content we’ve covered the past two days on the course calendar.\nLet me know if you have any questions!\n\n\n\n Back to topReuseCC BY-NC-SA 4.0"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "This companion site for the 420-1N6 course includes:",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#source-code",
+    "href": "index.html#source-code",
+    "title": "Home",
+    "section": "Source Code",
+    "text": "Source Code\nThis webpage is written in Markdown using the Quarto framework. The website is hosted via GitHub Pages\nSource code is open source and available on GitHub.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "about/this-site.html",
+    "href": "about/this-site.html",
+    "title": "About this website",
+    "section": "",
+    "text": "Course content, both for lectures and assignments, has been adapted by me from a variety of sources. This section serves the purpose of both acknowledging these references as well as pointing the way for curious students to begin investigating further into course material than we had time to cover.\n\n\nAll course content was either written by Michael Haaf, or explicitly adapted from external resources with attributions made clear. This course content retains the licenses of the original works where relevant, and is otherwise licensed under the Creative Commons Attribution 4.0 International License.\n\nTerms of use\nYou are free to:\n\nShare: copy and redistribute the material in any medium or format\nAdapt: remix, transform, and build upon the material for any purpose, even commercially.\n\nUnder the following terms:\n\nAttribution: You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\n\nCreative Commons Attribution 4.0 International License",
+    "crumbs": [
+      "Home",
+      "About",
+      "About this website"
+    ]
+  },
+  {
+    "objectID": "about/this-site.html#course-content",
+    "href": "about/this-site.html#course-content",
+    "title": "About this website",
+    "section": "",
+    "text": "Course content, both for lectures and assignments, has been adapted by me from a variety of sources. This section serves the purpose of both acknowledging these references as well as pointing the way for curious students to begin investigating further into course material than we had time to cover.\n\n\nAll course content was either written by Michael Haaf, or explicitly adapted from external resources with attributions made clear. This course content retains the licenses of the original works where relevant, and is otherwise licensed under the Creative Commons Attribution 4.0 International License.\n\nTerms of use\nYou are free to:\n\nShare: copy and redistribute the material in any medium or format\nAdapt: remix, transform, and build upon the material for any purpose, even commercially.\n\nUnder the following terms:\n\nAttribution: You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\n\nCreative Commons Attribution 4.0 International License",
+    "crumbs": [
+      "Home",
+      "About",
+      "About this website"
+    ]
+  },
+  {
+    "objectID": "about/this-site.html#course-website",
+    "href": "about/this-site.html#course-website",
+    "title": "About this website",
+    "section": "Course website",
+    "text": "Course website\nDetails about how this website was built follow.\n\nColophon\n\n\n\nFrom Wikipedia: In publishing, a colophon is a brief statement containing information about the publication of a book… Some web pages also have colophons, which frequently contain (X)HTML, CSS, or usability standards compliance information and links to website validation tests.\n\n\n\nMarkup: Markdown\nFramework: Quarto\nDeployment: GitHub Pages\n\nYou can follow along directly with course updates at the [course repository][course-repository]\n\n\nCopyright\nThis website was written and designed by the Michael Haaf. All code and assets related to this website, unless indicated otherwise, are licensed under the GNU General Public License v3.0\n\nTerms of use\nThis website’s code is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\nThis website’s code is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\nGNU General Public License Notice",
+    "crumbs": [
+      "Home",
+      "About",
+      "About this website"
+    ]
+  },
+  {
+    "objectID": "about/calendar.html",
+    "href": "about/calendar.html",
+    "title": "Calendar",
+    "section": "",
+    "text": "The focused pupil keeps watch on Time. Image retrieved from Bryan Superfreak Magnum on Pinterest.\nThis is the authoritative calendar for content covered in class, and for content you should expect to see covered as we continue through the course.\nYou can compare this calendar with the calendar from the Course Outline to see where this course has deviated from the original outline.",
+    "crumbs": [
+      "Home",
+      "About",
+      "Calendar"
+    ]
+  },
+  {
+    "objectID": "about/calendar.html#august-september",
+    "href": "about/calendar.html#august-september",
+    "title": "Calendar",
+    "section": "August & September",
+    "text": "August & September\n\nDeliverables\n\nLab 0: Introduction to Technical Support Survey\nLab 1: TBD\nAssignment 1: TBD\n\n\n\nSchedule\n\nAug 22: Introductions, icebreaker, overview of the course outline.\nAug 26: Completed Lab 0 (see above). Overview of the course syllabus and course calendar.\nAug 27: Class cancelled – please read the lecture Introduction to computers to catch up on covered material.\nAug 29: In-class activities. TBD",
+    "crumbs": [
+      "Home",
+      "About",
+      "Calendar"
+    ]
+  },
+  {
     "objectID": "topics/operating-systems/index.html",
     "href": "topics/operating-systems/index.html",
     "title": "Operating Systems",
@@ -12,15 +99,29 @@
     ]
   },
   {
-    "objectID": "topics/all-lectures.html",
-    "href": "topics/all-lectures.html",
-    "title": "All lectures",
+    "objectID": "topics/hardware/internal-components.html",
+    "href": "topics/hardware/internal-components.html",
+    "title": "Internal Components",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nSubtitle\n\n\n\n\n\n\n2024-08-27\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n2024-09-03\n\n\nExternal components\n\n\nOverview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors\n\n\n\n\n2024-09-10\n\n\nInternal Components\n\n\nExplains the most important internal components of desktop computers. Processing, memory, storage, and communication.\n\n\n\n\n2024-09-16\n\n\nUnderstanding CPUs\n\n\nAn in-depth explanation of command processing and executing at the CPU level\n\n\n\n\n\nNo matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
+    "text": "The major internal components of desktop computers. Image source: TBA",
     "crumbs": [
       "Home",
       "Topics",
-      "All lectures"
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#introduction",
+    "href": "topics/hardware/internal-components.html#introduction",
+    "title": "Internal Components",
+    "section": "Introduction",
+    "text": "Introduction\nIn previous weeks we learned the basic behaviors that define computers – their ability to store, retrieve, and process information. This means that many simple devices, even non-electronics, can be considered computers.\nThe computers that we mostly are concerned with in the computer science profession, however, are generally complicated electronic devices made of many components. In this class, we are going to learn many of the fundamental components that make up modern computing devices.\nWe will continue with the internal, or system, components of a computer – each of these have their own set of interesting behaviors and properties that are worth understanding.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
     ]
   },
   {
@@ -28,7 +129,176 @@
     "href": "topics/hardware/internal-components.html#lesson-overview",
     "title": "Internal Components",
     "section": "Lesson overview",
-    "text": "Lesson overview",
+    "text": "Lesson overview\nThe system components of a computer are responsible for the following behaviors:\n\nMain needs:\n\nstore information\nprocess information\nretrieve  information\n\nAuxiliary needs:\n\nprotection from elements/interference\nsource of electrical power\ntemperature management for heat generated\nstructure\ncommunication between components\ntiers of storage/processing specialized for different purposes\n\n\nHere are system components that fulfil these needs:\n\nCase\nPower Supply\nMotherboard\n\nChipset\nBuses\n\nConnectors\nCooling Devices\nProcessor (CPU)\nGraphics processor (GPU)\nMemory (RAM)\nStorage Devices (CD, HDD, SSD, NVME/M2)\n\nWe will learn about all of these components this week!",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#definitions",
+    "href": "topics/hardware/internal-components.html#definitions",
+    "title": "Internal Components",
+    "section": "Definitions",
+    "text": "Definitions\nWhen discussing components of any complicated machine, we should try to understand the following about those components:\n\nMake/model\nMake/model is the brand and product name of the component. * E.g. Hyundai Accent (make = Hyundai, model = Accent)\nWhy it’s important: Who constructs these components? Are their multiple different versions of this component made by the same manufacturer? Why?\n\n\nProperties\nProperties are the quantitative (numeric) and qualitative  (non-numeric) traits of the component that can be compared with alike components * Quantitative e.g.: the Fuel Efficiency of the 2009 Hyundai Accent is 29 MPG  (miles per gallon) * Qualitative e.g: The Hyundai Accent is a hatchback, not a sedan\nWhy it’s important: * what is the expected performance of this component? * Is their a cost/benefit for choosing a component with better suited properties than other components? * Etc.\nThese two ideas (make/model, properties) will vary significantly from component to component. You will need to know these ideas for all of the components we discuss today.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#case",
+    "href": "topics/hardware/internal-components.html#case",
+    "title": "Internal Components",
+    "section": "Case",
+    "text": "Case\n\n\n\nFigure caption.\n\n\n\nProvides protection and cooling for the internal components.\nAlso prevents damage from static electricity (components grounded via attachment to case).\nUsually made of plastic, steel or aluminum.\nFans move air through the case:\n\nto replace warm air with cold air to keep components at stable temperatures\nto prevent build-up of dust\nThere exist many guides/studies for optimal airflow. E.g. https://voltcave.com/pc-airflow-guide/",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#power-supply-psu",
+    "href": "topics/hardware/internal-components.html#power-supply-psu",
+    "title": "Internal Components",
+    "section": "Power Supply (PSU)",
+    "text": "Power Supply (PSU)\nMain purpose:  Converts AC power (alternating current) from wall socket to DC power (direct current). Direct current (0 or 5V) is used to power digital circuits.\n\nNote: PSU have their own fans: Energy conversion releases a lot of heat!\nComputers can only tolerate slight fluctuations in power without needing to shut down\nImportant: Never open a power supply! The capacitors contained within can keep a dangerous high voltage, high power charge long after being unplugged.\n\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\nPSU Connectors\n\nMost power supply connectors are : 20 + 4 pins\nUsually made up of wires of various colors:\n\nYellow 12V\nRed 5V\nOrange 3.3V\nOther colors may be ground 0V\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\nPSU Ratings\nUseful for Assignment 1\nPSU Ratings: * Wattage (amount of power delivered, must be greater than the sum of power required by all parts, some power supplies can provide more power than others) * Efficiency (1st + 2nd Laws of thermodynamics: 100% power input cannot be converted to 100% power output; some power supplies have higher efficiency ratings than others) * For more detailed explanation:  https://www.newegg.com/insider/how-to-choose-a-pc-power-supply-buying-guide/\n\n\nUninterruptible Power Supply\nIn the case of a power outage, an Uninterruptible Power Supply (UPS) can keep a computer running for a few minutes to several hours depending on the sophistication of the UPS. See  https://www.wikihow.com/Buy-and-Use-an-Uninterruptible-Power-Supply  for an example.\nIt’s basically a large battery that keeps charge during normal operation, and powers a computer using its stored charge when the building’s power is cut off.\nWe will talk more about uninterruptible power supply when we start speaking about server hardware.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#motherboard",
+    "href": "topics/hardware/internal-components.html#motherboard",
+    "title": "Internal Components",
+    "section": "Motherboard",
+    "text": "Motherboard\nMotherboards connect all the major components of the computer: the CPU, RAM, Expansion ports, etc.\n\n\n\nAn ASUS Pro B660M Motherboard. Most motherboards look something like this.\n\n\n\nComposed of various chips all combined into north  and south  bridges\nMain circuit board and controls the electrical pathways (buses) found in a computer.\nThe buses allow data to travel between the various components of a computer.\nVarious form factors, e.g. AT, ATX, LPX, BTX, ITX.\n\n\n\n\nMotherboard form factors, from largest to smallest.\n\n\n\nForm Factors\n\nAT\n\nInvented by IBM in early 1980s, now obsolete.\nHuge in size (approximately 12 x 13 inches).\nNeeded lots of space for power supply and its various chips.\nLacked external ports, only allowed for monitor and keyboard.\n\nATX\n\nCreated in 1995 to meet the need for more connectors.\nGot off to a slow start but by 1998 became the most common form factor.\nBiggest change to AT was the rear panel with standard set of ports for expansion.\nPower supply position for better airflow, CPU and RAM positioned for easier access.\nVariations 12x9in (full size), 9.6x9.6in ( microATX )\n\nATX and microATX are the most common in personal desktop computers today\n\n\n\nITX\n\nCreated in 2001 to meet the demand for smaller computers.\nITX failed but led to development of smaller form factor (SSF) motherboards.\nMiniITX (6.7x6.7in), NanoITX (4.7x4.7in) and PicoITX (3.8x2.8in)\nCommonly used for embedded systems and specialized devices such as routers.\nRequire very little power, therefore produce less heat.\n\nProprietary\n\nSome computer manufacturers make motherboards that work only with their cases.\nServices and upgrades usually need to be handled by authorized dealers.\nOften hard to get replacement parts and they are usually expensive.\n\n\n\n\nI/O Ports\nYou’ll notice that the I/O Ports (input/output) on the mother board are always located around the same area.\nThis is to keep certain consistency across manufacturer and regardless of the form factors\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\nExpansion Slots\nLet’s have a closer look at what we call expansion slots.\nExpansion slots are ports inside a computer found on the motherboard. They provide the possibility to expand the hardware of your PC.\nFor example, you may want to install a network card, a sound card, and most commonly, a video card.\n\n\nExpansion slots allow us to increase the functionality of a computer by adding controllers for specific devices (often called adapter cards) e.g. sound, video, NIC (network Interface Card).\n\nPCI used in most computers, commonly used for network interface\nAGP designed to be used by video adapters\nPCIe replaces AGP in newer computers, used for video cards\nISA older, rarely used, 8 or 16 bit\nEISA older, rarely used, 32 bit\nMCA IBM proprietary 32 bit, older, rarely used\nPCI-X 32 bit, can run up to four times faster than PCI\nMiniPCI 32 bit, used by laptops, has three different form factors\n\nIn 2024 : PCI  and PCIe  are the common standards that cover all features required for expansion slots\n\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nCPU Socket\nLet’s have a closer look at the CPU Socket, which rests in the motherboard. This is where the CPU will sit.\n\n\n\n\n\n\n\n\n\nThe motherboard…\n\n\n\n\n\n\n\n… and the CPU socket.\n\n\n\n\n\n\n\nHow to Connect a CPU?\nCPU connection on the motherboard is known as the CPU socket.\nThe CPU is connected to the motherboard in one of two ways:\n\nPin Grid Array – PGA\n\nPins are on the CPU (underside of the processor).\nSocket on motherboard includes holes that line up with the CPU pins.\n\nLand Grid Array – LGA\n\nPins are on the motherboard (on socket) instead of on the processor.\n\n\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#internal-connectors",
+    "href": "topics/hardware/internal-components.html#internal-connectors",
+    "title": "Internal Components",
+    "section": "Internal Connectors",
+    "text": "Internal Connectors\nThere are a variety of connectors used to connect components to the motherboard. Two main purposes:\n\nSignals : for communication/data transfer\nPower : not all components connect directly to the power supply, they get power from the motherboard\n\nMost connectors are keyed (can only be inserted one way). Note: Always check the pins if you have trouble with a connector.\n\n“If it doesn’t go in like butter, it doesn’t go in at all” – never force a connection! you are likely going to damage the pins.\n\n\nExample connectors\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#cpu",
+    "href": "topics/hardware/internal-components.html#cpu",
+    "title": "Internal Components",
+    "section": "CPU",
+    "text": "CPU\nThe CPU Most important element of the computer.\n\nResponsible for interpreting  and executing  the commands from the software.\ncommunicates instructions for all of the other components of the computer\nWhile the CPU is processing one step of the program, the remaining instructions and the data are stored in a special memory called cache.\n\n\n\n\nFigure caption.\n\n\nWe’ll have a lecture dedicated to the CPU since it is so complicated.\n\nCPU Brands\nIntel: Historically the main CPU manufacturer\nAMD: Relatively recent competitor to Intel\n\n\n\nFigure caption.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#cooling-devices",
+    "href": "topics/hardware/internal-components.html#cooling-devices",
+    "title": "Internal Components",
+    "section": "Cooling Devices",
+    "text": "Cooling Devices\nThe flow of current between and within electronic components generates heat. Some devices are particularly powerful heat-generators, due to the large current they draw: * CPUs typically come with their own cooling device * Cooling devices are built into GPUs and Power Supplies\nThere are two main types of cooling devices:\n\nFans inside the case increase airflow and removes heat.\nHeat sinks also draw heat away from the CPU core.\n\n\nFans\nThe flow of current between the electronic components generates heat.\nFans inside the case increase airflow and removes heat.\nOccasionally video cards or other components have their own fans to cool them.\n\n\n\nFigure caption.\n\n\n\n\nHeat sinks\n\nHeat sinks also draw heat away from the CPU core.\n\nA heat sink is a piece of copper or aluminum that resides between the processor and the CPU fan.\nIt absorbs the heat from the processor and the fan disperses the heat.\n\n\n\n\n\nFigure caption.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#main-memory-ram",
+    "href": "topics/hardware/internal-components.html#main-memory-ram",
+    "title": "Internal Components",
+    "section": "Main Memory (RAM)",
+    "text": "Main Memory (RAM)\nReferred to as RAM (Random Access Memory). They’re connected to RAM slots on the motherboard:\n\n\n\n\n\n\n\nFigure caption.\n\n\nRAM is a collection of integrated circuits (chips). Temporary storage for data and programs that are being accessed by the CPU.\nVolatile memory : contents are erased when the computer is switched off. (or when power is lost)\n\n\n\n\n\n\n\nFigure caption.\n\n\n\nProperties\nThere are four main properties of RAM to know:\n\nCapacity:  Total memory (in GB, GigaBytes)\n\nMore RAM means more capacity to hold and process large programs and files.\nMaximum installed is limited by the motherboard and the operating system.\n\nSpeed:  How many operations per second\n\nMany, millions or billions per second\n1MHz = 1 million / second, 1 GHz = 1 billion / second\n\nLatency : How much time delay between communications\nGeneration: See next slides\n\n\n\nRAM Form Factors\n\nSIMMs (Single In-Line Memory Modules)\n\nHave a single line of connectors.\nNow obsolete.\n\nDIMMs (Dual In-Line Memory Modules)\n\nHave two lines of connectors.\nHave Wider bus (supports 64 bits) 🡪 How can this help? More on this in the coming weeks.\nBecame dominant (no need to state that a memory module is a DIMM).\n\n\n\n\nRAM Generations\n\n\n\n\n\n\n\nSynchronous DRAM (SDRAM)\nDRAM that operates in time with the memory bus.Tied to the system clock like the CPU and the memory controller.Results in very little wasted time.\n\n\n\n\nDouble Data Rate SDRAM (DDR)\nDDR transfers data twice as fast as SDRAM.\u000bLarger buffer gives it a huge boost.\n\n\nDouble Data Rate 2 SDRAM (DDR2)\nDDR2 decreases noise making it faster than DDR.\n\n\nDouble Data Rate 3 SDRAM (DDR3)\nDDR3 doubles the clock rate of DDR2, consumes less power and generates less heat.\n\n\nDouble Data Rate 4 SDRAM (DDR4)\nDDR4 arrived in 2014 with even faster speeds. (most common RAM type in desktops/laptops today)\n\n\nDouble Data Rate 5 SDRAM (DDR5)\nIntroduced in 2020, is starting to become more widely adopted.\n\n\n\nNOTE: Motherboards are usually compatible with only ONE generation of RAM. If you have a motherboard designed for DDR3, it cannot use DDR4 or DDR5.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#graphics-cards-gpu",
+    "href": "topics/hardware/internal-components.html#graphics-cards-gpu",
+    "title": "Internal Components",
+    "section": "Graphics Cards (GPU)",
+    "text": "Graphics Cards (GPU)\nAlso known as Video cards or Graphical Processing Units\nOne of the most interesting use of expansion slots is the addition of video cards, also known as Graphical Processing Unit.\nA specialized version of a CPU designed for graphical processing (producing complex output to display on a monitor)\nThe computation needed for graphical processing is generally useful for scientific computing as well (lots of data in parallel)\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\nCPU vs GPU\n\nBoth consume a lot of power and generate a lot of heat\nMore powerful CPUs/GPUs require more powerful power supplies\n\nTDP: __ Thermal Design Power, measures the number of Watts needed to power the device__\n\nBoth have performance measured in  speed __ (operations/second) like RAM__\n\nGPU cannot replace the CPU because their architecture is different and meant for different purposes. GPU is great to parallelize computations! But the GPU is not as versatile as the CPU which has a larger instruction set\n\n\n\n\n\n\n\nFigure caption.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#storage-devices",
+    "href": "topics/hardware/internal-components.html#storage-devices",
+    "title": "Internal Components",
+    "section": "Storage Devices",
+    "text": "Storage Devices\nStorage devices store data permanently. Some are installed inside the case (e.g. hard drive); Some are removable and portable (e.g. external flash drive).\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFloppy Drive\nUses 3.5 inch floppy disks (or 5.25 inch floppy disks - older).\nLargely obsolete.\nMagnetic disks store up to 1.44Meg of data.\n\n\n\nFigure caption.\n\n\n\n\n\nFigure caption.\n\n\n\n\n\nHard Drive\n\nHard Disk Drive (HDD)\n\nTraditional hard drives.\nUses magnetic-based storage on a moving disk (somewhat like a vinyl player)\nMagnetic hard drives have drive motors that spin the magnetic platters and move the drive heads.\nSpeed measured in revolutions per minute\n\n\n\n\n\nSolid State Drives (SSD)\n\nDo not have moving parts and use __ semi-conductors__ to store data.\nNon-volatile flash memory chips manage the storage on an SSD, resulting in faster access to data, higher reliability and reduced power usage.\n\n\n\n\n\n\nTape Drive\nMagnetic tapes are often used for backups or archiving data. Impractical for most individuals, but still used/created to this day! Cost effective when storing more than 1000 TB (lots and lots of data)\n\n\n\n\n\n\nOptical Drive\n\nUses lasers to read the data on the optical media.\n\nCD (compact disc) 700 Mb\nDVD (digital versatile disc) 4-8 Gb.\nBD (Blu-ray disc) 25-50 Gb.\n\nOptical media can be:\n\nPre-recorded (read only)\nRecordable (write once)\nRe-recordable (read and write multiple times).\n\n\n\n\n\n\nInterfaces Types\nInterface Types, in order of oldest to newest\n\n\n\n\n\n\n\nIDE  \nIntegrated Drive Electronics / Advanced Technology Attachment.Also called ATA.Early drive controller interface, originally only supported hard drives up to 540 MB.Uses a 40 pin connector, and maximum cable length of 46cm (18in).\n\n\n\n\nEIDE\nEnhanced Integrated Drive Electronics (also called ATA-2).Updated version of IDE, supporting larger drives and direct memory access.Uses a 40 pin connector.\n\n\nPATA\nParallel version of ATA.Used internally due to maximum cable length of 46cm (18in).Largely replaced by SATA in newer systems.\n\n\nSATA (most commonly used today)\nSerial version of ATA, with slimmer and longer cables providing better airflow.Uses 7-pin connector \u000b(less pins means less issues with electromagnetic interference).SATA hard drives tend to be quieter than IDE drives.\n\n\neSATA\nExternal serial ATA, provides a hot-swappable external interface for SATA.\n\n\n:-:\n:-:\n\n\nSCSI\nSmall Computer System Interface.Drive controller that can connect up to 15 drives.Internal and external use, uses 25, 50 or 68 pin connector.\n\n\n\nNote: __ Hot-swapping is the ability to connect and disconnect a device while the computer is on.__\n\n\nExternal Flash Drive\nRemovable storage device that connects to a USB port.\nThese use the same type of non-volatile memory chips as SSDs and do not require power to maintain the data.\n\n\nTo install a drive internally in a computer, the connection interface on the drive must be the same as the controller on the motherboard.\nMotherboards support different types of interfaces.\n\n\nComputer Memory Hierarchy\nSource: https://en.wikipedia.org/wiki/Memory_hierarchy",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#exercises",
+    "href": "topics/hardware/internal-components.html#exercises",
+    "title": "Internal Components",
+    "section": "Exercises",
+    "text": "Exercises",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#knowledge-check",
+    "href": "topics/hardware/internal-components.html#knowledge-check",
+    "title": "Internal Components",
+    "section": "Knowledge check",
+    "text": "Knowledge check",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#additional-resources",
+    "href": "topics/hardware/internal-components.html#additional-resources",
+    "title": "Internal Components",
+    "section": "Additional resources",
+    "text": "Additional resources",
     "crumbs": [
       "Home",
       "Topics",
@@ -41,14 +311,105 @@
     "href": "topics/hardware/internal-components.htm#introduction",
     "title": "Internal Components",
     "section": "Introduction",
-    "text": "Introduction"
+    "text": "Introduction\nIn previous weeks we learned the basic behaviors that define computers – their ability to store, retrieve, and process information. This means that many simple devices, even non-electronics, can be considered computers.\nThe computers that we mostly are concerned with in the computer science profession, however, are generally complicated electronic devices made of many components. In this class, we are going to learn many of the fundamental components that make up modern computing devices.\nWe will continue with the internal, or system, components of a computer – each of these have their own set of interesting behaviors and properties that are worth understanding."
   },
   {
     "objectID": "topics/hardware/internal-components.htm#lesson-overview",
     "href": "topics/hardware/internal-components.htm#lesson-overview",
     "title": "Internal Components",
     "section": "Lesson overview",
-    "text": "Lesson overview"
+    "text": "Lesson overview\nThe system components of a computer are responsible for the following behaviors:\n\nMain needs:\n\nstore information\nprocess information\nretrieve  information\n\nAuxiliary needs:\n\nprotection from elements/interference\nsource of electrical power\ntemperature management for heat generated\nstructure\ncommunication between components\ntiers of storage/processing specialized for different purposes\n\n\nHere are system components that fulfil these needs:\n\nCase\nPower Supply\nMotherboard\n\nChipset\nBuses\n\nConnectors\nCooling Devices\nProcessor (CPU)\nGraphics processor (GPU)\nMemory (RAM)\nStorage Devices (CD, HDD, SSD, NVME/M2)\n\nWe will learn about all of these components this week!"
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#definitions",
+    "href": "topics/hardware/internal-components.htm#definitions",
+    "title": "Internal Components",
+    "section": "Definitions",
+    "text": "Definitions\nWhen discussing components of any complicated machine, we should try to understand the following about those components:\nMake/model\nMake/model is the brand and product name of the component. * E.g. Hyundai Accent (make = Hyundai, model = Accent)\nWhy it’s important: Who constructs these components? Are their multiple different versions of this component made by the same manufacturer? Why?\nProperties\nProperties are the quantitative (numeric) and qualitative  (non-numeric) traits of the component that can be compared with alike components * Quantitative e.g.: the Fuel Efficiency of the 2009 Hyundai Accent is 29 MPG  (miles per gallon) * Qualitative e.g: The Hyundai Accent is a hatchback, not a sedan\nWhy it’s important: * what is the expected performance of this component? * Is their a cost/benefit for choosing a component with better suited properties than other components? * Etc.\nThese two ideas (make/model, properties) will vary significantly from component to component. You will need to know these ideas for all of the components we discuss today."
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#case",
+    "href": "topics/hardware/internal-components.htm#case",
+    "title": "Internal Components",
+    "section": "Case",
+    "text": "Case\n\nFigure caption.\nProvides protection and cooling for the internal components.\nAlso prevents damage from static electricity (components grounded via attachment to case).\nUsually made of plastic, steel or aluminum.\nFans move air through the case:\n\nto replace warm air with cold air to keep components at stable temperatures\nto prevent build-up of dust\nThere exist many guides/studies for optimal airflow. E.g. https://voltcave.com/pc-airflow-guide/"
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#power-supply-psu",
+    "href": "topics/hardware/internal-components.htm#power-supply-psu",
+    "title": "Internal Components",
+    "section": "Power Supply (PSU)",
+    "text": "Power Supply (PSU)\nMain purpose:  Converts AC power (alternating current) from wall socket to DC power (direct current). Direct current (0 or 5V) is used to power digital circuits.\n\nNote: PSU have their own fans: Energy conversion releases a lot of heat!\nComputers can only tolerate slight fluctuations in power without needing to shut down\nImportant: Never open a power supply! The capacitors contained within can keep a dangerous high voltage, high power charge long after being unplugged.\n\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\nFigure caption.\n\n\nPSU Connectors\n\nMost power supply connectors are : 20 + 4 pins\nUsually made up of wires of various colors:\n\nYellow 12V\nRed 5V\nOrange 3.3V\nOther colors may be ground 0V\n\n\n\n\n\nFigure caption.\n\n\nPSU Ratings\nUseful for Assignment 1\nPSU Ratings: * Wattage (amount of power delivered, must be greater than the sum of power required by all parts, some power supplies can provide more power than others) * Efficiency (1st + 2nd Laws of thermodynamics: 100% power input cannot be converted to 100% power output; some power supplies have higher efficiency ratings than others) * For more detailed explanation:  https://www.newegg.com/insider/how-to-choose-a-pc-power-supply-buying-guide/\nUninterruptible Power Supply\nIn the case of a power outage, an Uninterruptible Power Supply (UPS) can keep a computer running for a few minutes to several hours depending on the sophistication of the UPS. See  https://www.wikihow.com/Buy-and-Use-an-Uninterruptible-Power-Supply  for an example.\nIt’s basically a large battery that keeps charge during normal operation, and powers a computer using its stored charge when the building’s power is cut off.\nWe will talk more about uninterruptible power supply when we start speaking about server hardware."
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#motherboard",
+    "href": "topics/hardware/internal-components.htm#motherboard",
+    "title": "Internal Components",
+    "section": "Motherboard",
+    "text": "Motherboard\nMotherboards connect all the major components of the computer: the CPU, RAM, Expansion ports, etc.\n\n\n\nAn ASUS Pro B660M Motherboard. Most motherboards look something like this.\n\n\n\nComposed of various chips all combined into north  and south  bridges\nMain circuit board and controls the electrical pathways (buses) found in a computer.\nThe buses allow data to travel between the various components of a computer.\nVarious form factors, e.g. AT, ATX, LPX, BTX, ITX.\n\n\n\n\nMotherboard form factors, from largest to smallest.\n\n\nForm Factors\n\nAT\n\nInvented by IBM in early 1980s, now obsolete.\nHuge in size (approximately 12 x 13 inches).\nNeeded lots of space for power supply and its various chips.\nLacked external ports, only allowed for monitor and keyboard.\n\nATX\n\nCreated in 1995 to meet the need for more connectors.\nGot off to a slow start but by 1998 became the most common form factor.\nBiggest change to AT was the rear panel with standard set of ports for expansion.\nPower supply position for better airflow, CPU and RAM positioned for easier access.\nVariations 12x9in (full size), 9.6x9.6in ( microATX )\n\nATX and microATX are the most common in personal desktop computers today"
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#internal-connectors",
+    "href": "topics/hardware/internal-components.htm#internal-connectors",
+    "title": "Internal Components",
+    "section": "Internal Connectors",
+    "text": "Internal Connectors\nThere are a variety of connectors used to connect components to the motherboard. Two main purposes:\n\nSignals : for communication/data transfer\nPower : not all components connect directly to the power supply, they get power from the motherboard\n\nMost connectors are keyed (can only be inserted one way). Note: Always check the pins if you have trouble with a connector.\n\n“If it doesn’t go in like butter, it doesn’t go in at all” – never force a connection! you are likely going to damage the pins.\n\nExample connectors\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption."
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#cpu",
+    "href": "topics/hardware/internal-components.htm#cpu",
+    "title": "Internal Components",
+    "section": "CPU",
+    "text": "CPU\nThe CPU Most important element of the computer.\n\nResponsible for interpreting  and executing  the commands from the software.\ncommunicates instructions for all of the other components of the computer\nWhile the CPU is processing one step of the program, the remaining instructions and the data are stored in a special memory called cache.\n\n\n\n\nFigure caption.\n\n\nWe’ll have a lecture dedicated to the CPU since it is so complicated.\nCPU Brands\nIntel: Historically the main CPU manufacturer\nAMD: Relatively recent competitor to Intel\n\n\n\nFigure caption."
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#cooling-devices",
+    "href": "topics/hardware/internal-components.htm#cooling-devices",
+    "title": "Internal Components",
+    "section": "Cooling Devices",
+    "text": "Cooling Devices\nThe flow of current between and within electronic components generates heat. Some devices are particularly powerful heat-generators, due to the large current they draw: * CPUs typically come with their own cooling device * Cooling devices are built into GPUs and Power Supplies\nThere are two main types of cooling devices:\n\nFans inside the case increase airflow and removes heat.\nHeat sinks also draw heat away from the CPU core.\n\nFans\nThe flow of current between the electronic components generates heat.\nFans inside the case increase airflow and removes heat.\nOccasionally video cards or other components have their own fans to cool them.\n\n\n\nFigure caption.\n\n\nHeat sinks\n\nHeat sinks also draw heat away from the CPU core.\n\nA heat sink is a piece of copper or aluminum that resides between the processor and the CPU fan.\nIt absorbs the heat from the processor and the fan disperses the heat.\n\n\n\n\n\nFigure caption."
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#main-memory-ram",
+    "href": "topics/hardware/internal-components.htm#main-memory-ram",
+    "title": "Internal Components",
+    "section": "Main Memory (RAM)",
+    "text": "Main Memory (RAM)\nReferred to as RAM (Random Access Memory). They’re connected to RAM slots on the motherboard:\n\n\n\nFigure caption.\n\n\nRAM is a collection of integrated circuits (chips). Temporary storage for data and programs that are being accessed by the CPU.\nVolatile memory : contents are erased when the computer is switched off. (or when power is lost)\n\n\n\nFigure caption.\n\n\nProperties\nThere are four main properties of RAM to know:\n\nCapacity:  Total memory (in GB, GigaBytes)\n\nMore RAM means more capacity to hold and process large programs and files.\nMaximum installed is limited by the motherboard and the operating system.\n\nSpeed:  How many operations per second\n\nMany, millions or billions per second\n1MHz = 1 million / second, 1 GHz = 1 billion / second\n\nLatency : How much time delay between communications\nGeneration: See next slides\n\nRAM Form Factors\n\nSIMMs (Single In-Line Memory Modules)\n\nHave a single line of connectors.\nNow obsolete.\n\nDIMMs (Dual In-Line Memory Modules)\n\nHave two lines of connectors.\nHave Wider bus (supports 64 bits) 🡪 How can this help? More on this in the coming weeks.\nBecame dominant (no need to state that a memory module is a DIMM).\n\n\nRAM Generations\n\n\n\n\n\n\n\nSynchronous DRAM (SDRAM)\nDRAM that operates in time with the memory bus.Tied to the system clock like the CPU and the memory controller.Results in very little wasted time.\n\n\n\n\nDouble Data Rate SDRAM (DDR)\nDDR transfers data twice as fast as SDRAM.\u000bLarger buffer gives it a huge boost.\n\n\nDouble Data Rate 2 SDRAM (DDR2)\nDDR2 decreases noise making it faster than DDR.\n\n\nDouble Data Rate 3 SDRAM (DDR3)\nDDR3 doubles the clock rate of DDR2, consumes less power and generates less heat.\n\n\nDouble Data Rate 4 SDRAM (DDR4)\nDDR4 arrived in 2014 with even faster speeds. (most common RAM type in desktops/laptops today)\n\n\nDouble Data Rate 5 SDRAM (DDR5)\nIntroduced in 2020, is starting to become more widely adopted.\n\n\n\nNOTE: Motherboards are usually compatible with only ONE generation of RAM. If you have a motherboard designed for DDR3, it cannot use DDR4 or DDR5."
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#graphics-cards-gpu",
+    "href": "topics/hardware/internal-components.htm#graphics-cards-gpu",
+    "title": "Internal Components",
+    "section": "Graphics Cards (GPU)",
+    "text": "Graphics Cards (GPU)\nAlso known as Video cards or Graphical Processing Units\nOne of the most interesting use of expansion slots is the addition of video cards, also known as Graphical Processing Unit.\nA specialized version of a CPU designed for graphical processing (producing complex output to display on a monitor)\nThe computation needed for graphical processing is generally useful for scientific computing as well (lots of data in parallel)\n\n\n\nFigure caption.\n\n\n\n\n\nFigure caption.\n\n\n\n\n\nFigure caption.\n\n\nCPU vs GPU\n\nBoth consume a lot of power and generate a lot of heat\nMore powerful CPUs/GPUs require more powerful power supplies\n\nTDP: __ Thermal Design Power, measures the number of Watts needed to power the device__\n\nBoth have performance measured in  speed __ (operations/second) like RAM__\n\nGPU cannot replace the CPU because their architecture is different and meant for different purposes. GPU is great to parallelize computations! But the GPU is not as versatile as the CPU which has a larger instruction set\n\n\n\nFigure caption."
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#storage-devices",
+    "href": "topics/hardware/internal-components.htm#storage-devices",
+    "title": "Internal Components",
+    "section": "Storage Devices",
+    "text": "Storage Devices\nStorage devices store data permanently. Some are installed inside the case (e.g. hard drive); Some are removable and portable (e.g. external flash drive).\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption."
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#exercises",
+    "href": "topics/hardware/internal-components.htm#exercises",
+    "title": "Internal Components",
+    "section": "Exercises",
+    "text": "Exercises"
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#knowledge-check",
+    "href": "topics/hardware/internal-components.htm#knowledge-check",
+    "title": "Internal Components",
+    "section": "Knowledge check",
+    "text": "Knowledge check"
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#additional-resources",
+    "href": "topics/hardware/internal-components.htm#additional-resources",
+    "title": "Internal Components",
+    "section": "Additional resources",
+    "text": "Additional resources"
   },
   {
     "objectID": "topics/hardware/external-components.html",
@@ -237,304 +598,6 @@
     "text": "Additional resources"
   },
   {
-    "objectID": "topics/hardware/index.html",
-    "href": "topics/hardware/index.html",
-    "title": "Hardware",
-    "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n\n\n\n\n2024-08-27\n\n\n\n\n\n\n\n\n\n\n\n\nExternal components\n\n\nOverview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors\n\n\n\n\n\n\n\n\n2024-09-03\n\n\n\n\n\n\n\n\n\n\n\n\nInternal Components\n\n\nExplains the most important internal components of desktop computers. Processing, memory, storage, and communication.\n\n\n\n\n\n\n\n\n2024-09-10\n\n\n\n\n\n\n\n\n\n\n\n\nUnderstanding CPUs\n\n\nAn in-depth explanation of command processing and executing at the CPU level\n\n\n\n\n\n\n\n\n2024-09-16\n\n\n\n\n\n\nNo matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Hardware"
-    ]
-  },
-  {
-    "objectID": "about/syllabus.html",
-    "href": "about/syllabus.html",
-    "title": "Syllabus",
-    "section": "",
-    "text": "This comic may be smarmy, but is it usually true… Image © jorge cham, retreived from PHD Comics.",
-    "crumbs": [
-      "Home",
-      "About",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "about/syllabus.html#logistics",
-    "href": "about/syllabus.html#logistics",
-    "title": "Syllabus",
-    "section": "Logistics",
-    "text": "Logistics\n\nOffice: Penfield 311\nOffice hours: Posted on Léa and on office door\nEmail: michael DOT haaf AT johnabbott DOT qc DOT ca\nTimetable: Monday, 11.30 AM – 1.00 PM (Room P-325/P-107)Tuesday, 2.30 PM – 5.30 PM (Room P-326/P-107)Thursday, 8.30 AM – 10.00 AM (Room P-326/P-107)\nCourse webpage: This website for all content, Omnivox for assignment submissions.\n\n\nCommunication\n\nTeams - For communicating (fastest, most reliable that I will check it same-day)\nMIO - For communicating (non-time-critical)\nEmail - For communicating (time-critical).  Will aim for &lt;24hr response.\nOmnivox - For receiving & submitting exercises/assignments/project and getting marks\n\n\n\nAssessment\n\n60% Assignments and Labs\n20% Test 1\n20% Test 2",
-    "crumbs": [
-      "Home",
-      "About",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "about/syllabus.html#course-overview",
-    "href": "about/syllabus.html#course-overview",
-    "title": "Syllabus",
-    "section": "Course overview",
-    "text": "Course overview\nFrom the course outline:\n\nIn this course students learn to install hardware and software and provide technical support and training to users. Topics include installing, configuring, and uninstalling hardware devices and device drivers, installing and uninstalling system and application software, backing up and restoring software, hard disk partitioning and formatting, help desk, user training.\n\n\nWhat topics does this course cover?\n\nComputer Hardware – what computers are made of\nComputer logic – how do we make computers behave predictably and controllably?\nComputer Software – what kind of programs can we make computers run?\nHelpdesk and Troubleshooting computers – as a hobby and a profession\nOperating systems – the most important software for a computer to run\nIntro to Servers and Networking – how computers communicate with eachother\n\nEach topic above is a massive field of research and industry in its own right – you could get a PhD in each! We will be introduced to each briefly, and at a high level (overview) to come away with a better technical understanding than we had before.",
-    "crumbs": [
-      "Home",
-      "About",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "about/syllabus.html#what-is-this-course-preparing-you-for",
-    "href": "about/syllabus.html#what-is-this-course-preparing-you-for",
-    "title": "Syllabus",
-    "section": "What is this course preparing you for?",
-    "text": "What is this course preparing you for?",
-    "crumbs": [
-      "Home",
-      "About",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "about/syllabus.html#what-will-i-learn",
-    "href": "about/syllabus.html#what-will-i-learn",
-    "title": "Syllabus",
-    "section": "What will I learn?",
-    "text": "What will I learn?\n\nLearn to troubleshoot hardware, firmware and software.\nUnderstand computers from binary to the use of each hardware part\nUnderstand the role of IT Helpdesk Technicians\nPerhaps even build your own PC!",
-    "crumbs": [
-      "Home",
-      "About",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "about/syllabus.html#material-to-acquire",
-    "href": "about/syllabus.html#material-to-acquire",
-    "title": "Syllabus",
-    "section": "Material to acquire",
-    "text": "Material to acquire\n\nMultiheaded Screwdriver x 1:\n\nFor assembling computers!\nExample: Picquic-88001-Multi-Bit-Screwdriver-Full-Size\n\n(OPTIONAL) Anti-static ESD bracelet band:\n\nFor your safety when playing with electronics\nExample: Antistatic-Wrist-Strap",
-    "crumbs": [
-      "Home",
-      "About",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "about/syllabus.html#rules-for-success-in-this-class",
-    "href": "about/syllabus.html#rules-for-success-in-this-class",
-    "title": "Syllabus",
-    "section": "Rules for success in this class",
-    "text": "Rules for success in this class\n\nRule 1: Attend all classes and labs!\nI will freely provide my slides and as many course resources as necessary to supplement this class.\nBut! My course notes are not a substitute for regular class attendance. Hands on experience is key!\nNote: All of your marks come from Assignments and Tests. We will do in-class activities that are neither Assignments or Tests, but are required – completing the in-class labs will be a component of your Assignment mark. If you finish in-class labs quickly, you will have more time to work on Assignments in class, instead of at home.\n\n\nRule 2: Consult the Support Material\n\nClass Slides\nLab and exercises in class\nAssignments\nYour class notes\n\n\n\nRule 3: Use a calendar to track all your deadlines\n\nTo stay on track for all your deadlines, try to plan one or two weeks ahead!\nComplete your assignments on time\n\nBut! Endeavour to at least hand in assignments. Better late/incomplete than never.\n\nIf you miss a deadline, please don’t ignore it!\n\nMIO me. I’m here to help! And that includes for late/incomplete assignments.\n\n\n\n\n\nRule 4: Reach out for help!\n\nReach out to me if you ever feel stuck or overwhelmed\nTry your best to get to know other students\n\nHelp each other out! You will learn much more from working through the assignments yourself and from teaching eachother than you will from listening to me\nLearning from others and building relationships with new peers is one of the most valuable parts of school\n\nSeek out help if you are struggling (from me, from peers, from John Abbott student services, etc.)\n\n\n\nRule 5: Be curious!\nThis field has a lot of support online. Stay curious, the internet is your Oyster!",
-    "crumbs": [
-      "Home",
-      "About",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "about/syllabus.html#feedback",
-    "href": "about/syllabus.html#feedback",
-    "title": "Syllabus",
-    "section": "Feedback",
-    "text": "Feedback\nLet me know how things are going in the course:\n\nAm I covering the material too slowly or too quickly?\nAre the slides material clear?\nCan you read my handwriting?\nCan you hear me well?\nDoes my answer make sense?\nDo you understand the assignment questions?\nEtc.",
-    "crumbs": [
-      "Home",
-      "About",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "about/calendar.html",
-    "href": "about/calendar.html",
-    "title": "Calendar",
-    "section": "",
-    "text": "The focused pupil keeps watch on Time. Image retrieved from Bryan Superfreak Magnum on Pinterest.\nThis is the authoritative calendar for content covered in class, and for content you should expect to see covered as we continue through the course.\nYou can compare this calendar with the calendar from the Course Outline to see where this course has deviated from the original outline.",
-    "crumbs": [
-      "Home",
-      "About",
-      "Calendar"
-    ]
-  },
-  {
-    "objectID": "about/calendar.html#august-september",
-    "href": "about/calendar.html#august-september",
-    "title": "Calendar",
-    "section": "August & September",
-    "text": "August & September\n\nDeliverables\n\nLab 0: Introduction to Technical Support Survey\nLab 1: TBD\nAssignment 1: TBD\n\n\n\nSchedule\n\nAug 22: Introductions, icebreaker, overview of the course outline.\nAug 26: Completed Lab 0 (see above). Overview of the course syllabus and course calendar.\nAug 27: Class cancelled – please read the lecture Introduction to computers to catch up on covered material.\nAug 29: In-class activities. TBD",
-    "crumbs": [
-      "Home",
-      "About",
-      "Calendar"
-    ]
-  },
-  {
-    "objectID": "announcements/2024-08-27-class-cancelled.html",
-    "href": "announcements/2024-08-27-class-cancelled.html",
-    "title": "Class cancelled today",
-    "section": "",
-    "text": "Unfortunately I am not feeling well today and would like to make sure I do not pass that along to you – I will be cancelling today’s class.\nI will be uploading today’s lecture notes shortly. The link for these will appear on LEA soon. (EDIT: you can now find them here. Please read them in advance of Thursday’s class, where we will be doing in-class activities based on some of the content.\nYou can also see all of the content we’ve covered the past two days on the course calendar.\nLet me know if you have any questions!\n\n\n\n Back to topReuseCC BY-NC-SA 4.0"
-  },
-  {
-    "objectID": "announcements/index.html",
-    "href": "announcements/index.html",
-    "title": "Announcements",
-    "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nClass cancelled today\n\n\n\n\n\n\n\n\n\n\n\nAug 27, 2024\n\n\n\n\n\n\nNo matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
-    "crumbs": [
-      "Home",
-      "Announcements"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Home",
-    "section": "",
-    "text": "This companion site for the 420-1N6 course includes:",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#source-code",
-    "href": "index.html#source-code",
-    "title": "Home",
-    "section": "Source Code",
-    "text": "Source Code\nThis webpage is written in Markdown using the Quarto framework. The website is hosted via GitHub Pages\nSource code is open source and available on GitHub.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "about/index.html",
-    "href": "about/index.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n\n\n\n\n\n\n\n\n\n\n\nAbout this website\n\n\nDescription of technologies and resources used to build this website. Acknowledgements, copyright, terms of use, etc. can be found on this page.\n\n\n\n\n\n\n\n\n\n\n\nCalendar\n\n\nRoadmap for course deliverables; record of lectures & activites we have covered along the way.\n\n\n\n\n\n\n\n\n\n\n\nSyllabus\n\n\nCourse description outlining goals, expectations, resources, and other important information.\n\n\n\n\n\n\n\nNo matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
-    "crumbs": [
-      "Home",
-      "About"
-    ]
-  },
-  {
-    "objectID": "about/this-site.html",
-    "href": "about/this-site.html",
-    "title": "About this website",
-    "section": "",
-    "text": "Course content, both for lectures and assignments, has been adapted by me from a variety of sources. This section serves the purpose of both acknowledging these references as well as pointing the way for curious students to begin investigating further into course material than we had time to cover.\n\n\nAll course content was either written by Michael Haaf, or explicitly adapted from external resources with attributions made clear. This course content retains the licenses of the original works where relevant, and is otherwise licensed under the Creative Commons Attribution 4.0 International License.\n\nTerms of use\nYou are free to:\n\nShare: copy and redistribute the material in any medium or format\nAdapt: remix, transform, and build upon the material for any purpose, even commercially.\n\nUnder the following terms:\n\nAttribution: You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\n\nCreative Commons Attribution 4.0 International License",
-    "crumbs": [
-      "Home",
-      "About",
-      "About this website"
-    ]
-  },
-  {
-    "objectID": "about/this-site.html#course-content",
-    "href": "about/this-site.html#course-content",
-    "title": "About this website",
-    "section": "",
-    "text": "Course content, both for lectures and assignments, has been adapted by me from a variety of sources. This section serves the purpose of both acknowledging these references as well as pointing the way for curious students to begin investigating further into course material than we had time to cover.\n\n\nAll course content was either written by Michael Haaf, or explicitly adapted from external resources with attributions made clear. This course content retains the licenses of the original works where relevant, and is otherwise licensed under the Creative Commons Attribution 4.0 International License.\n\nTerms of use\nYou are free to:\n\nShare: copy and redistribute the material in any medium or format\nAdapt: remix, transform, and build upon the material for any purpose, even commercially.\n\nUnder the following terms:\n\nAttribution: You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\n\nCreative Commons Attribution 4.0 International License",
-    "crumbs": [
-      "Home",
-      "About",
-      "About this website"
-    ]
-  },
-  {
-    "objectID": "about/this-site.html#course-website",
-    "href": "about/this-site.html#course-website",
-    "title": "About this website",
-    "section": "Course website",
-    "text": "Course website\nDetails about how this website was built follow.\n\nColophon\n\n\n\nFrom Wikipedia: In publishing, a colophon is a brief statement containing information about the publication of a book… Some web pages also have colophons, which frequently contain (X)HTML, CSS, or usability standards compliance information and links to website validation tests.\n\n\n\nMarkup: Markdown\nFramework: Quarto\nDeployment: GitHub Pages\n\nYou can follow along directly with course updates at the [course repository][course-repository]\n\n\nCopyright\nThis website was written and designed by the Michael Haaf. All code and assets related to this website, unless indicated otherwise, are licensed under the GNU General Public License v3.0\n\nTerms of use\nThis website’s code is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\nThis website’s code is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\nGNU General Public License Notice",
-    "crumbs": [
-      "Home",
-      "About",
-      "About this website"
-    ]
-  },
-  {
-    "objectID": "topics/index.html",
-    "href": "topics/index.html",
-    "title": "Topics",
-    "section": "",
-    "text": "Hardware\n\n\nAll lectures related to computer hardware can be found here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLogic & Data Representation\n\n\nAll lectures related to logic & data representation can be found here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOperating Systems\n\n\nAll lectures related to operating systems can be found here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTechnical Support\n\n\nAll lectures related to technical support can be found here.\n\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
-    "crumbs": [
-      "Home",
-      "Topics"
-    ]
-  },
-  {
-    "objectID": "topics/hardware/introduction-to-computers.htm#introduction",
-    "href": "topics/hardware/introduction-to-computers.htm#introduction",
-    "title": "Introduction to Computers",
-    "section": "Introduction",
-    "text": "Introduction\nWe all interact with computers on a daily basis, whether we are aware or not. In fact, it can be said that computers, or computing devices, have been part of human society (in some manner or another) for centuries – even though the computers we typically think of today are relatively recent inventions from the 20th century.\nWhat is a computer? What is it that computers actually do? This lecture is a brief introduction to these questions. The big picture definitions we learn here will be helpful anchors for better understanding the more complicated and detailed components of modern computers that we will need to learn to understand technical support as a science and a profession."
-  },
-  {
-    "objectID": "topics/hardware/introduction-to-computers.htm#lesson-overview",
-    "href": "topics/hardware/introduction-to-computers.htm#lesson-overview",
-    "title": "Introduction to Computers",
-    "section": "Lesson overview",
-    "text": "Lesson overview\n\nUnderstand what a computer is\nCompare and contrast different types of computers by complexity and capabilities\nUnderstand what modern digital computers are\nUnderstand the difference between personal computing devices and servers"
-  },
-  {
-    "objectID": "topics/hardware/introduction-to-computers.htm#what-is-a-computer",
-    "href": "topics/hardware/introduction-to-computers.htm#what-is-a-computer",
-    "title": "Introduction to Computers",
-    "section": "What is a computer?",
-    "text": "What is a computer?\nA computer is an device designed to:\n\nstore information\nchange that information through human or automated interactions\n\nA computer almost always features: (1) a mechanism for keeping information intact and (2) interactive components to facilitate the modification of that information."
-  },
-  {
-    "objectID": "topics/hardware/introduction-to-computers.htm#is-this-a-computer-examples",
-    "href": "topics/hardware/introduction-to-computers.htm#is-this-a-computer-examples",
-    "title": "Introduction to Computers",
-    "section": "Is this a computer? Examples",
-    "text": "Is this a computer? Examples\nThe above definition sounds pretty general – and it is! What kinds of things count as computers, or follow the above two properties? Click through the tabs below to see some examples, and a discussion for each on its ability to compute things.\n\nDesktopsLaptopsMobile PhonesGame consolesNonelectronics?Computers within computers?\n\n\nDesktop computers, often referred to as the Personal Computer (PC), are a classic example of a modern computing device – these are the computers that we will be using in our labs, and upon which we will focus the majority of our study this semester.\nDesktop computers meet the computer definition above in many ways, but simply: (1) information is stored in disks, and (2) information is modified by human interaction using devices like keyboards and mice, and then modified by the computer using a central processing unit (CPU).\n\n\n\nA desktop computer is composed of external (peripheral) components like monitors, keyboards, and mice for human interaction (input/output), as well as internal (system) components that are usually stored inside of a case or tower like in the image above, to keep sensitive electrical components safe. Image by OpenClipart-Vectors from Pixabay.\n\n\nWe will learn in future lectures the deep gritty detail of how devices like disks, keyboards, mice, CPUs, and others make modern computer magic happen.\n\n\nLaptop computers meet the computer definition above in the exact same way as desktop computers: (1) information is stored in disks (usually smaller in size and weight than desktop disks), and (2) information is modified by human interaction using devices like embedded keyboards and trackpads – though external mice and keyboards can be plugged in – and then modified by the computer using a central processing unit (CPU).\n\n\n\nA laptop computer combines similar external/internal components from desktop computers into one portable container. While the behavior of laptops and desktops is almost identical, the actual components are generally specialized for laptops and cannot be easily interchanged with desktop components. Image by Clker-Free-Vector-Images from Pixabay.\n\n\n\n\nThe first mobile phones were computers in a much more limited sense than desktops, laptops, and modern smart phones – but nonetheless they could store data like contacts, calendars, and even photos on small memory cards, as well as, of course, carry out instructions like connecting to a phone line for calling and texting.\nSmartphones are much more similar to laptops and desktops than they are to their predecessors in the type and complexity of their components, and in the amount of data and processing power that enables them to install applications, run operating systems, and much more.\n\n\n\nTwo decades of evolution of mobile phones, from a 1992 Motorola DynaTAC 8000X to the 2014 iPhone 6 Plus. The change from tactile interfaces (buttons, nontouch screens) to touchscreens for interacting with data on a phone is visible. In addition, the ability to store large amounts of data, even entire operating systems, was introduced with the first “smartphones” of Blackberry and IPhone in the mid 2000s. Image from Wikipedia, image by Jojhnjoy - own work, based on the work of Anders, Public Domain\n\n\n\n\nGame consoles such as PlayStation and Xbox, as well as handheld handheld consoles like Nintendo Switch and Valve Steam Deck, are similar to smartphones in that they technically contain all of the components of a computer, but generally manufactured from proprietary hardware that cannot be interchanged with other computers.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 1: Video game consoles showed an interesting development in storage technology in the elate 90’s: originally, game data AND user save data would be stored on a writable ROM game cartridge as in the N64 (left). The next generation of systems like Gamecube (right) would provide read-only game data on a CD-ROM disk with writable data being stored on a separate memory card. Images by aerozol from Pixabay.\n\n\n\n\n\nEven before there were consumer electronics, there were devices made to store and process data – that is, computers! The following are three different examples of nonelectronic devices that have been used for computation.\n\n\n\n\n\n\n\n\n\nAbacus: The world’s first calculator. Large numbers can be represented using a relatively small number of beads. Simple operations like addition and subtraction are simple to perform, but abacuses are even capable of more complex operations like multiplication, division, and square roots. Image by Pearson Scott Foresman, Public domain, via Wikimedia Commons\n\n\n\n\n\n\n\nAntikythera mechanism fragment, dated to 80 BCE. Thought to have been part of a complex system of dozens of wheels and plates, designed by engineers to measure time based on movements of the sun, moon, and other stars and planets known at the time. Retrieved from Wikimedia Commons\n\n\n\n\n\n\n\n\n\nDifference engine diagram. A theoretical computer designed in the 19th century with capabilities similar to modern computers, but using a complex system of gears and pistons to store and process data, rather than small electronic components. Image retreived from Wikimedia Commons\n\n\n\n\n\n\n\nDifference engine implemented and built in 2002 based on the original designs. Image retreived from Wikimedia Commons\n\n\n\n\n\n\n\nIt is possible, and actually quite common, to create computers inside other computers, using the programming capabilities of that computer.\n\n\n\n\n\n\nFigure 2: Video from Codeolences on YouTube\n\n\n\n\n\n\nThe above are just some of many devices that are computers in this sense. Appliances like dishwashers/washing machines with cycle settings, handheld electronics like calculators (whether programmable or not), wearables like fitbits, fare gates and metro stops, traffic lights… these are just some of the many devices that work based on computing principles."
-  },
-  {
-    "objectID": "topics/hardware/introduction-to-computers.htm#digital-computers",
-    "href": "topics/hardware/introduction-to-computers.htm#digital-computers",
-    "title": "Introduction to Computers",
-    "section": "Digital computers",
-    "text": "Digital computers\nYou may think the above definition is too general – indeed, in the context of this class, we will almost always be talking specifically about digital computers when we say computer. What is the difference?\nDigital computers have the following two additional properties compared to general computers. They are:\n\nDigital: All the “information” stored is represented by combinations of two different states (0 or 1, i.e., ON or OFF).1\nDeterministic: A given input reliably produces a defined output with every interaction.2\n\nWhen we study the components of computers, the above two properties will allow us to really understand how such devices work and why, as in every case, the device implements these two properties to give us the behavior we need.\nThese digital states are made possible using electrical circuitry. In order to do complex operations with these states, we can use the binary numbering to represent the digital states as a variety of numbers, letters, and other concepts. This digital information can be shared between devices using cables (whether electrical or optical, as we will see)For one e.g., when you tap your OPUS card on a fare gate, you should expect that it will either let you through (if you have fare) or not (if you don’t). The concept is more general: computer engineering is, in part, the study and practise of making physical interactions with computing devices reliably and predictably produce the same deterministic results under the same physical conditions."
-  },
-  {
-    "objectID": "topics/hardware/introduction-to-computers.htm#hardware-vs-software",
-    "href": "topics/hardware/introduction-to-computers.htm#hardware-vs-software",
-    "title": "Introduction to Computers",
-    "section": "Hardware vs Software",
-    "text": "Hardware vs Software\nHardware: The physical components that make up a computer system.\nSoftware: The programs (instructions) that tell the computer (the hardware) what to do."
-  },
-  {
-    "objectID": "topics/hardware/introduction-to-computers.htm#personal-vs-shared-computing-what-is-a-server",
-    "href": "topics/hardware/introduction-to-computers.htm#personal-vs-shared-computing-what-is-a-server",
-    "title": "Introduction to Computers",
-    "section": "Personal vs shared computing: What is a server?",
-    "text": "Personal vs shared computing: What is a server?\nIn the beginning, our focus will be on understanding individual personal computers. Yet, this barely scratches the surface of how computers are used in modern society – we will also need to learn about how many computers can be combined to pool resources and provide services at all times of day, as this is essential to the infrastructure of the internet and a foundational concept in technical support as a profession.\nFor now, we can just know that servers are similar to personal computers, but use specialized hardware that is optimized for being turned on 24/7, for communicating with other servers, and for processing and managing large amounts of data.\n\nPhoto by Matthieu Beaumont on UnsplashThis is because servers are the necessary infrastructure for running the large popular websites and services many of us use today on a regular basis: Social Media websites like Facebook/Instragram/etc., educational resources like Omnivox/Moodle, online software like Office 365, etc. all run on servers, or on collections of servers, known as server farms."
-  },
-  {
-    "objectID": "topics/hardware/introduction-to-computers.htm#exercises",
-    "href": "topics/hardware/introduction-to-computers.htm#exercises",
-    "title": "Introduction to Computers",
-    "section": "Exercises",
-    "text": "Exercises\nNone for this lecture – stay tuned for the next two lectures!"
-  },
-  {
-    "objectID": "topics/hardware/introduction-to-computers.htm#knowledge-check",
-    "href": "topics/hardware/introduction-to-computers.htm#knowledge-check",
-    "title": "Introduction to Computers",
-    "section": "Knowledge check",
-    "text": "Knowledge check\nThe following questions invite you to reflect on the key information learned in this lesson. If you can’t answer the question, you can click the corresponding link to review the topic more closely. Future assignments and tests may be based on questions like these:\n\nWhat are the two main properites of computers?\nAre video game consoles computers?\nAre there examples of nonelectonic computers? How do nonelectronic computer compute?\nWhy is binary relevant to computers?\nWhat is the property of computers that means they reliably behave the same way given the same input?\nWhat is the name for the type of computer that is always on, and is specialized for processing large amounts of data and pooling many computing resources in one place?"
-  },
-  {
-    "objectID": "topics/hardware/introduction-to-computers.htm#additional-resources",
-    "href": "topics/hardware/introduction-to-computers.htm#additional-resources",
-    "title": "Introduction to Computers",
-    "section": "Additional resources",
-    "text": "Additional resources\nThis section contains helpful links to related content. You aren’t required to study these in detail, but it never hurts to learn more.\n\nComputer Basics by GCF Global: We will eventually cover almost all of the material in this free online resource; for now, Parts 1-7 in particular are relevant to what we have learned so far.\n“The Mother of All Demos” This is a 1968 presentation that introduced many of the hardware/graphics concepts we will see today and some we will see in future lectures: the mouse, networking, video conferencing, word documents, hyperlinks, gamer headphones, etc. It is very cool to see the palpable excitement of the 2000+ audience tuning into a passionate presentation of a series of completely new technologies.\nMontréal’s Musée de l’Ordinateur – unfortunately the physical location has been closed since 2022, but the website is still a neat resource for reading on the history of personal computers and their evolution. The author’s bias towards Bill Gates and Windows machines is quite strong (there is much more to the story), but the information provided is reliable and interesting."
-  },
-  {
     "objectID": "topics/hardware/introduction-to-computers.html",
     "href": "topics/hardware/introduction-to-computers.html",
     "title": "Introduction to Computers",
@@ -691,11 +754,109 @@
     ]
   },
   {
-    "objectID": "topics/hardware/understanding-cpus.htm#introduction",
-    "href": "topics/hardware/understanding-cpus.htm#introduction",
-    "title": "Understanding CPUs",
+    "objectID": "topics/hardware/introduction-to-computers.htm#introduction",
+    "href": "topics/hardware/introduction-to-computers.htm#introduction",
+    "title": "Introduction to Computers",
     "section": "Introduction",
-    "text": "Introduction"
+    "text": "Introduction\nWe all interact with computers on a daily basis, whether we are aware or not. In fact, it can be said that computers, or computing devices, have been part of human society (in some manner or another) for centuries – even though the computers we typically think of today are relatively recent inventions from the 20th century.\nWhat is a computer? What is it that computers actually do? This lecture is a brief introduction to these questions. The big picture definitions we learn here will be helpful anchors for better understanding the more complicated and detailed components of modern computers that we will need to learn to understand technical support as a science and a profession."
+  },
+  {
+    "objectID": "topics/hardware/introduction-to-computers.htm#lesson-overview",
+    "href": "topics/hardware/introduction-to-computers.htm#lesson-overview",
+    "title": "Introduction to Computers",
+    "section": "Lesson overview",
+    "text": "Lesson overview\n\nUnderstand what a computer is\nCompare and contrast different types of computers by complexity and capabilities\nUnderstand what modern digital computers are\nUnderstand the difference between personal computing devices and servers"
+  },
+  {
+    "objectID": "topics/hardware/introduction-to-computers.htm#what-is-a-computer",
+    "href": "topics/hardware/introduction-to-computers.htm#what-is-a-computer",
+    "title": "Introduction to Computers",
+    "section": "What is a computer?",
+    "text": "What is a computer?\nA computer is an device designed to:\n\nstore information\nchange that information through human or automated interactions\n\nA computer almost always features: (1) a mechanism for keeping information intact and (2) interactive components to facilitate the modification of that information."
+  },
+  {
+    "objectID": "topics/hardware/introduction-to-computers.htm#is-this-a-computer-examples",
+    "href": "topics/hardware/introduction-to-computers.htm#is-this-a-computer-examples",
+    "title": "Introduction to Computers",
+    "section": "Is this a computer? Examples",
+    "text": "Is this a computer? Examples\nThe above definition sounds pretty general – and it is! What kinds of things count as computers, or follow the above two properties? Click through the tabs below to see some examples, and a discussion for each on its ability to compute things.\n\nDesktopsLaptopsMobile PhonesGame consolesNonelectronics?Computers within computers?\n\n\nDesktop computers, often referred to as the Personal Computer (PC), are a classic example of a modern computing device – these are the computers that we will be using in our labs, and upon which we will focus the majority of our study this semester.\nDesktop computers meet the computer definition above in many ways, but simply: (1) information is stored in disks, and (2) information is modified by human interaction using devices like keyboards and mice, and then modified by the computer using a central processing unit (CPU).\n\n\n\nA desktop computer is composed of external (peripheral) components like monitors, keyboards, and mice for human interaction (input/output), as well as internal (system) components that are usually stored inside of a case or tower like in the image above, to keep sensitive electrical components safe. Image by OpenClipart-Vectors from Pixabay.\n\n\nWe will learn in future lectures the deep gritty detail of how devices like disks, keyboards, mice, CPUs, and others make modern computer magic happen.\n\n\nLaptop computers meet the computer definition above in the exact same way as desktop computers: (1) information is stored in disks (usually smaller in size and weight than desktop disks), and (2) information is modified by human interaction using devices like embedded keyboards and trackpads – though external mice and keyboards can be plugged in – and then modified by the computer using a central processing unit (CPU).\n\n\n\nA laptop computer combines similar external/internal components from desktop computers into one portable container. While the behavior of laptops and desktops is almost identical, the actual components are generally specialized for laptops and cannot be easily interchanged with desktop components. Image by Clker-Free-Vector-Images from Pixabay.\n\n\n\n\nThe first mobile phones were computers in a much more limited sense than desktops, laptops, and modern smart phones – but nonetheless they could store data like contacts, calendars, and even photos on small memory cards, as well as, of course, carry out instructions like connecting to a phone line for calling and texting.\nSmartphones are much more similar to laptops and desktops than they are to their predecessors in the type and complexity of their components, and in the amount of data and processing power that enables them to install applications, run operating systems, and much more.\n\n\n\nTwo decades of evolution of mobile phones, from a 1992 Motorola DynaTAC 8000X to the 2014 iPhone 6 Plus. The change from tactile interfaces (buttons, nontouch screens) to touchscreens for interacting with data on a phone is visible. In addition, the ability to store large amounts of data, even entire operating systems, was introduced with the first “smartphones” of Blackberry and IPhone in the mid 2000s. Image from Wikipedia, image by Jojhnjoy - own work, based on the work of Anders, Public Domain\n\n\n\n\nGame consoles such as PlayStation and Xbox, as well as handheld handheld consoles like Nintendo Switch and Valve Steam Deck, are similar to smartphones in that they technically contain all of the components of a computer, but generally manufactured from proprietary hardware that cannot be interchanged with other computers.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 1: Video game consoles showed an interesting development in storage technology in the elate 90’s: originally, game data AND user save data would be stored on a writable ROM game cartridge as in the N64 (left). The next generation of systems like Gamecube (right) would provide read-only game data on a CD-ROM disk with writable data being stored on a separate memory card. Images by aerozol from Pixabay.\n\n\n\n\n\nEven before there were consumer electronics, there were devices made to store and process data – that is, computers! The following are three different examples of nonelectronic devices that have been used for computation.\n\n\n\n\n\n\n\n\n\nAbacus: The world’s first calculator. Large numbers can be represented using a relatively small number of beads. Simple operations like addition and subtraction are simple to perform, but abacuses are even capable of more complex operations like multiplication, division, and square roots. Image by Pearson Scott Foresman, Public domain, via Wikimedia Commons\n\n\n\n\n\n\n\nAntikythera mechanism fragment, dated to 80 BCE. Thought to have been part of a complex system of dozens of wheels and plates, designed by engineers to measure time based on movements of the sun, moon, and other stars and planets known at the time. Retrieved from Wikimedia Commons\n\n\n\n\n\n\n\n\n\nDifference engine diagram. A theoretical computer designed in the 19th century with capabilities similar to modern computers, but using a complex system of gears and pistons to store and process data, rather than small electronic components. Image retreived from Wikimedia Commons\n\n\n\n\n\n\n\nDifference engine implemented and built in 2002 based on the original designs. Image retreived from Wikimedia Commons\n\n\n\n\n\n\n\nIt is possible, and actually quite common, to create computers inside other computers, using the programming capabilities of that computer.\n\n\n\n\n\n\nFigure 2: Video from Codeolences on YouTube\n\n\n\n\n\n\nThe above are just some of many devices that are computers in this sense. Appliances like dishwashers/washing machines with cycle settings, handheld electronics like calculators (whether programmable or not), wearables like fitbits, fare gates and metro stops, traffic lights… these are just some of the many devices that work based on computing principles."
+  },
+  {
+    "objectID": "topics/hardware/introduction-to-computers.htm#digital-computers",
+    "href": "topics/hardware/introduction-to-computers.htm#digital-computers",
+    "title": "Introduction to Computers",
+    "section": "Digital computers",
+    "text": "Digital computers\nYou may think the above definition is too general – indeed, in the context of this class, we will almost always be talking specifically about digital computers when we say computer. What is the difference?\nDigital computers have the following two additional properties compared to general computers. They are:\n\nDigital: All the “information” stored is represented by combinations of two different states (0 or 1, i.e., ON or OFF).1\nDeterministic: A given input reliably produces a defined output with every interaction.2\n\nWhen we study the components of computers, the above two properties will allow us to really understand how such devices work and why, as in every case, the device implements these two properties to give us the behavior we need.\nThese digital states are made possible using electrical circuitry. In order to do complex operations with these states, we can use the binary numbering to represent the digital states as a variety of numbers, letters, and other concepts. This digital information can be shared between devices using cables (whether electrical or optical, as we will see)For one e.g., when you tap your OPUS card on a fare gate, you should expect that it will either let you through (if you have fare) or not (if you don’t). The concept is more general: computer engineering is, in part, the study and practise of making physical interactions with computing devices reliably and predictably produce the same deterministic results under the same physical conditions."
+  },
+  {
+    "objectID": "topics/hardware/introduction-to-computers.htm#hardware-vs-software",
+    "href": "topics/hardware/introduction-to-computers.htm#hardware-vs-software",
+    "title": "Introduction to Computers",
+    "section": "Hardware vs Software",
+    "text": "Hardware vs Software\nHardware: The physical components that make up a computer system.\nSoftware: The programs (instructions) that tell the computer (the hardware) what to do."
+  },
+  {
+    "objectID": "topics/hardware/introduction-to-computers.htm#personal-vs-shared-computing-what-is-a-server",
+    "href": "topics/hardware/introduction-to-computers.htm#personal-vs-shared-computing-what-is-a-server",
+    "title": "Introduction to Computers",
+    "section": "Personal vs shared computing: What is a server?",
+    "text": "Personal vs shared computing: What is a server?\nIn the beginning, our focus will be on understanding individual personal computers. Yet, this barely scratches the surface of how computers are used in modern society – we will also need to learn about how many computers can be combined to pool resources and provide services at all times of day, as this is essential to the infrastructure of the internet and a foundational concept in technical support as a profession.\nFor now, we can just know that servers are similar to personal computers, but use specialized hardware that is optimized for being turned on 24/7, for communicating with other servers, and for processing and managing large amounts of data.\n\nPhoto by Matthieu Beaumont on UnsplashThis is because servers are the necessary infrastructure for running the large popular websites and services many of us use today on a regular basis: Social Media websites like Facebook/Instragram/etc., educational resources like Omnivox/Moodle, online software like Office 365, etc. all run on servers, or on collections of servers, known as server farms."
+  },
+  {
+    "objectID": "topics/hardware/introduction-to-computers.htm#exercises",
+    "href": "topics/hardware/introduction-to-computers.htm#exercises",
+    "title": "Introduction to Computers",
+    "section": "Exercises",
+    "text": "Exercises\nNone for this lecture – stay tuned for the next two lectures!"
+  },
+  {
+    "objectID": "topics/hardware/introduction-to-computers.htm#knowledge-check",
+    "href": "topics/hardware/introduction-to-computers.htm#knowledge-check",
+    "title": "Introduction to Computers",
+    "section": "Knowledge check",
+    "text": "Knowledge check\nThe following questions invite you to reflect on the key information learned in this lesson. If you can’t answer the question, you can click the corresponding link to review the topic more closely. Future assignments and tests may be based on questions like these:\n\nWhat are the two main properites of computers?\nAre video game consoles computers?\nAre there examples of nonelectonic computers? How do nonelectronic computer compute?\nWhy is binary relevant to computers?\nWhat is the property of computers that means they reliably behave the same way given the same input?\nWhat is the name for the type of computer that is always on, and is specialized for processing large amounts of data and pooling many computing resources in one place?"
+  },
+  {
+    "objectID": "topics/hardware/introduction-to-computers.htm#additional-resources",
+    "href": "topics/hardware/introduction-to-computers.htm#additional-resources",
+    "title": "Introduction to Computers",
+    "section": "Additional resources",
+    "text": "Additional resources\nThis section contains helpful links to related content. You aren’t required to study these in detail, but it never hurts to learn more.\n\nComputer Basics by GCF Global: We will eventually cover almost all of the material in this free online resource; for now, Parts 1-7 in particular are relevant to what we have learned so far.\n“The Mother of All Demos” This is a 1968 presentation that introduced many of the hardware/graphics concepts we will see today and some we will see in future lectures: the mouse, networking, video conferencing, word documents, hyperlinks, gamer headphones, etc. It is very cool to see the palpable excitement of the 2000+ audience tuning into a passionate presentation of a series of completely new technologies.\nMontréal’s Musée de l’Ordinateur – unfortunately the physical location has been closed since 2022, but the website is still a neat resource for reading on the history of personal computers and their evolution. The author’s bias towards Bill Gates and Windows machines is quite strong (there is much more to the story), but the information provided is reliable and interesting."
+  },
+  {
+    "objectID": "topics/index.html",
+    "href": "topics/index.html",
+    "title": "Topics",
+    "section": "",
+    "text": "Hardware\n\n\nAll lectures related to computer hardware can be found here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLogic & Data Representation\n\n\nAll lectures related to logic & data representation can be found here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOperating Systems\n\n\nAll lectures related to operating systems can be found here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTechnical Support\n\n\nAll lectures related to technical support can be found here.\n\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
+    "crumbs": [
+      "Home",
+      "Topics"
+    ]
+  },
+  {
+    "objectID": "topics/technical-support/index.html",
+    "href": "topics/technical-support/index.html",
+    "title": "Technical Support",
+    "section": "",
+    "text": "No matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Technical Support"
+    ]
+  },
+  {
+    "objectID": "topics/all-lectures.html",
+    "href": "topics/all-lectures.html",
+    "title": "All lectures",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nSubtitle\n\n\n\n\n\n\n2024-08-27\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n2024-09-03\n\n\nExternal components\n\n\nOverview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors\n\n\n\n\n2024-09-10\n\n\nInternal Components\n\n\nExplains the most important internal components of desktop computers. Processing, memory, storage, and communication.\n\n\n\n\n2024-09-10\n\n\nInternal Components\n\n\nExplains the most important internal components of desktop computers. Processing, memory, storage, and communication.\n\n\n\n\n2024-09-16\n\n\nUnderstanding CPUs\n\n\nAn in-depth explanation of command processing and executing at the CPU level\n\n\n\n\n\nNo matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "All lectures"
+    ]
   },
   {
     "objectID": "topics/data-representation/index.html",
@@ -710,15 +871,167 @@
     ]
   },
   {
-    "objectID": "topics/technical-support/index.html",
-    "href": "topics/technical-support/index.html",
-    "title": "Technical Support",
+    "objectID": "topics/hardware/understanding-cpus.htm#introduction",
+    "href": "topics/hardware/understanding-cpus.htm#introduction",
+    "title": "Understanding CPUs",
+    "section": "Introduction",
+    "text": "Introduction"
+  },
+  {
+    "objectID": "topics/hardware/index.html",
+    "href": "topics/hardware/index.html",
+    "title": "Hardware",
     "section": "",
-    "text": "No matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n\n\n\n\n2024-08-27\n\n\n\n\n\n\n\n\n\n\n\n\nExternal components\n\n\nOverview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors\n\n\n\n\n\n\n\n\n2024-09-03\n\n\n\n\n\n\n\n\n\n\n\n\nInternal Components\n\n\nExplains the most important internal components of desktop computers. Processing, memory, storage, and communication.\n\n\n\n\n\n\n\n\n2024-09-10\n\n\n\n\n\n\n\n\n\n\n\n\nInternal Components\n\n\nExplains the most important internal components of desktop computers. Processing, memory, storage, and communication.\n\n\n\n\n\n\n\n\n2024-09-10\n\n\n\n\n\n\n\n\n\n\n\n\nUnderstanding CPUs\n\n\nAn in-depth explanation of command processing and executing at the CPU level\n\n\n\n\n\n\n\n\n2024-09-16\n\n\n\n\n\n\nNo matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
     "crumbs": [
       "Home",
       "Topics",
-      "Technical Support"
+      "Hardware"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components-v1.htm#introduction",
+    "href": "topics/hardware/internal-components-v1.htm#introduction",
+    "title": "Internal Components",
+    "section": "Introduction",
+    "text": "Introduction"
+  },
+  {
+    "objectID": "topics/hardware/internal-components-v1.htm#lesson-overview",
+    "href": "topics/hardware/internal-components-v1.htm#lesson-overview",
+    "title": "Internal Components",
+    "section": "Lesson overview",
+    "text": "Lesson overview"
+  },
+  {
+    "objectID": "topics/hardware/internal-components-v1.html#lesson-overview",
+    "href": "topics/hardware/internal-components-v1.html#lesson-overview",
+    "title": "Internal Components",
+    "section": "Lesson overview",
+    "text": "Lesson overview",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n\n\n\n\n\n\n\n\n\n\n\nAbout this website\n\n\nDescription of technologies and resources used to build this website. Acknowledgements, copyright, terms of use, etc. can be found on this page.\n\n\n\n\n\n\n\n\n\n\n\nCalendar\n\n\nRoadmap for course deliverables; record of lectures & activites we have covered along the way.\n\n\n\n\n\n\n\n\n\n\n\nSyllabus\n\n\nCourse description outlining goals, expectations, resources, and other important information.\n\n\n\n\n\n\n\nNo matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
+    "crumbs": [
+      "Home",
+      "About"
+    ]
+  },
+  {
+    "objectID": "about/syllabus.html",
+    "href": "about/syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "This comic may be smarmy, but is it usually true… Image © jorge cham, retreived from PHD Comics.",
+    "crumbs": [
+      "Home",
+      "About",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "about/syllabus.html#logistics",
+    "href": "about/syllabus.html#logistics",
+    "title": "Syllabus",
+    "section": "Logistics",
+    "text": "Logistics\n\nOffice: Penfield 311\nOffice hours: Posted on Léa and on office door\nEmail: michael DOT haaf AT johnabbott DOT qc DOT ca\nTimetable: Monday, 11.30 AM – 1.00 PM (Room P-325/P-107)Tuesday, 2.30 PM – 5.30 PM (Room P-326/P-107)Thursday, 8.30 AM – 10.00 AM (Room P-326/P-107)\nCourse webpage: This website for all content, Omnivox for assignment submissions.\n\n\nCommunication\n\nTeams - For communicating (fastest, most reliable that I will check it same-day)\nMIO - For communicating (non-time-critical)\nEmail - For communicating (time-critical).  Will aim for &lt;24hr response.\nOmnivox - For receiving & submitting exercises/assignments/project and getting marks\n\n\n\nAssessment\n\n60% Assignments and Labs\n20% Test 1\n20% Test 2",
+    "crumbs": [
+      "Home",
+      "About",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "about/syllabus.html#course-overview",
+    "href": "about/syllabus.html#course-overview",
+    "title": "Syllabus",
+    "section": "Course overview",
+    "text": "Course overview\nFrom the course outline:\n\nIn this course students learn to install hardware and software and provide technical support and training to users. Topics include installing, configuring, and uninstalling hardware devices and device drivers, installing and uninstalling system and application software, backing up and restoring software, hard disk partitioning and formatting, help desk, user training.\n\n\nWhat topics does this course cover?\n\nComputer Hardware – what computers are made of\nComputer logic – how do we make computers behave predictably and controllably?\nComputer Software – what kind of programs can we make computers run?\nHelpdesk and Troubleshooting computers – as a hobby and a profession\nOperating systems – the most important software for a computer to run\nIntro to Servers and Networking – how computers communicate with eachother\n\nEach topic above is a massive field of research and industry in its own right – you could get a PhD in each! We will be introduced to each briefly, and at a high level (overview) to come away with a better technical understanding than we had before.",
+    "crumbs": [
+      "Home",
+      "About",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "about/syllabus.html#what-is-this-course-preparing-you-for",
+    "href": "about/syllabus.html#what-is-this-course-preparing-you-for",
+    "title": "Syllabus",
+    "section": "What is this course preparing you for?",
+    "text": "What is this course preparing you for?",
+    "crumbs": [
+      "Home",
+      "About",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "about/syllabus.html#what-will-i-learn",
+    "href": "about/syllabus.html#what-will-i-learn",
+    "title": "Syllabus",
+    "section": "What will I learn?",
+    "text": "What will I learn?\n\nLearn to troubleshoot hardware, firmware and software.\nUnderstand computers from binary to the use of each hardware part\nUnderstand the role of IT Helpdesk Technicians\nPerhaps even build your own PC!",
+    "crumbs": [
+      "Home",
+      "About",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "about/syllabus.html#material-to-acquire",
+    "href": "about/syllabus.html#material-to-acquire",
+    "title": "Syllabus",
+    "section": "Material to acquire",
+    "text": "Material to acquire\n\nMultiheaded Screwdriver x 1:\n\nFor assembling computers!\nExample: Picquic-88001-Multi-Bit-Screwdriver-Full-Size\n\n(OPTIONAL) Anti-static ESD bracelet band:\n\nFor your safety when playing with electronics\nExample: Antistatic-Wrist-Strap",
+    "crumbs": [
+      "Home",
+      "About",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "about/syllabus.html#rules-for-success-in-this-class",
+    "href": "about/syllabus.html#rules-for-success-in-this-class",
+    "title": "Syllabus",
+    "section": "Rules for success in this class",
+    "text": "Rules for success in this class\n\nRule 1: Attend all classes and labs!\nI will freely provide my slides and as many course resources as necessary to supplement this class.\nBut! My course notes are not a substitute for regular class attendance. Hands on experience is key!\nNote: All of your marks come from Assignments and Tests. We will do in-class activities that are neither Assignments or Tests, but are required – completing the in-class labs will be a component of your Assignment mark. If you finish in-class labs quickly, you will have more time to work on Assignments in class, instead of at home.\n\n\nRule 2: Consult the Support Material\n\nClass Slides\nLab and exercises in class\nAssignments\nYour class notes\n\n\n\nRule 3: Use a calendar to track all your deadlines\n\nTo stay on track for all your deadlines, try to plan one or two weeks ahead!\nComplete your assignments on time\n\nBut! Endeavour to at least hand in assignments. Better late/incomplete than never.\n\nIf you miss a deadline, please don’t ignore it!\n\nMIO me. I’m here to help! And that includes for late/incomplete assignments.\n\n\n\n\n\nRule 4: Reach out for help!\n\nReach out to me if you ever feel stuck or overwhelmed\nTry your best to get to know other students\n\nHelp each other out! You will learn much more from working through the assignments yourself and from teaching eachother than you will from listening to me\nLearning from others and building relationships with new peers is one of the most valuable parts of school\n\nSeek out help if you are struggling (from me, from peers, from John Abbott student services, etc.)\n\n\n\nRule 5: Be curious!\nThis field has a lot of support online. Stay curious, the internet is your Oyster!",
+    "crumbs": [
+      "Home",
+      "About",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "about/syllabus.html#feedback",
+    "href": "about/syllabus.html#feedback",
+    "title": "Syllabus",
+    "section": "Feedback",
+    "text": "Feedback\nLet me know how things are going in the course:\n\nAm I covering the material too slowly or too quickly?\nAre the slides material clear?\nCan you read my handwriting?\nCan you hear me well?\nDoes my answer make sense?\nDo you understand the assignment questions?\nEtc.",
+    "crumbs": [
+      "Home",
+      "About",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "announcements/index.html",
+    "href": "announcements/index.html",
+    "title": "Announcements",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nClass cancelled today\n\n\n\n\n\n\n\n\n\n\n\nAug 27, 2024\n\n\n\n\n\n\nNo matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
+    "crumbs": [
+      "Home",
+      "Announcements"
     ]
   }
 ]
