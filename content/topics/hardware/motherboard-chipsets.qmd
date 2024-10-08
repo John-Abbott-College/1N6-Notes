@@ -1,0 +1,927 @@
+---
+title: Motherboards and Chipsets
+subtitle: TBD
+date: 2024-12-12
+draft: true
+---
+
+## Introduction
+
+Last week we learned about how information is represented in computer systems (binary, logical circuits).
+
+In particular, we saw how simple switches could be used to represent AND, OR, XOR, and NOT logic in electrical devices.
+
+Combining these simple “gates” to produce more sophisticated devices allows computer engineers to created Integrated Circuits (ICs), or, as we more commonly call them, Chips.
+
+We now know enough to learn finish learning about some of the most important ICs in a computer introduced in Week 2:
+
+Chipsets
+
+Central Processing Unit (CPU)
+
+Graphical Processing Unit (GPU)
+
+Memory and Storage Devices
+
+
+---
+
+
+# Logic Gates -> Integrated Components (Chips)
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU0.png)
+
+
+---
+
+
+# Integrated Components (Chips) -> Motherboard
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU1.png)
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU2.png)
+
+_[Acer T3-710 Motherboard Schematic](https://community.acer.com/en/discussion/567703/t3-710-motherboard-diagram-schematic)_  -- composed of many integrated components
+
+
+---
+
+
+# More on Chipsets
+
+
+---
+
+
+# The chipset
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU3.png)
+
+
+---
+
+
+# More on Chipsets
+
+Chipsets are a major component of the of the motherboard.
+
+A chipset controls the communication between the CPU, RAM, storage and other peripherals.
+
+A chipset dictates hardware compatibility across components.
+
+
+---
+
+
+# How did Chipsets Evolve?
+
+* Older motherboards were designed with a lot of  __different chips scattered all over the motherboard.__
+* There were a lot of different chips controlling different functions on the motherboard:
+  * Chips for bus controllers, memory controllers, keyboard controllers, and so on.
+
+
+---
+
+
+# How did Chipsets Evolve? (cont.)
+
+As technology progressed, computer engineers decided to reduce the number of chips and have them more in a centralized location so instead of having these different chips scattered all over the motherboard controlling different functions.
+
+The number of chips was reduced to few chips that do the same job or what's now called a chipset.
+
+
+---
+
+
+# So.. What is Chipset?
+
+* A chipset is a smaller set of chips that has replaced a larger amount of chips.
+* Chipsets job is to control data flow between the CPU, the peripherals, bus slots, and memory.
+  * All the different computer hardware components communicate with the CPU through the chipset.
+* Most chipsets are divided into two distinct components:
+  * Northbridge
+  * Southbridge
+
+
+---
+
+
+# Northbridge Chipset
+
+* Directly connected to the CPU, main memory, graphics card and PCI-Express.
+  * Connection between the northbridge and CPU is known as the frontside bus.
+* Any communication between the above components must go through the northbridge first.
+* To communicate with any other components, the communication goes through the northbridge then the southbridge.
+* Northbridge is faster than the southbridge.
+  * Why? Northbridge is optimized for  __speed__  (actions per second) since it connects the most used and most important components of the motherboard.
+  * Faster actions per section comes at a cost! The Northbridge is a source of heat and needs to be places by heatsinks and fans.
+  * These days the Northbridge is often directly a part of the CPU, while the Southbridge remains separate.
+
+
+---
+
+
+# Northbridge is faster than the southbridge
+
+  * Why? Northbridge is optimized for  __speed__  (actions per second) since it connects the most used and most important components of the motherboard.
+  * Faster actions per section comes at a cost! The Northbridge is a source of heat and needs to be places by heatsinks and fans.
+  * These days the Northbridge is often directly a part of the CPU, while the Southbridge remains separate.
+
+
+---
+
+
+# Southbridge Chipset
+
+* Connected to the northbridge.
+* Acts as a communication hub for less performance sensitive components.
+  * Storage devices (SATA and IDE connectors).
+  * PCI bus slots.
+  * I/O Ports (USB ports, networking, sound card, etc.)
+* Southbridge does not require high speed communication like the northbridge.
+* To send data from the hard drive to the main memory:
+  * Data goes to the southbridge.
+  * Southbridge sends the data to the northbridge.
+  * Northbridge will send the data to the main memory.
+
+
+---
+
+
+# Modern Motherboards and Chipsets
+
+* Modern chipsets integrate the northbridge chips within the CPU chip.
+* New design advantages:
+  * Sensitive hardware components communicate directly with the CPU.
+  * Reduces system latency.
+  * Increases system responsiveness.
+  * Less sensitive hardware components will increase in performance.
+
+
+---
+
+
+# Bus Width: x86  versus x64
+
+
+---
+
+
+# The chipset
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU4.png)
+
+When we speak about the motherboard bus width, we often refer to the frontside bus
+
+
+---
+
+
+# Why is the bus important?
+
+* You can double check that you understand a scientific concept by checking what  __units of measurement__  that concept is measured by:
+* Highway
+  * __Number of lanes: __ (a number)
+  * __Speed limit:__  (unit distance per time elapsed, e.g. km/h)
+* System bus
+  * __Bus width: __ (a number of bits, eg a 32-bit processor)
+  * __Bus speed: __ (unit information per time elapsed, e.g. bits/second)
+
+
+---
+
+
+# Highway analogy
+
+There's 6 lanes (6 cars can pass together)
+
+On each lane, 3 cars are passing per second
+
+How many cars are passing per second on this highway?
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU5.png)
+
+---
+
+Answer: 6 lanes x 3 cars/second/lane = 18 cars/second.
+
+
+---
+
+
+# x86  versus x64
+
+x86
+
+x64
+
+32 bits can travel at once in our system components
+
+2^32   ≈ 4 Billions bits at once
+
+64 bits can travel at once in our system components.
+
+X64: 2^64   ≈ 4 Billions x 4 Billions bits at once.7
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU6.png)
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU7.png)
+
+
+---
+
+
+# x64
+
+Almost all modern hardware and software are x64
+
+64-bits system offer better system security
+
+64-bits system offer better graphics performance
+
+But! You might still need to support 32-bits (old softwares,etc).
+
+
+---
+
+
+# Central Processing Unit
+
+
+---
+
+
+# Central Processing Unit (CPU) - Reminder
+
+* Most important element of the computer in terms of computing power.
+  * Brains of the computer.
+  * Responsible for interpreting and executing the commands from the software.
+  * The processor executes a program (sequence of stored instructions).
+    * While the CPU is processing one step of the program, the remaining instructions and the data are stored in a special memory called cache.
+* Almost all modern devices include a CPU:
+  * Desktops, laptops, tablets, smartphones, TVs, TV boxes, Vending machines, traffic lights, Smart devices (Fridge, washer, light bulbs)
+
+
+---
+
+
+# CPU Reminder (Lecture 4)
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU8.png)
+
+10000000	The next line is a number, put it in the AX register00000010 	The number 210010000 	The next line is a number, put it in the BX register00000011 	The number 310110000 	Add AX to BX and put the result in AX11000000 	Place the value of AX on the external data bus
+
+A set of commands such as this is called a program.A  __program__  is a series of command sent to a  __CPU__  in a specific order for the CPU to perform work.
+
+
+---
+
+
+# Pipelining - Reminder
+
+The CPU takes at least four stages ( __fetch, decode, execute, write/repeat__ ) to do something. See  _[https://en.wikipedia.org/wiki/Instruction_cycle](https://en.wikipedia.org/wiki/Instruction_cycle)_  for more detailSmall discrete circuits inside the CPU handle each of these stages.
+
+By organizing these circuits in a conveyor-belt fashion (called pipelining), our “man-in-a-box” becomes “men-in-a-box”, thus improving efficiency.
+
+Helps system to run faster.Not perfect and sometimes stalls.Some CPUs therefore have multiple pipelines.
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU9.png)
+
+---
+
+More efficient while one is busy doing something, you can let others work on the following steps.
+
+
+
+---
+
+
+# CPU History - Reminder
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU10.png)
+
+* First CPU: Intel 4004 processor:
+  * Developed at Intel Corp by Ted Hoff.
+  * Introduced in 1971.
+  * Design:
+    * 108 kHz (2,300 transistors).
+    * Performed 60,000 OPS (operations per second)
+    * Addressed 640 bytes of memory.
+    * Cost $200.00.
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU11.jpg)
+
+
+---
+
+
+# CPU Manufacturers - Reminder
+
+* Intel and AMD are the two most popular manufacturers of CPUs for desktops, laptops, and servers.
+* NVIDIA, Qualcomm, Samsung and Apple are major manufacturers of mobile CPUs.
+  * Used in smartphone, tablets, TV boxes, etc.
+
+
+---
+
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU12.png)
+
+---
+
+Core i9 > Core I7 => higher tier
+The higher the generation, the newest the CPU and contains more of the latest technology
+The model number will uniquely idenfied the CPU in terms of its performance
+
+Letters could indicate many different things, for example "K" for Intel is no limit for over-clocking, it's unlocked.
+"X" for AMD means the CPU comes out of the box, already over-clocked.
+
+
+---
+
+
+# CPU Architecture
+
+
+---
+
+
+# CPU Components
+
+* There are two primary components for a CPU:
+  * Arithmetic Logic Unit – ALU (introduced in Lecture 5):
+    * Performs basic arithmetic calculations like adding, subtracting, multiplication and division of numbers.
+    * Performs logical operations like the comparison.
+  * Control Unit – CU:
+    * Controls all operations taking place within the processor.
+    * Instructs the ALU on which arithmetic/logical operation is to be performed.
+    * Acts under the direction of the  __system clock__ .
+    * Sorts out all the internal data paths inside the processor to make sure that data is fetched from the right place and delivered to the right place.
+
+
+---
+
+
+# Other CPU Components
+
+* Registers: a temporary storage used to store data:
+  * Coming from memory heading to the processor for execution.
+  * Coming from the processor after processing
+  * Being worked on by the processor.
+* Internal Data Bus: connects the internal components of the processor to the motherboard.
+* External Data Path: used to fetch data from memory to the processor.
+* Address Lines: used to specify the exact location in memory where data can be found.
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU13.jpg)
+
+
+---
+
+
+# Pipelining
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU14.png)
+
+A way for running multiple instructions in parallel within the same processor core.
+
+__Fetch__ : refers to the step where the instruction is received from Memory
+
+__Decode__ : The instruction is decoded, and control signals are generated .
+
+_Execute_  _: _ ALU operations are performed.
+
+__Memory__ : Saving the output to the appropriate memory address
+
+
+---
+
+
+# CPU Power
+
+* CPU power is measured by both  __speed__  and the a __mount of data it can process__ .
+  * Speed: is rated in cycles per second, e.g. megahertz (MHz) or gigahertz (GHz).
+    * Hertz (Hz) is the  __unit of measurement__  that represents the idea “per second”. So MegaHertz (million Hertz) means “one million times per second”
+  * The amount of data processed at a time depends on the side of the FSB (front side bus) (also called CPU or processor bus).
+    * The width of a bus is measured in bits, e.g. 32-bit or 64-bit FSB.
+
+
+---
+
+
+# CPU Features – How to choose a CPU?
+
+
+---
+
+
+# 1) How to Connect a CPU?
+
+CPU connection on the motherboard is known as the CPU socket.
+
+The CPU is connected to the motherboard in one of two ways:
+
+* Pin Grid Array – PGA
+  * Pins are on the CPU (underside of the processor).
+  * Socket on motherboard includes holes that line up with the CPU pins.
+
+* Land Grid Array – LGA
+  * Pins are on the motherboard (on socket) instead of on the processor.
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU15.png)
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU16.png)
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU17.png)
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU18.gif)
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU19.png)
+
+
+---
+
+
+# 2) Clock Speed
+
+CPU clock speed: number of tasks per second it can perform.
+
+3.5 Gigahertz (Ghz) = 3.5 billions of cycles per second.
+
+1 Hz = 1 "thing"per second, it's a unite of  __frequency__ .
+
+1 KHz = 1000 Hz
+
+1 MHz = 1 million Hz
+
+1 GHz = 1 billion Hz
+
+
+---
+
+
+# 2) Clock Speed (overclocking and throttling)
+
+Overclocking: a technique used to make a processor work at a faster speed than its original specification (not recommended).
+
+Throttling: when the processor runs at less than the rated speed to conserve power or produce less heat (commonly used in laptops and mobile devices).
+
+
+---
+
+
+# 3) CPU Cores
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU20.jpg)
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU21.jpg)
+
+Multi-Cores: More than one CPU core integrated into a single chip, each capable of running parallel processes
+
+Each core has its separate ALU unit, control unit and Registers.
+
+10101010101010100101
+
+1010101101011010110
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU22.png)
+
+1010101101011010110
+
+1010101010101010010
+
+
+---
+
+
+Single Core
+
+Dual- Core
+
+Most CPUs are considered single Core.
+
+This means that only one data "lane" connects the CPU to the RAM.
+
+A Dual-Core CPU is a CPU with two lanes of data travelling to the RAM.
+
+4 lanes ==> Quad-core
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU23.png)
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU24.png)
+
+
+---
+
+
+# 3) CPU Cores (The threadripper)
+
+Threadrippers are CPUs with 32 and even 64 cores.
+
+AMD EPYC 75F3 2.95 Ghz, 32C/64T 256 M Cache (280W)
+
+Costs 15 699.00 CAD $
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU25.png)
+
+
+---
+
+
+# 4) CPU Cache
+
+The CPU store the most recently used data and instructions in its cache.
+
+This speeds up the processing as the cache is much closer to the ALU unit and increases the performance greatly.
+
+The CPU Cache is also RAM (Random Access memory) but static RAM.
+
+RAM comes in two types: dynamic RAM (DRAM) what is used in the Main Memory and static RAM (SRAM) which is used in the CPU Cache.
+
+
+---
+
+
+# SRAM vs DRAM
+
+Static RAM
+
+Uses transistors memory cells.
+
+No need for power refreshing to keep data
+
+Low power consumption
+
+Very expensive ≈5000$/Gb
+
+Very fast read/write
+
+Volatile (data erased at power off)
+
+Only a few MB used in a PC
+
+Uses transistors and capacitors
+
+Power refreshing required to keep data saved
+
+Higher power consumption
+
+Good balance price/amount ≈20-75$/Gb
+
+Fast, but not as fast as SRAM
+
+Volatile (data erased at power off)
+
+4-32GB of RAM used in a PC
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU26.png)
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU27.jpg)
+
+
+---
+
+
+# 4) CPU Cache
+
+* Static RAM comes into three different caches :
+  * L1 cache: internal cache, very fast, integrated inside each CPU Core ≈ 16K - 2Kb/core
+  * L2 cache: external cache, fast, every cores ≈128Kb – 8Mb/Core.
+  * L3 cache: slowest cache, originally mounted on motherboard, now integrated into CPU chip, shared by all the CPU Cores ≈ 64MB
+
+
+---
+
+
+# 4) CPU Cache – Data flow
+
+L2 Cache
+
+128Kb – 8Mb
+
+
+---
+
+
+# 4) CPU Cache
+
+
+---
+
+
+# Activity: Bus Speed and Bus Width (CPU Power)
+
+How to choose a CPU?
+
+__Let’s say we have a 100-MHz, 32-bit bus CPU.__
+
+__How many bytes per second can the CPU process?__
+
+__Now, let’s compare the above CPU with a second 80-MHz 64-bit bus CPU.__
+
+__How many bytes per second can the second CPU process? Which of the two is faster at sending information?__
+
+First CPU: 400 Mbytes/s Second CPU: 640 Mbytes/s
+
+Power consumption of the first CPU is bigger due to the higher clock rate.
+
+
+---
+
+
+# Other Types of CPUs
+
+
+---
+
+
+# ARM Chip
+
+Simplified CPUs called Advanced Risk Machine.
+
+More simplified instruction set
+
+Much higher speed of processing and reduced workload.
+
+Used in Arduinos and RasberryPis
+
+The Apple M1 Chip used in Macbook Air is an ARM chip
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU28.png)
+
+
+---
+
+
+# Accelerated Processing Unit (APU)
+
+APUs are CPUs with combined graphics processing capabilities.
+
+Not as powerful as a dedicated GPU.
+
+Great option for budget gaming.
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU29.jpg)
+
+
+---
+
+
+# Main Memory
+
+
+---
+
+
+# What is the Main Memory?
+
+Referred to as RAM (Random Access Memory)
+
+RAM is a collection of integrated circuits (chips).
+
+Considered the “Primary” storage for the CPU.
+
+Temporary storage for data and programs that are being accessed by the CPU.
+
+Volatile memory: contents are erased when the computer is switched off. (or when power is lost)
+
+
+---
+
+
+# Why use Main Memory?
+
+Did you ever thought why games take time to load?
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU30.jpg)
+
+This is the time it takes to copy all the files of the game from the storage device (long term memory) into the working memory of the main memory, which the CPU can access must faster and much easier.
+
+Read/Write speed in RAM is 12 800 Mb/s
+
+Read/Write speed in SSD is 456Mb/s
+
+
+---
+
+
+More RAM means more capacity to hold and process large programs and files.
+
+Maximum installed is limited by the motherboard and the operating system.
+
+
+---
+
+
+# Main Memory History
+
+* Early computers had RAM installed on the motherboard as individual chips.
+  * These were difficult to install and often became loose.
+* Designers and engineers then created memory modules.
+  * Special circuit boards on which the memory chips are soldered on.
+  * Memory modules are attached to a motherboard using memory slots.
+  * New design allows to add or replace memory modules.
+
+
+---
+
+
+# Main Memory Features
+
+
+---
+
+
+# 1) Data Rate
+
+* SDRAM
+* Original Main memory was the Synchronous Dynamic Random Access Memory (SDRAM)
+  * It’s synchronized with the motherboard speed.
+  * For a 32-bit bus, if the motherboard goes up to 100Mhz, the SRAM speed was also 100MHz x 32bits of data send/received.
+
+  * DDRAM
+  * The first leap in RAM technology was the Double Data RAM DDRRAM.
+  * For every tick of the motherboard clock, DDRAM sends/receives 2 bits of information instead of just 1.
+  * This “doubles” the speed: 2 x 100MHz x 32 bits
+
+
+---
+
+
+How can we make the difference between SDRAM, DDR, DRR2, etc.
+
+The number of pins and the position of the notch
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU31.png)
+
+|  | Number pins | Number notch | Clock Speed | DDR Speed | PC Speed (in bits) |
+| :-: | :-: | :-: | :-: | :-: | :-: |
+| SD-RAM | 168 | 2 | 100 MHz | SD-100 | PC-800 |
+| DDRAM | 184 | 1 | 100 MHz | DDR-200 | PC-1600 |
+| DDR2 | 240 | 1 | 100 MHz | DDR2-400 | PC2-3200 |
+| DDR3 | 240 | 1 | 100 MHz | DDR3-800 | PC3-6400 |
+| DDR4 | 288 | 1 | 100 MHz | DDR4-1600 | PC4-12800 |
+| DDR5 | 288 | 1 | 100 MHz | DDR5-3200 | PC5-25600 |
+
+
+---
+
+
+# 2) RAM Capacity
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU32.png)
+
+Every Stick of a RAM has a capacity (in GB) which is the amount of information that the RAM can store.
+
+The capacity depends on the size of the chips (1Gb, 4Gb, 16Gb, etc)
+
+The capacity depends if the RAM is SIMM or DIMM
+
+
+---
+
+
+# Serial Presence Detect (SPD)
+
+How can we get all the specs of currently installed RAM sticks?
+
+SPD chip which allows the system to query the RAM stick.
+
+CPU-Z program is able to speak to the SPD to get all the specs of the RAM without you having to open your PC.
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU33.jpg)
+
+
+---
+
+
+# 2) RAM Capacity: SIMM vs DIMM
+
+SIMM (Single Sided)
+
+DIMM (Double Sided RAM)
+
+This allows the memory to be doubled on each side of the RAM stick 2Gb, 8Gb, …
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU34.png)
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU35.png)
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU36.png)
+
+
+---
+
+
+# 3) RAM Channel
+
+Motherboards have limited RAM slots: usually 2 RAM slots, or 4 RAM slots
+
+RAM is almost always sold in pairs of RAM Sticks
+
+The Motherboards support channels (1 channel, 2 channels)
+
+RAM should be identical in the
+
+same channel
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU37.jpg)
+
+If you place the RAM sticks in the incorrect way on the motherboard, the dual channel will not be active, and you won’t use the PC to its best capacity.
+
+
+---
+
+
+# 4) Memory Redundancy / Error Checking
+
+* Memory errors occur when data is not stored correctly in the RAM chips.
+* Computers use different methods to detect and correct data errors in memory.
+  * Non-parity memory.
+  * Parity memory.
+  * Error-correcting code (ECC) memory.
+
+
+---
+
+
+# 4) Parity vs ECC
+
+| Non-parity memory | Cheapest level of redundancy, works fine for most applications.<br />If a memory error occurs, the OS has no way of knowing. <br />Data can be therefore be corrupted without warning. |
+| :-: | :-: |
+| Parity memory | Also called true parity.<br />Parity memory contains extra chips that act as parity chips.<br />A memory error can be detected, and the OS is informed. |
+| ECC memory | Also called error checking and correcting, most expensive.<br />Detects multiple-bit memory errors and can correct 1-bit errors. |
+
+---
+
+ECC - > Error correction code (ECC): It can be DDR2,3 ,etc..  It’s RAM with extra chip that gives extra error correction.
+ECC -> only some Motherboards have this.
+
+
+
+---
+
+
+# 5) RAM Latency
+
+Latency refers to the slight delay that occurs when the memory controller starts to grab a line of memory.
+
+RAM with lower latency is faster than RAM with a higher latency.
+
+__NOTE: __ Latency is a general concept in physics and engineering. The Wikipedia article on Latency provides a good two sentence explanation:
+
+“Latency from a general point of view is a time delay between the cause and the effect of some physical change in the system being observed… Latency is physically a consequence of the limited velocity which any physical interaction can propagate.”
+
+Remember from lecture 2: CRT monitors have lower latency than LCD/LED monitors due to electrons travelling faster in a vacuum than through digital circuits!
+
+
+---
+
+
+# Other RAMs
+
+
+---
+
+
+# SO-DIMM
+
+Smaller RAM sticks
+
+Used in laptops
+
+![](_assets/Lecture%2007%20-%20Chipsets%2C%20RAM%20and%20CPU38.jpg)
+
+
+---
+
+
+# Virtual Memory
+
+* Each computer has the capability to make a portion of your hard drive work like RAM when you run out of real RAM. This is called virtual memory.
+  * It is also referred to as setting part of your hard drive aside as a “swap file” or “page file”.
+* When a computer starts running out of real RAM because you have loaded too many programs, the system swaps programs from RAM to the page file, leaving more space for the programs currently running.
+* Exam question: Why is virtual memory not good?
+
+
+---
+
+
+# Virtual Memory: Example
+
+* Assume your computer has 4 Gb RAM.
+  * And you have several programs installed on your hard drive (A, B, C, D).
+  * As programs load they take up RAM. Let’s say you run programs A B and C.
+  * At a certain point you won’t have enough RAM to run any more programs, but you want to run program D.
+* This is where virtual memory comes in.
+  * A page file is created on your hard drive which acts as a temporary storage box.
+  * Whichever program is least used (A, B or C) is swapped out of RAM and into the page file.
+  * In this case let’s assume this is B, so B is removed from RAM and into the page file.
+  * Then program D runs and takes up its space in RAM.
+* If you later click on B, it cannot run from the page file.
+  * Again a less-used program in RAM needs to swap over to the page file.
+  * Once that is done, program B can be swapped back into RAM to be used.
+* _Note:_
+  * This swapping is invisible to the user, but takes time (and Windows will slow down).
+  * If page file is accessed too frequently, user may notice the hard drive LED going crazy.
+  * This is called “disk thrashing” and indicates the computer would benefit from more RAM.
+

@@ -1,0 +1,12 @@
+---
+title: "Operating Systems"
+subtitle: "All lectures related to operating systems can be found here."
+listing: 
+  filter-ui: true
+  sort-ui: [date, title]
+  sort: date
+  date-format: iso
+  categories: true
+  exclude:
+    filename: "*index.qmd"
+---

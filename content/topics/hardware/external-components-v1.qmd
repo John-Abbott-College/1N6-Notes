@@ -1,0 +1,280 @@
+---
+title: External components V1
+subtitle: Overview of many external components, or peripheral devices, used by and for computers.
+date: 2024-09-03
+---
+
+![All of these devices, except one, would be considered an external component of a modern desktop computer. Which one is not? Figure retrieved from [Innovation it solution][main-image], original source unknown.](_assets/external-components-main.jpg)
+
+[main-image]: https://www.facebook.com/photo.php?fbid=677864037674852&set=pb.100063537865543.-2207520000&type=3
+
+## Introduction
+
+Last week we learned the basic behaviors that define *computers* -- their ability to **store, retrieve, and process** information. This means that many simple devices, even non-electronics, can be considered computers.
+
+The computers that we mostly are concerned with in the computer science profession, however, are generally complicated electronic devices made of many **components**. In this class, we are going to learn many of the fundamental components that make up modern computing devices.
+
+Today, we will start with the **external**, or **peripheral**, components of a computer -- each of these have their own set of interesting **behaviors** and **properties** that are worth understanding.
+
+Many **peripheral components** of a computer can broadly be divided into two categories:
+
+- **Input Devices**: devices that *accept* data and instructions *from* a user *to* a computer.
+- **Output Devices**: devices that *present* data and information *to* the user *from* a computer.
+
+We will cover many examples of each.
+
+## Lesson overview
+
+- Learn the history, behavior, and important properties of Input and Output devices
+
+* Input devices:
+  * Keyboards
+  * Mice
+  * Controllers
+  * Cameras
+  * Touchscreens
+  * Scanners
+* Output devices:
+  * Monitors
+  * Projectors
+  * Printers
+  * Speakers
+
+## Input Devices
+
+Allow a computer to accept data and instructions from a user.
+
+::: {layout-ncol=4 layout-valign="bottom"}
+
+![](_assets/external-components-trackball.jpg)
+
+![](_assets/external-components-writingpad.png)
+
+![](_assets/external-components-webcam.png)
+
+![](_assets/external-components-keyboard.png)
+
+![](_assets/external-components-ballmouse.png)
+
+![](_assets/external-components-ledmouse.png)
+
+![](_assets/external-components-lasermouse.png)
+
+![](_assets/external-components-ergonomickeyboard.jpg)
+
+![](_assets/external-components-barcodescanner.png)
+
+![](_assets/external-components-microphone.png)
+
+![](_assets/external-components-biometric.png)
+
+![](_assets/external-components-joystick.png)
+
+:::
+
+### Mouse
+
+Used to navigate the graphical user interface (GUI).
+
+There are many types of mice, distinguished by tracking technology and by use case
+
+__Technologies__ :
+
+Mechanical mice use a ball to measure movement (obsolete now)
+
+Optical mice use light sources (first LED, then the more precise Laser) [^1]
+
+__Purposes:__
+
+Many! “Gaming” (many buttons), Ergonomic (optimize human comfort), etc.
+
+::: {layout-ncol=2 layout-valign="bottom"}
+
+![](_assets/external-components-woodmouse.png)
+
+![](_assets/external-components-ballmouse.png)
+
+![](_assets/external-components-ledmouse.png)
+
+![](_assets/external-components-lasermouse.png)
+
+:::
+
+---
+
+[^1] Good notes on history and explanation of how/why they work "Optical mice use image sensors to image naturally occurring texture [on the surface they are placed].... These surfaces, when lit at a grazing angle by a light emitting diode, cast distinct shadows that resemble a hilly terrain lit at sunset. Images of these surfaces are captured in continuous succession and compared with each other to determine how far the mouse has moved." https://en.wikipedia.org/wiki/Computer_mouse https://en.wikipedia.org/wiki/Optical_mouse 
+
+### Keyboard
+
+Used to enter text commands.
+
+Most commonly used is the QWERTY layout (1873).
+
+Other layouts include QWERTZ (Germany/Switzerland) and AZERTY (France) and DVORAK (nerds*)
+
+Variations include wired or wireless keyboards and numeric keypads.
+
+Ergonomic designs are recently becoming more popular.
+
+KVM ("keyboard, video and mouse"): control multiple devices from one keyboard/mouse combination
+
+::: {layout-ncol=3}
+
+![](_assets/external-components-numpad.jpg)
+
+![](_assets/external-components-keyboard.png)
+
+![](_assets/external-components-ergonomickeyboard.jpg)
+
+:::
+
+### Others
+
+- Gamepads or joysticks are used for playing games and running simulations.
+- Digital / video cameras and webcams create images and videos.
+- Microphones
+- Biometric devices use features unique to an individual user (e.g. fingerprint).
+- Touchscreens have a pressure-sensitive panel.
+- Scanners digitize images or documents so they can be stored as files.
+- Digital Tablets (sometimes called Digitizers) allow the user to create images or artwork using a stylus.
+- Media card readers read/write data from/to different types of media cards (SD cards, video game cartridges, etc.)
+
+## Output Devices
+
+### Monitors
+
+* Different types of monitors use different technologies to create an image.
+* However, the common principles are the same:
+  * Digital representation of image to display is sent to the monitor
+  * The monitor produces each  __pixel__  (the “atom” of monitor displays) using some deterministic physical technology
+  * Light from the monitor reaches us as a useful/pleasing image.
+* The following slides are the main technologies used today (from oldest to latest)
+
+#### CRT Monitors
+
+* CRT (Cathode ray tube)
+  * The most common type of consumer and industry television before ~2010
+  * A  __tungsten coil__  is heated in a vacuum until it sheds electrons, those electrons are accelerated by an electric field and guided by magnets to hit a phosphor coated glass display to emit light in a pixel grid
+  * __Obsolete__  since today there are lighter, simpler higher resolution technologies
+  * Still used today for some applications due to  __zero latency__ . For instance, I use one for playing NES Tetris!
+
+::: {layout-ncol=2}
+
+![](_assets/external-components-CRT1.png)
+
+![](_assets/external-components-CRT2.png)
+
+:::
+
+#### Plasma Monitors
+
+* Plasma
+  * Tiny cells of ionized gas that light up when stimulated by electricity.
+  * Often used in home theatre applications due to accurate video representation.
+  * High levels of brightness, deep black levels and very wide color range.
+  * Have shorter life span, susceptible to “screen burn-in” (this is why screensavers are called “screen savers”! Same for CRT).
+* (+) Plasma cell will produce light that looks good from every angle, it was high refresh rate (videos are smoother)
+* (-) BUT! Consumes a lot of electricity
+* (-) Doesn’t work at high altitudes! (low pressure)
+
+![](_assets/external-components-29.png)
+
+Plasma is a chemical state of molecules when molecules in state of gas are heated up (excited with electric charge).
+Typical Plasma displays have two glass plates sandwiching hundreds of thousands of cells containing plasma. 
+Two sets of electrodes will provide some charges which will excite the plasma 
+Which will release photons at three different wavelength (either red, green or blue)
+
+#### LCD Monitors
+
+![](_assets/external-components-LCDvsLED.jpg)
+
+* LCD (Liquid crystal display)
+  * Commonly used in  __flat__  panel monitors and laptops.
+  * Consists of a  __white__  backlight (in light, white = all color's combined), two polarizing filters, and liquid crystal solution between them to transform the backlight into a coherent pixel grid.
+  * An electronic current aligns and controls the crystals so that light can pass through them.
+* (+) Allows to have flat screens!
+
+![](_assets/external-components-32.png)
+
+For more information: [https://www.youtube.com/watch?v=Gx-JVoOFYhs&ab_channel=e-learning%C3%A9lectronique](https://www.youtube.com/watch?v=Gx-JVoOFYhs&ab_channel=e-learning%C3%A9lectronique)
+
+---
+
+An LCD Screen is made up of layers of very thin glass (2), liquid crystal (5um), metal and dielectrics
+Liquid cystal is a modelcule between liquid (not ordered and constant motion) and crystal (ordered fashion)
+Liquid crytsal is organic (made of carbone and oxygen), they can be smectic (parallel), nematic (same direction not layered), cholesteric (helix order)
+LCD TN (Twistic nematic) cheapest 
+The polarizing filter lets only one orientation of the light pass through.
+To transform the white light into colored light, a color filter is placed on the outter face ( made of pigments which will absorb all colors execept the color that is passing (red, blue or green)
+
+![](_assets/external-components-34.jpg)
+
+* LED (Light emitting diode)
+  * Same as LCD but uses  __LED backlighting __ instead of a white backlight with crystal liquid to light the display.
+  * The brightness of each RGB LED is controlled programmatically to produce each pixel
+  * __(+) Thinner__  (no layers), lighter and brighter, and displays better contrast
+  * __(+) Lower power __ consumption.
+
+![](_assets/external-components-35.jpg)
+
+For more information: [https://www.youtube.com/watch?v=96QwqOZ4xjE&ab_channel=Lesics](https://www.youtube.com/watch?v=96QwqOZ4xjE&ab_channel=Lesics)
+
+* OLED (Organic LED)
+  * Similar to LED, but  __no backlighting __ required -- the material used to create these displays emits light when  __an electrical current is applied__ .
+  * (+)Allows for  __perfect representation of dark colors __ unlike all other monitor technologies. Also allows for flexible and transparent monitors
+  * (-)More expensive to produce, more susceptible to screen-burn-in than LCD or LED (but better than Plasma and CRT in this respect)
+
+![](_assets/external-components-36.jpg)
+
+For more information: [https://www.youtube.com/watch?v=xAMhX3Drq14&ab_channel=Lesics](https://www.youtube.com/watch?v=xAMhX3Drq14&ab_channel=Lesics)
+
+* DLP (Digital light processing)
+  * Used in projectors.
+  * Spinning color wheel with microprocessor-controlled array of mirrors.
+  * Each mirror corresponds to a specific pixel, reflecting light.
+  * Monochrome image is created using up to 1024 shades of grey.
+  * Color wheel then adds to complete the projected image.
+
+### Printers
+
+* Printers take  __data__  from a computer and generate output on paper.
+  * Basic principles
+    * Similar to monitor (high quantity of small, well placed “pixels” → the visual quality of a coherent image)
+    * Rather than orienting light photons on a screen, printers deposit liquid stains on to paper. The physical setup is different, but the same principles are at work.
+
+![](_assets/external-components-printerbread.png)
+
+A high enough quantity of toasted bread produces the qualitative impression of a human eye in this “piece” of art. Printers (and monitors) use much higher quantities of “pixels” than depicted here!
+
+#### Inkjet Printers
+
+Uses tiny droplets of ink to produce images.
+
+Uses cyan, magenta and blue instead of RGB like screens!
+
+Heat is applied to an ink reservoir, which pushes ink bubbles through a nozzle in a controlled manner.
+
+The ink liquid droplets are smaller in diameter than a human hair! Many of these added together produce the quality of a coherent image.
+
+#### Laser Printers
+
+![](_assets/external-components-39.png)
+
+* Expensive when they were initially introduced.
+* Produce high-quality output quietly at a high speed.
+* Produces images by directing a  __laser beam __ at a mirror which bounces the beam onto a drum.
+  * The drum contains a  __special coating __ to which the toner (ink powder) sticks.
+  * A laser beam then conveys information to the drum,  __neutralizing__  and detaching some toner.
+  * As the paper rolls by the drum, the toner is transferred onto the paper. A hot roller then bonds toner to the paper.
+
+## Exercises
+
+See Lab
+
+## Knowledge check
+
+The following questions invite you to reflect on the key information learned in this lesson. If you can't answer the question, you can click the corresponding link to review the topic more closely. Future assignments and tests may be based on questions like these:
+
+## Additional resources
+
+This section contains helpful links to related content. You aren't required to study these in detail, but it never hurts to learn more.

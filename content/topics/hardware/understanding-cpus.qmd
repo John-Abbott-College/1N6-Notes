@@ -1,0 +1,243 @@
+---
+title: Understanding CPUs
+subtitle: An in-depth explanation of command processing and executing at the CPU level
+date: 2024-09-16
+---
+
+## Introduction
+
+# Processor (CPU) (review of Lecture 3)
+
+__CPU __ ( _Central Processing Unit_ )
+
+A complex collection of electronic circuits on one or more integrated circuits (chips) which:
+
+_Executes the instructions in a software program._
+
+Communicates with other parts of the computer system, especially RAM and input devices.
+
+Let’s have a deeper look.
+
+![](_assets/Lecture%204%20Understanding%20CPUs0.jpg)
+
+![](_assets/Lecture%204%20Understanding%20CPUs1.png)
+
+
+---
+
+
+# CPU Core Components
+
+Analogy: CPUs are a “Guy-in-a-box”
+
+Clever guy who can perform any mathematical function quickly.
+
+They live in a closed-up box so direct communication is impossible.
+
+We have 16 light bulbs: 8 for the guy, and 8 for us.
+
+![](_assets/Lecture%204%20Understanding%20CPUs2.png)
+
+![](_assets/Lecture%204%20Understanding%20CPUs3.png)
+
+![](_assets/Lecture%204%20Understanding%20CPUs4.png)
+
+
+---
+
+
+# CPU Analogy: “Guy in a Box”
+
+![](_assets/Lecture%204%20Understanding%20CPUs5.png)
+
+* The light bulbs:
+  * can be controlled (turned on or off) by us and by the guy-in-the-box
+  * Are synchronized (bulb 1 for us has the same value as bulb 1 for the guy)
+* We can share messages by setting the light bulbs on/off, as long as we:
+  * Agree on schedule (not changing the lightbulbs at the same time)
+  * Agree on meaning (share the same interpretation of lightbulb being on/off)
+* This arrangement is called a  __data bus:__  a method for transporting data from one component to another using electrical circuits
+
+![](_assets/Lecture%204%20Understanding%20CPUs6.png)
+
+![](_assets/Lecture%204%20Understanding%20CPUs7.png)
+
+
+---
+
+
+# Registers
+
+![](_assets/Lecture%204%20Understanding%20CPUs8.png)
+
+* __Registers__
+* So far, we can send/receive “messages” from the light bulbs
+* But, in order to “remember” a message, the guy needs at least a few workstations ( __registers__ ) to copy our messages, otherwise the messages will be lost every time the data bus updates.
+  * __Registers__  are places to store a very small amount of data temporarily
+  * Registers are usually the around the 1-4x the size of the data bus
+  * We can give the registers names to distinguish them (AX, BX, CX, DX for example)
+
+
+---
+
+
+# Codebook: Agreeing on meaning
+
+![](_assets/Lecture%204%20Understanding%20CPUs9.png)
+
+__Codebook__
+
+It’s important to have common definitions for the meaning of the lightbulbs being on/off to understand messages sent by this method
+
+CPUs are designed with a  __codebook __ (instruction set) that defines the commands that we can give to the guy in the box
+
+![](_assets/Lecture%204%20Understanding%20CPUs10.png)
+
+![](_assets/Lecture%204%20Understanding%20CPUs11.png)
+
+![](_assets/Lecture%204%20Understanding%20CPUs12.png)
+
+![](_assets/Lecture%204%20Understanding%20CPUs13.png)
+
+![](_assets/Lecture%204%20Understanding%20CPUs14.png)
+
+![](_assets/Lecture%204%20Understanding%20CPUs15.png)
+
+
+---
+
+
+# Clock: agreeing on schedule
+
+Now we are ready to communicate with the guy in the boxWe can send them the first command by lighting up the bulbs on the data bus.
+
+But how do they know when we have finished setting up the light bulbs?
+
+![](_assets/Lecture%204%20Understanding%20CPUs16.png)
+
+
+---
+
+
+* We can use a bell activated by a button.
+* A real computer uses a special wire called the clock wire (CLK). The CLK wire is turned on and off on a precise and regular schedule. This is called a  __clock cycle.__
+  * Each time the clock turns on, the state of our lightbulbs is shared with the guy in the box
+  * The guy then has until the clock turns off to send a message back
+  * The next time the clock turns on, a new message is sent to the CPU
+* The time between each clock cycle is the  __speed__  that a CPU can perform a given task
+* The maximum number of clock cycles a CPU can handle in given period of time is called the clock speed.
+
+
+---
+
+
+# Clock speed: how to measure?
+
+* Let’s say our guy can perform 4 tasks in one second (that’s pretty fast for some guy!). How can we compare this with other CPUs?
+* __Unit of Measurement: __ Hertz, usually written as  __Hz__ .
+  * 1Hz: once time per second
+  * 4Hz: four times per second (our guy in the box!)
+* How fast are modern CPUs compared to this? (Hint: much faster)
+
+
+---
+
+
+We can use  __SI Prefixes __ (International System of Unit Prefixes) to compare magnitudes easily.
+
+You will see many of these in computer science over and over again -- get to know them well!
+
+| Unit | Meaning | Numeric Definition | Examples |
+| :-: | :-: | :-: | :-: |
+| Hz | Once per second | 1/s, or 1Hz | 1-2Hz: human heart-rate at rest (1Hz = 60 beats per minute, 2Hz = 120 bpm)<br />24Hz: framerate of historic cinema<br />20-60Hz: frequency range for bass notes (C0 = 16.35Hz to C2 = 65.4Hz)<br />60-144Hz: framerate of most monitors |
+| kHz | Thousand times per second | 1000 Hz | 0.1-2kHz: frequency range for midrange notes (A2=0.110kHz, C7=2kHz)<br />20kHz: maximum frequency audible to human ear<br />740 kHz: Intel 4004 processor clock speed (1971) |
+| MHz | Million times per second | 1000000 Hz | 8MHz: fastest CPU clock speed in the 70s<br />35MHz: fastest CPU clock speed in the 80s<br />500-1000MHz: fastest CPU clock speed in the 90s) |
+| GHz | Billion times per second | 1000000000 Hz | 2-5GHz: Almost all consumer CPUs in 2024 have base clock speeds in this range<br />9.117 GHz: fastest CPU clock speed ever recorded (2024) |
+
+
+---
+
+
+# CPU Core Components: Activity
+
+Using the following codebook, ask the “Guy in a box” to calculate 2+3
+
+You must send a series of commandsto the CPU. The CPU will act on each command and give you an answer.
+
+Your answer should be a  __sequence of numbers__  you could send to the guy in the box to get the right answer.
+
+![](_assets/Lecture%204%20Understanding%20CPUs17.png)
+
+
+---
+
+
+# CPU Core Components: Activity (cont.)
+
+10000000	The next line is a number, put it in the AX register00000010 	The number 210010000 	The next line is a number, put it in the BX register00000011 	The number 310110000     	Add AX to BX and put the result in AX11000000 	Place the value of AX on the external data bus
+
+A set of commands such as this is called a program.A program is a series of command sent to a CPU in a specific order for the CPU to perform work.
+
+
+---
+
+
+# Pipelining
+
+* Almost all CPU instructions feature a set of 4 stages:
+  * __Fetch__ : retrieve the instruction, address, and data, write them to registers
+  * __Decode__ : search for instruction code in codebook, verify it is a real instruction, and that data/address are valid
+  * __Execute__ : perform the instruction, update registers with results
+  * __Write: __ write to databus to share results
+* Rather than have each instruction repeat all of these steps, we can organize CPUs further by specializing our “guy in a box” for each stage
+* This is called  __pipelining__ , and it allows for greater efficiency in CPU programming
+
+![](_assets/Lecture%204%20Understanding%20CPUs18.png)
+
+
+---
+
+
+# CPU Power: Speed and bus width
+
+* CPU power is measured by both speed and the amount of data it can process.
+  * __Speed__ : is rated in cycles per second, e.g. megahertz (MHz) or gigahertz (GHz).
+  * The amount of data processed at a time depends on the “number of lightbulbs” or the  __width__  of the  __data bus__
+    * __Bus width __ is measured in bits, e.g. 8-bit (our example), 16-bit, 32-bit, 64-bit, etc.
+
+
+---
+
+
+# Data bus: how the CPU gets/sends data
+
+![](_assets/Lecture%204%20Understanding%20CPUs19.png)
+
+In actual computers, the CPU receives  __instructions__ ,  __addresses memory__ , and  __data__  on separate buses.
+
+This allows the CPU to send AND receive the following information at the same time:
+
+What command to perform
+
+Where in memory the result should be stored
+
+What data to use to perform the command
+
+![](_assets/Lecture%204%20Understanding%20CPUs20.png)
+
+__Figure from __ [In One Lesson](https://www.youtube.com/watch?v=cNN_tTXABUA&) __ on Youtube (nice visualization)__
+
+
+---
+
+
+# Data Bus: understanding speed vs width
+
+* You can double check that you understand a scientific concept by checking what  __units of measurement__  that concept is measured by:
+* Highway
+  * __Number of lanes: __ (a number)
+  * __Speed limit:__  (unit distance per time elapsed, e.g. km/h)
+* System bus
+  * __Bus width: __ (a number of bits, eg a 32-bit processor)
+  * __Bus speed: __ (unit information per time elapsed, e.g. bits/second)
+

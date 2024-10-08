@@ -1,0 +1,12 @@
+---
+title: "Technical Support"
+subtitle: "All lectures related to technical support can be found here."
+listing: 
+  filter-ui: true
+  sort-ui: [date, title]
+  sort: date
+  date-format: iso
+  categories: true
+  exclude:
+    filename: "*index.qmd"
+---

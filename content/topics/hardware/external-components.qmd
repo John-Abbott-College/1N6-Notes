@@ -1,6 +1,6 @@
 ---
 title: External components
-subtitle: Overview of many external components, or peripheral devices, used by and for computers.
+subtitle: Overview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors
 date: 2024-09-03
 ---
 
@@ -25,7 +25,7 @@ We will cover many examples of each.
 
 ## Lesson overview
 
-- Learn the history, behavior, and important properties of Input and Output devices
+Learn the history, behavior, and important properties of Input and Output devices
 
 * Input devices:
   * Keyboards
@@ -42,97 +42,53 @@ We will cover many examples of each.
 
 ## Input Devices
 
-Allow a computer to accept data and instructions from a user.
-
-::: {layout-ncol=4 layout-valign="bottom"}
-
-![](_assets/external-components-trackball.jpg)
-
-![](_assets/external-components-writingpad.png)
-
-![](_assets/external-components-webcam.png)
-
-![](_assets/external-components-keyboard.png)
-
-![](_assets/external-components-ballmouse.png)
-
-![](_assets/external-components-ledmouse.png)
-
-![](_assets/external-components-lasermouse.png)
-
-![](_assets/external-components-ergonomickeyboard.jpg)
-
-![](_assets/external-components-barcodescanner.png)
-
-![](_assets/external-components-microphone.png)
-
-![](_assets/external-components-biometric.png)
-
-![](_assets/external-components-joystick.png)
-
-:::
+**Input Devices** are devices that *accept* data and instructions *from* a user *to* a computer.
 
 ### Mouse
 
-Used to navigate the graphical user interface (GUI).
+Used to navigate the graphical user interface (GUI). There are many types of mice, distinguished by tracking technology and by use case
 
-There are many types of mice, distinguished by tracking technology and by use case
+__Technology__:
 
-__Technologies__ :
+- Mechanical mice use a ball to measure movement (obsolete now -- why?)
+- Optical mice use light sources (first LED, then more precise Laser).[^1]
 
-Mechanical mice use a ball to measure movement (obsolete now)
+[^1]: Good notes on history and explanation of how/why they work “Optical mice use image sensors to image naturally occurring texture [on the surface they are placed]…. These surfaces, when lit at a grazing angle by a light emitting diode, cast distinct shadows that resemble a hilly terrain lit at sunset. Images of these surfaces are captured in continuous succession and compared with each other to determine how far the mouse has moved.” https://en.wikipedia.org/wiki/Computer_mouse https://en.wikipedia.org/wiki/Optical_mouse
 
-Optical mice use light sources (first LED, then the more precise Laser) [^1]
-
-__Purposes:__
+__Purpose:__
 
 Many! “Gaming” (many buttons), Ergonomic (optimize human comfort), etc.
 
 ::: {layout-ncol=2 layout-valign="bottom"}
 
-![](_assets/external-components-woodmouse.png)
+![Figure caption.](_assets/external-components16.png){fig-alt="alt text"}
 
-![](_assets/external-components-ballmouse.png)
+![Figure caption.](_assets/external-components17.png){fig-alt="alt text"}
 
-![](_assets/external-components-ledmouse.png)
+![Figure caption.](_assets/external-components18.png){fig-alt="alt text"}
 
-![](_assets/external-components-lasermouse.png)
+![Figure caption.](_assets/external-components19.png){fig-alt="alt text"}
 
 :::
-
----
-
-[^1] Good notes on history and explanation of how/why they work "Optical mice use image sensors to image naturally occurring texture [on the surface they are placed].... These surfaces, when lit at a grazing angle by a light emitting diode, cast distinct shadows that resemble a hilly terrain lit at sunset. Images of these surfaces are captured in continuous succession and compared with each other to determine how far the mouse has moved." https://en.wikipedia.org/wiki/Computer_mouse https://en.wikipedia.org/wiki/Optical_mouse 
 
 ### Keyboard
 
-Used to enter text commands.
+Used to enter text commands. Most commonly used is the QWERTY layout (used in typewriters since 1873). Other layouts include QWERTZ (Germany/Switzerland) and AZERTY (France) and DVORAK (nerds[^2])
 
-Most commonly used is the QWERTY layout (1873).
+Variations include wired or wireless keyboards and numeric keypads. *Ergonomic* designs are recently becoming more popular.
 
-Other layouts include QWERTZ (Germany/Switzerland) and AZERTY (France) and DVORAK (nerds*)
+![Figure caption.](_assets/external-components20.jpg){width=66% fig-align="left" fig-alt="alt text"}
 
-Variations include wired or wireless keyboards and numeric keypads.
+![Figure caption.](_assets/external-components21.png){width=66% fig-align="left" fig-alt="alt text"}
 
-Ergonomic designs are recently becoming more popular.
+![Figure caption.](_assets/external-components22.jpg){width=66% fig-align="left" fig-alt="alt text"}
 
-KVM ("keyboard, video and mouse"): control multiple devices from one keyboard/mouse combination
+[^2]: note: this is very hypocritical coming from me. don’t mind my bad jokes!
 
-::: {layout-ncol=3}
-
-![](_assets/external-components-numpad.jpg)
-
-![](_assets/external-components-keyboard.png)
-
-![](_assets/external-components-ergonomickeyboard.jpg)
-
-:::
-
-### Others
+### Input Devices: Others
 
 - Gamepads or joysticks are used for playing games and running simulations.
 - Digital / video cameras and webcams create images and videos.
-- Microphones
 - Biometric devices use features unique to an individual user (e.g. fingerprint).
 - Touchscreens have a pressure-sensitive panel.
 - Scanners digitize images or documents so they can be stored as files.
@@ -141,22 +97,26 @@ KVM ("keyboard, video and mouse"): control multiple devices from one keyboard/mo
 
 ## Output Devices
 
+**Output Devices** are devices that *present* data and information *to* the user *from* a computer.
+
 ### Monitors
 
-* Different types of monitors use different technologies to create an image.
-* However, the common principles are the same:
-  * Digital representation of image to display is sent to the monitor
-  * The monitor produces each  __pixel__  (the “atom” of monitor displays) using some deterministic physical technology
-  * Light from the monitor reaches us as a useful/pleasing image.
-* The following slides are the main technologies used today (from oldest to latest)
+There are many different types of monitors use different technologies to create an image. However, the common principles are the same:
 
-#### CRT Monitors
+* Digital representation of image to display is sent to the monitor
+* The monitor produces each  __pixel__  (the “atom” of monitor displays) using some deterministic physical technology
+* Light from the monitor reaches us as a useful/pleasing image.
 
-* CRT (Cathode ray tube)
-  * The most common type of consumer and industry television before ~2010
-  * A  __tungsten coil__  is heated in a vacuum until it sheds electrons, those electrons are accelerated by an electric field and guided by magnets to hit a phosphor coated glass display to emit light in a pixel grid
-  * __Obsolete__  since today there are lighter, simpler higher resolution technologies
-  * Still used today for some applications due to  __zero latency__ . For instance, I use one for playing NES Tetris!
+The following sections are the main technologies used today (from oldest to newest)
+
+#### Cathode Ray Tube (CRT)
+
+Cathode Ray Tube (CRT) monitors are very complicated, very cool, moderately dangerous, and mostly obsolete!
+
+* The most common type of consumer and industry television before ~2010
+* Basically: a **tungsten coil** is heated in a vacuum until it sheds electrons, those electrons are accelerated by an electric field and guided by magnets to hit a phosphor coated glass display to emit light in a pixel grid
+* **Obsolete** since today their are lighter, simpler higher resolution technologies
+* Still used today for some applications due to  __zero latency__ . For instance, I use one for playing NES Tetris!
 
 ::: {layout-ncol=2}
 
@@ -166,115 +126,227 @@ KVM ("keyboard, video and mouse"): control multiple devices from one keyboard/mo
 
 :::
 
-#### Plasma Monitors
 
-* Plasma
-  * Tiny cells of ionized gas that light up when stimulated by electricity.
-  * Often used in home theatre applications due to accurate video representation.
-  * High levels of brightness, deep black levels and very wide color range.
-  * Have shorter life span, susceptible to “screen burn-in” (this is why screensavers are called “screen savers”! Same for CRT).
+---
+
+
+#### Plasma
+
+Plasma monitors use tiny cells of ionised gas that light up when stimulated by electricity.
+
+* Often used in home theatre applications due to accurate video representation.
+* High levels of brightness, deep black levels and very wide colour range.
+* Have shorter life span, susceptible to “screen burn-in” (this is why screensavers are called “screen savers”! Same for CRT).
 * (+) Plasma cell will produce light that looks good from every angle, it was high refresh rate (videos are smoother)
 * (-) BUT! Consumes a lot of electricity
 * (-) Doesn’t work at high altitudes! (low pressure)
 
-![](_assets/external-components-29.png)
-
-Plasma is a chemical state of molecules when molecules in state of gas are heated up (excited with electric charge).
+![Plasma is a chemical state of molecules when molecules in state of gas are heated up (excited with electric charge).
 Typical Plasma displays have two glass plates sandwiching hundreds of thousands of cells containing plasma. 
 Two sets of electrodes will provide some charges which will excite the plasma 
-Which will release photons at three different wavelength (either red, green or blue)
+Which will release photons at three different wavelength (either red, green or blue)](_assets/external-components-29.png)
 
-#### LCD Monitors
 
-![](_assets/external-components-LCDvsLED.jpg)
+#### Liquid Crystal Display (LCD)
 
-* LCD (Liquid crystal display)
-  * Commonly used in  __flat__  panel monitors and laptops.
-  * Consists of a  __white__  backlight (in light, white = all color's combined), two polarizing filters, and liquid crystal solution between them to transform the backlight into a coherent pixel grid.
+An LCD Screen is made up of layers of very thin glass, liquid crystal, metal and dielectrics. *Liquid cystal* is a modelcule between liquid (not ordered and constant motion) and crystal (ordered fashion). This technology allows for precise control of color without the need to ionise gas with powerful electronics.
+
+  * Commonly used in flat panel monitors and laptops.
+  * Consists of a  __white__  backlight (in light, white = all colours combined), two polarizing filters, and liquid crystal solution between them to transform the backlight into a coherent pixel grid.
   * An electronic current aligns and controls the crystals so that light can pass through them.
-* (+) Allows to have flat screens!
+  * (+) Allow the use of **flat** screens!
 
-![](_assets/external-components-32.png)
+![The polarizing filter lets only one orientation of the light pass through.
+To transform the white light into colored light, a color filter is placed on the outter face ( made of pigments which will absorb all colors execept the color that is passing (red, blue or green)](_assets/external-components-32.png){width=66% fig-align="left" fig-alt="alt text."}
 
-For more information: [https://www.youtube.com/watch?v=Gx-JVoOFYhs&ab_channel=e-learning%C3%A9lectronique](https://www.youtube.com/watch?v=Gx-JVoOFYhs&ab_channel=e-learning%C3%A9lectronique)
 
----
+#### Light emitting diode (LED)
 
-An LCD Screen is made up of layers of very thin glass (2), liquid crystal (5um), metal and dielectrics
-Liquid cystal is a modelcule between liquid (not ordered and constant motion) and crystal (ordered fashion)
-Liquid crytsal is organic (made of carbone and oxygen), they can be smectic (parallel), nematic (same direction not layered), cholesteric (helix order)
-LCD TN (Twistic nematic) cheapest 
-The polarizing filter lets only one orientation of the light pass through.
-To transform the white light into colored light, a color filter is placed on the outter face ( made of pigments which will absorb all colors execept the color that is passing (red, blue or green)
-
-![](_assets/external-components-34.jpg)
-
-* LED (Light emitting diode)
-  * Same as LCD but uses  __LED backlighting __ instead of a white backlight with crystal liquid to light the display.
-  * The brightness of each RGB LED is controlled programmatically to produce each pixel
+  * An LCD display that uses LED backlighting instead of a white backlight to light the display. The brightness of each RGB LED is controlled programmatically to produce each pixel
   * __(+) Thinner__  (no layers), lighter and brighter, and displays better contrast
   * __(+) Lower power __ consumption.
 
-![](_assets/external-components-35.jpg)
+![Figure caption.](_assets/external-components-LCDvsLED.jpg){width=66% fig-align="left" fig-alt="alt text."}
 
-For more information: [https://www.youtube.com/watch?v=96QwqOZ4xjE&ab_channel=Lesics](https://www.youtube.com/watch?v=96QwqOZ4xjE&ab_channel=Lesics)
+For more information: [https://www.youtube.com/watch?v=Gx-JVoOFYhs&ab_channel=e-learning%C3%A9lectronique](https://www.youtube.com/watch?v=Gx-JVoOFYhs&ab_channel=e-learning%C3%A9lectronique)
 
-* OLED (Organic LED)
+
+#### Organic LED (OLED)
+
+OLED displays are similar to LED, but no backlighting required -- the material used to create these displays emits light when an electrical current is applied.
+
   * Similar to LED, but  __no backlighting __ required -- the material used to create these displays emits light when  __an electrical current is applied__ .
-  * (+)Allows for  __perfect representation of dark colors __ unlike all other monitor technologies. Also allows for flexible and transparent monitors
-  * (-)More expensive to produce, more susceptible to screen-burn-in than LCD or LED (but better than Plasma and CRT in this respect)
+  * (+) Allows for  __perfect representation of dark colors __ unlike all other monitor technologies. Also allows for flexible and transparent monitors
+  * (-) More expensive to produce, more susceptible to screen-burn-in than LCD or LED (but better than Plasma and CRT in this respect)
 
-![](_assets/external-components-36.jpg)
+Here’s a great video (8 mins) explaining both physical and software technologies required to make the above monitors work:  _[https://www.youtube.com/watch?v=uyLDA9QT8EY](https://www.youtube.com/watch?v=uyLDA9QT8EY)_
 
-For more information: [https://www.youtube.com/watch?v=xAMhX3Drq14&ab_channel=Lesics](https://www.youtube.com/watch?v=xAMhX3Drq14&ab_channel=Lesics)
+With LCD, LED, and OLED, we finally get to the most modern monitor technologies. These are used in our labs, most computers, laptops. They’re ordered here approximately in order of lowest (LCD) -> highest (OLED) quality, though pros and cons exist for each. 
 
-* DLP (Digital light processing)
-  * Used in projectors.
-  * Spinning color wheel with microprocessor-controlled array of mirrors.
-  * Each mirror corresponds to a specific pixel, reflecting light.
-  * Monochrome image is created using up to 1024 shades of grey.
-  * Color wheel then adds to complete the projected image.
+See here for more information:  _[https://en.wikipedia.org/wiki/Comparison_of_CRT,_LCD,_Plasma,_and_OLED_displays](https://en.wikipedia.org/wiki/Comparison_of_CRT,_LCD,_Plasma,_and_OLED_displays)_.
+
+---
 
 ### Printers
 
-* Printers take  __data__  from a computer and generate output on paper.
-  * Basic principles
-    * Similar to monitor (high quantity of small, well placed “pixels” → the visual quality of a coherent image)
-    * Rather than orienting light photons on a screen, printers deposit liquid stains on to paper. The physical setup is different, but the same principles are at work.
+Printers take data from a computer and generate output on paper: Basic principles
 
-![](_assets/external-components-printerbread.png)
+  * Similar to monitor (high quantity of small, well placed “pixels” → the visual quality of a coherent image)
+  * Rather than orienting light photons on a screen, printers deposit liquid stains on to paper. The physical setup is different, but the same principles are at work.
 
-A high enough quantity of toasted bread produces the qualitative impression of a human eye in this “piece” of art. Printers (and monitors) use much higher quantities of “pixels” than depicted here!
+![A high enough quantity of toasted bread produces the qualitative impression of a human eye in this “piece” of art. Printers (and monitors) use much higher quantities of “pixels” than depicted here!](_assets/external-components28.png)
 
-#### Inkjet Printers
+#### Dot-matrix printers
 
-Uses tiny droplets of ink to produce images.
+  * Uses print heads containing pins which produce patterns of dots on the paper by mechanical impact (pressing).
+  * Inexpensive and typically print at a speed of 100 - 600 characters per second.
+  * (Optional) See  _[https://en.wikipedia.org/wiki/Dot_matrix_printer](https://en.wikipedia.org/wiki/Dot_matrix_printer)_  for more detail on history and technology
+  * While still in use for particular applications (printing receipts for e.g.), these are now obsoleted by...
 
-Uses cyan, magenta and blue instead of RGB like screens!
+#### Ink-jet printers
 
-Heat is applied to an ink reservoir, which pushes ink bubbles through a nozzle in a controlled manner.
+  * Uses tiny droplets of ink to produce images.
+  * Heat is applied to an ink reservoir, which pushes ink bubbles through a nozzle in a controlled manner.
+  * The ink liquid droplets are smaller in diameter than a human hair! Many of these added together produce the quality of a coherent image.
+  * Quieter than dot-matrix, and also provide better speed and higher quality.
 
-The ink liquid droplets are smaller in diameter than a human hair! Many of these added together produce the quality of a coherent image.
+::: {layout-ncol=2}
+
+![Ink-based color printer.](_assets/external-components30.png)
+
+![Ink jet cartridge operation. Image source: [youtube.com](https://www.youtube.com/watch?v=JEVurb1uVFA)](_assets/external-components31.png)
+
+:::
 
 #### Laser Printers
 
-![](_assets/external-components-39.png)
-
 * Expensive when they were initially introduced.
 * Produce high-quality output quietly at a high speed.
-* Produces images by directing a  __laser beam __ at a mirror which bounces the beam onto a drum.
-  * The drum contains a  __special coating __ to which the toner (ink powder) sticks.
-  * A laser beam then conveys information to the drum,  __neutralizing__  and detaching some toner.
+* Produces images by directing a laser beam at a mirror which bounces the beam onto a drum.
+  * The drum contains a special coating to which the toner (ink powder) sticks.
+  * A laser beam then conveys information to the drum, neutralizing and detaching some toner.
   * As the paper rolls by the drum, the toner is transferred onto the paper. A hot roller then bonds toner to the paper.
+
+![Figure caption.](_assets/external-components32.png){width=66% fig-align="left" fig-alt="alt text."}
+
+
+## Connectors
+
+**Connectors** are how to get the computer to talk to all these output devices!
+
+### Cables
+
+Some technical terms:
+
+- __Cable (electric)__ : The insulated copper wire that carries electrical/digital signals from devices to/from computers
+- __Cable (optical)__ : The insulated glass tube that carries digital signals in the form of *light* between devices and computers
+- __Port__ : The slot where the insertable end of USB cable is connected to the computer
+- __“Male” / “Female” cable ends__ : Distinguishing between the insertable end and the receptacle end for cables
+- __Converter__ : A device that allows different standards/types of connectors to be used together
+
+#### Electrical cables
+
+transmit an electrical signal on a conducting wire, insulated to protect the signal/surroundings
+
+![](_assets/external-components34.png)
+
+#### Optical cables
+
+transmit signal in the form of light. Very fast! (speed of light in glass). 
+
+![](_assets/external-components33.png)
+
+A short paper (5 pages) comparing the two cable technologies in more detail: _[Fibre Optics vs Copper Cabling: Understanding the Differences](https://optronicsplus.net/downloads/whitepapers/OP_Fibre_Optics_vs_Copper_Cabling_Understanding_the_Difference_White_Paper_Rev.1.0.pdf)_
+
+### USB
+
+**Universal Serial Bus** (we’ll talk about the meaning of the last two words soon!) is used to connect most modern devices to computers. Back in the day, mice/keyboards/external storage/speakers/etc. all had different cables. These have now been (mostly) unified under the USB standard.
+
+USB connectors can transmit both **power** (e.g. charging phones) and **information** (data). Despite being "Universal" there are an incredible number of USB types.
+
+---
+
+USB "Number" standards refer to the transmission speed and power of the cables
+
+- e.g. USB 3 is faster/more power than USB 2 and USB 2
+
+USB “Letter” standards refer to the physical design of the connector and the port
+
+- e.g. USB C and USB A are incompatible interfaces, cannot be interchanged.
+
+
+![Figure caption.](_assets/external-components36.png)
+
+![Newer standards are  __backwards compatible__  (e.g. USB 3.1 cable works in USB 1.1 port at USB 1.1 speed/power)](_assets/external-components37.png)
+
+
+### Audio
+
+Most commonly the standard headphone jack (TSR connector). Available in several sizes, most commonly 3.5mm or ⅛” mini audio jack. Can be color coded - microphone (pink), speaker (green).
+
+![Figure caption.](_assets/external-components38.png)
+
+For higher-end audio, we can use fiberoptic cables as these can transmit larger amounts of data more quickly, which is required for producing a high-quality audio signal.
+
+### Video
+
+**VGA** cable is commonly used for computer monitors (15-pins). Low resolutions, now obsolete. There exist converter cables to connect VGA monitors to newer computers.
+
+**MiniVGA** is a variant found on laptops.
+
+**DVI** was once the common modern upgrade from VGA, capable of higher resolutions. MiniDVI and MicroDVI on “thin” laptops.
+
+**S-Video** commonly used for DVD players, camcorders and older consoles.
+
+::: {layout-ncol=2}
+
+![VGA, DVI, and RCA cables](_assets/external-components42.png)
+
+![DVI. Can be distinguished from VGA by noticing that it is a much wider interface with many more pins.](_assets/external-components43.png)
+
+![S-video](_assets/external-components44.png)
+
+![A converter from mini-DP to three possible outputs: DP, DVI, and HDMI](_assets/external-components41.png)
+
+
+:::
+
+
+**RCA cables** include composite video (yellow) and stereo audio cables (red for right; white/black for left). Component video offers a better picture.
+
+**HDMI** is the new standard for audio and video transmission in a single cable.
+
+**DisplayPort** (and Mini DisplayPort) more commonly used in computers.
+
+::: {layout-ncol=3}
+
+![Figure caption.](_assets/external-components45.png)
+
+![Figure caption.](_assets/external-components46.png)
+
+![Figure caption.](_assets/external-components47.png)
+
+:::
+
+### Data
+
+eSATA is used internally to connect the hard drive to the motherboard but can also be used for portable hard drives.
+
+![](_assets/external-components49.png)
+
+
+### Networking
+
+Telephone cable (RJ11) used for connecting to the internet through DSL/ADSL modems. Standard phone cable has 4 wires; connector has 4 pins. Clip helps to maintain tight connection.
+
+Ethernet (RJ45) is the standard for wired networking. Based on Cat5 twisted pair cable, made from 8 individual wires. Connector looks similar to phone plug but is thicker and wider. Also uses a clip to maintain tight connection.
+
+![](_assets/external-components50.png)
+
+![](_assets/external-components51.png)
 
 ## Exercises
 
-See Lab
-
 ## Knowledge check
 
-The following questions invite you to reflect on the key information learned in this lesson. If you can't answer the question, you can click the corresponding link to review the topic more closely. Future assignments and tests may be based on questions like these:
-
 ## Additional resources
-
-This section contains helpful links to related content. You aren't required to study these in detail, but it never hurts to learn more.

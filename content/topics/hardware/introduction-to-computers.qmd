@@ -4,7 +4,7 @@ subtitle: The fundamental properties of computers explained with examples and de
 date: 2024-08-27
 ---
 
-![Each of these things is either a computer, or a computer component. Can you identify them all? Click on the image to see everything in higher resolution. Figure source: lost to time](_assets/introduction-to-computers-main.jpg)
+![Each of these things is either a computer, or a computer component. Can you identify them all? Click on the image to see everything in higher resolution.](_assets/introduction-to-computers-main.jpg)
 
 ## Introduction
 
