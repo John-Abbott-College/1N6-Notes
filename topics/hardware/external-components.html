@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../topics/hardware/internal-components.html" rel="next">
+<link href="../../topics/hardware/external-components-v1.html" rel="next">
 <link href="../../topics/hardware/index.html" rel="prev">
 <link href="../../_assets/favicons/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../_assets/css/styles.css">
 <meta property="og:title" content="External components – Technical Support">
-<meta property="og:description" content="Overview of many external components, or peripheral devices, used by and for computers.">
+<meta property="og:description" content="Overview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors">
 <meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/hardware/_assets/favicons/favicon-32x32.png">
 <meta property="og:site_name" content="{{< var course.title >}}">
 </head>
@@ -213,6 +213,24 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">All lectures</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/data-representation/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Logic &amp; Data Representation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/technical-support/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Technical Support</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/operating-systems/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Operating Systems</span></a>
+  </div>
+</li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../topics/hardware/index.html" class="sidebar-item-text sidebar-link">
@@ -230,14 +248,26 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../topics/hardware/external-components-v1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">External components V1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../topics/hardware/internal-components.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Internal components</span></a>
+ <span class="menu-text">Internal Components</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../topics/hardware/introduction-to-computers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction to Computers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/hardware/understanding-cpus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Understanding CPUs</span></a>
   </div>
 </li>
       </ul>
@@ -260,21 +290,37 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#mouse" id="toc-mouse" class="nav-link" data-scroll-target="#mouse">Mouse</a></li>
   <li><a href="#keyboard" id="toc-keyboard" class="nav-link" data-scroll-target="#keyboard">Keyboard</a></li>
-  <li><a href="#others" id="toc-others" class="nav-link" data-scroll-target="#others">Others</a></li>
+  <li><a href="#input-devices-others" id="toc-input-devices-others" class="nav-link" data-scroll-target="#input-devices-others">Input Devices: Others</a></li>
   </ul></li>
   <li><a href="#output-devices" id="toc-output-devices" class="nav-link" data-scroll-target="#output-devices">Output Devices</a>
   <ul>
   <li><a href="#monitors" id="toc-monitors" class="nav-link" data-scroll-target="#monitors">Monitors</a>
   <ul class="collapse">
-  <li><a href="#crt-monitors" id="toc-crt-monitors" class="nav-link" data-scroll-target="#crt-monitors">CRT Monitors</a></li>
-  <li><a href="#plasma-monitors" id="toc-plasma-monitors" class="nav-link" data-scroll-target="#plasma-monitors">Plasma Monitors</a></li>
-  <li><a href="#lcd-monitors" id="toc-lcd-monitors" class="nav-link" data-scroll-target="#lcd-monitors">LCD Monitors</a></li>
+  <li><a href="#cathode-ray-tube-crt" id="toc-cathode-ray-tube-crt" class="nav-link" data-scroll-target="#cathode-ray-tube-crt">Cathode Ray Tube (CRT)</a></li>
+  <li><a href="#plasma" id="toc-plasma" class="nav-link" data-scroll-target="#plasma">Plasma</a></li>
+  <li><a href="#liquid-crystal-display-lcd" id="toc-liquid-crystal-display-lcd" class="nav-link" data-scroll-target="#liquid-crystal-display-lcd">Liquid Crystal Display (LCD)</a></li>
+  <li><a href="#light-emitting-diode-led" id="toc-light-emitting-diode-led" class="nav-link" data-scroll-target="#light-emitting-diode-led">Light emitting diode (LED)</a></li>
+  <li><a href="#organic-led-oled" id="toc-organic-led-oled" class="nav-link" data-scroll-target="#organic-led-oled">Organic LED (OLED)</a></li>
   </ul></li>
   <li><a href="#printers" id="toc-printers" class="nav-link" data-scroll-target="#printers">Printers</a>
   <ul class="collapse">
-  <li><a href="#inkjet-printers" id="toc-inkjet-printers" class="nav-link" data-scroll-target="#inkjet-printers">Inkjet Printers</a></li>
+  <li><a href="#dot-matrix-printers" id="toc-dot-matrix-printers" class="nav-link" data-scroll-target="#dot-matrix-printers">Dot-matrix printers</a></li>
+  <li><a href="#ink-jet-printers" id="toc-ink-jet-printers" class="nav-link" data-scroll-target="#ink-jet-printers">Ink-jet printers</a></li>
   <li><a href="#laser-printers" id="toc-laser-printers" class="nav-link" data-scroll-target="#laser-printers">Laser Printers</a></li>
   </ul></li>
+  </ul></li>
+  <li><a href="#connectors" id="toc-connectors" class="nav-link" data-scroll-target="#connectors">Connectors</a>
+  <ul>
+  <li><a href="#cables" id="toc-cables" class="nav-link" data-scroll-target="#cables">Cables</a>
+  <ul class="collapse">
+  <li><a href="#electrical-cables" id="toc-electrical-cables" class="nav-link" data-scroll-target="#electrical-cables">Electrical cables</a></li>
+  <li><a href="#optical-cables" id="toc-optical-cables" class="nav-link" data-scroll-target="#optical-cables">Optical cables</a></li>
+  </ul></li>
+  <li><a href="#usb" id="toc-usb" class="nav-link" data-scroll-target="#usb">USB</a></li>
+  <li><a href="#audio" id="toc-audio" class="nav-link" data-scroll-target="#audio">Audio</a></li>
+  <li><a href="#video" id="toc-video" class="nav-link" data-scroll-target="#video">Video</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#networking" id="toc-networking" class="nav-link" data-scroll-target="#networking">Networking</a></li>
   </ul></li>
   <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
   <li><a href="#knowledge-check" id="toc-knowledge-check" class="nav-link" data-scroll-target="#knowledge-check">Knowledge check</a></li>
@@ -288,7 +334,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../topics/index.html">Topics</a></li><li class="breadcrumb-item"><a href="../../topics/hardware/index.html">Hardware</a></li><li class="breadcrumb-item"><a href="../../topics/hardware/external-components.html">External components</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">External components</h1>
-<p class="subtitle lead">Overview of many external components, or peripheral devices, used by and for computers.</p>
+<p class="subtitle lead">Overview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors</p>
 </div>
 
 
@@ -306,7 +352,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">September 3, 2024</p>
+      <p class="date-modified">October 8, 2024</p>
     </div>
   </div>
     
@@ -337,9 +383,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="lesson-overview" class="level2">
 <h2 class="anchored" data-anchor-id="lesson-overview">Lesson overview</h2>
+<p>Learn the history, behavior, and important properties of Input and Output devices</p>
 <ul>
-<li><p>Learn the history, behavior, and important properties of Input and Output devices</p></li>
-<li><p>Input devices:</p>
+<li>Input devices:
 <ul>
 <li>Keyboards</li>
 <li>Mice</li>
@@ -348,7 +394,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Touchscreens</li>
 <li>Scanners</li>
 </ul></li>
-<li><p>Output devices:</p>
+<li>Output devices:
 <ul>
 <li>Monitors</li>
 <li>Projectors</li>
@@ -359,118 +405,99 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="input-devices" class="level2">
 <h2 class="anchored" data-anchor-id="input-devices">Input Devices</h2>
-<p>Allow a computer to accept data and instructions from a user.</p>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout-ncol="4">
-<div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
-<p><a href="_assets/external-components-trackball.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="_assets/external-components-trackball.jpg" class="img-fluid"></a></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
-<p><a href="_assets/external-components-writingpad.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="_assets/external-components-writingpad.png" class="img-fluid"></a></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
-<p><a href="_assets/external-components-webcam.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="_assets/external-components-webcam.png" class="img-fluid"></a></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
-<p><a href="_assets/external-components-keyboard.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="_assets/external-components-keyboard.png" class="img-fluid"></a></p>
-</div>
-</div>
-<div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
-<p><a href="_assets/external-components-ballmouse.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="_assets/external-components-ballmouse.png" class="img-fluid"></a></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
-<p><a href="_assets/external-components-ledmouse.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="_assets/external-components-ledmouse.png" class="img-fluid"></a></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
-<p><a href="_assets/external-components-lasermouse.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="_assets/external-components-lasermouse.png" class="img-fluid"></a></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
-<p><a href="_assets/external-components-ergonomickeyboard.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="_assets/external-components-ergonomickeyboard.jpg" class="img-fluid"></a></p>
-</div>
-</div>
-<div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
-<p><a href="_assets/external-components-barcodescanner.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="_assets/external-components-barcodescanner.png" class="img-fluid"></a></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
-<p><a href="_assets/external-components-microphone.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="_assets/external-components-microphone.png" class="img-fluid"></a></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
-<p><a href="_assets/external-components-biometric.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="_assets/external-components-biometric.png" class="img-fluid"></a></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
-<p><a href="_assets/external-components-joystick.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="_assets/external-components-joystick.png" class="img-fluid"></a></p>
-</div>
-</div>
-</div>
+<p><strong>Input Devices</strong> are devices that <em>accept</em> data and instructions <em>from</em> a user <em>to</em> a computer.</p>
 <section id="mouse" class="level3">
 <h3 class="anchored" data-anchor-id="mouse">Mouse</h3>
-<p>Used to navigate the graphical user interface (GUI).</p>
-<p>There are many types of mice, distinguished by tracking technology and by use case</p>
-<p><strong>Technologies</strong> :</p>
-<p>Mechanical mice use a ball to measure movement (obsolete now)</p>
-<p>Optical mice use light sources (first LED, then the more precise Laser) [^1]</p>
-<p><strong>Purposes:</strong></p>
+<p>Used to navigate the graphical user interface (GUI). There are many types of mice, distinguished by tracking technology and by use case</p>
+<p><strong>Technology</strong>:</p>
+<ul>
+<li>Mechanical mice use a ball to measure movement (obsolete now – why?)</li>
+<li>Optical mice use light sources (first LED, then more precise Laser).<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
+</ul>
+<p><strong>Purpose:</strong></p>
 <p>Many! “Gaming” (many buttons), Ergonomic (optimize human comfort), etc.</p>
 <div>
 
 </div>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><a href="_assets/external-components-woodmouse.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="_assets/external-components-woodmouse.png" class="img-fluid"></a></p>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/external-components16.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure caption."><img src="_assets/external-components16.png" class="img-fluid figure-img" alt="alt text"></a></p>
+<figcaption>Figure caption.</figcaption>
+</figure>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><a href="_assets/external-components-ballmouse.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="_assets/external-components-ballmouse.png" class="img-fluid"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/external-components17.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure caption."><img src="_assets/external-components17.png" class="img-fluid figure-img" alt="alt text"></a></p>
+<figcaption>Figure caption.</figcaption>
+</figure>
+</div>
 </div>
 </div>
 <div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><a href="_assets/external-components-ledmouse.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="_assets/external-components-ledmouse.png" class="img-fluid"></a></p>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/external-components18.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure caption."><img src="_assets/external-components18.png" class="img-fluid figure-img" alt="alt text"></a></p>
+<figcaption>Figure caption.</figcaption>
+</figure>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><a href="_assets/external-components-lasermouse.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="_assets/external-components-lasermouse.png" class="img-fluid"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/external-components19.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure caption."><img src="_assets/external-components19.png" class="img-fluid figure-img" alt="alt text"></a></p>
+<figcaption>Figure caption.</figcaption>
+</figure>
 </div>
 </div>
 </div>
-<hr>
-<p>[^1] Good notes on history and explanation of how/why they work “Optical mice use image sensors to image naturally occurring texture [on the surface they are placed]…. These surfaces, when lit at a grazing angle by a light emitting diode, cast distinct shadows that resemble a hilly terrain lit at sunset. Images of these surfaces are captured in continuous succession and compared with each other to determine how far the mouse has moved.” https://en.wikipedia.org/wiki/Computer_mouse https://en.wikipedia.org/wiki/Optical_mouse</p>
+</div>
 </section>
 <section id="keyboard" class="level3">
 <h3 class="anchored" data-anchor-id="keyboard">Keyboard</h3>
-<p>Used to enter text commands.</p>
-<p>Most commonly used is the QWERTY layout (1873).</p>
-<p>Other layouts include QWERTZ (Germany/Switzerland) and AZERTY (France) and DVORAK (nerds*)</p>
-<p>Variations include wired or wireless keyboards and numeric keypads.</p>
-<p>Ergonomic designs are recently becoming more popular.</p>
-<p>KVM (“keyboard, video and mouse”): control multiple devices from one keyboard/mouse combination</p>
-<div>
-
+<p>Used to enter text commands. Most commonly used is the QWERTY layout (used in typewriters since 1873). Other layouts include QWERTZ (Germany/Switzerland) and AZERTY (France) and DVORAK (nerds<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>)</p>
+<p>Variations include wired or wireless keyboards and numeric keypads. <em>Ergonomic</em> designs are recently becoming more popular.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><a href="_assets/external-components20.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure caption."><img src="_assets/external-components20.jpg" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:66.0%" alt="alt text"></a></p>
+</figure>
 </div>
-<div class="quarto-layout-panel" data-layout-ncol="3">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
-<p><a href="_assets/external-components-numpad.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="_assets/external-components-numpad.jpg" class="img-fluid"></a></p>
+<figcaption>Figure caption.</figcaption>
+</figure>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
-<p><a href="_assets/external-components-keyboard.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="_assets/external-components-keyboard.png" class="img-fluid"></a></p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><a href="_assets/external-components21.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure caption."><img src="_assets/external-components21.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:66.0%" alt="alt text"></a></p>
+</figure>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
-<p><a href="_assets/external-components-ergonomickeyboard.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="_assets/external-components-ergonomickeyboard.jpg" class="img-fluid"></a></p>
+<figcaption>Figure caption.</figcaption>
+</figure>
 </div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><a href="_assets/external-components22.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure caption."><img src="_assets/external-components22.jpg" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:66.0%" alt="alt text"></a></p>
+</figure>
 </div>
+<figcaption>Figure caption.</figcaption>
+</figure>
 </div>
 </section>
-<section id="others" class="level3">
-<h3 class="anchored" data-anchor-id="others">Others</h3>
+<section id="input-devices-others" class="level3">
+<h3 class="anchored" data-anchor-id="input-devices-others">Input Devices: Others</h3>
 <ul>
 <li>Gamepads or joysticks are used for playing games and running simulations.</li>
 <li>Digital / video cameras and webcams create images and videos.</li>
-<li>Microphones</li>
 <li>Biometric devices use features unique to an individual user (e.g.&nbsp;fingerprint).</li>
 <li>Touchscreens have a pressure-sensitive panel.</li>
 <li>Scanners digitize images or documents so they can be stored as files.</li>
@@ -481,28 +508,24 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="output-devices" class="level2">
 <h2 class="anchored" data-anchor-id="output-devices">Output Devices</h2>
+<p><strong>Output Devices</strong> are devices that <em>present</em> data and information <em>to</em> the user <em>from</em> a computer.</p>
 <section id="monitors" class="level3">
 <h3 class="anchored" data-anchor-id="monitors">Monitors</h3>
-<ul>
-<li>Different types of monitors use different technologies to create an image.</li>
-<li>However, the common principles are the same:
+<p>There are many different types of monitors use different technologies to create an image. However, the common principles are the same:</p>
 <ul>
 <li>Digital representation of image to display is sent to the monitor</li>
 <li>The monitor produces each <strong>pixel</strong> (the “atom” of monitor displays) using some deterministic physical technology</li>
 <li>Light from the monitor reaches us as a useful/pleasing image.</li>
-</ul></li>
-<li>The following slides are the main technologies used today (from oldest to latest)</li>
 </ul>
-<section id="crt-monitors" class="level4">
-<h4 class="anchored" data-anchor-id="crt-monitors">CRT Monitors</h4>
-<ul>
-<li>CRT (Cathode ray tube)
+<p>The following sections are the main technologies used today (from oldest to newest)</p>
+<section id="cathode-ray-tube-crt" class="level4">
+<h4 class="anchored" data-anchor-id="cathode-ray-tube-crt">Cathode Ray Tube (CRT)</h4>
+<p>Cathode Ray Tube (CRT) monitors are very complicated, very cool, moderately dangerous, and mostly obsolete!</p>
 <ul>
 <li>The most common type of consumer and industry television before ~2010</li>
-<li>A <strong>tungsten coil</strong> is heated in a vacuum until it sheds electrons, those electrons are accelerated by an electric field and guided by magnets to hit a phosphor coated glass display to emit light in a pixel grid</li>
-<li><strong>Obsolete</strong> since today there are lighter, simpler higher resolution technologies</li>
+<li>Basically: a <strong>tungsten coil</strong> is heated in a vacuum until it sheds electrons, those electrons are accelerated by an electric field and guided by magnets to hit a phosphor coated glass display to emit light in a pixel grid</li>
+<li><strong>Obsolete</strong> since today their are lighter, simpler higher resolution technologies</li>
 <li>Still used today for some applications due to <strong>zero latency</strong> . For instance, I use one for playing NES Tetris!</li>
-</ul></li>
 </ul>
 <div>
 
@@ -510,134 +533,342 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><a href="_assets/external-components-CRT1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="_assets/external-components-CRT1.png" class="img-fluid"></a></p>
+<p><a href="_assets/external-components-CRT1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="_assets/external-components-CRT1.png" class="img-fluid"></a></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><a href="_assets/external-components-CRT2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img src="_assets/external-components-CRT2.png" class="img-fluid"></a></p>
+<p><a href="_assets/external-components-CRT2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="_assets/external-components-CRT2.png" class="img-fluid"></a></p>
 </div>
 </div>
 </div>
+<hr>
 </section>
-<section id="plasma-monitors" class="level4">
-<h4 class="anchored" data-anchor-id="plasma-monitors">Plasma Monitors</h4>
+<section id="plasma" class="level4">
+<h4 class="anchored" data-anchor-id="plasma">Plasma</h4>
+<p>Plasma monitors use tiny cells of ionised gas that light up when stimulated by electricity.</p>
 <ul>
-<li>Plasma
-<ul>
-<li>Tiny cells of ionized gas that light up when stimulated by electricity.</li>
 <li>Often used in home theatre applications due to accurate video representation.</li>
-<li>High levels of brightness, deep black levels and very wide color range.</li>
+<li>High levels of brightness, deep black levels and very wide colour range.</li>
 <li>Have shorter life span, susceptible to “screen burn-in” (this is why screensavers are called “screen savers”! Same for CRT).</li>
-</ul></li>
 <li>(+) Plasma cell will produce light that looks good from every angle, it was high refresh rate (videos are smoother)</li>
 <li>(-) BUT! Consumes a lot of electricity</li>
 <li>(-) Doesn’t work at high altitudes! (low pressure)</li>
 </ul>
-<p><a href="_assets/external-components-29.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img src="_assets/external-components-29.png" class="img-fluid"></a></p>
-<p>Plasma is a chemical state of molecules when molecules in state of gas are heated up (excited with electric charge). Typical Plasma displays have two glass plates sandwiching hundreds of thousands of cells containing plasma. Two sets of electrodes will provide some charges which will excite the plasma Which will release photons at three different wavelength (either red, green or blue)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/external-components-29.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Plasma is a chemical state of molecules when molecules in state of gas are heated up (excited with electric charge). Typical Plasma displays have two glass plates sandwiching hundreds of thousands of cells containing plasma. Two sets of electrodes will provide some charges which will excite the plasma Which will release photons at three different wavelength (either red, green or blue)"><img src="_assets/external-components-29.png" class="img-fluid figure-img" alt="Plasma is a chemical state of molecules when molecules in state of gas are heated up (excited with electric charge). Typical Plasma displays have two glass plates sandwiching hundreds of thousands of cells containing plasma. Two sets of electrodes will provide some charges which will excite the plasma Which will release photons at three different wavelength (either red, green or blue)"></a></p>
+<figcaption>Plasma is a chemical state of molecules when molecules in state of gas are heated up (excited with electric charge). Typical Plasma displays have two glass plates sandwiching hundreds of thousands of cells containing plasma. Two sets of electrodes will provide some charges which will excite the plasma Which will release photons at three different wavelength (either red, green or blue)</figcaption>
+</figure>
+</div>
 </section>
-<section id="lcd-monitors" class="level4">
-<h4 class="anchored" data-anchor-id="lcd-monitors">LCD Monitors</h4>
-<p><a href="_assets/external-components-LCDvsLED.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img src="_assets/external-components-LCDvsLED.jpg" class="img-fluid"></a></p>
+<section id="liquid-crystal-display-lcd" class="level4">
+<h4 class="anchored" data-anchor-id="liquid-crystal-display-lcd">Liquid Crystal Display (LCD)</h4>
+<p>An LCD Screen is made up of layers of very thin glass, liquid crystal, metal and dielectrics. <em>Liquid cystal</em> is a modelcule between liquid (not ordered and constant motion) and crystal (ordered fashion). This technology allows for precise control of color without the need to ionise gas with powerful electronics.</p>
 <ul>
-<li>LCD (Liquid crystal display)
-<ul>
-<li>Commonly used in <strong>flat</strong> panel monitors and laptops.</li>
-<li>Consists of a <strong>white</strong> backlight (in light, white = all color’s combined), two polarizing filters, and liquid crystal solution between them to transform the backlight into a coherent pixel grid.</li>
+<li>Commonly used in flat panel monitors and laptops.</li>
+<li>Consists of a <strong>white</strong> backlight (in light, white = all colours combined), two polarizing filters, and liquid crystal solution between them to transform the backlight into a coherent pixel grid.</li>
 <li>An electronic current aligns and controls the crystals so that light can pass through them.</li>
-</ul></li>
-<li>(+) Allows to have flat screens!</li>
+<li>(+) Allow the use of <strong>flat</strong> screens!</li>
 </ul>
-<p><a href="_assets/external-components-32.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img src="_assets/external-components-32.png" class="img-fluid"></a></p>
-<p>For more information: <a href="https://www.youtube.com/watch?v=Gx-JVoOFYhs&amp;ab_channel=e-learning%C3%A9lectronique">https://www.youtube.com/watch?v=Gx-JVoOFYhs&amp;ab_channel=e-learning%C3%A9lectronique</a></p>
-<hr>
-<p>An LCD Screen is made up of layers of very thin glass (2), liquid crystal (5um), metal and dielectrics Liquid cystal is a modelcule between liquid (not ordered and constant motion) and crystal (ordered fashion) Liquid crytsal is organic (made of carbone and oxygen), they can be smectic (parallel), nematic (same direction not layered), cholesteric (helix order) LCD TN (Twistic nematic) cheapest The polarizing filter lets only one orientation of the light pass through. To transform the white light into colored light, a color filter is placed on the outter face ( made of pigments which will absorb all colors execept the color that is passing (red, blue or green)</p>
-<p><a href="_assets/external-components-34.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-26"><img src="_assets/external-components-34.jpg" class="img-fluid"></a></p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><a href="_assets/external-components-32.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="The polarizing filter lets only one orientation of the light pass through. To transform the white light into colored light, a color filter is placed on the outter face ( made of pigments which will absorb all colors execept the color that is passing (red, blue or green)"><img src="_assets/external-components-32.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:66.0%" alt="alt text."></a></p>
+</figure>
+</div>
+<figcaption>The polarizing filter lets only one orientation of the light pass through. To transform the white light into colored light, a color filter is placed on the outter face ( made of pigments which will absorb all colors execept the color that is passing (red, blue or green)</figcaption>
+</figure>
+</div>
+</section>
+<section id="light-emitting-diode-led" class="level4">
+<h4 class="anchored" data-anchor-id="light-emitting-diode-led">Light emitting diode (LED)</h4>
 <ul>
-<li>LED (Light emitting diode)
-<ul>
-<li>Same as LCD but uses <strong>LED backlighting </strong> instead of a white backlight with crystal liquid to light the display.</li>
-<li>The brightness of each RGB LED is controlled programmatically to produce each pixel</li>
+<li>An LCD display that uses LED backlighting instead of a white backlight to light the display. The brightness of each RGB LED is controlled programmatically to produce each pixel</li>
 <li><strong>(+) Thinner</strong> (no layers), lighter and brighter, and displays better contrast</li>
 <li><strong>(+) Lower power </strong> consumption.</li>
-</ul></li>
 </ul>
-<p><a href="_assets/external-components-35.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-27"><img src="_assets/external-components-35.jpg" class="img-fluid"></a></p>
-<p>For more information: <a href="https://www.youtube.com/watch?v=96QwqOZ4xjE&amp;ab_channel=Lesics">https://www.youtube.com/watch?v=96QwqOZ4xjE&amp;ab_channel=Lesics</a></p>
-<ul>
-<li>OLED (Organic LED)
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><a href="_assets/external-components-LCDvsLED.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Figure caption."><img src="_assets/external-components-LCDvsLED.jpg" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:66.0%" alt="alt text."></a></p>
+</figure>
+</div>
+<figcaption>Figure caption.</figcaption>
+</figure>
+</div>
+<p>For more information: <a href="https://www.youtube.com/watch?v=Gx-JVoOFYhs&amp;ab_channel=e-learning%C3%A9lectronique">https://www.youtube.com/watch?v=Gx-JVoOFYhs&amp;ab_channel=e-learning%C3%A9lectronique</a></p>
+</section>
+<section id="organic-led-oled" class="level4">
+<h4 class="anchored" data-anchor-id="organic-led-oled">Organic LED (OLED)</h4>
+<p>OLED displays are similar to LED, but no backlighting required – the material used to create these displays emits light when an electrical current is applied.</p>
 <ul>
 <li>Similar to LED, but <strong>no backlighting </strong> required – the material used to create these displays emits light when <strong>an electrical current is applied</strong> .</li>
-<li>(+)Allows for <strong>perfect representation of dark colors </strong> unlike all other monitor technologies. Also allows for flexible and transparent monitors</li>
-<li>(-)More expensive to produce, more susceptible to screen-burn-in than LCD or LED (but better than Plasma and CRT in this respect)</li>
-</ul></li>
+<li>(+) Allows for <strong>perfect representation of dark colors </strong> unlike all other monitor technologies. Also allows for flexible and transparent monitors</li>
+<li>(-) More expensive to produce, more susceptible to screen-burn-in than LCD or LED (but better than Plasma and CRT in this respect)</li>
 </ul>
-<p><a href="_assets/external-components-36.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-28"><img src="_assets/external-components-36.jpg" class="img-fluid"></a></p>
-<p>For more information: <a href="https://www.youtube.com/watch?v=xAMhX3Drq14&amp;ab_channel=Lesics">https://www.youtube.com/watch?v=xAMhX3Drq14&amp;ab_channel=Lesics</a></p>
-<ul>
-<li>DLP (Digital light processing)
-<ul>
-<li>Used in projectors.</li>
-<li>Spinning color wheel with microprocessor-controlled array of mirrors.</li>
-<li>Each mirror corresponds to a specific pixel, reflecting light.</li>
-<li>Monochrome image is created using up to 1024 shades of grey.</li>
-<li>Color wheel then adds to complete the projected image.</li>
-</ul></li>
-</ul>
+<p>Here’s a great video (8 mins) explaining both physical and software technologies required to make the above monitors work: <em><a href="https://www.youtube.com/watch?v=uyLDA9QT8EY">https://www.youtube.com/watch?v=uyLDA9QT8EY</a></em></p>
+<p>With LCD, LED, and OLED, we finally get to the most modern monitor technologies. These are used in our labs, most computers, laptops. They’re ordered here approximately in order of lowest (LCD) -&gt; highest (OLED) quality, though pros and cons exist for each.</p>
+<p>See here for more information: <em><a href="https://en.wikipedia.org/wiki/Comparison_of_CRT,_LCD,_Plasma,_and_OLED_displays">https://en.wikipedia.org/wiki/Comparison_of_CRT,_LCD,_Plasma,_and_OLED_displays</a></em>.</p>
+<hr>
 </section>
 </section>
 <section id="printers" class="level3">
 <h3 class="anchored" data-anchor-id="printers">Printers</h3>
-<ul>
-<li>Printers take <strong>data</strong> from a computer and generate output on paper.
-<ul>
-<li>Basic principles
+<p>Printers take data from a computer and generate output on paper: Basic principles</p>
 <ul>
 <li>Similar to monitor (high quantity of small, well placed “pixels” → the visual quality of a coherent image)</li>
 <li>Rather than orienting light photons on a screen, printers deposit liquid stains on to paper. The physical setup is different, but the same principles are at work.</li>
-</ul></li>
-</ul></li>
 </ul>
-<p><a href="_assets/external-components-printerbread.png" class="lightbox" data-gallery="quarto-lightbox-gallery-29"><img src="_assets/external-components-printerbread.png" class="img-fluid"></a></p>
-<p>A high enough quantity of toasted bread produces the qualitative impression of a human eye in this “piece” of art. Printers (and monitors) use much higher quantities of “pixels” than depicted here!</p>
-<section id="inkjet-printers" class="level4">
-<h4 class="anchored" data-anchor-id="inkjet-printers">Inkjet Printers</h4>
-<p>Uses tiny droplets of ink to produce images.</p>
-<p>Uses cyan, magenta and blue instead of RGB like screens!</p>
-<p>Heat is applied to an ink reservoir, which pushes ink bubbles through a nozzle in a controlled manner.</p>
-<p>The ink liquid droplets are smaller in diameter than a human hair! Many of these added together produce the quality of a coherent image.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/external-components28.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="A high enough quantity of toasted bread produces the qualitative impression of a human eye in this “piece” of art. Printers (and monitors) use much higher quantities of “pixels” than depicted here!"><img src="_assets/external-components28.png" class="img-fluid figure-img" alt="A high enough quantity of toasted bread produces the qualitative impression of a human eye in this “piece” of art. Printers (and monitors) use much higher quantities of “pixels” than depicted here!"></a></p>
+<figcaption>A high enough quantity of toasted bread produces the qualitative impression of a human eye in this “piece” of art. Printers (and monitors) use much higher quantities of “pixels” than depicted here!</figcaption>
+</figure>
+</div>
+<section id="dot-matrix-printers" class="level4">
+<h4 class="anchored" data-anchor-id="dot-matrix-printers">Dot-matrix printers</h4>
+<ul>
+<li>Uses print heads containing pins which produce patterns of dots on the paper by mechanical impact (pressing).</li>
+<li>Inexpensive and typically print at a speed of 100 - 600 characters per second.</li>
+<li>(Optional) See <em><a href="https://en.wikipedia.org/wiki/Dot_matrix_printer">https://en.wikipedia.org/wiki/Dot_matrix_printer</a></em> for more detail on history and technology</li>
+<li>While still in use for particular applications (printing receipts for e.g.), these are now obsoleted by…</li>
+</ul>
+</section>
+<section id="ink-jet-printers" class="level4">
+<h4 class="anchored" data-anchor-id="ink-jet-printers">Ink-jet printers</h4>
+<ul>
+<li>Uses tiny droplets of ink to produce images.</li>
+<li>Heat is applied to an ink reservoir, which pushes ink bubbles through a nozzle in a controlled manner.</li>
+<li>The ink liquid droplets are smaller in diameter than a human hair! Many of these added together produce the quality of a coherent image.</li>
+<li>Quieter than dot-matrix, and also provide better speed and higher quality.</li>
+</ul>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/external-components30.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Ink-based color printer."><img src="_assets/external-components30.png" class="img-fluid figure-img" alt="Ink-based color printer."></a></p>
+<figcaption>Ink-based color printer.</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/external-components31.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Ink jet cartridge operation. Image source: youtube.com"><img src="_assets/external-components31.png" class="img-fluid figure-img" alt="Ink jet cartridge operation. Image source: youtube.com"></a></p>
+<figcaption>Ink jet cartridge operation. Image source: <a href="https://www.youtube.com/watch?v=JEVurb1uVFA">youtube.com</a></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="laser-printers" class="level4">
 <h4 class="anchored" data-anchor-id="laser-printers">Laser Printers</h4>
-<p><a href="_assets/external-components-39.png" class="lightbox" data-gallery="quarto-lightbox-gallery-30"><img src="_assets/external-components-39.png" class="img-fluid"></a></p>
 <ul>
 <li>Expensive when they were initially introduced.</li>
 <li>Produce high-quality output quietly at a high speed.</li>
-<li>Produces images by directing a <strong>laser beam </strong> at a mirror which bounces the beam onto a drum.
+<li>Produces images by directing a laser beam at a mirror which bounces the beam onto a drum.
 <ul>
-<li>The drum contains a <strong>special coating </strong> to which the toner (ink powder) sticks.</li>
-<li>A laser beam then conveys information to the drum, <strong>neutralizing</strong> and detaching some toner.</li>
+<li>The drum contains a special coating to which the toner (ink powder) sticks.</li>
+<li>A laser beam then conveys information to the drum, neutralizing and detaching some toner.</li>
 <li>As the paper rolls by the drum, the toner is transferred onto the paper. A hot roller then bonds toner to the paper.</li>
 </ul></li>
 </ul>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><a href="_assets/external-components32.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17" title="Figure caption."><img src="_assets/external-components32.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:66.0%" alt="alt text."></a></p>
+</figure>
+</div>
+<figcaption>Figure caption.</figcaption>
+</figure>
+</div>
 </section>
+</section>
+</section>
+<section id="connectors" class="level2">
+<h2 class="anchored" data-anchor-id="connectors">Connectors</h2>
+<p><strong>Connectors</strong> are how to get the computer to talk to all these output devices!</p>
+<section id="cables" class="level3">
+<h3 class="anchored" data-anchor-id="cables">Cables</h3>
+<p>Some technical terms:</p>
+<ul>
+<li><strong>Cable (electric)</strong> : The insulated copper wire that carries electrical/digital signals from devices to/from computers</li>
+<li><strong>Cable (optical)</strong> : The insulated glass tube that carries digital signals in the form of <em>light</em> between devices and computers</li>
+<li><strong>Port</strong> : The slot where the insertable end of USB cable is connected to the computer</li>
+<li><strong>“Male” / “Female” cable ends</strong> : Distinguishing between the insertable end and the receptacle end for cables</li>
+<li><strong>Converter</strong> : A device that allows different standards/types of connectors to be used together</li>
+</ul>
+<section id="electrical-cables" class="level4">
+<h4 class="anchored" data-anchor-id="electrical-cables">Electrical cables</h4>
+<p>transmit an electrical signal on a conducting wire, insulated to protect the signal/surroundings</p>
+<p><a href="_assets/external-components34.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="_assets/external-components34.png" class="img-fluid"></a></p>
+</section>
+<section id="optical-cables" class="level4">
+<h4 class="anchored" data-anchor-id="optical-cables">Optical cables</h4>
+<p>transmit signal in the form of light. Very fast! (speed of light in glass).</p>
+<p><a href="_assets/external-components33.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="_assets/external-components33.png" class="img-fluid"></a></p>
+<p>A short paper (5 pages) comparing the two cable technologies in more detail: <em><a href="https://optronicsplus.net/downloads/whitepapers/OP_Fibre_Optics_vs_Copper_Cabling_Understanding_the_Difference_White_Paper_Rev.1.0.pdf">Fibre Optics vs Copper Cabling: Understanding the Differences</a></em></p>
+</section>
+</section>
+<section id="usb" class="level3">
+<h3 class="anchored" data-anchor-id="usb">USB</h3>
+<p><strong>Universal Serial Bus</strong> (we’ll talk about the meaning of the last two words soon!) is used to connect most modern devices to computers. Back in the day, mice/keyboards/external storage/speakers/etc. all had different cables. These have now been (mostly) unified under the USB standard.</p>
+<p>USB connectors can transmit both <strong>power</strong> (e.g.&nbsp;charging phones) and <strong>information</strong> (data). Despite being “Universal” there are an incredible number of USB types.</p>
+<hr>
+<p>USB “Number” standards refer to the transmission speed and power of the cables</p>
+<ul>
+<li>e.g.&nbsp;USB 3 is faster/more power than USB 2 and USB 2</li>
+</ul>
+<p>USB “Letter” standards refer to the physical design of the connector and the port</p>
+<ul>
+<li>e.g.&nbsp;USB C and USB A are incompatible interfaces, cannot be interchanged.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/external-components36.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20" title="Figure caption."><img src="_assets/external-components36.png" class="img-fluid figure-img" alt="Figure caption."></a></p>
+<figcaption>Figure caption.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/external-components37.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21" title="Newer standards are backwards compatible (e.g.&nbsp;USB 3.1 cable works in USB 1.1 port at USB 1.1 speed/power)"><img src="_assets/external-components37.png" class="img-fluid figure-img" alt="Newer standards are backwards compatible (e.g.&nbsp;USB 3.1 cable works in USB 1.1 port at USB 1.1 speed/power)"></a></p>
+<figcaption>Newer standards are <strong>backwards compatible</strong> (e.g.&nbsp;USB 3.1 cable works in USB 1.1 port at USB 1.1 speed/power)</figcaption>
+</figure>
+</div>
+</section>
+<section id="audio" class="level3">
+<h3 class="anchored" data-anchor-id="audio">Audio</h3>
+<p>Most commonly the standard headphone jack (TSR connector). Available in several sizes, most commonly 3.5mm or ⅛” mini audio jack. Can be color coded - microphone (pink), speaker (green).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/external-components38.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="Figure caption."><img src="_assets/external-components38.png" class="img-fluid figure-img" alt="Figure caption."></a></p>
+<figcaption>Figure caption.</figcaption>
+</figure>
+</div>
+<p>For higher-end audio, we can use fiberoptic cables as these can transmit larger amounts of data more quickly, which is required for producing a high-quality audio signal.</p>
+</section>
+<section id="video" class="level3">
+<h3 class="anchored" data-anchor-id="video">Video</h3>
+<p><strong>VGA</strong> cable is commonly used for computer monitors (15-pins). Low resolutions, now obsolete. There exist converter cables to connect VGA monitors to newer computers.</p>
+<p><strong>MiniVGA</strong> is a variant found on laptops.</p>
+<p><strong>DVI</strong> was once the common modern upgrade from VGA, capable of higher resolutions. MiniDVI and MicroDVI on “thin” laptops.</p>
+<p><strong>S-Video</strong> commonly used for DVD players, camcorders and older consoles.</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/external-components42.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23" title="VGA, DVI, and RCA cables"><img src="_assets/external-components42.png" class="img-fluid figure-img" alt="VGA, DVI, and RCA cables"></a></p>
+<figcaption>VGA, DVI, and RCA cables</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/external-components43.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24" title="DVI. Can be distinguished from VGA by noticing that it is a much wider interface with many more pins."><img src="_assets/external-components43.png" class="img-fluid figure-img" alt="DVI. Can be distinguished from VGA by noticing that it is a much wider interface with many more pins."></a></p>
+<figcaption>DVI. Can be distinguished from VGA by noticing that it is a much wider interface with many more pins.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/external-components44.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25" title="S-video"><img src="_assets/external-components44.png" class="img-fluid figure-img" alt="S-video"></a></p>
+<figcaption>S-video</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/external-components41.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26" title="A converter from mini-DP to three possible outputs: DP, DVI, and HDMI"><img src="_assets/external-components41.png" class="img-fluid figure-img" alt="A converter from mini-DP to three possible outputs: DP, DVI, and HDMI"></a></p>
+<figcaption>A converter from mini-DP to three possible outputs: DP, DVI, and HDMI</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p><strong>RCA cables</strong> include composite video (yellow) and stereo audio cables (red for right; white/black for left). Component video offers a better picture.</p>
+<p><strong>HDMI</strong> is the new standard for audio and video transmission in a single cable.</p>
+<p><strong>DisplayPort</strong> (and Mini DisplayPort) more commonly used in computers.</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/external-components45.png" class="lightbox" data-gallery="quarto-lightbox-gallery-27" title="Figure caption."><img src="_assets/external-components45.png" class="img-fluid figure-img" alt="Figure caption."></a></p>
+<figcaption>Figure caption.</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/external-components46.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28" title="Figure caption."><img src="_assets/external-components46.png" class="img-fluid figure-img" alt="Figure caption."></a></p>
+<figcaption>Figure caption.</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/external-components47.png" class="lightbox" data-gallery="quarto-lightbox-gallery-29" title="Figure caption."><img src="_assets/external-components47.png" class="img-fluid figure-img" alt="Figure caption."></a></p>
+<figcaption>Figure caption.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<p>eSATA is used internally to connect the hard drive to the motherboard but can also be used for portable hard drives.</p>
+<p><a href="_assets/external-components49.png" class="lightbox" data-gallery="quarto-lightbox-gallery-30"><img src="_assets/external-components49.png" class="img-fluid"></a></p>
+</section>
+<section id="networking" class="level3">
+<h3 class="anchored" data-anchor-id="networking">Networking</h3>
+<p>Telephone cable (RJ11) used for connecting to the internet through DSL/ADSL modems. Standard phone cable has 4 wires; connector has 4 pins. Clip helps to maintain tight connection.</p>
+<p>Ethernet (RJ45) is the standard for wired networking. Based on Cat5 twisted pair cable, made from 8 individual wires. Connector looks similar to phone plug but is thicker and wider. Also uses a clip to maintain tight connection.</p>
+<p><a href="_assets/external-components50.png" class="lightbox" data-gallery="quarto-lightbox-gallery-31"><img src="_assets/external-components50.png" class="img-fluid"></a></p>
+<p><a href="_assets/external-components51.png" class="lightbox" data-gallery="quarto-lightbox-gallery-32"><img src="_assets/external-components51.png" class="img-fluid"></a></p>
 </section>
 </section>
 <section id="exercises" class="level2">
 <h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
-<p>See Lab</p>
 </section>
 <section id="knowledge-check" class="level2">
 <h2 class="anchored" data-anchor-id="knowledge-check">Knowledge check</h2>
-<p>The following questions invite you to reflect on the key information learned in this lesson. If you can’t answer the question, you can click the corresponding link to review the topic more closely. Future assignments and tests may be based on questions like these:</p>
 </section>
 <section id="additional-resources" class="level2">
 <h2 class="anchored" data-anchor-id="additional-resources">Additional resources</h2>
-<p>This section contains helpful links to related content. You aren’t required to study these in detail, but it never hurts to learn more.</p>
 
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Good notes on history and explanation of how/why they work “Optical mice use image sensors to image naturally occurring texture [on the surface they are placed]…. These surfaces, when lit at a grazing angle by a light emitting diode, cast distinct shadows that resemble a hilly terrain lit at sunset. Images of these surfaces are captured in continuous succession and compared with each other to determine how far the mouse has moved.” https://en.wikipedia.org/wiki/Computer_mouse https://en.wikipedia.org/wiki/Optical_mouse<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>note: this is very hypocritical coming from me. don’t mind my bad jokes!<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1209,8 +1440,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../topics/hardware/internal-components.html" class="pagination-link" aria-label="Internal components">
-        <span class="nav-page-text">Internal components</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../topics/hardware/external-components-v1.html" class="pagination-link" aria-label="External components V1">
+        <span class="nav-page-text">External components V1</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1234,7 +1465,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"loop":true,"openEffect":"fade","selector":".lightbox","descPosition":"bottom","closeEffect":"fade"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"fade","selector":".lightbox","loop":true,"closeEffect":"fade","descPosition":"bottom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

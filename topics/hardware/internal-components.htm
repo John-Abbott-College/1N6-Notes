@@ -11,8 +11,8 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
-  <meta name="dcterms.date" content="2024-09-05">
-  <title>{{&lt; var course.title &gt;}} – Internal components</title>
+  <meta name="dcterms.date" content="2024-09-10">
+  <title>{{&lt; var course.title &gt;}} – Internal Components</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -322,8 +322,8 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Internal components – Technical Support">
-<meta property="og:description" content="Overview of the main internal components of computers.">
+<meta property="og:title" content="Internal Components – Technical Support">
+<meta property="og:description" content="Explains the most important internal components of desktop computers. Processing, memory, storage, and communication.">
 <meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/hardware/_assets/favicons/favicon-32x32.png">
 <meta property="og:site_name" content="{{< var course.title >}}">
 </head>
@@ -332,101 +332,145 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Internal components</h1>
-  <p class="subtitle">Overview of the main internal components of computers.</p>
+  <h1 class="title">Internal Components</h1>
+  <p class="subtitle">Explains the most important internal components of desktop computers. Processing, memory, storage, and communication.</p>
 
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">2024-09-05</p>
+  <p class="date">2024-09-10</p>
 </section><section id="TOC">
 <nav role="doc-toc"> 
 <h2 id="toc-title">Table of contents</h2>
 <ul>
+<li><a href="#/internal-components" id="/toc-internal-components">Internal Components</a></li>
+<li><a href="#/important-things-to-know-about-components" id="/toc-important-things-to-know-about-components">Important things to know about components</a></li>
+<li><a href="#/internal-components-case" id="/toc-internal-components-case">Internal Components: Case</a></li>
+<li><a href="#/power-supply" id="/toc-power-supply">Power Supply</a></li>
+<li><a href="#/uninterruptible-power-supply" id="/toc-uninterruptible-power-supply">Uninterruptible Power Supply</a></li>
+<li><a href="#/power-supply-1" id="/toc-power-supply-1">Power Supply</a></li>
+<li><a href="#/power-supply-connectors" id="/toc-power-supply-connectors">Power Supply Connectors</a></li>
+<li><a href="#/power-supply-ratings" id="/toc-power-supply-ratings">Power Supply Ratings</a></li>
+<li><a href="#/motherboard-overview" id="/toc-motherboard-overview">Motherboard (overview)</a></li>
+<li><a href="#/internal-components-motherboard-form-factors-i" id="/toc-internal-components-motherboard-form-factors-i">Internal Components: Motherboard – Form Factors (I)</a></li>
+<li><a href="#/motherboard---ports" id="/toc-motherboard---ports">Motherboard - Ports</a></li>
+<li><a href="#/internal-components-connectors" id="/toc-internal-components-connectors">Internal Components: Connectors</a></li>
 <li><a href="#/types-of-connectors" id="/toc-types-of-connectors">Types of connectors</a></li>
-<li><a href="#/motherboard-overview" id="/toc-motherboard-overview">4) Motherboard (overview)</a></li>
-<li><a href="#/motherboard---form-factors" id="/toc-motherboard---form-factors">4) Motherboard - Form Factors</a></li>
-<li><a href="#/motherboard-cpu-socket" id="/toc-motherboard-cpu-socket">4.1) Motherboard – CPU Socket</a></li>
-<li><a href="#/cpu" id="/toc-cpu">5) CPU</a></li>
+<li><a href="#/motherboard-expansion-slots" id="/toc-motherboard-expansion-slots">Motherboard – Expansion Slots</a></li>
+<li><a href="#/motherboard-cpu-socket" id="/toc-motherboard-cpu-socket">Motherboard – CPU Socket</a></li>
 <li><a href="#/how-to-connect-a-cpu" id="/toc-how-to-connect-a-cpu">How to Connect a CPU?</a></li>
+<li><a href="#/cpu" id="/toc-cpu">CPU</a></li>
 <li><a href="#/cpu-brands" id="/toc-cpu-brands">CPU Brands</a></li>
-<li><a href="#/cpu-core-components" id="/toc-cpu-core-components">CPU Core Components</a></li>
-<li><a href="#/cpu-analogy-man-in-a-box" id="/toc-cpu-analogy-man-in-a-box">CPU Analogy: “Man in a Box”</a></li>
-<li><a href="#/codebook" id="/toc-codebook">Codebook</a></li>
-<li><a href="#/registers" id="/toc-registers">Registers</a></li>
-<li><a href="#/clock" id="/toc-clock">Clock</a></li>
-<li><a href="#/cooling-devices---fans" id="/toc-cooling-devices---fans">6.1) Cooling Devices - Fans</a></li>
-<li><a href="#/activity-cooling-devices-fans-vs-liquid-cooling" id="/toc-activity-cooling-devices-fans-vs-liquid-cooling">Activity: Cooling devices Fans vs Liquid cooling</a></li>
-<li><a href="#/cooling-devices-heat-sinks" id="/toc-cooling-devices-heat-sinks">6.2) Cooling Devices – Heat sinks</a></li>
-<li><a href="#/internal-components-general-overview" id="/toc-internal-components-general-overview">Internal Components:&nbsp;General Overview</a></li>
-<li><a href="#/motherboard-ram-slots" id="/toc-motherboard-ram-slots">4.2) Motherboard – RAM slots</a></li>
-<li><a href="#/main-memory" id="/toc-main-memory">5) Main Memory</a></li>
-<li><a href="#/main-memory-cont." id="/toc-main-memory-cont.">5) Main Memory (cont.)</a></li>
-<li><a href="#/motherboard-expansion-slots" id="/toc-motherboard-expansion-slots">4.1) Motherboard – Expansion Slots</a></li>
-<li><a href="#/expansion-slots" id="/toc-expansion-slots">5) Expansion Slots</a></li>
-<li><a href="#/graphics-cards" id="/toc-graphics-cards">7) Graphics Cards</a></li>
-<li><a href="#/gpu-vs-cpu" id="/toc-gpu-vs-cpu">GPU VS CPU</a></li>
+<li><a href="#/cooling-devices" id="/toc-cooling-devices">Cooling Devices</a></li>
+<li><a href="#/cooling-devices---fans" id="/toc-cooling-devices---fans">Cooling Devices - Fans</a></li>
+<li><a href="#/cooling-devices-heat-sinks" id="/toc-cooling-devices-heat-sinks">Cooling Devices – Heat sinks</a></li>
+<li><a href="#/memory---ram" id="/toc-memory---ram">Memory - RAM</a></li>
+<li><a href="#/main-memory" id="/toc-main-memory">Main Memory</a></li>
+<li><a href="#/main-memory-cont." id="/toc-main-memory-cont.">Main Memory (cont.)</a></li>
+<li><a href="#/memory-modules-design-types" id="/toc-memory-modules-design-types">Memory Modules Design Types</a></li>
+<li><a href="#/memory-modules-generations-oldest-to-newest-approximately" id="/toc-memory-modules-generations-oldest-to-newest-approximately">Memory Modules Generations(oldest to newest, approximately)</a></li>
+<li><a href="#/graphics-cards-gpu" id="/toc-graphics-cards-gpu">Graphics Cards (GPU)</a></li>
+<li><a href="#/gpu-cpu-things-in-common" id="/toc-gpu-cpu-things-in-common">GPU &amp; CPU, things in common</a></li>
 <li><a href="#/cpu-vs-gpu" id="/toc-cpu-vs-gpu">CPU vs GPU</a></li>
-<li><a href="#/gpu-vs-cpu-1" id="/toc-gpu-vs-cpu-1">GPU vs CPU</a></li>
-<li><a href="#/storage-devices" id="/toc-storage-devices">8) Storage Devices</a></li>
-<li><a href="#/storage-devices-cont." id="/toc-storage-devices-cont.">7) Storage Devices (cont.)</a></li>
-<li><a href="#/storage-devices-floppy-drive" id="/toc-storage-devices-floppy-drive">7.1) Storage Devices: Floppy Drive</a></li>
-<li><a href="#/storage-devices-hard-drive" id="/toc-storage-devices-hard-drive">7.2) Storage Devices: Hard Drive</a></li>
-<li><a href="#/storage-devices-tape-drive" id="/toc-storage-devices-tape-drive">7.4) Storage Devices: Tape Drive</a></li>
-<li><a href="#/storage-devices-optical-drive" id="/toc-storage-devices-optical-drive">7.5) Storage Devices: Optical Drive</a></li>
-<li><a href="#/storage-devices-external-flash-drive" id="/toc-storage-devices-external-flash-drive">7.6) Storage Devices: External Flash Drive</a></li>
+<li><a href="#/gpu-vs-cpu" id="/toc-gpu-vs-cpu">GPU vs CPU</a></li>
+<li><a href="#/storage-devices" id="/toc-storage-devices">Storage Devices</a></li>
+<li><a href="#/storage-devices-cont." id="/toc-storage-devices-cont.">Storage Devices (cont.)</a></li>
+<li><a href="#/storage-devices-floppy-drive" id="/toc-storage-devices-floppy-drive">Storage Devices: Floppy Drive</a></li>
+<li><a href="#/storage-devices-hard-drive" id="/toc-storage-devices-hard-drive">Storage Devices: Hard Drive</a></li>
+<li><a href="#/storage-devices-tape-drive" id="/toc-storage-devices-tape-drive">Storage Devices: Tape Drive</a></li>
+<li><a href="#/storage-devices-optical-drive" id="/toc-storage-devices-optical-drive">Storage Devices: Optical Drive</a></li>
+<li><a href="#/storage-devices-external-flash-drive" id="/toc-storage-devices-external-flash-drive">Storage Devices: External Flash Drive</a></li>
 <li><a href="#/storage-devices-interfaces" id="/toc-storage-devices-interfaces">Storage Devices: Interfaces</a></li>
 <li><a href="#/storage-devices-interfaces-types-in-order-of-oldest-to-newest" id="/toc-storage-devices-interfaces-types-in-order-of-oldest-to-newest">Storage Devices: Interfaces Types (In order of oldest to newest)</a></li>
 <li><a href="#/storage-devices-interfaces-types-cont." id="/toc-storage-devices-interfaces-types-cont.">Storage Devices: Interfaces Types (cont.)</a></li>
 <li><a href="#/computer-memory-hierarchy" id="/toc-computer-memory-hierarchy">Computer Memory Hierarchy</a></li>
-<li><a href="#/build-pc-how-do-i-choose-a-motherboard" id="/toc-build-pc-how-do-i-choose-a-motherboard">Build PC: How do I choose a motherboard?</a></li>
 </ul>
 </nav>
 </section>
+<section id="introduction" class="slide level2">
+<h2>Introduction</h2>
+</section>
+<section id="lesson-overview" class="slide level2">
+<h2>Lesson overview</h2>
+</section>
+<section>
+<section id="internal-components" class="title-slide slide level1 center">
+<h1>Internal Components</h1>
+
+<img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)0.gif" class="r-stretch"><p>Main needs of a computer:</p>
+<p><strong>store</strong> information</p>
+<p><strong>process</strong> information</p>
+<p><strong>retrieve </strong> information</p>
+<p>Auxiliary needs of a computer:</p>
+<p>protection from elements/interference</p>
+<p>source of electrical power</p>
+<p>temperature management for heat generated</p>
+<p>structure</p>
+<p>communication between components</p>
+<p>tiers of storage/processing specialized for different purposes</p>
+</section>
 <section class="slide level2">
 
-<p><strong>The notes below are in a draft state – they may change up to Thursday Sep 5</strong></p>
-</section>
-<section id="outline" class="slide level2">
-<h2>Outline</h2>
-<ul>
-<li>System Unit Main Components:
-<ul>
-<li>Case</li>
-<li>Power Supply Unit</li>
-<li>Connectors</li>
-<li>Motherboard
-<ul>
-<li>Expansion slots</li>
-<li>Buses</li>
-<li>CPU</li>
-<li>Cooling Devices</li>
-<li>Chipset</li>
-<li>RAM</li>
-</ul></li>
-<li>GPU</li>
-<li>Storage Device</li>
-</ul></li>
-</ul>
-</section>
-<section id="inside-a-computer" class="slide level2">
-<h2>Inside A Computer</h2>
-<p><img data-src="_assets/Lecture 3 - System Unit Components0.png"></p>
-<ul>
+
+<img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)1.gif" class="r-stretch"><ul>
+<li>The components that fulfil these needs:</li>
 <li>Case</li>
 <li>Power Supply</li>
-<li>Motherboard</li>
+<li>Motherboard
+<ul>
+<li>Chipset</li>
+<li>Buses</li>
+</ul></li>
 <li>Connectors</li>
 <li>Cooling Devices</li>
 <li>Processor (CPU)</li>
-<li>Chipset</li>
-<li>Buses</li>
+<li>Graphics processor (GPU)</li>
 <li>Memory (RAM)</li>
-<li>Storage Devices</li>
+<li>Storage Devices (CD, HDD, SSD, NVME/M2)</li>
+<li>We will learn about all of these components this week!</li>
 </ul>
-<h3 id="case">Case</h3>
-<p><img data-src="_assets/Lecture 3 - System Unit Components2.png"></p>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="important-things-to-know-about-components" class="title-slide slide level1 center">
+<h1>Important things to know about components</h1>
 <ul>
+<li>When discussing components of any complicated machine, we should try to understand the following about those components:</li>
+<li><strong>Make/model</strong> :
+<ul>
+<li>The brand and product name of the component.
+<ul>
+<li>E.g. <strong>Hyundai</strong> <strong>Accent</strong> (make = Hyundai, model = Accent)</li>
+</ul></li>
+<li>Why it’s important: Who constructs these components? Are their multiple different versions of this component made by the same manufacturer? Why?</li>
+</ul></li>
+<li><strong>Properties:</strong>
+<ul>
+<li>The <strong>quantitative</strong> (numeric) and <strong>qualitative </strong> (non-numeric) traits of the component that can be compared with alike components
+<ul>
+<li>Quantitative e.g.: the Fuel Efficiency of the 2009 Hyundai Accent is <strong>29 MPG </strong> (miles per gallon)</li>
+<li>Qualitative e.g: The Hyundai Accent is a hatchback, not a sedan</li>
+</ul></li>
+<li>Why it’s important:
+<ul>
+<li>what is the expected performance of this component?</li>
+<li>Is their a cost/benefit for choosing a component with better suited properties than other components?</li>
+<li>Etc.</li>
+</ul></li>
+</ul></li>
+<li>These two ideas (make/model, properties) will vary significantly from component to component. You will need to know these ideas for all of the components we discuss today.</li>
+</ul>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="internal-components-case" class="title-slide slide level1 center">
+<h1>Internal Components: Case</h1>
+
+<img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)2.png" class="r-stretch"><ul>
 <li>Provides protection and cooling for the internal components.</li>
 <li>Also prevents damage from static electricity (components grounded via attachment to case).</li>
 <li>Usually made of plastic, steel or aluminum.</li>
@@ -437,30 +481,52 @@
 <li>There exist many guides/studies for optimal airflow. E.g. <em><a href="https://voltcave.com/pc-airflow-guide/">https://voltcave.com/pc-airflow-guide/</a></em></li>
 </ul></li>
 </ul>
-<h3 id="power-supply">Power Supply</h3>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="power-supply" class="title-slide slide level1 center">
+<h1>Power Supply</h1>
 <p><strong>Main purpose:&nbsp;</strong> Converts AC power&nbsp;(alternating current) from wall socket to DC&nbsp;power (direct current). Direct current (0 or&nbsp;5V) is used to power digital circuits.</p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components3.jpg"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components4.png"></p>
-<p>Note: PSU have their own fans. Energy conversion releases a lot of heat!</p>
-<h3 id="activity-feeling-your-way">Activity: Feeling Your Way</h3>
-<p>With a partner, take it in&nbsp;turns to close your eyes&nbsp;and feel around the back of&nbsp;a PC.</p>
-<p>Try and identify the&nbsp;connectors&nbsp; you find. Your&nbsp;partner can help you by&nbsp;confirming your guesses.</p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components6.png"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components7.png"></p>
-<h3 id="power-supply-1">Power Supply</h3>
-<p><img data-src="_assets/Lecture 3 - System Unit Components8.png"></p>
-<ul>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)3.jpg"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)4.png"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)5.gif"></p>
+<p>Note: PSU have their own fans:</p>
+<p>Energy conversion releases a lot of heat!</p>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="uninterruptible-power-supply" class="title-slide slide level1 center">
+<h1>Uninterruptible Power Supply</h1>
+<p>In the case of a power outage, an <strong>Uninterruptible Power Supply (UPS)</strong> can&nbsp;keep a computer running for a&nbsp;few minutes to several hours depending on&nbsp;the sophistication of the UPS.&nbsp;See&nbsp; <em><a href="https://www.wikihow.com/Buy-and-Use-an-Uninterruptible-Power-Supply">https://www.wikihow.com/Buy-and-Use-an-Uninterruptible-Power-Supply</a></em> &nbsp;for an example.</p>
+<p>It’s basically a large battery that keeps charge during normal operation, and powers a computer using its stored charge when the building’s power is cut off.</p>
+<p>We will talk more about uninterruptible power supply when we start speaking about server hardware.</p>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="power-supply-1" class="title-slide slide level1 center">
+<h1>Power Supply</h1>
+
+<img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)6.png" class="r-stretch"><ul>
 <li>Computers can only tolerate slight fluctuations in power without <strong>needing to shut down</strong>
 <ul>
 <li>.</li>
 </ul></li>
-<li>Important: <span style="color:#FF0000"> <strong>Never open a power supply!</strong> </span> The capacitors contained within can keep a dangerous high voltage, high power charge long after being unplugged.</li>
+<li>Important: <strong>Never open a power supply!</strong> The capacitors contained within can keep a dangerous high voltage, high power charge long after being unplugged.</li>
 </ul>
-<p><span style="color:#FF0000">Demo: PSU What are the supported DV outputs?</span></p>
-<h4 id="uninterruptible-power-supply">Uninterruptible Power Supply</h4>
-<p>In the case of a power outage, an Uninterruptible Power Supply (UPS) can&nbsp;keep a computer running for a&nbsp;few minutes to several hours depending on&nbsp;the sophistication of the UPS.&nbsp;See&nbsp; <span style="color:#0563C1"> <em><a href="https://www.wikihow.com/Buy-and-Use-an-Uninterruptible-Power-Supply">https://www.wikihow.com/Buy-and-Use-an-Uninterruptible-Power-Supply</a></em> </span> &nbsp;for an example</p>
-<p>We will talk more about uninterruptible power supply when we start speaking about server hardware.</p>
-<h4 id="power-supply-connectors">Power Supply Connectors</h4>
+<p>Demo: PSU What are the supported DV outputs?</p>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="power-supply-connectors" class="title-slide slide level1 center">
+<h1>Power Supply Connectors</h1>
 <ul>
 <li>Most power supply connectors are : 20 + 4 pins</li>
 <li>Usually made up of wires of various colors:
@@ -471,65 +537,50 @@
 <li>Other colors may be ground 0V</li>
 </ul></li>
 </ul>
-<p><img data-src="_assets/Lecture 3 - System Unit Components9.png"></p>
-<h4 id="power-supply-ratings">Power Supply Ratings</h4>
+
+<img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)7.png" class="r-stretch"></section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="power-supply-ratings" class="title-slide slide level1 center">
+<h1>Power Supply Ratings</h1>
 <ul>
-<li><span style="color:#FF0000"> <strong>Useful for Assignment 1</strong> </span></li>
+<li><strong>Useful for Assignment 1</strong></li>
 <li>Ratings:
 <ul>
-<li>Wattage (amount of power delivered, must be greater than the sum of&nbsp;power required by all parts, some power supplies can provide more power&nbsp;than others)</li>
-<li>Efficiency (Law of thermodynamics: 100% power input cannot be converted&nbsp;to 100% power output; some power supplies have higher efficiency ratings&nbsp;than others)</li>
-<li>For more detailed explanation:&nbsp; <span style="color:#0563C1"> <em><a href="https://www.newegg.com/insider/how-to-choose-a-pc-power-supply-buying-guide/">https://www.newegg.com/insider/how-to-choose-a-pc-power-supply-buying-guide/</a></em> </span></li>
+<li><strong>Wattage</strong> (amount of power delivered, must be greater than the sum of&nbsp;power required by all parts, some power supplies can provide more power&nbsp;than others)</li>
+<li><strong>Efficiency</strong> (1st + 2nd Laws of thermodynamics: 100% power input cannot be converted&nbsp;to 100% power output; some power supplies have higher efficiency ratings&nbsp;than others)</li>
+<li>For more detailed explanation:&nbsp; <em><a href="https://www.newegg.com/insider/how-to-choose-a-pc-power-supply-buying-guide/">https://www.newegg.com/insider/how-to-choose-a-pc-power-supply-buying-guide/</a></em></li>
 </ul></li>
 </ul>
-<h3 id="connectors">Connectors</h3>
-<p>These connect specific components to various ports on the motherboard.</p>
-<p>Most connectors are <strong>keyed</strong> (can only be inserted one way).</p>
-<p>Note: Always check the pins if you have trouble with a connector. “If it doesn’t go in like butter, it doesn’t go in at all” -- never force a connection! you are likely going to damage the pins.</p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components10.png"></p>
-</section>
-<section id="types-of-connectors" class="title-slide slide level1 center">
-<h1>Types of connectors</h1>
-<p>Floppy drive connectors (old days)</p>
-<p>SATA Cables (for hard drives)</p>
-<p>Molex – Less used but still present</p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components11.png"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components12.png"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components13.png"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components14.png"></p>
-<p>PCIe (Video Cards)</p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components15.png"></p>
-</section>
-
-<section id="motherboard-overview" class="title-slide slide level1 center">
-<h1>4) Motherboard (overview)</h1>
-
-<img data-src="_assets/Lecture 3 - System Unit Components16.png" class="r-stretch"><p>Connects the CPU, RAM, Expansion ports.</p>
-<p>Composed of various&nbsp;chips all combined into <strong>north </strong> and <strong>south</strong> &nbsp;bridges</p>
-<p>More on those in a few&nbsp;weeks...</p>
-</section>
-
-<section>
-<section id="motherboard---form-factors" class="title-slide slide level1 center">
-<h1>4) Motherboard - Form Factors</h1>
-<p>Main circuit board and controls the electrical pathways ( <span style="color:#0055A4">buses</span> ) found in a computer.</p>
-<p>The buses allow data to travel between the various components of a computer.</p>
-<p>Various form factors, e.g. AT, ATX, LPX, BTX, ITX.</p>
-<p>2001</p>
-<p><span style="color:#000000">9.6” x 9.6”</span></p>
-<p>IBM 1980s</p>
-<p>Huge 12 x 13”, no ports</p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components17.png"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components18.png"></p>
 </section>
 <section class="slide level2">
 
-<p>ITX – used for imbedded systems such as routers</p>
-<p>You’ll notice that the I/O Ports on the mother board is always located around the same area.</p>
-<p>This is&nbsp;to keep certain consistency across&nbsp;manufacturer and regardless of the form factors</p>
+</section></section>
+<section>
+<section id="motherboard-overview" class="title-slide slide level1 center">
+<h1>Motherboard (overview)</h1>
 
-<img data-src="_assets/Lecture 3 - System Unit Components19.png" class="r-stretch"><ul>
-<li><strong>AT </strong>
+<img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)8.png" class="r-stretch"><p>Connects the CPU, RAM, Expansion ports.</p>
+<p>Composed of various&nbsp;chips all combined into <strong>north </strong> and <strong>south</strong> &nbsp;bridges</p>
+<p>More on those in a few&nbsp;weeks…</p>
+</section>
+<section class="slide level2">
+
+<p>Main circuit board and controls the electrical pathways (buses) found in a computer.</p>
+<p>The buses allow data to travel between the various components of a computer.</p>
+<p>Various form factors, e.g.&nbsp;AT, ATX, LPX, BTX, ITX.</p>
+
+<img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)9.png" class="r-stretch"></section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="internal-components-motherboard-form-factors-i" class="title-slide slide level1 center">
+<h1>Internal Components: Motherboard – Form Factors (I)</h1>
+<ul>
+<li>AT __ __
 <ul>
 <li>Invented by IBM in early 1980s, now obsolete.</li>
 <li>Huge in size (approximately 12 x 13 inches).</li>
@@ -542,13 +593,13 @@
 <li>Got off to a slow start but by 1998 became the most common form factor.</li>
 <li>Biggest change to AT was the rear panel with standard set of ports for expansion.</li>
 <li>Power supply position for better airflow, CPU and RAM positioned for easier access.</li>
-<li>Variations 12x9in (full size), 9.6x9.6in (microATX), 9x7.5in (FlexATX no longer used).</li>
+<li>Variations 12x9in (full size), 9.6x9.6in ( <strong>microATX</strong> )</li>
 </ul></li>
+<li><strong>ATX and microATX are the most common in personal desktop computers today</strong></li>
 </ul>
 </section>
 <section class="slide level2">
 
-<p>Extra slide for studying</p>
 <ul>
 <li><strong>ITX</strong>
 <ul>
@@ -568,33 +619,98 @@
 </section>
 <section class="slide level2">
 
-<p>Extra slide for studying</p>
 </section></section>
-<section id="motherboard-cpu-socket" class="title-slide slide level1 center">
-<h1>4.1) Motherboard – CPU Socket</h1>
-<p>Let’s have a closer look at the CPU Socket: This is where the CPU will sit</p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components20.png"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components21.png"></p>
-</section>
+<section>
+<section id="motherboard---ports" class="title-slide slide level1 center">
+<h1>Motherboard - Ports</h1>
+<p>You’ll notice that the I/O Ports (input/output) on the mother board are always located around the same area.</p>
+<p>This is&nbsp;to keep certain consistency across&nbsp;manufacturer and regardless of the form factors</p>
 
-<section id="cpu" class="title-slide slide level1 center">
-<h1>5) CPU</h1>
+<img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)10.png" class="r-stretch"></section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="internal-components-connectors" class="title-slide slide level1 center">
+<h1>Internal Components: Connectors</h1>
 <ul>
-<li>Most important element of the computer in terms of computing power.
+<li>There are a variety of connectors used to connect components to the motherboard. Two main purposes:
 <ul>
-<li>Brains of the computer.</li>
-<li>Responsible for <strong>interpreting </strong> and <strong>executing </strong> the commands from the software.</li>
-<li>While the CPU is processing one step of the program, the remaining instructions and the data are stored in a special memory called cache.</li>
+<li><strong>Signals</strong> : for communication/data transfer</li>
+<li><strong>Power</strong> : not all components connect directly to the power supply, they get power from the motherboard</li>
+</ul></li>
+<li>Most connectors are <strong>keyed</strong> (can only be inserted one way).</li>
+<li>Note: Always check the pins if you have trouble with a connector.
+<ul>
+<li>“If it doesn’t go in like butter, it doesn’t go in at all” – never force a connection! you are likely going to damage the pins.</li>
 </ul></li>
 </ul>
 
-<img data-src="_assets/Lecture 3 - System Unit Components22.png" class="r-stretch"><p><span style="color:#FF0000">More on this on week 5</span></p>
-</section>
+<img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)11.png" class="r-stretch"></section>
+<section class="slide level2">
 
+</section></section>
+<section>
+<section id="types-of-connectors" class="title-slide slide level1 center">
+<h1>Types of connectors</h1>
+<p><strong>Floppy drive connectors (old days)</strong></p>
+<p><strong>SATA Cables (for hard drives)</strong></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)12.png"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)13.png"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)14.png"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)15.png"></p>
+<p><strong>PCIe (Video Cards)</strong></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)16.png"></p>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="motherboard-expansion-slots" class="title-slide slide level1 center">
+<h1>Motherboard – Expansion Slots</h1>
+<p>Let’s have a closer look at what we call expansion slots.</p>
+<p>Expansion slots are ports inside a computer&nbsp;found on the motherboard. They provide&nbsp;the possibility to&nbsp;expand the hardware of your PC.</p>
+<p>For example, you may want to install a network card, a sound card, and most commonly, a&nbsp;video card.</p>
+
+<img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)17.png" class="r-stretch"></section>
+<section class="slide level2">
+
+<p>Expansion slots allow us to increase the functionality of a computer by adding controllers for specific devices (often called adapter cards) e.g.&nbsp;sound, video, NIC (network Interface Card).</p>
+<p><strong>PCI used in most computers, commonly used for network interface</strong></p>
+<p>AGP designed to be used by video adapters</p>
+<p><strong>PCIe replaces AGP in newer computers, used for video cards</strong></p>
+<p>ISA older, rarely used, 8 or 16 bit</p>
+<p>EISA older, rarely used, 32 bit</p>
+<p>MCA IBM proprietary 32 bit, older, rarely used</p>
+<p>PCI-X 32 bit, can run up to four times faster than PCI</p>
+<p>MiniPCI 32 bit, used by laptops, has three different form factors</p>
+<p>In 2024 <strong>: PCI </strong> and <strong>PCIe </strong> are the common standards that cover all features required for <strong>expansion slots</strong></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)18.png"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)19.png"></p>
+</section>
+<section class="slide level2">
+
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)20.gif"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)21.jpg"></p>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="motherboard-cpu-socket" class="title-slide slide level1 center">
+<h1>Motherboard – CPU Socket</h1>
+<p>Let’s have a closer look at the CPU Socket: This is where the CPU will sit</p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)22.png"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)23.png"></p>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
 <section id="how-to-connect-a-cpu" class="title-slide slide level1 center">
 <h1>How to Connect a CPU?</h1>
-<p><span style="color:#7F7F7F">CPU connection on the motherboard is known as the CPU socket.</span></p>
-<p><span style="color:#7F7F7F">The CPU is connected to the motherboard in one of two ways:</span></p>
+<p>CPU connection on the motherboard is known as the CPU socket.</p>
+<p>The CPU is connected to the motherboard in one of two ways:</p>
 <ul>
 <li>Pin Grid Array – PGA
 <ul>
@@ -606,229 +722,288 @@
 <li>Pins are on the motherboard (on socket) instead of on the processor.</li>
 </ul></li>
 </ul>
-<p><img data-src="_assets/Lecture 3 - System Unit Components23.png"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components24.png"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components25.png"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components27.png"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)24.png"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)25.png"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)26.png"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)27.gif"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)28.png"></p>
 </section>
+<section class="slide level2">
 
+</section></section>
+<section>
+<section id="cpu" class="title-slide slide level1 center">
+<h1>CPU</h1>
+<ul>
+<li>Most important element of the computer in terms of computing power.
+<ul>
+<li>Brains of the computer.</li>
+<li>Responsible for <strong>interpreting </strong> and <strong>executing </strong> the commands from the software.</li>
+<li>While the CPU is processing one step of the program, the remaining instructions and the data are stored in a special memory called cache.</li>
+</ul></li>
+</ul>
+
+<img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)29.png" class="r-stretch"><p>More on this in the coming weeks</p>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
 <section id="cpu-brands" class="title-slide slide level1 center">
 <h1>CPU Brands</h1>
 <p>Intel</p>
 <p>AMD</p>
-<p>Higher price CPUs</p>
-<p>Excellent for a variety of tasks</p>
-<p>Good balance in performance and heavy processing tasks</p>
-<p>Good budget CPUs for gaming</p>
-<p>Very good for PCs focused on gaming</p>
-<p>Less power consumption</p>
-<p>Less heat.</p>
+<p>Historically the main CPU manufacturer</p>
+<p>Relatively recent competitor to Intel</p>
 
-<img data-src="_assets/Lecture 3 - System Unit Components28.png" class="r-stretch"><p><span style="color:#FF0000">Very Important for lab2</span></p>
-</section>
+<img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)30.png" class="r-stretch"></section>
+<section class="slide level2">
 
-<section id="cpu-core-components" class="title-slide slide level1 center">
-<h1>CPU Core Components</h1>
-<p>“Man-in-a-box”</p>
-<p>Clever guy who can perform any mathematical function quickly.</p>
-<p>He lives in a closed-up box so it is hard to communicate with him.</p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components29.png"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components30.png"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components31.png"></p>
-</section>
-
-<section id="cpu-analogy-man-in-a-box" class="title-slide slide level1 center">
-<h1>CPU Analogy: “Man in a Box”</h1>
-<p><img data-src="_assets/Lecture 3 - System Unit Components32.png"></p>
+</section></section>
+<section>
+<section id="cooling-devices" class="title-slide slide level1 center">
+<h1>Cooling Devices</h1>
 <ul>
-<li>Imagine we install a set of 16 lightbulbs
+<li>The flow of current between and within electronic components generates heat. Some devices are particularly powerful heat-generators, due to the large current they draw:
 <ul>
-<li>(8 inside, 8 outside).</li>
+<li>CPUs typically come with their own cooling device</li>
+<li>Cooling devices are built into GPUs and Power Supplies</li>
 </ul></li>
-<li>These can be controlled by us and by the man-in-the-box.This is our external data bus (EDB).</li>
-<li>We can communicate with each other as long as we agree ahead of time what each pattern of light bulbs means.</li>
-</ul>
-<p><img data-src="_assets/Lecture 3 - System Unit Components33.png"></p>
-</section>
-
-<section id="codebook" class="title-slide slide level1 center">
-<h1>Codebook</h1>
-<p><span style="color:#0055A4"> <strong>Codebook</strong> </span></p>
-<p>This defines the commands that we can give to the man in the box.</p>
-<p>If we both have a copy, then we can give him commands and he can understand them.</p>
-
-<img data-src="_assets/Lecture 3 - System Unit Components34.png" class="r-stretch"></section>
-
-<section id="registers" class="title-slide slide level1 center">
-<h1>Registers</h1>
-<p><span style="color:#0055A4"> <strong>Registers</strong> </span></p>
-<p>We can give the man some work and see what he replies.</p>
-<p>But to do his work, the man needs at least four workstations.</p>
-<p>General purpose registers are the most common. AX, BX, CX, DX&nbsp;(Intel).</p>
-
-<img data-src="_assets/Lecture 3 - System Unit Components35.png" class="r-stretch"></section>
-
-<section id="clock" class="title-slide slide level1 center">
-<h1>Clock</h1>
-<p>Now we are ready to put our man to work.We can send him the first command by lighting up the wires on the EDB.</p>
-<p>But how does he know when we have finished setting up the light bulbs?</p>
-
-<img data-src="_assets/Lecture 3 - System Unit Components36.png" class="r-stretch"></section>
-
-<section id="cooling-devices---fans" class="title-slide slide level1 center">
-<h1>6.1) Cooling Devices - Fans</h1>
-<p>The flow of current between the electronic components generates heat. <span style="color:#FF0000">The man in&nbsp;the box&nbsp;is heating!!</span></p>
-<p><span style="color:#0055A4">Fans</span> inside the case increase airflow and removes heat.</p>
-<p>Occasionally video cards or other components have their own fans to cool them.</p>
-</section>
-
-<section id="activity-cooling-devices-fans-vs-liquid-cooling" class="title-slide slide level1 center">
-<h1>Activity: Cooling devices Fans vs Liquid cooling</h1>
-<p>With a partner take 5-7 minutes to research the major differences between Fans and liquid cooling devices.</p>
-<p>Add&nbsp;the pros and cons in <a href="https://jamboard.google.com/d/1TA_9nVlYkXINf5EjcCX3ZABHw6H2fwhBJ9cW_biNDf0/edit?usp=sharing">this</a><a href="https://jamboard.google.com/d/1TA_9nVlYkXINf5EjcCX3ZABHw6H2fwhBJ9cW_biNDf0/edit?usp=sharing">jamboard</a></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components37.png"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components38.png"></p>
-</section>
-
-<section id="cooling-devices-heat-sinks" class="title-slide slide level1 center">
-<h1>6.2) Cooling Devices – Heat sinks</h1>
+<li>Fans inside the case increase airflow and removes heat.</li>
+<li>Heat sinks also draw heat away from the CPU core.
 <ul>
-<li><span style="color:#0055A4">Heat sinks&nbsp;</span> also draw heat away from the CPU core.
+<li>A heat sink is a piece of copper or aluminum that resides between the processor and the CPU fan.</li>
+<li>It absorbs the heat from the processor and the fan disperses the heat.</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="cooling-devices---fans" class="title-slide slide level1 center">
+<h1>Cooling Devices - Fans</h1>
+<p>The flow of current between the electronic components generates heat.</p>
+<p>Fans inside the case increase airflow and removes heat.</p>
+<p>Occasionally video cards or other components have their own fans to cool them.</p>
+
+<img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)31.jpg" class="r-stretch"></section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="cooling-devices-heat-sinks" class="title-slide slide level1 center">
+<h1>Cooling Devices – Heat sinks</h1>
+<ul>
+<li>Heat sinks&nbsp;also draw heat away from the CPU core.
 <ul>
 <li>A heat sink is a piece of copper or aluminum that resides between the&nbsp;processor and the CPU fan.</li>
 <li>It absorbs the heat from the processor and the fan disperses the heat.</li>
 <li>Increase of the surface area</li>
 </ul></li>
 </ul>
-</section>
 
-<section id="internal-components-general-overview" class="title-slide slide level1 center">
-<h1>Internal Components:&nbsp;General Overview</h1>
-<p>Let’s have a closer look at the RAM slots and RAM</p>
+<img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)32.jpg" class="r-stretch"></section>
+<section class="slide level2">
 
-<img data-src="_assets/Lecture 3 - System Unit Components39.png" class="r-stretch"></section>
+</section></section>
+<section>
+<section id="memory---ram" class="title-slide slide level1 center">
+<h1>Memory - RAM</h1>
+<p>Let’s have a closer look at the RAM slots on the motherboard</p>
 
-<section id="motherboard-ram-slots" class="title-slide slide level1 center">
-<h1>4.2) Motherboard – RAM slots</h1>
-<p>Let’s have a closer look at the RAM slots</p>
+<img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)33.png" class="r-stretch"></section>
+<section class="slide level2">
 
-<img data-src="_assets/Lecture 3 - System Unit Components40.png" class="r-stretch"></section>
-
+</section></section>
+<section>
 <section id="main-memory" class="title-slide slide level1 center">
-<h1>5) Main Memory</h1>
-<ul>
-<li>Referred to as RAM (Random Access Memory)</li>
-<li>RAM is a collection of integrated circuits (chips).</li>
-<li>Considered the “Primary” storage for the CPU.
-<ul>
-<li><span style="color:#0055A4">Temporary</span> storage for <span style="color:#0055A4">data</span> and <span style="color:#0055A4">programs</span> that are being accessed by the CPU.</li>
-</ul></li>
-<li>Volatile memory: contents are erased when the computer is switched off. (or when power is lost)</li>
-</ul>
+<h1>Main Memory</h1>
+<p>Referred to as RAM (Random Access Memory)</p>
+<p>RAM is a collection of integrated circuits (chips)</p>
+<p>Temporary storage for data and programs that are being accessed by the CPU.</p>
+<p><strong>Volatile memory</strong> : contents are erased when the computer is switched off. (or when power is lost)</p>
 
-<img data-src="_assets/Lecture 3 - System Unit Components41.png" class="r-stretch"></section>
+<img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)34.png" class="r-stretch"></section>
+<section class="slide level2">
 
+</section></section>
+<section>
 <section id="main-memory-cont." class="title-slide slide level1 center">
-<h1>5) Main Memory (cont.)</h1>
-<p>More RAM means more capacity to hold and process large programs and files.</p>
-<p>Maximum installed is limited by the <span style="color:#FF0000">motherboard </span> and the <span style="color:#FF0000">operating system.</span></p>
+<h1>Main Memory (cont.)</h1>
+<ul>
+<li>There are four main properties of RAM to know:</li>
+<li><strong>Capacity: </strong> Total memory (in GB, GigaBytes)
+<ul>
+<li>More RAM means more capacity to hold and process large programs and files.</li>
+<li>Maximum installed is limited by the motherboard and the operating system.</li>
+</ul></li>
+<li><strong>Speed: </strong> How many operations per second
+<ul>
+<li>Many, millions or billions per second</li>
+<li>1MHz = 1 million / second, 1 GHz = 1 billion / second</li>
+</ul></li>
+<li><strong>Latency</strong> : How much time delay between communications</li>
+<li><strong>Generation:</strong> See next slides</li>
+</ul>
 </section>
+<section class="slide level2">
 
-<section id="motherboard-expansion-slots" class="title-slide slide level1 center">
-<h1>4.1) Motherboard – Expansion Slots</h1>
-<p>Let’s have a closer look at what we call expansion slots.</p>
-<p>Expansion slots are ports inside a computer&nbsp;found on the motherboard. They provide&nbsp;the possibility to&nbsp;expand the hardware of your PC.</p>
-<p>For example, you may want to install a network card, a sound card, and most importantly a&nbsp;video card.</p>
-
-<img data-src="_assets/Lecture 3 - System Unit Components42.png" class="r-stretch"></section>
-
-<section id="expansion-slots" class="title-slide slide level1 center">
-<h1>5) Expansion Slots</h1>
-<p><span style="color:#0055A4">Expansion slots </span> allow us to increase the functionality of a computer by adding controllers for specific devices (often called <span style="color:#0055A4">adapter cards</span> ) e.g. sound, video, NIC (network Interface Card).</p>
-<p>PCI used in most computers, 32 or 64 bit</p>
-<p>AGP designed to be used by video adapters</p>
-<p>PCIe replacing AGP in newer computers</p>
-<p>ISA older, rarely used, 8 or 16 bit</p>
-<p>EISA older, rarely used, 32 bit</p>
-<p>MCA IBM proprietary 32 bit, older, rarely used</p>
-<p>PCI-X 32 bit, can run up to four times faster than PCI</p>
-<p>MiniPCI 32 bit, used by laptops, has three different form factors</p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components43.png"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components44.png"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components46.jpg"></p>
-<p><strong><a href="https://www.computerhope.com/jargon/a/agp.htm">AGP</a></strong> &nbsp;-&nbsp;<a href="https://www.computerhope.com/jargon/v/video-card.htm">Video card</a>.</p>
-<p><strong><a href="https://www.computerhope.com/jargon/a/amr.htm">AMR</a></strong> &nbsp;-&nbsp;<a href="https://www.computerhope.com/jargon/m/modem.htm">Modem</a>,&nbsp;<a href="https://www.computerhope.com/jargon/s/souncard.htm">sound card</a>.</p>
-<p><strong><a href="https://www.computerhope.com/jargon/c/cnr.htm">CNR</a></strong> &nbsp;- Modem,&nbsp;<a href="https://www.computerhope.com/jargon/n/nic.htm">network card</a>, sound card.</p>
-<p><strong><a href="https://www.computerhope.com/jargon/e/eisa.htm">EISA</a></strong> &nbsp;-&nbsp;<a href="https://www.computerhope.com/jargon/s/scsi.htm">SCSI</a>, network card, video card.</p>
-<p><strong><a href="https://www.computerhope.com/jargon/i/isa.htm">ISA</a></strong> &nbsp;- Network card, sound card, video card.</p>
-<p><strong><a href="https://www.computerhope.com/jargon/p/pci.htm">PCI</a></strong> &nbsp;- Network card, SCSI, sound card, video card.</p>
-<p><strong><a href="https://www.computerhope.com/jargon/p/pciexpre.htm">PCI Express</a></strong> &nbsp;- Video card, modem, sound card, network card.</p>
-<p><strong><a href="https://www.computerhope.com/jargon/v/vesa.htm">VESA</a></strong> &nbsp;- Video card.</p>
+</section></section>
+<section>
+<section id="memory-modules-design-types" class="title-slide slide level1 center">
+<h1>Memory Modules Design Types</h1>
+<ul>
+<li>SIMMs (Single In-Line Memory Modules)
+<ul>
+<li>Have a single line of connectors.</li>
+<li>Now obsolete.</li>
+</ul></li>
+<li>DIMMs (Dual In-Line Memory Modules)
+<ul>
+<li>Have two lines of connectors.</li>
+<li>Have Wider bus (supports 64 bits) 🡪 How can this help? More on this in the coming weeks.</li>
+<li>Became dominant (no need to state that a memory module is a DIMM).</li>
+</ul></li>
+</ul>
 </section>
+<section class="slide level2">
 
-<section id="graphics-cards" class="title-slide slide level1 center">
-<h1>7) Graphics Cards</h1>
+</section></section>
+<section>
+<section id="memory-modules-generations-oldest-to-newest-approximately" class="title-slide slide level1 center">
+<h1>Memory Modules Generations(oldest to newest, approximately)</h1>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Synchronous DRAM (SDRAM)</th>
+<th style="text-align: center;">DRAM that operates in time with the memory bus.<br>Tied to the system clock like the CPU and the memory controller.<br>Results in very little wasted time.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Double Data Rate SDRAM (DDR)</td>
+<td style="text-align: center;">DDR transfers data twice as fast as SDRAM.Larger buffer gives it a huge boost.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Double Data Rate 2 SDRAM (DDR2)</td>
+<td style="text-align: center;">DDR2 decreases noise making it faster than DDR.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Double Data Rate 3 SDRAM (DDR3)</td>
+<td style="text-align: center;">DDR3 doubles the clock rate of DDR2, consumes less power and generates less heat.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Double Data Rate 4 SDRAM (DDR4)</td>
+<td style="text-align: center;">DDR4 arrived in 2014 with even faster speeds. (most common RAM type in desktops/laptops today)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Double Data Rate 5 SDRAM (DDR5)</td>
+<td style="text-align: center;">Introduced in 2020, is starting to become more widely adopted.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>NOTE: Motherboards are usually compatible with only ONE generation of RAM. If you have a motherboard designed for DDR3, it cannot use DDR4 or DDR5.</strong></p>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="graphics-cards-gpu" class="title-slide slide level1 center">
+<h1>Graphics Cards (GPU)</h1>
 <p>Also known as Video cards or Graphical&nbsp;Processing Units</p>
 <p>One of the most interesting use of expansion slots is the addition of video cards, also known as Graphical Processing Unit.</p>
-<p>Its speeds up the processing power of a computer.</p>
-<p>Often useful in video&nbsp;gaming,&nbsp;video rendering,&nbsp;scientific parallel computing</p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components47.png"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components48.png"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components49.png"></p>
+<p>A specialized version of a CPU designed for <strong>graphical</strong> processing (producing complex output to display on a monitor)</p>
+<p>The computation needed for graphical processing is generally useful for scientific computing as well (lots of data in parallel)</p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)35.png"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)36.png"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)37.png"></p>
 </section>
+<section class="slide level2">
 
-<section id="gpu-vs-cpu" class="title-slide slide level1 center">
-<h1>GPU VS CPU</h1>
-
+</section></section>
+<section>
+<section id="gpu-cpu-things-in-common" class="title-slide slide level1 center">
+<h1>GPU &amp; CPU, things in common</h1>
+<ul>
+<li><strong>Both consume a lot of power and generate a lot of heat</strong></li>
+<li><strong>More powerful CPUs/GPUs require more powerful power supplies</strong>
+<ul>
+<li><strong>TDP:</strong> __ Thermal Design Power, measures the number of Watts needed to power the device__</li>
+</ul></li>
+<li><strong>Both have performance measured in </strong> <strong>speed</strong> __ (operations/second) like RAM__</li>
+</ul>
 </section>
+<section class="slide level2">
 
+</section></section>
+<section>
 <section id="cpu-vs-gpu" class="title-slide slide level1 center">
 <h1>CPU vs GPU</h1>
 <p>GPU cannot replace the CPU because their architecture is different and meant for different purposes</p>
 <p>GPU is great to parallelize computations!</p>
-<p>But the GPU is not as versatile&nbsp;as the CPU which has a larger instruction set (code book)</p>
+<p>But the GPU is not as versatile&nbsp;as the CPU which has a larger instruction set</p>
 
-<img data-src="_assets/Lecture 3 - System Unit Components50.png" class="r-stretch"></section>
+<img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)38.png" class="r-stretch"></section>
+<section class="slide level2">
 
-<section id="gpu-vs-cpu-1" class="title-slide slide level1 center">
+</section></section>
+<section>
+<section id="gpu-vs-cpu" class="title-slide slide level1 center">
 <h1>GPU vs CPU</h1>
-<p>(click to load the video)</p>
+<p><strong>(click to load the video)</strong></p>
 </section>
+<section class="slide level2">
 
+</section></section>
+<section>
 <section id="storage-devices" class="title-slide slide level1 center">
-<h1>8) Storage Devices</h1>
-<p>Storage devices store data <span style="color:#0055A4">permanently</span> .</p>
-<p>Some are installed inside the case (e.g. hard drive);</p>
-<p>Some are removable and portable (e.g. external flash drive).</p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components51.jpg"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components52.png"></p>
+<h1>Storage Devices</h1>
+<p>Storage devices store data permanently.</p>
+<p>Some are installed inside the case (e.g.&nbsp;hard drive);</p>
+<p>Some are removable and portable (e.g.&nbsp;external flash drive).</p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)39.jpg"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)40.png"></p>
 </section>
+<section class="slide level2">
 
+</section></section>
+<section>
 <section id="storage-devices-cont." class="title-slide slide level1 center">
-<h1>7) Storage Devices (cont.)</h1>
-<p><img data-src="_assets/Lecture 3 - System Unit Components53.png"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components54.jpg"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components55.png"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components56.png"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components57.png"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components58.png"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components59.png"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components60.png"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components61.jpg"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components62.png"></p>
+<h1>Storage Devices (cont.)</h1>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)41.png"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)42.jpg"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)43.png"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)44.png"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)45.png"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)46.png"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)47.png"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)48.png"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)49.jpg"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)50.png"></p>
 </section>
+<section class="slide level2">
 
+</section></section>
+<section>
 <section id="storage-devices-floppy-drive" class="title-slide slide level1 center">
-<h1>7.1) Storage Devices: Floppy Drive</h1>
+<h1>Storage Devices: Floppy Drive</h1>
 <p>Uses 3.5 inch floppy disks (or 5.25 inch floppy disks - older).</p>
 <p>Largely obsolete.</p>
 <p>Magnetic disks store up to 1.44Meg of data.</p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components63.png"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components64.png"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)51.png"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)52.png"></p>
 </section>
+<section class="slide level2">
 
+</section></section>
+<section>
 <section id="storage-devices-hard-drive" class="title-slide slide level1 center">
-<h1>7.2) Storage Devices: Hard Drive</h1>
+<h1>Storage Devices: Hard Drive</h1>
 <ul>
 <li>Hard Disk Drive (HDD)
 <ul>
@@ -838,31 +1013,36 @@
 <li>Speed measured in revolutions per minute</li>
 </ul></li>
 </ul>
-<p><img data-src="_assets/Lecture 3 - System Unit Components65.jpg"></p>
-<p><span style="color:#FF0000">Demo: how does it look inside an HDD</span></p>
+
+<img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)53.jpg" class="r-stretch"></section>
+<section class="slide level2">
+
 <ul>
 <li>Solid State Drives (SSD)
 <ul>
 <li>Do not have moving parts and use __ semi-conductors__ to store data.</li>
 <li>Non-volatile flash memory chips manage the storage on an SSD, resulting in faster access to data,&nbsp;higher reliability and reduced power usage.</li>
 </ul></li>
-<li>Usually configured as C: drive on a Windows machine and contains the operating&nbsp;system and applications. Storage capacity can range from gigabytes to terabytes.</li>
 </ul>
-<p><img data-src="_assets/Lecture 3 - System Unit Components66.png"></p>
-</section>
 
+<img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)54.png" class="r-stretch"></section>
+<section class="slide level2">
+
+</section></section>
+<section>
 <section id="storage-devices-tape-drive" class="title-slide slide level1 center">
-<h1>7.4) Storage Devices: Tape Drive</h1>
-<p>Magnetic tapes are often used for backups or archiving data. Still used/created to this day! Very cheap per GB costs.</p>
-<p>Data retrieval can be fast but locating specific data is slow.</p>
-<p>Can hold many terabytes.</p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components67.png"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components68.png"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components69.png"></p>
+<h1>Storage Devices: Tape Drive</h1>
+<p>Magnetic tapes are often used for backups or archiving data. Impractical for most individuals, but still used/created to this day! Cost effective when storing more than 1000 TB (lots and lots of data)</p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)55.png"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)56.png"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)57.png"></p>
 </section>
+<section class="slide level2">
 
+</section></section>
+<section>
 <section id="storage-devices-optical-drive" class="title-slide slide level1 center">
-<h1>7.5) Storage Devices: Optical Drive</h1>
+<h1>Storage Devices: Optical Drive</h1>
 <ul>
 <li>Uses lasers to read the data on the optical media.
 <ul>
@@ -877,24 +1057,33 @@
 <li>Re-recordable (read and write multiple times).</li>
 </ul></li>
 </ul>
-<p><img data-src="_assets/Lecture 3 - System Unit Components70.jpg"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components71.jpg"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)58.jpg"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)59.jpg"></p>
 </section>
+<section class="slide level2">
 
+</section></section>
+<section>
 <section id="storage-devices-external-flash-drive" class="title-slide slide level1 center">
-<h1>7.6) Storage Devices: External Flash Drive</h1>
+<h1>Storage Devices: External Flash Drive</h1>
 <p>Removable storage device that connects to a USB port.</p>
 <p>These use the same type of non-volatile memory chips as SSDs and do not require power to maintain the data.</p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components72.png"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components73.png"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)60.png"></p>
+<p><img data-src="_assets/Lecture 3 Hardware Introduction (Internal Components)61.png"></p>
 </section>
+<section class="slide level2">
 
+</section></section>
+<section>
 <section id="storage-devices-interfaces" class="title-slide slide level1 center">
 <h1>Storage Devices: Interfaces</h1>
 <p>To install a drive internally in a computer, the connection interface on the drive must be the same as the controller on the motherboard.</p>
 <p>Motherboards support different types of interfaces.</p>
 </section>
+<section class="slide level2">
 
+</section></section>
+<section>
 <section id="storage-devices-interfaces-types-in-order-of-oldest-to-newest" class="title-slide slide level1 center">
 <h1>Storage Devices: Interfaces Types (In order of oldest to newest)</h1>
 <table class="caption-top">
@@ -924,7 +1113,10 @@
 </tbody>
 </table>
 </section>
+<section class="slide level2">
 
+</section></section>
+<section>
 <section id="storage-devices-interfaces-types-cont." class="title-slide slide level1 center">
 <h1>Storage Devices: Interfaces Types (cont.)</h1>
 <table class="caption-top">
@@ -941,30 +1133,18 @@
 <tbody>
 <tr class="odd">
 <td style="text-align: center;">SCSI</td>
-<td style="text-align: center;">Small Computer System Interface.<br>Drive controller that can connect up to 15 drives.<br>Internal and external use, uses 25, 50 or 68 pin connector.</td>
+<td style="text-align: center;">Small Computer System Interface.<br>Drive controller that can connect up to 15 drives.<br>Internal and external use, uses 25, 50 or 68 pin connector.<br><br><br></td>
 </tr>
 </tbody>
 </table>
 <p><em>Note:</em> __ Hot-swapping is the ability to connect and disconnect a device while the computer is on.__</p>
 </section>
+<section class="slide level2">
 
+</section></section>
 <section id="computer-memory-hierarchy" class="title-slide slide level1 center">
 <h1>Computer Memory Hierarchy</h1>
-<p><span style="color:#7F7F7F">Source: https://en.wikipedia.org/wiki/Memory_hierarchy </span></p>
-</section>
-
-<section id="build-pc-how-do-i-choose-a-motherboard" class="title-slide slide level1 center">
-<h1>Build PC: How do I choose a motherboard?</h1>
-<p>Identify the user need for this PC: let’s say Gamer PC</p>
-<p>2.&nbsp; Go to PC <a href="https://pcpartpicker.com/list/">Parts Picker</a></p>
-<p>3.&nbsp; Select a CPU (that matches your needs)&nbsp;and&nbsp;ask&nbsp;yourself those questions</p>
-<p>4.&nbsp;What would be the most appropriate form factor?</p>
-<p>5. What’s the max RAM needed?</p>
-<p>6. Would you need expansion ports in the future?</p>
-<p>7. What’s the aesthetic feel of the PC? LEDs? Metal built?</p>
-<p>This will restrict the types of motherboards you can use.</p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components74.png"></p>
-<p><img data-src="_assets/Lecture 3 - System Unit Components75.png"></p>
+<p>Source: https://en.wikipedia.org/wiki/Memory_hierarchy</p>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">

@@ -1,37 +1,22 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Home",
+    "objectID": "topics/operating-systems/index.html",
+    "href": "topics/operating-systems/index.html",
+    "title": "Operating Systems",
     "section": "",
-    "text": "This companion site for the 420-1N6 course includes:",
+    "text": "No matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
     "crumbs": [
-      "Home"
+      "Home",
+      "Topics",
+      "Operating Systems"
     ]
-  },
-  {
-    "objectID": "index.html#source-code",
-    "href": "index.html#source-code",
-    "title": "Home",
-    "section": "Source Code",
-    "text": "Source Code\nThis webpage is written in Markdown using the Quarto framework. The website is hosted via GitHub Pages\nSource code is open source and available on GitHub.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "announcements/2024-08-27-class-cancelled.html",
-    "href": "announcements/2024-08-27-class-cancelled.html",
-    "title": "Class cancelled today",
-    "section": "",
-    "text": "Unfortunately I am not feeling well today and would like to make sure I do not pass that along to you – I will be cancelling today’s class.\nI will be uploading today’s lecture notes shortly. The link for these will appear on LEA soon. (EDIT: you can now find them here. Please read them in advance of Thursday’s class, where we will be doing in-class activities based on some of the content.\nYou can also see all of the content we’ve covered the past two days on the course calendar.\nLet me know if you have any questions!\n\n\n\n Back to topReuseCC BY-NC-SA 4.0"
   },
   {
     "objectID": "topics/all-lectures.html",
     "href": "topics/all-lectures.html",
     "title": "All lectures",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nSubtitle\n\n\n\n\n\n\n2024-08-27\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n2024-09-03\n\n\nExternal components\n\n\nOverview of many external components, or peripheral devices, used by and for computers.\n\n\n\n\n2024-09-05\n\n\nInternal components\n\n\nOverview of the main internal components of computers.\n\n\n\n\n\nNo matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nSubtitle\n\n\n\n\n\n\n2024-08-27\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n2024-09-03\n\n\nExternal components V1\n\n\nOverview of many external components, or peripheral devices, used by and for computers.\n\n\n\n\n2024-09-03\n\n\nExternal components\n\n\nOverview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors\n\n\n\n\n2024-09-10\n\n\nInternal Components\n\n\nExplains the most important internal components of desktop computers. Processing, memory, storage, and communication.\n\n\n\n\n2024-09-16\n\n\nUnderstanding CPUs\n\n\nAn in-depth explanation of command processing and executing at the CPU level\n\n\n\n\n\nNo matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
     "crumbs": [
       "Home",
       "Topics",
@@ -39,11 +24,45 @@
     ]
   },
   {
+    "objectID": "topics/hardware/internal-components.html#lesson-overview",
+    "href": "topics/hardware/internal-components.html#lesson-overview",
+    "title": "Internal Components",
+    "section": "Lesson overview",
+    "text": "Lesson overview",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#introduction",
+    "href": "topics/hardware/internal-components.htm#introduction",
+    "title": "Internal Components",
+    "section": "Introduction",
+    "text": "Introduction"
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#lesson-overview",
+    "href": "topics/hardware/internal-components.htm#lesson-overview",
+    "title": "Internal Components",
+    "section": "Lesson overview",
+    "text": "Lesson overview"
+  },
+  {
+    "objectID": "topics/hardware/understanding-cpus.htm#introduction",
+    "href": "topics/hardware/understanding-cpus.htm#introduction",
+    "title": "Understanding CPUs",
+    "section": "Introduction",
+    "text": "Introduction"
+  },
+  {
     "objectID": "topics/hardware/introduction-to-computers.html",
     "href": "topics/hardware/introduction-to-computers.html",
     "title": "Introduction to Computers",
     "section": "",
-    "text": "Each of these things is either a computer, or a computer component. Can you identify them all? Click on the image to see everything in higher resolution. Figure source: lost to time",
+    "text": "Each of these things is either a computer, or a computer component. Can you identify them all? Click on the image to see everything in higher resolution.",
     "crumbs": [
       "Home",
       "Topics",
@@ -265,168 +284,157 @@
     "text": "Additional resources\nThis section contains helpful links to related content. You aren’t required to study these in detail, but it never hurts to learn more.\n\nComputer Basics by GCF Global: We will eventually cover almost all of the material in this free online resource; for now, Parts 1-7 in particular are relevant to what we have learned so far.\n“The Mother of All Demos” This is a 1968 presentation that introduced many of the hardware/graphics concepts we will see today and some we will see in future lectures: the mouse, networking, video conferencing, word documents, hyperlinks, gamer headphones, etc. It is very cool to see the palpable excitement of the 2000+ audience tuning into a passionate presentation of a series of completely new technologies.\nMontréal’s Musée de l’Ordinateur – unfortunately the physical location has been closed since 2022, but the website is still a neat resource for reading on the history of personal computers and their evolution. The author’s bias towards Bill Gates and Windows machines is quite strong (there is much more to the story), but the information provided is reliable and interesting."
   },
   {
-    "objectID": "topics/hardware/external-components.html",
-    "href": "topics/hardware/external-components.html",
-    "title": "External components",
+    "objectID": "topics/hardware/external-components-v1.html",
+    "href": "topics/hardware/external-components-v1.html",
+    "title": "External components V1",
     "section": "",
-    "text": "All of these devices, except one, would be considered in external component of a modern desktop computer. Which one is not? Figure retrieved from Innovation it solution, original source unknown.",
+    "text": "All of these devices, except one, would be considered an external component of a modern desktop computer. Which one is not? Figure retrieved from Innovation it solution, original source unknown.",
     "crumbs": [
       "Home",
       "Topics",
       "Hardware",
-      "External components"
+      "External components V1"
     ]
   },
   {
-    "objectID": "topics/hardware/external-components.html#introduction",
-    "href": "topics/hardware/external-components.html#introduction",
-    "title": "External components",
+    "objectID": "topics/hardware/external-components-v1.html#introduction",
+    "href": "topics/hardware/external-components-v1.html#introduction",
+    "title": "External components V1",
     "section": "Introduction",
     "text": "Introduction\nLast week we learned the basic behaviors that define computers – their ability to store, retrieve, and process information. This means that many simple devices, even non-electronics, can be considered computers.\nThe computers that we mostly are concerned with in the computer science profession, however, are generally complicated electronic devices made of many components. In this class, we are going to learn many of the fundamental components that make up modern computing devices.\nToday, we will start with the external, or peripheral, components of a computer – each of these have their own set of interesting behaviors and properties that are worth understanding.\nMany peripheral components of a computer can broadly be divided into two categories:\n\nInput Devices: devices that accept data and instructions from a user to a computer.\nOutput Devices: devices that present data and information to the user from a computer.\n\nWe will cover many examples of each.",
     "crumbs": [
       "Home",
       "Topics",
       "Hardware",
-      "External components"
+      "External components V1"
     ]
   },
   {
-    "objectID": "topics/hardware/external-components.html#lesson-overview",
-    "href": "topics/hardware/external-components.html#lesson-overview",
-    "title": "External components",
+    "objectID": "topics/hardware/external-components-v1.html#lesson-overview",
+    "href": "topics/hardware/external-components-v1.html#lesson-overview",
+    "title": "External components V1",
     "section": "Lesson overview",
     "text": "Lesson overview\n\nLearn the history, behavior, and important properties of Input and Output devices\nInput devices:\n\nKeyboards\nMice\nControllers\nCameras\nTouchscreens\nScanners\n\nOutput devices:\n\nMonitors\nProjectors\nPrinters\nSpeakers",
     "crumbs": [
       "Home",
       "Topics",
       "Hardware",
-      "External components"
+      "External components V1"
     ]
   },
   {
-    "objectID": "topics/hardware/external-components.html#input-devices",
-    "href": "topics/hardware/external-components.html#input-devices",
-    "title": "External components",
+    "objectID": "topics/hardware/external-components-v1.html#input-devices",
+    "href": "topics/hardware/external-components-v1.html#input-devices",
+    "title": "External components V1",
     "section": "Input Devices",
     "text": "Input Devices\nAllow a computer to accept data and instructions from a user.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMouse\nUsed to navigate the graphical user interface (GUI).\nThere are many types of mice, distinguished by tracking technology and by use case\nTechnologies :\nMechanical mice use a ball to measure movement (obsolete now)\nOptical mice use light sources (first LED, then the more precise Laser) [^1]\nPurposes:\nMany! “Gaming” (many buttons), Ergonomic (optimize human comfort), etc.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n[^1] Good notes on history and explanation of how/why they work “Optical mice use image sensors to image naturally occurring texture [on the surface they are placed]…. These surfaces, when lit at a grazing angle by a light emitting diode, cast distinct shadows that resemble a hilly terrain lit at sunset. Images of these surfaces are captured in continuous succession and compared with each other to determine how far the mouse has moved.” https://en.wikipedia.org/wiki/Computer_mouse https://en.wikipedia.org/wiki/Optical_mouse\n\n\nKeyboard\nUsed to enter text commands.\nMost commonly used is the QWERTY layout (1873).\nOther layouts include QWERTZ (Germany/Switzerland) and AZERTY (France) and DVORAK (nerds*)\nVariations include wired or wireless keyboards and numeric keypads.\nErgonomic designs are recently becoming more popular.\nKVM (“keyboard, video and mouse”): control multiple devices from one keyboard/mouse combination\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOthers\n\nGamepads or joysticks are used for playing games and running simulations.\nDigital / video cameras and webcams create images and videos.\nMicrophones\nBiometric devices use features unique to an individual user (e.g. fingerprint).\nTouchscreens have a pressure-sensitive panel.\nScanners digitize images or documents so they can be stored as files.\nDigital Tablets (sometimes called Digitizers) allow the user to create images or artwork using a stylus.\nMedia card readers read/write data from/to different types of media cards (SD cards, video game cartridges, etc.)",
     "crumbs": [
       "Home",
       "Topics",
       "Hardware",
-      "External components"
+      "External components V1"
     ]
   },
   {
-    "objectID": "topics/hardware/external-components.html#output-devices",
-    "href": "topics/hardware/external-components.html#output-devices",
-    "title": "External components",
+    "objectID": "topics/hardware/external-components-v1.html#output-devices",
+    "href": "topics/hardware/external-components-v1.html#output-devices",
+    "title": "External components V1",
     "section": "Output Devices",
     "text": "Output Devices\n\nMonitors\n\nDifferent types of monitors use different technologies to create an image.\nHowever, the common principles are the same:\n\nDigital representation of image to display is sent to the monitor\nThe monitor produces each pixel (the “atom” of monitor displays) using some deterministic physical technology\nLight from the monitor reaches us as a useful/pleasing image.\n\nThe following slides are the main technologies used today (from oldest to latest)\n\n\nCRT Monitors\n\nCRT (Cathode ray tube)\n\nThe most common type of consumer and industry television before ~2010\nA tungsten coil is heated in a vacuum until it sheds electrons, those electrons are accelerated by an electric field and guided by magnets to hit a phosphor coated glass display to emit light in a pixel grid\nObsolete since today there are lighter, simpler higher resolution technologies\nStill used today for some applications due to zero latency . For instance, I use one for playing NES Tetris!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlasma Monitors\n\nPlasma\n\nTiny cells of ionized gas that light up when stimulated by electricity.\nOften used in home theatre applications due to accurate video representation.\nHigh levels of brightness, deep black levels and very wide color range.\nHave shorter life span, susceptible to “screen burn-in” (this is why screensavers are called “screen savers”! Same for CRT).\n\n(+) Plasma cell will produce light that looks good from every angle, it was high refresh rate (videos are smoother)\n(-) BUT! Consumes a lot of electricity\n(-) Doesn’t work at high altitudes! (low pressure)\n\n\nPlasma is a chemical state of molecules when molecules in state of gas are heated up (excited with electric charge). Typical Plasma displays have two glass plates sandwiching hundreds of thousands of cells containing plasma. Two sets of electrodes will provide some charges which will excite the plasma Which will release photons at three different wavelength (either red, green or blue)\n\n\nLCD Monitors\n\n\nLCD (Liquid crystal display)\n\nCommonly used in flat panel monitors and laptops.\nConsists of a white backlight (in light, white = all color’s combined), two polarizing filters, and liquid crystal solution between them to transform the backlight into a coherent pixel grid.\nAn electronic current aligns and controls the crystals so that light can pass through them.\n\n(+) Allows to have flat screens!\n\n\nFor more information: https://www.youtube.com/watch?v=Gx-JVoOFYhs&ab_channel=e-learning%C3%A9lectronique\n\nAn LCD Screen is made up of layers of very thin glass (2), liquid crystal (5um), metal and dielectrics Liquid cystal is a modelcule between liquid (not ordered and constant motion) and crystal (ordered fashion) Liquid crytsal is organic (made of carbone and oxygen), they can be smectic (parallel), nematic (same direction not layered), cholesteric (helix order) LCD TN (Twistic nematic) cheapest The polarizing filter lets only one orientation of the light pass through. To transform the white light into colored light, a color filter is placed on the outter face ( made of pigments which will absorb all colors execept the color that is passing (red, blue or green)\n\n\nLED (Light emitting diode)\n\nSame as LCD but uses LED backlighting  instead of a white backlight with crystal liquid to light the display.\nThe brightness of each RGB LED is controlled programmatically to produce each pixel\n(+) Thinner (no layers), lighter and brighter, and displays better contrast\n(+) Lower power  consumption.\n\n\n\nFor more information: https://www.youtube.com/watch?v=96QwqOZ4xjE&ab_channel=Lesics\n\nOLED (Organic LED)\n\nSimilar to LED, but no backlighting  required – the material used to create these displays emits light when an electrical current is applied .\n(+)Allows for perfect representation of dark colors  unlike all other monitor technologies. Also allows for flexible and transparent monitors\n(-)More expensive to produce, more susceptible to screen-burn-in than LCD or LED (but better than Plasma and CRT in this respect)\n\n\n\nFor more information: https://www.youtube.com/watch?v=xAMhX3Drq14&ab_channel=Lesics\n\nDLP (Digital light processing)\n\nUsed in projectors.\nSpinning color wheel with microprocessor-controlled array of mirrors.\nEach mirror corresponds to a specific pixel, reflecting light.\nMonochrome image is created using up to 1024 shades of grey.\nColor wheel then adds to complete the projected image.\n\n\n\n\n\nPrinters\n\nPrinters take data from a computer and generate output on paper.\n\nBasic principles\n\nSimilar to monitor (high quantity of small, well placed “pixels” → the visual quality of a coherent image)\nRather than orienting light photons on a screen, printers deposit liquid stains on to paper. The physical setup is different, but the same principles are at work.\n\n\n\n\nA high enough quantity of toasted bread produces the qualitative impression of a human eye in this “piece” of art. Printers (and monitors) use much higher quantities of “pixels” than depicted here!\n\nInkjet Printers\nUses tiny droplets of ink to produce images.\nUses cyan, magenta and blue instead of RGB like screens!\nHeat is applied to an ink reservoir, which pushes ink bubbles through a nozzle in a controlled manner.\nThe ink liquid droplets are smaller in diameter than a human hair! Many of these added together produce the quality of a coherent image.\n\n\nLaser Printers\n\n\nExpensive when they were initially introduced.\nProduce high-quality output quietly at a high speed.\nProduces images by directing a laser beam  at a mirror which bounces the beam onto a drum.\n\nThe drum contains a special coating  to which the toner (ink powder) sticks.\nA laser beam then conveys information to the drum, neutralizing and detaching some toner.\nAs the paper rolls by the drum, the toner is transferred onto the paper. A hot roller then bonds toner to the paper.",
     "crumbs": [
       "Home",
       "Topics",
       "Hardware",
-      "External components"
+      "External components V1"
     ]
   },
   {
-    "objectID": "topics/hardware/external-components.html#exercises",
-    "href": "topics/hardware/external-components.html#exercises",
-    "title": "External components",
+    "objectID": "topics/hardware/external-components-v1.html#exercises",
+    "href": "topics/hardware/external-components-v1.html#exercises",
+    "title": "External components V1",
     "section": "Exercises",
     "text": "Exercises\nSee Lab",
     "crumbs": [
       "Home",
       "Topics",
       "Hardware",
-      "External components"
+      "External components V1"
     ]
   },
   {
-    "objectID": "topics/hardware/external-components.html#knowledge-check",
-    "href": "topics/hardware/external-components.html#knowledge-check",
-    "title": "External components",
+    "objectID": "topics/hardware/external-components-v1.html#knowledge-check",
+    "href": "topics/hardware/external-components-v1.html#knowledge-check",
+    "title": "External components V1",
     "section": "Knowledge check",
     "text": "Knowledge check\nThe following questions invite you to reflect on the key information learned in this lesson. If you can’t answer the question, you can click the corresponding link to review the topic more closely. Future assignments and tests may be based on questions like these:",
     "crumbs": [
       "Home",
       "Topics",
       "Hardware",
-      "External components"
+      "External components V1"
     ]
   },
   {
-    "objectID": "topics/hardware/external-components.html#additional-resources",
-    "href": "topics/hardware/external-components.html#additional-resources",
-    "title": "External components",
+    "objectID": "topics/hardware/external-components-v1.html#additional-resources",
+    "href": "topics/hardware/external-components-v1.html#additional-resources",
+    "title": "External components V1",
     "section": "Additional resources",
     "text": "Additional resources\nThis section contains helpful links to related content. You aren’t required to study these in detail, but it never hurts to learn more.",
     "crumbs": [
       "Home",
       "Topics",
       "Hardware",
-      "External components"
+      "External components V1"
     ]
   },
   {
-    "objectID": "topics/hardware/external-components.htm#introduction",
-    "href": "topics/hardware/external-components.htm#introduction",
-    "title": "External components",
+    "objectID": "topics/hardware/external-components-v1.htm#introduction",
+    "href": "topics/hardware/external-components-v1.htm#introduction",
+    "title": "External components V1",
     "section": "Introduction",
     "text": "Introduction\nLast week we learned the basic behaviors that define computers – their ability to store, retrieve, and process information. This means that many simple devices, even non-electronics, can be considered computers.\nThe computers that we mostly are concerned with in the computer science profession, however, are generally complicated electronic devices made of many components. In this class, we are going to learn many of the fundamental components that make up modern computing devices.\nToday, we will start with the external, or peripheral, components of a computer – each of these have their own set of interesting behaviors and properties that are worth understanding.\nMany peripheral components of a computer can broadly be divided into two categories:\n\nInput Devices: devices that accept data and instructions from a user to a computer.\nOutput Devices: devices that present data and information to the user from a computer.\n\nWe will cover many examples of each."
   },
   {
-    "objectID": "topics/hardware/external-components.htm#lesson-overview",
-    "href": "topics/hardware/external-components.htm#lesson-overview",
-    "title": "External components",
+    "objectID": "topics/hardware/external-components-v1.htm#lesson-overview",
+    "href": "topics/hardware/external-components-v1.htm#lesson-overview",
+    "title": "External components V1",
     "section": "Lesson overview",
     "text": "Lesson overview\n\nLearn the history, behavior, and important properties of Input and Output devices\nInput devices:\n\nKeyboards\nMice\nControllers\nCameras\nTouchscreens\nScanners\n\nOutput devices:\n\nMonitors\nProjectors\nPrinters\nSpeakers"
   },
   {
-    "objectID": "topics/hardware/external-components.htm#input-devices",
-    "href": "topics/hardware/external-components.htm#input-devices",
-    "title": "External components",
+    "objectID": "topics/hardware/external-components-v1.htm#input-devices",
+    "href": "topics/hardware/external-components-v1.htm#input-devices",
+    "title": "External components V1",
     "section": "Input Devices",
     "text": "Input Devices\nAllow a computer to accept data and instructions from a user.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMouse\nUsed to navigate the graphical user interface (GUI).\nThere are many types of mice, distinguished by tracking technology and by use case\nTechnologies :\nMechanical mice use a ball to measure movement (obsolete now)\nOptical mice use light sources (first LED, then the more precise Laser) [^1]\nPurposes:\nMany! “Gaming” (many buttons), Ergonomic (optimize human comfort), etc."
   },
   {
-    "objectID": "topics/hardware/external-components.htm#output-devices",
-    "href": "topics/hardware/external-components.htm#output-devices",
-    "title": "External components",
+    "objectID": "topics/hardware/external-components-v1.htm#output-devices",
+    "href": "topics/hardware/external-components-v1.htm#output-devices",
+    "title": "External components V1",
     "section": "Output Devices",
     "text": "Output Devices\nMonitors\n\nDifferent types of monitors use different technologies to create an image.\nHowever, the common principles are the same:\n\nDigital representation of image to display is sent to the monitor\nThe monitor produces each pixel (the “atom” of monitor displays) using some deterministic physical technology\nLight from the monitor reaches us as a useful/pleasing image.\n\nThe following slides are the main technologies used today (from oldest to latest)\n\nCRT Monitors\n\nCRT (Cathode ray tube)\n\nThe most common type of consumer and industry television before ~2010\nA tungsten coil is heated in a vacuum until it sheds electrons, those electrons are accelerated by an electric field and guided by magnets to hit a phosphor coated glass display to emit light in a pixel grid\nObsolete since today there are lighter, simpler higher resolution technologies\nStill used today for some applications due to zero latency . For instance, I use one for playing NES Tetris!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlasma Monitors\n\nPlasma\n\nTiny cells of ionized gas that light up when stimulated by electricity.\nOften used in home theatre applications due to accurate video representation.\nHigh levels of brightness, deep black levels and very wide color range.\nHave shorter life span, susceptible to “screen burn-in” (this is why screensavers are called “screen savers”! Same for CRT).\n\n(+) Plasma cell will produce light that looks good from every angle, it was high refresh rate (videos are smoother)\n(-) BUT! Consumes a lot of electricity\n(-) Doesn’t work at high altitudes! (low pressure)\n\n\nPlasma is a chemical state of molecules when molecules in state of gas are heated up (excited with electric charge). Typical Plasma displays have two glass plates sandwiching hundreds of thousands of cells containing plasma. Two sets of electrodes will provide some charges which will excite the plasma Which will release photons at three different wavelength (either red, green or blue)\nLCD Monitors\n\n\nLCD (Liquid crystal display)\n\nCommonly used in flat panel monitors and laptops.\nConsists of a white backlight (in light, white = all color’s combined), two polarizing filters, and liquid crystal solution between them to transform the backlight into a coherent pixel grid.\nAn electronic current aligns and controls the crystals so that light can pass through them.\n\n(+) Allows to have flat screens!\n\n\nFor more information: https://www.youtube.com/watch?v=Gx-JVoOFYhs&ab_channel=e-learning%C3%A9lectronique"
   },
   {
-    "objectID": "topics/hardware/external-components.htm#exercises",
-    "href": "topics/hardware/external-components.htm#exercises",
-    "title": "External components",
+    "objectID": "topics/hardware/external-components-v1.htm#exercises",
+    "href": "topics/hardware/external-components-v1.htm#exercises",
+    "title": "External components V1",
     "section": "Exercises",
     "text": "Exercises\nSee Lab"
   },
   {
-    "objectID": "topics/hardware/external-components.htm#knowledge-check",
-    "href": "topics/hardware/external-components.htm#knowledge-check",
-    "title": "External components",
+    "objectID": "topics/hardware/external-components-v1.htm#knowledge-check",
+    "href": "topics/hardware/external-components-v1.htm#knowledge-check",
+    "title": "External components V1",
     "section": "Knowledge check",
     "text": "Knowledge check\nThe following questions invite you to reflect on the key information learned in this lesson. If you can’t answer the question, you can click the corresponding link to review the topic more closely. Future assignments and tests may be based on questions like these:"
   },
   {
-    "objectID": "topics/hardware/external-components.htm#additional-resources",
-    "href": "topics/hardware/external-components.htm#additional-resources",
-    "title": "External components",
+    "objectID": "topics/hardware/external-components-v1.htm#additional-resources",
+    "href": "topics/hardware/external-components-v1.htm#additional-resources",
+    "title": "External components V1",
     "section": "Additional resources",
     "text": "Additional resources\nThis section contains helpful links to related content. You aren’t required to study these in detail, but it never hurts to learn more."
-  },
-  {
-    "objectID": "about/index.html",
-    "href": "about/index.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n\n\n\n\n\n\n\n\n\n\n\nAbout this website\n\n\nDescription of technologies and resources used to build this website. Acknowledgements, copyright, terms of use, etc. can be found on this page.\n\n\n\n\n\n\n\n\n\n\n\nCalendar\n\n\nRoadmap for course deliverables; record of lectures & activites we have covered along the way.\n\n\n\n\n\n\n\n\n\n\n\nSyllabus\n\n\nCourse description outlining goals, expectations, resources, and other important information.\n\n\n\n\n\n\n\nNo matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
-    "crumbs": [
-      "Home",
-      "About"
-    ]
   },
   {
     "objectID": "about/syllabus.html",
@@ -525,6 +533,79 @@
     ]
   },
   {
+    "objectID": "about/calendar.html",
+    "href": "about/calendar.html",
+    "title": "Calendar",
+    "section": "",
+    "text": "The focused pupil keeps watch on Time. Image retrieved from Bryan Superfreak Magnum on Pinterest.\nThis is the authoritative calendar for content covered in class, and for content you should expect to see covered as we continue through the course.\nYou can compare this calendar with the calendar from the Course Outline to see where this course has deviated from the original outline.",
+    "crumbs": [
+      "Home",
+      "About",
+      "Calendar"
+    ]
+  },
+  {
+    "objectID": "about/calendar.html#august-september",
+    "href": "about/calendar.html#august-september",
+    "title": "Calendar",
+    "section": "August & September",
+    "text": "August & September\n\nDeliverables\n\nLab 0: Introduction to Technical Support Survey\nLab 1: TBD\nAssignment 1: TBD\n\n\n\nSchedule\n\nAug 22: Introductions, icebreaker, overview of the course outline.\nAug 26: Completed Lab 0 (see above). Overview of the course syllabus and course calendar.\nAug 27: Class cancelled – please read the lecture Introduction to computers to catch up on covered material.\nAug 29: In-class activities. TBD",
+    "crumbs": [
+      "Home",
+      "About",
+      "Calendar"
+    ]
+  },
+  {
+    "objectID": "announcements/2024-08-27-class-cancelled.html",
+    "href": "announcements/2024-08-27-class-cancelled.html",
+    "title": "Class cancelled today",
+    "section": "",
+    "text": "Unfortunately I am not feeling well today and would like to make sure I do not pass that along to you – I will be cancelling today’s class.\nI will be uploading today’s lecture notes shortly. The link for these will appear on LEA soon. (EDIT: you can now find them here. Please read them in advance of Thursday’s class, where we will be doing in-class activities based on some of the content.\nYou can also see all of the content we’ve covered the past two days on the course calendar.\nLet me know if you have any questions!\n\n\n\n Back to topReuseCC BY-NC-SA 4.0"
+  },
+  {
+    "objectID": "announcements/index.html",
+    "href": "announcements/index.html",
+    "title": "Announcements",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nClass cancelled today\n\n\n\n\n\n\n\n\n\n\n\nAug 27, 2024\n\n\n\n\n\n\nNo matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
+    "crumbs": [
+      "Home",
+      "Announcements"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "This companion site for the 420-1N6 course includes:",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#source-code",
+    "href": "index.html#source-code",
+    "title": "Home",
+    "section": "Source Code",
+    "text": "Source Code\nThis webpage is written in Markdown using the Quarto framework. The website is hosted via GitHub Pages\nSource code is open source and available on GitHub.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n\n\n\n\n\n\n\n\n\n\n\nAbout this website\n\n\nDescription of technologies and resources used to build this website. Acknowledgements, copyright, terms of use, etc. can be found on this page.\n\n\n\n\n\n\n\n\n\n\n\nCalendar\n\n\nRoadmap for course deliverables; record of lectures & activites we have covered along the way.\n\n\n\n\n\n\n\n\n\n\n\nSyllabus\n\n\nCourse description outlining goals, expectations, resources, and other important information.\n\n\n\n\n\n\n\nNo matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
+    "crumbs": [
+      "Home",
+      "About"
+    ]
+  },
+  {
     "objectID": "about/this-site.html",
     "href": "about/this-site.html",
     "title": "About this website",
@@ -561,80 +642,14 @@
     ]
   },
   {
-    "objectID": "about/calendar.html",
-    "href": "about/calendar.html",
-    "title": "Calendar",
+    "objectID": "topics/index.html",
+    "href": "topics/index.html",
+    "title": "Topics",
     "section": "",
-    "text": "The focused pupil keeps watch on Time. Image retrieved from Bryan Superfreak Magnum on Pinterest.\nThis is the authoritative calendar for content covered in class, and for content you should expect to see covered as we continue through the course.\nYou can compare this calendar with the calendar from the Course Outline to see where this course has deviated from the original outline.",
+    "text": "Hardware\n\n\nAll lectures related to computer hardware can be found here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLogic & Data Representation\n\n\nAll lectures related to logic & data representation can be found here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOperating Systems\n\n\nAll lectures related to operating systems can be found here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTechnical Support\n\n\nAll lectures related to technical support can be found here.\n\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
     "crumbs": [
       "Home",
-      "About",
-      "Calendar"
-    ]
-  },
-  {
-    "objectID": "about/calendar.html#august-september",
-    "href": "about/calendar.html#august-september",
-    "title": "Calendar",
-    "section": "August & September",
-    "text": "August & September\n\nDeliverables\n\nLab 0: Introduction to Technical Support Survey\nLab 1: TBD\nAssignment 1: TBD\n\n\n\nSchedule\n\nAug 22: Introductions, icebreaker, overview of the course outline.\nAug 26: Completed Lab 0 (see above). Overview of the course syllabus and course calendar.\nAug 27: Class cancelled – please read the lecture Introduction to computers to catch up on covered material.\nAug 29: In-class activities. TBD",
-    "crumbs": [
-      "Home",
-      "About",
-      "Calendar"
-    ]
-  },
-  {
-    "objectID": "topics/hardware/internal-components.htm#outline",
-    "href": "topics/hardware/internal-components.htm#outline",
-    "title": "Internal components",
-    "section": "Outline",
-    "text": "Outline\n\nSystem Unit Main Components:\n\nCase\nPower Supply Unit\nConnectors\nMotherboard\n\nExpansion slots\nBuses\nCPU\nCooling Devices\nChipset\nRAM\n\nGPU\nStorage Device"
-  },
-  {
-    "objectID": "topics/hardware/internal-components.htm#inside-a-computer",
-    "href": "topics/hardware/internal-components.htm#inside-a-computer",
-    "title": "Internal components",
-    "section": "Inside A Computer",
-    "text": "Inside A Computer\n\n\nCase\nPower Supply\nMotherboard\nConnectors\nCooling Devices\nProcessor (CPU)\nChipset\nBuses\nMemory (RAM)\nStorage Devices\n\nCase\n\n\nProvides protection and cooling for the internal components.\nAlso prevents damage from static electricity (components grounded via attachment to case).\nUsually made of plastic, steel or aluminum.\nFans move air through the case:\n\nto replace warm air with cold air to keep components at stable temperatures\nto prevent build-up of dust\nThere exist many guides/studies for optimal airflow. E.g. https://voltcave.com/pc-airflow-guide/\n\n\nPower Supply\nMain purpose:  Converts AC power (alternating current) from wall socket to DC power (direct current). Direct current (0 or 5V) is used to power digital circuits.\n\n\nNote: PSU have their own fans. Energy conversion releases a lot of heat!\nActivity: Feeling Your Way\nWith a partner, take it in turns to close your eyes and feel around the back of a PC.\nTry and identify the connectors  you find. Your partner can help you by confirming your guesses.\n\n\nPower Supply\n\n\nComputers can only tolerate slight fluctuations in power without needing to shut down\n\n.\n\nImportant:  Never open a power supply!  The capacitors contained within can keep a dangerous high voltage, high power charge long after being unplugged.\n\nDemo: PSU What are the supported DV outputs?\nUninterruptible Power Supply\nIn the case of a power outage, an Uninterruptible Power Supply (UPS) can keep a computer running for a few minutes to several hours depending on the sophistication of the UPS. See   https://www.wikihow.com/Buy-and-Use-an-Uninterruptible-Power-Supply   for an example\nWe will talk more about uninterruptible power supply when we start speaking about server hardware.\nPower Supply Connectors\n\nMost power supply connectors are : 20 + 4 pins\nUsually made up of wires of various colors:\n\nYellow 12V\nRed 5V\nOrange 3.3V\nOther colors may be ground 0V\n\n\n\nPower Supply Ratings\n\n Useful for Assignment 1 \nRatings:\n\nWattage (amount of power delivered, must be greater than the sum of power required by all parts, some power supplies can provide more power than others)\nEfficiency (Law of thermodynamics: 100% power input cannot be converted to 100% power output; some power supplies have higher efficiency ratings than others)\nFor more detailed explanation:   https://www.newegg.com/insider/how-to-choose-a-pc-power-supply-buying-guide/ \n\n\nConnectors\nThese connect specific components to various ports on the motherboard.\nMost connectors are keyed (can only be inserted one way).\nNote: Always check the pins if you have trouble with a connector. “If it doesn’t go in like butter, it doesn’t go in at all” -- never force a connection! you are likely going to damage the pins."
-  },
-  {
-    "objectID": "topics/hardware/internal-components.html",
-    "href": "topics/hardware/internal-components.html",
-    "title": "Internal components",
-    "section": "",
-    "text": "The notes below are in a draft state – they may change up to Thursday Sep 5",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Hardware",
-      "Internal components"
-    ]
-  },
-  {
-    "objectID": "topics/hardware/internal-components.html#outline",
-    "href": "topics/hardware/internal-components.html#outline",
-    "title": "Internal components",
-    "section": "Outline",
-    "text": "Outline\n\nSystem Unit Main Components:\n\nCase\nPower Supply Unit\nConnectors\nMotherboard\n\nExpansion slots\nBuses\nCPU\nCooling Devices\nChipset\nRAM\n\nGPU\nStorage Device",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Hardware",
-      "Internal components"
-    ]
-  },
-  {
-    "objectID": "topics/hardware/internal-components.html#inside-a-computer",
-    "href": "topics/hardware/internal-components.html#inside-a-computer",
-    "title": "Internal components",
-    "section": "Inside A Computer",
-    "text": "Inside A Computer\n\n\nCase\nPower Supply\nMotherboard\nConnectors\nCooling Devices\nProcessor (CPU)\nChipset\nBuses\nMemory (RAM)\nStorage Devices\n\n\nCase\n\n\nProvides protection and cooling for the internal components.\nAlso prevents damage from static electricity (components grounded via attachment to case).\nUsually made of plastic, steel or aluminum.\nFans move air through the case:\n\nto replace warm air with cold air to keep components at stable temperatures\nto prevent build-up of dust\nThere exist many guides/studies for optimal airflow. E.g. https://voltcave.com/pc-airflow-guide/\n\n\n\n\nPower Supply\nMain purpose:  Converts AC power (alternating current) from wall socket to DC power (direct current). Direct current (0 or 5V) is used to power digital circuits.\n\n\nNote: PSU have their own fans. Energy conversion releases a lot of heat!\n\n\nActivity: Feeling Your Way\nWith a partner, take it in turns to close your eyes and feel around the back of a PC.\nTry and identify the connectors  you find. Your partner can help you by confirming your guesses.\n\n\n\n\nPower Supply\n\n\nComputers can only tolerate slight fluctuations in power without needing to shut down\n\n.\n\nImportant:  Never open a power supply!  The capacitors contained within can keep a dangerous high voltage, high power charge long after being unplugged.\n\nDemo: PSU What are the supported DV outputs?\n\nUninterruptible Power Supply\nIn the case of a power outage, an Uninterruptible Power Supply (UPS) can keep a computer running for a few minutes to several hours depending on the sophistication of the UPS. See   https://www.wikihow.com/Buy-and-Use-an-Uninterruptible-Power-Supply   for an example\nWe will talk more about uninterruptible power supply when we start speaking about server hardware.\n\n\nPower Supply Connectors\n\nMost power supply connectors are : 20 + 4 pins\nUsually made up of wires of various colors:\n\nYellow 12V\nRed 5V\nOrange 3.3V\nOther colors may be ground 0V\n\n\n\n\n\nPower Supply Ratings\n\n Useful for Assignment 1 \nRatings:\n\nWattage (amount of power delivered, must be greater than the sum of power required by all parts, some power supplies can provide more power than others)\nEfficiency (Law of thermodynamics: 100% power input cannot be converted to 100% power output; some power supplies have higher efficiency ratings than others)\nFor more detailed explanation:   https://www.newegg.com/insider/how-to-choose-a-pc-power-supply-buying-guide/ \n\n\n\n\n\nConnectors\nThese connect specific components to various ports on the motherboard.\nMost connectors are keyed (can only be inserted one way).\nNote: Always check the pins if you have trouble with a connector. “If it doesn’t go in like butter, it doesn’t go in at all” -- never force a connection! you are likely going to damage the pins.",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Hardware",
-      "Internal components"
+      "Topics"
     ]
   },
   {
@@ -642,7 +657,7 @@
     "href": "topics/hardware/index.html",
     "title": "Hardware",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n\n\n\n\n2024-08-27\n\n\n\n\n\n\n\n\n\n\n\n\nExternal components\n\n\nOverview of many external components, or peripheral devices, used by and for computers.\n\n\n\n\n\n\n\n\n2024-09-03\n\n\n\n\n\n\n\n\n\n\n\n\nInternal components\n\n\nOverview of the main internal components of computers.\n\n\n\n\n\n\n\n\n2024-09-05\n\n\n\n\n\n\nNo matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n\n\n\n\n2024-08-27\n\n\n\n\n\n\n\n\n\n\n\n\nExternal components V1\n\n\nOverview of many external components, or peripheral devices, used by and for computers.\n\n\n\n\n\n\n\n\n2024-09-03\n\n\n\n\n\n\n\n\n\n\n\n\nExternal components\n\n\nOverview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors\n\n\n\n\n\n\n\n\n2024-09-03\n\n\n\n\n\n\n\n\n\n\n\n\nInternal Components\n\n\nExplains the most important internal components of desktop computers. Processing, memory, storage, and communication.\n\n\n\n\n\n\n\n\n2024-09-10\n\n\n\n\n\n\n\n\n\n\n\n\nUnderstanding CPUs\n\n\nAn in-depth explanation of command processing and executing at the CPU level\n\n\n\n\n\n\n\n\n2024-09-16\n\n\n\n\n\n\nNo matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
     "crumbs": [
       "Home",
       "Topics",
@@ -650,25 +665,213 @@
     ]
   },
   {
-    "objectID": "topics/index.html",
-    "href": "topics/index.html",
-    "title": "Topics",
+    "objectID": "topics/hardware/external-components.htm#introduction",
+    "href": "topics/hardware/external-components.htm#introduction",
+    "title": "External components",
+    "section": "Introduction",
+    "text": "Introduction\nLast week we learned the basic behaviors that define computers – their ability to store, retrieve, and process information. This means that many simple devices, even non-electronics, can be considered computers.\nThe computers that we mostly are concerned with in the computer science profession, however, are generally complicated electronic devices made of many components. In this class, we are going to learn many of the fundamental components that make up modern computing devices.\nToday, we will start with the external, or peripheral, components of a computer – each of these have their own set of interesting behaviors and properties that are worth understanding.\nMany peripheral components of a computer can broadly be divided into two categories:\n\nInput Devices: devices that accept data and instructions from a user to a computer.\nOutput Devices: devices that present data and information to the user from a computer.\n\nWe will cover many examples of each."
+  },
+  {
+    "objectID": "topics/hardware/external-components.htm#lesson-overview",
+    "href": "topics/hardware/external-components.htm#lesson-overview",
+    "title": "External components",
+    "section": "Lesson overview",
+    "text": "Lesson overview\nLearn the history, behavior, and important properties of Input and Output devices\n\nInput devices:\n\nKeyboards\nMice\nControllers\nCameras\nTouchscreens\nScanners\n\nOutput devices:\n\nMonitors\nProjectors\nPrinters\nSpeakers"
+  },
+  {
+    "objectID": "topics/hardware/external-components.htm#input-devices",
+    "href": "topics/hardware/external-components.htm#input-devices",
+    "title": "External components",
+    "section": "Input Devices",
+    "text": "Input Devices\nInput Devices are devices that accept data and instructions from a user to a computer.\nMouse\nUsed to navigate the graphical user interface (GUI). There are many types of mice, distinguished by tracking technology and by use case\nTechnology:\n\nMechanical mice use a ball to measure movement (obsolete now – why?)\nOptical mice use light sources (first LED, then more precise Laser).1\n\nPurpose:\nMany! “Gaming” (many buttons), Ergonomic (optimize human comfort), etc.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\nKeyboard\nUsed to enter text commands. Most commonly used is the QWERTY layout (used in typewriters since 1873). Other layouts include QWERTZ (Germany/Switzerland) and AZERTY (France) and DVORAK (nerds2)\nVariations include wired or wireless keyboards and numeric keypads. Ergonomic designs are recently becoming more popular.\n\n\n\nFigure caption.\n\n\n\n\n\nFigure caption.\n\n\n\n\n\nFigure caption.\n\n\nInput Devices: Others\n\nGamepads or joysticks are used for playing games and running simulations.\nDigital / video cameras and webcams create images and videos.\nBiometric devices use features unique to an individual user (e.g. fingerprint).\nTouchscreens have a pressure-sensitive panel.\nScanners digitize images or documents so they can be stored as files.\nDigital Tablets (sometimes called Digitizers) allow the user to create images or artwork using a stylus.\nMedia card readers read/write data from/to different types of media cards (SD cards, video game cartridges, etc.)\n\nGood notes on history and explanation of how/why they work “Optical mice use image sensors to image naturally occurring texture [on the surface they are placed]…. These surfaces, when lit at a grazing angle by a light emitting diode, cast distinct shadows that resemble a hilly terrain lit at sunset. Images of these surfaces are captured in continuous succession and compared with each other to determine how far the mouse has moved.” https://en.wikipedia.org/wiki/Computer_mouse https://en.wikipedia.org/wiki/Optical_mousenote: this is very hypocritical coming from me. don’t mind my bad jokes!"
+  },
+  {
+    "objectID": "topics/hardware/external-components.htm#output-devices",
+    "href": "topics/hardware/external-components.htm#output-devices",
+    "title": "External components",
+    "section": "Output Devices",
+    "text": "Output Devices\nOutput Devices are devices that present data and information to the user from a computer.\nMonitors\nThere are many different types of monitors use different technologies to create an image. However, the common principles are the same:\n\nDigital representation of image to display is sent to the monitor\nThe monitor produces each pixel (the “atom” of monitor displays) using some deterministic physical technology\nLight from the monitor reaches us as a useful/pleasing image.\n\nThe following sections are the main technologies used today (from oldest to newest)\nCathode Ray Tube (CRT)\nCathode Ray Tube (CRT) monitors are very complicated, very cool, moderately dangerous, and mostly obsolete!\n\nThe most common type of consumer and industry television before ~2010\nBasically: a tungsten coil is heated in a vacuum until it sheds electrons, those electrons are accelerated by an electric field and guided by magnets to hit a phosphor coated glass display to emit light in a pixel grid\nObsolete since today their are lighter, simpler higher resolution technologies\nStill used today for some applications due to zero latency . For instance, I use one for playing NES Tetris!"
+  },
+  {
+    "objectID": "topics/hardware/external-components.htm#connectors",
+    "href": "topics/hardware/external-components.htm#connectors",
+    "title": "External components",
+    "section": "Connectors",
+    "text": "Connectors\nConnectors are how to get the computer to talk to all these output devices!\nCables\nSome technical terms:\n\nCable (electric) : The insulated copper wire that carries electrical/digital signals from devices to/from computers\nCable (optical) : The insulated glass tube that carries digital signals in the form of light between devices and computers\nPort : The slot where the insertable end of USB cable is connected to the computer\n“Male” / “Female” cable ends : Distinguishing between the insertable end and the receptacle end for cables\nConverter : A device that allows different standards/types of connectors to be used together\n\nElectrical cables\ntransmit an electrical signal on a conducting wire, insulated to protect the signal/surroundings\n\nOptical cables\ntransmit signal in the form of light. Very fast! (speed of light in glass).\n\nA short paper (5 pages) comparing the two cable technologies in more detail: Fibre Optics vs Copper Cabling: Understanding the Differences\nUSB\nUniversal Serial Bus (we’ll talk about the meaning of the last two words soon!) is used to connect most modern devices to computers. Back in the day, mice/keyboards/external storage/speakers/etc. all had different cables. These have now been (mostly) unified under the USB standard.\nUSB connectors can transmit both power (e.g. charging phones) and information (data). Despite being “Universal” there are an incredible number of USB types."
+  },
+  {
+    "objectID": "topics/hardware/external-components.htm#exercises",
+    "href": "topics/hardware/external-components.htm#exercises",
+    "title": "External components",
+    "section": "Exercises",
+    "text": "Exercises"
+  },
+  {
+    "objectID": "topics/hardware/external-components.htm#knowledge-check",
+    "href": "topics/hardware/external-components.htm#knowledge-check",
+    "title": "External components",
+    "section": "Knowledge check",
+    "text": "Knowledge check"
+  },
+  {
+    "objectID": "topics/hardware/external-components.htm#additional-resources",
+    "href": "topics/hardware/external-components.htm#additional-resources",
+    "title": "External components",
+    "section": "Additional resources",
+    "text": "Additional resources"
+  },
+  {
+    "objectID": "topics/hardware/external-components.html",
+    "href": "topics/hardware/external-components.html",
+    "title": "External components",
     "section": "",
-    "text": "Hardware\n\n\nAll lectures related to computer hardware can be found here.\n\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
+    "text": "All of these devices, except one, would be considered in external component of a modern desktop computer. Which one is not? Figure retrieved from Innovation it solution, original source unknown.",
     "crumbs": [
       "Home",
-      "Topics"
+      "Topics",
+      "Hardware",
+      "External components"
     ]
   },
   {
-    "objectID": "announcements/index.html",
-    "href": "announcements/index.html",
-    "title": "Announcements",
-    "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nClass cancelled today\n\n\n\n\n\n\n\n\n\n\n\nAug 27, 2024\n\n\n\n\n\n\nNo matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
+    "objectID": "topics/hardware/external-components.html#introduction",
+    "href": "topics/hardware/external-components.html#introduction",
+    "title": "External components",
+    "section": "Introduction",
+    "text": "Introduction\nLast week we learned the basic behaviors that define computers – their ability to store, retrieve, and process information. This means that many simple devices, even non-electronics, can be considered computers.\nThe computers that we mostly are concerned with in the computer science profession, however, are generally complicated electronic devices made of many components. In this class, we are going to learn many of the fundamental components that make up modern computing devices.\nToday, we will start with the external, or peripheral, components of a computer – each of these have their own set of interesting behaviors and properties that are worth understanding.\nMany peripheral components of a computer can broadly be divided into two categories:\n\nInput Devices: devices that accept data and instructions from a user to a computer.\nOutput Devices: devices that present data and information to the user from a computer.\n\nWe will cover many examples of each.",
     "crumbs": [
       "Home",
-      "Announcements"
+      "Topics",
+      "Hardware",
+      "External components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/external-components.html#lesson-overview",
+    "href": "topics/hardware/external-components.html#lesson-overview",
+    "title": "External components",
+    "section": "Lesson overview",
+    "text": "Lesson overview\nLearn the history, behavior, and important properties of Input and Output devices\n\nInput devices:\n\nKeyboards\nMice\nControllers\nCameras\nTouchscreens\nScanners\n\nOutput devices:\n\nMonitors\nProjectors\nPrinters\nSpeakers",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "External components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/external-components.html#input-devices",
+    "href": "topics/hardware/external-components.html#input-devices",
+    "title": "External components",
+    "section": "Input Devices",
+    "text": "Input Devices\nInput Devices are devices that accept data and instructions from a user to a computer.\n\nMouse\nUsed to navigate the graphical user interface (GUI). There are many types of mice, distinguished by tracking technology and by use case\nTechnology:\n\nMechanical mice use a ball to measure movement (obsolete now – why?)\nOptical mice use light sources (first LED, then more precise Laser).1\n\nPurpose:\nMany! “Gaming” (many buttons), Ergonomic (optimize human comfort), etc.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nKeyboard\nUsed to enter text commands. Most commonly used is the QWERTY layout (used in typewriters since 1873). Other layouts include QWERTZ (Germany/Switzerland) and AZERTY (France) and DVORAK (nerds2)\nVariations include wired or wireless keyboards and numeric keypads. Ergonomic designs are recently becoming more popular.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\nInput Devices: Others\n\nGamepads or joysticks are used for playing games and running simulations.\nDigital / video cameras and webcams create images and videos.\nBiometric devices use features unique to an individual user (e.g. fingerprint).\nTouchscreens have a pressure-sensitive panel.\nScanners digitize images or documents so they can be stored as files.\nDigital Tablets (sometimes called Digitizers) allow the user to create images or artwork using a stylus.\nMedia card readers read/write data from/to different types of media cards (SD cards, video game cartridges, etc.)",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "External components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/external-components.html#output-devices",
+    "href": "topics/hardware/external-components.html#output-devices",
+    "title": "External components",
+    "section": "Output Devices",
+    "text": "Output Devices\nOutput Devices are devices that present data and information to the user from a computer.\n\nMonitors\nThere are many different types of monitors use different technologies to create an image. However, the common principles are the same:\n\nDigital representation of image to display is sent to the monitor\nThe monitor produces each pixel (the “atom” of monitor displays) using some deterministic physical technology\nLight from the monitor reaches us as a useful/pleasing image.\n\nThe following sections are the main technologies used today (from oldest to newest)\n\nCathode Ray Tube (CRT)\nCathode Ray Tube (CRT) monitors are very complicated, very cool, moderately dangerous, and mostly obsolete!\n\nThe most common type of consumer and industry television before ~2010\nBasically: a tungsten coil is heated in a vacuum until it sheds electrons, those electrons are accelerated by an electric field and guided by magnets to hit a phosphor coated glass display to emit light in a pixel grid\nObsolete since today their are lighter, simpler higher resolution technologies\nStill used today for some applications due to zero latency . For instance, I use one for playing NES Tetris!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlasma\nPlasma monitors use tiny cells of ionised gas that light up when stimulated by electricity.\n\nOften used in home theatre applications due to accurate video representation.\nHigh levels of brightness, deep black levels and very wide colour range.\nHave shorter life span, susceptible to “screen burn-in” (this is why screensavers are called “screen savers”! Same for CRT).\n(+) Plasma cell will produce light that looks good from every angle, it was high refresh rate (videos are smoother)\n(-) BUT! Consumes a lot of electricity\n(-) Doesn’t work at high altitudes! (low pressure)\n\n\n\n\nPlasma is a chemical state of molecules when molecules in state of gas are heated up (excited with electric charge). Typical Plasma displays have two glass plates sandwiching hundreds of thousands of cells containing plasma. Two sets of electrodes will provide some charges which will excite the plasma Which will release photons at three different wavelength (either red, green or blue)\n\n\n\n\nLiquid Crystal Display (LCD)\nAn LCD Screen is made up of layers of very thin glass, liquid crystal, metal and dielectrics. Liquid cystal is a modelcule between liquid (not ordered and constant motion) and crystal (ordered fashion). This technology allows for precise control of color without the need to ionise gas with powerful electronics.\n\nCommonly used in flat panel monitors and laptops.\nConsists of a white backlight (in light, white = all colours combined), two polarizing filters, and liquid crystal solution between them to transform the backlight into a coherent pixel grid.\nAn electronic current aligns and controls the crystals so that light can pass through them.\n(+) Allow the use of flat screens!\n\n\n\n\n\n\n\n\nThe polarizing filter lets only one orientation of the light pass through. To transform the white light into colored light, a color filter is placed on the outter face ( made of pigments which will absorb all colors execept the color that is passing (red, blue or green)\n\n\n\n\nLight emitting diode (LED)\n\nAn LCD display that uses LED backlighting instead of a white backlight to light the display. The brightness of each RGB LED is controlled programmatically to produce each pixel\n(+) Thinner (no layers), lighter and brighter, and displays better contrast\n(+) Lower power  consumption.\n\n\n\n\n\n\n\n\nFigure caption.\n\n\nFor more information: https://www.youtube.com/watch?v=Gx-JVoOFYhs&ab_channel=e-learning%C3%A9lectronique\n\n\nOrganic LED (OLED)\nOLED displays are similar to LED, but no backlighting required – the material used to create these displays emits light when an electrical current is applied.\n\nSimilar to LED, but no backlighting  required – the material used to create these displays emits light when an electrical current is applied .\n(+) Allows for perfect representation of dark colors  unlike all other monitor technologies. Also allows for flexible and transparent monitors\n(-) More expensive to produce, more susceptible to screen-burn-in than LCD or LED (but better than Plasma and CRT in this respect)\n\nHere’s a great video (8 mins) explaining both physical and software technologies required to make the above monitors work: https://www.youtube.com/watch?v=uyLDA9QT8EY\nWith LCD, LED, and OLED, we finally get to the most modern monitor technologies. These are used in our labs, most computers, laptops. They’re ordered here approximately in order of lowest (LCD) -&gt; highest (OLED) quality, though pros and cons exist for each.\nSee here for more information: https://en.wikipedia.org/wiki/Comparison_of_CRT,_LCD,_Plasma,_and_OLED_displays.\n\n\n\n\nPrinters\nPrinters take data from a computer and generate output on paper: Basic principles\n\nSimilar to monitor (high quantity of small, well placed “pixels” → the visual quality of a coherent image)\nRather than orienting light photons on a screen, printers deposit liquid stains on to paper. The physical setup is different, but the same principles are at work.\n\n\n\n\nA high enough quantity of toasted bread produces the qualitative impression of a human eye in this “piece” of art. Printers (and monitors) use much higher quantities of “pixels” than depicted here!\n\n\n\nDot-matrix printers\n\nUses print heads containing pins which produce patterns of dots on the paper by mechanical impact (pressing).\nInexpensive and typically print at a speed of 100 - 600 characters per second.\n(Optional) See https://en.wikipedia.org/wiki/Dot_matrix_printer for more detail on history and technology\nWhile still in use for particular applications (printing receipts for e.g.), these are now obsoleted by…\n\n\n\nInk-jet printers\n\nUses tiny droplets of ink to produce images.\nHeat is applied to an ink reservoir, which pushes ink bubbles through a nozzle in a controlled manner.\nThe ink liquid droplets are smaller in diameter than a human hair! Many of these added together produce the quality of a coherent image.\nQuieter than dot-matrix, and also provide better speed and higher quality.\n\n\n\n\n\n\n\n\n\n\nInk-based color printer.\n\n\n\n\n\n\n\nInk jet cartridge operation. Image source: youtube.com\n\n\n\n\n\n\n\nLaser Printers\n\nExpensive when they were initially introduced.\nProduce high-quality output quietly at a high speed.\nProduces images by directing a laser beam at a mirror which bounces the beam onto a drum.\n\nThe drum contains a special coating to which the toner (ink powder) sticks.\nA laser beam then conveys information to the drum, neutralizing and detaching some toner.\nAs the paper rolls by the drum, the toner is transferred onto the paper. A hot roller then bonds toner to the paper.\n\n\n\n\n\n\n\n\n\nFigure caption.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "External components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/external-components.html#connectors",
+    "href": "topics/hardware/external-components.html#connectors",
+    "title": "External components",
+    "section": "Connectors",
+    "text": "Connectors\nConnectors are how to get the computer to talk to all these output devices!\n\nCables\nSome technical terms:\n\nCable (electric) : The insulated copper wire that carries electrical/digital signals from devices to/from computers\nCable (optical) : The insulated glass tube that carries digital signals in the form of light between devices and computers\nPort : The slot where the insertable end of USB cable is connected to the computer\n“Male” / “Female” cable ends : Distinguishing between the insertable end and the receptacle end for cables\nConverter : A device that allows different standards/types of connectors to be used together\n\n\nElectrical cables\ntransmit an electrical signal on a conducting wire, insulated to protect the signal/surroundings\n\n\n\nOptical cables\ntransmit signal in the form of light. Very fast! (speed of light in glass).\n\nA short paper (5 pages) comparing the two cable technologies in more detail: Fibre Optics vs Copper Cabling: Understanding the Differences\n\n\n\nUSB\nUniversal Serial Bus (we’ll talk about the meaning of the last two words soon!) is used to connect most modern devices to computers. Back in the day, mice/keyboards/external storage/speakers/etc. all had different cables. These have now been (mostly) unified under the USB standard.\nUSB connectors can transmit both power (e.g. charging phones) and information (data). Despite being “Universal” there are an incredible number of USB types.\n\nUSB “Number” standards refer to the transmission speed and power of the cables\n\ne.g. USB 3 is faster/more power than USB 2 and USB 2\n\nUSB “Letter” standards refer to the physical design of the connector and the port\n\ne.g. USB C and USB A are incompatible interfaces, cannot be interchanged.\n\n\n\n\nFigure caption.\n\n\n\n\n\nNewer standards are backwards compatible (e.g. USB 3.1 cable works in USB 1.1 port at USB 1.1 speed/power)\n\n\n\n\nAudio\nMost commonly the standard headphone jack (TSR connector). Available in several sizes, most commonly 3.5mm or ⅛” mini audio jack. Can be color coded - microphone (pink), speaker (green).\n\n\n\nFigure caption.\n\n\nFor higher-end audio, we can use fiberoptic cables as these can transmit larger amounts of data more quickly, which is required for producing a high-quality audio signal.\n\n\nVideo\nVGA cable is commonly used for computer monitors (15-pins). Low resolutions, now obsolete. There exist converter cables to connect VGA monitors to newer computers.\nMiniVGA is a variant found on laptops.\nDVI was once the common modern upgrade from VGA, capable of higher resolutions. MiniDVI and MicroDVI on “thin” laptops.\nS-Video commonly used for DVD players, camcorders and older consoles.\n\n\n\n\n\n\n\n\n\nVGA, DVI, and RCA cables\n\n\n\n\n\n\n\nDVI. Can be distinguished from VGA by noticing that it is a much wider interface with many more pins.\n\n\n\n\n\n\n\n\n\nS-video\n\n\n\n\n\n\n\nA converter from mini-DP to three possible outputs: DP, DVI, and HDMI\n\n\n\n\n\nRCA cables include composite video (yellow) and stereo audio cables (red for right; white/black for left). Component video offers a better picture.\nHDMI is the new standard for audio and video transmission in a single cable.\nDisplayPort (and Mini DisplayPort) more commonly used in computers.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nData\neSATA is used internally to connect the hard drive to the motherboard but can also be used for portable hard drives.\n\n\n\nNetworking\nTelephone cable (RJ11) used for connecting to the internet through DSL/ADSL modems. Standard phone cable has 4 wires; connector has 4 pins. Clip helps to maintain tight connection.\nEthernet (RJ45) is the standard for wired networking. Based on Cat5 twisted pair cable, made from 8 individual wires. Connector looks similar to phone plug but is thicker and wider. Also uses a clip to maintain tight connection.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "External components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/external-components.html#exercises",
+    "href": "topics/hardware/external-components.html#exercises",
+    "title": "External components",
+    "section": "Exercises",
+    "text": "Exercises",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "External components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/external-components.html#knowledge-check",
+    "href": "topics/hardware/external-components.html#knowledge-check",
+    "title": "External components",
+    "section": "Knowledge check",
+    "text": "Knowledge check",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "External components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/external-components.html#additional-resources",
+    "href": "topics/hardware/external-components.html#additional-resources",
+    "title": "External components",
+    "section": "Additional resources",
+    "text": "Additional resources",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "External components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/external-components.html#footnotes",
+    "href": "topics/hardware/external-components.html#footnotes",
+    "title": "External components",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nGood notes on history and explanation of how/why they work “Optical mice use image sensors to image naturally occurring texture [on the surface they are placed]…. These surfaces, when lit at a grazing angle by a light emitting diode, cast distinct shadows that resemble a hilly terrain lit at sunset. Images of these surfaces are captured in continuous succession and compared with each other to determine how far the mouse has moved.” https://en.wikipedia.org/wiki/Computer_mouse https://en.wikipedia.org/wiki/Optical_mouse↩︎\nnote: this is very hypocritical coming from me. don’t mind my bad jokes!↩︎",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "External components"
+    ]
+  },
+  {
+    "objectID": "topics/data-representation/index.html",
+    "href": "topics/data-representation/index.html",
+    "title": "Logic & Data Representation",
+    "section": "",
+    "text": "No matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Logic & Data Representation"
+    ]
+  },
+  {
+    "objectID": "topics/technical-support/index.html",
+    "href": "topics/technical-support/index.html",
+    "title": "Technical Support",
+    "section": "",
+    "text": "No matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Technical Support"
     ]
   }
 ]
