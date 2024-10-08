@@ -7,7 +7,15 @@
     "listing": "/topics/all-lectures.html",
     "items": [
       "/topics/hardware/introduction-to-computers.html",
-      "/topics/hardware/external-components-v1.html",
+      "/topics/hardware/external-components.html",
+      "/topics/hardware/internal-components.html",
+      "/topics/hardware/understanding-cpus.html"
+    ]
+  },
+  {
+    "listing": "/topics/hardware/index.html",
+    "items": [
+      "/topics/hardware/introduction-to-computers.html",
       "/topics/hardware/external-components.html",
       "/topics/hardware/internal-components.html",
       "/topics/hardware/understanding-cpus.html"
@@ -34,16 +42,6 @@
       "/topics/data-representation/index.html",
       "/topics/operating-systems/index.html",
       "/topics/technical-support/index.html"
-    ]
-  },
-  {
-    "listing": "/topics/hardware/index.html",
-    "items": [
-      "/topics/hardware/introduction-to-computers.html",
-      "/topics/hardware/external-components-v1.html",
-      "/topics/hardware/external-components.html",
-      "/topics/hardware/internal-components.html",
-      "/topics/hardware/understanding-cpus.html"
     ]
   },
   {
