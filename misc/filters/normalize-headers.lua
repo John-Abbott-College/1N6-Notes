@@ -1,4 +1,4 @@
 function Header(el)
-	el.level = el.level + 1
+	el.level = 3
 	return el
 end
