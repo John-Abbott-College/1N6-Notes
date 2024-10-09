@@ -1,0 +1,942 @@
+---
+date: 2024-10-09
+draft: true
+subtitle: Lecture subtitle.
+title: Introduction to Binary
+---
+
+## Introduction
+
+## Lesson Overview
+
+Binary System
+
+Representing Numbers in Binary
+
+Representing Text in Binary
+
+## Lesson Content
+
+### Outline
+
+### The Binary System
+
+Everyone "knows" that computers use "binary" to operate
+
+But, as we saw last class, computers don't "know" anything --
+ultimately, its CPU is just configured to react in particularly
+sophisticated ways when its switches (the lightbulbs) are turned **on**
+or **off**
+
+So what is binary anyway? And what does it have to do with computers?
+
+In order to understand the **Binary** numeral system, we can compare it
+to something we already know: the **Decimal** numeral system.
+
+------------------------------------------------------------------------
+
+-   In **decimal** , numbers are represented by combinations of **ten **
+    different symbols: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9). We call decimal a
+    **base 10 ** numeral system.
+-   If we have more than "9" of something, another **digit** is needed:
+    -   9 + 1 = 10
+    -   99 + 1 = 100, etc.
+-   How do we represent numbers in binary?
+
+------------------------------------------------------------------------
+
+-   In **binary** , there are only **two ** symbols (0, 1). We call
+    binary a **base 2** numeral system.
+-   So if we have more than "1" of something, another **bit** is needed:
+    -   1 + 1 = 10 (in english: one plus one equals two)
+    -   11 + 1 = 100 (in english: three plus one equals four)
+-   It's counterintuitive at first! But there's nothing fundamentally
+    different about binary than decimal -- we're just more used to using
+    decimal instead.
+
+------------------------------------------------------------------------
+
+-   Since we're reusing symbols from the decimal system, there is a
+    convention to use **subscript** to disambiguate between different
+    numeral systems
+    -   **1** **2** \_\_ + 1\_\_ **2** \_\_ = 10\_\_ **2** is the same
+        as **1** **10** \_\_ + 1\_\_ **10** \_\_ = 2\_\_ **10** \_\_
+        \_\_ is the same as **one plus one equals two**
+    -   **11** **2** \_\_ + 1\_\_ **2** \_\_ = 100\_\_ **2** \_\_ \_\_
+        is the same as **3** **10** \_\_ + 1\_\_ **10** \_\_ = 4\_\_
+        **10** \_\_ \_\_ is the same as \_\_ three plus one equals
+        four\_\_
+-   This is not always required, but can be useful when the numeral
+    systems are mixed in the same context.
+
+------------------------------------------------------------------------
+
+Note: binary and decimal are not the only possible numeral systems. All
+that distinguishes numeral systems is the number of symbols you agree to
+use to represent numbers -- there are infinite possible numeral systems!
+
+Hexadecimal is another useful numeral system (16 symbols, or **base 16**
+) which we will discuss later
+
+------------------------------------------------------------------------
+
+### BIT -- BInary digiT
+
+-   **So what does Binary have to do with computers?**
+-   **Bit** (Binary Digit) is the basic unit of information representing
+    one of two discrete states.
+    -   The smallest unit of information within the computer.
+-   Bit has one of two values:
+    -   *0 (off) or 1 (on)*
+    -   *0 (False) or 1 (True)*
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/data-representation0.gif "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/data-representation1.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+------------------------------------------------------------------------
+
+### How are Bits Represented in a Computer?
+
+A transistor that is switched on or off
+
+A capacitor that is charged or discharged.
+
+On magnetic disks bits are represented by direction of the magnetic
+field (N-S, S-N).
+
+Optical discs store bits optically (a bit on the surface is either shiny
+or not shiny).
+
+Data is transmitted over telephone line or radio link using high- and
+low-pitched tones.
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/data-representation2.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+------------------------------------------------------------------------
+
+### Byte
+
+A Byte is a collection of bits known as the unit of digital information.
+
+1 Byte = 8 bits
+
+Abbreviation: **B**
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/data-representation3.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+------------------------------------------------------------------------
+
+### Byte History
+
+-   The byte represents the number of bits used to encode one
+    **character** in a computer and hence it is the smallest addressable
+    unit of memory in several computer architectures.
+-   Size of a byte has been hardware dependent and no definitive
+    standards existed that mandated the size.
+-   A standard was introduced in 1993 that is common now.
+    -   1 byte = 8 bits
+
+------------------------------------------------------------------------
+
+### SI Prefixes: Scale
+
+-   1 byte ( **B** )
+-   **Kilo** byte (KB) = 1,000 bytes
+    -   "one *thousand* bytes"
+-   **Mega** byte (MB) = 1,000,000 bytes
+    -   "one *million* bytes"
+-   **Giga** byte (GB) = 1,000,000,000 bytes
+    -   "one *billion* bytes"
+-   **Tera** byte (TB) = 1,000,000,000,000
+    -   "one *trillion* bytes"
+
+*<https://www.nist.gov/pml/owm/metric-si-prefixes>* \_\_ \_\_
+
+------------------------------------------------------------------------
+
+### Non SI-Prefixes: Powers of 2
+
+-   1 byte ( **B** )
+-   **Kibi** byte (KiB) = 1,024 bytes (210) = 1.024KB
+    -   1,024 = 2 \* 2 \* 2 \* 2 \* 2 \* 2 \* 2 \* 2 \* 2 \* 2
+-   **Mebi** byte (MiB) = 1,048,576 bytes (220) = 1.048 MB
+-   **Gibi** byte (GiB) = 1,073,741,824 bytes (230) = 1.073 GB
+-   **Tebi** byte (TiB) = 1,099,511,627,776 bytes (240) = 1.1 TB
+-   https://en.wikipedia.org/wiki/Byteb
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/data-representation4.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+Note: the difference between SI and Non-SI systems start small, but grow
+in significance at larger sizes of storage. See
+*<https://superuser.com/a/433216>* for a thorough explanation
+
+------------------------------------------------------------------------
+
+### Representing Numbers in Binary
+
+------------------------------------------------------------------------
+
+### Converting Binary to Decimal
+
+Converting binary to decimal is easy to memorize for small numbers. For
+example:
+
+   Binary   Decimal
+  -------- ---------
+     0         0
+     1         1
+     10        2
+     11        3
+    100        4
+    101        5
+    110        6
+
+------------------------------------------------------------------------
+
+What about larger numbers? How can we approach this problem
+systematically, i.e., use a defined method to confidently get the
+correct answer every time?
+
+                 Binary                 Decimal
+  ------------------------------------ ---------
+   1001`<br />`{=html}`<br />`{=html}  
+         1101101`<br />`{=html}        
+         1000001`<br />`{=html}        
+         1111111`<br />`{=html}        
+     100000011000001`<br />`{=html}    
+
+------------------------------------------------------------------------
+
+Well, how do we do it for decimals? A large number, like 2608, is in
+fact **the combination of multiples of powers of ten** . When we say
+these numbers in English, we naturally **decompose** the number into its
+component parts:
+
+2608 is **two thousand, six hundred, and eight.**
+
+Or, in other words:
+
+2608 = **2 x 10** **3** \_\_ + 6x10\_\_ **2** \_\_ + 0x10\_\_ **1**
+\_\_ + 8x10\_\_ **0**
+
+We can use this exact method, with one key difference, to decompose the
+value of binary numbers just like decimal numbers.
+
+What key difference? (powers of 2 instead of powers of 10)
+
+------------------------------------------------------------------------
+
+Find the power of 2 value for each bit of the binary number, starting
+from 0.(e.g., the power of 2 value for the 5th bit of a binary number
+is: 25=32, etc.)
+
+Add all the powers of two **wherever there is a 1** in the bit of the
+binary number
+
+The sum of the powers of two above is the value of the binary number in
+decimal!
+
+   Binary Number          1          1    0    0    1
+  --------------- ----------------- ---- ---- ---- ----
+      Step 1              4          3    2    1    0
+      Step 2             24          23   22   21   20
+                         16          8    4    2    1
+      Step 3       16 + 8 + 1 = 25                 
+
+------------------------------------------------------------------------
+
+### Exercise: Converting Binary to Decimal
+
+Convert the following binary numbers to decimal:
+
+1001
+
+1101101
+
+1000001
+
+1111111
+
+100000011000001
+
+------------------------------------------------------------------------
+
+### Converting Decimal Number to Binary
+
+Going the other way (from Decimal to Binary) is a bit less natural -- we
+cannot "see" directly from the decimal representation of a number (like
+2608, for instance), how many powers of two are needed to make the
+equivalent number in binary.
+
+Instead, we'll learn an **algorithm** (a series of deterministic steps
+to solve an analytical problem)
+
+**Convert Decimal to Binary by Repeated Division**
+
+Divide the decimal number by 2 using long division.
+
+Note down the outcome and remainder of the division on the side.
+
+Repeat steps 1 and 2 on the outcome until the outcome becomes zero.
+
+The binary number will be the series of the remainders, read from
+**bottom to top** .
+
+------------------------------------------------------------------------
+
+Covert 25 to binary.
+
+Long Division (divide the Outcome by 2 at every step):
+
+   Outcome   Remainder
+  --------- -----------
+     25     
+            
+            
+            
+            
+            
+            
+
+------------------------------------------------------------------------
+
+25/2 = 12.5. or 12 remainder 1.
+
+   Outcome   Remainder
+  --------- -----------
+     25          1
+     12     
+            
+            
+            
+            
+            
+
+------------------------------------------------------------------------
+
+2)  12/2 = 6, no remainder
+
+   Outcome   Remainder
+  --------- -----------
+     25          1
+     12          0
+      6     
+            
+            
+            
+            
+
+------------------------------------------------------------------------
+
+3)  6/2 = 3, no remainder
+
+   Outcome   Remainder
+  --------- -----------
+     25          1
+     12          0
+      6          0
+      3     
+            
+            
+            
+
+------------------------------------------------------------------------
+
+4)  3/2 = 1.5, or 1 remainder 1
+
+   Outcome   Remainder
+  --------- -----------
+     25          1
+     12          0
+      6          0
+      3          1
+      1     
+            
+            
+
+------------------------------------------------------------------------
+
+5)  1/2 = 0.5, or 0 remainder 1
+
+   Outcome   Remainder
+  --------- -----------
+     25          1
+     12          0
+      6          0
+      3          1
+      1          1
+      0     
+            
+
+------------------------------------------------------------------------
+
+Covert 25 to binary.
+
+        Outcome        Remainder
+  ------------------- -----------
+          25               1
+          12               0
+           6               0
+           3               1
+           1               1
+           0          
+   (25)10 = (11001)2  
+
+------------------------------------------------------------------------
+
+### Exercise: Converting Decimal Number to Binary
+
+Convert 107 to binary.
+
+                               Outcome                                Remainer
+  ------------------------------------------------------------------ ----------
+                                 107                                 
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+   double check you have the correct answer! google "107 in binary"  
+
+------------------------------------------------------------------------
+
+### Practise: Converting Decimal to Binary
+
+Convert the following into binary. **Show your work** .
+
+10
+
+64
+
+128
+
+146
+
+300
+
+------------------------------------------------------------------------
+
+### How many Numbers can I represent?
+
+-   1 bit -\> can represent 2 numbers
+    -   (0)2 = (0)10
+    -   (1)2 = (1)10
+-   2 bits -\> can represent 4 numbers
+    -   (00)2 = (0)10
+    -   (01)2 = (1)10
+    -   (10)2 = (2)10
+    -   (11)2 = (3)10
+    -   Values: 0 to 3 in decimal.
+
+------------------------------------------------------------------------
+
+### n Bits ⬄ How many Numbers
+
+**Possible Test Question**
+
+How many numbers can I represent in 4 bytes? What is the first and last
+number?
+
+-   **n bits **
+-   **-\> Can represent 2** **n** \_\_ numbers \_\_
+-   **-\> Values: from 0 to (2** **n** \_\_ -1)\_\_
+-   1 Byte -\> 8 bit -\> 28 numbers (256)
+-   **First Number ** 0000 00002 = 010
+-   **Last Number** 1111 11112 = 28-1 = 25510
+-   2 Byte -\> 16 bit -\> 216 numbers (65536)
+-   **First Number ** 0000 0000 0000 00002 = 010 to
+-   **Last Number** 1111 1111 1111 11112 = 216-1 = 6553510
+
+------------------------------------------------------------------------
+
+### Representing Text
+
+------------------------------------------------------------------------
+
+### Text in Computers
+
+In early years, different computer companies applied the binary system
+in their own way.
+
+The word "cat" would be encoded in binary different on different brands
+of computers.
+
+This made life difficult in terms of being able to transfer data from
+one system to another.
+
+------------------------------------------------------------------------
+
+### ASCII
+
+-   ASCII (American Standard Code for Information Interchange)
+    -   Standard introduced that used a 7 bit code with 128
+        combinations.
+-   Later became 8-bits (256 combinations) -- **extended ** ASCII-8.
+    -   Note: When people say "ASCII" they are almost always referring
+        to extended ASCII-8
+-   Why eight bits?
+    -   So each character can be stored in a single byte.
+-   CAT 0100 0011 0100 0001 0101 0100
+-   cat 0110 0011 0110 0001 0111 0100
+
+------------------------------------------------------------------------
+
+### ASCII-8: Table of Characters
+
+  ----------------------------------------------------------------------------------------
+               Character codes                                  Purpose
+  ------------------------------------------ ---------------------------------------------
+    0-31 `<br />`{=html}0000 0000 -\> 0001       ASCII Control CharactersThe first 32
+  1111`<br />`{=html}`<br />`{=html}Rows 1 & characters in the ASCII-table are unprintable
+                      2                            control codes represent "control"
+                                               instructions (like chime the system bell,
+                                                 insert new-line, etc) and to control
+                                                     peripherals such as printers.
+
+   32-127`<br />`{=html}`<br />`{=html}0000  ASCII Printable CharactersThese codes are the
+                0010 -\> 0111                "printable characters", representing letters,
+  1111`<br />`{=html}`<br />`{=html}Rows 3-8     digits, punctuation marks, and a few
+                                             miscellaneous symbols. Char 127 is the "DEL"
+                                                                 key.
+
+                    128 -                                  ASCII "Extended"
+  256`<br />`{=html}`<br />`{=html}1000 0000  Characters`<br />`{=html}`<br />`{=html}The
+                   -\> 1111                  last half of the ASCII table stores a variety
+    1111`<br />`{=html}`<br />`{=html}Rows      of miscellaneous control and printable
+                     9-16                      characters. This part of the table is not
+                                              standardized across all operating systems.
+  ----------------------------------------------------------------------------------------
+
+**Information above comes from ** *<https://www.ascii-code.com/>* \_\_
+-- you can find more detailed explanations of the ASCII table there.
+Note that the "extended" characters are different in this source than my
+slides -- they are nonstandardized.\_\_
+
+------------------------------------------------------------------------
+
+### ASCII-8
+
+**Exercise: ** Decode the following message (left to right, top to
+bottom)
+
+0100 0001 0101 0011 0100 0011
+
+0100 1001 0100 1001 0010 0000
+
+0110 1001 0111 0011 0010 0000
+
+0110 1100 0110 1001 0110 1101
+
+0110 1001 0111 0100 0110 0101
+
+0110 0100
+
+------------------------------------------------------------------------
+
+**Hint** **: ** Notice that the **rows** don't change very much... there
+are only four possible rows to look at for common letters.
+
+**0100: ** A -\> O
+
+**0101: ** P -\> Z
+
+**0110: ** a -\> o
+
+**0111: ** p -\> z
+
+**0100** 0001 **0101** 0011 **0100** 0011
+
+**0100** 1001 **0100** 1001 0010 0000
+
+**0110** 1001 **0111** 0011 0010 0000
+
+**0110** 1100 **0110** 1001 **0110** 1101
+
+**0110** 1001 **0111 ** 0100 **0110** 0101
+
+**0110** 0100
+
+------------------------------------------------------------------------
+
+**Hint: ** Notice that the letters are **ordered** :
+
+**0100 0001 -\> 0100 0011** **: ** A -\> C (two apart)
+
+other letters behave as you would expect (q is one after p, 6 is one
+after 5, etc.)
+
+**0100 0001 ** 0101 0011 **0100 0011 **
+
+0100 1001 0100 1001 0010 0000
+
+0110 1001 0111 0011 0010 0000
+
+0110 1100 0110 1001 0110 1101
+
+0110 1001 0111 0100 0110 0101
+
+0110 0100
+
+------------------------------------------------------------------------
+
+**Exercise: ** Decode the following message (left to right, top to
+bottom)
+
+0100 0001 0101 0011 0100 0011
+
+0100 1001 0100 1001 0010 0000
+
+0110 1001 0111 0011 0010 0000
+
+0110 1100 0110 1001 0110 1101
+
+0110 1001 0111 0100 0110 0101
+
+0110 0100
+
+------------------------------------------------------------------------
+
+### Unicode
+
+-   Although ASCII works fine for English and other latin-based
+    languages, many other languages need more than 256 characters. For
+    example:
+    -   Chinese characters 汉字
+    -   Japanese characters 漢字
+    -   Cyrillic Кири́ллица
+    -   Gujarati ગુજરાતી
+    -   Urdu اردو
+-   You can see that we quickly run into trouble as ASCII can't possibly
+    store these hundreds of thousands of extra characters in just 8
+    bits.
+-   What we use instead is called **unicode** . There are several
+    versions of unicode, each with using a different number of bits to
+    store data.
+
+**Information above comes from **
+*<https://en.wikibooks.org/wiki/A-level_Computing/AQA/Paper_2/Fundamentals_of_data_representation/ASCII_and_unicode>*
+\_\_ \_\_ \_\_ -- you can find more detailed explanations of the Unicode
+there there.\_\_
+
+------------------------------------------------------------------------
+
+**Name Description**
+
+**UTF-8 ** 8-bit is the most common unicode format. Characters can take
+as little as 8-bits, maximizing compatibility with ASCII. But it also
+allows for variable-width encoding expanding to 16, 24, 32, 40 or 48
+bits when dealing with larger sets of characters
+
+**UTF-16** 16-bit, variable-width encoding, can expand to 32 bits.
+
+**UTF-32** 32-bit, fixed-width encoding. Each character takes exactly
+32-bits
+
+With over 60 thousand characters in UTF-16, and over 4 billion possible
+characters in UTF-32 we should be able to store every character from
+every language on the planet. Here are some examples:
+
+**code point** **glyph** **character** \_\_UTF-16 code unit
+(hexadecimal\*)\_\_
+
+U+007A z LATIN SMALL LETTER Z 007A
+
+U+6C34 水 CJK UNIFIED IDEOGRAPH-6C34 (water) 6C34
+
+\*Since the UTF-16 and UTF-32 numbers are very large, it is not
+convenient to express them in binary. We will learn about **hexadecimal
+** numbers next.
+
+**Information above comes from **
+*<https://en.wikibooks.org/wiki/A-level_Computing/AQA/Paper_2/Fundamentals_of_data_representation/ASCII_and_unicode>*
+\_\_ -- you can find more detailed explanations of the Unicode there
+there.\_\_
+
+------------------------------------------------------------------------
+
+### Hexadecimal Numbers
+
+------------------------------------------------------------------------
+
+-   Why another numeric system?
+    -   As we saw with **unicode** , computers need to be able to read
+        large numbers to tell the difference between many possible
+        characters and/or instructions.
+    -   Computers have no problem reading large binary numbers -- \_\_
+        but we do!\_\_ It is annoying to convert 32 bit, or 64 bit,
+        numbers from Binary to Decimal, which makes \_\_ large binary
+        numbers hard for humans to read and write quickly\_\_ .
+    -   We are fine reading/writing large Decimal numbers, but **since
+        10 is not a power of 2, it does not "fit" evenly with the Binary
+        storage model** used by computers.
+        -   E.g. with 4 bits we can store 10-16, but need 5 bits to
+            store 17-20 (and beyond).
+        -   Consequence: We cannot directly store decimal numbers to
+            machines (transistors) that can only tell the difference
+            between "on" and "off"
+    -   What to do?
+
+------------------------------------------------------------------------
+
+-   Introduce a new numeric system! There are infinite possibilities...
+-   **Hexadecimal numbers** are **base 16** .
+    -   Note: 16 is a power of 2! 2\^4 = 16
+    -   In other words:
+        -   with 4 bits, we can store one "hexit", values range from
+            0-1111 (0 -\> 15 in decimal)
+        -   with 8 bits, we can store exactly two "hexits", values range
+            from 0 - 1111 1111 (0 -\> 255 in decimal)
+
+------------------------------------------------------------------------
+
+### Building Hexadecimal Numbers
+
+   Decimal   Hex (16's column)   Hex (1's column)
+  --------- ------------------- ------------------
+      0              0                  0
+      1              0                  1
+      2              0                  2
+      3              0                  3
+      4              0                  4
+      5              0                  5
+      6              0                  6
+      7              0                  7
+      8              0                  8
+
+everything is the same so far...
+
+------------------------------------------------------------------------
+
+   Decimal   Hex (16's column)   Hex (1's column)
+  --------- ------------------- ------------------
+      9              0                  9
+     10              0                  A
+     11              0                  B
+     12              0                  C
+     13              0                  D
+     14              0                  E
+     15              0                  F
+     16              1                  0
+     17              1                  1
+
+here is where it gets interesting!
+
+------------------------------------------------------------------------
+
+   Decimal   Hex (16's column)   Hex (1's column)
+  --------- ------------------- ------------------
+     18              1                  2
+     19              1                  3
+     20              1                  4
+     21              1                  5
+     22              1                  6
+     23              1                  7
+     24              1                  8
+     25              1                  9
+     26              1                  A
+
+------------------------------------------------------------------------
+
+### Riddle
+
+Avatar Aang went to get his first driving license. The clerk asked Aang
+for his ID to make sure he was old enough to do the driving test. The
+clerk read his ID, and told him that he is not old enough for the test.
+They him that he needs to be at least 18.
+
+Aang answered, "I'm sorry but you are wrong. I am exactly 18, in
+decimal. My ID in fact shows my age in Hexadecimal."
+
+What age is Aang in Hexadecimal(if he is indeed 18 in decimal?)
+
+\_\_ \_\_ *Decimal* \_\_ \_\_ *16's* \_\_ \_\_ *1's*
+
+\_\_ 18 \_\_ \_\_ \_\_
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/data-representation5.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+------------------------------------------------------------------------
+
+### Why Hexadecimal?
+
+Hexadecimal is perfect for matching 4 bits.
+
+Every combination of 4 bits can be matched with one hex number.
+
+*4 bits* can be represented by *1 Hex value ("hexit")*
+
+*8 bits* can be represented by *2 Hex values ("hexit")*
+
+------------------------------------------------------------------------
+
+### Hexadecimal Digits
+
+*Dec* \_\_ \_\_ *Hex* \_\_ Binary\_\_
+
+**0 0 ** **0000**
+
+**1 1 ** **0001**
+
+**2 2 ** **0010**
+
+**3 3 ** **0011**
+
+**4 4 ** **0100**
+
+**5 5 ** **0101**
+
+**6 6 ** **0110**
+
+**7 7 ** **0111**
+
+*Dec* \_\_ \_\_ *Hex* \_\_ Binary \_\_
+
+**8 8 ** **1000**
+
+**9 9 ** **1001**
+
+**10 A ** **1010**
+
+**11 B ** **1011**
+
+**12 C ** **1100**
+
+**13 D ** **1101**
+
+**14 E ** **1110**
+
+**15 F ** **1111**
+
+------------------------------------------------------------------------
+
+### What about 8 bits?
+
+**Dec. Hex. Binary Dec. Hex. Binary**
+
+\_\_ 0 0 0000 8 8 1000\_\_
+
+\_\_ 1 1 0001 9 9 1001\_\_
+
+\_\_ 2 2 0010 10 A 1010\_\_
+
+\_\_ 3 3 0011 11 B 1011\_\_
+
+\_\_ 4 4 0100 12 C 1100\_\_
+
+\_\_ 5 5 0101 13 D 1101\_\_
+
+\_\_ 6 6 0110 14 E 1110\_\_
+
+\_\_ 7 7 0111 15 F 1111\_\_
+
+**-----------------------------------------------------**
+
+**HEX BINARY**
+
+**2 4 ?**
+
+------------------------------------------------------------------------
+
+**Dec. Hex. Binary Dec. Hex. Binary**
+
+\_\_ 0 0 0000 8 8 1000\_\_
+
+\_\_ 1 1 0001 9 9 1001\_\_
+
+\_\_ 2 \_\_ **2 0010** \_\_ 10 A 1010\_\_
+
+\_\_ 3 3 0011 11 B 1011\_\_
+
+\_\_ 4 \_\_ **4 0100 ** **12 C 1100**
+
+\_\_ 5 5 0101 13 D 1101\_\_
+
+\_\_ 6 6 0110 14 E 1110\_\_
+
+\_\_ 7 7 0111 15 F 1111\_\_
+
+**-----------------------------------------------------**
+
+**HEX BINARY**
+
+**2** \_\_ \_\_ **4** \_\_ \_\_ **0010** \_\_ \_\_ **0100** \_\_ \_\_
+
+------------------------------------------------------------------------
+
+### Using Hex for 8 bits
+
+**Dec. Hex. Binary Dec. Hex. Binary**
+
+\_\_ 0 0 0000 8 8 1000\_\_
+
+\_\_ 1 1 0001 9 9 1001\_\_
+
+\_\_ 2 2 0010 10 A 1010\_\_
+
+\_\_ 3 3 0011 11 B 1011\_\_
+
+\_\_ 4 4 0100 12 C 1100\_\_
+
+\_\_ 5 5 0101 13 D 1101\_\_
+
+\_\_ 6 6 0110 14 E 1110\_\_
+
+\_\_ 7 7 0111 15 F 1111\_\_
+
+**-----------------------------------------------------**
+
+\_\_ \_\_ *Hex Binary* \_\_ \_\_ *Hex Binary* \_\_ \_\_ *Hex Binary*
+
+\_\_ \_\_ **1** *2* \_\_ \_\_ **0001** \_\_ \_\_ *0010* \_\_ 3C 0011
+1100 99 1001 1001\_\_
+
+**Exercise: ** Convert the following 8 bit (1 byte) hexadecimal numbers
+to binary
+
+\_\_ AB 1A 00\_\_
+
+\_\_ 02 B4 7D\_\_
+
+------------------------------------------------------------------------
+
+### Hexadecimal \# RED GREEN BLUE
+
+\_\_
+```{=html}
+<td rowspan="2" bgcolor="#__  __cc__  __cc__  _99_  __">
+```
+```{=html}
+</td>
+```
+\_\_
+
+\_\_ Red\_\_ \_\_ \_\_ **Green** \_\_ \_\_ *Blue*
+
+\_\_ cc\_\_ \_\_ \_\_ **cc** \_\_ \_\_ *99*
+
+**Convert to Binary**
+
+\_\_ Red\_\_ \_\_ \_\_ **Green** \_\_ \_\_ *Blue*
+
+**Hex** \_\_ cc\_\_ \_\_ \_\_ **cc** \_\_ \_\_ *99*
+
+**Bin** \_ \_ **1100 1100** \_ \_ **1100 1100** \_ 1001 1001\_
+
+**24 bits represent a single color**
+
+------------------------------------------------------------------------
+
+## Exercises
+
+## Knowledge check
+
+## Additional resources

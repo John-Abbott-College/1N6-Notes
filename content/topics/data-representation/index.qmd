@@ -1,5 +1,5 @@
 ---
-title: "Logic & Data Representation"
+title: "Data Representation"
 subtitle: "All lectures related to logic & data representation can be found here."
 listing: 
   filter-ui: true

@@ -1,0 +1,921 @@
+---
+date: 2024-10-09
+draft: true
+subtitle: Lecture subtitle.
+title: Logic Gates and Boolean Algebra
+---
+
+## Introduction
+
+## Lesson Overview
+
+## Lesson Content
+
+### Logic in Computing
+
+Review: CPUs work by receiving messages in the form of a series of 0s
+and 1s.
+
+Based on the values of the 0s and 1s, and how the CPUs are
+preprogrammed, the CPU can perform arithmetic and make logical decisions
+to produce reliable output.
+
+But, how are "decisions" made? Using a component called a **logic gate**
+: a device that output a signal only under controlled logical
+conditions.
+
+But, how do logic gates work?
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra0.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra1.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+------------------------------------------------------------------------
+
+### Physics behind 0s and 1s: Mechanical Relay
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra2.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+**Mechanical Relays ** **(late 19th/early 20th century)**
+
+**Power source attached to Control wire with coil**
+
+**When control wire on, electromagnetic field created by coil, which
+"snaps" the circuit shut**
+
+**Result: control wire ** **behaves** \_\_ like the tap on a faucet:
+allows electrons to pass through when on, otherwise off\_\_
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra3.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+**Figures from the great PBS youtube series ** *[Crash Course
+Computing](https://www.youtube.com/watch?v=LN0ucKNX0hc&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&index=4)*
+
+------------------------------------------------------------------------
+
+-   **Pros:**
+    -   **first industrialized logic switch**
+    -   **capable of performing basic and complex computing operations**
+-   **Cons**
+    -   **Large, slow, expensive, fragile, bug prone**
+    -   **Moving metal parts would wear down with each computation**
+    -   **Literally "bug" prone: large enough to trap cockroaches, which
+        caused malfunctions!**
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra4.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+**Figure from the great PBS youtube series ** *[Crash Course
+Computing](https://www.youtube.com/watch?v=LN0ucKNX0hc&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&index=4)*
+
+------------------------------------------------------------------------
+
+### Physics behind 0s and 1s: Vacuum Tubes
+
+**Vacuum Tubes** \_\_ (early 20th century)\_\_
+
+**Similar to Mechanical relay: a control wire connected to a circuit,
+this time contained in a vacuum (very low pressure, very small number of
+air molecules)**
+
+**Control wire off: circuit disconnected**
+
+**Control wire on: electrons flow in the tube, completing the circuit**
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra5.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra6.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+**Figures from the great PBS youtube series ** *[Crash Course
+Computing](https://www.youtube.com/watch?v=LN0ucKNX0hc&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&index=4)*
+
+------------------------------------------------------------------------
+
+-   **Cons**
+    -   **Similar to Mechanical relay: large, expensive, fragile**
+-   **Pros**
+    -   **Much faster than relays! 5000 additions/subtractions ** *per
+        second*
+    -   *No moving parts!* \_\_ Turning on/off did not require anything
+        physical to move, reducing wear over time and increasing
+        reliability\_\_
+    -   **With research, vacuum tubes became mass ** **producible**
+        **.**
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra7.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+**1946 ENIAC** \_\_ \_\_ **-- First programmable electronic (stands for
+Electronic Numerical Integrator and Computer). Each ** **"bulb" is an
+individual ** **vacuum tube** **!**
+
+------------------------------------------------------------------------
+
+### First General-Purpose Computer: ENIAC
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra8.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra9.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+**P** **rogrammers Betty Jean Jennings and Fran Bilas at the School of
+Electrical Engineering. The majority of early programmers in America
+were women, who operated machines like ENIAC. Interesting book about
+this: **
+*<https://direct.mit.edu/books/monograph/3305/The-Computer-Boys-Take-OverComputers-Programmers>*
+\_\_ \_\_
+
+**The ENIAC was operational for 10 years, and is estimated to have done
+more arithmetic than the entire human race up to that point (1946).**
+
+**Facts and ** **Figures from the great PBS youtube series ** *[Crash
+Course
+Computing](https://www.youtube.com/watch?v=LN0ucKNX0hc&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&index=4)*
+
+------------------------------------------------------------------------
+
+### The advent of transistors
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra10.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+Vacuum tubes, though more reliable than relays, were prone to
+breakdowns.
+
+A new component soon entered the scene:
+
+Invented in 1947, transistors revolutionized the computing world.
+
+They came to replace the vacuum tubes.
+
+**This is a 2nm IBM wafer containing hundreds if chips which allows 50
+billion transistors onto a chip of a fingernail **
+
+------------------------------------------------------------------------
+
+### Physics behind 0s and 1s: Transistors
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra11.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra12.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+**Transistors ** **(1947)**
+
+**Similar to previous: a control wire connected to a circuit, this time
+connected via a ** *semiconductor* \_\_ to two electrodes: a power
+source and an output\_\_
+
+**Semiconductors sometimes conduct, and sometimes resist, electrical
+current.**
+
+**Semiconductors are quantum mechanical phenomena: complex new physics
+at the time!**
+
+**Control wire off: circuit disconnected**
+
+**Control wire on: electrons flow in the tube, completing the circuit**
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra13.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+**Figures from the great PBS youtube series ** *[Crash Course
+Computing](https://www.youtube.com/watch?v=LN0ucKNX0hc&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&index=4)*
+
+------------------------------------------------------------------------
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra14.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+-   **Cons**
+    -   **None!**
+-   **Pros**
+    -   **Solid state** **:** \_\_ \_\_ **no moving parts, no need to
+        maintain vacuum pressure.**
+    -   **Computes (opens/closes) at the same speed as the rest of the
+        electrical components -- billions of times per second change in
+        circuit state achieved**
+    -   **Mass producible**
+    -   **Remains the dominant computing technology today**
+
+**Today, transistors can be as small as a few nanometers -- for
+reference, a sheet of paper is roughly 100,000 nanometers thick.**
+
+------------------------------------------------------------------------
+
+### Transistors count in computers
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra15.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+Number of transistors in an integrated circuit (IC) doubles every two
+years. **Moore's Law**
+
+BUT! Since 2010, semiconductor advancement has slowed industry-wide.
+
+Physical limits of transistors
+
+------------------------------------------------------------------------
+
+### What can be done with logic gates?
+
+-   Logic gate \_\_ state: \_\_ **no current = 0, current flowing = 1.
+    **
+    -   **or: voltage off = 0, voltage on = 1**
+    -   Logic gates let us physically create and control binary
+        circuits.
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra16.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra17.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+------------------------------------------------------------------------
+
+### A bit more theory: Boolean Algebra
+
+-   **Boolean algebra** : the mathematics of digital logic
+    -   Name Boolean for mathematician George Boole
+    -   A special form of algebra where:
+        -   all possible values are **true** or **false ** (0 or 1)
+            called **Boolean values**
+        -   all operations turn Boolean values into either true or
+            false, called **Boolean operations**
+    -   Used in the analysis and synthesis of *logical expressions* .
+    -   Demonstrated by Claude Shannon in 1940s: you can build **digital
+        circuits ** that can represent **any boolean algebra statement**
+        -- therefore you could build computers to perform logic -- very
+        powerful! (If you're curious, here's a link to his famous
+        master's thesis proving the equivalence)
+        *<https://www.cs.virginia.edu/~evans/greatworks/shannon38.pdf>*
+
+------------------------------------------------------------------------
+
+### Logic in Electronics
+
+-   With Boolean Algebra, Electrical circuits with Logic Gates \_\_ \_\_
+    can be \_\_ \_\_ designed to *represent logical expressions *
+    -   Known as logic circuits.
+-   Used to make important logical decisions in household appliances,
+    computers, communication devices, traffic signals and
+    microprocessors.
+-   Four basic logic operations we will learn today:
+    -   OR operation
+    -   AND operation
+    -   NOT operation
+    -   XOR operation (e **X** clusive **O** r)
+
+------------------------------------------------------------------------
+
+### Logic Gates
+
+-   A logic gate \_\_ \_\_ is an electronic circuit/device which makes
+    the logical decisions based on these operations.
+-   Logic gates \_\_ \_\_ have:
+    -   One or more inputs
+    -   Only one output
+    -   Computes a Boolean operation.
+-   The output is active only for certain input combinations.
+-   Logic gates are the building blocks of any digital circuit.
+
+------------------------------------------------------------------------
+
+### Logic Gate, Truth Tables, Boolean Algebra
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra18.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+**Using ** Truth Tables \_\_ we can use different sets of logic
+operations to store, add, subtract, and perform more complicated
+operations with bits.\_\_
+
+**We will learn the ** Boolean Operations **associated with each logic
+gate to help us understand digital circuits analytically**
+
+------------------------------------------------------------------------
+
+### Boolean Operations: AND Gate
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra19.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+-   **Truth Table (1 = TRUE, 0 = FALSE)**
+-   **Inputs Output ** *A* \_ B A⋅B\_
+-   0 0 0
+-   0 1 0
+-   1 0 0
+-   1 1 1
+-   AND Operation
+-   Both input values must be TRUE for output to be TRUE
+-   Similar to MULTIPLICATION in elementary algebra:
+    -   0⋅0 = 0, 0⋅1 = 0, 1⋅0 = 0, 1⋅1=1
+-   **Operation symbols: **
+    -   A⋅B, A\^B, A&&B, A and B
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra20.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra21.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra22.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra23.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+------------------------------------------------------------------------
+
+### AND Gate
+
+-   To build an AND gate: Two transistors connected together **in
+    series**
+    -   **Series: ** the output of the first element is connected
+        directly to the input of the second element, in sequence
+    -   Key: **both transistors have to be on ** for the total gate to
+        be on. Just like the AND operation!
+-   Two inputs (transistors A and B) and one output
+-   Example 1:
+    -   Transistor A: Off (False)
+    -   Transistor B: On (True)
+    -   Output: Off (False)
+
+------------------------------------------------------------------------
+
+Example 2:
+
+Transistor A: On (True)
+
+Transistor B: On (True)
+
+Output: On (True)
+
+------------------------------------------------------------------------
+
+### Boolean Operations: OR Gate
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra24.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+-   **Truth Table (1 = TRUE, 0 = FALSE)**
+-   **Inputs Output ** *A B A⋅B*
+-   0 0 0
+-   0 1 1
+-   1 0 1
+-   1 1 1
+-   OR Operation⋁
+-   Both input values must be FALSE for output to be FALSE
+-   Similar to ADDITION in elementary algebra:
+    -   0+0 = 0, 0+1 = 1, 1+0 = 0, 1+1=1... wait what?
+-   **Operation symbols: **
+    -   A+B, A⋁B , A\|\|B, A or B
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra25.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra26.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra27.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra28.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+------------------------------------------------------------------------
+
+### OR Gate
+
+-   To build an OR gate: Two transistors connected together **in
+    parallel**
+    -   **Parallel: ** the inputs and outputs of all elements are
+        connected to the same line, the elements are in **parallel**
+    -   Key: **turning either transistor on** will have the effect of
+        turning the whole gate on. Just like the OR operation!
+-   Example 1:
+-   Transistor A: Off (False)
+-   Transistor B: Off (False)
+-   Output: Off (False)
+
+------------------------------------------------------------------------
+
+Example 2:
+
+Transistor A: Off (False)
+
+Transistor B: On (True)
+
+Output: On (True)
+
+------------------------------------------------------------------------
+
+### Boolean Operations: NOT
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra29.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra30.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+-   **Truth Table**
+-   **Inputs Outputs**
+-   *A A'*
+-   0 1
+-   1 0
+-   NOT Operation
+-   Only one input
+-   Opposite of input (inverts input)
+-   Not like any other operator in standard algebra!
+-   NOT FALSE = TRUE
+-   NOT TRUE = FALSE
+-   **Operation symbols: **
+    -   A', !A , Ā, ¬A, \~A, not A
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra31.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+------------------------------------------------------------------------
+
+### NOT Gate
+
+-   To build an NOT gate: One transistor
+    -   One input and one output
+-   Transistor A: On (True)
+-   Current flows to ground wire and none to output, so output is Off
+    (False)
+
+**This picture is a bit hard to understand on its own, I recommend
+watching a video explanation: **
+*<https://youtu.be/gI-qXk7XojA?si=HFAPUkIwM0DEMGTo&t=169>* \_\_ \_\_
+
+------------------------------------------------------------------------
+
+Transistor A: Off (False)
+
+Current flows to the output wire, so output is On (True)
+
+------------------------------------------------------------------------
+
+### Boolean Operations: XOR Gate
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra32.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+-   **Truth Table**
+-   *Inputs* *Outputs*
+-   0 0 0
+-   0 1 1
+-   1 0 1
+-   1 1 0
+-   XOR Operation
+-   Only one input value is TRUE for output to be TRUE. If both are
+    true, output FALSE
+-   Not like any other operation in standard algebra!
+-   **Operation symbols: **
+    -   A **⊕** B, A⊻B , A xor B
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra33.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra34.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra35.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra36.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+------------------------------------------------------------------------
+
+### XOR Gate
+
+**How to build an XOR gate? We can't do it directly with transistors--
+but we can by combining AND, OR, and NOT gates!**
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra37.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra38.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+**Both of the images above are the same combination of gates; the only
+difference is the input values**
+
+------------------------------------------------------------------------
+
+### Applications of Logic Gates: Binary Math
+
+------------------------------------------------------------------------
+
+### Back to the CPU
+
+How do these logic gates help our guy in the box?
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra39.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+------------------------------------------------------------------------
+
+In fact, the "guy in the box" isn't really a guy at all, but a
+composition of many logic gates
+
+These logic gate compositions (called **digital circuits** ), if
+arranged in clever ways, can perform all of the complex operations a CPU
+needs to perform!
+
+To see this, we will study the CPU's **Arithmetic Logic Unit** ( **ALU**
+) to see how logic gates can emulate **arithmetic** (addition,
+subtraction, etc.)
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra40.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra41.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra42.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra43.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra44.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra45.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra46.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra47.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+------------------------------------------------------------------------
+
+### The CPU Arithmetic Logic Unit
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra48.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+-   The ALU is made up of a combination of logic circuits paced at the
+    clock signal. The ALU is able to perform operations such as:
+    -   Add
+    -   Add with carry
+    -   Subtract
+    -   Subtract with borrow
+    -   Two's complement
+    -   Increment
+    -   Decrement
+    -   Pass through
+    -   Logical operations (and, or, xor, not or one's complement)
+    -   Bit shift operation
+
+------------------------------------------------------------------------
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra49.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+-   Let's start from the top:
+    -   **Add**
+-   How can we get a logic gate to add bits?
+-   What **operations** do we need?
+
+------------------------------------------------------------------------
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra50.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+-   Let's start from the top:
+    -   **Add**
+-   How can we get a logic gate to add bits?
+-   What **operations** do we need?
+-   **Start with a truth table!**
+
+------------------------------------------------------------------------
+
+### Adding two bits
+
+Start simple. Let A and B **only have 1 bit** **each**
+
+The result should have two bits (why?)
+
+**Let's make a truth table, with two output columns, to represent each
+bit of the output**
+
+**one for the "2's" column, and one for the "1"s column**
+
+*A* \_\_ + \_\_ *B* \_\_ = \_\_ *2's* \_\_ \_\_ *1's*
+
+------------------------------------------------------------------------
+
+Start simple. Let A and B **only have 1 bit** **each**
+
+The result should have two bits (why?)
+
+**Let's make a truth table, with two output columns, to represent each
+bit of the output**
+
+**one for the "2's" column, and one for the "1"s column**
+
+*A* \_\_ + \_\_ *B* \_\_ = \_\_ *2's* \_\_ \_\_ *1's*
+
+**0 0 0 0 adding 0 + 0 should equal 0**
+
+------------------------------------------------------------------------
+
+Start simple. Let A and B **only have 1 bit** **each**
+
+The result should have two bits (why?)
+
+**Let's make a truth table, with two output columns, to represent each
+bit of the output**
+
+**one for the "2's" column, and one for the "1"s column**
+
+*A* \_\_ + \_\_ *B* \_\_ = \_\_ *2's* \_\_ \_\_ *1's*
+
+0 0 0 0 adding 0 + 0 should equal 0
+
+**0 1 0 1 adding 0 + 1 should equal 1**
+
+------------------------------------------------------------------------
+
+Start simple. Let A and B **only have 1 bit** **each**
+
+The result should have two bits (why?)
+
+**Let's make a truth table, with two output columns, to represent each
+bit of the output**
+
+**one for the "2's" column, and one for the "1"s column**
+
+*A* \_\_ + \_\_ *B* \_\_ = \_\_ *2's* \_\_ \_\_ *1's*
+
+0 0 0 0 adding 0 + 0 should equal 0
+
+0 1 0 1 adding 0 + 1 should equal 1
+
+**1** \_\_ 0 0 1 adding 1 + 0 should equal 1\_\_
+
+------------------------------------------------------------------------
+
+Start simple. Let A and B **only have 1 bit** **each**
+
+The result should have two bits (why?)
+
+**Let's make a truth table, with two output columns, to represent each
+bit of the output**
+
+**one for the "2's" column, and one for the "1"s column**
+
+*A* \_\_ + \_\_ *B* \_\_ = \_\_ *2's* \_\_ \_\_ *1's*
+
+0 0 0 0 adding 0 + 0 should equal 0
+
+0 1 0 1 adding 0 + 1 should equal 1
+
+1 0 0 1 adding 1 + 0 should equal 1
+
+**1 1 1 0 adding 1 + 1 should equal 10**
+
+------------------------------------------------------------------------
+
+### Half Adder Gate: Adding two bits
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra51.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+**What gates give us the table below?**
+
+Inputs: A, B
+
+Let's call the 1's column S = Sum
+
+Let's call the 2's column C = Carry
+
+**A + B = C S**
+
+0 0 0 0 adding 0 + 0 should equal 0
+
+0 1 0 1 adding 0 + 1 should equal 1
+
+1 0 0 1 adding 1 + 0 should equal 1
+
+1 1 1 0 adding 1 + 1 should equal 10
+
+------------------------------------------------------------------------
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra52.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+**What gates give us the table below?**
+
+Inputs: A, B
+
+Let's call the 1's column S = Sum
+
+Let's call the 2's column C = Carry
+
+**A + B = C S**
+
+0 0 **0** **0** Which gate matches C?
+
+0 1 **0** **1**
+
+1 0 **0** **1** Which gate matches S?
+
+1 1 **1** **0**
+
+------------------------------------------------------------------------
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra53.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+Inputs: A, B
+
+Let's call the 1's column S = Sum
+
+Let's call the 2's column C = Carry
+
+**A + B = C S**
+
+0 0 **0** **0** Which gate matches C? **AND**
+
+0 1 **0** **1**
+
+1 0 **0** **1** Which gate matches S? **XOR**
+
+1 1 **1** **0**
+
+------------------------------------------------------------------------
+
+Inputs: A, B
+
+S = Sum
+
+C = Carry
+
+*A* \_\_ + \_\_ *B* \_\_ = \_\_ *2's* \_\_ \_\_ *1's*
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra54.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra55.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra56.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+------------------------------------------------------------------------
+
+Inputs: A, B
+
+S = Sum
+
+C = Carry
+
+*A* \_\_ + \_\_ *B* \_\_ = \_\_ *2's* \_\_ \_\_ *1's*
+
+**0 + 0 = 0 0**
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra57.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra58.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra59.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+------------------------------------------------------------------------
+
+Inputs: A, B
+
+S = Sum
+
+C = Carry
+
+*A* \_\_ + \_\_ *B* \_\_ = \_\_ *2's* \_\_ \_\_ *1's*
+
+**0 + 1 = 0 1**
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra60.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra61.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra62.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+------------------------------------------------------------------------
+
+Inputs: A, B
+
+S = Sum
+
+C = Carry
+
+*A* \_\_ + \_\_ *B* \_\_ = \_\_ *2's* \_\_ \_\_ *1's*
+
+**1 + 0 = 0 1**
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra63.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra64.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra65.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+------------------------------------------------------------------------
+
+Inputs: A, B
+
+S = Sum
+
+C = Carry
+
+*A* \_\_ + \_\_ *B* \_\_ = \_\_ *2's* \_\_ \_\_ *1's*
+
+**1 + 1 = 1 0**
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra66.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra67.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra68.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+------------------------------------------------------------------------
+
+### Full Adder
+
+Why do we call it a half adder?
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra69.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra70.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+------------------------------------------------------------------------
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra71.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+   A   B   Cin   S   Cout
+  --- --- ----- --- ------
+   0   0    0    0    0
+   0   0    1       
+                    
+                    
+                    
+                    
+                    
+
+------------------------------------------------------------------------
+
+### 8 bits Full adders
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra72.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+------------------------------------------------------------------------
+
+### Marble Adding Machine
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra73.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+http://www.youtube.com/watch?v=GcDshWmhF4A&NR=1&feature=fvwp
+
+------------------------------------------------------------------------
+
+### This is a 4-bit CPU
+
+![A sample caption. Image source:
+unknown.](hardware/_assets/logic-gates-and-boolean-algebra74.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+------------------------------------------------------------------------
+
+## Exercises
+
+## Knowledge check
+
+## Additional resources
+
