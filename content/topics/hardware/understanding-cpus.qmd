@@ -1,0 +1,249 @@
+---
+date: 2024-09-16
+subtitle: More detail on CPUs. "Guy in Box" analogy, Clock Speed, Codebook, Databuses explained.
+title: Understanding CPUs
+---
+
+![What if all computers contained some guy, trapped in a box? Something to consider. Image source: unknown](_assets/understanding-cpus16.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+## Introduction
+
+Last week one component we learned was the **CPU ** (*Central Processing Unit*): A complex collection of electronic
+circuits on one or more integrated circuits (chips).
+
+We learned that the CPU is responsible for:
+
+-   *Executing the instructions in a software program.*
+-   Communicating with other parts of the computer system
+
+Today we're going to take a deep dive into *how* the CPU carries out those responsibilities.
+
+## Lesson Overview
+
+More detail on CPUs. "Guy in Box" analogy, Clock Speed, Codebook, data buses explained.
+
+## CPU Analogy: Guy in a Box
+
+Let's start with an analogy: CPUs are a "Guy-in-a-box". This guy:
+
+- can perform any mathematical function quickly.
+- lives in a closed-up box so direct communication is impossible.
+
+Let's say have 16 light bulbs: 8 for the guy, and 8 for us.
+
+![A sample caption. Image source:
+unknown.](_assets/understanding-cpus2.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+------------------------------------------------------------------------
+
+::: {.column-margin}
+![A sample caption. Image source:
+unknown.](_assets/understanding-cpus5.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+:::
+
+-   The light bulbs:
+    -   can be controlled (turned on or off) by us and by the
+        guy-in-the-box
+    -   Are synchronized (bulb 1 for us has the same value as bulb 1 for
+        the guy)
+-   We can share messages by setting the light bulbs on/off, as long as
+    we:
+    -   Agree on schedule (not changing the lightbulbs at the same time)
+    -   Agree on meaning (share the same interpretation of lightbulb
+        being on/off)
+-   This arrangement is called a **data bus:** a method for transporting
+    data from one component to another using electrical circuits
+
+------------------------------------------------------------------------
+
+### Registers
+
+So far, we can send/receive "messages" from the light bulbs. But, in order to "remember" a message, the guy needs at least a few
+    workstations ( **registers** ) to copy our messages, otherwise the
+    messages will be lost every time the data bus updates.
+
+- **Registers** are places to store a very small amount of data temporarily
+- Registers are usually the around the 1-4x the size of the data bus
+- We can give the registers names to distinguish them (AX, BX, CX,
+DX for example)
+
+![A sample caption. Image source:
+unknown.](_assets/understanding-cpus8.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+------------------------------------------------------------------------
+
+### Codebook: Agreeing on meaning
+
+It's important to have common definitions for the meaning of the
+lightbulbs being on/off to understand messages sent by this method
+
+CPUs are designed with a **codebook ** (instruction set) that defines
+the commands that we can give to the guy in the box
+
+![A sample caption. Image source:
+unknown.](_assets/understanding-cpus10.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+------------------------------------------------------------------------
+
+### Clock: Agreeing on schedule
+
+Now we are ready to communicate with the guy in the boxWe can send them
+the first command by lighting up the bulbs on the data bus.
+
+But how do they know when we have finished setting up the light bulbs?
+
+![A sample caption. Image source:
+unknown.](_assets/understanding-cpus16.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+------------------------------------------------------------------------
+
+-   We can use a bell activated by a button.
+-   A real computer uses a special wire called the clock wire (CLK). The
+  CLK wire is turned on and off on a precise and regular schedule.
+  This is called a **clock cycle.**
+  -   Each time the clock turns on, the state of our lightbulbs is
+      shared with the guy in the box
+  -   The guy then has until the clock turns off to send a message
+      back
+  -   The next time the clock turns on, a new message is sent to the
+      CPU
+-   The time between each clock cycle is the **speed** that a CPU can
+  perform a given task
+-   The maximum number of clock cycles a CPU can handle in given period
+  of time is called the clock speed.
+
+
+### Sample Guy in a Box Problem
+
+Using the following codebook, ask the "Guy in a box" to calculate 2+3
+
+You must send a series of commandsto the CPU. The CPU will act on each
+command and give you an answer.
+
+Your answer should be a **sequence of numbers** you could send to the
+guy in the box to get the right answer.
+
+![A sample caption. Image source:
+unknown.](_assets/understanding-cpus17.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+------------------------------------------------------------------------
+
+#### Solution
+
+
+
+```
+10000000  The next line is a number, put it in AX
+00000010  The number 2
+10010000  The next line is a number, put it in BX
+00000011  The number 3
+10110000  Add AX to BX and put the result in AX
+11000000  Place the value of AX on the external data bus
+```
+
+A set of commands such as this is called a program. A program is a series
+of command sent to a CPU in a specific order for the CPU to perform
+work.
+
+------------------------------------------------------------------------
+
+## Pipelining
+
+-   Almost all CPU instructions feature a set of 4 stages:
+    -   **Fetch** : retrieve the instruction, address, and data, write
+        them to registers
+    -   **Decode** : search for instruction code in codebook, verify it
+        is a real instruction, and that data/address are valid
+    -   **Execute** : perform the instruction, update registers with
+        results
+    -   **Write: ** write to databus to share results
+-   Rather than have each instruction repeat all of these steps, we can
+    organize CPUs further by specializing our "guy in a box" for each
+    stage
+-   This is called **pipelining** , and it allows for greater efficiency
+    in CPU programming
+
+![A sample caption. Image source:
+unknown.](_assets/understanding-cpus18.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+------------------------------------------------------------------------
+
+## CPU Properties
+
+The most important properties that define CPU behavior are **speed** and **bus width**: that is, how fast the clock cycle repeats, and how much data per clock cycle the CPU can process.
+
+### Clock Speed 
+
+We measure CPU **speed** : in cycles per second, e.g. megahertz (MHz) or gigahertz (GHz).
+
+> **Unit of Measurement: ** Hertz, usually written as **Hz**, denote frequency. 1Hz is "one time per second", 10Hz is "ten times per second".
+
+We can use **SI Prefixes ** (International System of Unit Prefixes) to compare magnitudes easily.
+
+You will see many of these in computer science over and over again --
+get to know them well!
+
+| Unit | Meaning | Definition | Examples |
+| :- | :-- | :-- | :--------- |
+| Hz | Once per second | 1/s, or 1Hz | 1-2Hz: human heart-rate at rest (1Hz = 60 beats per minute, 2Hz = 120 bpm)<br />24Hz: framerate of historic cinema<br />20-60Hz: frequency range for bass notes (C0 = 16.35Hz to C2 = 65.4Hz)<br />60-144Hz: framerate of most monitors |
+| kHz | Thousand times per second | 1000 Hz | 0.1-2kHz: frequency range for midrange notes (A2=0.110kHz, C7=2kHz)<br />20kHz: maximum frequency audible to human ear<br />740 kHz: Intel 4004 processor clock speed (1971) |
+| MHz | Million times per second | 1000000 Hz | 8MHz: fastest CPU clock speed in the 70s<br />35MHz: fastest CPU clock speed in the 80s<br />500-1000MHz: fastest CPU clock speed in the 90s) |
+| GHz | Billion times per second | 1000000000 Hz | 2-5GHz: Almost all consumer CPUs in 2024 have base clock speeds in this range<br />9.117 GHz: fastest CPU clock speed ever recorded (2024) |
+
+: SI Prefixes for Frequencies {.striped .hover}
+
+
+### Bus width
+
+The amount of data processed at a time depends on the "number of lightbulbs" or the **width** of the **data bus**
+
+**Bus width ** is measured in bits, e.g. 8-bits, 16-bit, 32-bit, 64-bit, etc.
+
+**Question**: how many bits do you need in *bus width* to represent the Guy in the Box and their codebook from the previous problems?
+
+------------------------------------------------------------------------
+
+![A sample caption. Image source:
+unknown.](_assets/understanding-cpus19.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+In actual computers, the CPU receives **instructions** , **addresses
+memory** , and **data** on separate buses.
+
+This allows the CPU to send AND receive the following information at the
+same time:
+
+What command to perform
+
+Where in memory the result should be stored
+
+What data to use to perform the command
+
+![A sample caption. Image source:
+unknown.](_assets/understanding-cpus20.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+**Figure from ** [In One
+Lesson](https://www.youtube.com/watch?v=cNN_tTXABUA&) on Youtube
+(nice visualization)
+
+------------------------------------------------------------------------
+
+### Clock Speed vs bus width compared
+
+-   You can double check that you understand a scientific concept by
+    checking what **units of measurement** that concept is measured by:
+-   Highway
+    -   **Number of lanes: ** (a number)
+    -   **Speed limit:** (unit distance per time elapsed, e.g. km/h)
+-   System bus
+    -   **Bus width: ** (a number of bits, eg a 32-bit processor)
+    -   **Bus speed: ** (unit information per time elapsed,
+        e.g. bits/second)
+
+![A sample caption. Image source:
+unknown.](_assets/understanding-cpus21.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+## Exercises
+
+## Knowledge check
+
+## Additional references
