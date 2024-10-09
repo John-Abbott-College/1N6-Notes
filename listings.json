@@ -4,31 +4,13 @@
     "items": []
   },
   {
-    "listing": "/topics/index.html",
-    "items": [
-      "/topics/hardware/index.html",
-      "/topics/data-representation/index.html",
-      "/topics/operating-systems/index.html",
-      "/topics/technical-support/index.html"
-    ]
-  },
-  {
-    "listing": "/topics/technical-support/index.html",
-    "items": []
-  },
-  {
     "listing": "/topics/all-lectures.html",
     "items": [
       "/topics/hardware/introduction-to-computers.html",
       "/topics/hardware/external-components.html",
       "/topics/hardware/internal-components.html",
-      "/topics/hardware/internal-components-v1.html",
-      "/topics/hardware/understanding-cpus.html"
+      "/topics/hardware/understanding-cpus-v1.html"
     ]
-  },
-  {
-    "listing": "/topics/data-representation/index.html",
-    "items": []
   },
   {
     "listing": "/topics/hardware/index.html",
@@ -36,8 +18,13 @@
       "/topics/hardware/introduction-to-computers.html",
       "/topics/hardware/external-components.html",
       "/topics/hardware/internal-components.html",
-      "/topics/hardware/internal-components-v1.html",
-      "/topics/hardware/understanding-cpus.html"
+      "/topics/hardware/understanding-cpus-v1.html"
+    ]
+  },
+  {
+    "listing": "/announcements/index.html",
+    "items": [
+      "/announcements/2024-08-27-class-cancelled.html"
     ]
   },
   {
@@ -49,9 +36,20 @@
     ]
   },
   {
-    "listing": "/announcements/index.html",
+    "listing": "/topics/index.html",
     "items": [
-      "/announcements/2024-08-27-class-cancelled.html"
+      "/topics/hardware/index.html",
+      "/topics/data-representation/index.html",
+      "/topics/operating-systems/index.html",
+      "/topics/technical-support/index.html"
     ]
+  },
+  {
+    "listing": "/topics/data-representation/index.html",
+    "items": []
+  },
+  {
+    "listing": "/topics/technical-support/index.html",
+    "items": []
   }
 ]
