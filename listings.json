@@ -38,8 +38,8 @@
   {
     "listing": "/topics/index.html",
     "items": [
-      "/topics/hardware/index.html",
       "/topics/data-representation/index.html",
+      "/topics/hardware/index.html",
       "/topics/operating-systems/index.html",
       "/topics/technical-support/index.html"
     ]

@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<link href="../../_assets/favicons/favicon.ico" rel="icon">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.5.57">
+
+  <meta name="dcterms.date" content="2024-10-09">
+  <title>{{&lt; var course.title &gt;}} – Introduction to Binary</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+<meta property="og:title" content="Introduction to Binary – Technical Support">
+<meta property="og:description" content="Lecture subtitle.">
+<meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/data-representation/_assets/favicons/favicon-32x32.png">
+<meta property="og:site_name" content="{{< var course.title >}}">
+</head>
+<body class="quarto-dark">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Introduction to Binary</h1>
+  <p class="subtitle">Lecture subtitle.</p>
+
+<div class="quarto-title-authors">
+</div>
+
+  <p class="date">2024-10-09</p>
+</section>
+<section id="introduction" class="slide level2">
+<h2>Introduction</h2>
+</section>
+<section id="lesson-overview" class="slide level2">
+<h2>Lesson Overview</h2>
+<p>Binary System</p>
+<p>Representing Numbers in Binary</p>
+<p>Representing Text in Binary</p>
+</section>
+<section id="lesson-content" class="slide level2">
+<h2>Lesson Content</h2>
+<h3 id="outline">Outline</h3>
+<h3 id="the-binary-system">The Binary System</h3>
+<p>Everyone “knows” that computers use “binary” to operate</p>
+<p>But, as we saw last class, computers don’t “know” anything – ultimately, its CPU is just configured to react in particularly sophisticated ways when its switches (the lightbulbs) are turned <strong>on</strong> or <strong>off</strong></p>
+<p>So what is binary anyway? And what does it have to do with computers?</p>
+<p>In order to understand the <strong>Binary</strong> numeral system, we can compare it to something we already know: the <strong>Decimal</strong> numeral system.</p>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>In <strong>decimal</strong> , numbers are represented by combinations of <strong>ten </strong> different symbols: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9). We call decimal a <strong>base 10 </strong> numeral system.</li>
+<li>If we have more than “9” of something, another <strong>digit</strong> is needed:
+<ul>
+<li>9 + 1 = 10</li>
+<li>99 + 1 = 100, etc.</li>
+</ul></li>
+<li>How do we represent numbers in binary?</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>In <strong>binary</strong> , there are only <strong>two </strong> symbols (0, 1). We call binary a <strong>base 2</strong> numeral system.</li>
+<li>So if we have more than “1” of something, another <strong>bit</strong> is needed:
+<ul>
+<li>1 + 1 = 10 (in english: one plus one equals two)</li>
+<li>11 + 1 = 100 (in english: three plus one equals four)</li>
+</ul></li>
+<li>It’s counterintuitive at first! But there’s nothing fundamentally different about binary than decimal – we’re just more used to using decimal instead.</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>Since we’re reusing symbols from the decimal system, there is a convention to use <strong>subscript</strong> to disambiguate between different numeral systems
+<ul>
+<li><strong>1</strong> <strong>2</strong> __ + 1__ <strong>2</strong> __ = 10__ <strong>2</strong> is the same as <strong>1</strong> <strong>10</strong> __ + 1__ <strong>10</strong> __ = 2__ <strong>10</strong> __ __ is the same as <strong>one plus one equals two</strong></li>
+<li><strong>11</strong> <strong>2</strong> __ + 1__ <strong>2</strong> __ = 100__ <strong>2</strong> __ __ is the same as <strong>3</strong> <strong>10</strong> __ + 1__ <strong>10</strong> __ = 4__ <strong>10</strong> __ __ is the same as __ three plus one equals four__</li>
+</ul></li>
+<li>This is not always required, but can be useful when the numeral systems are mixed in the same context.</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p>Note: binary and decimal are not the only possible numeral systems. All that distinguishes numeral systems is the number of symbols you agree to use to represent numbers – there are infinite possible numeral systems!</p>
+<p>Hexadecimal is another useful numeral system (16 symbols, or <strong>base 16</strong> ) which we will discuss later</p>
+</section>
+<section class="slide level2">
+
+<h3 id="bit-binary-digit">BIT – BInary digiT</h3>
+<ul>
+<li><strong>So what does Binary have to do with computers?</strong></li>
+<li><strong>Bit</strong> (Binary Digit) is the basic unit of information representing one of two discrete states.
+<ul>
+<li>The smallest unit of information within the computer.</li>
+</ul></li>
+<li>Bit has one of two values:
+<ul>
+<li><em>0 (off) or 1 (on)</em></li>
+<li><em>0 (False) or 1 (True)</em></li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="hardware/_assets/data-representation0.gif" title="A sample title." alt="Sample alt text. To be replaced!"></p>
+<figcaption>A sample caption. Image source: unknown.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="hardware/_assets/data-representation1.png" title="A sample title." alt="Sample alt text. To be replaced!"></p>
+<figcaption>A sample caption. Image source: unknown.</figcaption>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="how-are-bits-represented-in-a-computer">How are Bits Represented in a Computer?</h3>
+<p>A transistor that is switched on or off</p>
+<p>A capacitor that is charged or discharged.</p>
+<p>On magnetic disks bits are represented by direction of the magnetic field (N-S, S-N).</p>
+<p>Optical discs store bits optically (a bit on the surface is either shiny or not shiny).</p>
+<p>Data is transmitted over telephone line or radio link using high- and low-pitched tones.</p>
+
+<img data-src="hardware/_assets/data-representation2.png" title="A sample title." alt="Sample alt text. To be replaced!" class="r-stretch quarto-figure-center"><p class="caption">A sample caption. Image source: unknown.</p></section>
+<section class="slide level2">
+
+<h3 id="byte">Byte</h3>
+<p>A Byte is a collection of bits known as the unit of digital information.</p>
+<p>1 Byte = 8 bits</p>
+<p>Abbreviation: <strong>B</strong></p>
+
+<img data-src="hardware/_assets/data-representation3.jpg" title="A sample title." alt="Sample alt text. To be replaced!" class="r-stretch quarto-figure-center"><p class="caption">A sample caption. Image source: unknown.</p></section>
+<section class="slide level2">
+
+<h3 id="byte-history">Byte History</h3>
+<ul>
+<li>The byte represents the number of bits used to encode one <strong>character</strong> in a computer and hence it is the smallest addressable unit of memory in several computer architectures.</li>
+<li>Size of a byte has been hardware dependent and no definitive standards existed that mandated the size.</li>
+<li>A standard was introduced in 1993 that is common now.
+<ul>
+<li>1 byte = 8 bits</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="si-prefixes-scale">SI Prefixes: Scale</h3>
+<ul>
+<li>1 byte ( <strong>B</strong> )</li>
+<li><strong>Kilo</strong> byte (KB) = 1,000 bytes
+<ul>
+<li>“one <em>thousand</em> bytes”</li>
+</ul></li>
+<li><strong>Mega</strong> byte (MB) = 1,000,000 bytes
+<ul>
+<li>“one <em>million</em> bytes”</li>
+</ul></li>
+<li><strong>Giga</strong> byte (GB) = 1,000,000,000 bytes
+<ul>
+<li>“one <em>billion</em> bytes”</li>
+</ul></li>
+<li><strong>Tera</strong> byte (TB) = 1,000,000,000,000
+<ul>
+<li>“one <em>trillion</em> bytes”</li>
+</ul></li>
+</ul>
+<p><em><a href="https://www.nist.gov/pml/owm/metric-si-prefixes" class="uri">https://www.nist.gov/pml/owm/metric-si-prefixes</a></em> __ __</p>
+</section>
+<section class="slide level2">
+
+<h3 id="non-si-prefixes-powers-of-2">Non SI-Prefixes: Powers of 2</h3>
+<ul>
+<li>1 byte ( <strong>B</strong> )</li>
+<li><strong>Kibi</strong> byte (KiB) = 1,024 bytes (210) = 1.024KB
+<ul>
+<li>1,024 = 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2</li>
+</ul></li>
+<li><strong>Mebi</strong> byte (MiB) = 1,048,576 bytes (220) = 1.048 MB</li>
+<li><strong>Gibi</strong> byte (GiB) = 1,073,741,824 bytes (230) = 1.073 GB</li>
+<li><strong>Tebi</strong> byte (TiB) = 1,099,511,627,776 bytes (240) = 1.1 TB</li>
+<li>https://en.wikipedia.org/wiki/Byteb</li>
+</ul>
+
+<img data-src="hardware/_assets/data-representation4.png" title="A sample title." alt="Sample alt text. To be replaced!" class="r-stretch quarto-figure-center"><p class="caption">A sample caption. Image source: unknown.</p><p>Note: the difference between SI and Non-SI systems start small, but grow in significance at larger sizes of storage. See <em><a href="https://superuser.com/a/433216" class="uri">https://superuser.com/a/433216</a></em> for a thorough explanation</p>
+</section>
+<section class="slide level2">
+
+<h3 id="representing-numbers-in-binary">Representing Numbers in Binary</h3>
+</section>
+<section class="slide level2">
+
+<h3 id="converting-binary-to-decimal">Converting Binary to Decimal</h3>
+<p>Converting binary to decimal is easy to memorize for small numbers. For example:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Binary</th>
+<th style="text-align: center;">Decimal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">101</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">110</td>
+<td style="text-align: center;">6</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<p>What about larger numbers? How can we approach this problem systematically, i.e., use a defined method to confidently get the correct answer every time?</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Binary</th>
+<th style="text-align: center;">Decimal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1001<br><br></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1101101<br></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1000001<br></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1111111<br></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">100000011000001<br></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<p>Well, how do we do it for decimals? A large number, like 2608, is in fact <strong>the combination of multiples of powers of ten</strong> . When we say these numbers in English, we naturally <strong>decompose</strong> the number into its component parts:</p>
+<p>2608 is <strong>two thousand, six hundred, and eight.</strong></p>
+<p>Or, in other words:</p>
+<p>2608 = <strong>2 x 10</strong> <strong>3</strong> __ + 6x10__ <strong>2</strong> __ + 0x10__ <strong>1</strong> __ + 8x10__ <strong>0</strong></p>
+<p>We can use this exact method, with one key difference, to decompose the value of binary numbers just like decimal numbers.</p>
+<p>What key difference? (powers of 2 instead of powers of 10)</p>
+</section>
+<section class="slide level2">
+
+<p>Find the power of 2 value for each bit of the binary number, starting from 0.(e.g., the power of 2 value for the 5th bit of a binary number is: 25=32, etc.)</p>
+<p>Add all the powers of two <strong>wherever there is a 1</strong> in the bit of the binary number</p>
+<p>The sum of the powers of two above is the value of the binary number in decimal!</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Binary Number</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">0</th>
+<th style="text-align: center;">0</th>
+<th style="text-align: center;">1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Step 1</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Step 2</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">23</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Step 3</td>
+<td style="text-align: center;">16 + 8 + 1 = 25</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<h3 id="exercise-converting-binary-to-decimal">Exercise: Converting Binary to Decimal</h3>
+<p>Convert the following binary numbers to decimal:</p>
+<p>1001</p>
+<p>1101101</p>
+<p>1000001</p>
+<p>1111111</p>
+<p>100000011000001</p>
+</section>
+<section class="slide level2">
+
+<h3 id="converting-decimal-number-to-binary">Converting Decimal Number to Binary</h3>
+<p>Going the other way (from Decimal to Binary) is a bit less natural – we cannot “see” directly from the decimal representation of a number (like 2608, for instance), how many powers of two are needed to make the equivalent number in binary.</p>
+<p>Instead, we’ll learn an <strong>algorithm</strong> (a series of deterministic steps to solve an analytical problem)</p>
+<p><strong>Convert Decimal to Binary by Repeated Division</strong></p>
+<p>Divide the decimal number by 2 using long division.</p>
+<p>Note down the outcome and remainder of the division on the side.</p>
+<p>Repeat steps 1 and 2 on the outcome until the outcome becomes zero.</p>
+<p>The binary number will be the series of the remainders, read from <strong>bottom to top</strong> .</p>
+</section>
+<section class="slide level2">
+
+<p>Covert 25 to binary.</p>
+<p>Long Division (divide the Outcome by 2 at every step):</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Outcome</th>
+<th style="text-align: center;">Remainder</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">25</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<p>25/2 = 12.5. or 12 remainder 1.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Outcome</th>
+<th style="text-align: center;">Remainder</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">12</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2 scrollable">
+
+<ol start="2" type="1">
+<li>12/2 = 6, no remainder</li>
+</ol>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Outcome</th>
+<th style="text-align: center;">Remainder</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2 scrollable">
+
+<ol start="3" type="1">
+<li>6/2 = 3, no remainder</li>
+</ol>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Outcome</th>
+<th style="text-align: center;">Remainder</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2 scrollable">
+
+<ol start="4" type="1">
+<li>3/2 = 1.5, or 1 remainder 1</li>
+</ol>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Outcome</th>
+<th style="text-align: center;">Remainder</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2 scrollable">
+
+<ol start="5" type="1">
+<li>1/2 = 0.5, or 0 remainder 1</li>
+</ol>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Outcome</th>
+<th style="text-align: center;">Remainder</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<p>Covert 25 to binary.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Outcome</th>
+<th style="text-align: center;">Remainder</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">(25)10 = (11001)2</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<h3 id="exercise-converting-decimal-number-to-binary">Exercise: Converting Decimal Number to Binary</h3>
+<p>Convert 107 to binary.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Outcome</th>
+<th style="text-align: center;">Remainer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">107</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>double check you have the correct answer! google “107 in binary”</p>
+</section>
+<section class="slide level2">
+
+<h3 id="practise-converting-decimal-to-binary">Practise: Converting Decimal to Binary</h3>
+<p>Convert the following into binary. <strong>Show your work</strong> .</p>
+<p>10</p>
+<p>64</p>
+<p>128</p>
+<p>146</p>
+<p>300</p>
+</section>
+<section class="slide level2">
+
+<h3 id="how-many-numbers-can-i-represent">How many Numbers can I represent?</h3>
+<ul>
+<li>1 bit -&gt; can represent 2 numbers
+<ul>
+<li>(0)2 = (0)10</li>
+<li>(1)2 = (1)10</li>
+</ul></li>
+<li>2 bits -&gt; can represent 4 numbers
+<ul>
+<li>(00)2 = (0)10</li>
+<li>(01)2 = (1)10</li>
+<li>(10)2 = (2)10</li>
+<li>(11)2 = (3)10</li>
+<li>Values: 0 to 3 in decimal.</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="n-bits-how-many-numbers">n Bits ⬄ How many Numbers</h3>
+<p><strong>Possible Test Question</strong></p>
+<p>How many numbers can I represent in 4 bytes? What is the first and last number?</p>
+<ul>
+<li><strong>n bits </strong></li>
+<li><strong>-&gt; Can represent 2</strong> <strong>n</strong> __ numbers __</li>
+<li><strong>-&gt; Values: from 0 to (2</strong> <strong>n</strong> __ -1)__</li>
+<li>1 Byte -&gt; 8 bit -&gt; 28 numbers (256)</li>
+<li><strong>First Number </strong> 0000 00002 = 010</li>
+<li><strong>Last Number</strong> 1111 11112 = 28-1 = 25510</li>
+<li>2 Byte -&gt; 16 bit -&gt; 216 numbers (65536)</li>
+<li><strong>First Number </strong> 0000 0000 0000 00002 = 010 to</li>
+<li><strong>Last Number</strong> 1111 1111 1111 11112 = 216-1 = 6553510</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="representing-text">Representing Text</h3>
+</section>
+<section class="slide level2">
+
+<h3 id="text-in-computers">Text in Computers</h3>
+<p>In early years, different computer companies applied the binary system in their own way.</p>
+<p>The word “cat” would be encoded in binary different on different brands of computers.</p>
+<p>This made life difficult in terms of being able to transfer data from one system to another.</p>
+</section>
+<section class="slide level2">
+
+<h3 id="ascii">ASCII</h3>
+<ul>
+<li>ASCII (American Standard Code for Information Interchange)
+<ul>
+<li>Standard introduced that used a 7 bit code with 128 combinations.</li>
+</ul></li>
+<li>Later became 8-bits (256 combinations) – <strong>extended </strong> ASCII-8.
+<ul>
+<li>Note: When people say “ASCII” they are almost always referring to extended ASCII-8</li>
+</ul></li>
+<li>Why eight bits?
+<ul>
+<li>So each character can be stored in a single byte.</li>
+</ul></li>
+<li>CAT 0100 0011 0100 0001 0101 0100</li>
+<li>cat 0110 0011 0110 0001 0111 0100</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="ascii-8-table-of-characters">ASCII-8: Table of Characters</h3>
+<table class="caption-top" style="width:98%;">
+<colgroup>
+<col style="width: 47%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Character codes</th>
+<th style="text-align: center;">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0-31 <br>0000 0000 -&gt; 0001 1111<br><br>Rows 1 &amp; 2</td>
+<td style="text-align: center;">ASCII Control CharactersThe first 32 characters in the ASCII-table are unprintable control codes represent “control” instructions (like chime the system bell, insert new-line, etc) and to control peripherals such as printers.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">32-127<br><br>0000 0010 -&gt; 0111 1111<br><br>Rows 3-8</td>
+<td style="text-align: center;">ASCII Printable CharactersThese codes are the “printable characters”, representing letters, digits, punctuation marks, and a few miscellaneous symbols. Char 127 is the “DEL” key.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">128 - 256<br><br>1000 0000 -&gt; 1111 1111<br><br>Rows 9-16</td>
+<td style="text-align: center;">ASCII “Extended” Characters<br><br>The last half of the ASCII table stores a variety of miscellaneous control and printable characters. This part of the table is not standardized across all operating systems.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Information above comes from </strong> <em><a href="https://www.ascii-code.com/" class="uri">https://www.ascii-code.com/</a></em> __ – you can find more detailed explanations of the ASCII table there. Note that the “extended” characters are different in this source than my slides – they are nonstandardized.__</p>
+</section>
+<section class="slide level2">
+
+<h3 id="ascii-8">ASCII-8</h3>
+<p><strong>Exercise: </strong> Decode the following message (left to right, top to bottom)</p>
+<p>0100 0001 0101 0011 0100 0011</p>
+<p>0100 1001 0100 1001 0010 0000</p>
+<p>0110 1001 0111 0011 0010 0000</p>
+<p>0110 1100 0110 1001 0110 1101</p>
+<p>0110 1001 0111 0100 0110 0101</p>
+<p>0110 0100</p>
+</section>
+<section class="slide level2">
+
+<p><strong>Hint</strong> <strong>: </strong> Notice that the <strong>rows</strong> don’t change very much… there are only four possible rows to look at for common letters.</p>
+<p><strong>0100: </strong> A -&gt; O</p>
+<p><strong>0101: </strong> P -&gt; Z</p>
+<p><strong>0110: </strong> a -&gt; o</p>
+<p><strong>0111: </strong> p -&gt; z</p>
+<p><strong>0100</strong> 0001 <strong>0101</strong> 0011 <strong>0100</strong> 0011</p>
+<p><strong>0100</strong> 1001 <strong>0100</strong> 1001 0010 0000</p>
+<p><strong>0110</strong> 1001 <strong>0111</strong> 0011 0010 0000</p>
+<p><strong>0110</strong> 1100 <strong>0110</strong> 1001 <strong>0110</strong> 1101</p>
+<p><strong>0110</strong> 1001 <strong>0111 </strong> 0100 <strong>0110</strong> 0101</p>
+<p><strong>0110</strong> 0100</p>
+</section>
+<section class="slide level2">
+
+<p><strong>Hint: </strong> Notice that the letters are <strong>ordered</strong> :</p>
+<p><strong>0100 0001 -&gt; 0100 0011</strong> <strong>: </strong> A -&gt; C (two apart)</p>
+<p>other letters behave as you would expect (q is one after p, 6 is one after 5, etc.)</p>
+<p><strong>0100 0001 </strong> 0101 0011 <strong>0100 0011 </strong></p>
+<p>0100 1001 0100 1001 0010 0000</p>
+<p>0110 1001 0111 0011 0010 0000</p>
+<p>0110 1100 0110 1001 0110 1101</p>
+<p>0110 1001 0111 0100 0110 0101</p>
+<p>0110 0100</p>
+</section>
+<section class="slide level2">
+
+<p><strong>Exercise: </strong> Decode the following message (left to right, top to bottom)</p>
+<p>0100 0001 0101 0011 0100 0011</p>
+<p>0100 1001 0100 1001 0010 0000</p>
+<p>0110 1001 0111 0011 0010 0000</p>
+<p>0110 1100 0110 1001 0110 1101</p>
+<p>0110 1001 0111 0100 0110 0101</p>
+<p>0110 0100</p>
+</section>
+<section class="slide level2">
+
+<h3 id="unicode">Unicode</h3>
+<ul>
+<li>Although ASCII works fine for English and other latin-based languages, many other languages need more than 256 characters. For example:
+<ul>
+<li>Chinese characters 汉字</li>
+<li>Japanese characters 漢字</li>
+<li>Cyrillic Кири́ллица</li>
+<li>Gujarati ગુજરાતી</li>
+<li>Urdu اردو</li>
+</ul></li>
+<li>You can see that we quickly run into trouble as ASCII can’t possibly store these hundreds of thousands of extra characters in just 8 bits.</li>
+<li>What we use instead is called <strong>unicode</strong> . There are several versions of unicode, each with using a different number of bits to store data.</li>
+</ul>
+<p><strong>Information above comes from </strong> <em><a href="https://en.wikibooks.org/wiki/A-level_Computing/AQA/Paper_2/Fundamentals_of_data_representation/ASCII_and_unicode" class="uri">https://en.wikibooks.org/wiki/A-level_Computing/AQA/Paper_2/Fundamentals_of_data_representation/ASCII_and_unicode</a></em> __ __ __ – you can find more detailed explanations of the Unicode there there.__</p>
+</section>
+<section class="slide level2">
+
+<p><strong>Name Description</strong></p>
+<p><strong>UTF-8 </strong> 8-bit is the most common unicode format. Characters can take as little as 8-bits, maximizing compatibility with ASCII. But it also allows for variable-width encoding expanding to 16, 24, 32, 40 or 48 bits when dealing with larger sets of characters</p>
+<p><strong>UTF-16</strong> 16-bit, variable-width encoding, can expand to 32 bits.</p>
+<p><strong>UTF-32</strong> 32-bit, fixed-width encoding. Each character takes exactly 32-bits</p>
+<p>With over 60 thousand characters in UTF-16, and over 4 billion possible characters in UTF-32 we should be able to store every character from every language on the planet. Here are some examples:</p>
+<p><strong>code point</strong> <strong>glyph</strong> <strong>character</strong> __UTF-16 code unit (hexadecimal*)__</p>
+<p>U+007A z LATIN SMALL LETTER Z 007A</p>
+<p>U+6C34 水 CJK UNIFIED IDEOGRAPH-6C34 (water) 6C34</p>
+<p>*Since the UTF-16 and UTF-32 numbers are very large, it is not convenient to express them in binary. We will learn about <strong>hexadecimal </strong> numbers next.</p>
+<p><strong>Information above comes from </strong> <em><a href="https://en.wikibooks.org/wiki/A-level_Computing/AQA/Paper_2/Fundamentals_of_data_representation/ASCII_and_unicode" class="uri">https://en.wikibooks.org/wiki/A-level_Computing/AQA/Paper_2/Fundamentals_of_data_representation/ASCII_and_unicode</a></em> __ – you can find more detailed explanations of the Unicode there there.__</p>
+</section>
+<section class="slide level2">
+
+<h3 id="hexadecimal-numbers">Hexadecimal Numbers</h3>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>Why another numeric system?
+<ul>
+<li>As we saw with <strong>unicode</strong> , computers need to be able to read large numbers to tell the difference between many possible characters and/or instructions.</li>
+<li>Computers have no problem reading large binary numbers – __ but we do!__ It is annoying to convert 32 bit, or 64 bit, numbers from Binary to Decimal, which makes __ large binary numbers hard for humans to read and write quickly__ .</li>
+<li>We are fine reading/writing large Decimal numbers, but <strong>since 10 is not a power of 2, it does not “fit” evenly with the Binary storage model</strong> used by computers.
+<ul>
+<li>E.g. with 4 bits we can store 10-16, but need 5 bits to store 17-20 (and beyond).</li>
+<li>Consequence: We cannot directly store decimal numbers to machines (transistors) that can only tell the difference between “on” and “off”</li>
+</ul></li>
+<li>What to do?</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>Introduce a new numeric system! There are infinite possibilities…</li>
+<li><strong>Hexadecimal numbers</strong> are <strong>base 16</strong> .
+<ul>
+<li>Note: 16 is a power of 2! 2^4 = 16</li>
+<li>In other words:
+<ul>
+<li>with 4 bits, we can store one “hexit”, values range from 0-1111 (0 -&gt; 15 in decimal)</li>
+<li>with 8 bits, we can store exactly two “hexits”, values range from 0 - 1111 1111 (0 -&gt; 255 in decimal)</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="building-hexadecimal-numbers">Building Hexadecimal Numbers</h3>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Decimal</th>
+<th style="text-align: center;">Hex (16’s column)</th>
+<th style="text-align: center;">Hex (1’s column)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">8</td>
+</tr>
+</tbody>
+</table>
+<p>everything is the same so far…</p>
+</section>
+<section class="slide level2">
+
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Decimal</th>
+<th style="text-align: center;">Hex (16’s column)</th>
+<th style="text-align: center;">Hex (1’s column)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">A</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">B</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">C</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">D</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">E</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<p>here is where it gets interesting!</p>
+</section>
+<section class="slide level2">
+
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Decimal</th>
+<th style="text-align: center;">Hex (16’s column)</th>
+<th style="text-align: center;">Hex (1’s column)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">19</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">22</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">23</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">26</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">A</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<h3 id="riddle">Riddle</h3>
+<p>Avatar Aang went to get his first driving license. The clerk asked Aang for his ID to make sure he was old enough to do the driving test. The clerk read his ID, and told him that he is not old enough for the test. They him that he needs to be at least 18.</p>
+<p>Aang answered, “I’m sorry but you are wrong. I am exactly 18, in decimal. My ID in fact shows my age in Hexadecimal.”</p>
+<p>What age is Aang in Hexadecimal(if he is indeed 18 in decimal?)</p>
+<p>__ __ <em>Decimal</em> __ __ <em>16’s</em> __ __ <em>1’s</em></p>
+<p>__ 18 __ __ __</p>
+
+<img data-src="hardware/_assets/data-representation5.png" title="A sample title." alt="Sample alt text. To be replaced!" class="r-stretch quarto-figure-center"><p class="caption">A sample caption. Image source: unknown.</p></section>
+<section class="slide level2">
+
+<h3 id="why-hexadecimal">Why Hexadecimal?</h3>
+<p>Hexadecimal is perfect for matching 4 bits.</p>
+<p>Every combination of 4 bits can be matched with one hex number.</p>
+<p><em>4 bits</em> can be represented by <em>1 Hex value (“hexit”)</em></p>
+<p><em>8 bits</em> can be represented by <em>2 Hex values (“hexit”)</em></p>
+</section>
+<section class="slide level2">
+
+<h3 id="hexadecimal-digits">Hexadecimal Digits</h3>
+<p><em>Dec</em> __ __ <em>Hex</em> __ Binary__</p>
+<p><strong>0 0 </strong> <strong>0000</strong></p>
+<p><strong>1 1 </strong> <strong>0001</strong></p>
+<p><strong>2 2 </strong> <strong>0010</strong></p>
+<p><strong>3 3 </strong> <strong>0011</strong></p>
+<p><strong>4 4 </strong> <strong>0100</strong></p>
+<p><strong>5 5 </strong> <strong>0101</strong></p>
+<p><strong>6 6 </strong> <strong>0110</strong></p>
+<p><strong>7 7 </strong> <strong>0111</strong></p>
+<p><em>Dec</em> __ __ <em>Hex</em> __ Binary __</p>
+<p><strong>8 8 </strong> <strong>1000</strong></p>
+<p><strong>9 9 </strong> <strong>1001</strong></p>
+<p><strong>10 A </strong> <strong>1010</strong></p>
+<p><strong>11 B </strong> <strong>1011</strong></p>
+<p><strong>12 C </strong> <strong>1100</strong></p>
+<p><strong>13 D </strong> <strong>1101</strong></p>
+<p><strong>14 E </strong> <strong>1110</strong></p>
+<p><strong>15 F </strong> <strong>1111</strong></p>
+</section>
+<section class="slide level2">
+
+<h3 id="what-about-8-bits">What about 8 bits?</h3>
+<p><strong>Dec.&nbsp;Hex. Binary Dec.&nbsp;Hex. Binary</strong></p>
+<p>__ 0 0 0000 8 8 1000__</p>
+<p>__ 1 1 0001 9 9 1001__</p>
+<p>__ 2 2 0010 10 A 1010__</p>
+<p>__ 3 3 0011 11 B 1011__</p>
+<p>__ 4 4 0100 12 C 1100__</p>
+<p>__ 5 5 0101 13 D 1101__</p>
+<p>__ 6 6 0110 14 E 1110__</p>
+<p>__ 7 7 0111 15 F 1111__</p>
+<p><strong>—————————————————–</strong></p>
+<p><strong>HEX BINARY</strong></p>
+<p><strong>2 4 ?</strong></p>
+</section>
+<section class="slide level2">
+
+<p><strong>Dec.&nbsp;Hex. Binary Dec.&nbsp;Hex. Binary</strong></p>
+<p>__ 0 0 0000 8 8 1000__</p>
+<p>__ 1 1 0001 9 9 1001__</p>
+<p>__ 2 __ <strong>2 0010</strong> __ 10 A 1010__</p>
+<p>__ 3 3 0011 11 B 1011__</p>
+<p>__ 4 __ <strong>4 0100 </strong> <strong>12 C 1100</strong></p>
+<p>__ 5 5 0101 13 D 1101__</p>
+<p>__ 6 6 0110 14 E 1110__</p>
+<p>__ 7 7 0111 15 F 1111__</p>
+<p><strong>—————————————————–</strong></p>
+<p><strong>HEX BINARY</strong></p>
+<p><strong>2</strong> __ __ <strong>4</strong> __ __ <strong>0010</strong> __ __ <strong>0100</strong> __ __</p>
+</section>
+<section class="slide level2">
+
+<h3 id="using-hex-for-8-bits">Using Hex for 8 bits</h3>
+<p><strong>Dec.&nbsp;Hex. Binary Dec.&nbsp;Hex. Binary</strong></p>
+<p>__ 0 0 0000 8 8 1000__</p>
+<p>__ 1 1 0001 9 9 1001__</p>
+<p>__ 2 2 0010 10 A 1010__</p>
+<p>__ 3 3 0011 11 B 1011__</p>
+<p>__ 4 4 0100 12 C 1100__</p>
+<p>__ 5 5 0101 13 D 1101__</p>
+<p>__ 6 6 0110 14 E 1110__</p>
+<p>__ 7 7 0111 15 F 1111__</p>
+<p><strong>—————————————————–</strong></p>
+<p>__ __ <em>Hex Binary</em> __ __ <em>Hex Binary</em> __ __ <em>Hex Binary</em></p>
+<p>__ __ <strong>1</strong> <em>2</em> __ __ <strong>0001</strong> __ __ <em>0010</em> __ 3C 0011 1100 99 1001 1001__</p>
+<p><strong>Exercise: </strong> Convert the following 8 bit (1 byte) hexadecimal numbers to binary</p>
+<p>__ AB 1A 00__</p>
+<p>__ 02 B4 7D__</p>
+</section>
+<section class="slide level2">
+
+<h3 id="hexadecimal-red-green-blue">Hexadecimal # RED GREEN BLUE</h3>
+<p>__</p>
+
+
+<p>__</p>
+<p>__ Red__ __ __ <strong>Green</strong> __ __ <em>Blue</em></p>
+<p>__ cc__ __ __ <strong>cc</strong> __ __ <em>99</em></p>
+<p><strong>Convert to Binary</strong></p>
+<p>__ Red__ __ __ <strong>Green</strong> __ __ <em>Blue</em></p>
+<p><strong>Hex</strong> __ cc__ __ __ <strong>cc</strong> __ __ <em>99</em></p>
+<p><strong>Bin</strong> _ _ <strong>1100 1100</strong> _ _ <strong>1100 1100</strong> _ 1001 1001_</p>
+<p><strong>24 bits represent a single color</strong></p>
+</section>
+<section id="exercises" class="slide level2">
+<h2>Exercises</h2>
+</section>
+<section id="knowledge-check" class="slide level2">
+<h2>Knowledge check</h2>
+</section>
+<section id="additional-resources" class="slide level2">
+<h2>Additional resources</h2>
+
+<div class="quarto-auto-generated-content">
+<div class="footer footer-default">
+
+</div>
+</div>
+</section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.2,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("https:\/\/John-Abbott-College\.github\.io\/1N6-Notes\/");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>
