@@ -16,7 +16,7 @@
     "href": "topics/all-lectures.html",
     "title": "All lectures",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nSubtitle\n\n\n\n\n\n\n2024-08-27\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n2024-09-03\n\n\nExternal components\n\n\nOverview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors\n\n\n\n\n2024-09-10\n\n\nInternal Components\n\n\nExplains the most important internal components of desktop computers. Processing, memory, storage, and communication.\n\n\n\n\n2024-09-16\n\n\nUnderstanding CPUs\n\n\nAn in-depth explanation of command processing and executing at the CPU level\n\n\n\n\n\nNo matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nSubtitle\n\n\n\n\n\n\n2024-08-27\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n2024-09-03\n\n\nExternal components\n\n\nOverview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors\n\n\n\n\n2024-09-10\n\n\nInternal Components\n\n\nExplains the most important internal components of desktop computers. Processing, memory, storage, and communication.\n\n\n\n\n2024-09-16\n\n\nUnderstanding CPUs\n\n\nMore detail on CPUs. “Guy in Box” analogy, Clock Speed, Codebook, Databuses explained.\n\n\n\n\n\nNo matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
     "crumbs": [
       "Home",
       "Topics",
@@ -24,11 +24,317 @@
     ]
   },
   {
-    "objectID": "topics/hardware/understanding-cpus-v1.htm#introduction",
-    "href": "topics/hardware/understanding-cpus-v1.htm#introduction",
-    "title": "Understanding CPUs",
+    "objectID": "topics/hardware/internal-components.html",
+    "href": "topics/hardware/internal-components.html",
+    "title": "Internal Components",
+    "section": "",
+    "text": "The major internal components of desktop computers. Image source: TBA",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#introduction",
+    "href": "topics/hardware/internal-components.html#introduction",
+    "title": "Internal Components",
     "section": "Introduction",
-    "text": "Introduction"
+    "text": "Introduction\nIn previous weeks we learned the basic behaviors that define computers – their ability to store, retrieve, and process information. This means that many simple devices, even non-electronics, can be considered computers.\nThe computers that we mostly are concerned with in the computer science profession, however, are generally complicated electronic devices made of many components. In this class, we are going to learn many of the fundamental components that make up modern computing devices.\nWe will continue with the internal, or system, components of a computer – each of these have their own set of interesting behaviors and properties that are worth understanding.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#lesson-overview",
+    "href": "topics/hardware/internal-components.html#lesson-overview",
+    "title": "Internal Components",
+    "section": "Lesson overview",
+    "text": "Lesson overview\nThe system components of a computer are responsible for the following behaviors:\n\nMain needs:\n\nstore information\nprocess information\nretrieve  information\n\nAuxiliary needs:\n\nprotection from elements/interference\nsource of electrical power\ntemperature management for heat generated\nstructure\ncommunication between components\ntiers of storage/processing specialized for different purposes\n\n\nHere are system components that fulfil these needs:\n\nCase\nPower Supply\nMotherboard\n\nChipset\nBuses\n\nConnectors\nCooling Devices\nProcessor (CPU)\nGraphics processor (GPU)\nMemory (RAM)\nStorage Devices (CD, HDD, SSD, NVME/M2)\n\nWe will learn about all of these components this week!",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#definitions",
+    "href": "topics/hardware/internal-components.html#definitions",
+    "title": "Internal Components",
+    "section": "Definitions",
+    "text": "Definitions\nWhen discussing components of any complicated machine, we should try to understand the following about those components:\n\nMake/model\nMake/model is the brand and product name of the component. * E.g. Hyundai Accent (make = Hyundai, model = Accent)\nWhy it’s important: Who constructs these components? Are their multiple different versions of this component made by the same manufacturer? Why?\n\n\nProperties\nProperties are the quantitative (numeric) and qualitative  (non-numeric) traits of the component that can be compared with alike components * Quantitative e.g.: the Fuel Efficiency of the 2009 Hyundai Accent is 29 MPG  (miles per gallon) * Qualitative e.g: The Hyundai Accent is a hatchback, not a sedan\nWhy it’s important: * what is the expected performance of this component? * Is their a cost/benefit for choosing a component with better suited properties than other components? * Etc.\nThese two ideas (make/model, properties) will vary significantly from component to component. You will need to know these ideas for all of the components we discuss today.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#case",
+    "href": "topics/hardware/internal-components.html#case",
+    "title": "Internal Components",
+    "section": "Case",
+    "text": "Case\n\n\n\nFigure caption.\n\n\n\nProvides protection and cooling for the internal components.\nAlso prevents damage from static electricity (components grounded via attachment to case).\nUsually made of plastic, steel or aluminum.\nFans move air through the case:\n\nto replace warm air with cold air to keep components at stable temperatures\nto prevent build-up of dust\nThere exist many guides/studies for optimal airflow. E.g. https://voltcave.com/pc-airflow-guide/",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#power-supply-psu",
+    "href": "topics/hardware/internal-components.html#power-supply-psu",
+    "title": "Internal Components",
+    "section": "Power Supply (PSU)",
+    "text": "Power Supply (PSU)\nMain purpose:  Converts AC power (alternating current) from wall socket to DC power (direct current). Direct current (0 or 5V) is used to power digital circuits.\n\nNote: PSU have their own fans: Energy conversion releases a lot of heat!\nComputers can only tolerate slight fluctuations in power without needing to shut down\nImportant: Never open a power supply! The capacitors contained within can keep a dangerous high voltage, high power charge long after being unplugged.\n\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\nPSU Connectors\n\nMost power supply connectors are : 20 + 4 pins\nUsually made up of wires of various colors:\n\nYellow 12V\nRed 5V\nOrange 3.3V\nOther colors may be ground 0V\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\nPSU Ratings\nUseful for Assignment 1\nPSU Ratings: * Wattage (amount of power delivered, must be greater than the sum of power required by all parts, some power supplies can provide more power than others) * Efficiency (1st + 2nd Laws of thermodynamics: 100% power input cannot be converted to 100% power output; some power supplies have higher efficiency ratings than others) * For more detailed explanation:  https://www.newegg.com/insider/how-to-choose-a-pc-power-supply-buying-guide/\n\n\nUninterruptible Power Supply\nIn the case of a power outage, an Uninterruptible Power Supply (UPS) can keep a computer running for a few minutes to several hours depending on the sophistication of the UPS. See  https://www.wikihow.com/Buy-and-Use-an-Uninterruptible-Power-Supply  for an example.\nIt’s basically a large battery that keeps charge during normal operation, and powers a computer using its stored charge when the building’s power is cut off.\nWe will talk more about uninterruptible power supply when we start speaking about server hardware.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#motherboard",
+    "href": "topics/hardware/internal-components.html#motherboard",
+    "title": "Internal Components",
+    "section": "Motherboard",
+    "text": "Motherboard\nMotherboards connect all the major components of the computer: the CPU, RAM, Expansion ports, etc.\n\n\n\nAn ASUS Pro B660M Motherboard. Most motherboards look something like this.\n\n\n\nComposed of various chips all combined into north  and south  bridges\nMain circuit board and controls the electrical pathways (buses) found in a computer.\nThe buses allow data to travel between the various components of a computer.\nVarious form factors, e.g. AT, ATX, LPX, BTX, ITX.\n\n\n\n\nMotherboard form factors, from largest to smallest.\n\n\n\nForm Factors\n\nAT\n\nInvented by IBM in early 1980s, now obsolete.\nHuge in size (approximately 12 x 13 inches).\nNeeded lots of space for power supply and its various chips.\nLacked external ports, only allowed for monitor and keyboard.\n\nATX\n\nCreated in 1995 to meet the need for more connectors.\nGot off to a slow start but by 1998 became the most common form factor.\nBiggest change to AT was the rear panel with standard set of ports for expansion.\nPower supply position for better airflow, CPU and RAM positioned for easier access.\nVariations 12x9in (full size), 9.6x9.6in ( microATX )\n\nATX and microATX are the most common in personal desktop computers today\n\n\n\nITX\n\nCreated in 2001 to meet the demand for smaller computers.\nITX failed but led to development of smaller form factor (SSF) motherboards.\nMiniITX (6.7x6.7in), NanoITX (4.7x4.7in) and PicoITX (3.8x2.8in)\nCommonly used for embedded systems and specialized devices such as routers.\nRequire very little power, therefore produce less heat.\n\nProprietary\n\nSome computer manufacturers make motherboards that work only with their cases.\nServices and upgrades usually need to be handled by authorized dealers.\nOften hard to get replacement parts and they are usually expensive.\n\n\n\n\nI/O Ports\nYou’ll notice that the I/O Ports (input/output) on the mother board are always located around the same area.\nThis is to keep certain consistency across manufacturer and regardless of the form factors\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\nExpansion Slots\nLet’s have a closer look at what we call expansion slots.\nExpansion slots are ports inside a computer found on the motherboard. They provide the possibility to expand the hardware of your PC.\nFor example, you may want to install a network card, a sound card, and most commonly, a video card.\n\n\nExpansion slots allow us to increase the functionality of a computer by adding controllers for specific devices (often called adapter cards) e.g. sound, video, NIC (network Interface Card).\n\nPCI used in most computers, commonly used for network interface\nAGP designed to be used by video adapters\nPCIe replaces AGP in newer computers, used for video cards\nISA older, rarely used, 8 or 16 bit\nEISA older, rarely used, 32 bit\nMCA IBM proprietary 32 bit, older, rarely used\nPCI-X 32 bit, can run up to four times faster than PCI\nMiniPCI 32 bit, used by laptops, has three different form factors\n\nIn 2024 : PCI  and PCIe  are the common standards that cover all features required for expansion slots\n\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nCPU Socket\nLet’s have a closer look at the CPU Socket, which rests in the motherboard. This is where the CPU will sit.\n\n\n\n\n\n\n\n\n\nThe motherboard…\n\n\n\n\n\n\n\n… and the CPU socket.\n\n\n\n\n\n\n\nHow to Connect a CPU?\nCPU connection on the motherboard is known as the CPU socket.\nThe CPU is connected to the motherboard in one of two ways:\n\nPin Grid Array – PGA\n\nPins are on the CPU (underside of the processor).\nSocket on motherboard includes holes that line up with the CPU pins.\n\nLand Grid Array – LGA\n\nPins are on the motherboard (on socket) instead of on the processor.\n\n\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#internal-connectors",
+    "href": "topics/hardware/internal-components.html#internal-connectors",
+    "title": "Internal Components",
+    "section": "Internal Connectors",
+    "text": "Internal Connectors\nThere are a variety of connectors used to connect components to the motherboard. Two main purposes:\n\nSignals : for communication/data transfer\nPower : not all components connect directly to the power supply, they get power from the motherboard\n\nMost connectors are keyed (can only be inserted one way). Note: Always check the pins if you have trouble with a connector.\n\n“If it doesn’t go in like butter, it doesn’t go in at all” – never force a connection! you are likely going to damage the pins.\n\n\nExample connectors\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#cpu",
+    "href": "topics/hardware/internal-components.html#cpu",
+    "title": "Internal Components",
+    "section": "CPU",
+    "text": "CPU\nThe CPU Most important element of the computer.\n\nResponsible for interpreting  and executing  the commands from the software.\ncommunicates instructions for all of the other components of the computer\nWhile the CPU is processing one step of the program, the remaining instructions and the data are stored in a special memory called cache.\n\n\n\n\nFigure caption.\n\n\nWe’ll have a lecture dedicated to the CPU since it is so complicated.\n\nCPU Brands\nIntel: Historically the main CPU manufacturer\nAMD: Relatively recent competitor to Intel\n\n\n\nFigure caption.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#cooling-devices",
+    "href": "topics/hardware/internal-components.html#cooling-devices",
+    "title": "Internal Components",
+    "section": "Cooling Devices",
+    "text": "Cooling Devices\nThe flow of current between and within electronic components generates heat. Some devices are particularly powerful heat-generators, due to the large current they draw: * CPUs typically come with their own cooling device * Cooling devices are built into GPUs and Power Supplies\nThere are two main types of cooling devices:\n\nFans inside the case increase airflow and removes heat.\nHeat sinks also draw heat away from the CPU core.\n\n\nFans\nThe flow of current between the electronic components generates heat.\nFans inside the case increase airflow and removes heat.\nOccasionally video cards or other components have their own fans to cool them.\n\n\n\nFigure caption.\n\n\n\n\nHeat sinks\n\nHeat sinks also draw heat away from the CPU core.\n\nA heat sink is a piece of copper or aluminum that resides between the processor and the CPU fan.\nIt absorbs the heat from the processor and the fan disperses the heat.\n\n\n\n\n\nFigure caption.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#main-memory-ram",
+    "href": "topics/hardware/internal-components.html#main-memory-ram",
+    "title": "Internal Components",
+    "section": "Main Memory (RAM)",
+    "text": "Main Memory (RAM)\nReferred to as RAM (Random Access Memory). They’re connected to RAM slots on the motherboard:\n\n\n\n\n\n\n\nFigure caption.\n\n\nRAM is a collection of integrated circuits (chips). Temporary storage for data and programs that are being accessed by the CPU.\nVolatile memory : contents are erased when the computer is switched off. (or when power is lost)\n\n\n\n\n\n\n\nFigure caption.\n\n\n\nProperties\nThere are four main properties of RAM to know:\n\nCapacity:  Total memory (in GB, GigaBytes)\n\nMore RAM means more capacity to hold and process large programs and files.\nMaximum installed is limited by the motherboard and the operating system.\n\nSpeed:  How many operations per second\n\nMany, millions or billions per second\n1MHz = 1 million / second, 1 GHz = 1 billion / second\n\nLatency : How much time delay between communications\nGeneration: See next slides\n\n\n\nRAM Form Factors\n\nSIMMs (Single In-Line Memory Modules)\n\nHave a single line of connectors.\nNow obsolete.\n\nDIMMs (Dual In-Line Memory Modules)\n\nHave two lines of connectors.\nHave Wider bus (supports 64 bits) 🡪 How can this help? More on this in the coming weeks.\nBecame dominant (no need to state that a memory module is a DIMM).\n\n\n\n\nRAM Generations\n\n\n\n\n\n\n\nSynchronous DRAM (SDRAM)\nDRAM that operates in time with the memory bus.Tied to the system clock like the CPU and the memory controller.Results in very little wasted time.\n\n\n\n\nDouble Data Rate SDRAM (DDR)\nDDR transfers data twice as fast as SDRAM.\u000bLarger buffer gives it a huge boost.\n\n\nDouble Data Rate 2 SDRAM (DDR2)\nDDR2 decreases noise making it faster than DDR.\n\n\nDouble Data Rate 3 SDRAM (DDR3)\nDDR3 doubles the clock rate of DDR2, consumes less power and generates less heat.\n\n\nDouble Data Rate 4 SDRAM (DDR4)\nDDR4 arrived in 2014 with even faster speeds. (most common RAM type in desktops/laptops today)\n\n\nDouble Data Rate 5 SDRAM (DDR5)\nIntroduced in 2020, is starting to become more widely adopted.\n\n\n\nNOTE: Motherboards are usually compatible with only ONE generation of RAM. If you have a motherboard designed for DDR3, it cannot use DDR4 or DDR5.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#graphics-cards-gpu",
+    "href": "topics/hardware/internal-components.html#graphics-cards-gpu",
+    "title": "Internal Components",
+    "section": "Graphics Cards (GPU)",
+    "text": "Graphics Cards (GPU)\nAlso known as Video cards or Graphical Processing Units\nOne of the most interesting use of expansion slots is the addition of video cards, also known as Graphical Processing Unit.\nA specialized version of a CPU designed for graphical processing (producing complex output to display on a monitor)\nThe computation needed for graphical processing is generally useful for scientific computing as well (lots of data in parallel)\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\nCPU vs GPU\n\nBoth consume a lot of power and generate a lot of heat\nMore powerful CPUs/GPUs require more powerful power supplies\n\nTDP: __ Thermal Design Power, measures the number of Watts needed to power the device__\n\nBoth have performance measured in  speed __ (operations/second) like RAM__\n\nGPU cannot replace the CPU because their architecture is different and meant for different purposes. GPU is great to parallelize computations! But the GPU is not as versatile as the CPU which has a larger instruction set\n\n\n\n\n\n\n\nFigure caption.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#storage-devices",
+    "href": "topics/hardware/internal-components.html#storage-devices",
+    "title": "Internal Components",
+    "section": "Storage Devices",
+    "text": "Storage Devices\nStorage devices store data permanently. Some are installed inside the case (e.g. hard drive); Some are removable and portable (e.g. external flash drive).\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFloppy Drive\nUses 3.5 inch floppy disks (or 5.25 inch floppy disks - older).\nLargely obsolete.\nMagnetic disks store up to 1.44Meg of data.\n\n\n\nFigure caption.\n\n\n\n\n\nFigure caption.\n\n\n\n\n\nHard Drive\n\nHard Disk Drive (HDD)\n\nTraditional hard drives.\nUses magnetic-based storage on a moving disk (somewhat like a vinyl player)\nMagnetic hard drives have drive motors that spin the magnetic platters and move the drive heads.\nSpeed measured in revolutions per minute\n\n\n\n\n\nSolid State Drives (SSD)\n\nDo not have moving parts and use __ semi-conductors__ to store data.\nNon-volatile flash memory chips manage the storage on an SSD, resulting in faster access to data, higher reliability and reduced power usage.\n\n\n\n\n\n\nTape Drive\nMagnetic tapes are often used for backups or archiving data. Impractical for most individuals, but still used/created to this day! Cost effective when storing more than 1000 TB (lots and lots of data)\n\n\n\n\n\n\nOptical Drive\n\nUses lasers to read the data on the optical media.\n\nCD (compact disc) 700 Mb\nDVD (digital versatile disc) 4-8 Gb.\nBD (Blu-ray disc) 25-50 Gb.\n\nOptical media can be:\n\nPre-recorded (read only)\nRecordable (write once)\nRe-recordable (read and write multiple times).\n\n\n\n\n\n\nInterfaces Types\nInterface Types, in order of oldest to newest\n\n\n\n\n\n\n\nIDE  \nIntegrated Drive Electronics / Advanced Technology Attachment.Also called ATA.Early drive controller interface, originally only supported hard drives up to 540 MB.Uses a 40 pin connector, and maximum cable length of 46cm (18in).\n\n\n\n\nEIDE\nEnhanced Integrated Drive Electronics (also called ATA-2).Updated version of IDE, supporting larger drives and direct memory access.Uses a 40 pin connector.\n\n\nPATA\nParallel version of ATA.Used internally due to maximum cable length of 46cm (18in).Largely replaced by SATA in newer systems.\n\n\nSATA (most commonly used today)\nSerial version of ATA, with slimmer and longer cables providing better airflow.Uses 7-pin connector \u000b(less pins means less issues with electromagnetic interference).SATA hard drives tend to be quieter than IDE drives.\n\n\neSATA\nExternal serial ATA, provides a hot-swappable external interface for SATA.\n\n\n:-:\n:-:\n\n\nSCSI\nSmall Computer System Interface.Drive controller that can connect up to 15 drives.Internal and external use, uses 25, 50 or 68 pin connector.\n\n\n\nNote: __ Hot-swapping is the ability to connect and disconnect a device while the computer is on.__\n\n\nExternal Flash Drive\nRemovable storage device that connects to a USB port.\nThese use the same type of non-volatile memory chips as SSDs and do not require power to maintain the data.\n\n\nTo install a drive internally in a computer, the connection interface on the drive must be the same as the controller on the motherboard.\nMotherboards support different types of interfaces.\n\n\nComputer Memory Hierarchy\nSource: https://en.wikipedia.org/wiki/Memory_hierarchy",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#exercises",
+    "href": "topics/hardware/internal-components.html#exercises",
+    "title": "Internal Components",
+    "section": "Exercises",
+    "text": "Exercises",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#knowledge-check",
+    "href": "topics/hardware/internal-components.html#knowledge-check",
+    "title": "Internal Components",
+    "section": "Knowledge check",
+    "text": "Knowledge check",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.html#additional-resources",
+    "href": "topics/hardware/internal-components.html#additional-resources",
+    "title": "Internal Components",
+    "section": "Additional resources",
+    "text": "Additional resources",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Internal Components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#introduction",
+    "href": "topics/hardware/internal-components.htm#introduction",
+    "title": "Internal Components",
+    "section": "Introduction",
+    "text": "Introduction\nIn previous weeks we learned the basic behaviors that define computers – their ability to store, retrieve, and process information. This means that many simple devices, even non-electronics, can be considered computers.\nThe computers that we mostly are concerned with in the computer science profession, however, are generally complicated electronic devices made of many components. In this class, we are going to learn many of the fundamental components that make up modern computing devices.\nWe will continue with the internal, or system, components of a computer – each of these have their own set of interesting behaviors and properties that are worth understanding."
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#lesson-overview",
+    "href": "topics/hardware/internal-components.htm#lesson-overview",
+    "title": "Internal Components",
+    "section": "Lesson overview",
+    "text": "Lesson overview\nThe system components of a computer are responsible for the following behaviors:\n\nMain needs:\n\nstore information\nprocess information\nretrieve  information\n\nAuxiliary needs:\n\nprotection from elements/interference\nsource of electrical power\ntemperature management for heat generated\nstructure\ncommunication between components\ntiers of storage/processing specialized for different purposes\n\n\nHere are system components that fulfil these needs:\n\nCase\nPower Supply\nMotherboard\n\nChipset\nBuses\n\nConnectors\nCooling Devices\nProcessor (CPU)\nGraphics processor (GPU)\nMemory (RAM)\nStorage Devices (CD, HDD, SSD, NVME/M2)\n\nWe will learn about all of these components this week!"
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#definitions",
+    "href": "topics/hardware/internal-components.htm#definitions",
+    "title": "Internal Components",
+    "section": "Definitions",
+    "text": "Definitions\nWhen discussing components of any complicated machine, we should try to understand the following about those components:\nMake/model\nMake/model is the brand and product name of the component. * E.g. Hyundai Accent (make = Hyundai, model = Accent)\nWhy it’s important: Who constructs these components? Are their multiple different versions of this component made by the same manufacturer? Why?\nProperties\nProperties are the quantitative (numeric) and qualitative  (non-numeric) traits of the component that can be compared with alike components * Quantitative e.g.: the Fuel Efficiency of the 2009 Hyundai Accent is 29 MPG  (miles per gallon) * Qualitative e.g: The Hyundai Accent is a hatchback, not a sedan\nWhy it’s important: * what is the expected performance of this component? * Is their a cost/benefit for choosing a component with better suited properties than other components? * Etc.\nThese two ideas (make/model, properties) will vary significantly from component to component. You will need to know these ideas for all of the components we discuss today."
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#case",
+    "href": "topics/hardware/internal-components.htm#case",
+    "title": "Internal Components",
+    "section": "Case",
+    "text": "Case\n\nFigure caption.\nProvides protection and cooling for the internal components.\nAlso prevents damage from static electricity (components grounded via attachment to case).\nUsually made of plastic, steel or aluminum.\nFans move air through the case:\n\nto replace warm air with cold air to keep components at stable temperatures\nto prevent build-up of dust\nThere exist many guides/studies for optimal airflow. E.g. https://voltcave.com/pc-airflow-guide/"
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#power-supply-psu",
+    "href": "topics/hardware/internal-components.htm#power-supply-psu",
+    "title": "Internal Components",
+    "section": "Power Supply (PSU)",
+    "text": "Power Supply (PSU)\nMain purpose:  Converts AC power (alternating current) from wall socket to DC power (direct current). Direct current (0 or 5V) is used to power digital circuits.\n\nNote: PSU have their own fans: Energy conversion releases a lot of heat!\nComputers can only tolerate slight fluctuations in power without needing to shut down\nImportant: Never open a power supply! The capacitors contained within can keep a dangerous high voltage, high power charge long after being unplugged.\n\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\nFigure caption.\n\n\nPSU Connectors\n\nMost power supply connectors are : 20 + 4 pins\nUsually made up of wires of various colors:\n\nYellow 12V\nRed 5V\nOrange 3.3V\nOther colors may be ground 0V\n\n\n\n\n\nFigure caption.\n\n\nPSU Ratings\nUseful for Assignment 1\nPSU Ratings: * Wattage (amount of power delivered, must be greater than the sum of power required by all parts, some power supplies can provide more power than others) * Efficiency (1st + 2nd Laws of thermodynamics: 100% power input cannot be converted to 100% power output; some power supplies have higher efficiency ratings than others) * For more detailed explanation:  https://www.newegg.com/insider/how-to-choose-a-pc-power-supply-buying-guide/\nUninterruptible Power Supply\nIn the case of a power outage, an Uninterruptible Power Supply (UPS) can keep a computer running for a few minutes to several hours depending on the sophistication of the UPS. See  https://www.wikihow.com/Buy-and-Use-an-Uninterruptible-Power-Supply  for an example.\nIt’s basically a large battery that keeps charge during normal operation, and powers a computer using its stored charge when the building’s power is cut off.\nWe will talk more about uninterruptible power supply when we start speaking about server hardware."
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#motherboard",
+    "href": "topics/hardware/internal-components.htm#motherboard",
+    "title": "Internal Components",
+    "section": "Motherboard",
+    "text": "Motherboard\nMotherboards connect all the major components of the computer: the CPU, RAM, Expansion ports, etc.\n\n\n\nAn ASUS Pro B660M Motherboard. Most motherboards look something like this.\n\n\n\nComposed of various chips all combined into north  and south  bridges\nMain circuit board and controls the electrical pathways (buses) found in a computer.\nThe buses allow data to travel between the various components of a computer.\nVarious form factors, e.g. AT, ATX, LPX, BTX, ITX.\n\n\n\n\nMotherboard form factors, from largest to smallest.\n\n\nForm Factors\n\nAT\n\nInvented by IBM in early 1980s, now obsolete.\nHuge in size (approximately 12 x 13 inches).\nNeeded lots of space for power supply and its various chips.\nLacked external ports, only allowed for monitor and keyboard.\n\nATX\n\nCreated in 1995 to meet the need for more connectors.\nGot off to a slow start but by 1998 became the most common form factor.\nBiggest change to AT was the rear panel with standard set of ports for expansion.\nPower supply position for better airflow, CPU and RAM positioned for easier access.\nVariations 12x9in (full size), 9.6x9.6in ( microATX )\n\nATX and microATX are the most common in personal desktop computers today"
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#internal-connectors",
+    "href": "topics/hardware/internal-components.htm#internal-connectors",
+    "title": "Internal Components",
+    "section": "Internal Connectors",
+    "text": "Internal Connectors\nThere are a variety of connectors used to connect components to the motherboard. Two main purposes:\n\nSignals : for communication/data transfer\nPower : not all components connect directly to the power supply, they get power from the motherboard\n\nMost connectors are keyed (can only be inserted one way). Note: Always check the pins if you have trouble with a connector.\n\n“If it doesn’t go in like butter, it doesn’t go in at all” – never force a connection! you are likely going to damage the pins.\n\nExample connectors\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption."
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#cpu",
+    "href": "topics/hardware/internal-components.htm#cpu",
+    "title": "Internal Components",
+    "section": "CPU",
+    "text": "CPU\nThe CPU Most important element of the computer.\n\nResponsible for interpreting  and executing  the commands from the software.\ncommunicates instructions for all of the other components of the computer\nWhile the CPU is processing one step of the program, the remaining instructions and the data are stored in a special memory called cache.\n\n\n\n\nFigure caption.\n\n\nWe’ll have a lecture dedicated to the CPU since it is so complicated.\nCPU Brands\nIntel: Historically the main CPU manufacturer\nAMD: Relatively recent competitor to Intel\n\n\n\nFigure caption."
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#cooling-devices",
+    "href": "topics/hardware/internal-components.htm#cooling-devices",
+    "title": "Internal Components",
+    "section": "Cooling Devices",
+    "text": "Cooling Devices\nThe flow of current between and within electronic components generates heat. Some devices are particularly powerful heat-generators, due to the large current they draw: * CPUs typically come with their own cooling device * Cooling devices are built into GPUs and Power Supplies\nThere are two main types of cooling devices:\n\nFans inside the case increase airflow and removes heat.\nHeat sinks also draw heat away from the CPU core.\n\nFans\nThe flow of current between the electronic components generates heat.\nFans inside the case increase airflow and removes heat.\nOccasionally video cards or other components have their own fans to cool them.\n\n\n\nFigure caption.\n\n\nHeat sinks\n\nHeat sinks also draw heat away from the CPU core.\n\nA heat sink is a piece of copper or aluminum that resides between the processor and the CPU fan.\nIt absorbs the heat from the processor and the fan disperses the heat.\n\n\n\n\n\nFigure caption."
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#main-memory-ram",
+    "href": "topics/hardware/internal-components.htm#main-memory-ram",
+    "title": "Internal Components",
+    "section": "Main Memory (RAM)",
+    "text": "Main Memory (RAM)\nReferred to as RAM (Random Access Memory). They’re connected to RAM slots on the motherboard:\n\n\n\nFigure caption.\n\n\nRAM is a collection of integrated circuits (chips). Temporary storage for data and programs that are being accessed by the CPU.\nVolatile memory : contents are erased when the computer is switched off. (or when power is lost)\n\n\n\nFigure caption.\n\n\nProperties\nThere are four main properties of RAM to know:\n\nCapacity:  Total memory (in GB, GigaBytes)\n\nMore RAM means more capacity to hold and process large programs and files.\nMaximum installed is limited by the motherboard and the operating system.\n\nSpeed:  How many operations per second\n\nMany, millions or billions per second\n1MHz = 1 million / second, 1 GHz = 1 billion / second\n\nLatency : How much time delay between communications\nGeneration: See next slides\n\nRAM Form Factors\n\nSIMMs (Single In-Line Memory Modules)\n\nHave a single line of connectors.\nNow obsolete.\n\nDIMMs (Dual In-Line Memory Modules)\n\nHave two lines of connectors.\nHave Wider bus (supports 64 bits) 🡪 How can this help? More on this in the coming weeks.\nBecame dominant (no need to state that a memory module is a DIMM).\n\n\nRAM Generations\n\n\n\n\n\n\n\nSynchronous DRAM (SDRAM)\nDRAM that operates in time with the memory bus.Tied to the system clock like the CPU and the memory controller.Results in very little wasted time.\n\n\n\n\nDouble Data Rate SDRAM (DDR)\nDDR transfers data twice as fast as SDRAM.\u000bLarger buffer gives it a huge boost.\n\n\nDouble Data Rate 2 SDRAM (DDR2)\nDDR2 decreases noise making it faster than DDR.\n\n\nDouble Data Rate 3 SDRAM (DDR3)\nDDR3 doubles the clock rate of DDR2, consumes less power and generates less heat.\n\n\nDouble Data Rate 4 SDRAM (DDR4)\nDDR4 arrived in 2014 with even faster speeds. (most common RAM type in desktops/laptops today)\n\n\nDouble Data Rate 5 SDRAM (DDR5)\nIntroduced in 2020, is starting to become more widely adopted.\n\n\n\nNOTE: Motherboards are usually compatible with only ONE generation of RAM. If you have a motherboard designed for DDR3, it cannot use DDR4 or DDR5."
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#graphics-cards-gpu",
+    "href": "topics/hardware/internal-components.htm#graphics-cards-gpu",
+    "title": "Internal Components",
+    "section": "Graphics Cards (GPU)",
+    "text": "Graphics Cards (GPU)\nAlso known as Video cards or Graphical Processing Units\nOne of the most interesting use of expansion slots is the addition of video cards, also known as Graphical Processing Unit.\nA specialized version of a CPU designed for graphical processing (producing complex output to display on a monitor)\nThe computation needed for graphical processing is generally useful for scientific computing as well (lots of data in parallel)\n\n\n\nFigure caption.\n\n\n\n\n\nFigure caption.\n\n\n\n\n\nFigure caption.\n\n\nCPU vs GPU\n\nBoth consume a lot of power and generate a lot of heat\nMore powerful CPUs/GPUs require more powerful power supplies\n\nTDP: __ Thermal Design Power, measures the number of Watts needed to power the device__\n\nBoth have performance measured in  speed __ (operations/second) like RAM__\n\nGPU cannot replace the CPU because their architecture is different and meant for different purposes. GPU is great to parallelize computations! But the GPU is not as versatile as the CPU which has a larger instruction set\n\n\n\nFigure caption."
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#storage-devices",
+    "href": "topics/hardware/internal-components.htm#storage-devices",
+    "title": "Internal Components",
+    "section": "Storage Devices",
+    "text": "Storage Devices\nStorage devices store data permanently. Some are installed inside the case (e.g. hard drive); Some are removable and portable (e.g. external flash drive).\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption."
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#exercises",
+    "href": "topics/hardware/internal-components.htm#exercises",
+    "title": "Internal Components",
+    "section": "Exercises",
+    "text": "Exercises"
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#knowledge-check",
+    "href": "topics/hardware/internal-components.htm#knowledge-check",
+    "title": "Internal Components",
+    "section": "Knowledge check",
+    "text": "Knowledge check"
+  },
+  {
+    "objectID": "topics/hardware/internal-components.htm#additional-resources",
+    "href": "topics/hardware/internal-components.htm#additional-resources",
+    "title": "Internal Components",
+    "section": "Additional resources",
+    "text": "Additional resources"
   },
   {
     "objectID": "topics/hardware/external-components.html",
@@ -221,7 +527,7 @@
     "href": "topics/hardware/index.html",
     "title": "Hardware",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n\n\n\n\n2024-08-27\n\n\n\n\n\n\n\n\n\n\n\n\nExternal components\n\n\nOverview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors\n\n\n\n\n\n\n\n\n2024-09-03\n\n\n\n\n\n\n\n\n\n\n\n\nInternal Components\n\n\nExplains the most important internal components of desktop computers. Processing, memory, storage, and communication.\n\n\n\n\n\n\n\n\n2024-09-10\n\n\n\n\n\n\n\n\n\n\n\n\nUnderstanding CPUs\n\n\nAn in-depth explanation of command processing and executing at the CPU level\n\n\n\n\n\n\n\n\n2024-09-16\n\n\n\n\n\n\nNo matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n\n\n\n\n2024-08-27\n\n\n\n\n\n\n\n\n\n\n\n\nExternal components\n\n\nOverview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors\n\n\n\n\n\n\n\n\n2024-09-03\n\n\n\n\n\n\n\n\n\n\n\n\nInternal Components\n\n\nExplains the most important internal components of desktop computers. Processing, memory, storage, and communication.\n\n\n\n\n\n\n\n\n2024-09-10\n\n\n\n\n\n\n\n\n\n\n\n\nUnderstanding CPUs\n\n\nMore detail on CPUs. “Guy in Box” analogy, Clock Speed, Codebook, Databuses explained.\n\n\n\n\n\n\n\n\n2024-09-16\n\n\n\n\n\n\nNo matching items\n\n Back to topReuseCC BY-NC-SA 4.0",
     "crumbs": [
       "Home",
       "Topics",
@@ -671,316 +977,176 @@
     ]
   },
   {
-    "objectID": "topics/hardware/internal-components.htm#introduction",
-    "href": "topics/hardware/internal-components.htm#introduction",
-    "title": "Internal Components",
+    "objectID": "topics/hardware/understanding-cpus.htm#introduction",
+    "href": "topics/hardware/understanding-cpus.htm#introduction",
+    "title": "Understanding CPUs",
     "section": "Introduction",
-    "text": "Introduction\nIn previous weeks we learned the basic behaviors that define computers – their ability to store, retrieve, and process information. This means that many simple devices, even non-electronics, can be considered computers.\nThe computers that we mostly are concerned with in the computer science profession, however, are generally complicated electronic devices made of many components. In this class, we are going to learn many of the fundamental components that make up modern computing devices.\nWe will continue with the internal, or system, components of a computer – each of these have their own set of interesting behaviors and properties that are worth understanding."
+    "text": "Introduction\nLast week one component we learned was the CPU  (Central Processing Unit): A complex collection of electronic circuits on one or more integrated circuits (chips).\nWe learned that the CPU is responsible for:\n\nExecuting the instructions in a software program.\nCommunicating with other parts of the computer system\n\nToday we’re going to take a deep dive into how the CPU carries out those responsibilities."
   },
   {
-    "objectID": "topics/hardware/internal-components.htm#lesson-overview",
-    "href": "topics/hardware/internal-components.htm#lesson-overview",
-    "title": "Internal Components",
-    "section": "Lesson overview",
-    "text": "Lesson overview\nThe system components of a computer are responsible for the following behaviors:\n\nMain needs:\n\nstore information\nprocess information\nretrieve  information\n\nAuxiliary needs:\n\nprotection from elements/interference\nsource of electrical power\ntemperature management for heat generated\nstructure\ncommunication between components\ntiers of storage/processing specialized for different purposes\n\n\nHere are system components that fulfil these needs:\n\nCase\nPower Supply\nMotherboard\n\nChipset\nBuses\n\nConnectors\nCooling Devices\nProcessor (CPU)\nGraphics processor (GPU)\nMemory (RAM)\nStorage Devices (CD, HDD, SSD, NVME/M2)\n\nWe will learn about all of these components this week!"
+    "objectID": "topics/hardware/understanding-cpus.htm#lesson-overview",
+    "href": "topics/hardware/understanding-cpus.htm#lesson-overview",
+    "title": "Understanding CPUs",
+    "section": "Lesson Overview",
+    "text": "Lesson Overview\nMore detail on CPUs. “Guy in Box” analogy, Clock Speed, Codebook, data buses explained."
   },
   {
-    "objectID": "topics/hardware/internal-components.htm#definitions",
-    "href": "topics/hardware/internal-components.htm#definitions",
-    "title": "Internal Components",
-    "section": "Definitions",
-    "text": "Definitions\nWhen discussing components of any complicated machine, we should try to understand the following about those components:\nMake/model\nMake/model is the brand and product name of the component. * E.g. Hyundai Accent (make = Hyundai, model = Accent)\nWhy it’s important: Who constructs these components? Are their multiple different versions of this component made by the same manufacturer? Why?\nProperties\nProperties are the quantitative (numeric) and qualitative  (non-numeric) traits of the component that can be compared with alike components * Quantitative e.g.: the Fuel Efficiency of the 2009 Hyundai Accent is 29 MPG  (miles per gallon) * Qualitative e.g: The Hyundai Accent is a hatchback, not a sedan\nWhy it’s important: * what is the expected performance of this component? * Is their a cost/benefit for choosing a component with better suited properties than other components? * Etc.\nThese two ideas (make/model, properties) will vary significantly from component to component. You will need to know these ideas for all of the components we discuss today."
+    "objectID": "topics/hardware/understanding-cpus.htm#cpu-analogy-guy-in-a-box",
+    "href": "topics/hardware/understanding-cpus.htm#cpu-analogy-guy-in-a-box",
+    "title": "Understanding CPUs",
+    "section": "CPU Analogy: Guy in a Box",
+    "text": "CPU Analogy: Guy in a Box\nLet’s start with an analogy: CPUs are a “Guy-in-a-box”. This guy:\n\ncan perform any mathematical function quickly.\nlives in a closed-up box so direct communication is impossible.\n\nLet’s say have 16 light bulbs: 8 for the guy, and 8 for us.\n\nA sample caption. Image source: unknown."
   },
   {
-    "objectID": "topics/hardware/internal-components.htm#case",
-    "href": "topics/hardware/internal-components.htm#case",
-    "title": "Internal Components",
-    "section": "Case",
-    "text": "Case\n\nFigure caption.\nProvides protection and cooling for the internal components.\nAlso prevents damage from static electricity (components grounded via attachment to case).\nUsually made of plastic, steel or aluminum.\nFans move air through the case:\n\nto replace warm air with cold air to keep components at stable temperatures\nto prevent build-up of dust\nThere exist many guides/studies for optimal airflow. E.g. https://voltcave.com/pc-airflow-guide/"
+    "objectID": "topics/hardware/understanding-cpus.htm#pipelining",
+    "href": "topics/hardware/understanding-cpus.htm#pipelining",
+    "title": "Understanding CPUs",
+    "section": "Pipelining",
+    "text": "Pipelining\n\nAlmost all CPU instructions feature a set of 4 stages:\n\nFetch : retrieve the instruction, address, and data, write them to registers\nDecode : search for instruction code in codebook, verify it is a real instruction, and that data/address are valid\nExecute : perform the instruction, update registers with results\nWrite:  write to databus to share results\n\nRather than have each instruction repeat all of these steps, we can organize CPUs further by specializing our “guy in a box” for each stage\nThis is called pipelining , and it allows for greater efficiency in CPU programming\n\n\nA sample caption. Image source: unknown."
   },
   {
-    "objectID": "topics/hardware/internal-components.htm#power-supply-psu",
-    "href": "topics/hardware/internal-components.htm#power-supply-psu",
-    "title": "Internal Components",
-    "section": "Power Supply (PSU)",
-    "text": "Power Supply (PSU)\nMain purpose:  Converts AC power (alternating current) from wall socket to DC power (direct current). Direct current (0 or 5V) is used to power digital circuits.\n\nNote: PSU have their own fans: Energy conversion releases a lot of heat!\nComputers can only tolerate slight fluctuations in power without needing to shut down\nImportant: Never open a power supply! The capacitors contained within can keep a dangerous high voltage, high power charge long after being unplugged.\n\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\nFigure caption.\n\n\nPSU Connectors\n\nMost power supply connectors are : 20 + 4 pins\nUsually made up of wires of various colors:\n\nYellow 12V\nRed 5V\nOrange 3.3V\nOther colors may be ground 0V\n\n\n\n\n\nFigure caption.\n\n\nPSU Ratings\nUseful for Assignment 1\nPSU Ratings: * Wattage (amount of power delivered, must be greater than the sum of power required by all parts, some power supplies can provide more power than others) * Efficiency (1st + 2nd Laws of thermodynamics: 100% power input cannot be converted to 100% power output; some power supplies have higher efficiency ratings than others) * For more detailed explanation:  https://www.newegg.com/insider/how-to-choose-a-pc-power-supply-buying-guide/\nUninterruptible Power Supply\nIn the case of a power outage, an Uninterruptible Power Supply (UPS) can keep a computer running for a few minutes to several hours depending on the sophistication of the UPS. See  https://www.wikihow.com/Buy-and-Use-an-Uninterruptible-Power-Supply  for an example.\nIt’s basically a large battery that keeps charge during normal operation, and powers a computer using its stored charge when the building’s power is cut off.\nWe will talk more about uninterruptible power supply when we start speaking about server hardware."
+    "objectID": "topics/hardware/understanding-cpus.htm#cpu-properties",
+    "href": "topics/hardware/understanding-cpus.htm#cpu-properties",
+    "title": "Understanding CPUs",
+    "section": "CPU Properties",
+    "text": "CPU Properties\nThe most important properties that define CPU behavior are speed and bus width: that is, how fast the clock cycle repeats, and how much data per clock cycle the CPU can process.\nClock Speed\nWe measure CPU speed : in cycles per second, e.g. megahertz (MHz) or gigahertz (GHz).\n\nUnit of Measurement:  Hertz, usually written as Hz, denote frequency. 1Hz is “one time per second”, 10Hz is “ten times per second”.\n\nWe can use SI Prefixes  (International System of Unit Prefixes) to compare magnitudes easily.\nYou will see many of these in computer science over and over again – get to know them well!\n\nSI Prefixes for Frequencies\n\n\n\n\n\n\n\n\nUnit\nMeaning\nDefinition\nExamples\n\n\n\n\nHz\nOnce per second\n1/s, or 1Hz\n1-2Hz: human heart-rate at rest (1Hz = 60 beats per minute, 2Hz = 120 bpm)24Hz: framerate of historic cinema20-60Hz: frequency range for bass notes (C0 = 16.35Hz to C2 = 65.4Hz)60-144Hz: framerate of most monitors\n\n\nkHz\nThousand times per second\n1000 Hz\n0.1-2kHz: frequency range for midrange notes (A2=0.110kHz, C7=2kHz)20kHz: maximum frequency audible to human ear740 kHz: Intel 4004 processor clock speed (1971)\n\n\nMHz\nMillion times per second\n1000000 Hz\n8MHz: fastest CPU clock speed in the 70s35MHz: fastest CPU clock speed in the 80s500-1000MHz: fastest CPU clock speed in the 90s)\n\n\nGHz\nBillion times per second\n1000000000 Hz\n2-5GHz: Almost all consumer CPUs in 2024 have base clock speeds in this range9.117 GHz: fastest CPU clock speed ever recorded (2024)\n\n\n\nBus width\nThe amount of data processed at a time depends on the “number of lightbulbs” or the width of the data bus\nBus width  is measured in bits, e.g. 8-bits, 16-bit, 32-bit, 64-bit, etc.\nQuestion: how many bits do you need in bus width to represent the Guy in the Box and their codebook from the previous problems?"
   },
   {
-    "objectID": "topics/hardware/internal-components.htm#motherboard",
-    "href": "topics/hardware/internal-components.htm#motherboard",
-    "title": "Internal Components",
-    "section": "Motherboard",
-    "text": "Motherboard\nMotherboards connect all the major components of the computer: the CPU, RAM, Expansion ports, etc.\n\n\n\nAn ASUS Pro B660M Motherboard. Most motherboards look something like this.\n\n\n\nComposed of various chips all combined into north  and south  bridges\nMain circuit board and controls the electrical pathways (buses) found in a computer.\nThe buses allow data to travel between the various components of a computer.\nVarious form factors, e.g. AT, ATX, LPX, BTX, ITX.\n\n\n\n\nMotherboard form factors, from largest to smallest.\n\n\nForm Factors\n\nAT\n\nInvented by IBM in early 1980s, now obsolete.\nHuge in size (approximately 12 x 13 inches).\nNeeded lots of space for power supply and its various chips.\nLacked external ports, only allowed for monitor and keyboard.\n\nATX\n\nCreated in 1995 to meet the need for more connectors.\nGot off to a slow start but by 1998 became the most common form factor.\nBiggest change to AT was the rear panel with standard set of ports for expansion.\nPower supply position for better airflow, CPU and RAM positioned for easier access.\nVariations 12x9in (full size), 9.6x9.6in ( microATX )\n\nATX and microATX are the most common in personal desktop computers today"
-  },
-  {
-    "objectID": "topics/hardware/internal-components.htm#internal-connectors",
-    "href": "topics/hardware/internal-components.htm#internal-connectors",
-    "title": "Internal Components",
-    "section": "Internal Connectors",
-    "text": "Internal Connectors\nThere are a variety of connectors used to connect components to the motherboard. Two main purposes:\n\nSignals : for communication/data transfer\nPower : not all components connect directly to the power supply, they get power from the motherboard\n\nMost connectors are keyed (can only be inserted one way). Note: Always check the pins if you have trouble with a connector.\n\n“If it doesn’t go in like butter, it doesn’t go in at all” – never force a connection! you are likely going to damage the pins.\n\nExample connectors\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption."
-  },
-  {
-    "objectID": "topics/hardware/internal-components.htm#cpu",
-    "href": "topics/hardware/internal-components.htm#cpu",
-    "title": "Internal Components",
-    "section": "CPU",
-    "text": "CPU\nThe CPU Most important element of the computer.\n\nResponsible for interpreting  and executing  the commands from the software.\ncommunicates instructions for all of the other components of the computer\nWhile the CPU is processing one step of the program, the remaining instructions and the data are stored in a special memory called cache.\n\n\n\n\nFigure caption.\n\n\nWe’ll have a lecture dedicated to the CPU since it is so complicated.\nCPU Brands\nIntel: Historically the main CPU manufacturer\nAMD: Relatively recent competitor to Intel\n\n\n\nFigure caption."
-  },
-  {
-    "objectID": "topics/hardware/internal-components.htm#cooling-devices",
-    "href": "topics/hardware/internal-components.htm#cooling-devices",
-    "title": "Internal Components",
-    "section": "Cooling Devices",
-    "text": "Cooling Devices\nThe flow of current between and within electronic components generates heat. Some devices are particularly powerful heat-generators, due to the large current they draw: * CPUs typically come with their own cooling device * Cooling devices are built into GPUs and Power Supplies\nThere are two main types of cooling devices:\n\nFans inside the case increase airflow and removes heat.\nHeat sinks also draw heat away from the CPU core.\n\nFans\nThe flow of current between the electronic components generates heat.\nFans inside the case increase airflow and removes heat.\nOccasionally video cards or other components have their own fans to cool them.\n\n\n\nFigure caption.\n\n\nHeat sinks\n\nHeat sinks also draw heat away from the CPU core.\n\nA heat sink is a piece of copper or aluminum that resides between the processor and the CPU fan.\nIt absorbs the heat from the processor and the fan disperses the heat.\n\n\n\n\n\nFigure caption."
-  },
-  {
-    "objectID": "topics/hardware/internal-components.htm#main-memory-ram",
-    "href": "topics/hardware/internal-components.htm#main-memory-ram",
-    "title": "Internal Components",
-    "section": "Main Memory (RAM)",
-    "text": "Main Memory (RAM)\nReferred to as RAM (Random Access Memory). They’re connected to RAM slots on the motherboard:\n\n\n\nFigure caption.\n\n\nRAM is a collection of integrated circuits (chips). Temporary storage for data and programs that are being accessed by the CPU.\nVolatile memory : contents are erased when the computer is switched off. (or when power is lost)\n\n\n\nFigure caption.\n\n\nProperties\nThere are four main properties of RAM to know:\n\nCapacity:  Total memory (in GB, GigaBytes)\n\nMore RAM means more capacity to hold and process large programs and files.\nMaximum installed is limited by the motherboard and the operating system.\n\nSpeed:  How many operations per second\n\nMany, millions or billions per second\n1MHz = 1 million / second, 1 GHz = 1 billion / second\n\nLatency : How much time delay between communications\nGeneration: See next slides\n\nRAM Form Factors\n\nSIMMs (Single In-Line Memory Modules)\n\nHave a single line of connectors.\nNow obsolete.\n\nDIMMs (Dual In-Line Memory Modules)\n\nHave two lines of connectors.\nHave Wider bus (supports 64 bits) 🡪 How can this help? More on this in the coming weeks.\nBecame dominant (no need to state that a memory module is a DIMM).\n\n\nRAM Generations\n\n\n\n\n\n\n\nSynchronous DRAM (SDRAM)\nDRAM that operates in time with the memory bus.Tied to the system clock like the CPU and the memory controller.Results in very little wasted time.\n\n\n\n\nDouble Data Rate SDRAM (DDR)\nDDR transfers data twice as fast as SDRAM.\u000bLarger buffer gives it a huge boost.\n\n\nDouble Data Rate 2 SDRAM (DDR2)\nDDR2 decreases noise making it faster than DDR.\n\n\nDouble Data Rate 3 SDRAM (DDR3)\nDDR3 doubles the clock rate of DDR2, consumes less power and generates less heat.\n\n\nDouble Data Rate 4 SDRAM (DDR4)\nDDR4 arrived in 2014 with even faster speeds. (most common RAM type in desktops/laptops today)\n\n\nDouble Data Rate 5 SDRAM (DDR5)\nIntroduced in 2020, is starting to become more widely adopted.\n\n\n\nNOTE: Motherboards are usually compatible with only ONE generation of RAM. If you have a motherboard designed for DDR3, it cannot use DDR4 or DDR5."
-  },
-  {
-    "objectID": "topics/hardware/internal-components.htm#graphics-cards-gpu",
-    "href": "topics/hardware/internal-components.htm#graphics-cards-gpu",
-    "title": "Internal Components",
-    "section": "Graphics Cards (GPU)",
-    "text": "Graphics Cards (GPU)\nAlso known as Video cards or Graphical Processing Units\nOne of the most interesting use of expansion slots is the addition of video cards, also known as Graphical Processing Unit.\nA specialized version of a CPU designed for graphical processing (producing complex output to display on a monitor)\nThe computation needed for graphical processing is generally useful for scientific computing as well (lots of data in parallel)\n\n\n\nFigure caption.\n\n\n\n\n\nFigure caption.\n\n\n\n\n\nFigure caption.\n\n\nCPU vs GPU\n\nBoth consume a lot of power and generate a lot of heat\nMore powerful CPUs/GPUs require more powerful power supplies\n\nTDP: __ Thermal Design Power, measures the number of Watts needed to power the device__\n\nBoth have performance measured in  speed __ (operations/second) like RAM__\n\nGPU cannot replace the CPU because their architecture is different and meant for different purposes. GPU is great to parallelize computations! But the GPU is not as versatile as the CPU which has a larger instruction set\n\n\n\nFigure caption."
-  },
-  {
-    "objectID": "topics/hardware/internal-components.htm#storage-devices",
-    "href": "topics/hardware/internal-components.htm#storage-devices",
-    "title": "Internal Components",
-    "section": "Storage Devices",
-    "text": "Storage Devices\nStorage devices store data permanently. Some are installed inside the case (e.g. hard drive); Some are removable and portable (e.g. external flash drive).\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption."
-  },
-  {
-    "objectID": "topics/hardware/internal-components.htm#exercises",
-    "href": "topics/hardware/internal-components.htm#exercises",
-    "title": "Internal Components",
+    "objectID": "topics/hardware/understanding-cpus.htm#exercises",
+    "href": "topics/hardware/understanding-cpus.htm#exercises",
+    "title": "Understanding CPUs",
     "section": "Exercises",
     "text": "Exercises"
   },
   {
-    "objectID": "topics/hardware/internal-components.htm#knowledge-check",
-    "href": "topics/hardware/internal-components.htm#knowledge-check",
-    "title": "Internal Components",
+    "objectID": "topics/hardware/understanding-cpus.htm#knowledge-check",
+    "href": "topics/hardware/understanding-cpus.htm#knowledge-check",
+    "title": "Understanding CPUs",
     "section": "Knowledge check",
     "text": "Knowledge check"
   },
   {
-    "objectID": "topics/hardware/internal-components.htm#additional-resources",
-    "href": "topics/hardware/internal-components.htm#additional-resources",
-    "title": "Internal Components",
-    "section": "Additional resources",
-    "text": "Additional resources"
+    "objectID": "topics/hardware/understanding-cpus.htm#additional-references",
+    "href": "topics/hardware/understanding-cpus.htm#additional-references",
+    "title": "Understanding CPUs",
+    "section": "Additional references",
+    "text": "Additional references"
   },
   {
-    "objectID": "topics/hardware/internal-components.html",
-    "href": "topics/hardware/internal-components.html",
-    "title": "Internal Components",
+    "objectID": "topics/hardware/understanding-cpus.html",
+    "href": "topics/hardware/understanding-cpus.html",
+    "title": "Understanding CPUs",
     "section": "",
-    "text": "The major internal components of desktop computers. Image source: TBA",
+    "text": "What if all computers contained some guy, trapped in a box? Something to consider. Image source: unknown",
     "crumbs": [
       "Home",
       "Topics",
       "Hardware",
-      "Internal Components"
+      "Understanding CPUs"
     ]
   },
   {
-    "objectID": "topics/hardware/internal-components.html#introduction",
-    "href": "topics/hardware/internal-components.html#introduction",
-    "title": "Internal Components",
+    "objectID": "topics/hardware/understanding-cpus.html#introduction",
+    "href": "topics/hardware/understanding-cpus.html#introduction",
+    "title": "Understanding CPUs",
     "section": "Introduction",
-    "text": "Introduction\nIn previous weeks we learned the basic behaviors that define computers – their ability to store, retrieve, and process information. This means that many simple devices, even non-electronics, can be considered computers.\nThe computers that we mostly are concerned with in the computer science profession, however, are generally complicated electronic devices made of many components. In this class, we are going to learn many of the fundamental components that make up modern computing devices.\nWe will continue with the internal, or system, components of a computer – each of these have their own set of interesting behaviors and properties that are worth understanding.",
+    "text": "Introduction\nLast week one component we learned was the CPU  (Central Processing Unit): A complex collection of electronic circuits on one or more integrated circuits (chips).\nWe learned that the CPU is responsible for:\n\nExecuting the instructions in a software program.\nCommunicating with other parts of the computer system\n\nToday we’re going to take a deep dive into how the CPU carries out those responsibilities.",
     "crumbs": [
       "Home",
       "Topics",
       "Hardware",
-      "Internal Components"
+      "Understanding CPUs"
     ]
   },
   {
-    "objectID": "topics/hardware/internal-components.html#lesson-overview",
-    "href": "topics/hardware/internal-components.html#lesson-overview",
-    "title": "Internal Components",
-    "section": "Lesson overview",
-    "text": "Lesson overview\nThe system components of a computer are responsible for the following behaviors:\n\nMain needs:\n\nstore information\nprocess information\nretrieve  information\n\nAuxiliary needs:\n\nprotection from elements/interference\nsource of electrical power\ntemperature management for heat generated\nstructure\ncommunication between components\ntiers of storage/processing specialized for different purposes\n\n\nHere are system components that fulfil these needs:\n\nCase\nPower Supply\nMotherboard\n\nChipset\nBuses\n\nConnectors\nCooling Devices\nProcessor (CPU)\nGraphics processor (GPU)\nMemory (RAM)\nStorage Devices (CD, HDD, SSD, NVME/M2)\n\nWe will learn about all of these components this week!",
+    "objectID": "topics/hardware/understanding-cpus.html#lesson-overview",
+    "href": "topics/hardware/understanding-cpus.html#lesson-overview",
+    "title": "Understanding CPUs",
+    "section": "Lesson Overview",
+    "text": "Lesson Overview\nMore detail on CPUs. “Guy in Box” analogy, Clock Speed, Codebook, data buses explained.",
     "crumbs": [
       "Home",
       "Topics",
       "Hardware",
-      "Internal Components"
+      "Understanding CPUs"
     ]
   },
   {
-    "objectID": "topics/hardware/internal-components.html#definitions",
-    "href": "topics/hardware/internal-components.html#definitions",
-    "title": "Internal Components",
-    "section": "Definitions",
-    "text": "Definitions\nWhen discussing components of any complicated machine, we should try to understand the following about those components:\n\nMake/model\nMake/model is the brand and product name of the component. * E.g. Hyundai Accent (make = Hyundai, model = Accent)\nWhy it’s important: Who constructs these components? Are their multiple different versions of this component made by the same manufacturer? Why?\n\n\nProperties\nProperties are the quantitative (numeric) and qualitative  (non-numeric) traits of the component that can be compared with alike components * Quantitative e.g.: the Fuel Efficiency of the 2009 Hyundai Accent is 29 MPG  (miles per gallon) * Qualitative e.g: The Hyundai Accent is a hatchback, not a sedan\nWhy it’s important: * what is the expected performance of this component? * Is their a cost/benefit for choosing a component with better suited properties than other components? * Etc.\nThese two ideas (make/model, properties) will vary significantly from component to component. You will need to know these ideas for all of the components we discuss today.",
+    "objectID": "topics/hardware/understanding-cpus.html#cpu-analogy-guy-in-a-box",
+    "href": "topics/hardware/understanding-cpus.html#cpu-analogy-guy-in-a-box",
+    "title": "Understanding CPUs",
+    "section": "CPU Analogy: Guy in a Box",
+    "text": "CPU Analogy: Guy in a Box\nLet’s start with an analogy: CPUs are a “Guy-in-a-box”. This guy:\n\ncan perform any mathematical function quickly.\nlives in a closed-up box so direct communication is impossible.\n\nLet’s say have 16 light bulbs: 8 for the guy, and 8 for us.\n\n\n\nA sample caption. Image source: unknown.\n\n\n\n\n\n\n\n\nA sample caption. Image source: unknown.\n\n\n\nThe light bulbs:\n\ncan be controlled (turned on or off) by us and by the guy-in-the-box\nAre synchronized (bulb 1 for us has the same value as bulb 1 for the guy)\n\nWe can share messages by setting the light bulbs on/off, as long as we:\n\nAgree on schedule (not changing the lightbulbs at the same time)\nAgree on meaning (share the same interpretation of lightbulb being on/off)\n\nThis arrangement is called a data bus: a method for transporting data from one component to another using electrical circuits\n\n\n\nRegisters\nSo far, we can send/receive “messages” from the light bulbs. But, in order to “remember” a message, the guy needs at least a few workstations ( registers ) to copy our messages, otherwise the messages will be lost every time the data bus updates.\n\nRegisters are places to store a very small amount of data temporarily\nRegisters are usually the around the 1-4x the size of the data bus\nWe can give the registers names to distinguish them (AX, BX, CX, DX for example)\n\n\n\n\nA sample caption. Image source: unknown.\n\n\n\n\n\nCodebook: Agreeing on meaning\nIt’s important to have common definitions for the meaning of the lightbulbs being on/off to understand messages sent by this method\nCPUs are designed with a codebook  (instruction set) that defines the commands that we can give to the guy in the box\n\n\n\nA sample caption. Image source: unknown.\n\n\n\n\n\nClock: Agreeing on schedule\nNow we are ready to communicate with the guy in the boxWe can send them the first command by lighting up the bulbs on the data bus.\nBut how do they know when we have finished setting up the light bulbs?\n\n\n\nA sample caption. Image source: unknown.\n\n\n\n\nWe can use a bell activated by a button.\nA real computer uses a special wire called the clock wire (CLK). The CLK wire is turned on and off on a precise and regular schedule. This is called a clock cycle.\nEach time the clock turns on, the state of our lightbulbs is shared with the guy in the box\nThe guy then has until the clock turns off to send a message back\nThe next time the clock turns on, a new message is sent to the CPU\nThe time between each clock cycle is the speed that a CPU can perform a given task\nThe maximum number of clock cycles a CPU can handle in given period of time is called the clock speed.\n\n\n\nSample Guy in a Box Problem\nUsing the following codebook, ask the “Guy in a box” to calculate 2+3\nYou must send a series of commandsto the CPU. The CPU will act on each command and give you an answer.\nYour answer should be a sequence of numbers you could send to the guy in the box to get the right answer.\n\n\n\nA sample caption. Image source: unknown.\n\n\n\n\nSolution\n10000000  The next line is a number, put it in AX\n00000010  The number 2\n10010000  The next line is a number, put it in BX\n00000011  The number 3\n10110000  Add AX to BX and put the result in AX\n11000000  Place the value of AX on the external data bus\nA set of commands such as this is called a program. A program is a series of command sent to a CPU in a specific order for the CPU to perform work.",
     "crumbs": [
       "Home",
       "Topics",
       "Hardware",
-      "Internal Components"
+      "Understanding CPUs"
     ]
   },
   {
-    "objectID": "topics/hardware/internal-components.html#case",
-    "href": "topics/hardware/internal-components.html#case",
-    "title": "Internal Components",
-    "section": "Case",
-    "text": "Case\n\n\n\nFigure caption.\n\n\n\nProvides protection and cooling for the internal components.\nAlso prevents damage from static electricity (components grounded via attachment to case).\nUsually made of plastic, steel or aluminum.\nFans move air through the case:\n\nto replace warm air with cold air to keep components at stable temperatures\nto prevent build-up of dust\nThere exist many guides/studies for optimal airflow. E.g. https://voltcave.com/pc-airflow-guide/",
+    "objectID": "topics/hardware/understanding-cpus.html#pipelining",
+    "href": "topics/hardware/understanding-cpus.html#pipelining",
+    "title": "Understanding CPUs",
+    "section": "Pipelining",
+    "text": "Pipelining\n\nAlmost all CPU instructions feature a set of 4 stages:\n\nFetch : retrieve the instruction, address, and data, write them to registers\nDecode : search for instruction code in codebook, verify it is a real instruction, and that data/address are valid\nExecute : perform the instruction, update registers with results\nWrite:  write to databus to share results\n\nRather than have each instruction repeat all of these steps, we can organize CPUs further by specializing our “guy in a box” for each stage\nThis is called pipelining , and it allows for greater efficiency in CPU programming\n\n\n\n\nA sample caption. Image source: unknown.",
     "crumbs": [
       "Home",
       "Topics",
       "Hardware",
-      "Internal Components"
+      "Understanding CPUs"
     ]
   },
   {
-    "objectID": "topics/hardware/internal-components.html#power-supply-psu",
-    "href": "topics/hardware/internal-components.html#power-supply-psu",
-    "title": "Internal Components",
-    "section": "Power Supply (PSU)",
-    "text": "Power Supply (PSU)\nMain purpose:  Converts AC power (alternating current) from wall socket to DC power (direct current). Direct current (0 or 5V) is used to power digital circuits.\n\nNote: PSU have their own fans: Energy conversion releases a lot of heat!\nComputers can only tolerate slight fluctuations in power without needing to shut down\nImportant: Never open a power supply! The capacitors contained within can keep a dangerous high voltage, high power charge long after being unplugged.\n\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\nPSU Connectors\n\nMost power supply connectors are : 20 + 4 pins\nUsually made up of wires of various colors:\n\nYellow 12V\nRed 5V\nOrange 3.3V\nOther colors may be ground 0V\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\nPSU Ratings\nUseful for Assignment 1\nPSU Ratings: * Wattage (amount of power delivered, must be greater than the sum of power required by all parts, some power supplies can provide more power than others) * Efficiency (1st + 2nd Laws of thermodynamics: 100% power input cannot be converted to 100% power output; some power supplies have higher efficiency ratings than others) * For more detailed explanation:  https://www.newegg.com/insider/how-to-choose-a-pc-power-supply-buying-guide/\n\n\nUninterruptible Power Supply\nIn the case of a power outage, an Uninterruptible Power Supply (UPS) can keep a computer running for a few minutes to several hours depending on the sophistication of the UPS. See  https://www.wikihow.com/Buy-and-Use-an-Uninterruptible-Power-Supply  for an example.\nIt’s basically a large battery that keeps charge during normal operation, and powers a computer using its stored charge when the building’s power is cut off.\nWe will talk more about uninterruptible power supply when we start speaking about server hardware.",
+    "objectID": "topics/hardware/understanding-cpus.html#cpu-properties",
+    "href": "topics/hardware/understanding-cpus.html#cpu-properties",
+    "title": "Understanding CPUs",
+    "section": "CPU Properties",
+    "text": "CPU Properties\nThe most important properties that define CPU behavior are speed and bus width: that is, how fast the clock cycle repeats, and how much data per clock cycle the CPU can process.\n\nClock Speed\nWe measure CPU speed : in cycles per second, e.g. megahertz (MHz) or gigahertz (GHz).\n\nUnit of Measurement:  Hertz, usually written as Hz, denote frequency. 1Hz is “one time per second”, 10Hz is “ten times per second”.\n\nWe can use SI Prefixes  (International System of Unit Prefixes) to compare magnitudes easily.\nYou will see many of these in computer science over and over again – get to know them well!\n\nSI Prefixes for Frequencies\n\n\n\n\n\n\n\n\nUnit\nMeaning\nDefinition\nExamples\n\n\n\n\nHz\nOnce per second\n1/s, or 1Hz\n1-2Hz: human heart-rate at rest (1Hz = 60 beats per minute, 2Hz = 120 bpm)24Hz: framerate of historic cinema20-60Hz: frequency range for bass notes (C0 = 16.35Hz to C2 = 65.4Hz)60-144Hz: framerate of most monitors\n\n\nkHz\nThousand times per second\n1000 Hz\n0.1-2kHz: frequency range for midrange notes (A2=0.110kHz, C7=2kHz)20kHz: maximum frequency audible to human ear740 kHz: Intel 4004 processor clock speed (1971)\n\n\nMHz\nMillion times per second\n1000000 Hz\n8MHz: fastest CPU clock speed in the 70s35MHz: fastest CPU clock speed in the 80s500-1000MHz: fastest CPU clock speed in the 90s)\n\n\nGHz\nBillion times per second\n1000000000 Hz\n2-5GHz: Almost all consumer CPUs in 2024 have base clock speeds in this range9.117 GHz: fastest CPU clock speed ever recorded (2024)\n\n\n\n\n\nBus width\nThe amount of data processed at a time depends on the “number of lightbulbs” or the width of the data bus\nBus width  is measured in bits, e.g. 8-bits, 16-bit, 32-bit, 64-bit, etc.\nQuestion: how many bits do you need in bus width to represent the Guy in the Box and their codebook from the previous problems?\n\n\n\n\nA sample caption. Image source: unknown.\n\n\nIn actual computers, the CPU receives instructions , addresses memory , and data on separate buses.\nThis allows the CPU to send AND receive the following information at the same time:\nWhat command to perform\nWhere in memory the result should be stored\nWhat data to use to perform the command\n\n\n\nA sample caption. Image source: unknown.\n\n\nFigure from  In One Lesson on Youtube (nice visualization)\n\n\n\nClock Speed vs bus width compared\n\nYou can double check that you understand a scientific concept by checking what units of measurement that concept is measured by:\nHighway\n\nNumber of lanes:  (a number)\nSpeed limit: (unit distance per time elapsed, e.g. km/h)\n\nSystem bus\n\nBus width:  (a number of bits, eg a 32-bit processor)\nBus speed:  (unit information per time elapsed, e.g. bits/second)\n\n\n\n\n\nA sample caption. Image source: unknown.",
     "crumbs": [
       "Home",
       "Topics",
       "Hardware",
-      "Internal Components"
+      "Understanding CPUs"
     ]
   },
   {
-    "objectID": "topics/hardware/internal-components.html#motherboard",
-    "href": "topics/hardware/internal-components.html#motherboard",
-    "title": "Internal Components",
-    "section": "Motherboard",
-    "text": "Motherboard\nMotherboards connect all the major components of the computer: the CPU, RAM, Expansion ports, etc.\n\n\n\nAn ASUS Pro B660M Motherboard. Most motherboards look something like this.\n\n\n\nComposed of various chips all combined into north  and south  bridges\nMain circuit board and controls the electrical pathways (buses) found in a computer.\nThe buses allow data to travel between the various components of a computer.\nVarious form factors, e.g. AT, ATX, LPX, BTX, ITX.\n\n\n\n\nMotherboard form factors, from largest to smallest.\n\n\n\nForm Factors\n\nAT\n\nInvented by IBM in early 1980s, now obsolete.\nHuge in size (approximately 12 x 13 inches).\nNeeded lots of space for power supply and its various chips.\nLacked external ports, only allowed for monitor and keyboard.\n\nATX\n\nCreated in 1995 to meet the need for more connectors.\nGot off to a slow start but by 1998 became the most common form factor.\nBiggest change to AT was the rear panel with standard set of ports for expansion.\nPower supply position for better airflow, CPU and RAM positioned for easier access.\nVariations 12x9in (full size), 9.6x9.6in ( microATX )\n\nATX and microATX are the most common in personal desktop computers today\n\n\n\nITX\n\nCreated in 2001 to meet the demand for smaller computers.\nITX failed but led to development of smaller form factor (SSF) motherboards.\nMiniITX (6.7x6.7in), NanoITX (4.7x4.7in) and PicoITX (3.8x2.8in)\nCommonly used for embedded systems and specialized devices such as routers.\nRequire very little power, therefore produce less heat.\n\nProprietary\n\nSome computer manufacturers make motherboards that work only with their cases.\nServices and upgrades usually need to be handled by authorized dealers.\nOften hard to get replacement parts and they are usually expensive.\n\n\n\n\nI/O Ports\nYou’ll notice that the I/O Ports (input/output) on the mother board are always located around the same area.\nThis is to keep certain consistency across manufacturer and regardless of the form factors\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\nExpansion Slots\nLet’s have a closer look at what we call expansion slots.\nExpansion slots are ports inside a computer found on the motherboard. They provide the possibility to expand the hardware of your PC.\nFor example, you may want to install a network card, a sound card, and most commonly, a video card.\n\n\nExpansion slots allow us to increase the functionality of a computer by adding controllers for specific devices (often called adapter cards) e.g. sound, video, NIC (network Interface Card).\n\nPCI used in most computers, commonly used for network interface\nAGP designed to be used by video adapters\nPCIe replaces AGP in newer computers, used for video cards\nISA older, rarely used, 8 or 16 bit\nEISA older, rarely used, 32 bit\nMCA IBM proprietary 32 bit, older, rarely used\nPCI-X 32 bit, can run up to four times faster than PCI\nMiniPCI 32 bit, used by laptops, has three different form factors\n\nIn 2024 : PCI  and PCIe  are the common standards that cover all features required for expansion slots\n\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nCPU Socket\nLet’s have a closer look at the CPU Socket, which rests in the motherboard. This is where the CPU will sit.\n\n\n\n\n\n\n\n\n\nThe motherboard…\n\n\n\n\n\n\n\n… and the CPU socket.\n\n\n\n\n\n\n\nHow to Connect a CPU?\nCPU connection on the motherboard is known as the CPU socket.\nThe CPU is connected to the motherboard in one of two ways:\n\nPin Grid Array – PGA\n\nPins are on the CPU (underside of the processor).\nSocket on motherboard includes holes that line up with the CPU pins.\n\nLand Grid Array – LGA\n\nPins are on the motherboard (on socket) instead of on the processor.\n\n\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Hardware",
-      "Internal Components"
-    ]
-  },
-  {
-    "objectID": "topics/hardware/internal-components.html#internal-connectors",
-    "href": "topics/hardware/internal-components.html#internal-connectors",
-    "title": "Internal Components",
-    "section": "Internal Connectors",
-    "text": "Internal Connectors\nThere are a variety of connectors used to connect components to the motherboard. Two main purposes:\n\nSignals : for communication/data transfer\nPower : not all components connect directly to the power supply, they get power from the motherboard\n\nMost connectors are keyed (can only be inserted one way). Note: Always check the pins if you have trouble with a connector.\n\n“If it doesn’t go in like butter, it doesn’t go in at all” – never force a connection! you are likely going to damage the pins.\n\n\nExample connectors\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Hardware",
-      "Internal Components"
-    ]
-  },
-  {
-    "objectID": "topics/hardware/internal-components.html#cpu",
-    "href": "topics/hardware/internal-components.html#cpu",
-    "title": "Internal Components",
-    "section": "CPU",
-    "text": "CPU\nThe CPU Most important element of the computer.\n\nResponsible for interpreting  and executing  the commands from the software.\ncommunicates instructions for all of the other components of the computer\nWhile the CPU is processing one step of the program, the remaining instructions and the data are stored in a special memory called cache.\n\n\n\n\nFigure caption.\n\n\nWe’ll have a lecture dedicated to the CPU since it is so complicated.\n\nCPU Brands\nIntel: Historically the main CPU manufacturer\nAMD: Relatively recent competitor to Intel\n\n\n\nFigure caption.",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Hardware",
-      "Internal Components"
-    ]
-  },
-  {
-    "objectID": "topics/hardware/internal-components.html#cooling-devices",
-    "href": "topics/hardware/internal-components.html#cooling-devices",
-    "title": "Internal Components",
-    "section": "Cooling Devices",
-    "text": "Cooling Devices\nThe flow of current between and within electronic components generates heat. Some devices are particularly powerful heat-generators, due to the large current they draw: * CPUs typically come with their own cooling device * Cooling devices are built into GPUs and Power Supplies\nThere are two main types of cooling devices:\n\nFans inside the case increase airflow and removes heat.\nHeat sinks also draw heat away from the CPU core.\n\n\nFans\nThe flow of current between the electronic components generates heat.\nFans inside the case increase airflow and removes heat.\nOccasionally video cards or other components have their own fans to cool them.\n\n\n\nFigure caption.\n\n\n\n\nHeat sinks\n\nHeat sinks also draw heat away from the CPU core.\n\nA heat sink is a piece of copper or aluminum that resides between the processor and the CPU fan.\nIt absorbs the heat from the processor and the fan disperses the heat.\n\n\n\n\n\nFigure caption.",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Hardware",
-      "Internal Components"
-    ]
-  },
-  {
-    "objectID": "topics/hardware/internal-components.html#main-memory-ram",
-    "href": "topics/hardware/internal-components.html#main-memory-ram",
-    "title": "Internal Components",
-    "section": "Main Memory (RAM)",
-    "text": "Main Memory (RAM)\nReferred to as RAM (Random Access Memory). They’re connected to RAM slots on the motherboard:\n\n\n\n\n\n\n\nFigure caption.\n\n\nRAM is a collection of integrated circuits (chips). Temporary storage for data and programs that are being accessed by the CPU.\nVolatile memory : contents are erased when the computer is switched off. (or when power is lost)\n\n\n\n\n\n\n\nFigure caption.\n\n\n\nProperties\nThere are four main properties of RAM to know:\n\nCapacity:  Total memory (in GB, GigaBytes)\n\nMore RAM means more capacity to hold and process large programs and files.\nMaximum installed is limited by the motherboard and the operating system.\n\nSpeed:  How many operations per second\n\nMany, millions or billions per second\n1MHz = 1 million / second, 1 GHz = 1 billion / second\n\nLatency : How much time delay between communications\nGeneration: See next slides\n\n\n\nRAM Form Factors\n\nSIMMs (Single In-Line Memory Modules)\n\nHave a single line of connectors.\nNow obsolete.\n\nDIMMs (Dual In-Line Memory Modules)\n\nHave two lines of connectors.\nHave Wider bus (supports 64 bits) 🡪 How can this help? More on this in the coming weeks.\nBecame dominant (no need to state that a memory module is a DIMM).\n\n\n\n\nRAM Generations\n\n\n\n\n\n\n\nSynchronous DRAM (SDRAM)\nDRAM that operates in time with the memory bus.Tied to the system clock like the CPU and the memory controller.Results in very little wasted time.\n\n\n\n\nDouble Data Rate SDRAM (DDR)\nDDR transfers data twice as fast as SDRAM.\u000bLarger buffer gives it a huge boost.\n\n\nDouble Data Rate 2 SDRAM (DDR2)\nDDR2 decreases noise making it faster than DDR.\n\n\nDouble Data Rate 3 SDRAM (DDR3)\nDDR3 doubles the clock rate of DDR2, consumes less power and generates less heat.\n\n\nDouble Data Rate 4 SDRAM (DDR4)\nDDR4 arrived in 2014 with even faster speeds. (most common RAM type in desktops/laptops today)\n\n\nDouble Data Rate 5 SDRAM (DDR5)\nIntroduced in 2020, is starting to become more widely adopted.\n\n\n\nNOTE: Motherboards are usually compatible with only ONE generation of RAM. If you have a motherboard designed for DDR3, it cannot use DDR4 or DDR5.",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Hardware",
-      "Internal Components"
-    ]
-  },
-  {
-    "objectID": "topics/hardware/internal-components.html#graphics-cards-gpu",
-    "href": "topics/hardware/internal-components.html#graphics-cards-gpu",
-    "title": "Internal Components",
-    "section": "Graphics Cards (GPU)",
-    "text": "Graphics Cards (GPU)\nAlso known as Video cards or Graphical Processing Units\nOne of the most interesting use of expansion slots is the addition of video cards, also known as Graphical Processing Unit.\nA specialized version of a CPU designed for graphical processing (producing complex output to display on a monitor)\nThe computation needed for graphical processing is generally useful for scientific computing as well (lots of data in parallel)\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\nCPU vs GPU\n\nBoth consume a lot of power and generate a lot of heat\nMore powerful CPUs/GPUs require more powerful power supplies\n\nTDP: __ Thermal Design Power, measures the number of Watts needed to power the device__\n\nBoth have performance measured in  speed __ (operations/second) like RAM__\n\nGPU cannot replace the CPU because their architecture is different and meant for different purposes. GPU is great to parallelize computations! But the GPU is not as versatile as the CPU which has a larger instruction set\n\n\n\n\n\n\n\nFigure caption.",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Hardware",
-      "Internal Components"
-    ]
-  },
-  {
-    "objectID": "topics/hardware/internal-components.html#storage-devices",
-    "href": "topics/hardware/internal-components.html#storage-devices",
-    "title": "Internal Components",
-    "section": "Storage Devices",
-    "text": "Storage Devices\nStorage devices store data permanently. Some are installed inside the case (e.g. hard drive); Some are removable and portable (e.g. external flash drive).\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFloppy Drive\nUses 3.5 inch floppy disks (or 5.25 inch floppy disks - older).\nLargely obsolete.\nMagnetic disks store up to 1.44Meg of data.\n\n\n\nFigure caption.\n\n\n\n\n\nFigure caption.\n\n\n\n\n\nHard Drive\n\nHard Disk Drive (HDD)\n\nTraditional hard drives.\nUses magnetic-based storage on a moving disk (somewhat like a vinyl player)\nMagnetic hard drives have drive motors that spin the magnetic platters and move the drive heads.\nSpeed measured in revolutions per minute\n\n\n\n\n\nSolid State Drives (SSD)\n\nDo not have moving parts and use __ semi-conductors__ to store data.\nNon-volatile flash memory chips manage the storage on an SSD, resulting in faster access to data, higher reliability and reduced power usage.\n\n\n\n\n\n\nTape Drive\nMagnetic tapes are often used for backups or archiving data. Impractical for most individuals, but still used/created to this day! Cost effective when storing more than 1000 TB (lots and lots of data)\n\n\n\n\n\n\nOptical Drive\n\nUses lasers to read the data on the optical media.\n\nCD (compact disc) 700 Mb\nDVD (digital versatile disc) 4-8 Gb.\nBD (Blu-ray disc) 25-50 Gb.\n\nOptical media can be:\n\nPre-recorded (read only)\nRecordable (write once)\nRe-recordable (read and write multiple times).\n\n\n\n\n\n\nInterfaces Types\nInterface Types, in order of oldest to newest\n\n\n\n\n\n\n\nIDE  \nIntegrated Drive Electronics / Advanced Technology Attachment.Also called ATA.Early drive controller interface, originally only supported hard drives up to 540 MB.Uses a 40 pin connector, and maximum cable length of 46cm (18in).\n\n\n\n\nEIDE\nEnhanced Integrated Drive Electronics (also called ATA-2).Updated version of IDE, supporting larger drives and direct memory access.Uses a 40 pin connector.\n\n\nPATA\nParallel version of ATA.Used internally due to maximum cable length of 46cm (18in).Largely replaced by SATA in newer systems.\n\n\nSATA (most commonly used today)\nSerial version of ATA, with slimmer and longer cables providing better airflow.Uses 7-pin connector \u000b(less pins means less issues with electromagnetic interference).SATA hard drives tend to be quieter than IDE drives.\n\n\neSATA\nExternal serial ATA, provides a hot-swappable external interface for SATA.\n\n\n:-:\n:-:\n\n\nSCSI\nSmall Computer System Interface.Drive controller that can connect up to 15 drives.Internal and external use, uses 25, 50 or 68 pin connector.\n\n\n\nNote: __ Hot-swapping is the ability to connect and disconnect a device while the computer is on.__\n\n\nExternal Flash Drive\nRemovable storage device that connects to a USB port.\nThese use the same type of non-volatile memory chips as SSDs and do not require power to maintain the data.\n\n\nTo install a drive internally in a computer, the connection interface on the drive must be the same as the controller on the motherboard.\nMotherboards support different types of interfaces.\n\n\nComputer Memory Hierarchy\nSource: https://en.wikipedia.org/wiki/Memory_hierarchy",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Hardware",
-      "Internal Components"
-    ]
-  },
-  {
-    "objectID": "topics/hardware/internal-components.html#exercises",
-    "href": "topics/hardware/internal-components.html#exercises",
-    "title": "Internal Components",
+    "objectID": "topics/hardware/understanding-cpus.html#exercises",
+    "href": "topics/hardware/understanding-cpus.html#exercises",
+    "title": "Understanding CPUs",
     "section": "Exercises",
     "text": "Exercises",
     "crumbs": [
       "Home",
       "Topics",
       "Hardware",
-      "Internal Components"
+      "Understanding CPUs"
     ]
   },
   {
-    "objectID": "topics/hardware/internal-components.html#knowledge-check",
-    "href": "topics/hardware/internal-components.html#knowledge-check",
-    "title": "Internal Components",
+    "objectID": "topics/hardware/understanding-cpus.html#knowledge-check",
+    "href": "topics/hardware/understanding-cpus.html#knowledge-check",
+    "title": "Understanding CPUs",
     "section": "Knowledge check",
     "text": "Knowledge check",
     "crumbs": [
       "Home",
       "Topics",
       "Hardware",
-      "Internal Components"
+      "Understanding CPUs"
     ]
   },
   {
-    "objectID": "topics/hardware/internal-components.html#additional-resources",
-    "href": "topics/hardware/internal-components.html#additional-resources",
-    "title": "Internal Components",
-    "section": "Additional resources",
-    "text": "Additional resources",
+    "objectID": "topics/hardware/understanding-cpus.html#additional-references",
+    "href": "topics/hardware/understanding-cpus.html#additional-references",
+    "title": "Understanding CPUs",
+    "section": "Additional references",
+    "text": "Additional references",
     "crumbs": [
       "Home",
       "Topics",
       "Hardware",
-      "Internal Components"
+      "Understanding CPUs"
     ]
   },
   {

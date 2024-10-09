@@ -79,12 +79,12 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../_assets/css/styles.css">
 <meta property="og:title" content="Understanding CPUs – Technical Support">
-<meta property="og:description" content="An in-depth explanation of command processing and executing at the CPU level">
+<meta property="og:description" content="More detail on CPUs. “Guy in Box” analogy, Clock Speed, Codebook, Databuses explained.">
 <meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/hardware/_assets/favicons/favicon-32x32.png">
 <meta property="og:site_name" content="{{< var course.title >}}">
 </head>
 
-<body class="nav-sidebar floating nav-fixed">
+<body class="nav-sidebar floating nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -144,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../topics/index.html">Topics</a></li><li class="breadcrumb-item"><a href="../../topics/hardware/index.html">Hardware</a></li><li class="breadcrumb-item"><a href="../../topics/hardware/understanding-cpus-v1.html">Understanding CPUs</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../topics/index.html">Topics</a></li><li class="breadcrumb-item"><a href="../../topics/hardware/index.html">Hardware</a></li><li class="breadcrumb-item"><a href="../../topics/hardware/understanding-cpus.html">Understanding CPUs</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -259,7 +259,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../topics/hardware/understanding-cpus-v1.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../topics/hardware/understanding-cpus.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Understanding CPUs</span></a>
   </div>
 </li>
@@ -278,29 +278,37 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#processor-cpu-review-of-lecture-3" id="toc-processor-cpu-review-of-lecture-3" class="nav-link" data-scroll-target="#processor-cpu-review-of-lecture-3">Processor (CPU) (review of Lecture 3)</a></li>
-  <li><a href="#cpu-core-components" id="toc-cpu-core-components" class="nav-link" data-scroll-target="#cpu-core-components">CPU Core Components</a></li>
-  <li><a href="#cpu-analogy-guy-in-a-box" id="toc-cpu-analogy-guy-in-a-box" class="nav-link" data-scroll-target="#cpu-analogy-guy-in-a-box">CPU Analogy: “Guy in a Box”</a></li>
+  <li><a href="#lesson-overview" id="toc-lesson-overview" class="nav-link" data-scroll-target="#lesson-overview">Lesson Overview</a></li>
+  <li><a href="#cpu-analogy-guy-in-a-box" id="toc-cpu-analogy-guy-in-a-box" class="nav-link" data-scroll-target="#cpu-analogy-guy-in-a-box">CPU Analogy: Guy in a Box</a>
+  <ul>
   <li><a href="#registers" id="toc-registers" class="nav-link" data-scroll-target="#registers">Registers</a></li>
   <li><a href="#codebook-agreeing-on-meaning" id="toc-codebook-agreeing-on-meaning" class="nav-link" data-scroll-target="#codebook-agreeing-on-meaning">Codebook: Agreeing on meaning</a></li>
-  <li><a href="#clock-agreeing-on-schedule" id="toc-clock-agreeing-on-schedule" class="nav-link" data-scroll-target="#clock-agreeing-on-schedule">Clock: agreeing on schedule</a></li>
-  <li><a href="#clock-speed-how-to-measure" id="toc-clock-speed-how-to-measure" class="nav-link" data-scroll-target="#clock-speed-how-to-measure">Clock speed: how to measure?</a></li>
-  <li><a href="#cpu-core-components-activity" id="toc-cpu-core-components-activity" class="nav-link" data-scroll-target="#cpu-core-components-activity">CPU Core Components: Activity</a></li>
-  <li><a href="#cpu-core-components-activity-cont." id="toc-cpu-core-components-activity-cont." class="nav-link" data-scroll-target="#cpu-core-components-activity-cont.">CPU Core Components: Activity (cont.)</a></li>
+  <li><a href="#clock-agreeing-on-schedule" id="toc-clock-agreeing-on-schedule" class="nav-link" data-scroll-target="#clock-agreeing-on-schedule">Clock: Agreeing on schedule</a></li>
+  <li><a href="#sample-guy-in-a-box-problem" id="toc-sample-guy-in-a-box-problem" class="nav-link" data-scroll-target="#sample-guy-in-a-box-problem">Sample Guy in a Box Problem</a>
+  <ul class="collapse">
+  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a></li>
+  </ul></li>
+  </ul></li>
   <li><a href="#pipelining" id="toc-pipelining" class="nav-link" data-scroll-target="#pipelining">Pipelining</a></li>
-  <li><a href="#cpu-power-speed-and-bus-width" id="toc-cpu-power-speed-and-bus-width" class="nav-link" data-scroll-target="#cpu-power-speed-and-bus-width">CPU Power: Speed and bus width</a></li>
-  <li><a href="#data-bus-how-the-cpu-getssends-data" id="toc-data-bus-how-the-cpu-getssends-data" class="nav-link" data-scroll-target="#data-bus-how-the-cpu-getssends-data">Data bus: how the CPU gets/sends data</a></li>
-  <li><a href="#data-bus-understanding-speed-vs-width" id="toc-data-bus-understanding-speed-vs-width" class="nav-link" data-scroll-target="#data-bus-understanding-speed-vs-width">Data Bus: understanding speed vs width</a></li>
+  <li><a href="#cpu-properties" id="toc-cpu-properties" class="nav-link" data-scroll-target="#cpu-properties">CPU Properties</a>
+  <ul>
+  <li><a href="#clock-speed" id="toc-clock-speed" class="nav-link" data-scroll-target="#clock-speed">Clock Speed</a></li>
+  <li><a href="#bus-width" id="toc-bus-width" class="nav-link" data-scroll-target="#bus-width">Bus width</a></li>
+  <li><a href="#clock-speed-vs-bus-width-compared" id="toc-clock-speed-vs-bus-width-compared" class="nav-link" data-scroll-target="#clock-speed-vs-bus-width-compared">Clock Speed vs bus width compared</a></li>
+  </ul></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
+  <li><a href="#knowledge-check" id="toc-knowledge-check" class="nav-link" data-scroll-target="#knowledge-check">Knowledge check</a></li>
+  <li><a href="#additional-references" id="toc-additional-references" class="nav-link" data-scroll-target="#additional-references">Additional references</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../topics/index.html">Topics</a></li><li class="breadcrumb-item"><a href="../../topics/hardware/index.html">Hardware</a></li><li class="breadcrumb-item"><a href="../../topics/hardware/understanding-cpus-v1.html">Understanding CPUs</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../topics/index.html">Topics</a></li><li class="breadcrumb-item"><a href="../../topics/hardware/index.html">Hardware</a></li><li class="breadcrumb-item"><a href="../../topics/hardware/understanding-cpus.html">Understanding CPUs</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Understanding CPUs</h1>
-<p class="subtitle lead">An in-depth explanation of command processing and executing at the CPU level</p>
+<p class="subtitle lead">More detail on CPUs. “Guy in Box” analogy, Clock Speed, Codebook, Databuses explained.</p>
 </div>
 
 
@@ -329,35 +337,50 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/understanding-cpus16.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="What if all computers contained some guy, trapped in a box? Something to consider. Image source: unknown"><img src="_assets/understanding-cpus16.png" title="A sample title." class="img-fluid figure-img" alt="Sample alt text. To be replaced!"></a></p>
+<figcaption>What if all computers contained some guy, trapped in a box? Something to consider. Image source: unknown</figcaption>
+</figure>
+</div>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-</section>
-<section id="processor-cpu-review-of-lecture-3" class="level1">
-<h1>Processor (CPU) (review of Lecture 3)</h1>
-<p><strong>CPU </strong> ( <em>Central Processing Unit</em> )</p>
-<p>A complex collection of electronic circuits on one or more integrated circuits (chips) which:</p>
-<p><em>Executes the instructions in a software program.</em></p>
-<p>Communicates with other parts of the computer system, especially RAM and input devices.</p>
-<p>Let’s have a deeper look.</p>
-<p><a href="_assets/Lecture 4 Understanding CPUs0.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="_assets/Lecture 4 Understanding CPUs0.jpg" class="img-fluid"></a></p>
-<p><a href="_assets/Lecture 4 Understanding CPUs1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="_assets/Lecture 4 Understanding CPUs1.png" class="img-fluid"></a></p>
-<hr>
-</section>
-<section id="cpu-core-components" class="level1">
-<h1>CPU Core Components</h1>
-<p>Analogy: CPUs are a “Guy-in-a-box”</p>
-<p>Clever guy who can perform any mathematical function quickly.</p>
-<p>They live in a closed-up box so direct communication is impossible.</p>
-<p>We have 16 light bulbs: 8 for the guy, and 8 for us.</p>
-<p><a href="_assets/Lecture 4 Understanding CPUs2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="_assets/Lecture 4 Understanding CPUs2.png" class="img-fluid"></a></p>
-<p><a href="_assets/Lecture 4 Understanding CPUs3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="_assets/Lecture 4 Understanding CPUs3.png" class="img-fluid"></a></p>
-<p><a href="_assets/Lecture 4 Understanding CPUs4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="_assets/Lecture 4 Understanding CPUs4.png" class="img-fluid"></a></p>
-<hr>
-</section>
-<section id="cpu-analogy-guy-in-a-box" class="level1">
-<h1>CPU Analogy: “Guy in a Box”</h1>
-<p><a href="_assets/Lecture 4 Understanding CPUs5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="_assets/Lecture 4 Understanding CPUs5.png" class="img-fluid"></a></p>
+<p>Last week one component we learned was the <strong>CPU </strong> (<em>Central Processing Unit</em>): A complex collection of electronic circuits on one or more integrated circuits (chips).</p>
+<p>We learned that the CPU is responsible for:</p>
 <ul>
+<li><em>Executing the instructions in a software program.</em></li>
+<li>Communicating with other parts of the computer system</li>
+</ul>
+<p>Today we’re going to take a deep dive into <em>how</em> the CPU carries out those responsibilities.</p>
+</section>
+<section id="lesson-overview" class="level2">
+<h2 class="anchored" data-anchor-id="lesson-overview">Lesson Overview</h2>
+<p>More detail on CPUs. “Guy in Box” analogy, Clock Speed, Codebook, data buses explained.</p>
+</section>
+<section id="cpu-analogy-guy-in-a-box" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="cpu-analogy-guy-in-a-box">CPU Analogy: Guy in a Box</h2>
+<p>Let’s start with an analogy: CPUs are a “Guy-in-a-box”. This guy:</p>
+<ul>
+<li>can perform any mathematical function quickly.</li>
+<li>lives in a closed-up box so direct communication is impossible.</li>
+</ul>
+<p>Let’s say have 16 light bulbs: 8 for the guy, and 8 for us.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/understanding-cpus2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="A sample caption. Image source: unknown."><img src="_assets/understanding-cpus2.png" title="A sample title." class="img-fluid figure-img" alt="Sample alt text. To be replaced!"></a></p>
+<figcaption>A sample caption. Image source: unknown.</figcaption>
+</figure>
+</div>
+<hr>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/understanding-cpus5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="A sample caption. Image source: unknown."><img src="_assets/understanding-cpus5.png" title="A sample title." class="img-fluid figure-img" alt="Sample alt text. To be replaced!"></a></p>
+<figcaption>A sample caption. Image source: unknown.</figcaption>
+</figure>
+</div>
+</div></div><ul>
 <li>The light bulbs:
 <ul>
 <li>can be controlled (turned on or off) by us and by the guy-in-the-box</li>
@@ -370,132 +393,83 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li>This arrangement is called a <strong>data bus:</strong> a method for transporting data from one component to another using electrical circuits</li>
 </ul>
-<p><a href="_assets/Lecture 4 Understanding CPUs6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="_assets/Lecture 4 Understanding CPUs6.png" class="img-fluid"></a></p>
-<p><a href="_assets/Lecture 4 Understanding CPUs7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="_assets/Lecture 4 Understanding CPUs7.png" class="img-fluid"></a></p>
 <hr>
-</section>
-<section id="registers" class="level1">
-<h1>Registers</h1>
-<p><a href="_assets/Lecture 4 Understanding CPUs8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="_assets/Lecture 4 Understanding CPUs8.png" class="img-fluid"></a></p>
-<ul>
-<li><strong>Registers</strong></li>
-<li>So far, we can send/receive “messages” from the light bulbs</li>
-<li>But, in order to “remember” a message, the guy needs at least a few workstations ( <strong>registers</strong> ) to copy our messages, otherwise the messages will be lost every time the data bus updates.
+<section id="registers" class="level3">
+<h3 class="anchored" data-anchor-id="registers">Registers</h3>
+<p>So far, we can send/receive “messages” from the light bulbs. But, in order to “remember” a message, the guy needs at least a few workstations ( <strong>registers</strong> ) to copy our messages, otherwise the messages will be lost every time the data bus updates.</p>
 <ul>
 <li><strong>Registers</strong> are places to store a very small amount of data temporarily</li>
 <li>Registers are usually the around the 1-4x the size of the data bus</li>
 <li>We can give the registers names to distinguish them (AX, BX, CX, DX for example)</li>
-</ul></li>
 </ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/understanding-cpus8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="A sample caption. Image source: unknown."><img src="_assets/understanding-cpus8.png" title="A sample title." class="img-fluid figure-img" alt="Sample alt text. To be replaced!"></a></p>
+<figcaption>A sample caption. Image source: unknown.</figcaption>
+</figure>
+</div>
 <hr>
 </section>
-<section id="codebook-agreeing-on-meaning" class="level1">
-<h1>Codebook: Agreeing on meaning</h1>
-<p><a href="_assets/Lecture 4 Understanding CPUs9.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="_assets/Lecture 4 Understanding CPUs9.png" class="img-fluid"></a></p>
-<p><strong>Codebook</strong></p>
+<section id="codebook-agreeing-on-meaning" class="level3">
+<h3 class="anchored" data-anchor-id="codebook-agreeing-on-meaning">Codebook: Agreeing on meaning</h3>
 <p>It’s important to have common definitions for the meaning of the lightbulbs being on/off to understand messages sent by this method</p>
 <p>CPUs are designed with a <strong>codebook </strong> (instruction set) that defines the commands that we can give to the guy in the box</p>
-<p><a href="_assets/Lecture 4 Understanding CPUs10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="_assets/Lecture 4 Understanding CPUs10.png" class="img-fluid"></a></p>
-<p><a href="_assets/Lecture 4 Understanding CPUs11.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="_assets/Lecture 4 Understanding CPUs11.png" class="img-fluid"></a></p>
-<p><a href="_assets/Lecture 4 Understanding CPUs12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="_assets/Lecture 4 Understanding CPUs12.png" class="img-fluid"></a></p>
-<p><a href="_assets/Lecture 4 Understanding CPUs13.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="_assets/Lecture 4 Understanding CPUs13.png" class="img-fluid"></a></p>
-<p><a href="_assets/Lecture 4 Understanding CPUs14.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="_assets/Lecture 4 Understanding CPUs14.png" class="img-fluid"></a></p>
-<p><a href="_assets/Lecture 4 Understanding CPUs15.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="_assets/Lecture 4 Understanding CPUs15.png" class="img-fluid"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/understanding-cpus10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="A sample caption. Image source: unknown."><img src="_assets/understanding-cpus10.png" title="A sample title." class="img-fluid figure-img" alt="Sample alt text. To be replaced!"></a></p>
+<figcaption>A sample caption. Image source: unknown.</figcaption>
+</figure>
+</div>
 <hr>
 </section>
-<section id="clock-agreeing-on-schedule" class="level1">
-<h1>Clock: agreeing on schedule</h1>
+<section id="clock-agreeing-on-schedule" class="level3">
+<h3 class="anchored" data-anchor-id="clock-agreeing-on-schedule">Clock: Agreeing on schedule</h3>
 <p>Now we are ready to communicate with the guy in the boxWe can send them the first command by lighting up the bulbs on the data bus.</p>
 <p>But how do they know when we have finished setting up the light bulbs?</p>
-<p><a href="_assets/Lecture 4 Understanding CPUs16.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="_assets/Lecture 4 Understanding CPUs16.png" class="img-fluid"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/understanding-cpus16.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="A sample caption. Image source: unknown."><img src="_assets/understanding-cpus16.png" title="A sample title." class="img-fluid figure-img" alt="Sample alt text. To be replaced!"></a></p>
+<figcaption>A sample caption. Image source: unknown.</figcaption>
+</figure>
+</div>
 <hr>
 <ul>
 <li>We can use a bell activated by a button.</li>
-<li>A real computer uses a special wire called the clock wire (CLK). The CLK wire is turned on and off on a precise and regular schedule. This is called a <strong>clock cycle.</strong>
-<ul>
+<li>A real computer uses a special wire called the clock wire (CLK). The CLK wire is turned on and off on a precise and regular schedule. This is called a <strong>clock cycle.</strong></li>
 <li>Each time the clock turns on, the state of our lightbulbs is shared with the guy in the box</li>
 <li>The guy then has until the clock turns off to send a message back</li>
 <li>The next time the clock turns on, a new message is sent to the CPU</li>
-</ul></li>
 <li>The time between each clock cycle is the <strong>speed</strong> that a CPU can perform a given task</li>
 <li>The maximum number of clock cycles a CPU can handle in given period of time is called the clock speed.</li>
 </ul>
-<hr>
 </section>
-<section id="clock-speed-how-to-measure" class="level1">
-<h1>Clock speed: how to measure?</h1>
-<ul>
-<li>Let’s say our guy can perform 4 tasks in one second (that’s pretty fast for some guy!). How can we compare this with other CPUs?</li>
-<li><strong>Unit of Measurement: </strong> Hertz, usually written as <strong>Hz</strong> .
-<ul>
-<li>1Hz: once time per second</li>
-<li>4Hz: four times per second (our guy in the box!)</li>
-</ul></li>
-<li>How fast are modern CPUs compared to this? (Hint: much faster)</li>
-</ul>
-<hr>
-<p>We can use <strong>SI Prefixes </strong> (International System of Unit Prefixes) to compare magnitudes easily.</p>
-<p>You will see many of these in computer science over and over again – get to know them well!</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Unit</th>
-<th style="text-align: center;">Meaning</th>
-<th style="text-align: center;">Numeric Definition</th>
-<th style="text-align: center;">Examples</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">Hz</td>
-<td style="text-align: center;">Once per second</td>
-<td style="text-align: center;">1/s, or 1Hz</td>
-<td style="text-align: center;">1-2Hz: human heart-rate at rest (1Hz = 60 beats per minute, 2Hz = 120 bpm)<br>24Hz: framerate of historic cinema<br>20-60Hz: frequency range for bass notes (C0 = 16.35Hz to C2 = 65.4Hz)<br>60-144Hz: framerate of most monitors</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">kHz</td>
-<td style="text-align: center;">Thousand times per second</td>
-<td style="text-align: center;">1000 Hz</td>
-<td style="text-align: center;">0.1-2kHz: frequency range for midrange notes (A2=0.110kHz, C7=2kHz)<br>20kHz: maximum frequency audible to human ear<br>740 kHz: Intel 4004 processor clock speed (1971)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">MHz</td>
-<td style="text-align: center;">Million times per second</td>
-<td style="text-align: center;">1000000 Hz</td>
-<td style="text-align: center;">8MHz: fastest CPU clock speed in the 70s<br>35MHz: fastest CPU clock speed in the 80s<br>500-1000MHz: fastest CPU clock speed in the 90s)</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">GHz</td>
-<td style="text-align: center;">Billion times per second</td>
-<td style="text-align: center;">1000000000 Hz</td>
-<td style="text-align: center;">2-5GHz: Almost all consumer CPUs in 2024 have base clock speeds in this range<br>9.117 GHz: fastest CPU clock speed ever recorded (2024)</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="cpu-core-components-activity" class="level1">
-<h1>CPU Core Components: Activity</h1>
+<section id="sample-guy-in-a-box-problem" class="level3">
+<h3 class="anchored" data-anchor-id="sample-guy-in-a-box-problem">Sample Guy in a Box Problem</h3>
 <p>Using the following codebook, ask the “Guy in a box” to calculate 2+3</p>
 <p>You must send a series of commandsto the CPU. The CPU will act on each command and give you an answer.</p>
 <p>Your answer should be a <strong>sequence of numbers</strong> you could send to the guy in the box to get the right answer.</p>
-<p><a href="_assets/Lecture 4 Understanding CPUs17.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="_assets/Lecture 4 Understanding CPUs17.png" class="img-fluid"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/understanding-cpus17.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="A sample caption. Image source: unknown."><img src="_assets/understanding-cpus17.png" title="A sample title." class="img-fluid figure-img" alt="Sample alt text. To be replaced!"></a></p>
+<figcaption>A sample caption. Image source: unknown.</figcaption>
+</figure>
+</div>
+<hr>
+<section id="solution" class="level4">
+<h4 class="anchored" data-anchor-id="solution">Solution</h4>
+<pre><code>10000000  The next line is a number, put it in AX
+00000010  The number 2
+10010000  The next line is a number, put it in BX
+00000011  The number 3
+10110000  Add AX to BX and put the result in AX
+11000000  Place the value of AX on the external data bus</code></pre>
+<p>A set of commands such as this is called a program. A program is a series of command sent to a CPU in a specific order for the CPU to perform work.</p>
 <hr>
 </section>
-<section id="cpu-core-components-activity-cont." class="level1">
-<h1>CPU Core Components: Activity (cont.)</h1>
-<p>10000000 The next line is a number, put it in the AX register00000010 The number 210010000 The next line is a number, put it in the BX register00000011 The number 310110000 Add AX to BX and put the result in AX11000000 Place the value of AX on the external data bus</p>
-<p>A set of commands such as this is called a program.A program is a series of command sent to a CPU in a specific order for the CPU to perform work.</p>
-<hr>
 </section>
-<section id="pipelining" class="level1">
-<h1>Pipelining</h1>
+</section>
+<section id="pipelining" class="level2">
+<h2 class="anchored" data-anchor-id="pipelining">Pipelining</h2>
 <ul>
 <li>Almost all CPU instructions feature a set of 4 stages:
 <ul>
@@ -507,37 +481,97 @@ ul.task-list li input[type="checkbox"] {
 <li>Rather than have each instruction repeat all of these steps, we can organize CPUs further by specializing our “guy in a box” for each stage</li>
 <li>This is called <strong>pipelining</strong> , and it allows for greater efficiency in CPU programming</li>
 </ul>
-<p><a href="_assets/Lecture 4 Understanding CPUs18.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="_assets/Lecture 4 Understanding CPUs18.png" class="img-fluid"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/understanding-cpus18.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="A sample caption. Image source: unknown."><img src="_assets/understanding-cpus18.png" title="A sample title." class="img-fluid figure-img" alt="Sample alt text. To be replaced!"></a></p>
+<figcaption>A sample caption. Image source: unknown.</figcaption>
+</figure>
+</div>
 <hr>
 </section>
-<section id="cpu-power-speed-and-bus-width" class="level1">
-<h1>CPU Power: Speed and bus width</h1>
-<ul>
-<li>CPU power is measured by both speed and the amount of data it can process.
-<ul>
-<li><strong>Speed</strong> : is rated in cycles per second, e.g.&nbsp;megahertz (MHz) or gigahertz (GHz).</li>
-<li>The amount of data processed at a time depends on the “number of lightbulbs” or the <strong>width</strong> of the <strong>data bus</strong>
-<ul>
-<li><strong>Bus width </strong> is measured in bits, e.g.&nbsp;8-bit (our example), 16-bit, 32-bit, 64-bit, etc.</li>
-</ul></li>
-</ul></li>
-</ul>
-<hr>
+<section id="cpu-properties" class="level2">
+<h2 class="anchored" data-anchor-id="cpu-properties">CPU Properties</h2>
+<p>The most important properties that define CPU behavior are <strong>speed</strong> and <strong>bus width</strong>: that is, how fast the clock cycle repeats, and how much data per clock cycle the CPU can process.</p>
+<section id="clock-speed" class="level3">
+<h3 class="anchored" data-anchor-id="clock-speed">Clock Speed</h3>
+<p>We measure CPU <strong>speed</strong> : in cycles per second, e.g.&nbsp;megahertz (MHz) or gigahertz (GHz).</p>
+<blockquote class="blockquote">
+<p><strong>Unit of Measurement: </strong> Hertz, usually written as <strong>Hz</strong>, denote frequency. 1Hz is “one time per second”, 10Hz is “ten times per second”.</p>
+</blockquote>
+<p>We can use <strong>SI Prefixes </strong> (International System of Unit Prefixes) to compare magnitudes easily.</p>
+<p>You will see many of these in computer science over and over again – get to know them well!</p>
+<table class="table-striped table-hover caption-top table">
+<caption>SI Prefixes for Frequencies</caption>
+<colgroup>
+<col style="width: 11%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 55%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Unit</th>
+<th style="text-align: left;">Meaning</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Hz</td>
+<td style="text-align: left;">Once per second</td>
+<td style="text-align: left;">1/s, or 1Hz</td>
+<td style="text-align: left;">1-2Hz: human heart-rate at rest (1Hz = 60 beats per minute, 2Hz = 120 bpm)<br>24Hz: framerate of historic cinema<br>20-60Hz: frequency range for bass notes (C0 = 16.35Hz to C2 = 65.4Hz)<br>60-144Hz: framerate of most monitors</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">kHz</td>
+<td style="text-align: left;">Thousand times per second</td>
+<td style="text-align: left;">1000 Hz</td>
+<td style="text-align: left;">0.1-2kHz: frequency range for midrange notes (A2=0.110kHz, C7=2kHz)<br>20kHz: maximum frequency audible to human ear<br>740 kHz: Intel 4004 processor clock speed (1971)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MHz</td>
+<td style="text-align: left;">Million times per second</td>
+<td style="text-align: left;">1000000 Hz</td>
+<td style="text-align: left;">8MHz: fastest CPU clock speed in the 70s<br>35MHz: fastest CPU clock speed in the 80s<br>500-1000MHz: fastest CPU clock speed in the 90s)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">GHz</td>
+<td style="text-align: left;">Billion times per second</td>
+<td style="text-align: left;">1000000000 Hz</td>
+<td style="text-align: left;">2-5GHz: Almost all consumer CPUs in 2024 have base clock speeds in this range<br>9.117 GHz: fastest CPU clock speed ever recorded (2024)</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="data-bus-how-the-cpu-getssends-data" class="level1">
-<h1>Data bus: how the CPU gets/sends data</h1>
-<p><a href="_assets/Lecture 4 Understanding CPUs19.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="_assets/Lecture 4 Understanding CPUs19.png" class="img-fluid"></a></p>
+<section id="bus-width" class="level3">
+<h3 class="anchored" data-anchor-id="bus-width">Bus width</h3>
+<p>The amount of data processed at a time depends on the “number of lightbulbs” or the <strong>width</strong> of the <strong>data bus</strong></p>
+<p><strong>Bus width </strong> is measured in bits, e.g.&nbsp;8-bits, 16-bit, 32-bit, 64-bit, etc.</p>
+<p><strong>Question</strong>: how many bits do you need in <em>bus width</em> to represent the Guy in the Box and their codebook from the previous problems?</p>
+<hr>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/understanding-cpus19.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="A sample caption. Image source: unknown."><img src="_assets/understanding-cpus19.png" title="A sample title." class="img-fluid figure-img" alt="Sample alt text. To be replaced!"></a></p>
+<figcaption>A sample caption. Image source: unknown.</figcaption>
+</figure>
+</div>
 <p>In actual computers, the CPU receives <strong>instructions</strong> , <strong>addresses memory</strong> , and <strong>data</strong> on separate buses.</p>
 <p>This allows the CPU to send AND receive the following information at the same time:</p>
 <p>What command to perform</p>
 <p>Where in memory the result should be stored</p>
 <p>What data to use to perform the command</p>
-<p><a href="_assets/Lecture 4 Understanding CPUs20.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="_assets/Lecture 4 Understanding CPUs20.png" class="img-fluid"></a></p>
-<p><strong>Figure from </strong> <a href="https://www.youtube.com/watch?v=cNN_tTXABUA&amp;">In One Lesson</a> __ on Youtube (nice visualization)__</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/understanding-cpus20.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="A sample caption. Image source: unknown."><img src="_assets/understanding-cpus20.png" title="A sample title." class="img-fluid figure-img" alt="Sample alt text. To be replaced!"></a></p>
+<figcaption>A sample caption. Image source: unknown.</figcaption>
+</figure>
+</div>
+<p><strong>Figure from </strong> <a href="https://www.youtube.com/watch?v=cNN_tTXABUA&amp;">In One Lesson</a> on Youtube (nice visualization)</p>
 <hr>
 </section>
-<section id="data-bus-understanding-speed-vs-width" class="level1">
-<h1>Data Bus: understanding speed vs width</h1>
+<section id="clock-speed-vs-bus-width-compared" class="level3">
+<h3 class="anchored" data-anchor-id="clock-speed-vs-bus-width-compared">Clock Speed vs bus width compared</h3>
 <ul>
 <li>You can double check that you understand a scientific concept by checking what <strong>units of measurement</strong> that concept is measured by:</li>
 <li>Highway
@@ -551,6 +585,22 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Bus speed: </strong> (unit information per time elapsed, e.g.&nbsp;bits/second)</li>
 </ul></li>
 </ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/understanding-cpus21.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="A sample caption. Image source: unknown."><img src="_assets/understanding-cpus21.png" title="A sample title." class="img-fluid figure-img" alt="Sample alt text. To be replaced!"></a></p>
+<figcaption>A sample caption. Image source: unknown.</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="exercises" class="level2">
+<h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
+</section>
+<section id="knowledge-check" class="level2">
+<h2 class="anchored" data-anchor-id="knowledge-check">Knowledge check</h2>
+</section>
+<section id="additional-references" class="level2">
+<h2 class="anchored" data-anchor-id="additional-references">Additional references</h2>
 
 
 </section>
@@ -1149,7 +1199,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":true,"descPosition":"bottom","openEffect":"fade","closeEffect":"fade"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"fade","loop":true,"descPosition":"bottom","closeEffect":"fade"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
