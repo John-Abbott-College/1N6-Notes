@@ -1,5 +1,5 @@
 ---
-date: 2024-10-09
+date: 2024-10-03
 draft: true
 subtitle: Lecture subtitle.
 title: Logic Gates and Boolean Algebra
@@ -27,17 +27,17 @@ conditions.
 But, how do logic gates work?
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra0.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra0.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra1.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra1.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ------------------------------------------------------------------------
 
 ### Physics behind 0s and 1s: Mechanical Relay
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra2.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra2.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 **Mechanical Relays ** **(late 19th/early 20th century)**
 
@@ -50,7 +50,7 @@ unknown.](hardware/_assets/logic-gates-and-boolean-algebra2.png "A sample title.
 allows electrons to pass through when on, otherwise off\_\_
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra3.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra3.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 **Figures from the great PBS youtube series ** *[Crash Course
 Computing](https://www.youtube.com/watch?v=LN0ucKNX0hc&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&index=4)*
@@ -67,7 +67,7 @@ Computing](https://www.youtube.com/watch?v=LN0ucKNX0hc&list=PL8dPuuaLjXtNlUrzyH5
         caused malfunctions!**
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra4.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra4.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 **Figure from the great PBS youtube series ** *[Crash Course
 Computing](https://www.youtube.com/watch?v=LN0ucKNX0hc&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&index=4)*
@@ -87,10 +87,10 @@ air molecules)**
 **Control wire on: electrons flow in the tube, completing the circuit**
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra5.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra5.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra6.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra6.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 **Figures from the great PBS youtube series ** *[Crash Course
 Computing](https://www.youtube.com/watch?v=LN0ucKNX0hc&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&index=4)*
@@ -109,7 +109,7 @@ Computing](https://www.youtube.com/watch?v=LN0ucKNX0hc&list=PL8dPuuaLjXtNlUrzyH5
         **.**
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra7.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra7.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 **1946 ENIAC** \_\_ \_\_ **-- First programmable electronic (stands for
 Electronic Numerical Integrator and Computer). Each ** **"bulb" is an
@@ -120,10 +120,10 @@ individual ** **vacuum tube** **!**
 ### First General-Purpose Computer: ENIAC
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra8.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra8.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra9.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra9.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 **P** **rogrammers Betty Jean Jennings and Fran Bilas at the School of
 Electrical Engineering. The majority of early programmers in America
@@ -144,7 +144,7 @@ Computing](https://www.youtube.com/watch?v=LN0ucKNX0hc&list=PL8dPuuaLjXtNlUrzyH5
 ### The advent of transistors
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra10.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra10.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 Vacuum tubes, though more reliable than relays, were prone to
 breakdowns.
@@ -163,10 +163,10 @@ billion transistors onto a chip of a fingernail **
 ### Physics behind 0s and 1s: Transistors
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra11.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra11.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra12.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra12.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 **Transistors ** **(1947)**
 
@@ -185,7 +185,7 @@ at the time!**
 **Control wire on: electrons flow in the tube, completing the circuit**
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra13.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra13.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 **Figures from the great PBS youtube series ** *[Crash Course
 Computing](https://www.youtube.com/watch?v=LN0ucKNX0hc&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&index=4)*
@@ -193,7 +193,7 @@ Computing](https://www.youtube.com/watch?v=LN0ucKNX0hc&list=PL8dPuuaLjXtNlUrzyH5
 ------------------------------------------------------------------------
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra14.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra14.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 -   **Cons**
     -   **None!**
@@ -214,7 +214,7 @@ reference, a sheet of paper is roughly 100,000 nanometers thick.**
 ### Transistors count in computers
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra15.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra15.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 Number of transistors in an integrated circuit (IC) doubles every two
 years. **Moore's Law**
@@ -234,10 +234,10 @@ Physical limits of transistors
         circuits.
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra16.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra16.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra17.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra17.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ------------------------------------------------------------------------
 
@@ -292,7 +292,7 @@ unknown.](hardware/_assets/logic-gates-and-boolean-algebra17.png "A sample title
 ### Logic Gate, Truth Tables, Boolean Algebra
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra18.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra18.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 **Using ** Truth Tables \_\_ we can use different sets of logic
 operations to store, add, subtract, and perform more complicated
@@ -306,7 +306,7 @@ gate to help us understand digital circuits analytically**
 ### Boolean Operations: AND Gate
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra19.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra19.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 -   **Truth Table (1 = TRUE, 0 = FALSE)**
 -   **Inputs Output ** *A* \_ B A⋅B\_
@@ -322,16 +322,16 @@ unknown.](hardware/_assets/logic-gates-and-boolean-algebra19.png "A sample title
     -   A⋅B, A\^B, A&&B, A and B
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra20.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra20.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra21.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra21.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra22.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra22.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra23.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra23.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ------------------------------------------------------------------------
 
@@ -364,7 +364,7 @@ Output: On (True)
 ### Boolean Operations: OR Gate
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra24.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra24.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 -   **Truth Table (1 = TRUE, 0 = FALSE)**
 -   **Inputs Output ** *A B A⋅B*
@@ -380,16 +380,16 @@ unknown.](hardware/_assets/logic-gates-and-boolean-algebra24.png "A sample title
     -   A+B, A⋁B , A\|\|B, A or B
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra25.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra25.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra26.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra26.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra27.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra27.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra28.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra28.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ------------------------------------------------------------------------
 
@@ -421,10 +421,10 @@ Output: On (True)
 ### Boolean Operations: NOT
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra29.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra29.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra30.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra30.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 -   **Truth Table**
 -   **Inputs Outputs**
@@ -441,7 +441,7 @@ unknown.](hardware/_assets/logic-gates-and-boolean-algebra30.png "A sample title
     -   A', !A , Ā, ¬A, \~A, not A
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra31.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra31.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ------------------------------------------------------------------------
 
@@ -468,7 +468,7 @@ Current flows to the output wire, so output is On (True)
 ### Boolean Operations: XOR Gate
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra32.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra32.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 -   **Truth Table**
 -   *Inputs* *Outputs*
@@ -484,16 +484,16 @@ unknown.](hardware/_assets/logic-gates-and-boolean-algebra32.png "A sample title
     -   A **⊕** B, A⊻B , A xor B
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra33.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra33.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra34.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra34.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra35.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra35.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra36.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra36.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ------------------------------------------------------------------------
 
@@ -503,10 +503,10 @@ unknown.](hardware/_assets/logic-gates-and-boolean-algebra36.png "A sample title
 but we can by combining AND, OR, and NOT gates!**
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra37.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra37.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra38.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra38.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 **Both of the images above are the same combination of gates; the only
 difference is the input values**
@@ -522,7 +522,7 @@ difference is the input values**
 How do these logic gates help our guy in the box?
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra39.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra39.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ------------------------------------------------------------------------
 
@@ -538,35 +538,35 @@ To see this, we will study the CPU's **Arithmetic Logic Unit** ( **ALU**
 subtraction, etc.)
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra40.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra40.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra41.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra41.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra42.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra42.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra43.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra43.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra44.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra44.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra45.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra45.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra46.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra46.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra47.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra47.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ------------------------------------------------------------------------
 
 ### The CPU Arithmetic Logic Unit
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra48.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra48.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 -   The ALU is made up of a combination of logic circuits paced at the
     clock signal. The ALU is able to perform operations such as:
@@ -584,7 +584,7 @@ unknown.](hardware/_assets/logic-gates-and-boolean-algebra48.jpg "A sample title
 ------------------------------------------------------------------------
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra49.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra49.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 -   Let's start from the top:
     -   **Add**
@@ -594,7 +594,7 @@ unknown.](hardware/_assets/logic-gates-and-boolean-algebra49.jpg "A sample title
 ------------------------------------------------------------------------
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra50.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra50.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 -   Let's start from the top:
     -   **Add**
@@ -694,7 +694,7 @@ bit of the output**
 ### Half Adder Gate: Adding two bits
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra51.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra51.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 **What gates give us the table below?**
 
@@ -717,7 +717,7 @@ Let's call the 2's column C = Carry
 ------------------------------------------------------------------------
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra52.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra52.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 **What gates give us the table below?**
 
@@ -740,7 +740,7 @@ Let's call the 2's column C = Carry
 ------------------------------------------------------------------------
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra53.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra53.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 Inputs: A, B
 
@@ -769,13 +769,13 @@ C = Carry
 *A* \_\_ + \_\_ *B* \_\_ = \_\_ *2's* \_\_ \_\_ *1's*
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra54.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra54.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra55.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra55.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra56.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra56.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ------------------------------------------------------------------------
 
@@ -790,13 +790,13 @@ C = Carry
 **0 + 0 = 0 0**
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra57.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra57.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra58.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra58.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra59.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra59.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ------------------------------------------------------------------------
 
@@ -811,13 +811,13 @@ C = Carry
 **0 + 1 = 0 1**
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra60.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra60.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra61.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra61.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra62.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra62.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ------------------------------------------------------------------------
 
@@ -832,13 +832,13 @@ C = Carry
 **1 + 0 = 0 1**
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra63.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra63.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra64.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra64.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra65.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra65.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ------------------------------------------------------------------------
 
@@ -853,13 +853,13 @@ C = Carry
 **1 + 1 = 1 0**
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra66.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra66.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra67.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra67.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra68.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra68.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ------------------------------------------------------------------------
 
@@ -868,15 +868,15 @@ unknown.](hardware/_assets/logic-gates-and-boolean-algebra68.png "A sample title
 Why do we call it a half adder?
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra69.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra69.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra70.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra70.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ------------------------------------------------------------------------
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra71.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra71.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
    A   B   Cin   S   Cout
   --- --- ----- --- ------
@@ -893,14 +893,14 @@ unknown.](hardware/_assets/logic-gates-and-boolean-algebra71.png "A sample title
 ### 8 bits Full adders
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra72.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra72.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ------------------------------------------------------------------------
 
 ### Marble Adding Machine
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra73.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra73.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 http://www.youtube.com/watch?v=GcDshWmhF4A&NR=1&feature=fvwp
 
@@ -909,7 +909,7 @@ http://www.youtube.com/watch?v=GcDshWmhF4A&NR=1&feature=fvwp
 ### This is a 4-bit CPU
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/logic-gates-and-boolean-algebra74.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/logic-gates-and-boolean-algebra74.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ------------------------------------------------------------------------
 

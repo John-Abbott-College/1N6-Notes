@@ -1,5 +1,5 @@
 ---
-date: 2024-10-09
+date: 2024-09-24
 draft: true
 subtitle: Lecture subtitle.
 title: Introduction to Binary
@@ -7,94 +7,85 @@ title: Introduction to Binary
 
 ## Introduction
 
-## Lesson Overview
-
-Binary System
-
-Representing Numbers in Binary
-
-Representing Text in Binary
-
-## Lesson Content
-
-### Outline
-
-### The Binary System
-
 Everyone "knows" that computers use "binary" to operate
 
 But, as we saw last class, computers don't "know" anything --
 ultimately, its CPU is just configured to react in particularly
-sophisticated ways when its switches (the lightbulbs) are turned **on**
-or **off**
+sophisticated ways when its switches (the lightbulbs for the "guy in the box") are turned **on**
+or **off**.
 
 So what is binary anyway? And what does it have to do with computers?
 
 In order to understand the **Binary** numeral system, we can compare it
 to something we already know: the **Decimal** numeral system.
 
-------------------------------------------------------------------------
+## Lesson Overview
 
--   In **decimal** , numbers are represented by combinations of **ten **
-    different symbols: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9). We call decimal a
-    **base 10 ** numeral system.
--   If we have more than "9" of something, another **digit** is needed:
-    -   9 + 1 = 10
-    -   99 + 1 = 100, etc.
--   How do we represent numbers in binary?
+- Numeric Systems: Binary vs. Decimal
+- Representing Numbers in Binary
+- Representing Text in Binary
 
-------------------------------------------------------------------------
+## Lesson Content
 
--   In **binary** , there are only **two ** symbols (0, 1). We call
-    binary a **base 2** numeral system.
--   So if we have more than "1" of something, another **bit** is needed:
-    -   1 + 1 = 10 (in english: one plus one equals two)
-    -   11 + 1 = 100 (in english: three plus one equals four)
--   It's counterintuitive at first! But there's nothing fundamentally
-    different about binary than decimal -- we're just more used to using
-    decimal instead.
+### Decimal System
 
-------------------------------------------------------------------------
+In **decimal** , numbers are represented by combinations of **ten ** different symbols: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9).
 
--   Since we're reusing symbols from the decimal system, there is a
-    convention to use **subscript** to disambiguate between different
-    numeral systems
-    -   **1** **2** \_\_ + 1\_\_ **2** \_\_ = 10\_\_ **2** is the same
-        as **1** **10** \_\_ + 1\_\_ **10** \_\_ = 2\_\_ **10** \_\_
-        \_\_ is the same as **one plus one equals two**
-    -   **11** **2** \_\_ + 1\_\_ **2** \_\_ = 100\_\_ **2** \_\_ \_\_
-        is the same as **3** **10** \_\_ + 1\_\_ **10** \_\_ = 4\_\_
-        **10** \_\_ \_\_ is the same as \_\_ three plus one equals
-        four\_\_
--   This is not always required, but can be useful when the numeral
-    systems are mixed in the same context.
+We call decimal a **base 10 ** numeral system.
 
-------------------------------------------------------------------------
+> If we have more than "9" of something, another **digit** is needed:
+>
+>   - 9 + 1 = 10
+>   - 99 + 1 = 100, etc.
 
-Note: binary and decimal are not the only possible numeral systems. All
-that distinguishes numeral systems is the number of symbols you agree to
-use to represent numbers -- there are infinite possible numeral systems!
+How do we represent numbers in binary?
 
-Hexadecimal is another useful numeral system (16 symbols, or **base 16**
-) which we will discuss later
+### Binary System
+
+In **binary** , there are only **two ** symbols (0, 1). 
+
+We call binary a **base 2** numeral system.
+
+> If we have more than "1" of something, another **bit** is needed:
+>
+>
+> - 1 + 1 = 10 (in english: one plus one equals two)
+> - 11 + 1 = 100 (in english: three plus one equals four)
+
+It's counterintuitive at first! But there's nothing fundamentally different about binary than decimal -- we're just more used to using decimal instead.
 
 ------------------------------------------------------------------------
 
-### BIT -- BInary digiT
+Since we're reusing the symbols 1 and 0 from the decimal system, there is a convention to use **subscript** to disambiguate between different numeral systems:
 
--   **So what does Binary have to do with computers?**
--   **Bit** (Binary Digit) is the basic unit of information representing
-    one of two discrete states.
-    -   The smallest unit of information within the computer.
--   Bit has one of two values:
-    -   *0 (off) or 1 (on)*
-    -   *0 (False) or 1 (True)*
+> - **1~2~ + 1~2~ = 10~2~** is the same as 1~10~ + 1~10~ = 2~10~ is the same as **one plus one equals two**
+>
+> - **11~2~ + 1~2~ = 100~2~** is the same as 3~10~ + 1~10~ = 4~10~ is the same as **three plus one equals four**
+
+These subscripts are not always required, but can be very useful when the numeral systems are mixed in the same context.
+
+------------------------------------------------------------------------
+
+Note: binary and decimal are not the only possible numeral systems. All that distinguishes numeral systems is the number of symbols you agree to use to represent numbers -- there are infinite possible numeral systems!
+
+Hexadecimal is another useful numeral system (16 symbols, or **base 16**) which we will discuss later
+
+------------------------------------------------------------------------
+
+### Bits: BInary digiTs
+
+**So what does Binary have to do with computers?**
+
+- **Bit** (Binary Digit) is the basic unit of information representing one of two discrete states. It is the smallest unit of information within the computer.
+- Bits have one of two values:
+  - *0 (off) or 1 (on)*
+  - *0 (False) or 1 (True)*
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/data-representation0.gif "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/data-representation0.gif "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/data-representation1.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/data-representation1.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ------------------------------------------------------------------------
 
@@ -114,11 +105,9 @@ Data is transmitted over telephone line or radio link using high- and
 low-pitched tones.
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/data-representation2.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/data-representation2.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
-------------------------------------------------------------------------
-
-### Byte
+### Bytes
 
 A Byte is a collection of bits known as the unit of digital information.
 
@@ -127,11 +116,11 @@ A Byte is a collection of bits known as the unit of digital information.
 Abbreviation: **B**
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/data-representation3.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/data-representation3.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ------------------------------------------------------------------------
 
-### Byte History
+#### History
 
 -   The byte represents the number of bits used to encode one
     **character** in a computer and hence it is the smallest addressable
@@ -143,7 +132,7 @@ unknown.](hardware/_assets/data-representation3.jpg "A sample title."){fig-alt="
 
 ------------------------------------------------------------------------
 
-### SI Prefixes: Scale
+### SI Prefixes
 
 -   1 byte ( **B** )
 -   **Kilo** byte (KB) = 1,000 bytes
@@ -170,7 +159,7 @@ unknown.](hardware/_assets/data-representation3.jpg "A sample title."){fig-alt="
 -   https://en.wikipedia.org/wiki/Byteb
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/data-representation4.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/data-representation4.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 Note: the difference between SI and Non-SI systems start small, but grow
 in significance at larger sizes of storage. See
@@ -762,7 +751,7 @@ What age is Aang in Hexadecimal(if he is indeed 18 in decimal?)
 \_\_ 18 \_\_ \_\_ \_\_
 
 ![A sample caption. Image source:
-unknown.](hardware/_assets/data-representation5.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+unknown.](_assets/data-representation5.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ------------------------------------------------------------------------
 
