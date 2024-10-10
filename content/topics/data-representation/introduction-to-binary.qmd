@@ -1,5 +1,6 @@
 ---
 date: 2024-09-24
+draft: true
 subtitle: Lecture subtitle.
 title: Introduction to Binary
 ---
