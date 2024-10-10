@@ -1,6 +1,5 @@
 ---
 date: 2024-09-24
-draft: true
 subtitle: Lecture subtitle.
 title: Introduction to Binary
 ---
@@ -27,7 +26,9 @@ to something we already know: the **Decimal** numeral system.
 
 ## Lesson Content
 
-### Decimal System
+### What is Binary?
+
+#### Decimal Numbers
 
 In **decimal** , numbers are represented by combinations of **ten ** different symbols: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9).
 
@@ -40,7 +41,7 @@ We call decimal a **base 10 ** numeral system.
 
 How do we represent numbers in binary?
 
-### Binary System
+#### Binary Numbers
 
 In **binary** , there are only **two ** symbols (0, 1). 
 
@@ -58,23 +59,19 @@ It's counterintuitive at first! But there's nothing fundamentally different abou
 
 Since we're reusing the symbols 1 and 0 from the decimal system, there is a convention to use **subscript** to disambiguate between different numeral systems:
 
-> - **1~2~ + 1~2~ = 10~2~** is the same as 1~10~ + 1~10~ = 2~10~ is the same as **one plus one equals two**
+> - **1~2~ + 1~2~ = 10~2~** is the same as **1~10~ + 1~10~ = 2~10~** is the same as **one plus one equals two**
 >
-> - **11~2~ + 1~2~ = 100~2~** is the same as 3~10~ + 1~10~ = 4~10~ is the same as **three plus one equals four**
+> - **11~2~ + 1~2~ = 100~2~** is the same as **3~10~ + 1~10~ = 4~10~** is the same as **three plus one equals four**
 
 These subscripts are not always required, but can be very useful when the numeral systems are mixed in the same context.
 
-------------------------------------------------------------------------
-
 Note: binary and decimal are not the only possible numeral systems. All that distinguishes numeral systems is the number of symbols you agree to use to represent numbers -- there are infinite possible numeral systems!
 
-Hexadecimal is another useful numeral system (16 symbols, or **base 16**) which we will discuss later
+**Hexadecimal** is another useful numeral system (16 symbols, or **base 16**) which we will discuss later
 
-------------------------------------------------------------------------
+#### Bits: BInary digiTs
 
-### Bits: BInary digiTs
-
-**So what does Binary have to do with computers?**
+So what does binary have to do with computers?
 
 - **Bit** (Binary Digit) is the basic unit of information representing one of two discrete states. It is the smallest unit of information within the computer.
 - Bits have one of two values:
@@ -84,43 +81,32 @@ Hexadecimal is another useful numeral system (16 symbols, or **base 16**) which 
 ![A sample caption. Image source:
 unknown.](_assets/data-representation0.gif "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
-![A sample caption. Image source:
-unknown.](_assets/data-representation1.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
-
 ------------------------------------------------------------------------
 
-### How are Bits Represented in a Computer?
+#### How are Bits Represented in a Computer?
 
-A transistor that is switched on or off
+There are many ways we can design circuits that reliably tell the difference between on/off:
 
-A capacitor that is charged or discharged.
+- A **transistor** that is switched on or off.
+- A **capacitor** that is charged or discharged.
+- On magnetic disks (HDD): bits are represented by direction of the magnetic field (N-S, S-N).
+- On optical discs (CD-ROM): bits are represented optically (a bit on the surface is either shiny or not shiny).
+- Over telephone lines/radio: bits represented using high/low-pitched tones.
 
-On magnetic disks bits are represented by direction of the magnetic
-field (N-S, S-N).
-
-Optical discs store bits optically (a bit on the surface is either shiny
-or not shiny).
-
-Data is transmitted over telephone line or radio link using high- and
-low-pitched tones.
-
-![A sample caption. Image source:
-unknown.](_assets/data-representation2.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
-
-### Bytes
+#### Bytes
 
 A Byte is a collection of bits known as the unit of digital information.
 
 1 Byte = 8 bits
 
-Abbreviation: **B**
+Abbreviation: **B**. E.g. **4B** of storage means **4 Bytes** means **32 bits**.
 
 ![A sample caption. Image source:
 unknown.](_assets/data-representation3.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 ------------------------------------------------------------------------
 
-#### History
+##### History
 
 -   The byte represents the number of bits used to encode one
     **character** in a computer and hence it is the smallest addressable
@@ -132,7 +118,7 @@ unknown.](_assets/data-representation3.jpg "A sample title."){fig-alt="Sample al
 
 ------------------------------------------------------------------------
 
-### SI Prefixes
+#### Scale: SI Prefixes
 
 -   1 byte ( **B** )
 -   **Kilo** byte (KB) = 1,000 bytes
@@ -144,11 +130,11 @@ unknown.](_assets/data-representation3.jpg "A sample title."){fig-alt="Sample al
 -   **Tera** byte (TB) = 1,000,000,000,000
     -   "one *trillion* bytes"
 
-*<https://www.nist.gov/pml/owm/metric-si-prefixes>* \_\_ \_\_
+<https://www.nist.gov/pml/owm/metric-si-prefixes>
 
 ------------------------------------------------------------------------
 
-### Non SI-Prefixes: Powers of 2
+#### Non SI-Prefixes: Powers of 2
 
 -   1 byte ( **B** )
 -   **Kibi** byte (KiB) = 1,024 bytes (210) = 1.024KB
@@ -156,20 +142,14 @@ unknown.](_assets/data-representation3.jpg "A sample title."){fig-alt="Sample al
 -   **Mebi** byte (MiB) = 1,048,576 bytes (220) = 1.048 MB
 -   **Gibi** byte (GiB) = 1,073,741,824 bytes (230) = 1.073 GB
 -   **Tebi** byte (TiB) = 1,099,511,627,776 bytes (240) = 1.1 TB
--   https://en.wikipedia.org/wiki/Byteb
 
-![A sample caption. Image source:
-unknown.](_assets/data-representation4.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+<https://en.wikipedia.org/wiki/Byte#Multiple-byte_units>
 
-Note: the difference between SI and Non-SI systems start small, but grow
+![Note: the difference between SI and Non-SI systems start small, but grow
 in significance at larger sizes of storage. See
-*<https://superuser.com/a/433216>* for a thorough explanation
+*<https://superuser.com/a/433216>* for a thorough explanation](_assets/data-representation4.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
-------------------------------------------------------------------------
-
-### Representing Numbers in Binary
-
-------------------------------------------------------------------------
+## Representing Numbers in Binary
 
 ### Converting Binary to Decimal
 
@@ -192,67 +172,73 @@ What about larger numbers? How can we approach this problem
 systematically, i.e., use a defined method to confidently get the
 correct answer every time?
 
-                 Binary                 Decimal
-  ------------------------------------ ---------
-   1001`<br />`{=html}`<br />`{=html}  
-         1101101`<br />`{=html}        
-         1000001`<br />`{=html}        
-         1111111`<br />`{=html}        
-     100000011000001`<br />`{=html}    
+| Binary | Decimal |
+| :-: | :-: |
+| 1001 | 9 |
+| 1101101 | ? |
+| 1111111 | ? |
+| 100000011000001 | ? |
+
+After this lecture, you will have the tools to confidently fill out the rest of this table yourself!
 
 ------------------------------------------------------------------------
 
 Well, how do we do it for decimals? A large number, like 2608, is in
-fact **the combination of multiples of powers of ten** . When we say
+fact **the combination of multiples of powers of ten**. When we say
 these numbers in English, we naturally **decompose** the number into its
 component parts:
 
-2608 is **two thousand, six hundred, and eight.**
+> 2608 is **two thousand, six hundred, and eight.**
 
 Or, in other words:
 
-2608 = **2 x 10** **3** \_\_ + 6x10\_\_ **2** \_\_ + 0x10\_\_ **1**
-\_\_ + 8x10\_\_ **0**
+> 2608 = 2x1000 + 2x100 + 0x10 + 8x1
+>
+> 2608 = **2x10^3^ + 6x10^2^ + 0x10^1^ + 8x10^0^**
 
 We can use this exact method, with one key difference, to decompose the
 value of binary numbers just like decimal numbers.
 
-What key difference? (powers of 2 instead of powers of 10)
+What key difference? In Binary, we use **powers of 2 instead of powers of 10**.
 
 ------------------------------------------------------------------------
 
-Find the power of 2 value for each bit of the binary number, starting
-from 0.(e.g., the power of 2 value for the 5th bit of a binary number
-is: 25=32, etc.)
+#### Example
 
-Add all the powers of two **wherever there is a 1** in the bit of the
+To convert a decimal number to binary: 
+
+1. Find the power of 2 value for each bit of the binary number, starting
+from 0.(e.g., the power of 2 value for the 5th bit of a binary number
+is: 2^5^=32, etc.)
+
+2. Add all the powers of two **wherever there is a 1** in the bit of the
 binary number
 
-The sum of the powers of two above is the value of the binary number in
+3. The sum of the powers of two above is the value of the binary number in
 decimal!
 
-   Binary Number          1          1    0    0    1
-  --------------- ----------------- ---- ---- ---- ----
-      Step 1              4          3    2    1    0
-      Step 2             24          23   22   21   20
-                         16          8    4    2    1
-      Step 3       16 + 8 + 1 = 25                 
 
-------------------------------------------------------------------------
+| Binary Number | 1 | 1 | 0 | 0 | 1 |
+| :----- | :-: | :-: | :-: | :-: | :-: |
+| Step 1: identify each bit | 4th bit | 3rd bit | 2nd bit | 1st bit | 0th bit |
+| Step 2: power of 2 | 2^4^ | 2^3^  | 2^2^ | 2^1^ | 2^0^ |
+| Step 3: If == 1, include value in sum | 16 | 8 | 0 | 0 | 1 |
+| Step 4: Add all terms | 16 + 8 + 1 = **25** |||
 
-### Exercise: Converting Binary to Decimal
+Therefore, **11001~2~=25~10~**.
 
-Convert the following binary numbers to decimal:
 
-1001
+#### Practise problems
 
-1101101
+Convert the following binary numbers to decimal using the method above.
 
-1000001
+- 1001
+- 1101101
+- 1000001
+- 1111111
+- 100000011000001
 
-1111111
-
-100000011000001
+Check your answers (you can google search "1001 binary to decimal" or similar to get an answer)
 
 ------------------------------------------------------------------------
 
