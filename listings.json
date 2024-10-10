@@ -4,15 +4,6 @@
     "items": []
   },
   {
-    "listing": "/topics/all-lectures.html",
-    "items": [
-      "/topics/hardware/introduction-to-computers.html",
-      "/topics/hardware/external-components.html",
-      "/topics/hardware/internal-components.html",
-      "/topics/hardware/understanding-cpus.html"
-    ]
-  },
-  {
     "listing": "/topics/hardware/index.html",
     "items": [
       "/topics/hardware/introduction-to-computers.html",
@@ -22,18 +13,21 @@
     ]
   },
   {
-    "listing": "/announcements/index.html",
+    "listing": "/topics/data-representation/index.html",
+    "items": []
+  },
+  {
+    "listing": "/topics/all-lectures.html",
     "items": [
-      "/announcements/2024-08-27-class-cancelled.html"
+      "/topics/hardware/introduction-to-computers.html",
+      "/topics/hardware/external-components.html",
+      "/topics/hardware/internal-components.html",
+      "/topics/hardware/understanding-cpus.html"
     ]
   },
   {
-    "listing": "/about/index.html",
-    "items": [
-      "/about/this-site.html",
-      "/about/calendar.html",
-      "/about/syllabus.html"
-    ]
+    "listing": "/topics/technical-support/index.html",
+    "items": []
   },
   {
     "listing": "/topics/index.html",
@@ -45,11 +39,17 @@
     ]
   },
   {
-    "listing": "/topics/data-representation/index.html",
-    "items": []
+    "listing": "/about/index.html",
+    "items": [
+      "/about/this-site.html",
+      "/about/calendar.html",
+      "/about/syllabus.html"
+    ]
   },
   {
-    "listing": "/topics/technical-support/index.html",
-    "items": []
+    "listing": "/announcements/index.html",
+    "items": [
+      "/announcements/2024-08-27-class-cancelled.html"
+    ]
   }
 ]

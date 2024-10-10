@@ -11,7 +11,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
-  <meta name="dcterms.date" content="2024-10-09">
+  <meta name="dcterms.date" content="2024-09-24">
   <title>{{&lt; var course.title &gt;}} – Introduction to Binary</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -338,76 +338,69 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">2024-10-09</p>
+  <p class="date">2024-09-24</p>
 </section>
 <section id="introduction" class="slide level2">
 <h2>Introduction</h2>
-</section>
-<section id="lesson-overview" class="slide level2">
-<h2>Lesson Overview</h2>
-<p>Binary System</p>
-<p>Representing Numbers in Binary</p>
-<p>Representing Text in Binary</p>
-</section>
-<section id="lesson-content" class="slide level2">
-<h2>Lesson Content</h2>
-<h3 id="outline">Outline</h3>
-<h3 id="the-binary-system">The Binary System</h3>
 <p>Everyone “knows” that computers use “binary” to operate</p>
-<p>But, as we saw last class, computers don’t “know” anything – ultimately, its CPU is just configured to react in particularly sophisticated ways when its switches (the lightbulbs) are turned <strong>on</strong> or <strong>off</strong></p>
+<p>But, as we saw last class, computers don’t “know” anything – ultimately, its CPU is just configured to react in particularly sophisticated ways when its switches (the lightbulbs for the “guy in the box”) are turned <strong>on</strong> or <strong>off</strong>.</p>
 <p>So what is binary anyway? And what does it have to do with computers?</p>
 <p>In order to understand the <strong>Binary</strong> numeral system, we can compare it to something we already know: the <strong>Decimal</strong> numeral system.</p>
 </section>
-<section class="slide level2">
-
+<section id="lesson-overview" class="slide level2">
+<h2>Lesson Overview</h2>
 <ul>
-<li>In <strong>decimal</strong> , numbers are represented by combinations of <strong>ten </strong> different symbols: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9). We call decimal a <strong>base 10 </strong> numeral system.</li>
-<li>If we have more than “9” of something, another <strong>digit</strong> is needed:
+<li>Numeric Systems: Binary vs.&nbsp;Decimal</li>
+<li>Representing Numbers in Binary</li>
+<li>Representing Text in Binary</li>
+</ul>
+</section>
+<section id="lesson-content" class="slide level2">
+<h2>Lesson Content</h2>
+<h3 id="decimal-system">Decimal System</h3>
+<p>In <strong>decimal</strong> , numbers are represented by combinations of <strong>ten </strong> different symbols: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9).</p>
+<p>We call decimal a <strong>base 10 </strong> numeral system.</p>
+<blockquote>
+<p>If we have more than “9” of something, another <strong>digit</strong> is needed:</p>
 <ul>
 <li>9 + 1 = 10</li>
 <li>99 + 1 = 100, etc.</li>
-</ul></li>
-<li>How do we represent numbers in binary?</li>
 </ul>
-</section>
-<section class="slide level2">
-
-<ul>
-<li>In <strong>binary</strong> , there are only <strong>two </strong> symbols (0, 1). We call binary a <strong>base 2</strong> numeral system.</li>
-<li>So if we have more than “1” of something, another <strong>bit</strong> is needed:
+</blockquote>
+<p>How do we represent numbers in binary?</p>
+<h3 id="binary-system">Binary System</h3>
+<p>In <strong>binary</strong> , there are only <strong>two </strong> symbols (0, 1).</p>
+<p>We call binary a <strong>base 2</strong> numeral system.</p>
+<blockquote>
+<p>If we have more than “1” of something, another <strong>bit</strong> is needed:</p>
 <ul>
 <li>1 + 1 = 10 (in english: one plus one equals two)</li>
 <li>11 + 1 = 100 (in english: three plus one equals four)</li>
-</ul></li>
-<li>It’s counterintuitive at first! But there’s nothing fundamentally different about binary than decimal – we’re just more used to using decimal instead.</li>
 </ul>
+</blockquote>
+<p>It’s counterintuitive at first! But there’s nothing fundamentally different about binary than decimal – we’re just more used to using decimal instead.</p>
 </section>
 <section class="slide level2">
 
+<p>Since we’re reusing the symbols 1 and 0 from the decimal system, there is a convention to use <strong>subscript</strong> to disambiguate between different numeral systems:</p>
 <ul>
-<li>Since we’re reusing symbols from the decimal system, there is a convention to use <strong>subscript</strong> to disambiguate between different numeral systems
-<ul>
-<li><strong>1</strong> <strong>2</strong> __ + 1__ <strong>2</strong> __ = 10__ <strong>2</strong> is the same as <strong>1</strong> <strong>10</strong> __ + 1__ <strong>10</strong> __ = 2__ <strong>10</strong> __ __ is the same as <strong>one plus one equals two</strong></li>
-<li><strong>11</strong> <strong>2</strong> __ + 1__ <strong>2</strong> __ = 100__ <strong>2</strong> __ __ is the same as <strong>3</strong> <strong>10</strong> __ + 1__ <strong>10</strong> __ = 4__ <strong>10</strong> __ __ is the same as __ three plus one equals four__</li>
-</ul></li>
-<li>This is not always required, but can be useful when the numeral systems are mixed in the same context.</li>
+<li class="fragment"><p><strong>1<sub>2</sub> + 1<sub>2</sub> = 10<sub>2</sub></strong> is the same as 1<sub>10</sub> + 1<sub>10</sub> = 2<sub>10</sub> is the same as <strong>one plus one equals two</strong></p></li>
+<li class="fragment"><p><strong>11<sub>2</sub> + 1<sub>2</sub> = 100<sub>2</sub></strong> is the same as 3<sub>10</sub> + 1<sub>10</sub> = 4<sub>10</sub> is the same as <strong>three plus one equals four</strong></p></li>
 </ul>
+<p>These subscripts are not always required, but can be very useful when the numeral systems are mixed in the same context.</p>
 </section>
 <section class="slide level2">
 
 <p>Note: binary and decimal are not the only possible numeral systems. All that distinguishes numeral systems is the number of symbols you agree to use to represent numbers – there are infinite possible numeral systems!</p>
-<p>Hexadecimal is another useful numeral system (16 symbols, or <strong>base 16</strong> ) which we will discuss later</p>
+<p>Hexadecimal is another useful numeral system (16 symbols, or <strong>base 16</strong>) which we will discuss later</p>
 </section>
 <section class="slide level2">
 
-<h3 id="bit-binary-digit">BIT – BInary digiT</h3>
+<h3 id="bits-binary-digits">Bits: BInary digiTs</h3>
+<p><strong>So what does Binary have to do with computers?</strong></p>
 <ul>
-<li><strong>So what does Binary have to do with computers?</strong></li>
-<li><strong>Bit</strong> (Binary Digit) is the basic unit of information representing one of two discrete states.
-<ul>
-<li>The smallest unit of information within the computer.</li>
-</ul></li>
-<li>Bit has one of two values:
+<li><strong>Bit</strong> (Binary Digit) is the basic unit of information representing one of two discrete states. It is the smallest unit of information within the computer.</li>
+<li>Bits have one of two values:
 <ul>
 <li><em>0 (off) or 1 (on)</em></li>
 <li><em>0 (False) or 1 (True)</em></li>
@@ -415,13 +408,13 @@
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="hardware/_assets/data-representation0.gif" title="A sample title." alt="Sample alt text. To be replaced!"></p>
+<p><img data-src="_assets/data-representation0.gif" title="A sample title." alt="Sample alt text. To be replaced!"></p>
 <figcaption>A sample caption. Image source: unknown.</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="hardware/_assets/data-representation1.png" title="A sample title." alt="Sample alt text. To be replaced!"></p>
+<p><img data-src="_assets/data-representation1.png" title="A sample title." alt="Sample alt text. To be replaced!"></p>
 <figcaption>A sample caption. Image source: unknown.</figcaption>
 </figure>
 </div>
@@ -434,19 +427,26 @@
 <p>On magnetic disks bits are represented by direction of the magnetic field (N-S, S-N).</p>
 <p>Optical discs store bits optically (a bit on the surface is either shiny or not shiny).</p>
 <p>Data is transmitted over telephone line or radio link using high- and low-pitched tones.</p>
-
-<img data-src="hardware/_assets/data-representation2.png" title="A sample title." alt="Sample alt text. To be replaced!" class="r-stretch quarto-figure-center"><p class="caption">A sample caption. Image source: unknown.</p></section>
-<section class="slide level2">
-
-<h3 id="byte">Byte</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_assets/data-representation2.png" title="A sample title." alt="Sample alt text. To be replaced!"></p>
+<figcaption>A sample caption. Image source: unknown.</figcaption>
+</figure>
+</div>
+<h3 id="bytes">Bytes</h3>
 <p>A Byte is a collection of bits known as the unit of digital information.</p>
 <p>1 Byte = 8 bits</p>
 <p>Abbreviation: <strong>B</strong></p>
-
-<img data-src="hardware/_assets/data-representation3.jpg" title="A sample title." alt="Sample alt text. To be replaced!" class="r-stretch quarto-figure-center"><p class="caption">A sample caption. Image source: unknown.</p></section>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_assets/data-representation3.jpg" title="A sample title." alt="Sample alt text. To be replaced!"></p>
+<figcaption>A sample caption. Image source: unknown.</figcaption>
+</figure>
+</div>
+</section>
 <section class="slide level2">
 
-<h3 id="byte-history">Byte History</h3>
+<h4 id="history">History</h4>
 <ul>
 <li>The byte represents the number of bits used to encode one <strong>character</strong> in a computer and hence it is the smallest addressable unit of memory in several computer architectures.</li>
 <li>Size of a byte has been hardware dependent and no definitive standards existed that mandated the size.</li>
@@ -458,7 +458,7 @@
 </section>
 <section class="slide level2">
 
-<h3 id="si-prefixes-scale">SI Prefixes: Scale</h3>
+<h3 id="si-prefixes">SI Prefixes</h3>
 <ul>
 <li>1 byte ( <strong>B</strong> )</li>
 <li><strong>Kilo</strong> byte (KB) = 1,000 bytes
@@ -495,7 +495,7 @@
 <li>https://en.wikipedia.org/wiki/Byteb</li>
 </ul>
 
-<img data-src="hardware/_assets/data-representation4.png" title="A sample title." alt="Sample alt text. To be replaced!" class="r-stretch quarto-figure-center"><p class="caption">A sample caption. Image source: unknown.</p><p>Note: the difference between SI and Non-SI systems start small, but grow in significance at larger sizes of storage. See <em><a href="https://superuser.com/a/433216" class="uri">https://superuser.com/a/433216</a></em> for a thorough explanation</p>
+<img data-src="_assets/data-representation4.png" title="A sample title." alt="Sample alt text. To be replaced!" class="r-stretch quarto-figure-center"><p class="caption">A sample caption. Image source: unknown.</p><p>Note: the difference between SI and Non-SI systems start small, but grow in significance at larger sizes of storage. See <em><a href="https://superuser.com/a/433216" class="uri">https://superuser.com/a/433216</a></em> for a thorough explanation</p>
 </section>
 <section class="slide level2">
 
@@ -1308,7 +1308,7 @@
 <p>__ __ <em>Decimal</em> __ __ <em>16’s</em> __ __ <em>1’s</em></p>
 <p>__ 18 __ __ __</p>
 
-<img data-src="hardware/_assets/data-representation5.png" title="A sample title." alt="Sample alt text. To be replaced!" class="r-stretch quarto-figure-center"><p class="caption">A sample caption. Image source: unknown.</p></section>
+<img data-src="_assets/data-representation5.png" title="A sample title." alt="Sample alt text. To be replaced!" class="r-stretch quarto-figure-center"><p class="caption">A sample caption. Image source: unknown.</p></section>
 <section class="slide level2">
 
 <h3 id="why-hexadecimal">Why Hexadecimal?</h3>
