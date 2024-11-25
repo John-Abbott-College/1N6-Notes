@@ -1,0 +1,823 @@
+---
+title: Advanced file systems
+subtitle: RAID, ZFS, and the "next generation" of file systems
+date: 2024-11-25
+draft: true
+---
+
+*This lecture is directly adapted from the following article: <https://arstechnica.com/information-technology/2014/01/bitrot-and-atomic-cows-inside-next-gen-filesystems/>*
+
+## Introduction
+
+Most people don\'t care much about their filesystems. But at the end of
+the day, the filesystem is probably the single most important part of an
+operating system. A kernel bug might mean the loss of whatever you\'re
+working on right now, but a filesystem bug could wipe out everything
+you\'ve ever done\... and it could do so in ways most people never
+imagine.
+
+Sound too theoretical to make you care about filesystems? Let\'s talk
+about \"bitrot,\" the silent corruption of data on disk or tape. One at
+a time, year by year, a random bit here or there gets flipped. If you
+have a malfunctioning drive or controller---or a loose/faulty cable---a
+*lot* of bits might get flipped. Bitrot is a real thing, and it affects
+you more than you probably realize. The JPEG that ended in blocky
+weirdness halfway down? Bitrot. The MP3 that startled you with a violent
+CHIRP!, and you wondered if it had always done that? No, it probably
+hadn\'t---blame bitrot. The video with a bright green block in one
+corner followed by several seconds of weird rainbowy blocky stuff before
+it cleared up again? Bitrot.
+
+## Lesson Overview
+
+## RAID
+
+## Next generation file systems
+
+Contrary to popular belief, conventional RAID won\'t help with bitrot,
+either. \"But my raid5 array has parity and can reconstruct the missing
+data!\" you might say. That only works if a drive *completely and
+cleanly fails.* If the drive instead starts spewing corrupted data, the
+array may or may not notice the corruption (most arrays don\'t check
+parity by default on every read). Even if it does notice\... all the
+array knows is that something in the stripe is bad; it has no way of
+knowing *which* drive returned bad data---and therefore which one to
+rebuild from parity (or whether the parity block itself was corrupt).
+
+### Per-block checksums
+
+### COW: Copy on Write
+
+### Snapshots
+
+The worst thing is that backups won\'t save you from bitrot. The next
+backup will cheerfully back up the corrupted data, replacing your last
+*good* backup with the bad one. Before long, you\'ll have rotated
+through all of your backups (if you even have multiple backups), and the
+uncorrupted original is now gone for good.
+
+What might save your data, however, is a \"next-gen\" filesystem.
+
+Let\'s look at a graphic demonstration. Here\'s a picture of my son Finn
+that I like to call \"Genesis of a Supervillain.\" I like this picture a
+lot, and I\'d hate to lose it, which is why I store it on a next-gen
+filesystem with redundancy. But what if I didn\'t do that?
+
+As a test, I set up a virtual machine with six drives. One has the
+operating system on it, two are configured as a simple btrfs-raid1
+mirror, and the remaining three are set up as a conventional raid5. I
+saved Finn\'s picture on both the btrfs-raid1 mirror and the
+conventional raid5 array, and then I took the whole system offline and
+flipped a single bit---yes, just a single bit from 0 to 1---in the JPG
+file saved on each array. Here\'s the result:
+
+[![](https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-original.jpg){.ars-gallery-image
+decoding="async" width="360" height="480" loading="lazy"
+aria-labelledby="caption-396069"
+srcset="https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-original.jpg 360w, https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-original-300x400.jpg 300w"
+sizes="auto, (max-width: 360px) 100vw, 360px"}](https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-original.jpg){.cursor-zoom-in
+pswp-width="360" pswp-height="480"
+pswp-srcset="https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-original.jpg 360w, https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-original-300x400.jpg 300w"
+cropped="true" target="_blank"}
+
+Original image.
+
+[![](https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-raid5.jpg){.ars-gallery-image
+decoding="async" width="360" height="480" loading="lazy"
+aria-labelledby="caption-396071"
+srcset="https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-raid5.jpg 360w, https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-raid5-300x400.jpg 300w"
+sizes="auto, (max-width: 360px) 100vw, 360px"}](https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-raid5.jpg){.cursor-zoom-in
+pswp-width="360" pswp-height="480"
+pswp-srcset="https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-raid5.jpg 360w, https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-raid5-300x400.jpg 300w"
+cropped="true" target="_blank"}
+
+Corrupted image: RAID5.
+
+[![](https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-btrfsraid1.jpg){.ars-gallery-image
+decoding="async" width="360" height="480" loading="lazy"
+aria-labelledby="caption-396067"
+srcset="https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-btrfsraid1.jpg 360w, https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-btrfsraid1-300x400.jpg 300w"
+sizes="auto, (max-width: 360px) 100vw, 360px"}](https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-btrfsraid1.jpg){.cursor-zoom-in
+pswp-width="360" pswp-height="480"
+pswp-srcset="https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-btrfsraid1.jpg 360w, https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-btrfsraid1-300x400.jpg 300w"
+cropped="true" target="_blank"}
+
+Corrupted image: btrfs-raid1.
+
+The raid5 array didn\'t notice or didn\'t care about the flipped bit in
+Finn\'s picture any more than a standard single disk would. The next-gen
+btrfs-raid1 system, however, immediately caught *and corrected* the
+problem. The results are pretty obvious. If you care about your data,
+you want a next-gen filesystem. Here, we\'ll examine two: the older ZFS
+and the more recent btrfs.
+
+## What is a "next-generation" filesystem, anyway?
+
+\"Next-generation\" is a phrase that gets handed out like sales flyers
+in a mall parking lot. But in this case, it actually means something. I
+define a \"generation\" of filesystems as a group that uses a particular
+\"killer feature\"---or closely related set of them---that earlier
+filesystems don\'t but that later filesystems all do. Let\'s take a
+quick trip down memory lane and examine past and current generations:
+
+> **Generation 0:** No system at all. There was just an arbitrary stream
+> of data. Think punchcards, data on audiocassette, Atari 2600 ROM
+> carts.
+>
+> **Generation 1:** Early random access. Here, there are multiple named
+> files on one device with no folders or other metadata. Think Apple
+> \]\[ DOS (but not ProDOS!) as one example.
+>
+> **Generation 2:** Early organization (aka folders). When devices
+> became capable of holding hundreds of files, better organization
+> became necessary. We\'re referring to TRS-DOS, Apple //c ProDOS,
+> MS-DOS FAT/FAT32, etc.
+>
+> **Generation 3:** Metadata---ownership, permissions, etc. As the user
+> count on machines grew higher, the ability to restrict and control
+> access became necessary. This includes AT&T UNIX, Netware, early NTFS,
+> etc.
+>
+> **Generation 4:** Journaling! This is the killer feature defining all
+> current, modern filesystems---ext4, modern NTFS, UFS2, you name it.
+> Journaling keeps the filesystem from becoming inconsistent in the
+> event of a crash, making it much less likely that you\'ll lose data,
+> or even an entire disk, when the power goes off or the kernel crashes.
+
+So if you accept my definition, \"next-generation\" currently means
+\"fifth generation.\" It\'s defined by an entire set of features:
+built-in volume management, per-block checksumming, self-healing
+redundant arrays, atomic COW snapshots, asynchronous replication, and
+far-future scalability.
+
+That\'s quite a laundry list, and one or two individual features from it
+have shown up in some \"current-gen\" systems (Windows has Volume Shadow
+Copy to correspond with snapshots, for example). But there\'s a strong
+case to be made for the entire list defining the next generation.
+
+## Justify your generation
+
+The quickest objection you could make to defining \"generations\" like
+this would be to point at NTFS\' Volume Snapshot Service (VSS) or at the
+Linux Logical Volume Manager (LVM), each of which can take snapshots of
+filesystems mounted beneath them. However, these snapshots can\'t be
+replicated incrementally, meaning that backing up 1TB of data requires
+groveling over 1TB of data every time you do it. (FreeBSD\'s UFS2 also
+offered limited snapshot capability.) Worse yet, you generally can\'t
+replicate them as snapshots*---*with references intact---which means
+that your remote storage requirements increase exponentially, and the
+difficulty of managing backups does as well. With ZFS or btrfs
+replicated snapshots, you can have a single, immediately browsable,
+fully functional filesystem with 1,000+ versions of the filesystem
+available simultaneously. Using VSS with Windows Backup, you must use
+VHD files as a target. Among other limitations, VHD files are only
+supported up to 2TiB in size, making them useless for even a single
+backup of a large disk or array. They must also be mounted with special
+tools not available on all versions of Windows, which goes even further
+to limit them as tools for specialists only.
+
+Finally, Microsoft\'s VSS typically depends on \"writer\" components
+that interface with applications (such as MS SQL Server) which can
+themselves hang up, making it difficult to successfully create a VSS
+snapshot in some cases. To be fair, when working properly, VSS writers
+offer something that simple snapshots don\'t---application-level
+consistency. But VSS writer bugs are a real problem, and I\'ve
+encountered lots of Windows Servers which were quietly failing to create
+Shadow Copies. (VSS does not automatically create a writer-less Shadow
+Copy if the system times out; it just logs the failure and gives up.) I
+have yet to encounter a ZFS or btrfs filesystem or array that won\'t
+immediately create a valid snapshot.
+
+At the end of the day, both LVM and VSS offer useful features that a lot
+of sysadmins do use, but they don\'t jump right out and demand your
+attention the way filenames, folders, metadata, or journaling did when
+they came onto the market. Still, this is only one feature out of the
+entire laundry list. You could make a case that snapshots made the fifth
+generation, and the *other* features in ZFS and btrfs make the sixth.
+But by the time you finish this article, you\'ll see there\'s no way to
+argue that btrfs and ZFS definitely constitute a *new* generation that
+is easily distinguishable from everything before them.
+
+[]{#page-2 .record-pageview page="2"
+url="https://arstechnica.com/information-technology/2014/01/bitrot-and-atomic-cows-inside-next-gen-filesystems/"}
+
+## ZFS---eldest of the next generation
+
+One argument for labeling \"snapshots, volume management, checksumming,
+self-healing, replication, and scalability\" as the definitive feature
+set for the next generation of filesystems is that btrfs isn\'t the
+first filesystem to implement them as a complete set. ZFS (created by
+Sun Microsystems before the Oracle acquisition) was first to market.
+
+Interestingly, there was a lot of pushback in the Linux world against
+ZFS, mostly concerning some of these very same features. In particular,
+the volume management and data-healing capabilities were loudly
+denounced as a \"rampant layering violation.\" In the traditional
+layering model used by the Linux world, the RAID controller shouldn\'t
+know or care about the filesystem, and the filesystem shouldn\'t know or
+care about the RAID controller. But data healing depends on the
+filesystem knowing about redundant copies of data blocks. If the first
+copy of a block of data read fails its checksum, the filesystem needs to
+know if a different copy is available to be read, verified, and
+rewritten. This just isn\'t possible without merging those layers. A
+year later, btrfs supported raid0, raid1, and raid10; six years later,
+raid5 and raid6 support were added to mainline (still in progress).
+
+We\'ll be comparing btrfs and ZFS directly moving forward; they each
+have their pros and cons, both in an absolute sense and when compared to
+each other.
+
+## Next-generation features
+
+Before we look too much at actual usage in an on-the-command-line sense,
+let\'s go over the actual features mentioned. It\'s important to
+understand how they impact you as a user or sysadmin directly. Once you
+do, you\'ll have a better idea of why you do (or, just barely
+conceivably, don\'t) need and want them on your own equipment. All of
+these features are available on ZFS and btrfs.
+
+### Atomic COW snapshots
+
+An \"atomic COW snapshot\"---easily the most hilarious-sounding feature
+ever to grace a filesystem---is an image of the entire filesystem in
+exactly the condition it was in at a given instant in time, no matter
+what else was transpiring at the time. So if you take a snapshot of a
+filesystem at 8:13 and 32 seconds pm on December 19, 2013, that snapshot
+will contain every single byte of that filesystem at exactly 8:13 and 32
+seconds pm on December 19, 2013---period, no ifs, ands, or buts. This
+helps keep high-activity structures like databases consistent. As long
+as the database uses journaling (and if it doesn\'t, upgrade!), its
+journal will be consistent in the snapshot. Any partially completed
+transactions can be cleanly rolled back instead of leaving the database
+in an inconsistent state.
+
+COW stands for Copy On Write, so this snapshot that you took does not
+occupy any storage space in and of itself. It\'s just a bunch of extra
+pointers to the same blocks that already contain your data. As you
+delete or change your data in production, however, the snapshot will
+retain its copies. Over time, the space taken up by the snapshot
+increases from \"none\" to \"the amount of data contained in this
+snapshot and no other snapshot.\" \"Atomic,\" in this sense, refers to
+the atom as being an \"indivisible\" unit (quiet, quantum physicists!).
+
+Still not sure what a snapshot is or why you\'d want it? Well, imagine
+you\'re about to do something potentially dangerous to your system like
+apply an automatic update to a big cranky application you rely on a lot
+and don\'t trust, or manually delete a bunch of stuff in system
+directories to try to uninstall a program that you can\'t remove
+normally. (We\'re talking big things that could go wrong and may be
+difficult or impossible to undo.) Before doing them\... take a snapshot.
+Then, if \$BigScaryProcedure goes wrong, roll back to the snapshot you
+just took. *Poof*, everything is peachy again.
+
+In practice, I take a snapshot every hour on the hour on my own machines
+and delete the old snapshots as necessary to recover disk space. That
+gives me the best possible chance to recover from something unexpected
+going horribly, horribly wrong.
+
+### Per-block checksumming
+
+It\'s a common misconception to think that RAID protects data from
+corruption since it introduces redundancy. The reality is exactly the
+opposite: traditional RAID *increases* the likelihood of data corruption
+since it introduces more physical devices with more things to go wrong.
+What RAID does protect you from is data loss due to the instantaneous
+failure of a drive. But if the drive isn\'t so obliging as to just
+politely die on you and instead starts reading and/or writing bad data,
+you\'re still going to *get* that bad data. The RAID controller has no
+way of knowing if the data is bad since parity is written on a
+per-stripe basis and not a per-block basis. In theory (in practice,
+parity isn\'t always strictly checked on every read), a RAID controller
+could tell you that the data in a stripe was corrupt, but it would have
+no way of knowing if the actual corrupt data was on any given drive. We
+demonstrated this in the introduction. Although I was using a raid5
+array with parity, the picture of my son stored on it was very visibly
+corrupted when a single bit changed from a 0 to a 1. Ouch.
+
+By contrast, with every individual block of data written, btrfs also
+writes a checksum. With every individual block of data read, btrfs reads
+the associated checksum and verifies the block against it. This allows
+the filesystem (and you) to know immediately if data has been corrupted.
+
+### Self-healing redundant arrays
+
+We also demonstrated this in the introduction. The copy of my son\'s
+picture on the btrfs-raid1 array got a bit flipped, just like the copy
+on the raid5 array, but the btrfs array detected and immediately
+repaired the corrupt data as soon as I attempted to read it.
+
+The system\'s kernel log tells the story there:
+
+    [   87.030967] BTRFS info (device vdf): csum failed ino 258 off 0 csum 3377436548 private 796777854
+    [   87.031188] BTRFS info (device vdf): csum failed ino 258 off 0 csum 3377436548 private 796777854
+    [   87.031678] btrfs read error corrected: ino 258 off 0 (dev /dev/vde sector 267344)
+
+You have to love that.
+
+Healing is made possible by combining per-block checksumming with
+(redundant) volume and drive management. If you aren\'t storing your
+data redundantly, all you can do with a checksum is realize that your
+data is corrupt. But if you *are* storing data redundantly either
+through mirroring (btrfs-raid1 or btrfs-raid10) or striping-with-parity
+(btrfs-raid5 or btrfs-raid6), btrfs can immediately detect corruption
+and repair it. In this case, when a corrupt block is detected, it\'s
+read from parity or from an alternate copy, which is also verified. If
+the reconstruction/alternate copy does pass verification, it\'s quietly
+handed to you while btrfs rewrites it over the corrupt version in the
+background.
+
+This is an awesome feature, and (in ZFS) it has personally saved me from
+data loss on many occasions. It\'s not uncommon at all to see five, or
+10, or 50 checksum errors on a disk that\'s been in service for a few
+years\... and in some cases I\'ve seen ZFS raidZ arrays with 100,000+
+checksum errors on one drive---and no data lost or corrupted. If you
+care about your data, and especially if you care about your data
+surviving for decades or longer, you absolutely need this feature.
+
+### Volume management
+
+For decades, we\'ve partitioned drives in order to make more granular
+use of the space on them. If you want 100GB for your operating system
+and 900GB for data storage (and you don\'t want overuse of your data
+storage to cause your OS problems), you partition your drives. But if
+you change your mind later, deciding you want 200GB for your operating
+system, you\'re in for some pain. You *can* resize partitions, but it\'s
+a potentially dangerous operation, and it frequently requires you to
+shut your system down while it\'s going on.
+
+Volume management, by contrast, means being able to dynamically define
+multiple filesystems with attributes including (but not limited to)
+quota size, read-only or read-write, and mountpoint at the drop of a
+hat. They can be resized, renamed, cloned, duplicated, and have
+permissions changed instantly and safely. Most of these features were
+previously available to Linux users under LVM, the Linux Logical Volume
+Management stack. Btrfs pretty much makes LVM obsolete.
+
+### Far-future scalability
+
+One concept common to each of the last generations of filesystem is that
+they\'ve tended to be obviously tied to the prevalent media at the time.
+When all you have are punch cards and audio tapes, not having an actual
+filesystem at all makes a lot of sense. When you\'re almost entirely
+working with floppy drives, scaling past a few MB of storage doesn\'t
+look like something worth bothering with. Now, however, we\'re working
+with rapidly increasing storage size per drive, and large storage arrays
+are becoming more and more common. The question \"but what do I *do*
+with 6 petabytes of data?\" starts to look a lot less silly.
+
+ZFS and btrfs both made the decision to plan from the start for what
+currently looks like absolutely ridiculous scale designs, since the
+system will almost certainly outlive the hardware we currently implement
+it on.
+
+The designers of ZFS famously claimed that flipping every bit in a
+maximum-sized zpool would \"require enough energy to boil every ocean on
+the planet.\" Btrfs didn\'t go quite *that* far, but it didn\'t really
+need to. Its current maximum filesystem size is 16 EiB. To put that in
+perspective, if you gave every single human being in New York City a
+brand-new 2TiB hard drive and some way to physically plug them all up
+together, you\'d be at right about 16EiB---and you might or might not be
+able to power the resultant monstrosity with a dedicated 90MW nuclear
+reactor. That\'s probably future-forward enough for now.
+
+### Asynchronous incremental replication
+
+Last but certainly not least, we come to replication. Boiled down to a
+nutshell, asynchronous replication means that you can take an atomic
+snapshot of an entire filesystem and easily move the entire thing,
+block-by-block, on to a remote filesystem. Own two computers? Do all
+your work on computer A, take a snapshot, send the snapshot to computer
+B. Computer B now has an exact replica of every single bit stored in
+your filesystem as of the time you took the snapshot. The problem, of
+course, is that we\'re talking every single bit of data\... so it
+clearly takes a long time to copy.
+
+Which is where \"incremental\" comes in. Once you\'ve replicated your
+initial snapshot from computer A to computer B, you take another
+snapshot. Your filesystem size as a whole might be 4TiB, but if you\'ve
+only changed, say, 500MiB of data\... then that 500MiB is all you have
+to transfer from computer A to computer B. Now you have replication of
+the second snapshot taking place in seconds or minutes instead of hours
+or days. Even better, unlike traditional \"synchronization\" methods,
+you don\'t need to crawl over the filesystem on both sides first to
+figure out what\'s changed. Computer A knows exactly what has changed
+between snapshots 1 and 2, and it can immediately begin squirting that
+data---and only that data---to computer B.
+
+<figure class="ars-img-shortcode">
+<img
+src="https://cms.arstechnica.com/wp-content/uploads/2014/01/btrfs_replicated_snapshots.png"
+class="fullwidth full" decoding="async" />
+<figcaption>Left pane: your whole PC, as of the top of each hour. Right
+pane: your whole PC, as of the top of each hour, on a remote
+PC.</figcaption>
+</figure>
+
+In practice, this means it\'s actually no-kidding feasible to back your
+entire computer up on an hourly basis to a remote location---even with
+terabytes of data and a relatively cheap-and-slow Internet connection.
+
+[]{#page-3 .record-pageview page="3"
+url="https://arstechnica.com/information-technology/2014/01/bitrot-and-atomic-cows-inside-next-gen-filesystems/"}
+
+## Features unique to btrfs
+
+In the last section, I outlined what I consider the \"standard set of
+features\" for next-gen filesystems. But btrfs brings some new things to
+the table that ZFS doesn\'t.
+
+### File-level cloning
+
+This, frankly, is huge. I work a lot with virtual machines, which means
+I have lots and lots of tremendous files ranging in size from 5GB to
+400GB (sometimes bigger) lying around various systems. \"File-level
+cloning\" means that I can make a fully writable clone copy of one of
+these several-hundred-gigabyte files in an instant.
+
+        me@server:~$ cp --reflink=always 200GB_virtual_machine_drive.qcow2 clone_of_200GB_virtual_machine_drive.qcow2
+
+The above command will \"copy\" that 200GB of data in milliseconds, and
+it\'s a deduplicated copy at that. At the time of copying, no actual
+additional drive space is needed;
+clone_of_200GB_virtual_machine_drive.qcow2 actually just points to all
+the same data blocks. As I write to
+clone_of_200GB_virtual_machine.qcow2, though (or to the original
+200GB_virtual_machine_drive.qcow2), each block that I write to is
+written as a new block. Over time, the file gradually diverges from its
+parent as needed---but *only* as needed.
+
+This feature also enables you to selectively copy big chunks of data out
+of snapshots back into your main filesystem without having to
+preemptively roll the whole thing back\... and again, without taking up
+any extra disk space unless and until you actually modify the copied
+(technically, cloned) files. This really can be a lifesaver.
+
+By contrast, if you want to get individual files out of a ZFS snapshot
+(or one of the more primitive snapshots in NTFS or LVM), you have to
+actually copy them block by block, both consuming extra space and
+potentially taking a tremendous amount of time if it\'s a whole lot of
+data. Wasted disk space aside, the 200GB virtual machine image I used in
+my example could easily take three hours or more to copy out of a ZFS
+snapshot. In practice, this means that with ZFS, you want to create tons
+and tons of child filesystems since you can roll an entire filesystem
+back to a snapshot of itself instantly, but picking and choosing
+individual files means painful copy operations. With btrfs, you don\'t
+need to do that. Snapshot the entire btrfs filesystem, then just copy
+stuff back out of it piecemeal if you like. I consider this to be a
+pretty killer feature.
+
+### Online balancing
+
+This is one of the features that home users and hobbyists constantly
+twit ZFS for lacking. With ZFS, once you set up a RAIDZ array, it\'s
+immutable. You can repair it by replacing drives, but you can never
+expand it, or contract it, or change its level. (You can add another
+array to a pool, but that\'s rarely what hobbyists or small businesses
+actually want.)
+
+Btrfs, on the other hand, allows you to do pretty much anything in terms
+of live storage reconfiguration. Let\'s say you want to set up a system
+with two drives in a btrfs-raid1 (mirror) array. First, you run through
+your Linux installation\... and just do a perfectly standard
+installation to the first disk. Get it all up and running on the one
+disk. Don\'t worry about the other one. Got it all running? Time to make
+sure we know what partition number we\'re using:
+
+        me@machine:~$ sudo btrfs filesystem show
+        Label: none uuid: c9c5e506-6b87-4741-9017-f416d2f2ae8c
+            Total devices 1 FS bytes used 1.41GB
+            devid   1 size 9.31GB used 3.54GB path /dev/vda1
+
+OK, we\'re using the first partition of the first drive, which in my
+case is /dev/vda1. Before we do anything else, we want to copy the
+partition table layout to our second drive and install the GRUB boot
+loader onto it so we can boot from it if we lose the first drive:
+
+        me@machine:~$ sudo sfdisk -d /dev/vda | sudo sfdisk /dev/vdb
+        me@machine:~$ sudo grub-install /dev/vdb
+
+Now we add the second drive\'s first partition to our btrfs filesystem:
+
+        me@machine:~$ sudo btrfs device add /dev/vdb1 /
+
+And we rebalance the filesystem as a btrfs-raid1 mirror:
+
+        me@machine:~$ sudo btrfs balance start -dconvert=raid1 -mconvert=raid1 /
+
+The system starts chugging along, busily copying all of the data from
+our first drive to the second one. The command doesn\'t return until the
+operation is done, but---here\'s the beautiful part---the system remains
+usable while this is going on! Browse the Internet, play solitaire, open
+up more terminals\... whatever you like. In a few moments, if this is a
+clean system, the operation is done. You now have a working btrfs-raid1
+system.
+
+This is impressive enough on its own, but you could have added a third
+disk and rebalanced -dconvert=raid5 -mconvert=raid5, a fourth disk and
+raid10 or raid6\... whatever you like. You still *can.* Btrfs is
+perfectly happy converting any raid level to any other raid level on the
+fly while the system is running. This is a killer feature for hobbyists
+and admins at smaller organizations who can\'t afford to just build
+entire new systems and migrate data over.
+
+### NODATACOW
+
+One of the more common complaints about next-generation filesystems is
+that if you hammer them extremely hard with a never-ending stream of
+really punishing random I/O, they will eventually fall down harder than
+simpler conventional filesystems. So, the thinking goes, btrfs and ZFS
+may not be the best choice for that über database server or
+128-core/256GB RAM experimental botnet-in-a-box VM host you\'re thinking
+of building.
+
+Btrfs addresses this, at least in part, by letting you set any given
+file or directory NODATACOW, which means that the file or files within a
+directory will not be handled copy-on-write like normal files under
+btrfs (or zfs) are. This alleviates some of the ultimate-performance
+concerns mentioned above.
+
+That said, in my experience, the vast majority of workloads---including
+databases and VM hosts under most load conditions---perform just *fine*
+under COW filesystems, so I wouldn\'t rush to set this on everything. In
+what little testing I\'ve done, turning NODATACOW on for an image
+directory containing a Windows Server 2008 R2 VM resulted in a paltry
+five to 10 percent performance increase *at best* in an HDTune Pro
+benchmark run against its storage. And you will be giving up per-block
+checksumming at least by doing so. It\'s there, and it\'s very cool that
+it\'s there, but like most things, don\'t start tuning until you\'re
+sure you *need* to start tuning.
+
+### File-level/Directory-level compression
+
+ZFS offers compression, but it needs to be enabled on an entire
+filesystem level. Btrfs also offers compression with multiple algorithms
+(currently gz is the default, and lzo is available out of the box), but
+btrfs allows you to control compression at the filesystem, subvolume,
+directory, and even individual file level. You can also do neat things
+like choose *not* to compress files whose names end in .jpg or .jpeg or
+.avi since those are compressed formats already, and general-purpose
+compression can only make them larger and cost you unnecessary CPU
+cycles. (This is the *default* behavior---you don\'t even need to set it
+up!)
+
+This is pretty awesome. And devs on the mailing list are talking about
+making the feature even smarter by scanning files for MIME headers
+and/or test-compressing the first few blocks on write, then writing the
+rest decompressed if the compression algorithm doesn\'t seem to be
+working well.
+
+## Using the features: A quick rundown
+
+Let\'s take a look at a real, if simple, btrfs filesystem:
+
+        me@virtual-machine:~$ sudo btrfs filesystem show
+        failed to open /dev/sr0: No medium found
+        Label: none  uuid: e5398102-7f0f-41e6-92f8-bc05176aa3ae
+            Total devices 1 FS bytes used 3.03GB
+            devid    1 size 24.00GB used 6.04GB path /dev/vda1
+
+        Btrfs v0.20-rc1
+
+This is the btrfs filesystem itself as seen on a brand-new,
+just-installed Ubuntu Saucy virtual machine. By itself, this doesn\'t
+seem all that informative, but it becomes a lot more useful if you\'re
+running multiple filesystems or a single filesystem on multiple physical
+devices, such as a btrfs-raid0/1/5/6/10 array.
+
+Now let\'s take a look at the subvolumes within the filesystem:
+
+        me@virtual-machine:~$ sudo btrfs sub list /
+        ID 256 gen 199294 top level 5 path @
+        ID 257 gen 199294 top level 5 path @home
+
+What we\'re looking at here is Ubuntu\'s default installation layout on
+btrfs: one subvolume for root and another for /home. This allows you (in
+fact, requires you) to snapshot the two volumes independently, which in
+turn makes it easier to only back up one or the other or only roll back
+one or the other. You could, for example, roll back your root filesystem
+after a disastrous upgrade without affecting data you had saved in your
+home directory. We can see this reflected in /etc/fstab as well:
+
+        # /etc/fstab: static file system information.
+        #
+        # Use 'blkid' to print the universally unique identifier for a
+        # device; this may be used with UUID= as a more robust way to name devices
+        # that works even if disks are added and removed. See fstab(5).
+        #
+        #                
+        proc            /proc           proc    nodev,noexec,nosuid 0       0
+        # / was on /dev/sda5 during installation
+        UUID=bf9ea9b9-54a7-4efc-8003-6ac0b344c6b5 /               btrfs   defaults,subvol=@     0       1
+        # /home was on /dev/sda5 during installation
+        UUID=bf9ea9b9-54a7-4efc-8003-6ac0b344c6b5 /home           btrfs   defaults,subvol=@home 0       2
+
+Let\'s say you\'ve got another computer with a btrfs filesystem and you
+want to back up your home directory from this computer to the other one.
+We\'ll use btrfs\' built-in asynchronous replication for this. First,
+let\'s create a new subvolume underneath /home to contain the snapshots:
+
+        me@virtual-machine:~$ sudo btrfs sub create /home/.snapshots
+        Create subvolume '/home/.snapshots'
+
+Now, let\'s take our first snapshot:
+
+        me@virtual-machine:~$ sudo btrfs sub snapshot -r /home /home/.snapshots/myfirstsnapshot
+        Create a readonly snapshot of '/home' in '/home/.snapshots/myfirstsnapshot'
+
+We can see the new structure with another btrfs subvolume list:
+
+        me@virtual-machine:~$ sudo btrfs sub list /
+        ID 256 gen 199294 top level 5 path @
+        ID 257 gen 199294 top level 5 path @home
+        ID 849 gen 199310 top level 5 path @home/.snapshots
+        ID 850 gen 199311 top level 5 path @home/.snapshots/myfirstsnapshot
+
+Now, let\'s replicate the snapshot to our second machine, which has
+convenient subvolumes named /backup and /backup/home and
+/backup/home/.snapshots.
+
+        me@virtual-machine:~$ sudo btrfs send /home/.snapshots/myfirstsnapshot | ssh second-machine sudo btrfs receive /backup/home/.snapshots
+
+In its simplest possible form, this demonstrates sending the
+snapshot---which contains the entire /home subvolume at the time it was
+taken, remember---and tunneling it through ssh to the btrfs filesystem
+on the other end. There\'s nothing too special about this yet. Sure,
+you\'re replicating the entire subvolume all at once, which is kind of
+neat, but you could accomplish this in all kinds of ways. Where this
+gets cool is when we take and send a *second* snapshot.
+
+        me@virtual-machine: sudo btrfs sub snapshot -r /home /home/.snapshots/mysecondsnapshot
+        me@virtual-machine: sudo btrfs send -p /home/.snapshots/myfirstsnapshot /home/.snapshots/mysecondsnapshot | ssh second-machine btrfs receive /backup/home/.snapshots
+
+What we did here was send only the data that has *changed on-disk*
+between \"myfirstsnapshot\" and \"mysecondsnapshot.\" What\'s especially
+awesome about this is that the system doesn\'t have to laboriously scan
+the disks to find things that have changed. It already knows what has or
+hasn\'t changed, so it can just immediately start spitting data out to
+the receive process on the other end. If you have a few text files to
+replicate, this might not matter. But if you have a terabyte or five of
+database binaries or virtual machine storage, this is a huge deal.
+Backups that would have taken hours or days and generated a tremendous
+amount of system load with older technologies can now complete in
+minutes with little or no extra load.
+
+I have systems that routinely replicate a terabyte or more of data
+across cheap 3Mbps and slower Internet connections using this
+technology\... sometimes, replicating several times per day. There is
+literally no other technology that can accomplish this. If you have a
+six-figure SAN that replicates off-site several times a day, incremental
+snapshot replication is how it does it.
+
+## Great! Where do I start? Well\...
+
+        WARNING! - Btrfs Btrfs v0.20-rc1 IS EXPERIMENTAL
+        WARNING! - see http://btrfs.wiki.kernel.org before using
+
+You will see this message every time you create or mount a btrfs
+filesystem, and it really does mean what it says. All of the features
+I\'ve outlined in this article are there, and they work, and they\'re
+amazing\... but they currently come with a heaping helping of surprises,
+not all pleasant. While I have not lost any data to btrfs---including in
+some fairly extensive \"drop-testing\" explicitly designed to *try* to
+make it lose data---I have seen weird performance death spirals that
+needed reboots to bring the machine back. There are also
+deliberately-still-rough areas of the interface like redundant arrays
+refusing to boot without being fed special arguments if one disk is
+lost, even though the array is otherwise fine. These headaches will need
+to be smoothed out before btrfs is ready for prime time.
+
+Further, while the on-disk format is now considered \"stable\" and is
+not expected to change, btrfs is still evolving rapidly enough that you
+should probably be using *really* bleeding-edge kernels if you want to
+test it. I began my journey with btrfs using the very latest kernel in
+Ubuntu\'s pipeline, and I ended up jumping two steps beyond that to one
+in the dailies\... which is way outside my normal comfort zone. If
+you\'re a very experienced or just-plain-determined admin and you\'re
+willing to *make and use regular backups*, btrfs is ready for you to
+jump in, test, and even use directly. But if you\'re looking for a
+mature filesystem that\'s ready for normal users and admins to use day
+to day\... it will get there, but it\'s not there yet.
+
+If you\'re still determined to jump in and test and/or use btrfs---well,
+dive on in! Be sure to read the wiki at http://btrfs.wiki.kernel.org
+*thoroughly*, and I\'d advise subscribing to the btrfs mailing list
+(referenced at the wiki) as well. The Bugzilla installation at
+kernel.org is also a must-have resource, both for looking through open
+bugs and submitting your own.
+
+## The final takeaway
+
+The most important part of computing in the long term is keeping your
+data accessible and intact. Far-future scalability minimizes the need
+for spurious on-disk format changes (which can trap your data behind
+legacy equipment) in the future. Easily accessible snapshots mean the
+danger of \"oops I accidentally lost the whole file\" errors are largely
+avoidable. Incremental replication means that even huge volumes of data
+can be gotten safely, easily, and cheaply to physically remote
+locations. And easy-to-setup, easy-to-maintain, redundant self-healing
+arrays finally put the ugly specter of bitrot in a much more manageable
+position as well.
+
+<figure class="ars-img-shortcode">
+<img
+src="https://cms.arstechnica.com/wp-content/uploads/2014/01/btrfs_replicated_snapshots.png"
+class="fullwidth full" decoding="async" />
+<figcaption>Each folder is the whole filesystem, fully browsable. Each
+folder is on a local server, and on a remote server, exactly the same.
+Are your backups this easy to understand and use?</figcaption>
+</figure>
+
+Btrfs and ZFS make keeping your data safe---against all the things that
+tend to kill it---more possible than it ever has been. It\'s easy to
+miss the importance at first glance, because most of us didn\'t have any
+digital data 20 years ago. In 1994, for most people, computers were
+computers and real life was real life, so we aren\'t missing the lack of
+it now. But in 2014, we document our real lives directly on our
+computers---increasingly, only on our computers. In 2034, the difference
+between current and last-generation filesystems will be at least as
+obvious in retrospect as the difference between Polaroids and real film
+is now.
+
+[![](https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-original.jpg){.ars-gallery-image
+decoding="async" width="360" height="480" loading="lazy"
+aria-labelledby="caption-396069"
+srcset="https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-original.jpg 360w, https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-original-300x400.jpg 300w"
+sizes="auto, (max-width: 360px) 100vw, 360px"}](https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-original.jpg){.cursor-zoom-in
+pswp-width="360" pswp-height="480"
+pswp-srcset="https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-original.jpg 360w, https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-original-300x400.jpg 300w"
+cropped="true" target="_blank"}
+
+Original image.
+
+![](data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iYXJzLWdhbGxlcnktY2FwdGlvbi1hcnJvdyBhcnMtZ2FsbGVyeS1jYXB0aW9uLWFycm93LXJpZ2h0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCA0MCA0MCI+PGRlZnM+PGNsaXBwYXRoIGlkPSJhcnJvdy1ibG9ja3MtcmlnaHRfc3ZnX19hIj48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDQwdjQwSDB6IiAvPjwvY2xpcHBhdGg+PC9kZWZzPjxnIGZpbGw9ImN1cnJlbnRDb2xvciIgY2xpcC1wYXRoPSJ1cmwoI2Fycm93LWJsb2Nrcy1yaWdodF9zdmdfX2EpIj48cGF0aCBkPSJNMzIgMTZoOHY4aC04em0tOCA4aDh2OGgtOHptLTggOGg4djhoLTh6bTgtMjRoOHY4aC04em0tOC04aDh2OGgtOHpNMCAxNmgxNnY4SDB6IiAvPjwvZz48L3N2Zz4=){.ars-gallery-caption-arrow
+.ars-gallery-caption-arrow-right}
+
+Original image.
+
+[![](https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted.jpg){.ars-gallery-image
+decoding="async" width="360" height="480" loading="lazy"
+aria-labelledby="caption-396077"
+srcset="https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted.jpg 360w, https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted-300x400.jpg 300w"
+sizes="auto, (max-width: 360px) 100vw, 360px"}](https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted.jpg){.cursor-zoom-in
+pswp-width="360" pswp-height="480"
+pswp-srcset="https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted.jpg 360w, https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted-300x400.jpg 300w"
+cropped="true" target="_blank"}
+
+One bit flipped.
+
+![](data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iYXJzLWdhbGxlcnktY2FwdGlvbi1hcnJvdyBhcnMtZ2FsbGVyeS1jYXB0aW9uLWFycm93LXJpZ2h0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCA0MCA0MCI+PGRlZnM+PGNsaXBwYXRoIGlkPSJhcnJvdy1ibG9ja3MtcmlnaHRfc3ZnX19hIj48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDQwdjQwSDB6IiAvPjwvY2xpcHBhdGg+PC9kZWZzPjxnIGZpbGw9ImN1cnJlbnRDb2xvciIgY2xpcC1wYXRoPSJ1cmwoI2Fycm93LWJsb2Nrcy1yaWdodF9zdmdfX2EpIj48cGF0aCBkPSJNMzIgMTZoOHY4aC04em0tOCA4aDh2OGgtOHptLTggOGg4djhoLTh6bTgtMjRoOHY4aC04em0tOC04aDh2OGgtOHpNMCAxNmgxNnY4SDB6IiAvPjwvZz48L3N2Zz4=){.ars-gallery-caption-arrow
+.ars-gallery-caption-arrow-right}
+
+One bit flipped.
+
+![](data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iYXJzLWdhbGxlcnktY2FwdGlvbi1hcnJvdyBhcnMtZ2FsbGVyeS1jYXB0aW9uLWFycm93LWxlZnQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld2JveD0iMCAwIDQwIDQwIj48ZGVmcz48Y2xpcHBhdGggaWQ9ImFycm93LWJsb2Nrcy1yaWdodF9zdmdfX2EiPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoNDB2NDBIMHoiIC8+PC9jbGlwcGF0aD48L2RlZnM+PGcgZmlsbD0iY3VycmVudENvbG9yIiBjbGlwLXBhdGg9InVybCgjYXJyb3ctYmxvY2tzLXJpZ2h0X3N2Z19fYSkiPjxwYXRoIGQ9Ik0zMiAxNmg4djhoLTh6bS04IDhoOHY4aC04em0tOCA4aDh2OGgtOHptOC0yNGg4djhoLTh6bS04LThoOHY4aC04ek0wIDE2aDE2djhIMHoiIC8+PC9nPjwvc3ZnPg==){.ars-gallery-caption-arrow
+.ars-gallery-caption-arrow-left}
+
+Original image.
+
+![](data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iYXJzLWdhbGxlcnktY2FwdGlvbi1hcnJvdyBhcnMtZ2FsbGVyeS1jYXB0aW9uLWFycm93LXJpZ2h0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCA0MCA0MCI+PGRlZnM+PGNsaXBwYXRoIGlkPSJhcnJvdy1ibG9ja3MtcmlnaHRfc3ZnX19hIj48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDQwdjQwSDB6IiAvPjwvY2xpcHBhdGg+PC9kZWZzPjxnIGZpbGw9ImN1cnJlbnRDb2xvciIgY2xpcC1wYXRoPSJ1cmwoI2Fycm93LWJsb2Nrcy1yaWdodF9zdmdfX2EpIj48cGF0aCBkPSJNMzIgMTZoOHY4aC04em0tOCA4aDh2OGgtOHptLTggOGg4djhoLTh6bTgtMjRoOHY4aC04em0tOC04aDh2OGgtOHpNMCAxNmgxNnY4SDB6IiAvPjwvZz48L3N2Zz4=){.ars-gallery-caption-arrow
+.ars-gallery-caption-arrow-right}
+
+One bit flipped.
+
+[![](https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted-two-bits.jpg){.ars-gallery-image
+decoding="async" width="360" height="480" loading="lazy"
+aria-labelledby="caption-396075"
+srcset="https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted-two-bits.jpg 360w, https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted-two-bits-300x400.jpg 300w"
+sizes="auto, (max-width: 360px) 100vw, 360px"}](https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted-two-bits.jpg){.cursor-zoom-in
+pswp-width="360" pswp-height="480"
+pswp-srcset="https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted-two-bits.jpg 360w, https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted-two-bits-300x400.jpg 300w"
+cropped="true" target="_blank"}
+
+Two bits flipped.
+
+![](data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iYXJzLWdhbGxlcnktY2FwdGlvbi1hcnJvdyBhcnMtZ2FsbGVyeS1jYXB0aW9uLWFycm93LXJpZ2h0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCA0MCA0MCI+PGRlZnM+PGNsaXBwYXRoIGlkPSJhcnJvdy1ibG9ja3MtcmlnaHRfc3ZnX19hIj48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDQwdjQwSDB6IiAvPjwvY2xpcHBhdGg+PC9kZWZzPjxnIGZpbGw9ImN1cnJlbnRDb2xvciIgY2xpcC1wYXRoPSJ1cmwoI2Fycm93LWJsb2Nrcy1yaWdodF9zdmdfX2EpIj48cGF0aCBkPSJNMzIgMTZoOHY4aC04em0tOCA4aDh2OGgtOHptLTggOGg4djhoLTh6bTgtMjRoOHY4aC04em0tOC04aDh2OGgtOHpNMCAxNmgxNnY4SDB6IiAvPjwvZz48L3N2Zz4=){.ars-gallery-caption-arrow
+.ars-gallery-caption-arrow-right}
+
+Two bits flipped.
+
+[![](https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted-three-bits.jpg){.ars-gallery-image
+decoding="async" width="360" height="480" loading="lazy"
+aria-labelledby="caption-396073"
+srcset="https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted-three-bits.jpg 360w, https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted-three-bits-300x400.jpg 300w"
+sizes="auto, (max-width: 360px) 100vw, 360px"}](https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted-three-bits.jpg){.cursor-zoom-in
+pswp-width="360" pswp-height="480"
+pswp-srcset="https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted-three-bits.jpg 360w, https://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted-three-bits-300x400.jpg 300w"
+cropped="true" target="_blank"}
+
+Three bits flipped.
+
+![](data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iYXJzLWdhbGxlcnktY2FwdGlvbi1hcnJvdyBhcnMtZ2FsbGVyeS1jYXB0aW9uLWFycm93LXJpZ2h0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCA0MCA0MCI+PGRlZnM+PGNsaXBwYXRoIGlkPSJhcnJvdy1ibG9ja3MtcmlnaHRfc3ZnX19hIj48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDQwdjQwSDB6IiAvPjwvY2xpcHBhdGg+PC9kZWZzPjxnIGZpbGw9ImN1cnJlbnRDb2xvciIgY2xpcC1wYXRoPSJ1cmwoI2Fycm93LWJsb2Nrcy1yaWdodF9zdmdfX2EpIj48cGF0aCBkPSJNMzIgMTZoOHY4aC04em0tOCA4aDh2OGgtOHptLTggOGg4djhoLTh6bTgtMjRoOHY4aC04em0tOC04aDh2OGgtOHpNMCAxNmgxNnY4SDB6IiAvPjwvZz48L3N2Zz4=){.ars-gallery-caption-arrow
+.ars-gallery-caption-arrow-right}
+
+Three bits flipped.
+
+![](data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iYXJzLWdhbGxlcnktY2FwdGlvbi1hcnJvdyBhcnMtZ2FsbGVyeS1jYXB0aW9uLWFycm93LWxlZnQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld2JveD0iMCAwIDQwIDQwIj48ZGVmcz48Y2xpcHBhdGggaWQ9ImFycm93LWJsb2Nrcy1yaWdodF9zdmdfX2EiPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoNDB2NDBIMHoiIC8+PC9jbGlwcGF0aD48L2RlZnM+PGcgZmlsbD0iY3VycmVudENvbG9yIiBjbGlwLXBhdGg9InVybCgjYXJyb3ctYmxvY2tzLXJpZ2h0X3N2Z19fYSkiPjxwYXRoIGQ9Ik0zMiAxNmg4djhoLTh6bS04IDhoOHY4aC04em0tOCA4aDh2OGgtOHptOC0yNGg4djhoLTh6bS04LThoOHY4aC04ek0wIDE2aDE2djhIMHoiIC8+PC9nPjwvc3ZnPg==){.ars-gallery-caption-arrow
+.ars-gallery-caption-arrow-left}
+
+Two bits flipped.
+
+![](data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iYXJzLWdhbGxlcnktY2FwdGlvbi1hcnJvdyBhcnMtZ2FsbGVyeS1jYXB0aW9uLWFycm93LXJpZ2h0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCA0MCA0MCI+PGRlZnM+PGNsaXBwYXRoIGlkPSJhcnJvdy1ibG9ja3MtcmlnaHRfc3ZnX19hIj48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDQwdjQwSDB6IiAvPjwvY2xpcHBhdGg+PC9kZWZzPjxnIGZpbGw9ImN1cnJlbnRDb2xvciIgY2xpcC1wYXRoPSJ1cmwoI2Fycm93LWJsb2Nrcy1yaWdodF9zdmdfX2EpIj48cGF0aCBkPSJNMzIgMTZoOHY4aC04em0tOCA4aDh2OGgtOHptLTggOGg4djhoLTh6bTgtMjRoOHY4aC04em0tOC04aDh2OGgtOHpNMCAxNmgxNnY4SDB6IiAvPjwvZz48L3N2Zz4=){.ars-gallery-caption-arrow
+.ars-gallery-caption-arrow-right}
+
+Three bits flipped.
