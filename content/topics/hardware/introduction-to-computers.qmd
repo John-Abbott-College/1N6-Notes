@@ -1,6 +1,8 @@
 ---
 title: Introduction to Computers
-subtitle: The fundamental properties of computers explained with examples and definitions.
+subtitle:
+  The fundamental properties of computers explained with examples and
+  definitions.
 date: 2024-08-27
 ---
 
@@ -8,48 +10,74 @@ date: 2024-08-27
 
 ## Introduction
 
-We all interact with computers on a daily basis, whether we are aware or not. In fact, it can be said that computers, or computing devices, have been part of human society (in some manner or another) for *centuries* -- even though the computers we typically think of today are relatively recent inventions from the 20th century.
+We all interact with computers on a daily basis, whether we are aware or not. In
+fact, it can be said that computers, or computing devices, have been part of
+human society (in some manner or another) for _centuries_ -- even though the
+computers we typically think of today are relatively recent inventions from the
+20th century.
 
-What is a computer? What is it that computers actually *do*? This lecture is a brief introduction to these questions. The big picture definitions we learn here will be helpful anchors for better understanding the more complicated and detailed components of modern computers that we will need to learn to understand technical support as a science and a profession.
+What is a computer? What is it that computers actually _do_? This lecture is a
+brief introduction to these questions. The big picture definitions we learn here
+will be helpful anchors for better understanding the more complicated and
+detailed components of modern computers that we will need to learn to understand
+technical support as a science and a profession.
 
 ## Lesson overview
 
 - Understand what a computer is
-- Compare and contrast different types of computers by complexity and capabilities
+- Compare and contrast different types of computers by complexity and
+  capabilities
 - Understand what modern digital computers are
 - Understand the difference between personal computing devices and servers
 
 ## What is a computer?
 
-A __computer__   is an device designed to:
+A **computer** is an device designed to:
 
-1. __store information__
-2. __change that information__ through human or automated interactions
+1. **store information**
+2. **change that information** through human or automated interactions
 
-A __computer__ almost always features: (1) a mechanism for keeping information intact and (2) interactive components to facilitate the modification of that information.
+A **computer** almost always features: (1) a mechanism for keeping information
+intact and (2) interactive components to facilitate the modification of that
+information.
 
 ## Is this a computer? Examples
 
-The above definition sounds pretty general -- and it is! What kinds of things count as computers, or follow the above two properties? Click through the tabs below to see some examples, and a discussion for each on its ability to *compute* things.
+The above definition sounds pretty general -- and it is! What kinds of things
+count as computers, or follow the above two properties? Click through the tabs
+below to see some examples, and a discussion for each on its ability to
+_compute_ things.
 
 ::: {.panel-tabset}
 
 ## Desktops
 
-Desktop computers, often referred to as the **Personal Computer (PC)**, are a classic example of a modern computing device -- these are the computers that we will be using in our labs, and upon which we will focus the majority of our study this semester.
+Desktop computers, often referred to as the **Personal Computer (PC)**, are a
+classic example of a modern computing device -- these are the computers that we
+will be using in our labs, and upon which we will focus the majority of our
+study this semester.
 
-Desktop computers meet the computer definition above in many ways, but simply: (1) information is stored in **disks**, and (2) information is modified by human interaction using devices like **keyboards** and **mice**, and then modified by the computer using a **central processing unit (CPU)**.
+Desktop computers meet the computer definition above in many ways, but simply:
+(1) information is stored in **disks**, and (2) information is modified by human
+interaction using devices like **keyboards** and **mice**, and then modified by
+the computer using a **central processing unit (CPU)**.
 
 ![A **desktop computer** is composed of **external (peripheral) components** like monitors, keyboards, and mice for human interaction (input/output), as well as **internal (system) components** that are usually stored inside of a case or tower like in the image above, to keep sensitive electrical components safe. Image by [OpenClipart-Vectors][desktop-img-attr] from [Pixabay].](_assets/introduction-to-computers-desktop.svg)
 
 [Pixabay]: https://pixabay.com/
 [desktop-img-attr]: https://pixabay.com/users/openclipart-vectors-30363/
 
-We will learn in future lectures the deep gritty detail of how devices like disks, keyboards, mice, CPUs, and others make modern computer magic happen.
+We will learn in future lectures the deep gritty detail of how devices like
+disks, keyboards, mice, CPUs, and others make modern computer magic happen.
 
 ## Laptops
 
-**Laptop computers** meet the computer definition above in the exact same way as desktop computers: (1) information is stored in **disks** (usually smaller in size and weight than desktop disks), and (2) information is modified by human interaction using devices like **embedded keyboards** and **trackpads** -- though external mice and keyboards can be plugged in -- and then modified by the computer using a **central processing unit (CPU)**.
+**Laptop computers** meet the computer definition above in the exact same way as
+desktop computers: (1) information is stored in **disks** (usually smaller in
+size and weight than desktop disks), and (2) information is modified by human
+interaction using devices like **embedded keyboards** and **trackpads** --
+though external mice and keyboards can be plugged in -- and then modified by the
+computer using a **central processing unit (CPU)**.
 
 ![A **laptop computer** combines similar external/internal components from desktop computers into one portable container. While the behavior of laptops and desktops is almost identical, the actual components are generally specialized for laptops and cannot be easily interchanged with desktop components. Image by [Clker-Free-Vector-Images][laptop-img-attr] from [Pixabay].](_assets/introduction-to-computers-laptop.svg)
 
@@ -57,9 +85,16 @@ We will learn in future lectures the deep gritty detail of how devices like disk
 
 ## Mobile Phones
 
-The first **mobile phones** were computers in a much more limited sense than desktops, laptops, and modern smart phones -- but nonetheless they could store data like contacts, calendars, and even photos on small **memory cards**, as well as, of course, carry out instructions like connecting to a phone line for calling and texting.
+The first **mobile phones** were computers in a much more limited sense than
+desktops, laptops, and modern smart phones -- but nonetheless they could store
+data like contacts, calendars, and even photos on small **memory cards**, as
+well as, of course, carry out instructions like connecting to a phone line for
+calling and texting.
 
-**Smartphones** are much more similar to laptops and desktops than they are to their predecessors in the type and complexity of their components, and in the amount of data and processing power that enables them to install applications, run operating systems, and much more.
+**Smartphones** are much more similar to laptops and desktops than they are to
+their predecessors in the type and complexity of their components, and in the
+amount of data and processing power that enables them to install applications,
+run operating systems, and much more.
 
 ![Two decades of evolution of mobile phones, from a 1992 Motorola DynaTAC 8000X to the 2014 iPhone 6 Plus. The change from tactile interfaces (buttons, nontouch screens) to touchscreens for interacting with data on a phone is visible. In addition, the ability to store large amounts of data, even entire operating systems, was introduced with the first "smartphones" of Blackberry and IPhone in the mid 2000s. Image from [Wikipedia], image by Jojhnjoy - own work, based on the work of Anders, Public Domain](_assets/introduction-to-computers-phones.jpg)
 
@@ -67,7 +102,11 @@ The first **mobile phones** were computers in a much more limited sense than des
 
 ## Game consoles
 
-Game consoles such as PlayStation and Xbox, as well as handheld handheld consoles like Nintendo Switch and Valve Steam Deck, are similar to smartphones in that they technically contain all of the components of a computer, but generally manufactured from **proprietary hardware** that cannot be interchanged with other computers.
+Game consoles such as PlayStation and Xbox, as well as handheld handheld
+consoles like Nintendo Switch and Valve Steam Deck, are similar to smartphones
+in that they technically contain all of the components of a computer, but
+generally manufactured from **proprietary hardware** that cannot be interchanged
+with other computers.
 
 ::: {#fig-gameconsoles layout-ncol=2}
 
@@ -75,17 +114,24 @@ Game consoles such as PlayStation and Xbox, as well as handheld handheld console
 
 ![](_assets/introduction-to-computers-gamecube.png)
 
-Video game consoles showed an interesting development in **storage technology** in the elate 90's: originally, game data AND user save data would be stored on a **writable** [ROM game cartridge] as in the N64 (left). The next generation of systems like Gamecube (right) would provide **read-only** game data on a [CD-ROM disk] with writable data being stored on a separate [memory card]. Images by [aerozol] from [Pixabay].
-:::
+Video game consoles showed an interesting development in **storage technology**
+in the elate 90's: originally, game data AND user save data would be stored on a
+**writable** [ROM game cartridge] as in the N64 (left). The next generation of
+systems like Gamecube (right) would provide **read-only** game data on a [CD-ROM
+disk] with writable data being stored on a separate [memory card]. Images by
+[aerozol] from [Pixabay]. :::
 
-[aerozol]: https://pixabay.com/users/aerozol-5124957/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4003939
+[aerozol]:
+  https://pixabay.com/users/aerozol-5124957/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4003939
 [ROM game cartridge]: https://en.wikipedia.org/wiki/ROM_cartridge
 [memory card]: https://en.wikipedia.org/wiki/Memory_card
 [CD-ROM disk]: https://en.wikipedia.org/wiki/Compact_disc
 
 ## Nonelectronics?
 
-Even before there were consumer electronics, there were devices made to store and process data -- that is, computers! The following are three different examples of nonelectronic devices that have been used for computation.
+Even before there were consumer electronics, there were devices made to store
+and process data -- that is, computers! The following are three different
+examples of nonelectronic devices that have been used for computation.
 
 ::: {layout-nrow=2 layout-valign="bottom"}
 ![**Abacus**: The world's first calculator. Large numbers can be represented using a relatively small number of beads. Simple operations like addition and subtraction are simple to perform, but abacuses are even capable of more complex operations like multiplication, division, and square roots. Image by Pearson Scott Foresman, Public domain, via Wikimedia Commons][abacus]
@@ -97,14 +143,18 @@ Even before there were consumer electronics, there were devices made to store an
 ![**Difference engine** implemented and built in 2002 based on the original designs. Image retreived from Wikimedia Commons][diff-engine-real]
 :::
 
-[abacus]: https://upload.wikimedia.org/wikipedia/commons/a/af/Abacus_%28PSF%29.png
-[antikythera]: https://upload.wikimedia.org/wikipedia/commons/6/66/NAMA_Machine_d%27Anticyth%C3%A8re_1.jpg
-[diff-engine-diag]: https://upload.wikimedia.org/wikipedia/commons/9/9e/Difference_engine_plate_1853.jpg
+[abacus]:
+  https://upload.wikimedia.org/wikipedia/commons/a/af/Abacus_%28PSF%29.png
+[antikythera]:
+  https://upload.wikimedia.org/wikipedia/commons/6/66/NAMA_Machine_d%27Anticyth%C3%A8re_1.jpg
+[diff-engine-diag]:
+  https://upload.wikimedia.org/wikipedia/commons/9/9e/Difference_engine_plate_1853.jpg
 [diff-engine-real]: _assets/introduction-to-computers-differenceengine.jpg
 
 ## Computers within computers?
 
-It is possible, and actually quite common, to create computers *inside* other computers, using the programming capabilities of that computer.
+It is possible, and actually quite common, to create computers _inside_ other
+computers, using the programming capabilities of that computer.
 
 ::: {#fig-minecraft}
 
@@ -119,39 +169,73 @@ Video from [Codeolences] on [YouTube]
 
 :::
 
-The above are just some of many devices that are computers in this sense. Appliances like dishwashers/washing machines with cycle settings, handheld electronics like calculators (whether programmable or not), wearables like fitbits, fare gates and metro stops, traffic lights... these are just some of the many devices that work based on computing principles.
+The above are just some of many devices that are computers in this sense.
+Appliances like dishwashers/washing machines with cycle settings, handheld
+electronics like calculators (whether programmable or not), wearables like
+fitbits, fare gates and metro stops, traffic lights... these are just some of
+the many devices that work based on computing principles.
 
 ## Digital computers
 
-You may think the above definition is *too* general -- indeed, in the context of this class, we will almost always be talking specifically about **digital** computers when we say *computer*. What is the difference?
+You may think the above definition is _too_ general -- indeed, in the context of
+this class, we will almost always be talking specifically about **digital**
+computers when we say _computer_. What is the difference?
 
-Digital computers have the following two additional properties compared to general computers. They are:
+Digital computers have the following two additional properties compared to
+general computers. They are:
 
-- **Digital**: All the "information" stored is represented by combinations of two different states (0 or 1, i.e., ON or OFF).[^digital]
-- **Deterministic**: A given input reliably produces a defined output with every interaction.[^deterministic]
+- **Digital**: All the "information" stored is represented by combinations of
+  two different states (0 or 1, i.e., ON or OFF).[^digital]
+- **Deterministic**: A given input reliably produces a defined output with every
+  interaction.[^deterministic]
 
-When we study the components of computers, the above two properties will allow us to really understand *how* such devices work and why, as in every case, the device implements these two properties to give us the behavior we need.
+When we study the components of computers, the above two properties will allow
+us to really understand _how_ such devices work and why, as in every case, the
+device implements these two properties to give us the behavior we need.
 
-[^digital]: These digital states are made possible using electrical circuitry. In order to do complex operations with these states, we can use the **binary** numbering to represent the digital states as a variety of numbers, letters, and other concepts. This digital information can be shared between devices using cables (whether electrical or optical, as we will see)
-[^deterministic]: For one e.g., when you tap your OPUS card on a fare gate, you should expect that it will either let you through (if you have fare) or not (if you don't). The concept is more general: computer engineering is, in part, the study and practise of making physical interactions with computing devices **reliably and predictably** produce the same *deterministic* results under the same physical conditions.
+[^digital]:
+    These digital states are made possible using electrical circuitry. In order
+    to do complex operations with these states, we can use the **binary**
+    numbering to represent the digital states as a variety of numbers, letters,
+    and other concepts. This digital information can be shared between devices
+    using cables (whether electrical or optical, as we will see)
+
+[^deterministic]:
+    For one e.g., when you tap your OPUS card on a fare gate, you should expect
+    that it will either let you through (if you have fare) or not (if you
+    don't). The concept is more general: computer engineering is, in part, the
+    study and practise of making physical interactions with computing devices
+    **reliably and predictably** produce the same _deterministic_ results under
+    the same physical conditions.
 
 ## Hardware vs Software
 
- **Hardware**: The  **physical**  components that make up a computer system.
+**Hardware**: The **physical** components that make up a computer system.
 
-**Software**: The  **programs**  (instructions) that tell the computer (the hardware) what to do.
+**Software**: The **programs** (instructions) that tell the computer (the
+hardware) what to do.
 
 ## Personal vs shared computing: What is a server?
 
-In the beginning, our focus will be on understanding individual personal computers. Yet, this barely scratches the surface of how computers are used in modern society -- we will also need to learn about how many computers can be combined to pool resources and provide services at all times of day, as this is essential to the infrastructure of the internet and a foundational concept in technical support as a profession.
+In the beginning, our focus will be on understanding individual personal
+computers. Yet, this barely scratches the surface of how computers are used in
+modern society -- we will also need to learn about how many computers can be
+combined to pool resources and provide services at all times of day, as this is
+essential to the infrastructure of the internet and a foundational concept in
+technical support as a profession.
 
-For now, we can just know that **servers** are similar to personal computers, but use specialized hardware that is optimized for being turned on 24/7, for communicating with other servers, and for processing and managing **large** amounts of data.
+For now, we can just know that **servers** are similar to personal computers,
+but use specialized hardware that is optimized for being turned on 24/7, for
+communicating with other servers, and for processing and managing **large**
+amounts of data.
 
 ![Photo by <a href="https://unsplash.com/@matthieu_cabri?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Matthieu Beaumont</a> on <a href="https://unsplash.com/photos/a-very-large-array-of-electronic-equipment-in-a-room-iYnpYeyu57k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](_assets/introduction-to-computers-servers.jpg)
 
-
-
-This is because **servers** are the necessary infrastructure for running the large popular websites and services many of us use today on a regular basis: Social Media websites like Facebook/Instragram/etc., educational resources like Omnivox/Moodle, online software like Office 365, etc. all run on **servers**, or on collections of servers, known as **server farms**.
+This is because **servers** are the necessary infrastructure for running the
+large popular websites and services many of us use today on a regular basis:
+Social Media websites like Facebook/Instragram/etc., educational resources like
+Omnivox/Moodle, online software like Office 365, etc. all run on **servers**, or
+on collections of servers, known as **server farms**.
 
 ## Exercises
 
@@ -159,19 +243,41 @@ None for this lecture -- stay tuned for the next two lectures!
 
 ## Knowledge check
 
-The following questions invite you to reflect on the key information learned in this lesson. If you can't answer the question, you can click the corresponding link to review the topic more closely. Future assignments and tests may be based on questions like these:
+The following questions invite you to reflect on the key information learned in
+this lesson. If you can't answer the question, you can click the corresponding
+link to review the topic more closely. Future assignments and tests may be based
+on questions like these:
 
 - What are the two main properites of computers?
 - Are video game consoles computers?
-- Are there examples of nonelectonic computers? How do nonelectronic computer *compute*?
+- Are there examples of nonelectonic computers? How do nonelectronic computer
+  _compute_?
 - Why is **binary** relevant to computers?
-- What is the property of computers that means they reliably behave the same way given the same input?
-- What is the name for the type of computer that is always on, and is specialized for processing large amounts of data and pooling many computing resources in one place?
+- What is the property of computers that means they reliably behave the same way
+  given the same input?
+- What is the name for the type of computer that is always on, and is
+  specialized for processing large amounts of data and pooling many computing
+  resources in one place?
 
 ## Additional resources
 
-This section contains helpful links to related content. You aren't required to study these in detail, but it never hurts to learn more.
+This section contains helpful links to related content. You aren't required to
+study these in detail, but it never hurts to learn more.
 
-- [Computer Basics by GCF Global](https://edu.gcfglobal.org/en/computerbasics/): We will eventually cover almost all of the material in this free online resource; for now, **Parts 1-7** in particular are relevant to what we have learned so far.
-- ["The Mother of All Demos"](https://www.dougengelbart.org/content/view/209/448/) This is a 1968 presentation that introduced many of the hardware/graphics concepts we will see today and some we will see in future lectures: the mouse, networking, video conferencing, word documents, hyperlinks, *gamer headphones*, etc. It is very cool to see the palpable excitement of the 2000+ audience tuning into a passionate presentation of a series of completely new technologies.
-- Montréal's [Musée de l'Ordinateur](http://emusee.org/) -- unfortunately the physical location has been closed since 2022, but the website is still a neat resource for reading on the history of personal computers and their evolution. The author's bias towards Bill Gates and Windows machines is quite strong (there is *much* more to the story), but the information provided is reliable and interesting.
+- [Computer Basics by GCF Global](https://edu.gcfglobal.org/en/computerbasics/):
+  We will eventually cover almost all of the material in this free online
+  resource; for now, **Parts 1-7** in particular are relevant to what we have
+  learned so far.
+- ["The Mother of All Demos"](https://www.dougengelbart.org/content/view/209/448/)
+  This is a 1968 presentation that introduced many of the hardware/graphics
+  concepts we will see today and some we will see in future lectures: the mouse,
+  networking, video conferencing, word documents, hyperlinks, _gamer
+  headphones_, etc. It is very cool to see the palpable excitement of the 2000+
+  audience tuning into a passionate presentation of a series of completely new
+  technologies.
+- Montréal's [Musée de l'Ordinateur](http://emusee.org/) -- unfortunately the
+  physical location has been closed since 2022, but the website is still a neat
+  resource for reading on the history of personal computers and their evolution.
+  The author's bias towards Bill Gates and Windows machines is quite strong
+  (there is _much_ more to the story), but the information provided is reliable
+  and interesting.
