@@ -3,25 +3,27 @@ title: Syllabus
 subtitle: "Course description outlining goals, expectations, resources, and other important information."
 ---
 
-{{< include /_reference-links.md >}}
+<!-- {{< include /_reference-links.md >}}
 
-![This comic may be smarmy, but is it usually true... Image <a href="https://jorgecham.com/">&copy; jorge cham</a>, retreived from <a href="https://phdcomics.com/comics.php?f=1583">PHD Comics</a>.](_assets/itsInTheSyllabus.png "Time doesn't have to be your downfall, if you plan ahead."){fig-alt="Captain Hook holds a timepiece high with one hand, and points at the clock hands with his hook hand."} 
+![This comic may be smarmy, but is it usually true... Image <a href="https://jorgecham.com/">&copy; jorge cham</a>, retreived from <a href="https://phdcomics.com/comics.php?f=1583">PHD Comics</a>.](_assets/itsInTheSyllabus.png "Time doesn't have to be your downfall, if you plan ahead."){fig-alt="Captain Hook holds a timepiece high with one hand, and points at the clock hands with his hook hand."}  -->
 
-## Logistics
+![Figure caption.](_assets/tech_support_intro.jpg){fig-alt="alt text"}
 
-- **Office:** {{< var instructor.office >}}
-- **Office hours:** {{< var instructor.office-hours >}}
-- **Email:** {{< var instructor.email >}}
-- **Timetable:** {{< var course.timetable >}}
-- **Course webpage:** This website for all content, [Omnivox][omnivox] for assignment submissions.
+## Teacher - Section 1
+- **Name:** {{<var instructor.section1.name>}}
+- **Office:** {{<var instructor.section1.office>}}
+- **Office hours:** {{< var instructor.section1.office-hours >}}
+- **Communication**: {{< var instructor.section1.preferred-communication >}}
+- **Work submission**: {{<var instructor.section1.work-submission>}}
 
-### Communication
-- Teams - For communicating (fastest, most reliable that I will check it same-day)
-- MIO - For communicating (non-time-critical)
-- Email - For communicating (time-critical).  Will aim for <24hr response.
-- [Omnivox][omnivox] - For receiving & submitting exercises/assignments/project and getting marks
+## Teacher - Section 2
+- **Name:** {{<var instructor.section2.name>}}
+- **Office:** {{<var instructor.section2.office>}}
+- **Office hours:** {{< var instructor.section2.office-hours >}}
+- **Communication**: {{< var instructor.section2.preferred-communication >}}
+- **Work submission**: {{<var instructor.section2.work-submission >}}
 
-### Assessment
+### Assessments
 
 - 60% Assignments and Labs
 - 20% Test 1 
@@ -72,38 +74,37 @@ Each topic above is a massive field of research and industry in its own right --
 
 ### Rule 1: Attend all classes and labs!
 
-I will freely provide my slides and as many course resources as necessary to supplement this class.
+* I take attendance every class and require you to submit in-class activities and group work during class time. 
+* This course contains a lot of hands-on learning.
+* You CANNOT rely solely on the course notes to succeed.
 
-But! My course notes are not a substitute for regular class attendance. Hands on experience is key!
+### Rule 2: Keep a professional behaviour in the lab.
 
-**Note:** All of your marks come from Assignments and Tests. We will do in-class activities that are neither Assignments or Tests, but are required -- completing the in-class labs will be a component of your Assignment mark. If you finish in-class labs quickly, you will have more time to work on Assignments in class, instead of at home.
+* Arrive to the labs 5 minutes in advance!
+* Be careful when handling computer parts, they can easily break.
+* Avoid eating or drinking near computers to prevent spills and damage.
+* Let’s work together to keep our tech tools in top shape.
+* Keep voices low during lab/group activities to avoid distracting others who are working or receiving help.
 
-### Rule 2: Consult the Support Material
+<img src="_assets/Lecture_0_Course Introduction14.gif"/>
 
-* Class Slides
-* Lab and exercises in class
-* Assignments
-* Your class notes
+### Rule 3: Don't play video games in class!
 
-### Rule 3: Use a calendar to track all your deadlines
+* No video games, or online videos should be played in class.
+* If you are done the in-class activities or are waiting after me, you may either leave or work on homework while waiting.
 
-* To stay on track for all your deadlines\, try to plan one or two weeks ahead\!
-* Complete your assignments on time
-  * But\! Endeavour to at least hand in assignments\. Better late/incomplete than never\.
-* If you miss a deadline\, please don't ignore it\!
-  * MIO me\. I’m here to help\! And that includes for late/incomplete assignments\.
+![](_assets/Lecture%200%20-%20Course%20Introduction13.jpg)
 
-![](_assets/Lecture%200%20-%20Course%20Introduction14.png)
-
-### Rule 4: Reach out for help!
-
-* Reach out to me if you ever feel stuck or overwhelmed
+### Rule 5: Share with others\!
 * Try your best to get to know other students
-  * Help each other out! You will learn much more from working through the assignments yourself and from teaching eachother than you will from listening to me
+  * Help each other out! You will learn much more from working through the assignments yourself and from teaching eachother.
   * Learning from others and building relationships with new peers is one of the most valuable parts of school
+* If you feel more advanced or have already done what's shown in class, don't hesitate to help others and share your knowledge with the class.
 * Seek out help if you are struggling \(from me\, from peers\, from John Abbott student services\, etc\.\)
 
-### Rule 5: Be curious!
+![](_assets/Lecture%200%20-%20Course%20Introduction15.jpg)
+
+### Rule 6: Be curious!
 
 This field has a lot of support online. Stay curious\, the internet is your Oyster\!
 

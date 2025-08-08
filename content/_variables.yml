@@ -1,14 +1,26 @@
 instructor:
-  name: Michael Haaf
-  office: Penfield 311
-  office-hours: Posted on Léa and on office door
-  email: michael DOT haaf AT johnabbott DOT qc DOT ca
+  section1:
+    name: Youmna Badawy
+    office: Penfield 311
+    office-hours: Posted on Léa and on office door
+    preferred-communication: Mio (for quck response) or Teams (for online office hours)
+    email: youmna.badawy@johnabbott.qc.ca
+    work-submission: Omnivox
+  section2:
+    name: Preeti Pearl D'Mello
+    office: Penfield 311
+    office-hours: Posted on Léa and on office door
+    preferred-communication: Mio, Teams, or email
+    work-submission: Omnivox
+    email: PreetiPearl.DMelo@johnabbott.qc.ca
+
 
 course:
   title: Technical Support
   number: 420-1N6-AB
-  semester: Fall 2024
+  semester: Fall 2025
   timetable: |+
-    - Monday, 11.30 AM – 1.00 PM (Room P-325/P-107)
-    - Tuesday, 2.30 PM – 5.30 PM (Room P-326/P-107)
-    - Thursday, 8.30 AM – 10.00 AM (Room P-326/P-107)
+    - Tuesday, 11.30 AM – 1.00 PM (Room P-325/P-107)
+    - Thursday, 10.00 AM – 1.00 PM (Room P-326/P-107)
+    - Friday, 11.30 AM – 1.00 PM (Room P-326/P-107)
+  

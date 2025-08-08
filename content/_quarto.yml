@@ -18,33 +18,24 @@ website:
   page-footer:
     center:
       - text: "About"
-        href: about/index.qmd
+        href: about/this-site.qmd
 
   navbar:
     logo: "_assets/icon-lightbg.svg"
     left:
       - index.qmd
-      - text: "Announcements"
-        href: announcements/index.qmd
       - text: "Calendar"
         href: about/calendar.qmd
       - text: "Syllabus"
         href: about/syllabus.qmd
       - text: "Lectures"
         href: topics/all-lectures.qmd
-      - text: "{{< iconify simple-icons moodle >}}"
-        href: https://moodle.johnabbott.qc.ca/course/view.php?id=807
-      - text: "{{< iconify fa6-brands github >}}"
-        href: https://github.com/john-abbott-college/quarto-course-template
-
+      - text: "Labs"
+        href: labs/all-labs.qmd
   sidebar:
     style: "floating"
     align: center
     contents: 
-      - index.qmd
-      - announcements/index.qmd
-      - section: "About"
-        contents: about/**
       - section: "Topics"
         contents: topics/**
 
@@ -65,5 +56,5 @@ format:
       loop: true
     copyright:
       holder: Michael Haaf
-      year: 2024
+      year: 2025
     license: CC BY-NC-SA
