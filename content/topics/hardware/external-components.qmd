@@ -61,13 +61,13 @@ Many! “Gaming” (many buttons), Ergonomic (optimize human comfort), etc.
 
 ::: {layout-ncol=2 layout-valign="bottom"}
 
-![Figure caption.](_assets/external-components16.png){fig-alt="alt text"}
+![ The prototype computer mouse Doug Engelbart used in the Mother of All Demos in 1968.](_assets/external-components16.png){fig-alt="1968 Mouse Prototype"}
 
-![Figure caption.](_assets/external-components17.png){fig-alt="alt text"}
+![Mx Laser Cordless mouse introduced in 2004.](_assets/external-components17.png){fig-alt="2004 Mx 1000 Laser mouse"}
 
-![Figure caption.](_assets/external-components18.png){fig-alt="alt text"}
+![A4Tech WOP-35 Optical mouse LED introduced in 2002.](_assets/external-components18.png){fig-alt="2002 A4Tech WOP-35 Optical mouse"}
 
-![Figure caption.](_assets/external-components19.png){fig-alt="alt text"}
+![Mechanical mouse (unknown manufacturer) used in 80s and 90s"](_assets/external-components19.png){fig-alt="1990s Mechanical mouse"}
 
 :::
 
@@ -77,11 +77,11 @@ Used to enter text commands. Most commonly used is the QWERTY layout (used in ty
 
 Variations include wired or wireless keyboards and numeric keypads. *Ergonomic* designs are recently becoming more popular.
 
-![Figure caption.](_assets/external-components20.jpg){width=66% fig-align="left" fig-alt="alt text"}
+![Goldtouch Adjustable Ergonomic Keyboard.](_assets/external-components20.jpg){width=66% fig-align="left" fig-alt="Goldtouch Adjustable Ergonomic Keyboard"}
 
-![Figure caption.](_assets/external-components21.png){width=66% fig-align="left" fig-alt="alt text"}
+![Microsoft Natural Ergonomic Keyboard 4000.](_assets/external-components21.png){width=66% fig-align="left" fig-alt="Microsoft Natural Ergonomic Keyboard 4000"}
 
-![Figure caption.](_assets/external-components22.jpg){width=66% fig-align="left" fig-alt="alt text"}
+![ Goldtouch Numeric Keypad USB.](_assets/external-components22.jpg){width=66% fig-align="left" fig-alt=" Goldtouch Numeric Keypad USB"}
 
 [^2]: note: this is very hypocritical coming from me. don’t mind my bad jokes!
 
