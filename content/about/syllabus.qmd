@@ -15,6 +15,7 @@ subtitle: "Course description outlining goals, expectations, resources, and othe
 - **Office hours:** {{< var instructor.section1.office-hours >}}
 - **Communication**: {{< var instructor.section1.preferred-communication >}}
 - **Work submission**: {{<var instructor.section1.work-submission>}}
+- **Booking link**: Coming soon
 
 ## Teacher - Section 2
 - **Name:** {{<var instructor.section2.name>}}
@@ -22,6 +23,7 @@ subtitle: "Course description outlining goals, expectations, resources, and othe
 - **Office hours:** {{< var instructor.section2.office-hours >}}
 - **Communication**: {{< var instructor.section2.preferred-communication >}}
 - **Work submission**: {{<var instructor.section2.work-submission >}}
+- **Booking link**: {{<var instructor.section2.booking-link>}}
 
 ### Assessments
 
@@ -52,10 +54,14 @@ Each topic above is a massive field of research and industry in its own right --
 
 ## What will I learn?
 
-- Learn to troubleshoot hardware, firmware and software.
-- Understand computers from binary to the use of each hardware part
+- Taking apart a computer and putting it back together
+- Installing the operating system
+- Setting up a virtual machine
+- Understand how computers process and store information
 - Understand the role of IT Helpdesk Technicians
-- Perhaps even build your own PC!
+- Learn to troubleshoot hardware and software issues.
+
+![](_assets/Lecture0_course_overview.png)
 
 ## Material to acquire
 
@@ -66,19 +72,20 @@ Each topic above is a massive field of research and industry in its own right --
   * For your safety when playing with electronics
   * Example: [Antistatic\-Wrist\-Strap](https://www.amazon.ca/Antistatic-Wrist-Strap%EF%BC%8CAdjustable-Static-Band/dp/B09HZQ6FWX/ref=pd_rhf_d_ee_s_pd_sbs_rvi_sccl_2_4/132-2941693-8503316?pd_rd_w=kwM17&content-id=amzn1.sym.c4b12d63-26ee-451b-a00e-167063525dc5&pf_rd_p=c4b12d63-26ee-451b-a00e-167063525dc5&pf_rd_r=NS4NHVRVT92Z90171TC4&pd_rd_wg=8rydi&pd_rd_r=2d633ec8-9be5-4ad5-84f6-ce65f93b5ef0&pd_rd_i=B09HZQ6FWX&psc=1)
 
-![](_assets/Lecture%200%20-%20Course%20Introduction10.jpg)
+<div style="display: flex; justify-content: center; gap: 20px;">
+  <img src="_assets/Lecture%200%20-%20Course%20Introduction10.jpg" width=66%/>
 
-![](_assets/Lecture%200%20-%20Course%20Introduction11.jpg)
+  <img src ="_assets/Lecture%200%20-%20Course%20Introduction11.jpg" width=66%/>
+</div>
+## Rules and tips to succeed in this course
 
-## Rules for success in this class
-
-### Rule 1: Attend all classes and labs!
+### 1: Attend all classes and labs!
 
 * I take attendance every class and require you to submit in-class activities and group work during class time. 
 * This course contains a lot of hands-on learning.
 * You CANNOT rely solely on the course notes to succeed.
 
-### Rule 2: Keep a professional behaviour in the lab.
+### 2: Keep a professional behaviour in the lab.
 
 * Arrive to the labs 5 minutes in advance!
 * Be careful when handling computer parts, they can easily break.
@@ -88,14 +95,14 @@ Each topic above is a massive field of research and industry in its own right --
 
 <img src="_assets/Lecture_0_Course Introduction14.gif"/>
 
-### Rule 3: Don't play video games in class!
+### 3: Don't play video games in class!
 
 * No video games, or online videos should be played in class.
-* If you are done the in-class activities or are waiting after me, you may either leave or work on homework while waiting.
+* If you are done the in-class activities or are waiting after me, you may either leave or work on homework.
 
 ![](_assets/Lecture%200%20-%20Course%20Introduction13.jpg)
 
-### Rule 5: Share with others\!
+### 4: Share with others\!
 * Try your best to get to know other students
   * Help each other out! You will learn much more from working through the assignments yourself and from teaching eachother.
   * Learning from others and building relationships with new peers is one of the most valuable parts of school
@@ -104,7 +111,7 @@ Each topic above is a massive field of research and industry in its own right --
 
 ![](_assets/Lecture%200%20-%20Course%20Introduction15.jpg)
 
-### Rule 6: Be curious!
+### 5: Be curious!
 
 This field has a lot of support online. Stay curious\, the internet is your Oyster\!
 

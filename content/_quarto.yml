@@ -38,7 +38,6 @@ website:
     contents: 
       - section: "Topics"
         contents: topics/**
-
 format:
   html:
     css: _assets/css/styles.css
