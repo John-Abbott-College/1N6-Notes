@@ -24,8 +24,6 @@ website:
     logo: "_assets/icon-lightbg.svg"
     left:
       - index.qmd
-      - text: "Calendar"
-        href: about/calendar.qmd
       - text: "Syllabus"
         href: about/syllabus.qmd
       - text: "Lectures"
