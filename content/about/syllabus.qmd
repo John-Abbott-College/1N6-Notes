@@ -23,7 +23,7 @@ subtitle: "Course description outlining goals, expectations, resources, and othe
 - **Office hours:** {{< var instructor.section2.office-hours >}}
 - **Communication**: {{< var instructor.section2.preferred-communication >}}
 - **Work submission**: {{<var instructor.section2.work-submission >}}
-- **Booking link**: {{<var instructor.section2.booking-link>}}
+- **Booking link**: [Link]({{<var instructor.section2.booking-link>}})  
 
 ### Assessments
 

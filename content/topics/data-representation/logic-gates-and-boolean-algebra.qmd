@@ -3,6 +3,7 @@ date: 2024-10-03
 draft: true
 subtitle: Lecture subtitle.
 title: Logic Gates and Boolean Algebra
+draft: true
 ---
 
 ## Introduction
