@@ -15,10 +15,7 @@
   {
     "listing": "/topics/hardware/index.html",
     "items": [
-      "/topics/hardware/introduction-to-computers.html",
-      "/topics/hardware/external-components.html",
-      "/topics/hardware/internal-components.html",
-      "/topics/hardware/understanding-cpus.html"
+      "/topics/hardware/introduction-to-computers.html"
     ]
   },
   {
@@ -36,10 +33,7 @@
   {
     "listing": "/topics/all-lectures.html",
     "items": [
-      "/topics/hardware/introduction-to-computers.html",
-      "/topics/hardware/external-components.html",
-      "/topics/hardware/internal-components.html",
-      "/topics/hardware/understanding-cpus.html"
+      "/topics/hardware/introduction-to-computers.html"
     ]
   },
   {
