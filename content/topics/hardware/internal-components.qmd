@@ -1,7 +1,7 @@
 ---
-title: Internal Components
+title: Introduction to Internal Components
 subtitle: Explains the most important internal components of desktop computers. Processing, memory, storage, and communication.
-date: 2025-08-26
+date: 2025-09-02
 draft: true
 ---
 

@@ -65,6 +65,10 @@ Each topic above is a massive field of research and industry in its own right --
 
 ## Material to acquire
 
+* USB Stick 16Gb (at least)
+  * For installing Operating systems
+  * Carrying useful software around
+
 * Multiheaded Screwdriver x 1:
   * For assembling computers!
   * Example:  _[Picquic-88001-Multi-Bit-Screwdriver-Full-Size](https://www.amazon.ca/Picquic-88001-Multi-Bit-Screwdriver-Full-Size/dp/B01KZ0AQDU/)_
@@ -73,6 +77,7 @@ Each topic above is a massive field of research and industry in its own right --
   * Example: [Antistatic\-Wrist\-Strap](https://www.amazon.ca/Antistatic-Wrist-Strap%EF%BC%8CAdjustable-Static-Band/dp/B09HZQ6FWX/ref=pd_rhf_d_ee_s_pd_sbs_rvi_sccl_2_4/132-2941693-8503316?pd_rd_w=kwM17&content-id=amzn1.sym.c4b12d63-26ee-451b-a00e-167063525dc5&pf_rd_p=c4b12d63-26ee-451b-a00e-167063525dc5&pf_rd_r=NS4NHVRVT92Z90171TC4&pd_rd_wg=8rydi&pd_rd_r=2d633ec8-9be5-4ad5-84f6-ce65f93b5ef0&pd_rd_i=B09HZQ6FWX&psc=1)
 
 <div style="display: flex; justify-content: center; gap: 20px;">
+  <img src="_assets/usb_stick.jpg" width=66%/>
   <img src="_assets/Lecture%200%20-%20Course%20Introduction10.jpg" width=66%/>
 
   <img src ="_assets/Lecture%200%20-%20Course%20Introduction11.jpg" width=66%/>
