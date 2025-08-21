@@ -1,5 +1,33 @@
 [
   {
+    "objectID": "about/this-site.html",
+    "href": "about/this-site.html",
+    "title": "About this website",
+    "section": "",
+    "text": "This webpage is written in Markdown using the Quarto framework. The website is hosted via GitHub Pages\nSource code is open source and available on GitHub."
+  },
+  {
+    "objectID": "about/this-site.html#source-code",
+    "href": "about/this-site.html#source-code",
+    "title": "About this website",
+    "section": "",
+    "text": "This webpage is written in Markdown using the Quarto framework. The website is hosted via GitHub Pages\nSource code is open source and available on GitHub."
+  },
+  {
+    "objectID": "about/this-site.html#course-content",
+    "href": "about/this-site.html#course-content",
+    "title": "About this website",
+    "section": "Course content",
+    "text": "Course content\nCourse content, both for lectures and assignments, has been adapted by me from a variety of sources. This section serves the purpose of both acknowledging these references as well as pointing the way for curious students to begin investigating further into course material than we had time to cover.\n\nCopyright\nAll course content was either written by Michael Haaf, or explicitly adapted from external resources with attributions made clear. This course content retains the licenses of the original works where relevant, and is otherwise licensed under the Creative Commons Attribution 4.0 International License.\n\nTerms of use\nYou are free to:\n\nShare: copy and redistribute the material in any medium or format\nAdapt: remix, transform, and build upon the material for any purpose, even commercially.\n\nUnder the following terms:\n\nAttribution: You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\n\nCreative Commons Attribution 4.0 International License"
+  },
+  {
+    "objectID": "about/this-site.html#course-website",
+    "href": "about/this-site.html#course-website",
+    "title": "About this website",
+    "section": "Course website",
+    "text": "Course website\nDetails about how this website was built follow.\n\nColophon\n\n\n\nFrom Wikipedia: In publishing, a colophon is a brief statement containing information about the publication of a book… Some web pages also have colophons, which frequently contain (X)HTML, CSS, or usability standards compliance information and links to website validation tests.\n\n\n\nMarkup: Markdown\nFramework: Quarto\nDeployment: GitHub Pages\n\nYou can follow along directly with course updates at the [course repository][course-repository]\n\n\nCopyright\nThis website was written and designed by the Michael Haaf. All code and assets related to this website, unless indicated otherwise, are licensed under the GNU General Public License v3.0\n\nTerms of use\nThis website’s code is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\nThis website’s code is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\nGNU General Public License Notice"
+  },
+  {
     "objectID": "about/syllabus.html",
     "href": "about/syllabus.html",
     "title": "Syllabus",
@@ -11,14 +39,14 @@
     "href": "about/syllabus.html#teacher---section-1",
     "title": "Syllabus",
     "section": "Teacher - Section 1",
-    "text": "Teacher - Section 1\n\nName: Youmna Badawy\nOffice: Penfield 311\nOffice hours: Posted on Léa and on office door\nCommunication: Mio (for quck response) or Teams (for online office hours)\nWork submission: Omnivox"
+    "text": "Teacher - Section 1\n\nName: Youmna Badawy\nOffice: Penfield 311\nOffice hours: Posted on Léa and on office door\nCommunication: Mio (for quck response) or Teams (for online office hours)\nWork submission: Omnivox\nBooking link: Coming soon"
   },
   {
     "objectID": "about/syllabus.html#teacher---section-2",
     "href": "about/syllabus.html#teacher---section-2",
     "title": "Syllabus",
     "section": "Teacher - Section 2",
-    "text": "Teacher - Section 2\n\nName: Preeti Pearl D’Mello\nOffice: Penfield 311\nOffice hours: Posted on Léa and on office door\nCommunication: Mio, Teams, or email\nWork submission: Omnivox\n\n\nAssessments\n\n60% Assignments and Labs\n20% Test 1\n20% Test 2"
+    "text": "Teacher - Section 2\n\nName: Preeti Pearl D’Mello\nOffice: Penfield 311\nOffice hours: Posted on Léa and on office door\nCommunication: Mio, Teams, or email\nWork submission: Omnivox\nBooking link: ?var:instructor.section2.booking-link\n\n\nAssessments\n\n60% Assignments and Labs\n20% Test 1\n20% Test 2"
   },
   {
     "objectID": "about/syllabus.html#course-overview",
@@ -39,7 +67,7 @@
     "href": "about/syllabus.html#what-will-i-learn",
     "title": "Syllabus",
     "section": "What will I learn?",
-    "text": "What will I learn?\n\nLearn to troubleshoot hardware, firmware and software.\nUnderstand computers from binary to the use of each hardware part\nUnderstand the role of IT Helpdesk Technicians\nPerhaps even build your own PC!"
+    "text": "What will I learn?\n\nTaking apart a computer and putting it back together\nInstalling the operating system\nSetting up a virtual machine\nUnderstand how computers process and store information\nUnderstand the role of IT Helpdesk Technicians\nLearn to troubleshoot hardware and software issues."
   },
   {
     "objectID": "about/syllabus.html#material-to-acquire",
@@ -49,11 +77,11 @@
     "text": "Material to acquire\n\nMultiheaded Screwdriver x 1:\n\nFor assembling computers!\nExample: Picquic-88001-Multi-Bit-Screwdriver-Full-Size\n\n(OPTIONAL) Anti-static ESD bracelet band:\n\nFor your safety when playing with electronics\nExample: Antistatic-Wrist-Strap"
   },
   {
-    "objectID": "about/syllabus.html#rules-for-success-in-this-class",
-    "href": "about/syllabus.html#rules-for-success-in-this-class",
+    "objectID": "about/syllabus.html#rules-and-tips-to-succeed-in-this-course",
+    "href": "about/syllabus.html#rules-and-tips-to-succeed-in-this-course",
     "title": "Syllabus",
-    "section": "Rules for success in this class",
-    "text": "Rules for success in this class\n\nRule 1: Attend all classes and labs!\n\nI take attendance every class and require you to submit in-class activities and group work during class time.\nThis course contains a lot of hands-on learning.\nYou CANNOT rely solely on the course notes to succeed.\n\n\n\nRule 2: Keep a professional behaviour in the lab.\n\nArrive to the labs 5 minutes in advance!\nBe careful when handling computer parts, they can easily break.\nAvoid eating or drinking near computers to prevent spills and damage.\nLet’s work together to keep our tech tools in top shape.\nKeep voices low during lab/group activities to avoid distracting others who are working or receiving help.\n\n\n\n\nRule 3: Don’t play video games in class!\n\nNo video games, or online videos should be played in class.\nIf you are done the in-class activities or are waiting after me, you may either leave or work on homework while waiting.\n\n\n\n\nRule 5: Share with others!\n\nTry your best to get to know other students\n\nHelp each other out! You will learn much more from working through the assignments yourself and from teaching eachother.\nLearning from others and building relationships with new peers is one of the most valuable parts of school\n\nIf you feel more advanced or have already done what’s shown in class, don’t hesitate to help others and share your knowledge with the class.\nSeek out help if you are struggling (from me, from peers, from John Abbott student services, etc.)\n\n\n\n\nRule 6: Be curious!\nThis field has a lot of support online. Stay curious, the internet is your Oyster!"
+    "section": "Rules and tips to succeed in this course",
+    "text": "Rules and tips to succeed in this course\n\n1: Attend all classes and labs!\n\nI take attendance every class and require you to submit in-class activities and group work during class time.\nThis course contains a lot of hands-on learning.\nYou CANNOT rely solely on the course notes to succeed.\n\n\n\n2: Keep a professional behaviour in the lab.\n\nArrive to the labs 5 minutes in advance!\nBe careful when handling computer parts, they can easily break.\nAvoid eating or drinking near computers to prevent spills and damage.\nLet’s work together to keep our tech tools in top shape.\nKeep voices low during lab/group activities to avoid distracting others who are working or receiving help.\n\n\n\n\n3: Don’t play video games in class!\n\nNo video games, or online videos should be played in class.\nIf you are done the in-class activities or are waiting after me, you may either leave or work on homework.\n\n\n\n\n4: Share with others!\n\nTry your best to get to know other students\n\nHelp each other out! You will learn much more from working through the assignments yourself and from teaching eachother.\nLearning from others and building relationships with new peers is one of the most valuable parts of school\n\nIf you feel more advanced or have already done what’s shown in class, don’t hesitate to help others and share your knowledge with the class.\nSeek out help if you are struggling (from me, from peers, from John Abbott student services, etc.)\n\n\n\n\n5: Be curious!\nThis field has a lot of support online. Stay curious, the internet is your Oyster!"
   },
   {
     "objectID": "about/syllabus.html#feedback",
@@ -63,35 +91,11 @@
     "text": "Feedback\nLet me know how things are going in the course:\n\nAm I covering the material too slowly or too quickly?\nAre the slides material clear?\nCan you read my handwriting?\nCan you hear me well?\nDoes my answer make sense?\nDo you understand the assignment questions?\nEtc."
   },
   {
-    "objectID": "about/index.html",
-    "href": "about/index.html",
-    "title": "About",
+    "objectID": "labs/all-labs.html",
+    "href": "labs/all-labs.html",
+    "title": "Laboratories",
     "section": "",
-    "text": "About this site\n\n\n\n\n\n\n\n\n\n\n\n\nAbout this website\n\n\nDescription of technologies and resources used to build this website. Acknowledgements, copyright, terms of use, etc. can be found on this page.\n\n\n\n\n\n\n\n\n\n\nCalendar\n\n\nRoadmap for course deliverables; record of lectures & activites we have covered along the way.\n\n\n\n\n\n\n\n\n\n\nSyllabus\n\n\nCourse description outlining goals, expectations, resources, and other important information.\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0"
-  },
-  {
-    "objectID": "topics/data-representation/index.html",
-    "href": "topics/data-representation/index.html",
-    "title": "Data Representation",
-    "section": "",
-    "text": "No matching items\n Back to topReuseCC BY-NC-SA 4.0",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Data Representation"
-    ]
-  },
-  {
-    "objectID": "topics/technical-support/index.html",
-    "href": "topics/technical-support/index.html",
-    "title": "Technical Support",
-    "section": "",
-    "text": "No matching items\n Back to topReuseCC BY-NC-SA 4.0",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Technical Support"
-    ]
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\nDate\nTitle\nSubtitle\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0"
   },
   {
     "objectID": "topics/index.html",
@@ -103,138 +107,6 @@
       "Home",
       "Topics"
     ]
-  },
-  {
-    "objectID": "topics/hardware/introduction-to-computers.html",
-    "href": "topics/hardware/introduction-to-computers.html",
-    "title": "Introduction to Computers",
-    "section": "",
-    "text": "Each of these things is either a computer, or a computer component. Can you identify them all? Click on the image to see everything in higher resolution.",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Hardware",
-      "Introduction to Computers"
-    ]
-  },
-  {
-    "objectID": "topics/hardware/introduction-to-computers.html#introduction",
-    "href": "topics/hardware/introduction-to-computers.html#introduction",
-    "title": "Introduction to Computers",
-    "section": "Introduction",
-    "text": "Introduction\nWe all interact with computers on a daily basis, whether we are aware or not. In fact, it can be said that computers, or computing devices, have been part of human society (in some manner or another) for centuries – even though the computers we typically think of today are relatively recent inventions from the 20th century.\nWhat is a computer? What is it that computers actually do? This lecture is a brief introduction to these questions. The big picture definitions we learn here will be helpful anchors for better understanding the more complicated and detailed components of modern computers that we will need to learn to understand technical support as a science and a profession.",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Hardware",
-      "Introduction to Computers"
-    ]
-  },
-  {
-    "objectID": "topics/hardware/introduction-to-computers.html#lesson-overview",
-    "href": "topics/hardware/introduction-to-computers.html#lesson-overview",
-    "title": "Introduction to Computers",
-    "section": "Lesson overview",
-    "text": "Lesson overview\n\nUnderstand what a computer is\nCompare and contrast different types of computers by complexity and capabilities\nUnderstand what modern digital computers are\nUnderstand the difference between personal computing devices and servers",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Hardware",
-      "Introduction to Computers"
-    ]
-  },
-  {
-    "objectID": "topics/hardware/introduction-to-computers.html#what-is-a-computer",
-    "href": "topics/hardware/introduction-to-computers.html#what-is-a-computer",
-    "title": "Introduction to Computers",
-    "section": "What is a computer?",
-    "text": "What is a computer?\nA computer is an device designed to:\n\nstore information\nchange that information through human or automated interactions\n\nA computer almost always features: (1) a mechanism for keeping information intact and (2) interactive components to facilitate the modification of that information.",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Hardware",
-      "Introduction to Computers"
-    ]
-  },
-  {
-    "objectID": "topics/hardware/introduction-to-computers.html#is-this-a-computer-examples",
-    "href": "topics/hardware/introduction-to-computers.html#is-this-a-computer-examples",
-    "title": "Introduction to Computers",
-    "section": "Is this a computer? Examples",
-    "text": "Is this a computer? Examples\nThe above definition sounds pretty general – and it is! What kinds of things count as computers, or follow the above two properties? Click through the tabs below to see some examples, and a discussion for each on its ability to compute things.\n\nDesktopsLaptopsMobile PhonesGame consolesDigital computersHardware vs SoftwarePersonal vs shared computing: What is a server?ExercisesKnowledge checkAdditional resources\n\n\nDesktop computers, often referred to as the Personal Computer (PC), are a classic example of a modern computing device – these are the computers that we will be using in our labs, and upon which we will focus the majority of our study this semester.\nDesktop computers meet the computer definition above in many ways, but simply: (1) information is stored in disks, and (2) information is modified by human interaction using devices like keyboards and mice, and then modified by the computer using a central processing unit (CPU).\n\n\n\nA desktop computer is composed of external (peripheral) components like monitors, keyboards, and mice for human interaction (input/output), as well as internal (system) components that are usually stored inside of a case or tower like in the image above, to keep sensitive electrical components safe. Image by OpenClipart-Vectors from Pixabay.\n\n\nWe will learn in future lectures the deep gritty detail of how devices like disks, keyboards, mice, CPUs, and others make modern computer magic happen.\n\n\nLaptop computers meet the computer definition above in the exact same way as desktop computers: (1) information is stored in disks (usually smaller in size and weight than desktop disks), and (2) information is modified by human interaction using devices like embedded keyboards and trackpads – though external mice and keyboards can be plugged in – and then modified by the computer using a central processing unit (CPU).\n\n\n\nA laptop computer combines similar external/internal components from desktop computers into one portable container. While the behavior of laptops and desktops is almost identical, the actual components are generally specialized for laptops and cannot be easily interchanged with desktop components. Image by Clker-Free-Vector-Images from Pixabay.\n\n\n\n\nThe first mobile phones were computers in a much more limited sense than desktops, laptops, and modern smart phones – but nonetheless they could store data like contacts, calendars, and even photos on small memory cards, as well as, of course, carry out instructions like connecting to a phone line for calling and texting.\nSmartphones are much more similar to laptops and desktops than they are to their predecessors in the type and complexity of their components, and in the amount of data and processing power that enables them to install applications, run operating systems, and much more.\n\n\n\nTwo decades of evolution of mobile phones, from a 1992 Motorola DynaTAC 8000X to the 2014 iPhone 6 Plus. The change from tactile interfaces (buttons, nontouch screens) to touchscreens for interacting with data on a phone is visible. In addition, the ability to store large amounts of data, even entire operating systems, was introduced with the first “smartphones” of Blackberry and IPhone in the mid 2000s. Image from Wikipedia, image by Jojhnjoy - own work, based on the work of Anders, Public Domain\n\n\n\n\nGame consoles such as PlayStation and Xbox, as well as handheld handheld consoles like Nintendo Switch and Valve Steam Deck, are similar to smartphones in that they technically contain all of the components of a computer, but generally manufactured from proprietary hardware that cannot be interchanged with other computers.\n\n\n\n\n\n\n\n\n\n\n\n\n\nVideo game consoles showed an interesting development in storage technology in the elate 90’s: originally, game data AND user save data would be stored on a writable ROM game cartridge as in the N64 (left). The next generation of systems like Gamecube (right) would provide read-only game data on a CD-ROM disk with writable data being stored on a separate memory card. Images by aerozol from Pixabay. :::\n\n\nNonelectronics?\nEven before there were consumer electronics, there were devices made to store and process data – that is, computers! The following are three different examples of nonelectronic devices that have been used for computation.\n\n\n\n\n\n\n\n\n\n\nAbacus: The world’s first calculator. Large numbers can be represented using a relatively small number of beads. Simple operations like addition and subtraction are simple to perform, but abacuses are even capable of more complex operations like multiplication, division, and square roots. Image by Pearson Scott Foresman, Public domain, via Wikimedia Commons\n\n\n\n\n\n\n\nAntikythera mechanism fragment, dated to 80 BCE. Thought to have been part of a complex system of dozens of wheels and plates, designed by engineers to measure time based on movements of the sun, moon, and other stars and planets known at the time. Retrieved from Wikimedia Commons\n\n\n\n\n\n\n\n\n\nDifference engine diagram. A theoretical computer designed in the 19th century with capabilities similar to modern computers, but using a complex system of gears and pistons to store and process data, rather than small electronic components. Image retreived from Wikimedia Commons\n\n\n\n\n\n\n\nDifference engine implemented and built in 2002 based on the original designs. Image retreived from Wikimedia Commons\n\n\n\n\n\n\n\nComputers within computers?\nIt is possible, and actually quite common, to create computers inside other computers, using the programming capabilities of that computer.\n\n\n\n\n\n\n\n\n\n\n(a) Video from Codeolences on YouTube\n\n\n\n\n\n\n\nFigure 1\n\n\n\nThe above are just some of many devices that are computers in this sense. Appliances like dishwashers/washing machines with cycle settings, handheld electronics like calculators (whether programmable or not), wearables like fitbits, fare gates and metro stops, traffic lights… these are just some of the many devices that work based on computing principles.\n\n\nYou may think the above definition is too general – indeed, in the context of this class, we will almost always be talking specifically about digital computers when we say computer. What is the difference?\nDigital computers have the following two additional properties compared to general computers. They are:\n\nDigital: All the “information” stored is represented by combinations of two different states (0 or 1, i.e., ON or OFF).1\nDeterministic: A given input reliably produces a defined output with every interaction.2\n\nWhen we study the components of computers, the above two properties will allow us to really understand how such devices work and why, as in every case, the device implements these two properties to give us the behavior we need.\n\n\nHardware: The physical components that make up a computer system.\nSoftware: The programs (instructions) that tell the computer (the hardware) what to do.\n\n\nIn the beginning, our focus will be on understanding individual personal computers. Yet, this barely scratches the surface of how computers are used in modern society – we will also need to learn about how many computers can be combined to pool resources and provide services at all times of day, as this is essential to the infrastructure of the internet and a foundational concept in technical support as a profession.\nFor now, we can just know that servers are similar to personal computers, but use specialized hardware that is optimized for being turned on 24/7, for communicating with other servers, and for processing and managing large amounts of data.\n\n\n\nPhoto by Matthieu Beaumont on Unsplash\n\n\nThis is because servers are the necessary infrastructure for running the large popular websites and services many of us use today on a regular basis: Social Media websites like Facebook/Instragram/etc., educational resources like Omnivox/Moodle, online software like Office 365, etc. all run on servers, or on collections of servers, known as server farms.\n\n\nNone for this lecture – stay tuned for the next two lectures!\n\n\nThe following questions invite you to reflect on the key information learned in this lesson. If you can’t answer the question, you can click the corresponding link to review the topic more closely. Future assignments and tests may be based on questions like these:\n\nWhat are the two main properites of computers?\nAre video game consoles computers?\nAre there examples of nonelectonic computers? How do nonelectronic computer compute?\nWhy is binary relevant to computers?\nWhat is the property of computers that means they reliably behave the same way given the same input?\nWhat is the name for the type of computer that is always on, and is specialized for processing large amounts of data and pooling many computing resources in one place?\n\n\n\nThis section contains helpful links to related content. You aren’t required to study these in detail, but it never hurts to learn more.\n\nComputer Basics by GCF Global: We will eventually cover almost all of the material in this free online resource; for now, Parts 1-7 in particular are relevant to what we have learned so far.\n“The Mother of All Demos” This is a 1968 presentation that introduced many of the hardware/graphics concepts we will see today and some we will see in future lectures: the mouse, networking, video conferencing, word documents, hyperlinks, gamer headphones, etc. It is very cool to see the palpable excitement of the 2000+ audience tuning into a passionate presentation of a series of completely new technologies.\nMontréal’s Musée de l’Ordinateur – unfortunately the physical location has been closed since 2022, but the website is still a neat resource for reading on the history of personal computers and their evolution. The author’s bias towards Bill Gates and Windows machines is quite strong (there is much more to the story), but the information provided is reliable and interesting.",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Hardware",
-      "Introduction to Computers"
-    ]
-  },
-  {
-    "objectID": "topics/hardware/introduction-to-computers.html#nonelectronics",
-    "href": "topics/hardware/introduction-to-computers.html#nonelectronics",
-    "title": "Introduction to Computers",
-    "section": "Nonelectronics?",
-    "text": "Nonelectronics?\nEven before there were consumer electronics, there were devices made to store and process data – that is, computers! The following are three different examples of nonelectronic devices that have been used for computation.",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Hardware",
-      "Introduction to Computers"
-    ]
-  },
-  {
-    "objectID": "topics/hardware/introduction-to-computers.html#computers-within-computers",
-    "href": "topics/hardware/introduction-to-computers.html#computers-within-computers",
-    "title": "Introduction to Computers",
-    "section": "Computers within computers?",
-    "text": "Computers within computers?\nIt is possible, and actually quite common, to create computers inside other computers, using the programming capabilities of that computer.",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Hardware",
-      "Introduction to Computers"
-    ]
-  },
-  {
-    "objectID": "topics/hardware/introduction-to-computers.html#footnotes",
-    "href": "topics/hardware/introduction-to-computers.html#footnotes",
-    "title": "Introduction to Computers",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nThese digital states are made possible using electrical circuitry. In order to do complex operations with these states, we can use the binary numbering to represent the digital states as a variety of numbers, letters, and other concepts. This digital information can be shared between devices using cables (whether electrical or optical, as we will see)↩︎\nFor one e.g., when you tap your OPUS card on a fare gate, you should expect that it will either let you through (if you have fare) or not (if you don’t). The concept is more general: computer engineering is, in part, the study and practise of making physical interactions with computing devices reliably and predictably produce the same deterministic results under the same physical conditions.↩︎",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Hardware",
-      "Introduction to Computers"
-    ]
-  },
-  {
-    "objectID": "topics/hardware/introduction-to-computers.htm#introduction",
-    "href": "topics/hardware/introduction-to-computers.htm#introduction",
-    "title": "Introduction to Computers",
-    "section": "Introduction",
-    "text": "Introduction\nWe all interact with computers on a daily basis, whether we are aware or not. In fact, it can be said that computers, or computing devices, have been part of human society (in some manner or another) for centuries – even though the computers we typically think of today are relatively recent inventions from the 20th century.\nWhat is a computer? What is it that computers actually do? This lecture is a brief introduction to these questions. The big picture definitions we learn here will be helpful anchors for better understanding the more complicated and detailed components of modern computers that we will need to learn to understand technical support as a science and a profession."
-  },
-  {
-    "objectID": "topics/hardware/introduction-to-computers.htm#lesson-overview",
-    "href": "topics/hardware/introduction-to-computers.htm#lesson-overview",
-    "title": "Introduction to Computers",
-    "section": "Lesson overview",
-    "text": "Lesson overview\n\nUnderstand what a computer is\nCompare and contrast different types of computers by complexity and capabilities\nUnderstand what modern digital computers are\nUnderstand the difference between personal computing devices and servers"
-  },
-  {
-    "objectID": "topics/hardware/introduction-to-computers.htm#what-is-a-computer",
-    "href": "topics/hardware/introduction-to-computers.htm#what-is-a-computer",
-    "title": "Introduction to Computers",
-    "section": "What is a computer?",
-    "text": "What is a computer?\nA computer is an device designed to:\n\nstore information\nchange that information through human or automated interactions\n\nA computer almost always features: (1) a mechanism for keeping information intact and (2) interactive components to facilitate the modification of that information."
-  },
-  {
-    "objectID": "topics/hardware/introduction-to-computers.htm#is-this-a-computer-examples",
-    "href": "topics/hardware/introduction-to-computers.htm#is-this-a-computer-examples",
-    "title": "Introduction to Computers",
-    "section": "Is this a computer? Examples",
-    "text": "Is this a computer? Examples\nThe above definition sounds pretty general – and it is! What kinds of things count as computers, or follow the above two properties? Click through the tabs below to see some examples, and a discussion for each on its ability to compute things.\n\nDesktopsLaptopsMobile PhonesGame consolesDigital computersHardware vs SoftwarePersonal vs shared computing: What is a server?ExercisesKnowledge checkAdditional resources\n\n\nDesktop computers, often referred to as the Personal Computer (PC), are a classic example of a modern computing device – these are the computers that we will be using in our labs, and upon which we will focus the majority of our study this semester.\nDesktop computers meet the computer definition above in many ways, but simply: (1) information is stored in disks, and (2) information is modified by human interaction using devices like keyboards and mice, and then modified by the computer using a central processing unit (CPU).\n\n\n\nA desktop computer is composed of external (peripheral) components like monitors, keyboards, and mice for human interaction (input/output), as well as internal (system) components that are usually stored inside of a case or tower like in the image above, to keep sensitive electrical components safe. Image by OpenClipart-Vectors from Pixabay.\n\n\nWe will learn in future lectures the deep gritty detail of how devices like disks, keyboards, mice, CPUs, and others make modern computer magic happen.\n\n\nLaptop computers meet the computer definition above in the exact same way as desktop computers: (1) information is stored in disks (usually smaller in size and weight than desktop disks), and (2) information is modified by human interaction using devices like embedded keyboards and trackpads – though external mice and keyboards can be plugged in – and then modified by the computer using a central processing unit (CPU).\n\n\n\nA laptop computer combines similar external/internal components from desktop computers into one portable container. While the behavior of laptops and desktops is almost identical, the actual components are generally specialized for laptops and cannot be easily interchanged with desktop components. Image by Clker-Free-Vector-Images from Pixabay.\n\n\n\n\nThe first mobile phones were computers in a much more limited sense than desktops, laptops, and modern smart phones – but nonetheless they could store data like contacts, calendars, and even photos on small memory cards, as well as, of course, carry out instructions like connecting to a phone line for calling and texting.\nSmartphones are much more similar to laptops and desktops than they are to their predecessors in the type and complexity of their components, and in the amount of data and processing power that enables them to install applications, run operating systems, and much more.\n\n\n\nTwo decades of evolution of mobile phones, from a 1992 Motorola DynaTAC 8000X to the 2014 iPhone 6 Plus. The change from tactile interfaces (buttons, nontouch screens) to touchscreens for interacting with data on a phone is visible. In addition, the ability to store large amounts of data, even entire operating systems, was introduced with the first “smartphones” of Blackberry and IPhone in the mid 2000s. Image from Wikipedia, image by Jojhnjoy - own work, based on the work of Anders, Public Domain\n\n\n\n\nGame consoles such as PlayStation and Xbox, as well as handheld handheld consoles like Nintendo Switch and Valve Steam Deck, are similar to smartphones in that they technically contain all of the components of a computer, but generally manufactured from proprietary hardware that cannot be interchanged with other computers.\n\n\n\n\n\n\n\n\n\n\n\n\n\nVideo game consoles showed an interesting development in storage technology in the elate 90’s: originally, game data AND user save data would be stored on a writable ROM game cartridge as in the N64 (left). The next generation of systems like Gamecube (right) would provide read-only game data on a CD-ROM disk with writable data being stored on a separate memory card. Images by aerozol from Pixabay. :::\n\n\nNonelectronics?\nEven before there were consumer electronics, there were devices made to store and process data – that is, computers! The following are three different examples of nonelectronic devices that have been used for computation.\n\n\n\n\n\n\n\n\n\n\nAbacus: The world’s first calculator. Large numbers can be represented using a relatively small number of beads. Simple operations like addition and subtraction are simple to perform, but abacuses are even capable of more complex operations like multiplication, division, and square roots. Image by Pearson Scott Foresman, Public domain, via Wikimedia Commons\n\n\n\n\n\n\n\nAntikythera mechanism fragment, dated to 80 BCE. Thought to have been part of a complex system of dozens of wheels and plates, designed by engineers to measure time based on movements of the sun, moon, and other stars and planets known at the time. Retrieved from Wikimedia Commons\n\n\n\n\n\n\n\n\n\nDifference engine diagram. A theoretical computer designed in the 19th century with capabilities similar to modern computers, but using a complex system of gears and pistons to store and process data, rather than small electronic components. Image retreived from Wikimedia Commons\n\n\n\n\n\n\n\nDifference engine implemented and built in 2002 based on the original designs. Image retreived from Wikimedia Commons\n\n\n\n\n\n\n\nComputers within computers?\nIt is possible, and actually quite common, to create computers inside other computers, using the programming capabilities of that computer.\n\n\n\n\n\n\n\n\n\n\n(a) Video from Codeolences on YouTube\n\n\n\n\n\n\n\nFigure 1\n\n\n\nThe above are just some of many devices that are computers in this sense. Appliances like dishwashers/washing machines with cycle settings, handheld electronics like calculators (whether programmable or not), wearables like fitbits, fare gates and metro stops, traffic lights… these are just some of the many devices that work based on computing principles.\n\n\nYou may think the above definition is too general – indeed, in the context of this class, we will almost always be talking specifically about digital computers when we say computer. What is the difference?\nDigital computers have the following two additional properties compared to general computers. They are:\n\nDigital: All the “information” stored is represented by combinations of two different states (0 or 1, i.e., ON or OFF).1\nDeterministic: A given input reliably produces a defined output with every interaction.2\n\nWhen we study the components of computers, the above two properties will allow us to really understand how such devices work and why, as in every case, the device implements these two properties to give us the behavior we need.\n\n\nHardware: The physical components that make up a computer system.\nSoftware: The programs (instructions) that tell the computer (the hardware) what to do.\n\n\nIn the beginning, our focus will be on understanding individual personal computers. Yet, this barely scratches the surface of how computers are used in modern society – we will also need to learn about how many computers can be combined to pool resources and provide services at all times of day, as this is essential to the infrastructure of the internet and a foundational concept in technical support as a profession.\nFor now, we can just know that servers are similar to personal computers, but use specialized hardware that is optimized for being turned on 24/7, for communicating with other servers, and for processing and managing large amounts of data.\n\n\n\nPhoto by Matthieu Beaumont on Unsplash\n\n\nThis is because servers are the necessary infrastructure for running the large popular websites and services many of us use today on a regular basis: Social Media websites like Facebook/Instragram/etc., educational resources like Omnivox/Moodle, online software like Office 365, etc. all run on servers, or on collections of servers, known as server farms.\n\n\nNone for this lecture – stay tuned for the next two lectures!\n\n\nThe following questions invite you to reflect on the key information learned in this lesson. If you can’t answer the question, you can click the corresponding link to review the topic more closely. Future assignments and tests may be based on questions like these:\n\nWhat are the two main properites of computers?\nAre video game consoles computers?\nAre there examples of nonelectonic computers? How do nonelectronic computer compute?\nWhy is binary relevant to computers?\nWhat is the property of computers that means they reliably behave the same way given the same input?\nWhat is the name for the type of computer that is always on, and is specialized for processing large amounts of data and pooling many computing resources in one place?\n\n\n\nThis section contains helpful links to related content. You aren’t required to study these in detail, but it never hurts to learn more.\n\nComputer Basics by GCF Global: We will eventually cover almost all of the material in this free online resource; for now, Parts 1-7 in particular are relevant to what we have learned so far.\n“The Mother of All Demos” This is a 1968 presentation that introduced many of the hardware/graphics concepts we will see today and some we will see in future lectures: the mouse, networking, video conferencing, word documents, hyperlinks, gamer headphones, etc. It is very cool to see the palpable excitement of the 2000+ audience tuning into a passionate presentation of a series of completely new technologies.\nMontréal’s Musée de l’Ordinateur – unfortunately the physical location has been closed since 2022, but the website is still a neat resource for reading on the history of personal computers and their evolution. The author’s bias towards Bill Gates and Windows machines is quite strong (there is much more to the story), but the information provided is reliable and interesting.\n\n\n\n\n\n\nThese digital states are made possible using electrical circuitry. In order to do complex operations with these states, we can use the binary numbering to represent the digital states as a variety of numbers, letters, and other concepts. This digital information can be shared between devices using cables (whether electrical or optical, as we will see)For one e.g., when you tap your OPUS card on a fare gate, you should expect that it will either let you through (if you have fare) or not (if you don’t). The concept is more general: computer engineering is, in part, the study and practise of making physical interactions with computing devices reliably and predictably produce the same deterministic results under the same physical conditions."
   },
   {
     "objectID": "topics/hardware/index.html",
@@ -422,18 +294,47 @@
     "text": "Additional references"
   },
   {
-    "objectID": "labs/all-labs.html",
-    "href": "labs/all-labs.html",
-    "title": "Laboratories",
+    "objectID": "topics/data-representation/index.html",
+    "href": "topics/data-representation/index.html",
+    "title": "Data Representation",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\nDate\nTitle\nSubtitle\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0"
+    "text": "No matching items\n Back to topReuseCC BY-NC-SA 4.0",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Data Representation"
+    ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Home",
+    "objectID": "topics/technical-support/index.html",
+    "href": "topics/technical-support/index.html",
+    "title": "Technical Support",
     "section": "",
-    "text": "This companion site for the 420-1N6 course includes:\n\nLecture slides / documents\nExercises\nReferences & Resources\n\n\n\n\n Back to topReuseCC BY-NC-SA 4.0"
+    "text": "No matching items\n Back to topReuseCC BY-NC-SA 4.0",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Technical Support"
+    ]
+  },
+  {
+    "objectID": "announcements/index.html",
+    "href": "announcements/index.html",
+    "title": "Announcements",
+    "section": "",
+    "text": "No matching items\n Back to topReuseCC BY-NC-SA 4.0"
+  },
+  {
+    "objectID": "topics/all-lectures.html",
+    "href": "topics/all-lectures.html",
+    "title": "All lectures",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nSubtitle\n\n\n\n\n\n\n\n\n2024-08-27\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n\n\n2024-09-03\n\n\nExternal components\n\n\nOverview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors\n\n\n\n\n\n\n2024-09-10\n\n\nInternal Components\n\n\nExplains the most important internal components of desktop computers. Processing, memory, storage, and communication.\n\n\n\n\n\n\n2024-09-16\n\n\nUnderstanding CPUs\n\n\nMore detail on CPUs. “Guy in Box” analogy, Clock Speed, Codebook, Databuses explained.\n\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "All lectures"
+    ]
   },
   {
     "objectID": "topics/hardware/internal-components.htm#introduction",
@@ -749,6 +650,138 @@
     ]
   },
   {
+    "objectID": "topics/hardware/introduction-to-computers.htm#introduction",
+    "href": "topics/hardware/introduction-to-computers.htm#introduction",
+    "title": "Introduction to Computers",
+    "section": "Introduction",
+    "text": "Introduction\nWe all interact with computers on a daily basis, whether we are aware or not. In fact, it can be said that computers, or computing devices, have been part of human society (in some manner or another) for centuries – even though the computers we typically think of today are relatively recent inventions from the 20th century.\nWhat is a computer? What is it that computers actually do? This lecture is a brief introduction to these questions. The big picture definitions we learn here will be helpful anchors for better understanding the more complicated and detailed components of modern computers that we will need to learn to understand technical support as a science and a profession."
+  },
+  {
+    "objectID": "topics/hardware/introduction-to-computers.htm#lesson-overview",
+    "href": "topics/hardware/introduction-to-computers.htm#lesson-overview",
+    "title": "Introduction to Computers",
+    "section": "Lesson overview",
+    "text": "Lesson overview\n\nUnderstand what a computer is\nCompare and contrast different types of computers by complexity and capabilities\nUnderstand what modern digital computers are\nUnderstand the difference between personal computing devices and servers"
+  },
+  {
+    "objectID": "topics/hardware/introduction-to-computers.htm#what-is-a-computer",
+    "href": "topics/hardware/introduction-to-computers.htm#what-is-a-computer",
+    "title": "Introduction to Computers",
+    "section": "What is a computer?",
+    "text": "What is a computer?\nA computer is an device designed to:\n\nstore information\nchange that information through human or automated interactions\n\nA computer almost always features: (1) a mechanism for keeping information intact and (2) interactive components to facilitate the modification of that information."
+  },
+  {
+    "objectID": "topics/hardware/introduction-to-computers.htm#is-this-a-computer-examples",
+    "href": "topics/hardware/introduction-to-computers.htm#is-this-a-computer-examples",
+    "title": "Introduction to Computers",
+    "section": "Is this a computer? Examples",
+    "text": "Is this a computer? Examples\nThe above definition sounds pretty general – and it is! What kinds of things count as computers, or follow the above two properties? Click through the tabs below to see some examples, and a discussion for each on its ability to compute things.\n\nDesktopsLaptopsMobile PhonesGame consolesDigital computersHardware vs SoftwarePersonal vs shared computing: What is a server?ExercisesKnowledge checkAdditional resources\n\n\nDesktop computers, often referred to as the Personal Computer (PC), are a classic example of a modern computing device – these are the computers that we will be using in our labs, and upon which we will focus the majority of our study this semester.\nDesktop computers meet the computer definition above in many ways, but simply: (1) information is stored in disks, and (2) information is modified by human interaction using devices like keyboards and mice, and then modified by the computer using a central processing unit (CPU).\n\n\n\nA desktop computer is composed of external (peripheral) components like monitors, keyboards, and mice for human interaction (input/output), as well as internal (system) components that are usually stored inside of a case or tower like in the image above, to keep sensitive electrical components safe. Image by OpenClipart-Vectors from Pixabay.\n\n\nWe will learn in future lectures the deep gritty detail of how devices like disks, keyboards, mice, CPUs, and others make modern computer magic happen.\n\n\nLaptop computers meet the computer definition above in the exact same way as desktop computers: (1) information is stored in disks (usually smaller in size and weight than desktop disks), and (2) information is modified by human interaction using devices like embedded keyboards and trackpads – though external mice and keyboards can be plugged in – and then modified by the computer using a central processing unit (CPU).\n\n\n\nA laptop computer combines similar external/internal components from desktop computers into one portable container. While the behavior of laptops and desktops is almost identical, the actual components are generally specialized for laptops and cannot be easily interchanged with desktop components. Image by Clker-Free-Vector-Images from Pixabay.\n\n\n\n\nThe first mobile phones were computers in a much more limited sense than desktops, laptops, and modern smart phones – but nonetheless they could store data like contacts, calendars, and even photos on small memory cards, as well as, of course, carry out instructions like connecting to a phone line for calling and texting.\nSmartphones are much more similar to laptops and desktops than they are to their predecessors in the type and complexity of their components, and in the amount of data and processing power that enables them to install applications, run operating systems, and much more.\n\n\n\nTwo decades of evolution of mobile phones, from a 1992 Motorola DynaTAC 8000X to the 2014 iPhone 6 Plus. The change from tactile interfaces (buttons, nontouch screens) to touchscreens for interacting with data on a phone is visible. In addition, the ability to store large amounts of data, even entire operating systems, was introduced with the first “smartphones” of Blackberry and IPhone in the mid 2000s. Image from Wikipedia, image by Jojhnjoy - own work, based on the work of Anders, Public Domain\n\n\n\n\nGame consoles such as PlayStation and Xbox, as well as handheld handheld consoles like Nintendo Switch and Valve Steam Deck, are similar to smartphones in that they technically contain all of the components of a computer, but generally manufactured from proprietary hardware that cannot be interchanged with other computers.\n\n\n\n\n\n\n\n\n\n\n\n\n\nVideo game consoles showed an interesting development in storage technology in the elate 90’s: originally, game data AND user save data would be stored on a writable ROM game cartridge as in the N64 (left). The next generation of systems like Gamecube (right) would provide read-only game data on a CD-ROM disk with writable data being stored on a separate memory card. Images by aerozol from Pixabay. :::\n\n\nNonelectronics?\nEven before there were consumer electronics, there were devices made to store and process data – that is, computers! The following are three different examples of nonelectronic devices that have been used for computation.\n\n\n\n\n\n\n\n\n\n\nAbacus: The world’s first calculator. Large numbers can be represented using a relatively small number of beads. Simple operations like addition and subtraction are simple to perform, but abacuses are even capable of more complex operations like multiplication, division, and square roots. Image by Pearson Scott Foresman, Public domain, via Wikimedia Commons\n\n\n\n\n\n\n\nAntikythera mechanism fragment, dated to 80 BCE. Thought to have been part of a complex system of dozens of wheels and plates, designed by engineers to measure time based on movements of the sun, moon, and other stars and planets known at the time. Retrieved from Wikimedia Commons\n\n\n\n\n\n\n\n\n\nDifference engine diagram. A theoretical computer designed in the 19th century with capabilities similar to modern computers, but using a complex system of gears and pistons to store and process data, rather than small electronic components. Image retreived from Wikimedia Commons\n\n\n\n\n\n\n\nDifference engine implemented and built in 2002 based on the original designs. Image retreived from Wikimedia Commons\n\n\n\n\n\n\n\nComputers within computers?\nIt is possible, and actually quite common, to create computers inside other computers, using the programming capabilities of that computer.\n\n\n\n\n\n\n\n\n\n\n(a) Video from Codeolences on YouTube\n\n\n\n\n\n\n\nFigure 1\n\n\n\nThe above are just some of many devices that are computers in this sense. Appliances like dishwashers/washing machines with cycle settings, handheld electronics like calculators (whether programmable or not), wearables like fitbits, fare gates and metro stops, traffic lights… these are just some of the many devices that work based on computing principles.\n\n\nYou may think the above definition is too general – indeed, in the context of this class, we will almost always be talking specifically about digital computers when we say computer. What is the difference?\nDigital computers have the following two additional properties compared to general computers. They are:\n\nDigital: All the “information” stored is represented by combinations of two different states (0 or 1, i.e., ON or OFF).1\nDeterministic: A given input reliably produces a defined output with every interaction.2\n\nWhen we study the components of computers, the above two properties will allow us to really understand how such devices work and why, as in every case, the device implements these two properties to give us the behavior we need.\n\n\nHardware: The physical components that make up a computer system.\nSoftware: The programs (instructions) that tell the computer (the hardware) what to do.\n\n\nIn the beginning, our focus will be on understanding individual personal computers. Yet, this barely scratches the surface of how computers are used in modern society – we will also need to learn about how many computers can be combined to pool resources and provide services at all times of day, as this is essential to the infrastructure of the internet and a foundational concept in technical support as a profession.\nFor now, we can just know that servers are similar to personal computers, but use specialized hardware that is optimized for being turned on 24/7, for communicating with other servers, and for processing and managing large amounts of data.\n\n\n\nPhoto by Matthieu Beaumont on Unsplash\n\n\nThis is because servers are the necessary infrastructure for running the large popular websites and services many of us use today on a regular basis: Social Media websites like Facebook/Instragram/etc., educational resources like Omnivox/Moodle, online software like Office 365, etc. all run on servers, or on collections of servers, known as server farms.\n\n\nNone for this lecture – stay tuned for the next two lectures!\n\n\nThe following questions invite you to reflect on the key information learned in this lesson. If you can’t answer the question, you can click the corresponding link to review the topic more closely. Future assignments and tests may be based on questions like these:\n\nWhat are the two main properites of computers?\nAre video game consoles computers?\nAre there examples of nonelectonic computers? How do nonelectronic computer compute?\nWhy is binary relevant to computers?\nWhat is the property of computers that means they reliably behave the same way given the same input?\nWhat is the name for the type of computer that is always on, and is specialized for processing large amounts of data and pooling many computing resources in one place?\n\n\n\nThis section contains helpful links to related content. You aren’t required to study these in detail, but it never hurts to learn more.\n\nComputer Basics by GCF Global: We will eventually cover almost all of the material in this free online resource; for now, Parts 1-7 in particular are relevant to what we have learned so far.\n“The Mother of All Demos” This is a 1968 presentation that introduced many of the hardware/graphics concepts we will see today and some we will see in future lectures: the mouse, networking, video conferencing, word documents, hyperlinks, gamer headphones, etc. It is very cool to see the palpable excitement of the 2000+ audience tuning into a passionate presentation of a series of completely new technologies.\nMontréal’s Musée de l’Ordinateur – unfortunately the physical location has been closed since 2022, but the website is still a neat resource for reading on the history of personal computers and their evolution. The author’s bias towards Bill Gates and Windows machines is quite strong (there is much more to the story), but the information provided is reliable and interesting.\n\n\n\n\n\n\nThese digital states are made possible using electrical circuitry. In order to do complex operations with these states, we can use the binary numbering to represent the digital states as a variety of numbers, letters, and other concepts. This digital information can be shared between devices using cables (whether electrical or optical, as we will see)For one e.g., when you tap your OPUS card on a fare gate, you should expect that it will either let you through (if you have fare) or not (if you don’t). The concept is more general: computer engineering is, in part, the study and practise of making physical interactions with computing devices reliably and predictably produce the same deterministic results under the same physical conditions."
+  },
+  {
+    "objectID": "topics/hardware/introduction-to-computers.html",
+    "href": "topics/hardware/introduction-to-computers.html",
+    "title": "Introduction to Computers",
+    "section": "",
+    "text": "Each of these things is either a computer, or a computer component. Can you identify them all? Click on the image to see everything in higher resolution.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Introduction to Computers"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/introduction-to-computers.html#introduction",
+    "href": "topics/hardware/introduction-to-computers.html#introduction",
+    "title": "Introduction to Computers",
+    "section": "Introduction",
+    "text": "Introduction\nWe all interact with computers on a daily basis, whether we are aware or not. In fact, it can be said that computers, or computing devices, have been part of human society (in some manner or another) for centuries – even though the computers we typically think of today are relatively recent inventions from the 20th century.\nWhat is a computer? What is it that computers actually do? This lecture is a brief introduction to these questions. The big picture definitions we learn here will be helpful anchors for better understanding the more complicated and detailed components of modern computers that we will need to learn to understand technical support as a science and a profession.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Introduction to Computers"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/introduction-to-computers.html#lesson-overview",
+    "href": "topics/hardware/introduction-to-computers.html#lesson-overview",
+    "title": "Introduction to Computers",
+    "section": "Lesson overview",
+    "text": "Lesson overview\n\nUnderstand what a computer is\nCompare and contrast different types of computers by complexity and capabilities\nUnderstand what modern digital computers are\nUnderstand the difference between personal computing devices and servers",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Introduction to Computers"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/introduction-to-computers.html#what-is-a-computer",
+    "href": "topics/hardware/introduction-to-computers.html#what-is-a-computer",
+    "title": "Introduction to Computers",
+    "section": "What is a computer?",
+    "text": "What is a computer?\nA computer is an device designed to:\n\nstore information\nchange that information through human or automated interactions\n\nA computer almost always features: (1) a mechanism for keeping information intact and (2) interactive components to facilitate the modification of that information.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Introduction to Computers"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/introduction-to-computers.html#is-this-a-computer-examples",
+    "href": "topics/hardware/introduction-to-computers.html#is-this-a-computer-examples",
+    "title": "Introduction to Computers",
+    "section": "Is this a computer? Examples",
+    "text": "Is this a computer? Examples\nThe above definition sounds pretty general – and it is! What kinds of things count as computers, or follow the above two properties? Click through the tabs below to see some examples, and a discussion for each on its ability to compute things.\n\nDesktopsLaptopsMobile PhonesGame consolesDigital computersHardware vs SoftwarePersonal vs shared computing: What is a server?ExercisesKnowledge checkAdditional resources\n\n\nDesktop computers, often referred to as the Personal Computer (PC), are a classic example of a modern computing device – these are the computers that we will be using in our labs, and upon which we will focus the majority of our study this semester.\nDesktop computers meet the computer definition above in many ways, but simply: (1) information is stored in disks, and (2) information is modified by human interaction using devices like keyboards and mice, and then modified by the computer using a central processing unit (CPU).\n\n\n\nA desktop computer is composed of external (peripheral) components like monitors, keyboards, and mice for human interaction (input/output), as well as internal (system) components that are usually stored inside of a case or tower like in the image above, to keep sensitive electrical components safe. Image by OpenClipart-Vectors from Pixabay.\n\n\nWe will learn in future lectures the deep gritty detail of how devices like disks, keyboards, mice, CPUs, and others make modern computer magic happen.\n\n\nLaptop computers meet the computer definition above in the exact same way as desktop computers: (1) information is stored in disks (usually smaller in size and weight than desktop disks), and (2) information is modified by human interaction using devices like embedded keyboards and trackpads – though external mice and keyboards can be plugged in – and then modified by the computer using a central processing unit (CPU).\n\n\n\nA laptop computer combines similar external/internal components from desktop computers into one portable container. While the behavior of laptops and desktops is almost identical, the actual components are generally specialized for laptops and cannot be easily interchanged with desktop components. Image by Clker-Free-Vector-Images from Pixabay.\n\n\n\n\nThe first mobile phones were computers in a much more limited sense than desktops, laptops, and modern smart phones – but nonetheless they could store data like contacts, calendars, and even photos on small memory cards, as well as, of course, carry out instructions like connecting to a phone line for calling and texting.\nSmartphones are much more similar to laptops and desktops than they are to their predecessors in the type and complexity of their components, and in the amount of data and processing power that enables them to install applications, run operating systems, and much more.\n\n\n\nTwo decades of evolution of mobile phones, from a 1992 Motorola DynaTAC 8000X to the 2014 iPhone 6 Plus. The change from tactile interfaces (buttons, nontouch screens) to touchscreens for interacting with data on a phone is visible. In addition, the ability to store large amounts of data, even entire operating systems, was introduced with the first “smartphones” of Blackberry and IPhone in the mid 2000s. Image from Wikipedia, image by Jojhnjoy - own work, based on the work of Anders, Public Domain\n\n\n\n\nGame consoles such as PlayStation and Xbox, as well as handheld handheld consoles like Nintendo Switch and Valve Steam Deck, are similar to smartphones in that they technically contain all of the components of a computer, but generally manufactured from proprietary hardware that cannot be interchanged with other computers.\n\n\n\n\n\n\n\n\n\n\n\n\n\nVideo game consoles showed an interesting development in storage technology in the elate 90’s: originally, game data AND user save data would be stored on a writable ROM game cartridge as in the N64 (left). The next generation of systems like Gamecube (right) would provide read-only game data on a CD-ROM disk with writable data being stored on a separate memory card. Images by aerozol from Pixabay. :::\n\n\nNonelectronics?\nEven before there were consumer electronics, there were devices made to store and process data – that is, computers! The following are three different examples of nonelectronic devices that have been used for computation.\n\n\n\n\n\n\n\n\n\n\nAbacus: The world’s first calculator. Large numbers can be represented using a relatively small number of beads. Simple operations like addition and subtraction are simple to perform, but abacuses are even capable of more complex operations like multiplication, division, and square roots. Image by Pearson Scott Foresman, Public domain, via Wikimedia Commons\n\n\n\n\n\n\n\nAntikythera mechanism fragment, dated to 80 BCE. Thought to have been part of a complex system of dozens of wheels and plates, designed by engineers to measure time based on movements of the sun, moon, and other stars and planets known at the time. Retrieved from Wikimedia Commons\n\n\n\n\n\n\n\n\n\nDifference engine diagram. A theoretical computer designed in the 19th century with capabilities similar to modern computers, but using a complex system of gears and pistons to store and process data, rather than small electronic components. Image retreived from Wikimedia Commons\n\n\n\n\n\n\n\nDifference engine implemented and built in 2002 based on the original designs. Image retreived from Wikimedia Commons\n\n\n\n\n\n\n\nComputers within computers?\nIt is possible, and actually quite common, to create computers inside other computers, using the programming capabilities of that computer.\n\n\n\n\n\n\n\n\n\n\n(a) Video from Codeolences on YouTube\n\n\n\n\n\n\n\nFigure 1\n\n\n\nThe above are just some of many devices that are computers in this sense. Appliances like dishwashers/washing machines with cycle settings, handheld electronics like calculators (whether programmable or not), wearables like fitbits, fare gates and metro stops, traffic lights… these are just some of the many devices that work based on computing principles.\n\n\nYou may think the above definition is too general – indeed, in the context of this class, we will almost always be talking specifically about digital computers when we say computer. What is the difference?\nDigital computers have the following two additional properties compared to general computers. They are:\n\nDigital: All the “information” stored is represented by combinations of two different states (0 or 1, i.e., ON or OFF).1\nDeterministic: A given input reliably produces a defined output with every interaction.2\n\nWhen we study the components of computers, the above two properties will allow us to really understand how such devices work and why, as in every case, the device implements these two properties to give us the behavior we need.\n\n\nHardware: The physical components that make up a computer system.\nSoftware: The programs (instructions) that tell the computer (the hardware) what to do.\n\n\nIn the beginning, our focus will be on understanding individual personal computers. Yet, this barely scratches the surface of how computers are used in modern society – we will also need to learn about how many computers can be combined to pool resources and provide services at all times of day, as this is essential to the infrastructure of the internet and a foundational concept in technical support as a profession.\nFor now, we can just know that servers are similar to personal computers, but use specialized hardware that is optimized for being turned on 24/7, for communicating with other servers, and for processing and managing large amounts of data.\n\n\n\nPhoto by Matthieu Beaumont on Unsplash\n\n\nThis is because servers are the necessary infrastructure for running the large popular websites and services many of us use today on a regular basis: Social Media websites like Facebook/Instragram/etc., educational resources like Omnivox/Moodle, online software like Office 365, etc. all run on servers, or on collections of servers, known as server farms.\n\n\nNone for this lecture – stay tuned for the next two lectures!\n\n\nThe following questions invite you to reflect on the key information learned in this lesson. If you can’t answer the question, you can click the corresponding link to review the topic more closely. Future assignments and tests may be based on questions like these:\n\nWhat are the two main properites of computers?\nAre video game consoles computers?\nAre there examples of nonelectonic computers? How do nonelectronic computer compute?\nWhy is binary relevant to computers?\nWhat is the property of computers that means they reliably behave the same way given the same input?\nWhat is the name for the type of computer that is always on, and is specialized for processing large amounts of data and pooling many computing resources in one place?\n\n\n\nThis section contains helpful links to related content. You aren’t required to study these in detail, but it never hurts to learn more.\n\nComputer Basics by GCF Global: We will eventually cover almost all of the material in this free online resource; for now, Parts 1-7 in particular are relevant to what we have learned so far.\n“The Mother of All Demos” This is a 1968 presentation that introduced many of the hardware/graphics concepts we will see today and some we will see in future lectures: the mouse, networking, video conferencing, word documents, hyperlinks, gamer headphones, etc. It is very cool to see the palpable excitement of the 2000+ audience tuning into a passionate presentation of a series of completely new technologies.\nMontréal’s Musée de l’Ordinateur – unfortunately the physical location has been closed since 2022, but the website is still a neat resource for reading on the history of personal computers and their evolution. The author’s bias towards Bill Gates and Windows machines is quite strong (there is much more to the story), but the information provided is reliable and interesting.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Introduction to Computers"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/introduction-to-computers.html#nonelectronics",
+    "href": "topics/hardware/introduction-to-computers.html#nonelectronics",
+    "title": "Introduction to Computers",
+    "section": "Nonelectronics?",
+    "text": "Nonelectronics?\nEven before there were consumer electronics, there were devices made to store and process data – that is, computers! The following are three different examples of nonelectronic devices that have been used for computation.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Introduction to Computers"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/introduction-to-computers.html#computers-within-computers",
+    "href": "topics/hardware/introduction-to-computers.html#computers-within-computers",
+    "title": "Introduction to Computers",
+    "section": "Computers within computers?",
+    "text": "Computers within computers?\nIt is possible, and actually quite common, to create computers inside other computers, using the programming capabilities of that computer.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Introduction to Computers"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/introduction-to-computers.html#footnotes",
+    "href": "topics/hardware/introduction-to-computers.html#footnotes",
+    "title": "Introduction to Computers",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThese digital states are made possible using electrical circuitry. In order to do complex operations with these states, we can use the binary numbering to represent the digital states as a variety of numbers, letters, and other concepts. This digital information can be shared between devices using cables (whether electrical or optical, as we will see)↩︎\nFor one e.g., when you tap your OPUS card on a fare gate, you should expect that it will either let you through (if you have fare) or not (if you don’t). The concept is more general: computer engineering is, in part, the study and practise of making physical interactions with computing devices reliably and predictably produce the same deterministic results under the same physical conditions.↩︎",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "Introduction to Computers"
+    ]
+  },
+  {
     "objectID": "topics/hardware/external-components.htm#introduction",
     "href": "topics/hardware/external-components.htm#introduction",
     "title": "External components",
@@ -767,7 +800,7 @@
     "href": "topics/hardware/external-components.htm#input-devices",
     "title": "External components",
     "section": "Input Devices",
-    "text": "Input Devices\nInput Devices are devices that accept data and instructions from a user to a computer.\nMouse\nUsed to navigate the graphical user interface (GUI). There are many types of mice, distinguished by tracking technology and by use case\nTechnology:\n\nMechanical mice use a ball to measure movement (obsolete now – why?)\nOptical mice use light sources (first LED, then more precise Laser).1\n\nPurpose:\nMany! “Gaming” (many buttons), Ergonomic (optimize human comfort), etc.\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\nKeyboard\nUsed to enter text commands. Most commonly used is the QWERTY layout (used in typewriters since 1873). Other layouts include QWERTZ (Germany/Switzerland) and AZERTY (France) and DVORAK (nerds2)\nVariations include wired or wireless keyboards and numeric keypads. Ergonomic designs are recently becoming more popular.\n\n\n\nFigure caption.\n\n\n\n\n\nFigure caption.\n\n\n\n\n\nFigure caption.\n\n\nInput Devices: Others\n\nGamepads or joysticks are used for playing games and running simulations.\nDigital / video cameras and webcams create images and videos.\nBiometric devices use features unique to an individual user (e.g. fingerprint).\nTouchscreens have a pressure-sensitive panel.\nScanners digitize images or documents so they can be stored as files.\nDigital Tablets (sometimes called Digitizers) allow the user to create images or artwork using a stylus.\nMedia card readers read/write data from/to different types of media cards (SD cards, video game cartridges, etc.)\n\nGood notes on history and explanation of how/why they work “Optical mice use image sensors to image naturally occurring texture [on the surface they are placed]…. These surfaces, when lit at a grazing angle by a light emitting diode, cast distinct shadows that resemble a hilly terrain lit at sunset. Images of these surfaces are captured in continuous succession and compared with each other to determine how far the mouse has moved.” https://en.wikipedia.org/wiki/Computer_mouse https://en.wikipedia.org/wiki/Optical_mousenote: this is very hypocritical coming from me. don’t mind my bad jokes!"
+    "text": "Input Devices\nInput Devices are devices that accept data and instructions from a user to a computer.\nMouse\nUsed to navigate the graphical user interface (GUI). There are many types of mice, distinguished by tracking technology and by use case\nTechnology:\n\nMechanical mice use a ball to measure movement (obsolete now – why?)\nOptical mice use light sources (first LED, then more precise Laser).1\n\nPurpose:\nMany! “Gaming” (many buttons), Ergonomic (optimize human comfort), etc.\n\n\n\n\n\n\nThe prototype computer mouse Doug Engelbart used in the Mother of All Demos in 1968.\n\n\n\n\n\n\n\nMx Laser Cordless mouse introduced in 2004.\n\n\n\n\n\n\n\n\n\nA4Tech WOP-35 Optical mouse LED introduced in 2002.\n\n\n\n\n\n\n\nMechanical mouse (unknown manufacturer) used in 80s and 90s”\n\n\n\n\n\nKeyboard\nUsed to enter text commands. Most commonly used is the QWERTY layout (used in typewriters since 1873). Other layouts include QWERTZ (Germany/Switzerland) and AZERTY (France) and DVORAK (nerds2)\nVariations include wired or wireless keyboards and numeric keypads. Ergonomic designs are recently becoming more popular.\n\n\n\nGoldtouch Adjustable Ergonomic Keyboard.\n\n\n\n\n\nMicrosoft Natural Ergonomic Keyboard 4000.\n\n\n{width=66% fig-align=“left” fig-alt=” Goldtouch Numeric Keypad USB”}\nInput Devices: Others\n\nGamepads or joysticks are used for playing games and running simulations.\nDigital / video cameras and webcams create images and videos.\nBiometric devices use features unique to an individual user (e.g. fingerprint).\nTouchscreens have a pressure-sensitive panel.\nScanners digitize images or documents so they can be stored as files.\nDigital Tablets (sometimes called Digitizers) allow the user to create images or artwork using a stylus.\nMedia card readers read/write data from/to different types of media cards (SD cards, video game cartridges, etc.)\n\nGood notes on history and explanation of how/why they work “Optical mice use image sensors to image naturally occurring texture [on the surface they are placed]…. These surfaces, when lit at a grazing angle by a light emitting diode, cast distinct shadows that resemble a hilly terrain lit at sunset. Images of these surfaces are captured in continuous succession and compared with each other to determine how far the mouse has moved.” https://en.wikipedia.org/wiki/Computer_mouse https://en.wikipedia.org/wiki/Optical_mousenote: this is very hypocritical coming from me. don’t mind my bad jokes!"
   },
   {
     "objectID": "topics/hardware/external-components.htm#output-devices",
@@ -848,7 +881,7 @@
     "href": "topics/hardware/external-components.html#input-devices",
     "title": "External components",
     "section": "Input Devices",
-    "text": "Input Devices\nInput Devices are devices that accept data and instructions from a user to a computer.\n\nMouse\nUsed to navigate the graphical user interface (GUI). There are many types of mice, distinguished by tracking technology and by use case\nTechnology:\n\nMechanical mice use a ball to measure movement (obsolete now – why?)\nOptical mice use light sources (first LED, then more precise Laser).1\n\nPurpose:\nMany! “Gaming” (many buttons), Ergonomic (optimize human comfort), etc.\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nKeyboard\nUsed to enter text commands. Most commonly used is the QWERTY layout (used in typewriters since 1873). Other layouts include QWERTZ (Germany/Switzerland) and AZERTY (France) and DVORAK (nerds2)\nVariations include wired or wireless keyboards and numeric keypads. Ergonomic designs are recently becoming more popular.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\nInput Devices: Others\n\nGamepads or joysticks are used for playing games and running simulations.\nDigital / video cameras and webcams create images and videos.\nBiometric devices use features unique to an individual user (e.g. fingerprint).\nTouchscreens have a pressure-sensitive panel.\nScanners digitize images or documents so they can be stored as files.\nDigital Tablets (sometimes called Digitizers) allow the user to create images or artwork using a stylus.\nMedia card readers read/write data from/to different types of media cards (SD cards, video game cartridges, etc.)",
+    "text": "Input Devices\nInput Devices are devices that accept data and instructions from a user to a computer.\n\nMouse\nUsed to navigate the graphical user interface (GUI). There are many types of mice, distinguished by tracking technology and by use case\nTechnology:\n\nMechanical mice use a ball to measure movement (obsolete now – why?)\nOptical mice use light sources (first LED, then more precise Laser).1\n\nPurpose:\nMany! “Gaming” (many buttons), Ergonomic (optimize human comfort), etc.\n\n\n\n\n\n\nThe prototype computer mouse Doug Engelbart used in the Mother of All Demos in 1968.\n\n\n\n\n\n\n\nMx Laser Cordless mouse introduced in 2004.\n\n\n\n\n\n\n\n\n\nA4Tech WOP-35 Optical mouse LED introduced in 2002.\n\n\n\n\n\n\n\nMechanical mouse (unknown manufacturer) used in 80s and 90s”\n\n\n\n\n\n\n\nKeyboard\nUsed to enter text commands. Most commonly used is the QWERTY layout (used in typewriters since 1873). Other layouts include QWERTZ (Germany/Switzerland) and AZERTY (France) and DVORAK (nerds2)\nVariations include wired or wireless keyboards and numeric keypads. Ergonomic designs are recently becoming more popular.\n\n\n\n\n\n\n\nGoldtouch Adjustable Ergonomic Keyboard.\n\n\n\n\n\n\n\n\n\nMicrosoft Natural Ergonomic Keyboard 4000.\n\n\n{width=66% fig-align=“left” fig-alt=” Goldtouch Numeric Keypad USB”}\n\n\nInput Devices: Others\n\nGamepads or joysticks are used for playing games and running simulations.\nDigital / video cameras and webcams create images and videos.\nBiometric devices use features unique to an individual user (e.g. fingerprint).\nTouchscreens have a pressure-sensitive panel.\nScanners digitize images or documents so they can be stored as files.\nDigital Tablets (sometimes called Digitizers) allow the user to create images or artwork using a stylus.\nMedia card readers read/write data from/to different types of media cards (SD cards, video game cartridges, etc.)",
     "crumbs": [
       "Home",
       "Topics",
@@ -935,18 +968,6 @@
     ]
   },
   {
-    "objectID": "topics/all-lectures.html",
-    "href": "topics/all-lectures.html",
-    "title": "All lectures",
-    "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nSubtitle\n\n\n\n\n\n\n\n\n2024-08-27\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n\n\n2024-09-03\n\n\nExternal components\n\n\nOverview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors\n\n\n\n\n\n\n2024-09-10\n\n\nInternal Components\n\n\nExplains the most important internal components of desktop computers. Processing, memory, storage, and communication.\n\n\n\n\n\n\n2024-09-16\n\n\nUnderstanding CPUs\n\n\nMore detail on CPUs. “Guy in Box” analogy, Clock Speed, Codebook, Databuses explained.\n\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "All lectures"
-    ]
-  },
-  {
     "objectID": "topics/operating-systems/index.html",
     "href": "topics/operating-systems/index.html",
     "title": "Operating Systems",
@@ -959,6 +980,13 @@
     ]
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "This companion site for the 420-1N6 course includes:\n\nLecture slides / documents\nExercises\nReferences & Resources\n\n\n\n\n Back to topReuseCC BY-NC-SA 4.0"
+  },
+  {
     "objectID": "about/calendar.html",
     "href": "about/calendar.html",
     "title": "Calendar",
@@ -966,38 +994,10 @@
     "text": "The focused pupil keeps watch on Time. Image retrieved from Bryan Superfreak Magnum on Pinterest.\n\n\nThis is the authoritative calendar for content covered in class, and for content you should expect to see covered as we continue through the course.\nYou can compare this calendar with the calendar from the Course Outline to see where this course has deviated from the original outline.\nComing soon…\n\n\n\n Back to topReuseCC BY-NC-SA 4.0"
   },
   {
-    "objectID": "about/this-site.html",
-    "href": "about/this-site.html",
-    "title": "About this website",
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "About",
     "section": "",
-    "text": "This webpage is written in Markdown using the Quarto framework. The website is hosted via GitHub Pages\nSource code is open source and available on GitHub."
-  },
-  {
-    "objectID": "about/this-site.html#source-code",
-    "href": "about/this-site.html#source-code",
-    "title": "About this website",
-    "section": "",
-    "text": "This webpage is written in Markdown using the Quarto framework. The website is hosted via GitHub Pages\nSource code is open source and available on GitHub."
-  },
-  {
-    "objectID": "about/this-site.html#course-content",
-    "href": "about/this-site.html#course-content",
-    "title": "About this website",
-    "section": "Course content",
-    "text": "Course content\nCourse content, both for lectures and assignments, has been adapted by me from a variety of sources. This section serves the purpose of both acknowledging these references as well as pointing the way for curious students to begin investigating further into course material than we had time to cover.\n\nCopyright\nAll course content was either written by Michael Haaf, or explicitly adapted from external resources with attributions made clear. This course content retains the licenses of the original works where relevant, and is otherwise licensed under the Creative Commons Attribution 4.0 International License.\n\nTerms of use\nYou are free to:\n\nShare: copy and redistribute the material in any medium or format\nAdapt: remix, transform, and build upon the material for any purpose, even commercially.\n\nUnder the following terms:\n\nAttribution: You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\n\nCreative Commons Attribution 4.0 International License"
-  },
-  {
-    "objectID": "about/this-site.html#course-website",
-    "href": "about/this-site.html#course-website",
-    "title": "About this website",
-    "section": "Course website",
-    "text": "Course website\nDetails about how this website was built follow.\n\nColophon\n\n\n\nFrom Wikipedia: In publishing, a colophon is a brief statement containing information about the publication of a book… Some web pages also have colophons, which frequently contain (X)HTML, CSS, or usability standards compliance information and links to website validation tests.\n\n\n\nMarkup: Markdown\nFramework: Quarto\nDeployment: GitHub Pages\n\nYou can follow along directly with course updates at the [course repository][course-repository]\n\n\nCopyright\nThis website was written and designed by the Michael Haaf. All code and assets related to this website, unless indicated otherwise, are licensed under the GNU General Public License v3.0\n\nTerms of use\nThis website’s code is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\nThis website’s code is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\nGNU General Public License Notice"
-  },
-  {
-    "objectID": "announcements/index.html",
-    "href": "announcements/index.html",
-    "title": "Announcements",
-    "section": "",
-    "text": "No matching items\n Back to topReuseCC BY-NC-SA 4.0"
+    "text": "About this site\n\n\n\n\n\n\n\n\n\n\n\n\nAbout this website\n\n\nDescription of technologies and resources used to build this website. Acknowledgements, copyright, terms of use, etc. can be found on this page.\n\n\n\n\n\n\n\n\n\n\nCalendar\n\n\nRoadmap for course deliverables; record of lectures & activites we have covered along the way.\n\n\n\n\n\n\n\n\n\n\nSyllabus\n\n\nCourse description outlining goals, expectations, resources, and other important information.\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0"
   }
 ]

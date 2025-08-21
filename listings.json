@@ -1,18 +1,6 @@
 [
   {
-    "listing": "/about/index.html",
-    "items": [
-      "/about/this-site.html",
-      "/about/calendar.html",
-      "/about/syllabus.html"
-    ]
-  },
-  {
-    "listing": "/topics/data-representation/index.html",
-    "items": []
-  },
-  {
-    "listing": "/topics/technical-support/index.html",
+    "listing": "/labs/all-labs.html",
     "items": []
   },
   {
@@ -34,7 +22,15 @@
     ]
   },
   {
-    "listing": "/labs/all-labs.html",
+    "listing": "/topics/data-representation/index.html",
+    "items": []
+  },
+  {
+    "listing": "/topics/technical-support/index.html",
+    "items": []
+  },
+  {
+    "listing": "/announcements/index.html",
     "items": []
   },
   {
@@ -51,7 +47,11 @@
     "items": []
   },
   {
-    "listing": "/announcements/index.html",
-    "items": []
+    "listing": "/about/index.html",
+    "items": [
+      "/about/this-site.html",
+      "/about/calendar.html",
+      "/about/syllabus.html"
+    ]
   }
 ]
