@@ -1,7 +1,7 @@
 ---
 title: External components
 subtitle: Overview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors
-date: 2025-08-26
+date: 2025-08-25
 draft: true
 ---
 
@@ -74,7 +74,7 @@ Many! “Gaming” (many buttons), Ergonomic (optimize human comfort), etc.
 
 ### Keyboard
 
-Used to enter text commands. Most commonly used is the QWERTY layout (used in typewriters since 1873). Other layouts include QWERTZ (Germany/Switzerland) and AZERTY (France) and DVORAK (nerds[^2])
+Used to enter text commands. Most commonly used is the QWERTY layout (used in typewriters since 1873). Other layouts include QWERTZ (Germany/Switzerland) and AZERTY (France) and DVORAK.
 
 Variations include wired or wireless keyboards and numeric keypads. *Ergonomic* designs are recently becoming more popular.
 
@@ -84,7 +84,6 @@ Variations include wired or wireless keyboards and numeric keypads. *Ergonomic* 
 
 ![ Goldtouch Numeric Keypad USB.](_assets/external-components22.jpg){width=66% fig-align="left" fig-alt=" Goldtouch Numeric Keypad USB"}
 
-[^2]: note: this is very hypocritical coming from me. don’t mind my bad jokes!
 
 ### Input Devices: Others
 
