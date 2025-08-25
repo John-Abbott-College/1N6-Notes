@@ -1,5 +1,14 @@
-# Teacher Prep
+# Technical Support: Teacher Prep
+# Week 1
+
+## Objectives
+
+- Introduce the course to the students
+- Introduce computer and external devices 
+- Work on a lab involving researching a peripheral device. 
+
 ## Peripheral devices 
+
 - Bring a few examples of peripheral devices (e.g. mouse, keyboard)
 
 - Why mechanical ball mouse went obsolete? 
