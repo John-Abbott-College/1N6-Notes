@@ -2,7 +2,6 @@
 title: External components
 subtitle: Overview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors
 date: 2025-08-25
-draft: true
 ---
 
 ![All of these devices, except one, would be considered in external component of a modern desktop computer. Which one is not? Figure retrieved from [Innovation it solution][main-image], original source unknown.](_assets/external-components-main.jpg)
