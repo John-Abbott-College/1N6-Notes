@@ -250,7 +250,12 @@
 <figcaption>Microsoft Natural Ergonomic Keyboard 4000.</figcaption>
 </figure>
 </div>
-<p><img data-src="_assets/external-components22.jpg" alt="Goldtouch Numeric Keypad USB.">{width=66% fig-align=“left” fig-alt=” Goldtouch Numeric Keypad USB”}</p>
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="_assets/external-components22.jpg" style="width:66.0%" alt="Goldtouch Numeric Keypad USB."></p>
+<figcaption>Goldtouch Numeric Keypad USB.</figcaption>
+</figure>
+</div>
 <h3 id="input-devices-others">Input Devices: Others</h3>
 <ul>
 <li>Gamepads or joysticks are used for playing games and running simulations.</li>
@@ -272,17 +277,17 @@
 <p>There are many different types of monitors use different technologies to create an image. However, the principles are the same:</p>
 <ul>
 <li>Digital representation of image to display is sent to the monitor</li>
-<li>The monitor produces each <strong>pixel</strong> (the “atom” of monitor displays) using some deterministic physical technology</li>
+<li>The monitor produces each <strong>pixel</strong> (the smallest element of the screen or “atom” of monitor displays) using some deterministic physical technology</li>
 <li>Light from the monitor reaches us as a useful/pleasing image.</li>
 </ul>
 <p>The following sections are the main technologies used today (from oldest to newest)</p>
 <h4 id="cathode-ray-tube-crt">Cathode Ray Tube (CRT)</h4>
 <p>Cathode Ray Tube (CRT) monitors are very complicated, very cool, moderately dangerous, and mostly obsolete!</p>
 <ul>
-<li>The most common type of consumer and industry television before ~2010</li>
-<li>Basically: a <strong>tungsten coil</strong> is heated in a vacuum until it sheds electrons, those electrons are accelerated by an electric field and guided by magnets to hit a phosphor coated glass display to emit light in a pixel grid</li>
-<li><strong>Obsolete</strong> since today their are lighter, simpler higher resolution technologies</li>
-<li>Still used today for some applications due to <strong>zero latency</strong> .</li>
+<li><p>The most common type of consumer and industry television before ~2010</p></li>
+<li><p>Basically: a <strong>tungsten coil</strong> is heated in a vacuum until it sheds electrons, those electrons are accelerated by an electric field and guided by magnets to hit a phosphor coated glass display to emit light in a pixel grid</p></li>
+<li><p><strong>Obsolete</strong> since today their are lighter, simpler higher resolution technologies</p></li>
+<li><p>Still used today for some applications due to <strong>zero latency</strong> .</p></li>
 </ul>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
@@ -303,9 +308,15 @@
 <li>Often used in home theatre applications due to accurate video representation.</li>
 <li>High levels of brightness, deep black levels and very wide colour range.</li>
 <li>Have shorter life span, susceptible to “screen burn-in” (this is why screensavers are called “screen savers”! Same for CRT).</li>
-<li>(+) Plasma cell will produce light that looks good from every angle, it has high refresh rate (videos are smoother)</li>
-<li>(-) BUT! Consumes a lot of electricity</li>
-<li>(-) Doesn’t work at high altitudes! (low pressure)</li>
+</ul>
+<p><strong>Pros</strong></p>
+<ul>
+<li>Plasma cell will produce light that looks good from every angle, it has high refresh rate (videos are smoother)</li>
+</ul>
+<p><strong>Cons</strong></p>
+<ul>
+<li>BUT! Consumes a lot of electricity</li>
+<li>Doesn’t work at high altitudes! (due to the low pressure)</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -317,39 +328,172 @@
 <p>An LCD Screen is made up of layers of very thin glass, liquid crystal, metal and dielectrics. <em>Liquid cystal</em> is a modelcule between liquid (not ordered and constant motion) and crystal (ordered fashion). This technology allows for precise control of color without the need to ionise gas with powerful electronics.</p>
 <ul>
 <li>Commonly used in flat panel monitors and laptops.</li>
-<li>Consists of a <strong>white</strong> backlight (in light, white = all colours combined), two polarizing filters, and liquid crystal solution between them to transform the backlight into a coherent pixel grid.</li>
+<li>Consists of a <strong>white</strong> backlight, two polarizing filters, and liquid crystal solution.</li>
 <li>An electronic current aligns and controls the crystals so that light can pass through them.</li>
-<li>(+) Allow the use of <strong>flat</strong> screens!</li>
 </ul>
-<div class="quarto-figure quarto-figure-left">
+<p><strong>Pros</strong></p>
+<ul>
+<li>Allow the use of <strong>flat</strong> screens!</li>
+</ul>
+<p><strong>Cons</strong></p>
+<ul>
+<li>Due to the backlight, black screens are never perfectly black! It always lets some light pass through.</li>
+<li>Because of the polarizing filters, different viewing angles impact heavily the appearance of the image.</li>
+<li>Somewhat inefficient due to the many layers reducing the brightness of the screen.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="_assets/external-components-32.png" style="width:66.0%" alt="alt text."></p>
-<figcaption>The polarizing filter lets only one orientation of the light pass through. To transform the white light into colored light, a color filter is placed on the outter face ( made of pigments which will absorb all colors execept the color that is passing (red, blue or green)</figcaption>
+<p><img data-src="_assets/external-components-32.png" style="width:70.0%" alt="alt text."></p>
+<figcaption>The polarizing filter lets only one orientation of the light pass through. An LCD Screen is made up of layers of very thin glass, liquid crystal, metal and dielectrics. The projector beam will emit white light which contains all wavelengths. Liquid crystal is a molecule between liquid and crytal state (ordered vs unordered) which has the characteristics of changing orientation under specific voltage. This allows for a precise control of the passage of light. To transform the white light into colored light, a color filter is placed on the outter face - made of pigments which will absorb all colors execept the color that is passing (red, blue or green). <a href="https://www.youtube.com/watch?v=Gx-JVoOFYhs&amp;ab_channel=e-learning%C3%A9lectronique">This video provides a full explanation</a></figcaption>
 </figure>
 </div>
 <h4 id="light-emitting-diode-led">Light emitting diode (LED)</h4>
 <ul>
-<li>An LCD display that uses LED backlighting instead of a white backlight to light the display. The brightness of each RGB LED is controlled programmatically to produce each pixel</li>
-<li><strong>(+) Thinner</strong> (no layers), lighter and brighter, and displays better contrast</li>
-<li><strong>(+) Lower power </strong> consumption.</li>
+<li>An LCD display that uses LED backlighting instead of a white backlight to light the display. It still uses Liquid crystals (LCD technology). The brightness of each RGB LED is controlled programmatically to produce each pixel.</li>
 </ul>
-<div class="quarto-figure quarto-figure-left">
+<p><strong>Pros</strong></p>
+<ul>
+<li><strong>Thinner</strong> (no layers), lighter and brighter, and displays better contrast</li>
+<li><strong>Lower power </strong> consumption.</li>
+<li>Better representation of blacks (compared to original LCDs)</li>
+<li>Improved color filters using quantum dots, which creates vibrant colors.</li>
+<li>Have become the most affordable types of Monitors.</li>
+<li>LEDs backlight lasts for very long making them less susceptible to burn-in compared to OLED screens.</li>
+</ul>
+<p><strong>Cons</strong></p>
+<ul>
+<li>Not yet a perfect representation of black!</li>
+<li>The individual light diodes level of light is not controlled, it’s still requires liquid crystals to modulate the light.</li>
+<li>This means that polarized light is still used reducing the viewing angles compared to OLED screens.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="_assets/external-components-LCDvsLED.jpg" style="width:66.0%" alt="alt text."></p>
-<figcaption>Figure caption.</figcaption>
+<p><img data-src="_assets/external-components-35.jpg" style="width:70.0%"></p>
+<figcaption>LED Grid used for backlighting of each individual pixel. -</figcaption>
 </figure>
 </div>
-<p>For more information: <a href="https://www.youtube.com/watch?v=Gx-JVoOFYhs&amp;ab_channel=e-learning%C3%A9lectronique">https://www.youtube.com/watch?v=Gx-JVoOFYhs&amp;ab_channel=e-learning%C3%A9lectronique</a></p>
 <h4 id="organic-led-oled">Organic LED (OLED)</h4>
-<p>OLED displays are similar to LED, but no backlighting required – the material used to create these displays emits light when an electrical current is applied.</p>
+<p>OLED displays are similar to LED, but no backlighting required – the organic material used to create these displays emits light when an electrical current is applied.</p>
 <ul>
-<li>Similar to LED, but <strong>no backlighting </strong> required – the material used to create these displays emits light when <strong>an electrical current is applied</strong> .</li>
-<li>(+) Allows for <strong>perfect representation of dark colors </strong> unlike all other monitor technologies. Also allows for flexible and transparent monitors</li>
-<li>(-) More expensive to produce, more susceptible to screen-burn-in than LCD or LED (but better than Plasma and CRT in this respect)</li>
+<li>Similar to LED, but <strong>no backlighting</strong> required – the material used to create these displays emits light when <strong>an electrical current is applied</strong> .</li>
 </ul>
-<p>Here’s a great video (8 mins) explaining both physical and software technologies required to make the above monitors work: <em><a href="https://www.youtube.com/watch?v=uyLDA9QT8EY">https://www.youtube.com/watch?v=uyLDA9QT8EY</a></em></p>
+<p><strong>Pros</strong></p>
+<ul>
+<li>Allows for <strong>perfect representation of dark colors</strong> unlike all other monitor technologies. Also allows for flexible and transparent monitors</li>
+</ul>
+<p><strong>Cons</strong></p>
+<ul>
+<li>More expensive to produce</li>
+<li>More susceptible to screen-burn-in than LCD or LED (but better than Plasma and CRT in this respect)</li>
+</ul>
+<p>Here’s a great <a href="https://www.youtube.com/watch?v=uyLDA9QT8EY">video (8 mins)</a> explaining both physical and software technologies required to make the above monitors work.</p>
 <p>With LCD, LED, and OLED, we finally get to the most modern monitor technologies. These are used in our labs, most computers, laptops. They’re ordered here approximately in order of lowest (LCD) -&gt; highest (OLED) quality, though pros and cons exist for each.</p>
 <p>See here for more information: <em><a href="https://en.wikipedia.org/wiki/Comparison_of_CRT,_LCD,_Plasma,_and_OLED_displays">https://en.wikipedia.org/wiki/Comparison_of_CRT,_LCD,_Plasma,_and_OLED_displays</a></em>.</p>
+<h4 id="display-technologies-summary">Display Technologies Summary</h4>
+<table class="caption-top">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 20%">
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th>Plasma</th>
+<th>LCD (CCFL backlight)</th>
+<th>LED (LCD with LED backlight)</th>
+<th>OLED</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Light Source</td>
+<td>Ionized gases excite phosphors (self-light)</td>
+<td>Cold Cathode Fluorescent Lamps (CCFL) backlight</td>
+<td>Light Emitting Diodes (LED) backlight</td>
+<td>Self-emitting organic pixels (no backlight)</td>
+</tr>
+<tr class="even">
+<td>Thickness</td>
+<td>Bulky, heavy</td>
+<td>Thicker than LED</td>
+<td>Thinner, lighter than LCD</td>
+<td>Ultra-thin, even flexible</td>
+</tr>
+<tr class="odd">
+<td>Brightness</td>
+<td>High, but reflective in bright rooms</td>
+<td>Moderate</td>
+<td>High, adjustable</td>
+<td>High, but may degrade over time</td>
+</tr>
+<tr class="even">
+<td>Contrast Ratio</td>
+<td>Very good (deep blacks, but not infinite)</td>
+<td>Lower (backlight bleed)</td>
+<td>Better than LCD, especially with local dimming</td>
+<td>Excellent (true blacks, infinite contrast)</td>
+</tr>
+<tr class="odd">
+<td>Viewing Angles</td>
+<td>Very wide</td>
+<td>Limited</td>
+<td>Better than LCD but not as good as Plasma/OLED</td>
+<td>Excellent, wide and consistent</td>
+</tr>
+<tr class="even">
+<td>Color Accuracy</td>
+<td>Vivid, rich colors</td>
+<td>Good, but limited by backlight</td>
+<td>Better than LCD</td>
+<td>Excellent, most accurate and vibrant</td>
+</tr>
+<tr class="odd">
+<td>Refresh Rates</td>
+<td>Very fast (good for motion, sports)</td>
+<td>Slower</td>
+<td>Faster than LCD</td>
+<td>Very fast</td>
+</tr>
+<tr class="even">
+<td>Power Use</td>
+<td>High (power-hungry, generates heat)</td>
+<td>Higher than LED</td>
+<td>Lower (more efficient than LCD &amp; Plasma)</td>
+<td>Efficient for dark scenes; higher on full bright screen</td>
+</tr>
+<tr class="odd">
+<td>Burn-in Risk</td>
+<td>High</td>
+<td>Very low</td>
+<td>Very low</td>
+<td>Medium (improved but possible)</td>
+</tr>
+<tr class="even">
+<td>Lifespan</td>
+<td>Shorter (phosphors fade)</td>
+<td>Long</td>
+<td>Long</td>
+<td>Medium to long (organic material degrades)</td>
+</tr>
+<tr class="odd">
+<td>Price</td>
+<td>Expensive (when available)</td>
+<td>Cheapest</td>
+<td>Mid-range</td>
+<td>Most expensive</td>
+</tr>
+<tr class="even">
+<td>Current Status</td>
+<td>Obsolete (no longer made)</td>
+<td>Rare now, replaced by LED</td>
+<td>Most common today</td>
+<td>Premium, used in high-end TVs, monitors, smartphones</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section class="slide level2">
 
@@ -373,6 +517,12 @@
 <li>While still in use for particular applications (printing receipts for e.g.), these are now obsoleted by ink-jet printers.</li>
 </ul>
 <h4 id="ink-jet-printers">Ink-jet printers</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_assets/external-components-38.gif" data-widht="50%"></p>
+<figcaption>Ink-jet printer technology. This animation shows how droplets are pushed through the nozzle of the printing head</figcaption>
+</figure>
+</div>
 <ul>
 <li>Uses tiny droplets of ink to produce images.</li>
 <li>Heat is applied to an ink reservoir, which pushes ink bubbles through a nozzle in a controlled manner.</li>
@@ -398,22 +548,18 @@
 </div>
 </div>
 </div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><img src="external-components-38.gif"></p>
-</div>
-</div>
 </div>
 <h4 id="laser-printers">Laser Printers</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_assets/external-components-40.gif" style="width:80.0%" alt="Laser printer mechanism."></p>
+<figcaption>Laser Printer. This animation shows how the ink powder sticks to the rotating drum. The drum contains a special coating to which allows the toner (ink powder) to stick. A laser beam then conveys information to the drum, neutralizing and detaching some toner. As the paper rolls by the drum, the toner is transferred onto the paper. A hot roller then bonds toner to the paper.</figcaption>
+</figure>
+</div>
 <ul>
 <li>Expensive when they were initially introduced.</li>
 <li>Produce high-quality output quietly at a high speed.</li>
-<li>Produces images by directing a laser beam at a mirror which bounces the beam onto a drum.
-<ul>
-<li>The drum contains a special coating to which the toner (ink powder) sticks.</li>
-<li>A laser beam then conveys information to the drum, neutralizing and detaching some toner.</li>
-<li>As the paper rolls by the drum, the toner is transferred onto the paper. A hot roller then bonds toner to the paper.</li>
-</ul></li>
+<li>Produces images by directing a laser beam at a mirror which bounces the beam onto a drum.</li>
 </ul>
 <div class="quarto-figure quarto-figure-left">
 <figure>
@@ -421,7 +567,12 @@
 <figcaption>Laser Printer</figcaption>
 </figure>
 </div>
-<p><img src="external-components-40.gif"></p>
+<h3 id="other-output-devices">Other output devices</h3>
+<ul>
+<li>Projectors</li>
+<li>Speakers</li>
+<li>Headphones</li>
+</ul>
 </section>
 <section id="connectors" class="slide level2">
 <h2>Connectors</h2>
@@ -436,17 +587,22 @@
 <li><strong>Converter</strong> : A device that allows different standards/types of connectors to be used together</li>
 </ul>
 <h4 id="electrical-cables">Electrical cables</h4>
-<p>transmit an electrical signal on a conducting wire, insulated to protect the signal/surroundings</p>
+<p>Transmits an electrical signal on a conducting wire, insulated to protect the signal/surroundings</p>
 <p><img data-src="_assets/external-components34.png"></p>
 <h4 id="optical-cables">Optical cables</h4>
-<p>transmit signal in the form of light. Very fast! (speed of light in glass).</p>
+<p>Transmits a signal in the form of light. Very fast! (speed of light in glass).</p>
 <p><img data-src="_assets/external-components33.png"></p>
 <p>A short paper (5 pages) comparing the two cable technologies in more detail: <em><a href="https://optronicsplus.net/downloads/whitepapers/OP_Fibre_Optics_vs_Copper_Cabling_Understanding_the_Difference_White_Paper_Rev.1.0.pdf">Fibre Optics vs Copper Cabling: Understanding the Differences</a></em></p>
+<h3 id="analog-versus-digital-signal-cables">Analog versus Digital signal cables</h3>
+<ul>
+<li><strong>Analog</strong> cables carry a continuous and fluctuating electrical signal representing the original penomena (example sound waves).</li>
+<li><strong>Digital</strong> cables transmit a binary discrete (sequence of 1 or 0)</li>
+</ul>
 <h3 id="usb">USB</h3>
 <p><strong>Universal Serial Bus</strong> (we’ll talk about the meaning of the last two words soon!) is used to connect most modern devices to computers. Back in the day, mice/keyboards/external storage/speakers/etc. all had different cables. These have now been (mostly) unified under the USB standard.</p>
 <p>USB connectors can transmit both <strong>power</strong> (e.g.&nbsp;charging phones) and <strong>information</strong> (data). Despite being “Universal” there are an incredible number of USB types.</p>
 </section>
-<section class="slide level2">
+<section class="slide level2 scrollable">
 
 <p>USB “Number” standards refer to the transmission speed and power of the cables</p>
 <ul>
@@ -459,7 +615,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="_assets/external-components36.png"></p>
-<figcaption>Figure caption.</figcaption>
+<figcaption>Different types of USB standards.</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -473,14 +629,14 @@
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="_assets/external-components38.png"></p>
-<figcaption>Figure caption.</figcaption>
+<figcaption>Various sizes of TSR connector (headphone jack)</figcaption>
 </figure>
 </div>
 <p>For higher-end audio, we can use fiberoptic cables as these can transmit larger amounts of data more quickly, which is required for producing a high-quality audio signal.</p>
 <h3 id="video">Video</h3>
-<p><strong>VGA</strong> cable is commonly used for computer monitors (15-pins). Low resolutions, now obsolete. There exist converter cables to connect VGA monitors to newer computers.</p>
+<p><strong>VGA</strong> cable is analog signal cable used for computer monitors. It had 15 pins arranged in 3 rows. It’s a low resolution cable and now obsolete. There exist converter cables to connect VGA monitors to newer computers.</p>
 <p><strong>MiniVGA</strong> is a variant found on laptops.</p>
-<p><strong>DVI</strong> was once the common modern upgrade from VGA, capable of higher resolutions. MiniDVI and MicroDVI on “thin” laptops.</p>
+<p><strong>DVI</strong> cabe is analog/digital upgrade from VGA, capable of higher resolutions. It isn’t used as much today.MiniDVI and MicroDVI on “thin” laptops.</p>
 <p><strong>S-Video</strong> commonly used for DVD players, camcorders and older consoles.</p>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
@@ -520,16 +676,16 @@
 </div>
 </div>
 </div>
-<p><strong>RCA cables</strong> include composite video (yellow) and stereo audio cables (red for right; white/black for left). Component video offers a better picture.</p>
-<p><strong>HDMI</strong> is the new standard for audio and video transmission in a single cable.</p>
-<p><strong>DisplayPort</strong> (and Mini DisplayPort) more commonly used in computers.</p>
+<p><strong>RCA cables</strong> include composite video (yellow) and stereo audio cables (red for right; white/black for left). It’s mainly an analog cable. Component video offers a better picture.</p>
+<p><strong>HDMI</strong> is the new standard for audio and video transmission in a single cable. Digital signal only.</p>
+<p><strong>DisplayPort</strong> (and Mini DisplayPort) more commonly used in desktop computers. Digital signal only.</p>
 <div class="quarto-layout-panel" data-layout-ncol="3">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="_assets/external-components45.png"></p>
-<figcaption>Figure caption.</figcaption>
+<figcaption>RGA.</figcaption>
 </figure>
 </div>
 </div>
@@ -537,7 +693,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="_assets/external-components46.png"></p>
-<figcaption>Figure caption.</figcaption>
+<figcaption>HDMI.</figcaption>
 </figure>
 </div>
 </div>
@@ -545,7 +701,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="_assets/external-components47.png"></p>
-<figcaption>Figure caption.</figcaption>
+<figcaption>Display Port.</figcaption>
 </figure>
 </div>
 </div>
@@ -557,23 +713,207 @@
 <h3 id="networking">Networking</h3>
 <p>Telephone cable (RJ11) used for connecting to the internet through DSL/ADSL modems. Standard phone cable has 4 wires; connector has 4 pins. Clip helps to maintain tight connection.</p>
 <p>Ethernet (RJ45) is the standard for wired networking. Based on Cat5 twisted pair cable, made from 8 individual wires. Connector looks similar to phone plug but is thicker and wider. Also uses a clip to maintain tight connection.</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
 <p><img data-src="_assets/external-components50.png"></p>
+<figcaption>telephone cable RJ11</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
 <p><img data-src="_assets/external-components51.png"></p>
-</section>
-<section id="exercises" class="slide level2">
-<h2>Exercises</h2>
-</section>
-<section id="knowledge-check" class="slide level2">
-<h2>Knowledge check</h2>
-</section>
-<section id="additional-resources" class="slide level2">
-<h2>Additional resources</h2>
+<figcaption>Ethernet cable RJ45</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><strong>Knowledge check</strong></p>
+<ol type="1">
+<li>Which statement about computers is INCORRECT?</li>
+</ol>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ol type="a">
+<li>It is a digital device.</li>
+<li>For a given input, it reliably produces the same output every time.</li>
+<li>It contains a CPU.</li>
+<li>Computers always operate with 100% accuracy and never make errors in processing information.</li>
+</ol>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ol start="2" type="1">
+<li>Which statement is INCORRECT about Plasma screens:</li>
+</ol>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ol type="a">
+<li>It contains ionized gas that lights up when stimulated by electricity.</li>
+<li>It doesn’t work well at high altitudes.</li>
+<li>It’s power efficient.</li>
+<li>It has a wide range of colors.</li>
+</ol>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ol start="3" type="1">
+<li>Which of the following is NOT a common type of monitor for laptops and desktop computers?</li>
+</ol>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ol type="a">
+<li>liquid crystal display (LCD)</li>
+<li>light-emitting-diode (LED)</li>
+<li>organic light-emitting-diode (OLED)</li>
+<li>cathode ray tube (CRT)</li>
+</ol>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ol start="4" type="1">
+<li>Which of the following display technologies allows for a perfect representation of blacks. Select all that applies.</li>
+</ol>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ol type="a">
+<li>CRT</li>
+<li>Plasma</li>
+<li>LCD</li>
+<li>LCD with LED backlight</li>
+<li>OLED</li>
+</ol>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ol start="5" type="1">
+<li>Which of the following display technologies are most susceptable to sreen burn-in. Select all possible answers. Select all that applies.</li>
+</ol>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ol type="a">
+<li>CRT</li>
+<li>Plasma</li>
+<li>LCD</li>
+<li>LCD with LED backlight</li>
+<li>OLED</li>
+</ol>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ol start="6" type="1">
+<li>Which of the following displays allow for the msot vivid images. Select all that applies.</li>
+</ol>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ol type="a">
+<li>CRT</li>
+<li>Plasma</li>
+<li>LCD</li>
+<li>LCD with LED backlight</li>
+<li>OLED</li>
+</ol>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ol start="7" type="1">
+<li>Which of the following displays have the best viweing angles?</li>
+</ol>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ol type="a">
+<li>CRT</li>
+<li>Plasma</li>
+<li>LCD</li>
+<li>LCD with LED backlight</li>
+<li>OLED</li>
+</ol>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ol start="8" type="1">
+<li>Which of the following displays allows for infinite contrast?</li>
+</ol>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ol type="a">
+<li>CRT</li>
+<li>Plasma</li>
+<li>LCD</li>
+<li>LCD with LED backlight</li>
+<li>OLED</li>
+</ol>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<details>
+</details></div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<summary>
+</summary></div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+Click to see answers
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ol type="1">
+<li><ol start="4" type="a">
+<li></li>
+</ol></li>
+<li><ol start="3" type="a">
+<li></li>
+</ol></li>
+<li><ol start="4" type="a">
+<li></li>
+</ol></li>
+<li><ol start="5" type="a">
+<li></li>
+</ol></li>
+<li>b., e.</li>
+<li><ol start="4" type="a">
+<li><ol start="5" type="a">
+<li></li>
+</ol></li>
+</ol></li>
+<li>b., e.</li>
+<li><ol start="5" type="a">
+<li></li>
+</ol></li>
+</ol>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+
+</div>
+</div>
+<div class="quarto-layout-row">
 
 
+</div>
+</div>
 </section>
 
     </div>
-  <div class="quarto-auto-generated-content" style="display: none;">
+  <div class="quarto-auto-generated-content quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="footer footer-default">
 
 </div>
