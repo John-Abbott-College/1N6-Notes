@@ -113,7 +113,7 @@
     "href": "topics/hardware/index.html",
     "title": "Hardware",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n\n\n\n\n2025-08-20\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0",
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n\n\n\n\n2025-08-20\n\n\n\n\n\n\n\n\n\n\n\n\nExternal components\n\n\nOverview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors\n\n\n\n\n\n\n\n\n2025-08-25\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0",
     "crumbs": [
       "Home",
       "Topics",
@@ -156,7 +156,7 @@
     "href": "topics/all-lectures.html",
     "title": "All lectures",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nSubtitle\n\n\n\n\n\n\n\n\n2025-08-20\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0",
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nSubtitle\n\n\n\n\n\n\n\n\n2025-08-20\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n\n\n2025-08-25\n\n\nExternal components\n\n\nOverview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors\n\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0",
     "crumbs": [
       "Home",
       "Topics",
@@ -293,6 +293,192 @@
       "Topics",
       "Hardware",
       "Introduction to Computers"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/external-components.htm#introduction",
+    "href": "topics/hardware/external-components.htm#introduction",
+    "title": "External components",
+    "section": "Introduction",
+    "text": "Introduction\nLast week we learned the basic behaviors that define computers – their ability to store, retrieve, and process information. This means that many simple devices, even non-electronics, can be considered computers.\nThe computers that we mostly are concerned with in the computer science profession, however, are generally complicated electronic devices made of many components. In this class, we are going to learn many of the fundamental components that make up modern computing devices.\nToday, we will start with the external, or peripheral, components of a computer – each of these have their own set of interesting behaviors and properties that are worth understanding.\nMany peripheral components of a computer can broadly be divided into two categories:\n\nInput Devices: devices that accept data and instructions from a user to a computer.\nOutput Devices: devices that present data and information to the user from a computer.\n\nWe will cover many examples of each."
+  },
+  {
+    "objectID": "topics/hardware/external-components.htm#lesson-overview",
+    "href": "topics/hardware/external-components.htm#lesson-overview",
+    "title": "External components",
+    "section": "Lesson overview",
+    "text": "Lesson overview\nLearn the history, behavior, and important properties of Input and Output devices\n\nInput devices:\n\nKeyboards\nMice\nControllers\nCameras\nTouchscreens\nScanners\n\nOutput devices:\n\nMonitors\nProjectors\nPrinters\nSpeakers"
+  },
+  {
+    "objectID": "topics/hardware/external-components.htm#input-devices",
+    "href": "topics/hardware/external-components.htm#input-devices",
+    "title": "External components",
+    "section": "Input Devices",
+    "text": "Input Devices\nInput Devices are devices that accept data and instructions from a user to a computer.\nMouse\nUsed to navigate the graphical user interface (GUI). There are many types of mice, distinguished by tracking technology and by use case\nTechnology:\n\nMechanical mice use a ball to measure movement (obsolete now – why?)\nOptical mice use light sources (first LED, then more precise Laser).1\n\nPurpose:\nMany! “Gaming” (many buttons), Ergonomic (optimize human comfort), etc.\n\n\n\n\n\n\nThe prototype computer mouse Doug Engelbart used in the Mother of All Demos in 1968.\n\n\n\n\n\n\n\nMx Laser Cordless mouse introduced in 2004.\n\n\n\n\n\n\n\n\n\nA4Tech WOP-35 Optical mouse LED introduced in 2002.\n\n\n\n\n\n\n\nMechanical mouse (unknown manufacturer) used in 80s and 90s”\n\n\n\n\n\nKeyboard\nUsed to enter text commands. Most commonly used is the QWERTY layout (used in typewriters since 1873). Other layouts include QWERTZ (Germany/Switzerland) and AZERTY (France) and DVORAK.\nVariations include wired or wireless keyboards and numeric keypads. Ergonomic designs are recently becoming more popular.\n\n\n\nGoldtouch Adjustable Ergonomic Keyboard.\n\n\n\n\n\nMicrosoft Natural Ergonomic Keyboard 4000.\n\n\n{width=66% fig-align=“left” fig-alt=” Goldtouch Numeric Keypad USB”}\nInput Devices: Others\n\nGamepads or joysticks are used for playing games and running simulations.\nDigital / video cameras and webcams create images and videos.\nBiometric devices use features unique to an individual user (e.g. fingerprint).\nTouchscreens have a pressure-sensitive panel.\nScanners digitize images or documents so they can be stored as files.\nDigital Tablets (sometimes called Digitizers) allow the user to create images or artwork using a stylus.\nMedia card readers read/write data from/to different types of media cards (SD cards, video game cartridges, etc.)\n\nGood notes on history and explanation of how/why they work “Optical mice use image sensors to image naturally occurring texture [on the surface they are placed]…. These surfaces, when lit at a grazing angle by a light emitting diode, cast distinct shadows that resemble a hilly terrain lit at sunset. Images of these surfaces are captured in continuous succession and compared with each other to determine how far the mouse has moved.” https://en.wikipedia.org/wiki/Computer_mouse https://en.wikipedia.org/wiki/Optical_mouse"
+  },
+  {
+    "objectID": "topics/hardware/external-components.htm#output-devices",
+    "href": "topics/hardware/external-components.htm#output-devices",
+    "title": "External components",
+    "section": "Output Devices",
+    "text": "Output Devices\nOutput Devices are devices that present data and information to the user from a computer.\nMonitors\nThere are many different types of monitors use different technologies to create an image. However, the common principles are the same:\n\nDigital representation of image to display is sent to the monitor\nThe monitor produces each pixel (the “atom” of monitor displays) using some deterministic physical technology\nLight from the monitor reaches us as a useful/pleasing image.\n\nThe following sections are the main technologies used today (from oldest to newest)\nCathode Ray Tube (CRT)\nCathode Ray Tube (CRT) monitors are very complicated, very cool, moderately dangerous, and mostly obsolete!\n\nThe most common type of consumer and industry television before ~2010\nBasically: a tungsten coil is heated in a vacuum until it sheds electrons, those electrons are accelerated by an electric field and guided by magnets to hit a phosphor coated glass display to emit light in a pixel grid\nObsolete since today their are lighter, simpler higher resolution technologies\nStill used today for some applications due to zero latency . For instance, I use one for playing NES Tetris!"
+  },
+  {
+    "objectID": "topics/hardware/external-components.htm#connectors",
+    "href": "topics/hardware/external-components.htm#connectors",
+    "title": "External components",
+    "section": "Connectors",
+    "text": "Connectors\nConnectors are how to get the computer to talk to all these output devices!\nCables\nSome technical terms:\n\nCable (electric) : The insulated copper wire that carries electrical/digital signals from devices to/from computers\nCable (optical) : The insulated glass tube that carries digital signals in the form of light between devices and computers\nPort : The slot where the insertable end of USB cable is connected to the computer\n“Male” / “Female” cable ends : Distinguishing between the insertable end and the receptacle end for cables\nConverter : A device that allows different standards/types of connectors to be used together\n\nElectrical cables\ntransmit an electrical signal on a conducting wire, insulated to protect the signal/surroundings\n\nOptical cables\ntransmit signal in the form of light. Very fast! (speed of light in glass).\n\nA short paper (5 pages) comparing the two cable technologies in more detail: Fibre Optics vs Copper Cabling: Understanding the Differences\nUSB\nUniversal Serial Bus (we’ll talk about the meaning of the last two words soon!) is used to connect most modern devices to computers. Back in the day, mice/keyboards/external storage/speakers/etc. all had different cables. These have now been (mostly) unified under the USB standard.\nUSB connectors can transmit both power (e.g. charging phones) and information (data). Despite being “Universal” there are an incredible number of USB types."
+  },
+  {
+    "objectID": "topics/hardware/external-components.htm#exercises",
+    "href": "topics/hardware/external-components.htm#exercises",
+    "title": "External components",
+    "section": "Exercises",
+    "text": "Exercises"
+  },
+  {
+    "objectID": "topics/hardware/external-components.htm#knowledge-check",
+    "href": "topics/hardware/external-components.htm#knowledge-check",
+    "title": "External components",
+    "section": "Knowledge check",
+    "text": "Knowledge check"
+  },
+  {
+    "objectID": "topics/hardware/external-components.htm#additional-resources",
+    "href": "topics/hardware/external-components.htm#additional-resources",
+    "title": "External components",
+    "section": "Additional resources",
+    "text": "Additional resources"
+  },
+  {
+    "objectID": "topics/hardware/external-components.html",
+    "href": "topics/hardware/external-components.html",
+    "title": "External components",
+    "section": "",
+    "text": "All of these devices, except one, would be considered in external component of a modern desktop computer. Which one is not? Figure retrieved from Innovation it solution, original source unknown.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "External components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/external-components.html#introduction",
+    "href": "topics/hardware/external-components.html#introduction",
+    "title": "External components",
+    "section": "Introduction",
+    "text": "Introduction\nLast week we learned the basic behaviors that define computers – their ability to store, retrieve, and process information. This means that many simple devices, even non-electronics, can be considered computers.\nThe computers that we mostly are concerned with in the computer science profession, however, are generally complicated electronic devices made of many components. In this class, we are going to learn many of the fundamental components that make up modern computing devices.\nToday, we will start with the external, or peripheral, components of a computer – each of these have their own set of interesting behaviors and properties that are worth understanding.\nMany peripheral components of a computer can broadly be divided into two categories:\n\nInput Devices: devices that accept data and instructions from a user to a computer.\nOutput Devices: devices that present data and information to the user from a computer.\n\nWe will cover many examples of each.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "External components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/external-components.html#lesson-overview",
+    "href": "topics/hardware/external-components.html#lesson-overview",
+    "title": "External components",
+    "section": "Lesson overview",
+    "text": "Lesson overview\nLearn the history, behavior, and important properties of Input and Output devices\n\nInput devices:\n\nKeyboards\nMice\nControllers\nCameras\nTouchscreens\nScanners\n\nOutput devices:\n\nMonitors\nProjectors\nPrinters\nSpeakers",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "External components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/external-components.html#input-devices",
+    "href": "topics/hardware/external-components.html#input-devices",
+    "title": "External components",
+    "section": "Input Devices",
+    "text": "Input Devices\nInput Devices are devices that accept data and instructions from a user to a computer.\n\nMouse\nUsed to navigate the graphical user interface (GUI). There are many types of mice, distinguished by tracking technology and by use case\nTechnology:\n\nMechanical mice use a ball to measure movement (obsolete now – why?)\nOptical mice use light sources (first LED, then more precise Laser).1\n\nPurpose:\nMany! “Gaming” (many buttons), Ergonomic (optimize human comfort), etc.\n\n\n\n\n\n\nThe prototype computer mouse Doug Engelbart used in the Mother of All Demos in 1968.\n\n\n\n\n\n\n\nMx Laser Cordless mouse introduced in 2004.\n\n\n\n\n\n\n\n\n\nA4Tech WOP-35 Optical mouse LED introduced in 2002.\n\n\n\n\n\n\n\nMechanical mouse (unknown manufacturer) used in 80s and 90s”\n\n\n\n\n\n\n\nKeyboard\nUsed to enter text commands. Most commonly used is the QWERTY layout (used in typewriters since 1873). Other layouts include QWERTZ (Germany/Switzerland) and AZERTY (France) and DVORAK.\nVariations include wired or wireless keyboards and numeric keypads. Ergonomic designs are recently becoming more popular.\n\n\n\n\n\n\n\nGoldtouch Adjustable Ergonomic Keyboard.\n\n\n\n\n\n\n\n\n\nMicrosoft Natural Ergonomic Keyboard 4000.\n\n\n{width=66% fig-align=“left” fig-alt=” Goldtouch Numeric Keypad USB”}\n\n\nInput Devices: Others\n\nGamepads or joysticks are used for playing games and running simulations.\nDigital / video cameras and webcams create images and videos.\nBiometric devices use features unique to an individual user (e.g. fingerprint).\nTouchscreens have a pressure-sensitive panel.\nScanners digitize images or documents so they can be stored as files.\nDigital Tablets (sometimes called Digitizers) allow the user to create images or artwork using a stylus.\nMedia card readers read/write data from/to different types of media cards (SD cards, video game cartridges, etc.)",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "External components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/external-components.html#output-devices",
+    "href": "topics/hardware/external-components.html#output-devices",
+    "title": "External components",
+    "section": "Output Devices",
+    "text": "Output Devices\nOutput Devices are devices that present data and information to the user from a computer.\n\nMonitors\nThere are many different types of monitors use different technologies to create an image. However, the common principles are the same:\n\nDigital representation of image to display is sent to the monitor\nThe monitor produces each pixel (the “atom” of monitor displays) using some deterministic physical technology\nLight from the monitor reaches us as a useful/pleasing image.\n\nThe following sections are the main technologies used today (from oldest to newest)\n\nCathode Ray Tube (CRT)\nCathode Ray Tube (CRT) monitors are very complicated, very cool, moderately dangerous, and mostly obsolete!\n\nThe most common type of consumer and industry television before ~2010\nBasically: a tungsten coil is heated in a vacuum until it sheds electrons, those electrons are accelerated by an electric field and guided by magnets to hit a phosphor coated glass display to emit light in a pixel grid\nObsolete since today their are lighter, simpler higher resolution technologies\nStill used today for some applications due to zero latency . For instance, I use one for playing NES Tetris!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlasma\nPlasma monitors use tiny cells of ionised gas that light up when stimulated by electricity.\n\nOften used in home theatre applications due to accurate video representation.\nHigh levels of brightness, deep black levels and very wide colour range.\nHave shorter life span, susceptible to “screen burn-in” (this is why screensavers are called “screen savers”! Same for CRT).\n(+) Plasma cell will produce light that looks good from every angle, it was high refresh rate (videos are smoother)\n(-) BUT! Consumes a lot of electricity\n(-) Doesn’t work at high altitudes! (low pressure)\n\n\n\n\nPlasma is a chemical state of molecules when molecules in state of gas are heated up (excited with electric charge). Typical Plasma displays have two glass plates sandwiching hundreds of thousands of cells containing plasma. Two sets of electrodes will provide some charges which will excite the plasma Which will release photons at three different wavelength (either red, green or blue)\n\n\n\n\nLiquid Crystal Display (LCD)\nAn LCD Screen is made up of layers of very thin glass, liquid crystal, metal and dielectrics. Liquid cystal is a modelcule between liquid (not ordered and constant motion) and crystal (ordered fashion). This technology allows for precise control of color without the need to ionise gas with powerful electronics.\n\nCommonly used in flat panel monitors and laptops.\nConsists of a white backlight (in light, white = all colours combined), two polarizing filters, and liquid crystal solution between them to transform the backlight into a coherent pixel grid.\nAn electronic current aligns and controls the crystals so that light can pass through them.\n(+) Allow the use of flat screens!\n\n\n\n\n\n\n\n\nThe polarizing filter lets only one orientation of the light pass through. To transform the white light into colored light, a color filter is placed on the outter face ( made of pigments which will absorb all colors execept the color that is passing (red, blue or green)\n\n\n\n\nLight emitting diode (LED)\n\nAn LCD display that uses LED backlighting instead of a white backlight to light the display. The brightness of each RGB LED is controlled programmatically to produce each pixel\n(+) Thinner (no layers), lighter and brighter, and displays better contrast\n(+) Lower power  consumption.\n\n\n\n\n\n\n\n\nFigure caption.\n\n\nFor more information: https://www.youtube.com/watch?v=Gx-JVoOFYhs&ab_channel=e-learning%C3%A9lectronique\n\n\nOrganic LED (OLED)\nOLED displays are similar to LED, but no backlighting required – the material used to create these displays emits light when an electrical current is applied.\n\nSimilar to LED, but no backlighting  required – the material used to create these displays emits light when an electrical current is applied .\n(+) Allows for perfect representation of dark colors  unlike all other monitor technologies. Also allows for flexible and transparent monitors\n(-) More expensive to produce, more susceptible to screen-burn-in than LCD or LED (but better than Plasma and CRT in this respect)\n\nHere’s a great video (8 mins) explaining both physical and software technologies required to make the above monitors work: https://www.youtube.com/watch?v=uyLDA9QT8EY\nWith LCD, LED, and OLED, we finally get to the most modern monitor technologies. These are used in our labs, most computers, laptops. They’re ordered here approximately in order of lowest (LCD) -&gt; highest (OLED) quality, though pros and cons exist for each.\nSee here for more information: https://en.wikipedia.org/wiki/Comparison_of_CRT,_LCD,_Plasma,_and_OLED_displays.\n\n\n\n\nPrinters\nPrinters take data from a computer and generate output on paper: Basic principles\n\nSimilar to monitor (high quantity of small, well placed “pixels” → the visual quality of a coherent image)\nRather than orienting light photons on a screen, printers deposit liquid stains on to paper. The physical setup is different, but the same principles are at work.\n\n\n\n\nA high enough quantity of toasted bread produces the qualitative impression of a human eye in this “piece” of art. Printers (and monitors) use much higher quantities of “pixels” than depicted here!\n\n\n\nDot-matrix printers\n\nUses print heads containing pins which produce patterns of dots on the paper by mechanical impact (pressing).\nInexpensive and typically print at a speed of 100 - 600 characters per second.\n(Optional) See https://en.wikipedia.org/wiki/Dot_matrix_printer for more detail on history and technology\nWhile still in use for particular applications (printing receipts for e.g.), these are now obsoleted by…\n\n\n\nInk-jet printers\n\nUses tiny droplets of ink to produce images.\nHeat is applied to an ink reservoir, which pushes ink bubbles through a nozzle in a controlled manner.\nThe ink liquid droplets are smaller in diameter than a human hair! Many of these added together produce the quality of a coherent image.\nQuieter than dot-matrix, and also provide better speed and higher quality.\n\n\n\n\n\n\n\nInk-based color printer.\n\n\n\n\n\n\n\nInk jet cartridge operation. Image source: youtube.com\n\n\n\n\n\n\n\nLaser Printers\n\nExpensive when they were initially introduced.\nProduce high-quality output quietly at a high speed.\nProduces images by directing a laser beam at a mirror which bounces the beam onto a drum.\n\nThe drum contains a special coating to which the toner (ink powder) sticks.\nA laser beam then conveys information to the drum, neutralizing and detaching some toner.\nAs the paper rolls by the drum, the toner is transferred onto the paper. A hot roller then bonds toner to the paper.\n\n\n\n\n\n\n\n\n\nFigure caption.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "External components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/external-components.html#connectors",
+    "href": "topics/hardware/external-components.html#connectors",
+    "title": "External components",
+    "section": "Connectors",
+    "text": "Connectors\nConnectors are how to get the computer to talk to all these output devices!\n\nCables\nSome technical terms:\n\nCable (electric) : The insulated copper wire that carries electrical/digital signals from devices to/from computers\nCable (optical) : The insulated glass tube that carries digital signals in the form of light between devices and computers\nPort : The slot where the insertable end of USB cable is connected to the computer\n“Male” / “Female” cable ends : Distinguishing between the insertable end and the receptacle end for cables\nConverter : A device that allows different standards/types of connectors to be used together\n\n\nElectrical cables\ntransmit an electrical signal on a conducting wire, insulated to protect the signal/surroundings\n\n\n\nOptical cables\ntransmit signal in the form of light. Very fast! (speed of light in glass).\n\nA short paper (5 pages) comparing the two cable technologies in more detail: Fibre Optics vs Copper Cabling: Understanding the Differences\n\n\n\nUSB\nUniversal Serial Bus (we’ll talk about the meaning of the last two words soon!) is used to connect most modern devices to computers. Back in the day, mice/keyboards/external storage/speakers/etc. all had different cables. These have now been (mostly) unified under the USB standard.\nUSB connectors can transmit both power (e.g. charging phones) and information (data). Despite being “Universal” there are an incredible number of USB types.\n\nUSB “Number” standards refer to the transmission speed and power of the cables\n\ne.g. USB 3 is faster/more power than USB 2 and USB 2\n\nUSB “Letter” standards refer to the physical design of the connector and the port\n\ne.g. USB C and USB A are incompatible interfaces, cannot be interchanged.\n\n\n\n\nFigure caption.\n\n\n\n\n\nNewer standards are backwards compatible (e.g. USB 3.1 cable works in USB 1.1 port at USB 1.1 speed/power)\n\n\n\n\nAudio\nMost commonly the standard headphone jack (TSR connector). Available in several sizes, most commonly 3.5mm or ⅛” mini audio jack. Can be color coded - microphone (pink), speaker (green).\n\n\n\nFigure caption.\n\n\nFor higher-end audio, we can use fiberoptic cables as these can transmit larger amounts of data more quickly, which is required for producing a high-quality audio signal.\n\n\nVideo\nVGA cable is commonly used for computer monitors (15-pins). Low resolutions, now obsolete. There exist converter cables to connect VGA monitors to newer computers.\nMiniVGA is a variant found on laptops.\nDVI was once the common modern upgrade from VGA, capable of higher resolutions. MiniDVI and MicroDVI on “thin” laptops.\nS-Video commonly used for DVD players, camcorders and older consoles.\n\n\n\n\n\n\nVGA, DVI, and RCA cables\n\n\n\n\n\n\n\nDVI. Can be distinguished from VGA by noticing that it is a much wider interface with many more pins.\n\n\n\n\n\n\n\n\n\nS-video\n\n\n\n\n\n\n\nA converter from mini-DP to three possible outputs: DP, DVI, and HDMI\n\n\n\n\n\nRCA cables include composite video (yellow) and stereo audio cables (red for right; white/black for left). Component video offers a better picture.\nHDMI is the new standard for audio and video transmission in a single cable.\nDisplayPort (and Mini DisplayPort) more commonly used in computers.\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nFigure caption.\n\n\n\n\n\n\n\nData\neSATA is used internally to connect the hard drive to the motherboard but can also be used for portable hard drives.\n\n\n\nNetworking\nTelephone cable (RJ11) used for connecting to the internet through DSL/ADSL modems. Standard phone cable has 4 wires; connector has 4 pins. Clip helps to maintain tight connection.\nEthernet (RJ45) is the standard for wired networking. Based on Cat5 twisted pair cable, made from 8 individual wires. Connector looks similar to phone plug but is thicker and wider. Also uses a clip to maintain tight connection.",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "External components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/external-components.html#exercises",
+    "href": "topics/hardware/external-components.html#exercises",
+    "title": "External components",
+    "section": "Exercises",
+    "text": "Exercises",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "External components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/external-components.html#knowledge-check",
+    "href": "topics/hardware/external-components.html#knowledge-check",
+    "title": "External components",
+    "section": "Knowledge check",
+    "text": "Knowledge check",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "External components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/external-components.html#additional-resources",
+    "href": "topics/hardware/external-components.html#additional-resources",
+    "title": "External components",
+    "section": "Additional resources",
+    "text": "Additional resources",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "External components"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/external-components.html#footnotes",
+    "href": "topics/hardware/external-components.html#footnotes",
+    "title": "External components",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nGood notes on history and explanation of how/why they work “Optical mice use image sensors to image naturally occurring texture [on the surface they are placed]…. These surfaces, when lit at a grazing angle by a light emitting diode, cast distinct shadows that resemble a hilly terrain lit at sunset. Images of these surfaces are captured in continuous succession and compared with each other to determine how far the mouse has moved.” https://en.wikipedia.org/wiki/Computer_mouse https://en.wikipedia.org/wiki/Optical_mouse↩︎",
+    "crumbs": [
+      "Home",
+      "Topics",
+      "Hardware",
+      "External components"
     ]
   },
   {
