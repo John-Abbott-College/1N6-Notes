@@ -55,9 +55,12 @@ __Technology__:
 
 [^1]: Good notes on history and explanation of how/why they work “Optical mice use image sensors to image naturally occurring texture [on the surface they are placed]…. These surfaces, when lit at a grazing angle by a light emitting diode, cast distinct shadows that resemble a hilly terrain lit at sunset. Images of these surfaces are captured in continuous succession and compared with each other to determine how far the mouse has moved.” https://en.wikipedia.org/wiki/Computer_mouse https://en.wikipedia.org/wiki/Optical_mouse
 
-__Purpose:__
+__Types of mouse__
 
-Many! “Gaming” (many buttons), Ergonomic (optimize human comfort), etc.
+- Gaming mouse: They offers additional buttons. These buttons are sometimes programmable. This is useful in a game and can replace a combination of instructions useful for realtime games.  
+- Ergonomic mouse: provides optimum comfort and avoids repetitive strain injuries.
+- Wireless mouse: Connects to a computer via bluetooth or Wi-Fi, or using a receiver that plugs to the computer via USB. 
+- Many more. 
 
 ::: {layout-ncol=2 layout-valign="bottom"}
 
@@ -73,7 +76,7 @@ Many! “Gaming” (many buttons), Ergonomic (optimize human comfort), etc.
 
 ### Keyboard
 
-Used to enter text commands. Most commonly used is the QWERTY layout (used in typewriters since 1873). Other layouts include QWERTZ (Germany/Switzerland) and AZERTY (France) and DVORAK.
+Used to enter text commands. Most commonly used is the QWERTY layout (used in typewriters since 1873). Other layouts include QWERTZ (Germany/Switzerland) and AZERTY (France) and DVORAK (more ergonomic keyboard layout for English proposed by August Dvorak).
 
 Variations include wired or wireless keyboards and numeric keypads. *Ergonomic* designs are recently becoming more popular.
 
@@ -94,13 +97,16 @@ Variations include wired or wireless keyboards and numeric keypads. *Ergonomic* 
 - Digital Tablets (sometimes called Digitizers) allow the user to create images or artwork using a stylus.
 - Media card readers read/write data from/to different types of media cards (SD cards, video game cartridges, etc.)
 
+> Activity: How well Do you Know your keyboard?
+
+
 ## Output Devices
 
 **Output Devices** are devices that *present* data and information *to* the user *from* a computer.
 
 ### Monitors
 
-There are many different types of monitors use different technologies to create an image. However, the common principles are the same:
+There are many different types of monitors use different technologies to create an image. However, the principles are the same:
 
 * Digital representation of image to display is sent to the monitor
 * The monitor produces each  __pixel__  (the “atom” of monitor displays) using some deterministic physical technology
@@ -115,7 +121,7 @@ Cathode Ray Tube (CRT) monitors are very complicated, very cool, moderately dang
 * The most common type of consumer and industry television before ~2010
 * Basically: a **tungsten coil** is heated in a vacuum until it sheds electrons, those electrons are accelerated by an electric field and guided by magnets to hit a phosphor coated glass display to emit light in a pixel grid
 * **Obsolete** since today their are lighter, simpler higher resolution technologies
-* Still used today for some applications due to  __zero latency__ . For instance, I use one for playing NES Tetris!
+* Still used today for some applications due to  __zero latency__ . 
 
 ::: {layout-ncol=2}
 
@@ -136,14 +142,14 @@ Plasma monitors use tiny cells of ionised gas that light up when stimulated by e
 * Often used in home theatre applications due to accurate video representation.
 * High levels of brightness, deep black levels and very wide colour range.
 * Have shorter life span, susceptible to “screen burn-in” (this is why screensavers are called “screen savers”! Same for CRT).
-* (+) Plasma cell will produce light that looks good from every angle, it was high refresh rate (videos are smoother)
+* (+) Plasma cell will produce light that looks good from every angle, it has high refresh rate (videos are smoother)
 * (-) BUT! Consumes a lot of electricity
 * (-) Doesn’t work at high altitudes! (low pressure)
 
 ![Plasma is a chemical state of molecules when molecules in state of gas are heated up (excited with electric charge).
 Typical Plasma displays have two glass plates sandwiching hundreds of thousands of cells containing plasma. 
 Two sets of electrodes will provide some charges which will excite the plasma 
-Which will release photons at three different wavelength (either red, green or blue)](_assets/external-components-29.png)
+Which will release photons at three different wavelength (either red, green or blue)](https://www.sciencelearn.org.nz/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F117510%2F1722315244-plasma_display_panel.jpg%3Fw%3D1840%26h%3D1128.8888888888887&w=1920&q=85&dpl=dpl_3YP78pZRnY9CGfKJxe4qZAoXodaE)
 
 
 #### Liquid Crystal Display (LCD)
@@ -200,7 +206,7 @@ Printers take data from a computer and generate output on paper: Basic principle
   * Uses print heads containing pins which produce patterns of dots on the paper by mechanical impact (pressing).
   * Inexpensive and typically print at a speed of 100 - 600 characters per second.
   * (Optional) See  _[https://en.wikipedia.org/wiki/Dot_matrix_printer](https://en.wikipedia.org/wiki/Dot_matrix_printer)_  for more detail on history and technology
-  * While still in use for particular applications (printing receipts for e.g.), these are now obsoleted by...
+  * While still in use for particular applications (printing receipts for e.g.), these are now obsoleted by ink-jet printers.
 
 #### Ink-jet printers
 
@@ -215,6 +221,8 @@ Printers take data from a computer and generate output on paper: Basic principle
 
 ![Ink jet cartridge operation. Image source: [youtube.com](https://www.youtube.com/watch?v=JEVurb1uVFA)](_assets/external-components31.png)
 
+<img src="external-components-38.gif"/>
+
 :::
 
 #### Laser Printers
@@ -226,8 +234,9 @@ Printers take data from a computer and generate output on paper: Basic principle
   * A laser beam then conveys information to the drum, neutralizing and detaching some toner.
   * As the paper rolls by the drum, the toner is transferred onto the paper. A hot roller then bonds toner to the paper.
 
-![Figure caption.](_assets/external-components32.png){width=66% fig-align="left" fig-alt="alt text."}
+![Laser Printer](_assets/external-components32.png){width=66% fig-align="left" fig-alt="alt text."}
 
+<img src="external-components-40.gif"/>
 
 ## Connectors
 
