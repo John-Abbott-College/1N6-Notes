@@ -190,6 +190,23 @@ With LCD, LED, and OLED, we finally get to the most modern monitor technologies.
 
 See here for more information:  _[https://en.wikipedia.org/wiki/Comparison_of_CRT,_LCD,_Plasma,_and_OLED_displays](https://en.wikipedia.org/wiki/Comparison_of_CRT,_LCD,_Plasma,_and_OLED_displays)_.
 
+#### Summary 
+| Feature        | Plasma                                      | LCD (CCFL backlight)                            | LED (LCD with LED backlight)                   | OLED                                                    |
+| -------------- | ------------------------------------------- | ----------------------------------------------- | ---------------------------------------------- | ------------------------------------------------------- |
+| Light Source   | Ionized gases excite phosphors (self-light) | Cold Cathode Fluorescent Lamps (CCFL) backlight | Light Emitting Diodes (LED) backlight          | Self-emitting organic pixels (no backlight)             |
+| Thickness      | Bulky, heavy                                | Thicker than LED                                | Thinner, lighter than LCD                      | Ultra-thin, even flexible                               |
+| Brightness     | High, but reflective in bright rooms        | Moderate                                        | High, adjustable                               | High, but may degrade over time                         |
+| Contrast Ratio | Very good (deep blacks, but not infinite)   | Lower (backlight bleed)                         | Better than LCD, especially with local dimming | Excellent (true blacks, infinite contrast)              |
+| Viewing Angles | Very wide                                   | Limited                                         | Better than LCD but not as good as Plasma/OLED | Excellent, wide and consistent                          |
+| Color Accuracy | Vivid, rich colors                          | Good, but limited by backlight                  | Better than LCD                                | Excellent, most accurate and vibrant                    |
+| Refresh Rates  | Very fast (good for motion, sports)         | Slower                                          | Faster than LCD                                | Very fast                                               |
+| Power Use      | High (power-hungry, generates heat)         | Higher than LED                                 | Lower (more efficient than LCD & Plasma)       | Efficient for dark scenes; higher on full bright screen |
+| Burn-in Risk   | High                                        | Very low                                        | Very low                                       | Medium (improved but possible)                          |
+| Lifespan       | Shorter (phosphors fade)                    | Long                                            | Long                                           | Medium to long (organic material degrades)              |
+| Price          | Expensive (when available)                  | Cheapest                                        | Mid-range                                      | Most expensive                                          |
+| Current Status | Obsolete (no longer made)                   | Rare now, replaced by LED                       | Most common today                              | Premium, used in high-end TVs, monitors, smartphones    |
+
+ 
 ---
 
 ### Printers
@@ -209,7 +226,7 @@ Printers take data from a computer and generate output on paper: Basic principle
   * While still in use for particular applications (printing receipts for e.g.), these are now obsoleted by ink-jet printers.
 
 #### Ink-jet printers
-
+<img src="_assets/external-components-38.gif" height=200/>
   * Uses tiny droplets of ink to produce images.
   * Heat is applied to an ink reservoir, which pushes ink bubbles through a nozzle in a controlled manner.
   * The ink liquid droplets are smaller in diameter than a human hair! Many of these added together produce the quality of a coherent image.
@@ -221,7 +238,6 @@ Printers take data from a computer and generate output on paper: Basic principle
 
 ![Ink jet cartridge operation. Image source: [youtube.com](https://www.youtube.com/watch?v=JEVurb1uVFA)](_assets/external-components31.png)
 
-<img src="external-components-38.gif"/>
 
 :::
 
@@ -236,7 +252,7 @@ Printers take data from a computer and generate output on paper: Basic principle
 
 ![Laser Printer](_assets/external-components32.png){width=66% fig-align="left" fig-alt="alt text."}
 
-<img src="external-components-40.gif"/>
+<img src="_assets/external-components-40.gif"/>
 
 ## Connectors
 
@@ -254,17 +270,21 @@ Some technical terms:
 
 #### Electrical cables
 
-transmit an electrical signal on a conducting wire, insulated to protect the signal/surroundings
+Transmits an electrical signal on a conducting wire, insulated to protect the signal/surroundings
 
 ![](_assets/external-components34.png)
 
 #### Optical cables
 
-transmit signal in the form of light. Very fast! (speed of light in glass). 
+Transmits a signal in the form of light. Very fast! (speed of light in glass). 
 
 ![](_assets/external-components33.png)
 
 A short paper (5 pages) comparing the two cable technologies in more detail: _[Fibre Optics vs Copper Cabling: Understanding the Differences](https://optronicsplus.net/downloads/whitepapers/OP_Fibre_Optics_vs_Copper_Cabling_Understanding_the_Difference_White_Paper_Rev.1.0.pdf)_
+
+### Analog versus Digital signal cables
+* **Analog** cables carry a continuous and fluctuating electrical signal representing the original penomena (example sound waves). 
+* **Digital** cables transmit a binary discrete (sequence of 1 or 0)
 
 ### USB
 
@@ -298,11 +318,11 @@ For higher-end audio, we can use fiberoptic cables as these can transmit larger 
 
 ### Video
 
-**VGA** cable is commonly used for computer monitors (15-pins). Low resolutions, now obsolete. There exist converter cables to connect VGA monitors to newer computers.
+**VGA** cable is analog signal cable used for computer monitors. It had 15 pins arranged in 3 rows. It's a low resolution cable and now obsolete. There exist converter cables to connect VGA monitors to newer computers. 
 
 **MiniVGA** is a variant found on laptops.
 
-**DVI** was once the common modern upgrade from VGA, capable of higher resolutions. MiniDVI and MicroDVI on “thin” laptops.
+**DVI** cabe is analog/digital upgrade from VGA, capable of higher resolutions. It isn't used as much today. MiniDVI and MicroDVI on “thin” laptops.
 
 **S-Video** commonly used for DVD players, camcorders and older consoles.
 
@@ -320,19 +340,19 @@ For higher-end audio, we can use fiberoptic cables as these can transmit larger 
 :::
 
 
-**RCA cables** include composite video (yellow) and stereo audio cables (red for right; white/black for left). Component video offers a better picture.
+**RCA cables** include composite video (yellow) and stereo audio cables (red for right; white/black for left). It's mainly an analog cable. Component video offers a better picture.
 
-**HDMI** is the new standard for audio and video transmission in a single cable.
+**HDMI** is the new standard for audio and video transmission in a single cable. Digital signal only.
 
-**DisplayPort** (and Mini DisplayPort) more commonly used in computers.
+**DisplayPort** (and Mini DisplayPort) more commonly used in desktop computers. Digital signal only.
 
 ::: {layout-ncol=3}
 
-![Figure caption.](_assets/external-components45.png)
+![RGA.](_assets/external-components45.png)
 
-![Figure caption.](_assets/external-components46.png)
+![HDMI.](_assets/external-components46.png)
 
-![Figure caption.](_assets/external-components47.png)
+![Display Port.](_assets/external-components47.png)
 
 :::
 
@@ -353,8 +373,31 @@ Ethernet (RJ45) is the standard for wired networking. Based on Cat5 twisted pair
 
 ![](_assets/external-components51.png)
 
-## Exercises
-
 ## Knowledge check
+1.	Which statement about computers is INCORRECT?
+a.	It is a digital device.
+b.	For a given input, it reliably produces the same output every time.
+c.	It contains a CPU.
+d.	Computers always operate with 100% accuracy and never make errors in processing information.
 
-## Additional resources
+2.	Which statement is INCORRECT about Plasma screens:
+a.	It contains ionized gas that lights up when stimulated by electricity. 
+b.	It doesn’t work well at high altitudes.
+c.	It’s power efficient.
+d.	It has a wide range of colors.
+
+3.	Which of the following is NOT a common type of monitor for laptops and desktop computers?
+a.	liquid crystal display (LCD)
+b.	light-emitting-diode (LED)
+c.	organic light-emitting-diode (OLED)
+d.	cathode ray tube (CRT)
+
+<details>
+
+<summary>Click to see answers</summary>
+
+1. d. 
+2. c.
+3. d.
+
+</details>
