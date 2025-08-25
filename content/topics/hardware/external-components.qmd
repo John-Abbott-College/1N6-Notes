@@ -84,7 +84,7 @@ Variations include wired or wireless keyboards and numeric keypads. *Ergonomic* 
 
 ![Microsoft Natural Ergonomic Keyboard 4000.](_assets/external-components21.png){width=66% fig-align="left" fig-alt="Microsoft Natural Ergonomic Keyboard 4000"}
 
-![ Goldtouch Numeric Keypad USB.](_assets/external-components22.jpg){width=66% fig-align="left" fig-alt=" Goldtouch Numeric Keypad USB"}
+![ Goldtouch Numeric Keypad USB.](_assets/external-components22.jpg){width=66% fig-align="left" fig-alt="Goldtouch Numeric Keypad USB."}
 
 
 ### Input Devices: Others
@@ -109,7 +109,7 @@ Variations include wired or wireless keyboards and numeric keypads. *Ergonomic* 
 There are many different types of monitors use different technologies to create an image. However, the principles are the same:
 
 * Digital representation of image to display is sent to the monitor
-* The monitor produces each  __pixel__  (the “atom” of monitor displays) using some deterministic physical technology
+* The monitor produces each  __pixel__  (the smallest element of the screen or “atom” of monitor displays) using some deterministic physical technology
 * Light from the monitor reaches us as a useful/pleasing image.
 
 The following sections are the main technologies used today (from oldest to newest)
@@ -120,6 +120,7 @@ Cathode Ray Tube (CRT) monitors are very complicated, very cool, moderately dang
 
 * The most common type of consumer and industry television before ~2010
 * Basically: a **tungsten coil** is heated in a vacuum until it sheds electrons, those electrons are accelerated by an electric field and guided by magnets to hit a phosphor coated glass display to emit light in a pixel grid
+
 * **Obsolete** since today their are lighter, simpler higher resolution technologies
 * Still used today for some applications due to  __zero latency__ . 
 
@@ -142,9 +143,15 @@ Plasma monitors use tiny cells of ionised gas that light up when stimulated by e
 * Often used in home theatre applications due to accurate video representation.
 * High levels of brightness, deep black levels and very wide colour range.
 * Have shorter life span, susceptible to “screen burn-in” (this is why screensavers are called “screen savers”! Same for CRT).
-* (+) Plasma cell will produce light that looks good from every angle, it has high refresh rate (videos are smoother)
-* (-) BUT! Consumes a lot of electricity
-* (-) Doesn’t work at high altitudes! (low pressure)
+
+**Pros**
+
+- Plasma cell will produce light that looks good from every angle, it has high refresh rate (videos are smoother)
+
+**Cons**
+
+- BUT! Consumes a lot of electricity
+- Doesn’t work at high altitudes! (due to the low pressure)
 
 ![Plasma is a chemical state of molecules when molecules in state of gas are heated up (excited with electric charge).
 Typical Plasma displays have two glass plates sandwiching hundreds of thousands of cells containing plasma. 
@@ -156,41 +163,72 @@ Which will release photons at three different wavelength (either red, green or b
 
 An LCD Screen is made up of layers of very thin glass, liquid crystal, metal and dielectrics. *Liquid cystal* is a modelcule between liquid (not ordered and constant motion) and crystal (ordered fashion). This technology allows for precise control of color without the need to ionise gas with powerful electronics.
 
-  * Commonly used in flat panel monitors and laptops.
-  * Consists of a  __white__  backlight (in light, white = all colours combined), two polarizing filters, and liquid crystal solution between them to transform the backlight into a coherent pixel grid.
-  * An electronic current aligns and controls the crystals so that light can pass through them.
-  * (+) Allow the use of **flat** screens!
+  - Commonly used in flat panel monitors and laptops.
+  - Consists of a  __white__  backlight, two polarizing filters, and liquid crystal solution.
+  - An electronic current aligns and controls the crystals so that light can pass through them.
+
+  **Pros**
+
+  - Allow the use of **flat** screens!
+
+  **Cons**
+  
+  - Due to the backlight, black screens are never perfectly black! It always lets some light pass through.
+  - Because of the polarizing filters, different viewing angles impact heavily the appearance of the image.
+  - Somewhat inefficient due to the many layers reducing the brightness of the screen.
 
 ![The polarizing filter lets only one orientation of the light pass through.
-To transform the white light into colored light, a color filter is placed on the outter face ( made of pigments which will absorb all colors execept the color that is passing (red, blue or green)](_assets/external-components-32.png){width=66% fig-align="left" fig-alt="alt text."}
+An LCD Screen is made up of layers of very thin glass, liquid crystal, metal and dielectrics. The projector beam will emit white light which contains all wavelengths. Liquid crystal is a molecule between liquid and crytal state (ordered vs unordered) which has the characteristics of changing orientation under specific voltage. This allows for a precise control of the passage of light. 
+To transform the white light into colored light, a color filter is placed on the outter face - made of pigments which will absorb all colors execept the color that is passing (red, blue or green). [This video provides a full explanation](https://www.youtube.com/watch?v=Gx-JVoOFYhs&ab_channel=e-learning%C3%A9lectronique)](_assets/external-components-32.png){width=70% fig-align="center" fig-alt="alt text."}
 
 
 #### Light emitting diode (LED)
 
-  * An LCD display that uses LED backlighting instead of a white backlight to light the display. The brightness of each RGB LED is controlled programmatically to produce each pixel
-  * __(+) Thinner__  (no layers), lighter and brighter, and displays better contrast
-  * __(+) Lower power __ consumption.
+  * An LCD display that uses LED backlighting instead of a white backlight to light the display. It still uses Liquid crystals (LCD technology). The brightness of each RGB LED is controlled programmatically to produce each pixel.
 
-![Figure caption.](_assets/external-components-LCDvsLED.jpg){width=66% fig-align="left" fig-alt="alt text."}
+  **Pros**
+  
+  - __Thinner__  (no layers), lighter and brighter, and displays better contrast
+  - __Lower power __ consumption.
+  - Better representation of blacks (compared to original LCDs)
+  - Improved color filters using quantum dots, which creates vibrant colors.
+  - Have become the most affordable types of Monitors. 
+  - LEDs backlight lasts for very long making them less susceptible to burn-in compared to OLED screens.
 
-For more information: [https://www.youtube.com/watch?v=Gx-JVoOFYhs&ab_channel=e-learning%C3%A9lectronique](https://www.youtube.com/watch?v=Gx-JVoOFYhs&ab_channel=e-learning%C3%A9lectronique)
+  **Cons**
+
+  - Not yet a perfect representation of black!
+  - The individual light diodes level of light is not controlled, it's still requires liquid crystals to modulate the light.
+  - This means that polarized light is still used reducing the viewing angles compared to OLED screens.
+
+
+![LED Grid used for backlighting of each individual pixel. 
+- ](_assets/external-components-35.jpg){fig-align="center" width="70%"}
+
 
 
 #### Organic LED (OLED)
 
-OLED displays are similar to LED, but no backlighting required -- the material used to create these displays emits light when an electrical current is applied.
+OLED displays are similar to LED, but no backlighting required -- the organic material used to create these displays emits light when an electrical current is applied.
 
-  * Similar to LED, but  __no backlighting __ required -- the material used to create these displays emits light when  __an electrical current is applied__ .
-  * (+) Allows for  __perfect representation of dark colors __ unlike all other monitor technologies. Also allows for flexible and transparent monitors
-  * (-) More expensive to produce, more susceptible to screen-burn-in than LCD or LED (but better than Plasma and CRT in this respect)
+  * Similar to LED, but  __no backlighting__ required -- the material used to create these displays emits light when  __an electrical current is applied__ .
 
-Here’s a great video (8 mins) explaining both physical and software technologies required to make the above monitors work:  _[https://www.youtube.com/watch?v=uyLDA9QT8EY](https://www.youtube.com/watch?v=uyLDA9QT8EY)_
+**Pros**
+
+  - Allows for  __perfect representation of dark colors__ unlike all other monitor technologies. Also allows for flexible and transparent monitors
+
+**Cons**
+
+  - More expensive to produce
+  - More susceptible to screen-burn-in than LCD or LED (but better than Plasma and CRT in this respect)
+
+Here’s a great [video (8 mins)](https://www.youtube.com/watch?v=uyLDA9QT8EY) explaining both physical and software technologies required to make the above monitors work.
 
 With LCD, LED, and OLED, we finally get to the most modern monitor technologies. These are used in our labs, most computers, laptops. They’re ordered here approximately in order of lowest (LCD) -> highest (OLED) quality, though pros and cons exist for each. 
 
 See here for more information:  _[https://en.wikipedia.org/wiki/Comparison_of_CRT,_LCD,_Plasma,_and_OLED_displays](https://en.wikipedia.org/wiki/Comparison_of_CRT,_LCD,_Plasma,_and_OLED_displays)_.
 
-#### Summary 
+#### Display Technologies Summary 
 | Feature        | Plasma                                      | LCD (CCFL backlight)                            | LED (LCD with LED backlight)                   | OLED                                                    |
 | -------------- | ------------------------------------------- | ----------------------------------------------- | ---------------------------------------------- | ------------------------------------------------------- |
 | Light Source   | Ionized gases excite phosphors (self-light) | Cold Cathode Fluorescent Lamps (CCFL) backlight | Light Emitting Diodes (LED) backlight          | Self-emitting organic pixels (no backlight)             |
@@ -226,11 +264,13 @@ Printers take data from a computer and generate output on paper: Basic principle
   * While still in use for particular applications (printing receipts for e.g.), these are now obsoleted by ink-jet printers.
 
 #### Ink-jet printers
-<img src="_assets/external-components-38.gif" height=200/>
-  * Uses tiny droplets of ink to produce images.
-  * Heat is applied to an ink reservoir, which pushes ink bubbles through a nozzle in a controlled manner.
-  * The ink liquid droplets are smaller in diameter than a human hair! Many of these added together produce the quality of a coherent image.
-  * Quieter than dot-matrix, and also provide better speed and higher quality.
+
+![Ink-jet printer technology. This animation shows how droplets are pushed through the nozzle of the printing head](_assets/external-components-38.gif){widht="50%" fig-align="center"}
+
+  - Uses tiny droplets of ink to produce images.
+  - Heat is applied to an ink reservoir, which pushes ink bubbles through a nozzle in a controlled manner.
+  - The ink liquid droplets are smaller in diameter than a human hair! Many of these added together produce the quality of a coherent image.
+  - Quieter than dot-matrix, and also provide better speed and higher quality.
 
 ::: {layout-ncol=2}
 
@@ -242,17 +282,24 @@ Printers take data from a computer and generate output on paper: Basic principle
 :::
 
 #### Laser Printers
+![Laser Printer. This animation shows how the ink powder sticks to the rotating drum. The drum contains a special coating to which allows the toner (ink powder) to stick. A laser beam then conveys information to the drum, neutralizing and detaching some toner. As the paper rolls by the drum, the toner is transferred onto the paper. A hot roller then bonds toner to the paper. ](_assets/external-components-40.gif){ width="80%" fig-aligh="center" fig-alt="Laser printer mechanism."}
 
 * Expensive when they were initially introduced.
 * Produce high-quality output quietly at a high speed.
 * Produces images by directing a laser beam at a mirror which bounces the beam onto a drum.
-  * The drum contains a special coating to which the toner (ink powder) sticks.
-  * A laser beam then conveys information to the drum, neutralizing and detaching some toner.
-  * As the paper rolls by the drum, the toner is transferred onto the paper. A hot roller then bonds toner to the paper.
+  
 
 ![Laser Printer](_assets/external-components32.png){width=66% fig-align="left" fig-alt="alt text."}
 
-<img src="_assets/external-components-40.gif"/>
+
+
+
+### Other output devices
+- Projectors
+- Speakers
+- Headphones
+
+
 
 ## Connectors
 
@@ -303,7 +350,7 @@ USB “Letter” standards refer to the physical design of the connector and the
 - e.g. USB C and USB A are incompatible interfaces, cannot be interchanged.
 
 
-![Figure caption.](_assets/external-components36.png)
+![Different types of USB standards.](_assets/external-components36.png)
 
 ![Newer standards are  __backwards compatible__  (e.g. USB 3.1 cable works in USB 1.1 port at USB 1.1 speed/power)](_assets/external-components37.png)
 
@@ -312,7 +359,7 @@ USB “Letter” standards refer to the physical design of the connector and the
 
 Most commonly the standard headphone jack (TSR connector). Available in several sizes, most commonly 3.5mm or ⅛” mini audio jack. Can be color coded - microphone (pink), speaker (green).
 
-![Figure caption.](_assets/external-components38.png)
+![Various sizes of TSR connector (headphone jack)](_assets/external-components38.png)
 
 For higher-end audio, we can use fiberoptic cables as these can transmit larger amounts of data more quickly, which is required for producing a high-quality audio signal.
 
@@ -322,7 +369,7 @@ For higher-end audio, we can use fiberoptic cables as these can transmit larger 
 
 **MiniVGA** is a variant found on laptops.
 
-**DVI** cabe is analog/digital upgrade from VGA, capable of higher resolutions. It isn't used as much today. MiniDVI and MicroDVI on “thin” laptops.
+**DVI** cabe is analog/digital upgrade from VGA, capable of higher resolutions. It isn't used as much today.MiniDVI and MicroDVI on “thin” laptops.
 
 **S-Video** commonly used for DVD players, camcorders and older consoles.
 
@@ -369,9 +416,10 @@ Telephone cable (RJ11) used for connecting to the internet through DSL/ADSL mode
 
 Ethernet (RJ45) is the standard for wired networking. Based on Cat5 twisted pair cable, made from 8 individual wires. Connector looks similar to phone plug but is thicker and wider. Also uses a clip to maintain tight connection.
 
-![](_assets/external-components50.png)
+::: {layout-ncol=2}
+![telephone cable RJ11](_assets/external-components50.png)
 
-![](_assets/external-components51.png)
+![Ethernet cable RJ45](_assets/external-components51.png)
 
 ## Knowledge check
 1.	Which statement about computers is INCORRECT?
@@ -386,11 +434,46 @@ b.	It doesn’t work well at high altitudes.
 c.	It’s power efficient.
 d.	It has a wide range of colors.
 
-3.	Which of the following is NOT a common type of monitor for laptops and desktop computers?
+3.	Which of the following is NOT a common type of monitor for laptops and desktop computers? 
 a.	liquid crystal display (LCD)
 b.	light-emitting-diode (LED)
 c.	organic light-emitting-diode (OLED)
 d.	cathode ray tube (CRT)
+
+4. Which of the following display technologies allows for a perfect representation of blacks. Select all that applies.
+a. CRT
+b. Plasma
+c. LCD
+d. LCD with LED backlight
+e. OLED
+
+5. Which of the following display technologies are most susceptable to sreen burn-in. Select all possible answers. Select all that applies.
+a. CRT
+b. Plasma
+c. LCD
+d. LCD with LED backlight
+e. OLED
+
+6. Which of the following displays allow for the msot vivid images. Select all that applies.
+a. CRT
+b. Plasma
+c. LCD
+d. LCD with LED backlight
+e. OLED
+
+7. Which of the following displays have the best viweing angles?
+a. CRT
+b. Plasma
+c. LCD
+d. LCD with LED backlight
+e. OLED
+
+8. Which of the following displays allows for infinite contrast?
+a. CRT
+b. Plasma
+c. LCD
+d. LCD with LED backlight
+e. OLED
 
 <details>
 
@@ -399,5 +482,10 @@ d.	cathode ray tube (CRT)
 1. d. 
 2. c.
 3. d.
+4. e.
+5. b., e.
+6. d. e.
+7. b., e.
+8. e. 
 
 </details>
