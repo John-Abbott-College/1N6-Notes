@@ -421,71 +421,70 @@ Ethernet (RJ45) is the standard for wired networking. Based on Cat5 twisted pair
 
 ![Ethernet cable RJ45](_assets/external-components51.png)
 
+:::
+
 ## Knowledge check
 1.	Which statement about computers is INCORRECT?
-a.	It is a digital device.
-b.	For a given input, it reliably produces the same output every time.
-c.	It contains a CPU.
-d.	Computers always operate with 100% accuracy and never make errors in processing information.
+  a.	It is a digital device.
+  b.	For a given input, it reliably produces the same output every time.
+  c.	It contains a CPU.
+  d.	Computers always operate with 100% accuracy and never make errors in processing information.
 
-2.	Which statement is INCORRECT about Plasma screens:
-a.	It contains ionized gas that lights up when stimulated by electricity. 
-b.	It doesn’t work well at high altitudes.
-c.	It’s power efficient.
-d.	It has a wide range of colors.
+2.	Which statement about Plasma screens is INCORRECT?
+  a.	They contain ionized gas that lights up when stimulated by electricity. 
+  b.	They don't work well at high altitudes.
+  c.	They are power efficient.
+  d.	They have a wide range of colors.
 
 3.	Which of the following is NOT a common type of monitor for laptops and desktop computers? 
-a.	liquid crystal display (LCD)
-b.	light-emitting-diode (LED)
-c.	organic light-emitting-diode (OLED)
-d.	cathode ray tube (CRT)
+  a.	Liquid crystal display (LCD)
+  b.	Light-emitting-diode (LED)
+  c.	Organic light-emitting-diode (OLED)
+  d.	Cathode ray tube (CRT)
 
-4. Which of the following display technologies allows for a perfect representation of blacks. Select all that applies.
-a. CRT
-b. Plasma
-c. LCD
-d. LCD with LED backlight
-e. OLED
+4. Which of the following display technologies allows for a perfect representation of blacks? (Select all that applies.)
+  a. CRT
+  b. Plasma
+  c. LCD
+  d. LCD with LED backlight
+  e. OLED
 
-5. Which of the following display technologies are most susceptable to sreen burn-in. Select all possible answers. Select all that applies.
-a. CRT
-b. Plasma
-c. LCD
-d. LCD with LED backlight
-e. OLED
+5. Which of the following display technologies are most susceptable to sreen burn-in. (Select all that applies.)
+  a. CRT
+  b. Plasma
+  c. LCD
+  d. LCD with LED backlight
+  e. OLED
 
-6. Which of the following displays allow for the msot vivid images. Select all that applies.
-a. CRT
-b. Plasma
-c. LCD
-d. LCD with LED backlight
-e. OLED
+6. Which of the following displays allow for the most vivid images? (Select all that applies.)
+  a. CRT
+  b. Plasma
+  c. LCD
+  d. LCD with LED backlight
+  e. OLED
 
-7. Which of the following displays have the best viweing angles?
-a. CRT
-b. Plasma
-c. LCD
-d. LCD with LED backlight
-e. OLED
+7. Which of the following displays have the best viewing angles?
+  a. CRT
+  b. Plasma
+  c. LCD
+  d. LCD with LED backlight
+  e. OLED
 
 8. Which of the following displays allows for infinite contrast?
-a. CRT
-b. Plasma
-c. LCD
-d. LCD with LED backlight
-e. OLED
+  a. CRT
+  b. Plasma
+  c. LCD
+  d. LCD with LED backlight
+  e. OLED
 
-<details>
-
-<summary>Click to see answers</summary>
-
+::: {.callout-caution collapse="true"}
+# Expand to see the answers
 1. d. 
 2. c.
 3. d.
 4. e.
-5. b., e.
+5. a., b., e.
 6. d. e.
 7. b., e.
 8. e. 
-
-</details>
+:::
