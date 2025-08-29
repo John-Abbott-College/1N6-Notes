@@ -4,15 +4,6 @@
     "items": []
   },
   {
-    "listing": "/topics/index.html",
-    "items": [
-      "/topics/data-representation/index.html",
-      "/topics/hardware/index.html",
-      "/topics/operating-systems/index.html",
-      "/topics/technical-support/index.html"
-    ]
-  },
-  {
     "listing": "/topics/hardware/index.html",
     "items": [
       "/topics/hardware/introduction-to-computers.html",
@@ -20,7 +11,7 @@
     ]
   },
   {
-    "listing": "/topics/data-representation/index.html",
+    "listing": "/topics/operating-systems/index.html",
     "items": []
   },
   {
@@ -28,7 +19,7 @@
     "items": []
   },
   {
-    "listing": "/announcements/index.html",
+    "listing": "/topics/data-representation/index.html",
     "items": []
   },
   {
@@ -39,7 +30,16 @@
     ]
   },
   {
-    "listing": "/topics/operating-systems/index.html",
+    "listing": "/topics/index.html",
+    "items": [
+      "/topics/data-representation/index.html",
+      "/topics/hardware/index.html",
+      "/topics/operating-systems/index.html",
+      "/topics/technical-support/index.html"
+    ]
+  },
+  {
+    "listing": "/announcements/index.html",
     "items": []
   },
   {
