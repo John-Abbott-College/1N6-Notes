@@ -51,7 +51,9 @@ Used to navigate the graphical user interface (GUI). There are many types of mic
 __Technology__:
 
 - Mechanical mice use a ball to measure movement (obsolete now -- why?)
-- Optical mice use light sources (first LED, then more precise Laser).[^1]
+- Optical mice use light sources (such as LED, or more precise Laser).[^1]
+- LED mice will often have a visible red light and require a non-glossy surface to properly work. [Here](https://www.youtube.com/watch?v=SAaESb4wTCM)'s an detailed explanation on how they work.   
+- Laser mice provide  higher precision and sensitivity, detecting fine movements and can work on any surface including glass surfaces. However, they are susceptible to sensor acceleration, which causes inconsistent cursor movements based on the speed of movement.
 
 [^1]: Good notes on history and explanation of how/why they work “Optical mice use image sensors to image naturally occurring texture [on the surface they are placed]…. These surfaces, when lit at a grazing angle by a light emitting diode, cast distinct shadows that resemble a hilly terrain lit at sunset. Images of these surfaces are captured in continuous succession and compared with each other to determine how far the mouse has moved.” https://en.wikipedia.org/wiki/Computer_mouse https://en.wikipedia.org/wiki/Optical_mouse
 
@@ -132,6 +134,7 @@ Cathode Ray Tube (CRT) monitors are very complicated, very cool, moderately dang
 
 :::
 
+![Animation demonstrating the electron beam scanning the phosphorus screen and producing coloured light dots for each pixel. Image Source: Wikipedia ](_assets/external-componenets-crt_animation.gif){width=60%}
 
 ---
 
@@ -227,6 +230,28 @@ Here’s a great [video (8 mins)](https://www.youtube.com/watch?v=uyLDA9QT8EY) e
 With LCD, LED, and OLED, we finally get to the most modern monitor technologies. These are used in our labs, most computers, laptops. They’re ordered here approximately in order of lowest (LCD) -> highest (OLED) quality, though pros and cons exist for each. 
 
 See here for more information:  _[https://en.wikipedia.org/wiki/Comparison_of_CRT,_LCD,_Plasma,_and_OLED_displays](https://en.wikipedia.org/wiki/Comparison_of_CRT,_LCD,_Plasma,_and_OLED_displays)_.
+
+---
+
+#### Metrics for choosing the right monitor
+The first step is to define how the monitor will be used: personal vs. professional use, gaming, graphic design, content creation, etc.
+You should look for a monitor that meets your needs based on a few common metrics:
+
+
+- **Resolution**: Indicates how many pixels are used to display an image and how small they are. Higher-resolution monitors (e.g., 4K) offer sharper and more detailed images.
+
+
+- **Refresh Rate**: Refers to how many times per second the display updates the image, measured in hertz (Hz), such as 60Hz. It is closely related to the frames per second (FPS) that the computer’s graphics card can output.
+
+
+- **Color Accuracy**: Describes how accurately the display reproduces colors. There are various standards to measure color accuracy, but this can be a somewhat subjective criterion depending on the use case.
+
+
+- **Brightness**: Measures the intensity of light emitted by the display, expressed in nits. Optimal brightness levels range from 100–300 nits for indoor use and 400–700 nits for outdoor use.
+
+
+- **Contrast**: Indicates the difference in intensity between the brightest whites and the darkest blacks on the screen. It is typically expressed as a ratio (e.g., 1000:1). Good contrast enhances image sharpness, especially around edges and areas with opposing colors.
+
 
 #### Display Technologies Summary 
 | Feature        | Plasma                                      | LCD (CCFL backlight)                            | LED (LCD with LED backlight)                   | OLED                                                    |
@@ -335,17 +360,25 @@ A short paper (5 pages) comparing the two cable technologies in more detail: _[F
 
 ### USB
 
-**Universal Serial Bus** (we’ll talk about the meaning of the last two words soon!) is used to connect most modern devices to computers. Back in the day, mice/keyboards/external storage/speakers/etc. all had different cables. These have now been (mostly) unified under the USB standard.
+- **Universal Serial Bus** is used to connect most modern devices to computers. 
+- Back in the day, mice/keyboards/external storage, speakers, etc., all had different cables. These have now been mostly unified under the USB standard.
 
-USB connectors can transmit both **power** (e.g. charging phones) and **information** (data). Despite being "Universal" there are an incredible number of USB types.
+- USB connectors can transmit both **power** (e.g. charging phones) and **information** (data). Despite being "Universal" there are an incredible number of USB types.
+
+![Different types of USB connectors](_assets/external-components-usb.jpg){width=70%}
 
 ---
+#### USB Standards
 
-USB "Number" standards refer to the transmission speed and power of the cables
+**USB “Number”** Standards determines the transmission speed & power
 
-- e.g. USB 3 is faster/more power than USB 2 and USB 2
 
-USB “Letter” standards refer to the physical design of the connector and the port
+- 🐢 USB 2 (slower, less power)
+- 🏎️ USB 3 (faster, more power)
+- 🚀 USB 4 (super fast, high power)
+
+
+**USB “Letter” Standards**  refer to the physical design of the connector and the port
 
 - e.g. USB C and USB A are incompatible interfaces, cannot be interchanged.
 
@@ -357,19 +390,25 @@ USB “Letter” standards refer to the physical design of the connector and the
 
 ### Audio
 
+A headphone jack is a port into which you plug your headphones. Sometimes called AUX, audio jack or phone jack. The plug, on the other hand,is the part at the end of your headphones' cable that is inserted into the jack.
 Most commonly the standard headphone jack (TSR connector). Available in several sizes, most commonly 3.5mm or ⅛” mini audio jack. Can be color coded - microphone (pink), speaker (green).
 
+::: {layout-ncol=2}
+![Headphone Jack vs Plug](_assets/external-components-audio.png)
+
 ![Various sizes of TSR connector (headphone jack)](_assets/external-components38.png)
+:::
 
 For higher-end audio, we can use fiberoptic cables as these can transmit larger amounts of data more quickly, which is required for producing a high-quality audio signal.
 
 ### Video
+![Different types of video cables](_assets/external-components-video.png){width=80% fig-align="center" }
 
 **VGA** cable is analog signal cable used for computer monitors. It had 15 pins arranged in 3 rows. It's a low resolution cable and now obsolete. There exist converter cables to connect VGA monitors to newer computers. 
 
 **MiniVGA** is a variant found on laptops.
 
-**DVI** cabe is analog/digital upgrade from VGA, capable of higher resolutions. It isn't used as much today.MiniDVI and MicroDVI on “thin” laptops.
+**DVI** cabe is analog/digital upgrade from VGA, capable of higher resolutions. It isn't used as much today. MiniDVI and MicroDVI on “thin” laptops.
 
 **S-Video** commonly used for DVD players, camcorders and older consoles.
 
@@ -388,10 +427,11 @@ For higher-end audio, we can use fiberoptic cables as these can transmit larger 
 
 
 **RCA cables** include composite video (yellow) and stereo audio cables (red for right; white/black for left). It's mainly an analog cable. Component video offers a better picture.
+> RCA stands for **R**adio **C**orporation **A**merica. 
 
-**HDMI** is the new standard for audio and video transmission in a single cable. Digital signal only.
+**HDMI** is the new standard for audio and video transmission in a single cable. It transmits digital signal only. It allows for a single cable to carry both audio and video simplifying connections and improving signal quality.
 
-**DisplayPort** (and Mini DisplayPort) more commonly used in desktop computers. Digital signal only.
+**DisplayPort** (and Mini DisplayPort) more commonly used in desktop computers. It transmits digital signal only. It support the transmission of audio, video, and other additional data, as well as multi-channel audio, and support multi monitor configurations. It is  widely used in professional applications and high-performance computing. 
 
 ::: {layout-ncol=3}
 
@@ -405,7 +445,9 @@ For higher-end audio, we can use fiberoptic cables as these can transmit larger 
 
 ### Data
 
-eSATA is used internally to connect the hard drive to the motherboard but can also be used for portable hard drives.
+eSATA (External Serial Advanced Technology Attachement) is used internally to connect the hard drive to the motherboard but can also be used for portable hard drives. They provide a high-speed interface for transferring data between the external storage device and the host system. We will see them in the upcoming labs.
+
+> The current trend has seen a decline in the use of eSATA by USB type C. 
 
 ![](_assets/external-components49.png)
 
