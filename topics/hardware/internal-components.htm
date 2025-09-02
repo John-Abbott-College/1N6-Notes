@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.7.34">
 
   <meta name="dcterms.date" content="2025-09-02">
-  <title>{{&lt; var course.title &gt;}} – Introduction to Internal Components</title>
+  <title>{{&lt; var course.title &gt;}} – Internal Components</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -123,7 +123,7 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Introduction to Internal Components – Technical Support">
+<meta property="og:title" content="Internal Components – Technical Support">
 <meta property="og:description" content="Explains the most important internal components of desktop computers. Processing, memory, storage, and communication.">
 <meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/hardware/_assets/favicons/favicon-32x32.png">
 <meta property="og:site_name" content="{{< var course.title >}}">
@@ -133,7 +133,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Introduction to Internal Components</h1>
+  <h1 class="title">Internal Components</h1>
   <p class="subtitle">Explains the most important internal components of desktop computers. Processing, memory, storage, and communication.</p>
 
 <div class="quarto-title-authors">
@@ -151,7 +151,7 @@
 <p>The computers that we mostly are concerned with in the computer science profession, however, are generally complicated electronic devices made of many <strong>components</strong>. In this class, we are going to learn many of the fundamental components that make up modern computing devices.</p>
 <p>We will continue with the <strong>internal</strong>, or <strong>system</strong>, components of a computer – each of these have their own set of interesting <strong>behaviors</strong> and <strong>properties</strong> that are worth understanding.</p>
 </section>
-<section id="lesson-overview" class="slide level2">
+<section id="lesson-overview" class="slide level2 scrollable">
 <h2>Lesson overview</h2>
 <p>The <strong>system components</strong> of a computer are responsible for the following behaviors:</p>
 <ul>
@@ -159,7 +159,7 @@
 <ul>
 <li><strong>store</strong> information</li>
 <li><strong>process</strong> information</li>
-<li><strong>retrieve </strong> information</li>
+<li><strong>retrieve</strong> information</li>
 </ul></li>
 <li>Auxiliary needs:
 <ul>
@@ -171,57 +171,72 @@
 <li>tiers of storage/processing specialized for different purposes</li>
 </ul></li>
 </ul>
-<p>Here are system components that fulfil these needs:</p>
-<ul>
-<li>Case</li>
-<li>Power Supply</li>
-<li>Motherboard
-<ul>
-<li>Chipset</li>
-<li>Buses</li>
-</ul></li>
-<li>Connectors</li>
-<li>Cooling Devices</li>
-<li>Processor (CPU)</li>
-<li>Graphics processor (GPU)</li>
-<li>Memory (RAM)</li>
-<li>Storage Devices (CD, HDD, SSD, NVME/M2)</li>
-</ul>
-<p>We will learn about all of these components this week!</p>
+<p>Many components will fulfil these needs. Here is a list of the components inside the system unit which we will learn about:</p>
+<ol type="1">
+<li><a href="#/case-🧊">Case</a></li>
+<li><a href="#/power-supply-(psu-⚡)">Power Supply</a></li>
+<li><a href="#/motherboard-📟">Motherboard</a></li>
+<li><a href="#/internal-connectors">Internal Connectors</a></li>
+<li><a href="#/cooling-devices-🪭">Cooling Devices</a></li>
+<li><a href="#/cpu-🧠">Processor (CPU)</a></li>
+<li><a href="#/graphics-cards-(gpu-🎨)">Graphics processor (GPU)</a></li>
+<li><a href="#/main-memory-(ram-📋)">Memory (RAM)</a></li>
+<li><a href="#/storage-devices-💾">Storage Devices (CD, HDD, SSD, NVME/M2)</a></li>
+</ol>
 </section>
 <section id="definitions" class="slide level2">
 <h2>Definitions</h2>
 <p>When discussing components of any complicated machine, we should try to understand the following about those components:</p>
-<h3 id="makemodel">Make/model</h3>
-<p><strong>Make/model</strong> is the brand and product name of the component. * E.g. <strong>Hyundai</strong> <strong>Accent</strong> (make = Hyundai, model = Accent)</p>
-<p>Why it’s important: Who constructs these components? Are their multiple different versions of this component made by the same manufacturer? Why?</p>
+<h3 id="makemodel">Make/Model</h3>
+<ul>
+<li>The make and model refer to the brand and specific product name of a component.</li>
+</ul>
+<blockquote>
+<p>For example: Hyundai Accent — where Hyundai is the make (manufacturer), and Accent is the model (product).</p>
+</blockquote>
+<p>Why it matters:</p>
+<ul>
+<li>Who manufactures the component?</li>
+<li>Are there multiple versions of this model produced by the same brand?</li>
+<li>What distinguishes one version from another?</li>
+</ul>
 <h3 id="properties">Properties</h3>
-<p>Properties are the <strong>quantitative</strong> (numeric) and <strong>qualitative </strong> (non-numeric) traits of the component that can be compared with alike components * Quantitative e.g.: the Fuel Efficiency of the 2009 Hyundai Accent is <strong>29 MPG </strong> (miles per gallon) * Qualitative e.g: The Hyundai Accent is a hatchback, not a sedan</p>
-<p>Why it’s important: * what is the expected performance of this component? * Is their a cost/benefit for choosing a component with better suited properties than other components? * Etc.</p>
-<p>These two ideas (make/model, properties) will vary significantly from component to component. You will need to know these ideas for all of the components we discuss today.</p>
+<ul>
+<li>Properties describe the quantitative (numerical) and qualitative (descriptive) characteristics of a component that can be compared with similar components.</li>
+</ul>
+<blockquote>
+<p>Quantitative example: The 2009 Hyundai Accent has a fuel efficiency of 29 MPG (miles per gallon). Qualitative example: The Hyundai Accent is a hatchback, not a sedan.</p>
+</blockquote>
+<p>Why it matters:</p>
+<ul>
+<li>What performance can be expected from this component?</li>
+<li>Is there a cost-benefit advantage to choosing a component with more suitable properties?</li>
+<li>How do these traits affect compatibility, efficiency, or user experience?</li>
+</ul>
+<p>These two concepts—make/model and properties—will vary widely depending on the component. Understanding both is essential for every component we’ll discuss today.</p>
 </section>
 <section id="case" class="slide level2">
-<h2>Case</h2>
+<h2>1. Case 🧊</h2>
 
-<img data-src="_assets/internal-components2.png" class="r-stretch quarto-figure-center"><p class="caption">Figure caption.</p><ul>
+<img data-src="_assets/internal-components2.png" class="r-stretch quarto-figure-center"><p class="caption">Computer case helping air circulation inside the system unit. Source: Voltcave</p><ul>
 <li>Provides protection and cooling for the internal components.</li>
-<li>Also prevents damage from static electricity (components grounded via attachment to case).</li>
+<li>Also prevents damage from <strong>static electricity</strong> &gt; Question: What is static electricity? How is the case projecting from that?</li>
 <li>Usually made of plastic, steel or aluminum.</li>
-<li>Fans move air through the case:
+<li>Helps the fans move air through all components:
 <ul>
 <li>to replace warm air with cold air to keep components at stable temperatures</li>
 <li>to prevent build-up of dust</li>
-<li>There exist many guides/studies for optimal airflow. E.g. <em><a href="https://voltcave.com/pc-airflow-guide/">https://voltcave.com/pc-airflow-guide/</a></em></li>
+<li>There exist many guides/studies for optimal airflow. E.g. <em><a href="https://voltcave.com/pc-airflow-guide/">Voltcave Guide</a></em></li>
 </ul></li>
 </ul>
 </section>
 <section id="power-supply-psu" class="slide level2">
-<h2>Power Supply (PSU)</h2>
-<p><strong>Main purpose:&nbsp;</strong> Converts AC power&nbsp;(alternating current) from wall socket to DC&nbsp;power (direct current). Direct current (0 or&nbsp;5V) is used to power digital circuits.</p>
+<h2>2. Power Supply (PSU) ⚡</h2>
+<p><strong>Main purpose:</strong> Converts AC power&nbsp;(alternating current) from wall socket to DC&nbsp;power (direct current). Direct current (0 or&nbsp;5V) is used to power digital circuits.</p>
 <ul>
-<li>Note: PSU have their own fans: Energy conversion releases a lot of heat!</li>
-<li>Computers can only tolerate slight fluctuations in power without <strong>needing to shut down</strong></li>
-<li>Important: <strong>Never open a power supply!</strong> The capacitors contained within can keep a dangerous high voltage, high power charge long after being unplugged.</li>
+<li>Computers can only tolerate slight fluctuations in power without <strong>needing to shut down!</strong>. This is why we need to convert the electric current from the providers to direct current.</li>
+<li>PSUs have their own fans because energy conversion releases a lot of heat!</li>
+<li>⚠️ <strong>Never open a power supply!</strong> The capacitors contained within can keep a dangerous high voltage, high power charge long after being unplugged.</li>
 </ul>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
@@ -229,7 +244,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="_assets/internal-components3.jpg"></p>
-<figcaption>Figure caption.</figcaption>
+<figcaption>Power Supply rated “Gold”</figcaption>
 </figure>
 </div>
 </div>
@@ -237,7 +252,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="_assets/internal-components4.png"></p>
-<figcaption>Figure caption.</figcaption>
+<figcaption>Regular Power Supply.</figcaption>
 </figure>
 </div>
 </div>
@@ -245,11 +260,11 @@
 </div>
 <div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="_assets/internal-components5.gif" style="width:66.0%" alt="alt text."></p>
-<figcaption>Figure caption.</figcaption>
+<p><img data-src="_assets/internal-components5.gif" style="width:80.0%" alt="alt text."></p>
+<figcaption>Difference between AC vs DC current.</figcaption>
 </figure>
 </div>
-<h3 id="psu-connectors">PSU Connectors</h3>
+<h3 id="psu-connectors">2.1 PSU Connectors 🔌🔋</h3>
 <ul>
 <li>Most power supply connectors are : 20 + 4 pins</li>
 <li>Usually made up of wires of various colors:
@@ -263,19 +278,80 @@
 <div class="quarto-figure quarto-figure-left">
 <figure>
 <p><img data-src="_assets/internal-components7.png" style="width:66.0%" alt="alt text."></p>
-<figcaption>Figure caption.</figcaption>
+<figcaption>Usual PSU connectors</figcaption>
 </figure>
 </div>
-<h3 id="psu-ratings">PSU Ratings</h3>
-<p><strong>Useful for Assignment 1</strong></p>
-<p>PSU Ratings: * <strong>Wattage</strong> (amount of power delivered, must be greater than the sum of&nbsp;power required by all parts, some power supplies can provide more power&nbsp;than others) * <strong>Efficiency</strong> (1st + 2nd Laws of thermodynamics: 100% power input cannot be converted&nbsp;to 100% power output; some power supplies have higher efficiency ratings&nbsp;than others) * For more detailed explanation:&nbsp; <em><a href="https://www.newegg.com/insider/how-to-choose-a-pc-power-supply-buying-guide/">https://www.newegg.com/insider/how-to-choose-a-pc-power-supply-buying-guide/</a></em></p>
-<h3 id="uninterruptible-power-supply">Uninterruptible Power Supply</h3>
-<p>In the case of a power outage, an <strong>Uninterruptible Power Supply (UPS)</strong> can&nbsp;keep a computer running for a&nbsp;few minutes to several hours depending on&nbsp;the sophistication of the UPS.&nbsp;See&nbsp; <em><a href="https://www.wikihow.com/Buy-and-Use-an-Uninterruptible-Power-Supply">https://www.wikihow.com/Buy-and-Use-an-Uninterruptible-Power-Supply</a></em> &nbsp;for an example.</p>
+<h3 id="psu-ratings">2.2 PSU Ratings 🏅</h3>
+<p>Not all PSUs efficiently convert AC to DC power!</p>
+<p>To pick the right power supply for your machine, you must firstly know what’s the wattage required by your system. For this you might need to add all the internal components into the <a href="https://www.newegg.com/tools/power-supply-calculator?cm_sp=NeweggInsider-_-BuyingGuides-_-ChoosePSU">Wattage calculator</a> which will then provide an estimate of the load wattage of this machine. &gt; For example, if you’re building a PC with an Intel Core i7-11700K CPU, an Nvidia GeForce RTX 3070 GPU, 16 gigabytes (GB) of RAM made up of two 8GB sticks, a 1TB solid-state drive (SSD), and a 1TB 7200RPM hard disk drive (HDD), then 512 watts of power would be recommended.</p>
+<h4 id="plus-standard">80 Plus Standard</h4>
+<p>The 80 Plus standard was created to promote efficient enery use of a computer. When selecting a power supply, you might see that many suppliers will carry the 80 Plus certification labels. The efficiency of a power supply gives the ratio of AC power required from an electrical outlet to the useful power converted to DC to be used by a computer (the load wattage). &gt; For example: a 75% efficient power supply requires 100W of AC input to provide 75 W of DC load wattage output to a computer. dissipating the remaining 25 W in as heat.</p>
+<p>In the North America, the outlet voltage is roughly 115 V. The following table summerizes the efficiency levels for that voltage.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>% of Rated Load</th>
+<th>10%</th>
+<th>20%</th>
+<th>50%</th>
+<th>100%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>80 PLUS</td>
+<td>-</td>
+<td>80%</td>
+<td>80%</td>
+<td>80%</td>
+</tr>
+<tr class="even">
+<td>80 PLUS Bronze</td>
+<td>-</td>
+<td>82%</td>
+<td>85%</td>
+<td>82%</td>
+</tr>
+<tr class="odd">
+<td>80 PLUS Silver</td>
+<td>-</td>
+<td>85%</td>
+<td>88%</td>
+<td>85%</td>
+</tr>
+<tr class="even">
+<td>80 PLUS Gold</td>
+<td>-</td>
+<td>87%</td>
+<td>90%</td>
+<td>87%</td>
+</tr>
+<tr class="odd">
+<td>80 PLUS Platinum</td>
+<td>-</td>
+<td>90%</td>
+<td>92%</td>
+<td>89%</td>
+</tr>
+<tr class="even">
+<td>80 PLUS Titanium</td>
+<td>90%</td>
+<td>92%</td>
+<td>94%</td>
+<td>90%</td>
+</tr>
+</tbody>
+</table>
+<p>After figuring out the required wattage for your machine, you can then calculate the input wattage required by the PSU to reach the desired load wattage of your machine.</p>
+<ul>
+<li>For more detailed explanation:&nbsp; <em><a href="https://www.newegg.com/insider/how-to-choose-a-pc-power-supply-buying-guide/">How to Choose a Power Supply</a></em></li>
+</ul>
+<h3 id="uninterruptible-power-supply">2.3 Uninterruptible Power Supply</h3>
+<p>In the case of a power outage, an <strong>Uninterruptible Power Supply (UPS)</strong> can&nbsp;keep a computer running for a&nbsp;few minutes to several hours depending on&nbsp;the sophistication of the UPS.&nbsp;See&nbsp; <em><a href="https://www.wikihow.com/Buy-and-Use-an-Uninterruptible-Power-Supply">Uninterruptible Power Supply</a></em> for an example.</p>
 <p>It’s basically a large battery that keeps charge during normal operation, and powers a computer using its stored charge when the building’s power is cut off.</p>
-<p>We will talk more about uninterruptible power supply when we start speaking about server hardware.</p>
 </section>
 <section id="motherboard" class="slide level2">
-<h2>Motherboard</h2>
+<h2>3. Motherboard 📟</h2>
 <p>Motherboards connect all the major components of the computer: the CPU, RAM, Expansion ports, etc.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -295,7 +371,7 @@
 <figcaption>Motherboard form factors, from largest to smallest.</figcaption>
 </figure>
 </div>
-<h3 id="form-factors">Form Factors</h3>
+<h3 id="form-factors">3.1 Form Factors</h3>
 <ul>
 <li><strong>AT</strong>
 <ul>
@@ -328,25 +404,29 @@
 </ul></li>
 <li><strong>Proprietary</strong>
 <ul>
-<li>Some computer manufacturers make motherboards that work only with their cases.</li>
+<li>Some computer manufacturers make motherboards that work only with their cases. (Ahemm…🍏)</li>
 <li>Services and upgrades usually need to be handled by authorized dealers.</li>
 <li>Often hard to get replacement parts and they are usually expensive.</li>
 </ul></li>
 </ul>
-<h3 id="io-ports">I/O Ports</h3>
-<p>You’ll notice that the I/O Ports (input/output) on the mother board are always located around the same area.</p>
-<p>This is&nbsp;to keep certain consistency across&nbsp;manufacturer and regardless of the form factors</p>
+<h3 id="io-ports">3.2 I/O Ports</h3>
+<p>You’ll notice that the I/O Ports (input/output) on the mother board are always located around the same area. This is&nbsp;to keep certain consistency across&nbsp;manufacturer and regardless of the form factors.</p>
 <div class="quarto-figure quarto-figure-left">
 <figure>
 <p><img data-src="_assets/internal-components10.png" style="width:66.0%" alt="alt text."></p>
-<figcaption>Figure caption.</figcaption>
+<figcaption>I/O Ports location standard accross manufacturer and form factors.</figcaption>
 </figure>
 </div>
-<h3 id="expansion-slots">Expansion Slots</h3>
+<h3 id="expansion-slots">3.3 Expansion Slots</h3>
 <p>Let’s have a closer look at what we call expansion slots.</p>
-<p>Expansion slots are ports inside a computer&nbsp;found on the motherboard. They provide&nbsp;the possibility to&nbsp;expand the hardware of your PC.</p>
+<p><strong>Expansion slots</strong> are ports inside a computer&nbsp;found on the motherboard. They provide&nbsp;the possibility to&nbsp;expand the hardware of your PC.</p>
 <p>For example, you may want to install a network card, a sound card, and most commonly, a&nbsp;video card.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
 <p><img data-src="_assets/internal-components17.png"></p>
+<figcaption>Expansion slot</figcaption>
+</figure>
+</div>
 </section>
 <section class="slide level2">
 
@@ -371,7 +451,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="_assets/internal-components18.png"></p>
-<figcaption>Figure caption.</figcaption>
+<figcaption>Network Interfact Card</figcaption>
 </figure>
 </div>
 </div>
@@ -379,7 +459,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="_assets/internal-components19.png"></p>
-<figcaption>Figure caption.</figcaption>
+<figcaption>NVidea Video Card</figcaption>
 </figure>
 </div>
 </div>
@@ -389,7 +469,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="_assets/internal-components20.gif"></p>
-<figcaption>Figure caption.</figcaption>
+<figcaption>Multiple expansion slots</figcaption>
 </figure>
 </div>
 </div>
@@ -397,13 +477,13 @@
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="_assets/internal-components21.jpg"></p>
-<figcaption>Figure caption.</figcaption>
+<figcaption>Types of expansion slots. Source: <a href="https://www.pcmag.com/encyclopedia/term/isa-bus">PC Mag</a></figcaption>
 </figure>
 </div>
 </div>
 </div>
 </div>
-<h3 id="cpu-socket">CPU Socket</h3>
+<h4 id="cpu-socket">3.4 CPU Socket</h4>
 <p>Let’s have a closer look at the CPU Socket, which rests in the motherboard. This is where the CPU will sit.</p>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
@@ -425,7 +505,7 @@
 </div>
 </div>
 </div>
-<h3 id="how-to-connect-a-cpu">How to Connect a CPU?</h3>
+<h5 id="how-to-connect-a-cpu">How to Connect a CPU?</h5>
 <p>CPU connection on the motherboard is known as the CPU socket.</p>
 <p>The CPU is connected to the motherboard in one of two ways:</p>
 <ul>
@@ -444,44 +524,16 @@
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="_assets/internal-components24.png"></p>
-<figcaption>Figure caption.</figcaption>
+<p><img data-src="_assets/internal-components-cpu-lda.png"></p>
+<figcaption>Pin Grid Array – PGA</figcaption>
 </figure>
 </div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="_assets/internal-components25.png"></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_assets/internal-components26.png"></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_assets/internal-components27.gif"></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_assets/internal-components28.png"></p>
-<figcaption>Figure caption.</figcaption>
+<p><img data-src="_assets/internal-components-cpu-pga.png"></p>
+<figcaption>Land Grid Array – LGA</figcaption>
 </figure>
 </div>
 </div>
@@ -489,7 +541,7 @@
 </div>
 </section>
 <section id="internal-connectors" class="slide level2">
-<h2>Internal Connectors</h2>
+<h2>4. Internal Connectors 🔌</h2>
 <p>There are a variety of connectors used to connect components to the motherboard. Two main purposes:</p>
 <ul>
 <li><strong>Signals</strong> : for communication/data transfer</li>
@@ -505,485 +557,313 @@
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="_assets/internal-components11.png"></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
 <p><img data-src="_assets/internal-components12.png"></p>
-<figcaption>Figure caption.</figcaption>
+<figcaption>SATA Power Cables</figcaption>
 </figure>
 </div>
 </div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_assets/internal-components13.png"></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_assets/internal-components14.png"></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="_assets/internal-components15.png"></p>
-<figcaption>Figure caption.</figcaption>
+<figcaption>SATA 3 Cables for hard drives with angle connectors</figcaption>
 </figure>
 </div>
 </div>
+</div>
+<div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="_assets/internal-components16.png"></p>
-<figcaption>Figure caption.</figcaption>
+<figcaption>PCIe (for Video cards).</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </div>
-</section>
-<section id="cpu" class="slide level2">
-<h2>CPU</h2>
-<p>The CPU Most important element of the computer.</p>
-<ul>
-<li>Responsible for <strong>interpreting </strong> and <strong>executing </strong> the commands from the software.</li>
-<li>communicates instructions for all of the other components of the computer</li>
-<li>While the CPU is processing one step of the program, the remaining instructions and the data are stored in a special memory called <em>cache</em>.</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_assets/internal-components29.png"></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-<p>We’ll have a lecture dedicated to the CPU since it is so complicated.</p>
-<h3 id="cpu-brands">CPU Brands</h3>
-<p><strong>Intel</strong>: Historically the main CPU manufacturer</p>
-<p><strong>AMD</strong>: Relatively recent competitor to Intel</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_assets/internal-components30.png"></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-</section>
-<section id="cooling-devices" class="slide level2">
-<h2>Cooling Devices</h2>
-<p>The flow of current between and within electronic components generates heat. Some devices are particularly powerful heat-generators, due to the large current they draw: * CPUs typically come with their own cooling device * Cooling devices are built into GPUs and Power Supplies</p>
-<p>There are two main types of cooling devices:</p>
-<ul>
-<li><strong>Fans</strong> inside the case increase airflow and removes heat.</li>
-<li><strong>Heat sinks</strong> also draw heat away from the CPU core.</li>
-</ul>
-<h3 id="fans">Fans</h3>
-<p>The flow of current between the electronic components generates heat.</p>
-<p>Fans inside the case increase airflow and removes heat.</p>
-<p>Occasionally video cards or other components have their own fans to cool them.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_assets/internal-components31.jpg"></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-<h3 id="heat-sinks">Heat sinks</h3>
-<ul>
-<li>Heat sinks&nbsp;also draw heat away from the CPU core.
-<ul>
-<li>A heat sink is a piece of copper or aluminum that resides between the&nbsp;processor and the CPU fan.</li>
-<li>It absorbs the heat from the processor and the fan disperses the heat.</li>
-</ul></li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_assets/internal-components32.jpg"></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-</section>
-<section id="main-memory-ram" class="slide level2">
-<h2>Main Memory (RAM)</h2>
-<p>Referred to as RAM (Random Access Memory). They’re connected to RAM slots on the motherboard:</p>
-<div class="quarto-figure quarto-figure-left">
-<figure>
-<p><img data-src="_assets/internal-components33.png" style="width:66.0%" alt="alt text."></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-<p>RAM is a collection of integrated circuits (chips). Temporary storage for data and programs that are being accessed by the CPU.</p>
-<p><strong>Volatile memory</strong> : contents are erased when the computer is switched off. (or when power is lost)</p>
-<div class="quarto-figure quarto-figure-left">
-<figure>
-<p><img data-src="_assets/internal-components34.png" style="width:66.0%" alt="alt text."></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-<h3 id="properties-1">Properties</h3>
-<p>There are four main properties of RAM to know:</p>
-<ul>
-<li><strong>Capacity: </strong> Total memory (in GB, GigaBytes)
-<ul>
-<li>More RAM means more capacity to hold and process large programs and files.</li>
-<li>Maximum installed is limited by the motherboard and the operating system.</li>
-</ul></li>
-<li><strong>Speed: </strong> How many operations per second
-<ul>
-<li>Many, millions or billions per second</li>
-<li>1MHz = 1 million / second, 1 GHz = 1 billion / second</li>
-</ul></li>
-<li><strong>Latency</strong> : How much time delay between communications</li>
-<li><strong>Generation:</strong> See next slides</li>
-</ul>
-<h3 id="ram-form-factors">RAM Form Factors</h3>
-<ul>
-<li>SIMMs (Single In-Line Memory Modules)
-<ul>
-<li>Have a single line of connectors.</li>
-<li>Now obsolete.</li>
-</ul></li>
-<li>DIMMs (Dual In-Line Memory Modules)
-<ul>
-<li>Have two lines of connectors.</li>
-<li>Have Wider bus (supports 64 bits) 🡪 How can this help? More on this in the coming weeks.</li>
-<li>Became dominant (no need to state that a memory module is a DIMM).</li>
-</ul></li>
-</ul>
-<h3 id="ram-generations">RAM Generations</h3>
-<table class="caption-top">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Synchronous DRAM (SDRAM)</th>
-<th style="text-align: center;">DRAM that operates in time with the memory bus.<br>Tied to the system clock like the CPU and the memory controller.<br>Results in very little wasted time.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">Double Data Rate SDRAM (DDR)</td>
-<td style="text-align: center;">DDR transfers data twice as fast as SDRAM.Larger buffer gives it a huge boost.</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Double Data Rate 2 SDRAM (DDR2)</td>
-<td style="text-align: center;">DDR2 decreases noise making it faster than DDR.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">Double Data Rate 3 SDRAM (DDR3)</td>
-<td style="text-align: center;">DDR3 doubles the clock rate of DDR2, consumes less power and generates less heat.</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Double Data Rate 4 SDRAM (DDR4)</td>
-<td style="text-align: center;">DDR4 arrived in 2014 with even faster speeds. (most common RAM type in desktops/laptops today)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">Double Data Rate 5 SDRAM (DDR5)</td>
-<td style="text-align: center;">Introduced in 2020, is starting to become more widely adopted.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>NOTE: Motherboards are usually compatible with only ONE generation of RAM. If you have a motherboard designed for DDR3, it cannot use DDR4 or DDR5.</strong></p>
-</section>
-<section id="graphics-cards-gpu" class="slide level2">
-<h2>Graphics Cards (GPU)</h2>
-<p>Also known as Video cards or Graphical&nbsp;Processing Units</p>
-<p>One of the most interesting use of expansion slots is the addition of video cards, also known as Graphical Processing Unit.</p>
-<p>A specialized version of a CPU designed for <strong>graphical</strong> processing (producing complex output to display on a monitor)</p>
-<p>The computation needed for graphical processing is generally useful for scientific computing as well (lots of data in parallel)</p>
-<div class="quarto-figure quarto-figure-left">
-<figure>
-<p><img data-src="_assets/internal-components35.png" style="width:66.0%" alt="alt text."></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-left">
-<figure>
-<p><img data-src="_assets/internal-components36.png" style="width:66.0%" alt="alt text."></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-left">
-<figure>
-<p><img data-src="_assets/internal-components37.png" style="width:66.0%" alt="alt text."></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-<h3 id="cpu-vs-gpu">CPU vs GPU</h3>
-<ul>
-<li><strong>Both consume a lot of power and generate a lot of heat</strong></li>
-<li><strong>More powerful CPUs/GPUs require more powerful power supplies</strong>
-<ul>
-<li><strong>TDP:</strong> __ Thermal Design Power, measures the number of Watts needed to power the device__</li>
-</ul></li>
-<li><strong>Both have performance measured in </strong> <strong>speed</strong> __ (operations/second) like RAM__</li>
-</ul>
-<p>GPU cannot replace the CPU because their architecture is different and meant for different purposes. GPU is great to parallelize computations! But the GPU is not as versatile&nbsp;as the CPU which has a larger instruction set</p>
-<div class="quarto-figure quarto-figure-left">
-<figure>
-<p><img data-src="_assets/internal-components38.png" style="width:66.0%" alt="alt text."></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-</section>
-<section id="storage-devices" class="slide level2">
-<h2>Storage Devices</h2>
-<p>Storage devices store data permanently. Some are installed inside the case (e.g.&nbsp;hard drive); Some are removable and portable (e.g.&nbsp;external flash drive).</p>
-<div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_assets/internal-components39.jpg"></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_assets/internal-components40.png"></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_assets/internal-components41.png"></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_assets/internal-components42.jpg"></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_assets/internal-components43.png"></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_assets/internal-components44.png"></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_assets/internal-components45.png"></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_assets/internal-components46.png"></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_assets/internal-components47.png"></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_assets/internal-components48.png"></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_assets/internal-components49.jpg"></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_assets/internal-components50.png"></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="slide level2">
+<!--
 
-<h3 id="floppy-drive">Floppy Drive</h3>
-<p>Uses 3.5 inch floppy disks (or 5.25 inch floppy disks - older).</p>
-<p>Largely obsolete.</p>
-<p>Magnetic disks store up to 1.44Meg of data.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_assets/internal-components51.png"></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_assets/internal-components52.png"></p>
-<figcaption>Figure caption.</figcaption>
-</figure>
-</div>
-</section>
-<section class="slide level2">
+## 5. CPU 🧠
 
-<h3 id="hard-drive">Hard Drive</h3>
-<ul>
-<li>Hard Disk Drive (HDD)
-<ul>
-<li>Traditional hard drives.</li>
-<li>Uses magnetic-based storage on a moving disk (somewhat like a vinyl player)</li>
-<li>Magnetic hard drives have drive motors that spin the magnetic platters and move the drive heads.</li>
-<li>Speed measured in revolutions per minute</li>
-</ul></li>
-</ul>
+The CPU Most important element of the computer.
 
-<img data-src="_assets/internal-components53.jpg" class="r-stretch"></section>
-<section class="slide level2">
+  * Responsible for  __interpreting __ and  __executing __ the commands from the software.
+  * communicates instructions for all of the other components of the computer
+  * While the CPU is processing one step of the program, the remaining instructions and the data are stored in a special memory called *cache*.
 
-<ul>
-<li>Solid State Drives (SSD)
-<ul>
-<li>Do not have moving parts and use __ semi-conductors__ to store data.</li>
-<li>Non-volatile flash memory chips manage the storage on an SSD, resulting in faster access to data,&nbsp;higher reliability and reduced power usage.</li>
-</ul></li>
-</ul>
+![Figure caption.](_assets/internal-components29.png)
 
-<img data-src="_assets/internal-components54.png" class="r-stretch"></section>
-<section class="slide level2">
+We'll have a lecture dedicated to the CPU since it is so complicated.
 
-<h3 id="tape-drive">Tape Drive</h3>
-<p>Magnetic tapes are often used for backups or archiving data. Impractical for most individuals, but still used/created to this day! Cost effective when storing more than 1000 TB (lots and lots of data)</p>
-<p><img data-src="_assets/internal-components55.png"></p>
-<p><img data-src="_assets/internal-components56.png"></p>
-<p><img data-src="_assets/internal-components57.png"></p>
-</section>
-<section class="slide level2">
+### CPU Brands
 
-<h3 id="optical-drive">Optical Drive</h3>
-<ul>
-<li>Uses lasers to read the data on the optical media.
-<ul>
-<li>CD (compact disc) 700 Mb</li>
-<li>DVD (digital versatile disc) 4-8 Gb.</li>
-<li>BD (Blu-ray disc) 25-50 Gb.</li>
-</ul></li>
-<li>Optical media can be:
-<ul>
-<li>Pre-recorded (read only)</li>
-<li>Recordable (write once)</li>
-<li>Re-recordable (read and write multiple times).</li>
-</ul></li>
-</ul>
-<p><img data-src="_assets/internal-components58.jpg"></p>
-<p><img data-src="_assets/internal-components59.jpg"></p>
-<h3 id="interfaces-types">Interfaces Types</h3>
-<p>Interface Types, in order of oldest to newest</p>
-<table class="caption-top">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">IDE <br>&nbsp;</th>
-<th style="text-align: center;">Integrated Drive Electronics / Advanced Technology Attachment.<br>Also called ATA.<br>Early drive controller interface, originally only supported hard drives up to 540 MB.<br>Uses a 40 pin connector, and maximum cable length of 46cm (18in).</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">EIDE</td>
-<td style="text-align: center;">Enhanced Integrated Drive Electronics (also called ATA-2).<br>Updated version of IDE, supporting larger drives and direct memory access.<br>Uses a 40 pin connector.</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">PATA</td>
-<td style="text-align: center;">Parallel version of ATA.<br>Used internally due to maximum cable length of 46cm (18in).<br>Largely replaced by SATA in newer systems.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">SATA (most commonly used today)</td>
-<td style="text-align: center;">Serial version of ATA, with slimmer and longer cables providing better airflow.<br>Uses 7-pin connector (less pins means less issues with electromagnetic interference).<br>SATA hard drives tend to be quieter than IDE drives.</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">eSATA</td>
-<td style="text-align: center;">External serial ATA, provides a hot-swappable external interface for SATA.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">:-:</td>
-<td style="text-align: center;">:-:</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">SCSI</td>
-<td style="text-align: center;">Small Computer System Interface.<br>Drive controller that can connect up to 15 drives.<br>Internal and external use, uses 25, 50 or 68 pin connector.<br><br><br></td>
-</tr>
-</tbody>
-</table>
-<p><em>Note:</em> __ Hot-swapping is the ability to connect and disconnect a device while the computer is on.__</p>
-<h3 id="external-flash-drive">External Flash Drive</h3>
-<p>Removable storage device that connects to a USB port.</p>
-<p>These use the same type of non-volatile memory chips as SSDs and do not require power to maintain the data.</p>
-<p><img data-src="_assets/internal-components60.png"></p>
-<p><img data-src="_assets/internal-components61.png"></p>
-<p>To install a drive internally in a computer, the connection interface on the drive must be the same as the controller on the motherboard.</p>
-<p>Motherboards support different types of interfaces.</p>
-<h3 id="computer-memory-hierarchy">Computer Memory Hierarchy</h3>
-<p>Source: https://en.wikipedia.org/wiki/Memory_hierarchy</p>
-</section>
-<section id="exercises" class="slide level2">
-<h2>Exercises</h2>
-</section>
-<section id="knowledge-check" class="slide level2">
-<h2>Knowledge check</h2>
-</section>
-<section id="additional-resources" class="slide level2">
-<h2>Additional resources</h2>
+**Intel**: Historically the main CPU manufacturer
+
+**AMD**: Relatively recent competitor to Intel
+
+![Figure caption.](_assets/internal-components30.png)
+
+
+## 6. Cooling Devices 🪭
+
+The flow of current between and within electronic components generates heat. Some devices are particularly powerful heat-generators, due to the large current they draw:
+  * CPUs typically come with their own cooling device
+  * Cooling devices are built into GPUs and Power Supplies
+
+There are two main types of cooling devices:
+
+* **Fans** inside the case increase airflow and removes heat.
+* **Heat sinks** also draw heat away from the CPU core.
+
+
+### Fans
+
+The flow of current between the electronic components generates heat.
+
+Fans inside the case increase airflow and removes heat.
+
+Occasionally video cards or other components have their own fans to cool them.
+
+![Figure caption.](_assets/internal-components31.jpg)
+
+
+### Heat sinks
+
+* Heat sinks also draw heat away from the CPU core.
+  * A heat sink is a piece of copper or aluminum that resides between the processor and the CPU fan.
+  * It absorbs the heat from the processor and the fan disperses the heat.
+
+![Figure caption.](_assets/internal-components32.jpg)
+
+
+## 7. Main Memory (RAM) 📋
+
+Referred to as RAM (Random Access Memory). They're connected to RAM slots on the motherboard:
+
+![Figure caption.](_assets/internal-components33.png){width=66% fig-align="left" fig-alt="alt text."}
+
+RAM is a collection of integrated circuits (chips). Temporary storage for data and programs that are being accessed by the CPU.
+
+__Volatile memory__ : contents are erased when the computer is switched off. (or when power is lost)
+
+![Figure caption.](_assets/internal-components34.png){width=66% fig-align="left" fig-alt="alt text."}
+
+
+### Properties
+
+There are four main properties of RAM to know:
+
+* __Capacity: __ Total memory (in GB, GigaBytes)
+  * More RAM means more capacity to hold and process large programs and files.
+  * Maximum installed is limited by the motherboard and the operating system.
+* __Speed: __ How many operations per second
+  * Many, millions or billions per second
+  * 1MHz = 1 million / second, 1 GHz = 1 billion / second
+* __Latency__ : How much time delay between communications
+* __Generation:__  See next slides
+
+
+### RAM Form Factors
+
+* SIMMs (Single In-Line Memory Modules)
+  * Have a single line of connectors.
+  * Now obsolete.
+* DIMMs (Dual In-Line Memory Modules)
+  * Have two lines of connectors.
+  * Have Wider bus (supports 64 bits) 🡪 How can this help? More on this in the coming weeks.
+  * Became dominant (no need to state that a memory module is a DIMM).
+
+
+### RAM Generations
+
+| Synchronous DRAM (SDRAM) | DRAM that operates in time with the memory bus.<br />Tied to the system clock like the CPU and the memory controller.<br />Results in very little wasted time. |
+| :-: | :-: |
+| Double Data Rate SDRAM (DDR) | DDR transfers data twice as fast as SDRAM.Larger buffer gives it a huge boost. |
+| Double Data Rate 2 SDRAM (DDR2) | DDR2 decreases noise making it faster than DDR. |
+| Double Data Rate 3 SDRAM (DDR3) | DDR3 doubles the clock rate of DDR2, consumes less power and generates less heat. |
+| Double Data Rate 4 SDRAM (DDR4) | DDR4 arrived in 2014 with even faster speeds. (most common RAM type in desktops/laptops today) |
+| Double Data Rate 5 SDRAM (DDR5) | Introduced in 2020, is starting to become more widely adopted. |
+
+__NOTE: Motherboards are usually compatible with only ONE generation of RAM. If you have a motherboard designed for DDR3, it cannot use DDR4 or DDR5.__
+
+
+## 8. Graphics Cards (GPU) 🎨
+
+Also known as Video cards or Graphical Processing Units
+
+One of the most interesting use of expansion slots is the addition of video cards, also known as Graphical Processing Unit.
+
+A specialized version of a CPU designed for  __graphical__  processing (producing complex output to display on a monitor)
+
+The computation needed for graphical processing is generally useful for scientific computing as well (lots of data in parallel)
+
+![Figure caption.](_assets/internal-components35.png){width=66% fig-align="left" fig-alt="alt text."}
+
+![Figure caption.](_assets/internal-components36.png){width=66% fig-align="left" fig-alt="alt text."}
+
+![Figure caption.](_assets/internal-components37.png){width=66% fig-align="left" fig-alt="alt text."}
+
+
+### CPU vs GPU
+
+* __Both consume a lot of power and generate a lot of heat__
+* __More powerful CPUs/GPUs require more powerful power supplies__
+  * __TDP:__  __ Thermal Design Power, measures the number of Watts needed to power the device__
+* __Both have performance measured in __  __speed__  __ (operations/second) like RAM__
+
+GPU cannot replace the CPU because their architecture is different and meant for different purposes. GPU is great to parallelize computations! But the GPU is not as versatile as the CPU which has a larger instruction set
+
+![Figure caption.](_assets/internal-components38.png){width=66% fig-align="left" fig-alt="alt text."}
+
+
+## 9. Storage Devices 💾
+
+Storage devices store data permanently. Some are installed inside the case (e.g. hard drive); Some are removable and portable (e.g. external flash drive).
+
+::: {layout-ncol=2}
+
+![Figure caption.](_assets/internal-components39.jpg)
+
+![Figure caption.](_assets/internal-components40.png)
+
+![Figure caption.](_assets/internal-components41.png)
+
+![Figure caption.](_assets/internal-components42.jpg)
+
+![Figure caption.](_assets/internal-components43.png)
+
+![Figure caption.](_assets/internal-components44.png)
+
+![Figure caption.](_assets/internal-components45.png)
+
+![Figure caption.](_assets/internal-components46.png)
+
+![Figure caption.](_assets/internal-components47.png)
+
+![Figure caption.](_assets/internal-components48.png)
+
+![Figure caption.](_assets/internal-components49.jpg)
+
+![Figure caption.](_assets/internal-components50.png)
+
+:::
+
+
+---
+
+
+### Floppy Drive
+
+Uses 3.5 inch floppy disks (or 5.25 inch floppy disks - older).
+
+Largely obsolete.
+
+Magnetic disks store up to 1.44Meg of data.
+
+![Figure caption.](_assets/internal-components51.png)
+
+![Figure caption.](_assets/internal-components52.png)
+
+
+---
+
+
+### Hard Drive
+
+* Hard Disk Drive (HDD)
+  * Traditional hard drives.
+  * Uses magnetic-based storage on a moving disk (somewhat like a vinyl player)
+  * Magnetic hard drives have drive motors that spin the magnetic platters and move the drive heads.
+  * Speed measured in revolutions per minute
+
+![](_assets/internal-components53.jpg)
+
+
+---
+
+
+* Solid State Drives (SSD)
+  * Do not have moving parts and use __ semi-conductors__  to store data.
+  * Non-volatile flash memory chips manage the storage on an SSD, resulting in faster access to data, higher reliability and reduced power usage.
+
+![](_assets/internal-components54.png)
+
+
+---
+
+
+### Tape Drive
+
+Magnetic tapes are often used for backups or archiving data. Impractical for most individuals, but still used/created to this day! Cost effective when storing more than 1000 TB (lots and lots of data)
+
+![](_assets/internal-components55.png)
+
+![](_assets/internal-components56.png)
+
+![](_assets/internal-components57.png)
+
+
+---
+
+
+### Optical Drive
+
+* Uses lasers to read the data on the optical media.
+  * CD (compact disc) 700 Mb
+  * DVD (digital versatile disc) 4-8 Gb.
+  * BD (Blu-ray disc) 25-50 Gb.
+* Optical media can be:
+  * Pre-recorded (read only)
+  * Recordable (write once)
+  * Re-recordable (read and write multiple times).
+
+![](_assets/internal-components58.jpg)
+
+![](_assets/internal-components59.jpg)
+
+
+### Interfaces Types
+
+Interface Types, in order of oldest to newest
+
+| IDE <br />  | Integrated Drive Electronics / Advanced Technology Attachment.<br />Also called ATA.<br />Early drive controller interface, originally only supported hard drives up to 540 MB.<br />Uses a 40 pin connector, and maximum cable length of 46cm (18in). |
+| :-: | :-: |
+| EIDE | Enhanced Integrated Drive Electronics (also called ATA-2).<br />Updated version of IDE, supporting larger drives and direct memory access.<br />Uses a 40 pin connector. |
+| PATA | Parallel version of ATA.<br />Used internally due to maximum cable length of 46cm (18in).<br />Largely replaced by SATA in newer systems. |
+| SATA (most commonly used today) | Serial version of ATA, with slimmer and longer cables providing better airflow.<br />Uses 7-pin connector (less pins means less issues with electromagnetic interference).<br />SATA hard drives tend to be quieter than IDE drives. |
+| eSATA  | External serial ATA, provides a hot-swappable external interface for SATA. |
+| :-: | :-: |
+| SCSI | Small Computer System Interface.<br />Drive controller that can connect up to 15 drives.<br />Internal and external use, uses 25, 50 or 68 pin connector.<br /><br /><br /> |
+
+_Note:_  __ Hot-swapping is the ability to connect and disconnect a device while the computer is on.__
+
+
+### External Flash Drive
+
+Removable storage device that connects to a USB port.
+
+These use the same type of non-volatile memory chips as SSDs and do not require power to maintain the data.
+
+![](_assets/internal-components60.png)
+
+![](_assets/internal-components61.png)
+
+
+To install a drive internally in a computer, the connection interface on the drive must be the same as the controller on the motherboard.
+
+Motherboards support different types of interfaces.
+
+### Computer Memory Hierarchy
+
+Source: https://en.wikipedia.org/wiki/Memory_hierarchy
+
+<!-- 
+## Exercises
+
+## Knowledge check
+
+## Additional resources -->
 
 
 </section>

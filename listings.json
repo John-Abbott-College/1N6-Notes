@@ -7,7 +7,8 @@
     "listing": "/topics/hardware/index.html",
     "items": [
       "/topics/hardware/introduction-to-computers.html",
-      "/topics/hardware/external-components.html"
+      "/topics/hardware/external-components.html",
+      "/topics/hardware/internal-components.html"
     ]
   },
   {
@@ -26,7 +27,8 @@
     "listing": "/topics/all-lectures.html",
     "items": [
       "/topics/hardware/introduction-to-computers.html",
-      "/topics/hardware/external-components.html"
+      "/topics/hardware/external-components.html",
+      "/topics/hardware/internal-components.html"
     ]
   },
   {
