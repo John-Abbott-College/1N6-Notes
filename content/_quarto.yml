@@ -21,7 +21,7 @@ website:
         href: about/this-site.qmd
 
   navbar:
-    logo: "_assets/icon-lightbg.svg"
+    logo: "_assets/icon-darkbg.svg"
     left:
       - index.qmd
       - text: "Syllabus"
@@ -45,8 +45,9 @@ format:
     date-modified: last-modified
     highlight-style: a11y
     theme: 
-      dark: [solar, _assets/css/customizations-dark.scss]
-      light: [cosmo, _assets/css/customizations-light.scss]
+      dark: darkly
+      light: flatly
+    fontsize: 16px
     lightbox:
       match: auto
       effect: fade

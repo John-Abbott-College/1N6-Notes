@@ -67,3 +67,11 @@ Response time is important for a smooth image and is measured in milliseconds. T
 
 - Uses a grid of mirrors
 - One light source that goes through a colour wheel and hitting this matrix of mirrors which will give a wide range of colours. 
+
+# Internal components
+
+## Case
+- What is static electricity?
+Electric charge imbalance between various objects which causes a transfer of electrons which could cause damage to electronic components.
+- How is the case protecting from that?
+It grounds the components by being made of conductive material (usually metal) and being connected to the ground pin of the power supply. This ensures that any static charge is safely discharged to the ground instead of going through the components.

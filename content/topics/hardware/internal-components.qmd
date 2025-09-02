@@ -1,5 +1,5 @@
 ---
-title: Introduction to Internal Components
+title: Internal Components
 subtitle: Explains the most important internal components of desktop computers. Processing, memory, storage, and communication.
 date: 2025-09-02
 draft: true
@@ -23,7 +23,8 @@ The **system components** of a computer are responsible for the following behavi
 - Main needs:
   - __store__  information
   - __process__  information
-  - __retrieve __ information
+  - __retrieve__ information
+
 - Auxiliary needs:
   - protection from elements/interference
   - source of electrical power
@@ -32,78 +33,86 @@ The **system components** of a computer are responsible for the following behavi
   - communication between components
   - tiers of storage/processing specialized for different purposes
 
-Here are system components that fulfil these needs:
 
-* Case
-* Power Supply
-* Motherboard
-  * Chipset
-  * Buses
-* Connectors
-* Cooling Devices
-* Processor (CPU)
-* Graphics processor (GPU)
-* Memory (RAM)
-* Storage Devices (CD, HDD, SSD, NVME/M2)
+Many components will fulfil these needs. Here is a list of the components inside the system unit which we will learn about:
 
-We will learn about all of these components this week!
+1. [Case](#case-🧊)
+2. [Power Supply](#power-supply-(psu-⚡))
+3. [Motherboard](#motherboard-📟)
+4. [Internal Connectors](#internal-connectors)
+5. [Cooling Devices](#cooling-devices-🪭)
+6. [Processor (CPU)](#cpu-🧠)
+7. [Graphics processor (GPU)](#graphics-cards-(gpu-🎨))
+8. [Memory (RAM)](#main-memory-(ram-📋))
+9. [Storage Devices (CD, HDD, SSD, NVME/M2)](#storage-devices-💾)
+
 
 ## Definitions
 
 When discussing components of any complicated machine, we should try to understand the following about those components:
 
-### Make/model
+### Make/Model
 
-__Make/model__ is the brand and product name of the component.
-    * E.g.  __Hyundai__   __Accent__  (make = Hyundai, model = Accent)
+* The make and model refer to the brand and specific product name of a component.
 
-Why it’s important: Who constructs these components? Are their multiple different versions of this component made by the same manufacturer? Why?
+> For example: Hyundai Accent — where Hyundai is the make (manufacturer), and Accent is the model (product).
+
+Why it matters:
+
+* Who manufactures the component?
+* Are there multiple versions of this model produced by the same brand?
+* What distinguishes one version from another?
+
 
 ### Properties
 
-Properties are the  __quantitative__  (numeric) and  __qualitative __ (non-numeric) traits of the component that can be compared with alike components
-  * Quantitative e.g.: the Fuel Efficiency of the 2009 Hyundai Accent is  __29 MPG __ (miles per gallon)
-  * Qualitative e.g: The Hyundai Accent is a hatchback, not a sedan
+* Properties describe the quantitative (numerical) and qualitative (descriptive) characteristics of a component that can be compared with similar components.
 
-Why it’s important:
-  * what is the expected performance of this component?
-  * Is their a cost/benefit for choosing a component with better suited properties than other components?
-  * Etc.
+> Quantitative example: The 2009 Hyundai Accent has a fuel efficiency of 29 MPG (miles per gallon).
+Qualitative example: The Hyundai Accent is a hatchback, not a sedan.
 
-These two ideas (make/model, properties) will vary significantly from component to component. You will need to know these ideas for all of the components we discuss today.
+Why it matters:
 
-## Case
+* What performance can be expected from this component?
+* Is there a cost-benefit advantage to choosing a component with more suitable properties?
+* How do these traits affect compatibility, efficiency, or user experience?
 
-![Figure caption.](_assets/internal-components2.png)
+These two concepts—make/model and properties—will vary widely depending on the component.
+Understanding both is essential for every component we’ll discuss today.
+
+## 1. Case 🧊
+
+![Computer case helping air circulation inside the system unit. Source: Voltcave](_assets/internal-components2.png)
 
 * Provides protection and cooling for the internal components.
-* Also prevents damage from static electricity (components grounded via attachment to case).
+* Also prevents damage from __static electricity__
+> Question: What is static electricity? How is the case projecting from that?
 * Usually made of plastic, steel or aluminum.
-* Fans move air through the case:
+* Helps the fans move air through all components:
   * to replace warm air with cold air to keep components at stable temperatures
   * to prevent build-up of dust
-  * There exist many guides/studies for optimal airflow. E.g.  _[https://voltcave.com/pc-airflow-guide/](https://voltcave.com/pc-airflow-guide/)_
+  * There exist many guides/studies for optimal airflow. E.g.  _[Voltcave Guide](https://voltcave.com/pc-airflow-guide/)_
 
-## Power Supply (PSU)
+## 2. Power Supply (PSU) ⚡
 
-__Main purpose: __ Converts AC power (alternating current) from wall socket to DC power (direct current). Direct current (0 or 5V) is used to power digital circuits.
+__Main purpose:__ Converts AC power (alternating current) from wall socket to DC power (direct current). Direct current (0 or 5V) is used to power digital circuits.
 
-- Note: PSU have their own fans: Energy conversion releases a lot of heat!
-* Computers can only tolerate slight fluctuations in power without  __needing to shut down__
-* Important:  __Never open a power supply!__  The capacitors contained within can keep a dangerous high voltage, high power charge long after being unplugged.
+* Computers can only tolerate slight fluctuations in power without  __needing to shut down!__. This is why we need to convert the electric current from the providers to direct current.
+* PSUs have their own fans because energy conversion releases a lot of heat!
+* ⚠️ __Never open a power supply!__  The capacitors contained within can keep a dangerous high voltage, high power charge long after being unplugged.
 
 ::: {layout-ncol=2}
 
-![Figure caption.](_assets/internal-components3.jpg)
+![Power Supply rated "Gold"](_assets/internal-components3.jpg)
 
-![Figure caption.](_assets/internal-components4.png)
+![Regular Power Supply.](_assets/internal-components4.png)
 
 :::
 
-![Figure caption.](_assets/internal-components5.gif){width=66% fig-align="left" fig-alt="alt text."}
+![Difference between AC vs DC current.](_assets/internal-components5.gif){width=80% fig-align="left" fig-alt="alt text."}
 
 
-### PSU Connectors
+### 2.1 PSU Connectors 🔌🔋
 
 * Most power supply connectors are : 20 + 4 pins
 * Usually made up of wires of various colors:
@@ -112,27 +121,44 @@ __Main purpose: __ Converts AC power (alternating current) from wall socket to
   * Orange 3.3V
   * Other colors may be ground 0V
 
-![Figure caption.](_assets/internal-components7.png){width=66% fig-align="left" fig-alt="alt text."}
+![Usual PSU connectors](_assets/internal-components7.png){width=66% fig-align="left" fig-alt="alt text."}
 
-### PSU Ratings
+### 2.2 PSU Ratings 🏅
 
-__Useful for Assignment 1__
+Not all PSUs efficiently convert AC to DC power!
 
-PSU Ratings:
-  * __Wattage__  (amount of power delivered, must be greater than the sum of power required by all parts, some power supplies can provide more power than others)
-  * __Efficiency__  (1st + 2nd Laws of thermodynamics: 100% power input cannot be converted to 100% power output; some power supplies have higher efficiency ratings than others)
-  * For more detailed explanation:  _[https://www.newegg.com/insider/how-to-choose-a-pc-power-supply-buying-guide/](https://www.newegg.com/insider/how-to-choose-a-pc-power-supply-buying-guide/)_
+To pick the right power supply for your machine, you must firstly know what's the wattage required by your system.  For this you might need to add all the internal components into the [Wattage calculator](https://www.newegg.com/tools/power-supply-calculator?cm_sp=NeweggInsider-_-BuyingGuides-_-ChoosePSU) which will then provide an estimate of the load wattage of this machine. 
+> For example, if you’re building a PC with an Intel Core i7-11700K CPU, an Nvidia GeForce RTX 3070 GPU, 16 gigabytes (GB) of RAM made up of two 8GB sticks, a 1TB solid-state drive (SSD), and a 1TB 7200RPM hard disk drive (HDD), then 512 watts of power would be recommended. 
 
-### Uninterruptible Power Supply
+#### 80 Plus Standard
+The 80 Plus standard was created to promote efficient enery use of a computer. When selecting a power supply, you might see that many suppliers will carry the 80 Plus certification labels. The efficiency of a power supply gives the ratio of AC power required from an electrical outlet to the useful power converted to DC to be used by a computer (the load wattage). 
+> For example: a 75% efficient power supply requires 100W of AC input to provide 75 W of DC load wattage output to a computer. dissipating the remaining 25 W in as heat. 
 
-In the case of a power outage, an  __Uninterruptible Power Supply (UPS)__  can keep a computer running for a few minutes to several hours depending on the sophistication of the UPS. See  _[https://www.wikihow.com/Buy-and-Use-an-Uninterruptible-Power-Supply](https://www.wikihow.com/Buy-and-Use-an-Uninterruptible-Power-Supply)_  for an example.
+In the North America, the outlet voltage is roughly 115 V. The following table summerizes the efficiency levels for that voltage.
+
+| % of Rated Load  | 10%  | 20%  | 50%  | 100% |
+| ---------------- | ---- | ---- | ---- | ---- |
+| 80 PLUS          | -    | 80%  | 80%  | 80%  |
+| 80 PLUS Bronze   | -    | 82%  | 85%  | 82%  |
+| 80 PLUS Silver   | -    | 85%  | 88%  | 85%  |
+| 80 PLUS Gold     | -    | 87%  | 90%  | 87%  |
+| 80 PLUS Platinum | -    | 90%  | 92%  | 89%  |
+| 80 PLUS Titanium | 90%  | 92%  | 94%  | 90%  |
+
+After figuring out the required wattage for your machine, you can then calculate the input wattage required by the PSU to reach the desired load wattage of your machine. 
+
+
+* For more detailed explanation:  _[How to Choose a Power Supply](https://www.newegg.com/insider/how-to-choose-a-pc-power-supply-buying-guide/)_
+
+
+
+### 2.3 Uninterruptible Power Supply
+
+In the case of a power outage, an  __Uninterruptible Power Supply (UPS)__  can keep a computer running for a few minutes to several hours depending on the sophistication of the UPS. See  _[Uninterruptible Power Supply](https://www.wikihow.com/Buy-and-Use-an-Uninterruptible-Power-Supply)_ for an example.
 
 It’s basically a large battery that keeps charge during normal operation, and powers a computer using its stored charge when the building’s power is cut off.
 
-We will talk more about uninterruptible power supply when we start speaking about server hardware.
-
-
-## Motherboard
+## 3. Motherboard 📟
 
 Motherboards connect all the major components of the computer: the CPU, RAM, Expansion ports, etc.
 
@@ -146,7 +172,7 @@ Motherboards connect all the major components of the computer: the CPU, RAM, Exp
 ![Motherboard form factors, from largest to smallest.](_assets/internal-components9.png)
 
 
-### Form Factors
+### 3.1 Form Factors
 
 * **AT**
   * Invented by IBM in early 1980s, now obsolete.
@@ -170,28 +196,26 @@ Motherboards connect all the major components of the computer: the CPU, RAM, Exp
   * Commonly used for embedded systems and specialized devices such as routers.
   * Require very little power, therefore produce less heat.
 * __Proprietary__
-  * Some computer manufacturers make motherboards that work only with their cases.
+  * Some computer manufacturers make motherboards that work only with their cases. (Ahemm...🍏) 
   * Services and upgrades usually need to be handled by authorized dealers.
   * Often hard to get replacement parts and they are usually expensive.
 
-### I/O Ports
+### 3.2 I/O Ports
 
-You'll notice that the I/O Ports (input/output) on the mother board are always located around the same area.
+You'll notice that the I/O Ports (input/output) on the mother board are always located around the same area. This is to keep certain consistency across manufacturer and regardless of the form factors.
 
-This is to keep certain consistency across manufacturer and regardless of the form factors
-
-![Figure caption.](_assets/internal-components10.png){width=66% fig-align="left" fig-alt="alt text."}
+![I/O Ports location standard accross manufacturer and form factors.](_assets/internal-components10.png){width=66% fig-align="left" fig-alt="alt text."}
 
 
-### Expansion Slots
+### 3.3 Expansion Slots
 
 Let’s have a closer look at what we call expansion slots.
 
-Expansion slots are ports inside a computer found on the motherboard. They provide the possibility to expand the hardware of your PC.
+**Expansion slots** are ports inside a computer found on the motherboard. They provide the possibility to expand the hardware of your PC.
 
 For example, you may want to install a network card, a sound card, and most commonly, a video card.
 
-![](_assets/internal-components17.png)
+![Expansion slot](_assets/internal-components17.png)
 
 ---
 
@@ -212,17 +236,17 @@ In 2024 __: PCI __ and  __PCIe __ are the common standards that cover all featur
 
 ::: {layout-ncol=2}
 
-![Figure caption.](_assets/internal-components18.png)
+![Network Interfact Card](_assets/internal-components18.png)
 
-![Figure caption.](_assets/internal-components19.png)
+![NVidea Video Card](_assets/internal-components19.png)
 
-![Figure caption.](_assets/internal-components20.gif)
+![Multiple expansion slots](_assets/internal-components20.gif)
 
-![Figure caption.](_assets/internal-components21.jpg)
+![Types of expansion slots. Source: [PC Mag](https://www.pcmag.com/encyclopedia/term/isa-bus)](_assets/internal-components21.jpg)
 
 :::
 
-### CPU Socket
+#### 3.4 CPU Socket
 
 Let’s have a closer look at the CPU Socket, which rests in the motherboard. This is where the CPU will sit.
 
@@ -235,7 +259,7 @@ Let’s have a closer look at the CPU Socket, which rests in the motherboard. Th
 :::
 
 
-### How to Connect a CPU?
+##### How to Connect a CPU?
 
 CPU connection on the motherboard is known as the CPU socket.
 
@@ -250,23 +274,16 @@ The CPU is connected to the motherboard in one of two ways:
 
 ::: {layout-ncol=2}
 
-![Figure caption.](_assets/internal-components24.png)
+![Pin Grid Array – PGA](_assets/internal-components-cpu-lda.png)
 
-![Figure caption.](_assets/internal-components25.png)
-
-![Figure caption.](_assets/internal-components26.png)
-
-![Figure caption.](_assets/internal-components27.gif)
-
-![Figure caption.](_assets/internal-components28.png)
+![Land Grid Array – LGA](_assets/internal-components-cpu-pga.png)
 
 :::
-
 
 ---
 
 
-## Internal Connectors
+## 4. Internal Connectors 🔌
 
 There are a variety of connectors used to connect components to the motherboard. Two main purposes:
 
@@ -281,21 +298,16 @@ Most connectors are  __keyed__  (can only be inserted one way). Note: Always che
 
 ::: {layout-ncol=2}
 
-![Figure caption.](_assets/internal-components11.png)
 
-![Figure caption.](_assets/internal-components12.png)
+![SATA Power Cables](_assets/internal-components12.png)
 
-![Figure caption.](_assets/internal-components13.png)
+![SATA 3 Cables for hard drives with angle connectors](_assets/internal-components15.png)
 
-![Figure caption.](_assets/internal-components14.png)
-
-![Figure caption.](_assets/internal-components15.png)
-
-![Figure caption.](_assets/internal-components16.png)
+![PCIe (for Video cards).](_assets/internal-components16.png)
 
 :::
 
-## CPU
+## 5. CPU 🧠
 
 The CPU Most important element of the computer.
 
@@ -316,7 +328,7 @@ We'll have a lecture dedicated to the CPU since it is so complicated.
 ![Figure caption.](_assets/internal-components30.png)
 
 
-## Cooling Devices
+## 6. Cooling Devices 🪭
 
 The flow of current between and within electronic components generates heat. Some devices are particularly powerful heat-generators, due to the large current they draw:
   * CPUs typically come with their own cooling device
@@ -348,7 +360,7 @@ Occasionally video cards or other components have their own fans to cool them.
 ![Figure caption.](_assets/internal-components32.jpg)
 
 
-## Main Memory (RAM)
+## 7. Main Memory (RAM) 📋
 
 Referred to as RAM (Random Access Memory). They're connected to RAM slots on the motherboard:
 
@@ -399,7 +411,7 @@ There are four main properties of RAM to know:
 __NOTE: Motherboards are usually compatible with only ONE generation of RAM. If you have a motherboard designed for DDR3, it cannot use DDR4 or DDR5.__
 
 
-## Graphics Cards (GPU)
+## 8. Graphics Cards (GPU) 🎨
 
 Also known as Video cards or Graphical Processing Units
 
@@ -428,7 +440,7 @@ GPU cannot replace the CPU because their architecture is different and meant for
 ![Figure caption.](_assets/internal-components38.png){width=66% fig-align="left" fig-alt="alt text."}
 
 
-## Storage Devices
+## 9. Storage Devices 💾
 
 Storage devices store data permanently. Some are installed inside the case (e.g. hard drive); Some are removable and portable (e.g. external flash drive).
 
@@ -569,9 +581,9 @@ Motherboards support different types of interfaces.
 
 Source: https://en.wikipedia.org/wiki/Memory_hierarchy
 
-
+<!-- 
 ## Exercises
 
 ## Knowledge check
 
-## Additional resources
+## Additional resources -->
