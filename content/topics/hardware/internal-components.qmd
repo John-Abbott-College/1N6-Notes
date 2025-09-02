@@ -2,7 +2,6 @@
 title: Internal Components
 subtitle: Explains the most important internal components of desktop computers. Processing, memory, storage, and communication.
 date: 2025-09-02
-draft: true
 ---
 
 ![The major internal components of desktop computers. Image source: TBA](_assets/internal-components0.gif)
@@ -306,6 +305,7 @@ Most connectors are  __keyed__  (can only be inserted one way). Note: Always che
 ![PCIe (for Video cards).](_assets/internal-components16.png)
 
 :::
+<!--
 
 ## 5. CPU 🧠
 
