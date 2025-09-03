@@ -409,7 +409,7 @@
     "href": "topics/hardware/internal-components.htm#lesson-overview",
     "title": "Internal Components",
     "section": "Lesson overview",
-    "text": "Lesson overview\nThe system components of a computer are responsible for the following behaviors:\n\nMain needs:\n\nstore information\nprocess information\nretrieve information\n\nAuxiliary needs:\n\nprotection from elements/interference\nsource of electrical power\ntemperature management for heat generated\nstructure\ncommunication between components\ntiers of storage/processing specialized for different purposes\n\n\nMany components will fulfil these needs. Here is a list of the components inside the system unit which we will learn about:\n\nCase\nPower Supply\nMotherboard\nInternal Connectors\nCooling Devices\nProcessor (CPU)\nGraphics processor (GPU)\nMemory (RAM)\nStorage Devices (CD, HDD, SSD, NVME/M2)"
+    "text": "Lesson overview\nThe system components of a computer are responsible for the following behaviors:\n\nMain needs:\n\nstore information\nprocess information\nretrieve information\n\nAuxiliary needs:\n\nprotection from elements/interference\nsource of electrical power\ntemperature management for heat generated\nstructure\ncommunication between components\ntiers of storage/processing specialized for different purposes\n\n\nMany components will fulfil these needs. Here is a list of the components inside the system unit which we will learn about:\n\nCase\nPower Supply\nMotherboard\nInternal Connectors\nProcessor (CPU)\nCooling Devices\nMemory (RAM)\nGraphics processor (GPU)\nStorage Devices (CD, HDD, SSD, NVME/M2)"
   },
   {
     "objectID": "topics/hardware/internal-components.htm#definitions",
@@ -519,7 +519,7 @@
     "href": "topics/hardware/internal-components.html#lesson-overview",
     "title": "Internal Components",
     "section": "Lesson overview",
-    "text": "Lesson overview\nThe system components of a computer are responsible for the following behaviors:\n\nMain needs:\n\nstore information\nprocess information\nretrieve information\n\nAuxiliary needs:\n\nprotection from elements/interference\nsource of electrical power\ntemperature management for heat generated\nstructure\ncommunication between components\ntiers of storage/processing specialized for different purposes\n\n\nMany components will fulfil these needs. Here is a list of the components inside the system unit which we will learn about:\n\nCase\nPower Supply\nMotherboard\nInternal Connectors\nCooling Devices\nProcessor (CPU)\nGraphics processor (GPU)\nMemory (RAM)\nStorage Devices (CD, HDD, SSD, NVME/M2)",
+    "text": "Lesson overview\nThe system components of a computer are responsible for the following behaviors:\n\nMain needs:\n\nstore information\nprocess information\nretrieve information\n\nAuxiliary needs:\n\nprotection from elements/interference\nsource of electrical power\ntemperature management for heat generated\nstructure\ncommunication between components\ntiers of storage/processing specialized for different purposes\n\n\nMany components will fulfil these needs. Here is a list of the components inside the system unit which we will learn about:\n\nCase\nPower Supply\nMotherboard\nInternal Connectors\nProcessor (CPU)\nCooling Devices\nMemory (RAM)\nGraphics processor (GPU)\nStorage Devices (CD, HDD, SSD, NVME/M2)",
     "crumbs": [
       "Home",
       "Topics",
