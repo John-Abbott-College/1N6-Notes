@@ -56,7 +56,7 @@
     "text": "All of these devices, except one, would be considered in external component of a modern desktop computer. Which one is not? Figure retrieved from Innovation it solution, original source unknown.",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "External components"
     ]
@@ -69,7 +69,7 @@
     "text": "Introduction\nLast week we learned the basic behaviors that define computers – their ability to store, retrieve, and process information. This means that many simple devices, even non-electronics, can be considered computers.\nThe computers that we mostly are concerned with in the computer science profession, however, are generally complicated electronic devices made of many components. In this class, we are going to learn many of the fundamental components that make up modern computing devices.\nToday, we will start with the external, or peripheral, components of a computer – each of these have their own set of interesting behaviors and properties that are worth understanding.\nMany peripheral components of a computer can broadly be divided into two categories:\n\nInput Devices: devices that accept data and instructions from a user to a computer.\nOutput Devices: devices that present data and information to the user from a computer.\n\nWe will cover many examples of each.",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "External components"
     ]
@@ -82,7 +82,7 @@
     "text": "Lesson overview\nLearn the history, behavior, and important properties of Input and Output devices\n\nInput devices:\n\nKeyboards\nMice\nControllers\nCameras\nTouchscreens\nScanners\n\nOutput devices:\n\nMonitors\nProjectors\nPrinters\nSpeakers",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "External components"
     ]
@@ -95,7 +95,7 @@
     "text": "Input Devices\nInput Devices are devices that accept data and instructions from a user to a computer.\n\nMouse\nUsed to navigate the graphical user interface (GUI). There are many types of mice, distinguished by tracking technology and by use case\nTechnology:\n\nMechanical mice use a ball to measure movement (obsolete now – why?)\nOptical mice use light sources (such as LED, or more precise Laser).1\nLED mice will often have a visible red light and require a non-glossy surface to properly work. Here’s an detailed explanation on how they work.\n\nLaser mice provide higher precision and sensitivity, detecting fine movements and can work on any surface including glass surfaces. However, they are susceptible to sensor acceleration, which causes inconsistent cursor movements based on the speed of movement.\n\nTypes of mouse\n\nGaming mouse: They offers additional buttons. These buttons are sometimes programmable. This is useful in a game and can replace a combination of instructions useful for realtime games.\n\nErgonomic mouse: provides optimum comfort and avoids repetitive strain injuries.\nWireless mouse: Connects to a computer via bluetooth or Wi-Fi, or using a receiver that plugs to the computer via USB.\nMany more.\n\n\n\n\n\n\n\nThe prototype computer mouse Doug Engelbart used in the Mother of All Demos in 1968.\n\n\n\n\n\n\n\nMx Laser Cordless mouse introduced in 2004.\n\n\n\n\n\n\n\n\n\nA4Tech WOP-35 Optical mouse LED introduced in 2002.\n\n\n\n\n\n\n\nMechanical mouse (unknown manufacturer) used in 80s and 90s”\n\n\n\n\n\n\n\nKeyboard\nUsed to enter text commands. Most commonly used is the QWERTY layout (used in typewriters since 1873). Other layouts include QWERTZ (Germany/Switzerland) and AZERTY (France) and DVORAK (more ergonomic keyboard layout for English proposed by August Dvorak).\nVariations include wired or wireless keyboards and numeric keypads. Ergonomic designs are recently becoming more popular.\n\n\n\n\n\n\n\nGoldtouch Adjustable Ergonomic Keyboard.\n\n\n\n\n\n\n\n\n\nMicrosoft Natural Ergonomic Keyboard 4000.\n\n\n\n\n\n\n\n\n\nGoldtouch Numeric Keypad USB.\n\n\n\n\nInput Devices: Others\n\nGamepads or joysticks are used for playing games and running simulations.\nDigital / video cameras and webcams create images and videos.\nBiometric devices use features unique to an individual user (e.g. fingerprint).\nTouchscreens have a pressure-sensitive panel.\nScanners digitize images or documents so they can be stored as files.\nDigital Tablets (sometimes called Digitizers) allow the user to create images or artwork using a stylus.\nMedia card readers read/write data from/to different types of media cards (SD cards, video game cartridges, etc.)\n\n\nActivity: How well Do you Know your keyboard?",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "External components"
     ]
@@ -108,7 +108,7 @@
     "text": "Output Devices\nOutput Devices are devices that present data and information to the user from a computer.\n\nMonitors\nThere are many different types of monitors use different technologies to create an image. However, the principles are the same:\n\nDigital representation of image to display is sent to the monitor\nThe monitor produces each pixel (the smallest element of the screen or “atom” of monitor displays) using some deterministic physical technology\nLight from the monitor reaches us as a useful/pleasing image.\n\nThe following sections are the main technologies used today (from oldest to newest)\n\nCathode Ray Tube (CRT)\nCathode Ray Tube (CRT) monitors are very complicated, very cool, moderately dangerous, and mostly obsolete!\n\nThe most common type of consumer and industry television before ~2010\nBasically: a tungsten coil is heated in a vacuum until it sheds electrons, those electrons are accelerated by an electric field and guided by magnets to hit a phosphor coated glass display to emit light in a pixel grid\nObsolete since today their are lighter, simpler higher resolution technologies\nStill used today for some applications due to zero latency .\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnimation demonstrating the electron beam scanning the phosphorus screen and producing coloured light dots for each pixel. Image Source: Wikipedia\n\n\n\n\n\nPlasma\nPlasma monitors use tiny cells of ionised gas that light up when stimulated by electricity.\n\nOften used in home theatre applications due to accurate video representation.\nHigh levels of brightness, deep black levels and very wide colour range.\nHave shorter life span, susceptible to “screen burn-in” (this is why screensavers are called “screen savers”! Same for CRT).\n\nPros\n\nPlasma cell will produce light that looks good from every angle, it has high refresh rate (videos are smoother)\n\nCons\n\nBUT! Consumes a lot of electricity\nDoesn’t work at high altitudes! (due to the low pressure)\n\n\n\n\nPlasma is a chemical state of molecules when molecules in state of gas are heated up (excited with electric charge). Typical Plasma displays have two glass plates sandwiching hundreds of thousands of cells containing plasma. Two sets of electrodes will provide some charges which will excite the plasma Which will release photons at three different wavelength (either red, green or blue)\n\n\n\n\nLiquid Crystal Display (LCD)\nAn LCD Screen is made up of layers of very thin glass, liquid crystal, metal and dielectrics. Liquid cystal is a modelcule between liquid (not ordered and constant motion) and crystal (ordered fashion). This technology allows for precise control of color without the need to ionise gas with powerful electronics.\n\nCommonly used in flat panel monitors and laptops.\nConsists of a white backlight, two polarizing filters, and liquid crystal solution.\nAn electronic current aligns and controls the crystals so that light can pass through them.\n\nPros\n\nAllow the use of flat screens!\n\nCons\n\nDue to the backlight, black screens are never perfectly black! It always lets some light pass through.\nBecause of the polarizing filters, different viewing angles impact heavily the appearance of the image.\nSomewhat inefficient due to the many layers reducing the brightness of the screen.\n\n\n\n\n\n\n\n\nThe polarizing filter lets only one orientation of the light pass through. An LCD Screen is made up of layers of very thin glass, liquid crystal, metal and dielectrics. The projector beam will emit white light which contains all wavelengths. Liquid crystal is a molecule between liquid and crytal state (ordered vs unordered) which has the characteristics of changing orientation under specific voltage. This allows for a precise control of the passage of light. To transform the white light into colored light, a color filter is placed on the outter face - made of pigments which will absorb all colors execept the color that is passing (red, blue or green). This video provides a full explanation\n\n\n\n\nLight emitting diode (LED)\n\nAn LCD display that uses LED backlighting instead of a white backlight to light the display. It still uses Liquid crystals (LCD technology). The brightness of each RGB LED is controlled programmatically to produce each pixel.\n\nPros\n\nThinner (no layers), lighter and brighter, and displays better contrast\nLower power  consumption.\nBetter representation of blacks (compared to original LCDs)\nImproved color filters using quantum dots, which creates vibrant colors.\nHave become the most affordable types of Monitors.\nLEDs backlight lasts for very long making them less susceptible to burn-in compared to OLED screens.\n\nCons\n\nNot yet a perfect representation of black!\nThe individual light diodes level of light is not controlled, it’s still requires liquid crystals to modulate the light.\nThis means that polarized light is still used reducing the viewing angles compared to OLED screens.\n\n\n\n\n\n\n\n\nLED Grid used for backlighting of each individual pixel. -\n\n\n\n\nOrganic LED (OLED)\nOLED displays are similar to LED, but no backlighting required – the organic material used to create these displays emits light when an electrical current is applied.\n\nSimilar to LED, but no backlighting required – the material used to create these displays emits light when an electrical current is applied .\n\nPros\n\nAllows for perfect representation of dark colors unlike all other monitor technologies. Also allows for flexible and transparent monitors\n\nCons\n\nMore expensive to produce\nMore susceptible to screen-burn-in than LCD or LED (but better than Plasma and CRT in this respect)\n\nHere’s a great video (8 mins) explaining both physical and software technologies required to make the above monitors work.\nWith LCD, LED, and OLED, we finally get to the most modern monitor technologies. These are used in our labs, most computers, laptops. They’re ordered here approximately in order of lowest (LCD) -&gt; highest (OLED) quality, though pros and cons exist for each.\nSee here for more information: https://en.wikipedia.org/wiki/Comparison_of_CRT,_LCD,_Plasma,_and_OLED_displays.\n\n\n\nMetrics for choosing the right monitor\nThe first step is to define how the monitor will be used: personal vs. professional use, gaming, graphic design, content creation, etc. You should look for a monitor that meets your needs based on a few common metrics:\n\nResolution: Indicates how many pixels are used to display an image and how small they are. Higher-resolution monitors (e.g., 4K) offer sharper and more detailed images.\nRefresh Rate: Refers to how many times per second the display updates the image, measured in hertz (Hz), such as 60Hz. It is closely related to the frames per second (FPS) that the computer’s graphics card can output.\nColor Accuracy: Describes how accurately the display reproduces colors. There are various standards to measure color accuracy, but this can be a somewhat subjective criterion depending on the use case.\nBrightness: Measures the intensity of light emitted by the display, expressed in nits. Optimal brightness levels range from 100–300 nits for indoor use and 400–700 nits for outdoor use.\nContrast: Indicates the difference in intensity between the brightest whites and the darkest blacks on the screen. It is typically expressed as a ratio (e.g., 1000:1). Good contrast enhances image sharpness, especially around edges and areas with opposing colors.\n\n\n\nDisplay Technologies Summary\n\n\n\n\n\n\n\n\n\n\nFeature\nPlasma\nLCD (CCFL backlight)\nLED (LCD with LED backlight)\nOLED\n\n\n\n\nLight Source\nIonized gases excite phosphors (self-light)\nCold Cathode Fluorescent Lamps (CCFL) backlight\nLight Emitting Diodes (LED) backlight\nSelf-emitting organic pixels (no backlight)\n\n\nThickness\nBulky, heavy\nThicker than LED\nThinner, lighter than LCD\nUltra-thin, even flexible\n\n\nBrightness\nHigh, but reflective in bright rooms\nModerate\nHigh, adjustable\nHigh, but may degrade over time\n\n\nContrast Ratio\nVery good (deep blacks, but not infinite)\nLower (backlight bleed)\nBetter than LCD, especially with local dimming\nExcellent (true blacks, infinite contrast)\n\n\nViewing Angles\nVery wide\nLimited\nBetter than LCD but not as good as Plasma/OLED\nExcellent, wide and consistent\n\n\nColor Accuracy\nVivid, rich colors\nGood, but limited by backlight\nBetter than LCD\nExcellent, most accurate and vibrant\n\n\nRefresh Rates\nVery fast (good for motion, sports)\nSlower\nFaster than LCD\nVery fast\n\n\nPower Use\nHigh (power-hungry, generates heat)\nHigher than LED\nLower (more efficient than LCD & Plasma)\nEfficient for dark scenes; higher on full bright screen\n\n\nBurn-in Risk\nHigh\nVery low\nVery low\nMedium (improved but possible)\n\n\nLifespan\nShorter (phosphors fade)\nLong\nLong\nMedium to long (organic material degrades)\n\n\nPrice\nExpensive (when available)\nCheapest\nMid-range\nMost expensive\n\n\nCurrent Status\nObsolete (no longer made)\nRare now, replaced by LED\nMost common today\nPremium, used in high-end TVs, monitors, smartphones\n\n\n\n\n\n\n\nPrinters\nPrinters take data from a computer and generate output on paper: Basic principles\n\nSimilar to monitor (high quantity of small, well placed “pixels” → the visual quality of a coherent image)\nRather than orienting light photons on a screen, printers deposit liquid stains on to paper. The physical setup is different, but the same principles are at work.\n\n\n\n\nA high enough quantity of toasted bread produces the qualitative impression of a human eye in this “piece” of art. Printers (and monitors) use much higher quantities of “pixels” than depicted here!\n\n\n\nDot-matrix printers\n\nUses print heads containing pins which produce patterns of dots on the paper by mechanical impact (pressing).\nInexpensive and typically print at a speed of 100 - 600 characters per second.\n(Optional) See https://en.wikipedia.org/wiki/Dot_matrix_printer for more detail on history and technology\nWhile still in use for particular applications (printing receipts for e.g.), these are now obsoleted by ink-jet printers.\n\n\n\nInk-jet printers\n\n\n\n\n\n\n\nInk-jet printer technology. This animation shows how droplets are pushed through the nozzle of the printing head\n\n\n\nUses tiny droplets of ink to produce images.\nHeat is applied to an ink reservoir, which pushes ink bubbles through a nozzle in a controlled manner.\nThe ink liquid droplets are smaller in diameter than a human hair! Many of these added together produce the quality of a coherent image.\nQuieter than dot-matrix, and also provide better speed and higher quality.\n\n\n\n\n\n\n\nInk-based color printer.\n\n\n\n\n\n\n\nInk jet cartridge operation. Image source: youtube.com\n\n\n\n\n\n\n\nLaser Printers\n\n\n\nLaser Printer. This animation shows how the ink powder sticks to the rotating drum. The drum contains a special coating to which allows the toner (ink powder) to stick. A laser beam then conveys information to the drum, neutralizing and detaching some toner. As the paper rolls by the drum, the toner is transferred onto the paper. A hot roller then bonds toner to the paper.\n\n\n\nExpensive when they were initially introduced.\nProduce high-quality output quietly at a high speed.\nProduces images by directing a laser beam at a mirror which bounces the beam onto a drum.\n\n\n\n\n\n\n\n\nLaser Printer\n\n\n\n\n\nOther output devices\n\nProjectors\nSpeakers\nHeadphones",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "External components"
     ]
@@ -121,7 +121,7 @@
     "text": "Connectors\nConnectors are how to get the computer to talk to all these output devices!\n\nCables\nSome technical terms:\n\nCable (electric) : The insulated copper wire that carries electrical/digital signals from devices to/from computers\nCable (optical) : The insulated glass tube that carries digital signals in the form of light between devices and computers\nPort : The slot where the insertable end of USB cable is connected to the computer\n“Male” / “Female” cable ends : Distinguishing between the insertable end and the receptacle end for cables\nConverter : A device that allows different standards/types of connectors to be used together\n\n\nElectrical cables\nTransmits an electrical signal on a conducting wire, insulated to protect the signal/surroundings\n\n\n\nOptical cables\nTransmits a signal in the form of light. Very fast! (speed of light in glass).\n\nA short paper (5 pages) comparing the two cable technologies in more detail: Fibre Optics vs Copper Cabling: Understanding the Differences\n\n\n\nAnalog versus Digital signal cables\n\nAnalog cables carry a continuous and fluctuating electrical signal representing the original penomena (example sound waves).\nDigital cables transmit a binary discrete (sequence of 1 or 0)\n\n\n\nUSB\n\nUniversal Serial Bus is used to connect most modern devices to computers.\nBack in the day, mice/keyboards/external storage, speakers, etc., all had different cables. These have now been mostly unified under the USB standard.\nUSB connectors can transmit both power (e.g. charging phones) and information (data). Despite being “Universal” there are an incredible number of USB types.\n\n\n\n\nDifferent types of USB connectors\n\n\n\n\nUSB Standards\nUSB “Number” Standards determines the transmission speed & power\n\n🐢 USB 2 (slower, less power)\n🏎️ USB 3 (faster, more power)\n🚀 USB 4 (super fast, high power)\n\nUSB “Letter” Standards refer to the physical design of the connector and the port\n\ne.g. USB C and USB A are incompatible interfaces, cannot be interchanged.\n\n\n\n\nDifferent types of USB standards.\n\n\n\n\n\nNewer standards are backwards compatible (e.g. USB 3.1 cable works in USB 1.1 port at USB 1.1 speed/power)\n\n\n\n\n\nAudio\nA headphone jack is a port into which you plug your headphones. Sometimes called AUX, audio jack or phone jack. The plug, on the other hand,is the part at the end of your headphones’ cable that is inserted into the jack. Most commonly the standard headphone jack (TSR connector). Available in several sizes, most commonly 3.5mm or ⅛” mini audio jack. Can be color coded - microphone (pink), speaker (green).\n\n\n\n\n\n\nHeadphone Jack vs Plug\n\n\n\n\n\n\n\nVarious sizes of TSR connector (headphone jack)\n\n\n\n\n\nFor higher-end audio, we can use fiberoptic cables as these can transmit larger amounts of data more quickly, which is required for producing a high-quality audio signal.\n\n\nVideo\n\n\n\n\n\n\n\nDifferent types of video cables\n\n\nVGA cable is analog signal cable used for computer monitors. It had 15 pins arranged in 3 rows. It’s a low resolution cable and now obsolete. There exist converter cables to connect VGA monitors to newer computers.\nMiniVGA is a variant found on laptops.\nDVI cabe is analog/digital upgrade from VGA, capable of higher resolutions. It isn’t used as much today. MiniDVI and MicroDVI on “thin” laptops.\nS-Video commonly used for DVD players, camcorders and older consoles.\n\n\n\n\n\n\nVGA, DVI, and RCA cables\n\n\n\n\n\n\n\nDVI. Can be distinguished from VGA by noticing that it is a much wider interface with many more pins.\n\n\n\n\n\n\n\n\n\nS-video\n\n\n\n\n\n\n\nA converter from mini-DP to three possible outputs: DP, DVI, and HDMI\n\n\n\n\n\nRCA cables include composite video (yellow) and stereo audio cables (red for right; white/black for left). It’s mainly an analog cable. Component video offers a better picture. &gt; RCA stands for Radio Corporation America.\nHDMI is the new standard for audio and video transmission in a single cable. It transmits digital signal only. It allows for a single cable to carry both audio and video simplifying connections and improving signal quality.\nDisplayPort (and Mini DisplayPort) more commonly used in desktop computers. It transmits digital signal only. It support the transmission of audio, video, and other additional data, as well as multi-channel audio, and support multi monitor configurations. It is  widely used in professional applications and high-performance computing.\n\n\n\n\n\n\nRGA.\n\n\n\n\n\n\n\nHDMI.\n\n\n\n\n\n\n\nDisplay Port.\n\n\n\n\n\n\n\nData\neSATA (External Serial Advanced Technology Attachement) is used internally to connect the hard drive to the motherboard but can also be used for portable hard drives. They provide a high-speed interface for transferring data between the external storage device and the host system. We will see them in the upcoming labs.\n\nThe current trend has seen a decline in the use of eSATA by USB type C.\n\n\n\n\nNetworking\nTelephone cable (RJ11) used for connecting to the internet through DSL/ADSL modems. Standard phone cable has 4 wires; connector has 4 pins. Clip helps to maintain tight connection.\nEthernet (RJ45) is the standard for wired networking. Based on Cat5 twisted pair cable, made from 8 individual wires. Connector looks similar to phone plug but is thicker and wider. Also uses a clip to maintain tight connection.\n\n\n\n\n\n\ntelephone cable RJ11\n\n\n\n\n\n\n\nEthernet cable RJ45",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "External components"
     ]
@@ -134,7 +134,7 @@
     "text": "Knowledge check\n\nWhich statement about computers is INCORRECT?\n\n\nIt is a digital device.\nFor a given input, it reliably produces the same output every time.\nIt contains a CPU.\nComputers always operate with 100% accuracy and never make errors in processing information.\n\n\nWhich statement about Plasma screens is INCORRECT?\n\n\nThey contain ionized gas that lights up when stimulated by electricity.\nThey don’t work well at high altitudes.\nThey are power efficient.\nThey have a wide range of colors.\n\n\nWhich of the following is NOT a common type of monitor for laptops and desktop computers?\n\n\nLiquid crystal display (LCD)\nLight-emitting-diode (LED)\nOrganic light-emitting-diode (OLED)\nCathode ray tube (CRT)\n\n\nWhich of the following display technologies allows for a perfect representation of blacks? (Select all that applies.)\n\n\nCRT\nPlasma\nLCD\nLCD with LED backlight\nOLED\n\n\nWhich of the following display technologies are most susceptable to sreen burn-in. (Select all that applies.)\n\n\nCRT\nPlasma\nLCD\nLCD with LED backlight\nOLED\n\n\nWhich of the following displays allow for the most vivid images? (Select all that applies.)\n\n\nCRT\nPlasma\nLCD\nLCD with LED backlight\nOLED\n\n\nWhich of the following displays have the best viewing angles?\n\n\nCRT\nPlasma\nLCD\nLCD with LED backlight\nOLED\n\n\nWhich of the following displays allows for infinite contrast?\n\n\nCRT\nPlasma\nLCD\nLCD with LED backlight\nOLED\n\n\n\n\n\n\n\nExpand to see the answers\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\na., b., e.\n\n\n\n\n\nb., e.",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "External components"
     ]
@@ -147,7 +147,7 @@
     "text": "Footnotes\n\n\nGood notes on history and explanation of how/why they work “Optical mice use image sensors to image naturally occurring texture [on the surface they are placed]…. These surfaces, when lit at a grazing angle by a light emitting diode, cast distinct shadows that resemble a hilly terrain lit at sunset. Images of these surfaces are captured in continuous succession and compared with each other to determine how far the mouse has moved.” https://en.wikipedia.org/wiki/Computer_mouse https://en.wikipedia.org/wiki/Optical_mouse↩︎",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "External components"
     ]
@@ -199,71 +199,42 @@
     "href": "topics/hardware/index.html",
     "title": "Hardware",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n\n\n\n\n2025-08-20\n\n\n\n\n\n\n\n\n\n\n\n\nExternal components\n\n\nOverview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors\n\n\n\n\n\n\n\n\n2025-08-25\n\n\n\n\n\n\n\n\n\n\n\n\nInternal Components\n\n\nExplains the most important internal components of desktop computers. Processing, memory, storage, and communication.\n\n\n\n\n\n\n\n\n2025-09-02\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Hardware"
-    ]
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n\n\n\n\n2025-08-20\n\n\n\n\n\n\n\n\n\n\n\n\nExternal components\n\n\nOverview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors\n\n\n\n\n\n\n\n\n2025-08-25\n\n\n\n\n\n\n\n\n\n\n\n\nInternal Components\n\n\nExplains the most important internal components of desktop computers. Processing, memory, storage, and communication.\n\n\n\n\n\n\n\n\n2025-09-02\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0"
   },
   {
     "objectID": "topics/operating-systems/index.html",
     "href": "topics/operating-systems/index.html",
     "title": "Operating Systems",
     "section": "",
-    "text": "No matching items\n Back to topReuseCC BY-NC-SA 4.0",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Operating Systems"
-    ]
+    "text": "No matching items\n Back to topReuseCC BY-NC-SA 4.0"
   },
   {
     "objectID": "topics/technical-support/index.html",
     "href": "topics/technical-support/index.html",
     "title": "Technical Support",
     "section": "",
-    "text": "No matching items\n Back to topReuseCC BY-NC-SA 4.0",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Technical Support"
-    ]
+    "text": "No matching items\n Back to topReuseCC BY-NC-SA 4.0"
   },
   {
     "objectID": "topics/data-representation/index.html",
     "href": "topics/data-representation/index.html",
     "title": "Data Representation",
     "section": "",
-    "text": "No matching items\n Back to topReuseCC BY-NC-SA 4.0",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "Data Representation"
-    ]
+    "text": "No matching items\n Back to topReuseCC BY-NC-SA 4.0"
   },
   {
     "objectID": "topics/all-lectures.html",
     "href": "topics/all-lectures.html",
     "title": "All lectures",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nSubtitle\n\n\n\n\n\n\n\n\n2025-08-20\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n\n\n2025-08-25\n\n\nExternal components\n\n\nOverview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors\n\n\n\n\n\n\n2025-09-02\n\n\nInternal Components\n\n\nExplains the most important internal components of desktop computers. Processing, memory, storage, and communication.\n\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0",
-    "crumbs": [
-      "Home",
-      "Topics",
-      "All lectures"
-    ]
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nSubtitle\n\n\n\n\n\n\n\n\n2025-08-20\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n\n\n2025-08-25\n\n\nExternal components\n\n\nOverview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors\n\n\n\n\n\n\n2025-09-02\n\n\nInternal Components\n\n\nExplains the most important internal components of desktop computers. Processing, memory, storage, and communication.\n\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0"
   },
   {
     "objectID": "topics/index.html",
     "href": "topics/index.html",
     "title": "Topics",
     "section": "",
-    "text": "Data Representation\n\n\nAll lectures related to logic & data representation can be found here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHardware\n\n\nAll lectures related to computer hardware can be found here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOperating Systems\n\n\nAll lectures related to operating systems can be found here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTechnical Support\n\n\nAll lectures related to technical support can be found here.\n\n\n\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0",
-    "crumbs": [
-      "Home",
-      "Topics"
-    ]
+    "text": "Data Representation\n\n\nAll lectures related to logic & data representation can be found here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHardware\n\n\nAll lectures related to computer hardware can be found here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOperating Systems\n\n\nAll lectures related to operating systems can be found here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTechnical Support\n\n\nAll lectures related to technical support can be found here.\n\n\n\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0"
   },
   {
     "objectID": "topics/hardware/introduction-to-computers.htm#introduction",
@@ -301,7 +272,7 @@
     "text": "Each of these things is either a computer, or a computer component. Can you identify them all? Click on the image to see everything in higher resolution.",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "Introduction to Computers"
     ]
@@ -314,7 +285,7 @@
     "text": "Introduction\nWe all interact with computers on a daily basis, whether we are aware or not. In fact, it can be said that computers, or computing devices, have been part of human society (in some manner or another) for centuries – even though the computers we typically think of today are relatively recent inventions from the 20th century.\nWhat is a computer? What is it that computers actually do? This lecture is a brief introduction to these questions. The big picture definitions we learn here will be helpful anchors for better understanding the more complicated and detailed components of modern computers that we will need to learn to understand technical support as a science and a profession.",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "Introduction to Computers"
     ]
@@ -327,7 +298,7 @@
     "text": "Lesson overview\n\nUnderstand what a computer is\nCompare and contrast different types of computers by complexity and capabilities\nUnderstand what modern digital computers are\nUnderstand the difference between personal computing devices and servers",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "Introduction to Computers"
     ]
@@ -340,7 +311,7 @@
     "text": "What is a computer?\nA computer is an device designed to:\n\nstore information\nchange that information through human or automated interactions\n\nA computer almost always features: (1) a mechanism for keeping information intact and (2) interactive components to facilitate the modification of that information.",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "Introduction to Computers"
     ]
@@ -353,7 +324,7 @@
     "text": "Is this a computer? Examples\nThe above definition sounds pretty general – and it is! What kinds of things count as computers, or follow the above two properties? Click through the tabs below to see some examples, and a discussion for each on its ability to compute things.\n\nDesktopsLaptopsMobile PhonesGame consolesDigital computersHardware vs SoftwarePersonal vs shared computing: What is a server?ExercisesKnowledge checkAdditional resources\n\n\nDesktop computers, often referred to as the Personal Computer (PC), are a classic example of a modern computing device – these are the computers that we will be using in our labs, and upon which we will focus the majority of our study this semester.\nDesktop computers meet the computer definition above in many ways, but simply: (1) information is stored in disks, and (2) information is modified by human interaction using devices like keyboards and mice, and then modified by the computer using a central processing unit (CPU).\n\n\n\nA desktop computer is composed of external (peripheral) components like monitors, keyboards, and mice for human interaction (input/output), as well as internal (system) components that are usually stored inside of a case or tower like in the image above, to keep sensitive electrical components safe. Image by OpenClipart-Vectors from Pixabay.\n\n\nWe will learn in future lectures the deep gritty detail of how devices like disks, keyboards, mice, CPUs, and others make modern computer magic happen.\n\n\nLaptop computers meet the computer definition above in the exact same way as desktop computers: (1) information is stored in disks (usually smaller in size and weight than desktop disks), and (2) information is modified by human interaction using devices like embedded keyboards and trackpads – though external mice and keyboards can be plugged in – and then modified by the computer using a central processing unit (CPU).\n\n\n\nA laptop computer combines similar external/internal components from desktop computers into one portable container. While the behavior of laptops and desktops is almost identical, the actual components are generally specialized for laptops and cannot be easily interchanged with desktop components. Image by Clker-Free-Vector-Images from Pixabay.\n\n\n\n\nThe first mobile phones were computers in a much more limited sense than desktops, laptops, and modern smart phones – but nonetheless they could store data like contacts, calendars, and even photos on small memory cards, as well as, of course, carry out instructions like connecting to a phone line for calling and texting.\nSmartphones are much more similar to laptops and desktops than they are to their predecessors in the type and complexity of their components, and in the amount of data and processing power that enables them to install applications, run operating systems, and much more.\n\n\n\nTwo decades of evolution of mobile phones, from a 1992 Motorola DynaTAC 8000X to the 2014 iPhone 6 Plus. The change from tactile interfaces (buttons, nontouch screens) to touchscreens for interacting with data on a phone is visible. In addition, the ability to store large amounts of data, even entire operating systems, was introduced with the first “smartphones” of Blackberry and IPhone in the mid 2000s. Image from Wikipedia, image by Jojhnjoy - own work, based on the work of Anders, Public Domain\n\n\n\n\nGame consoles such as PlayStation and Xbox, as well as handheld handheld consoles like Nintendo Switch and Valve Steam Deck, are similar to smartphones in that they technically contain all of the components of a computer, but generally manufactured from proprietary hardware that cannot be interchanged with other computers.\n\n\n\n\n\n\n\n\n\n\n\n\n\nVideo game consoles showed an interesting development in storage technology in the elate 90’s: originally, game data AND user save data would be stored on a writable ROM game cartridge as in the N64 (left). The next generation of systems like Gamecube (right) would provide read-only game data on a CD-ROM disk with writable data being stored on a separate memory card. Images by aerozol from Pixabay. :::\n\n\nNonelectronics?\nEven before there were consumer electronics, there were devices made to store and process data – that is, computers! The following are three different examples of nonelectronic devices that have been used for computation.\n\n\n\n\n\n\n\n\n\n\nAbacus: The world’s first calculator. Large numbers can be represented using a relatively small number of beads. Simple operations like addition and subtraction are simple to perform, but abacuses are even capable of more complex operations like multiplication, division, and square roots. Image by Pearson Scott Foresman, Public domain, via Wikimedia Commons\n\n\n\n\n\n\n\nAntikythera mechanism fragment, dated to 80 BCE. Thought to have been part of a complex system of dozens of wheels and plates, designed by engineers to measure time based on movements of the sun, moon, and other stars and planets known at the time. Retrieved from Wikimedia Commons\n\n\n\n\n\n\n\n\n\nDifference engine diagram. A theoretical computer designed in the 19th century with capabilities similar to modern computers, but using a complex system of gears and pistons to store and process data, rather than small electronic components. Image retreived from Wikimedia Commons\n\n\n\n\n\n\n\nDifference engine implemented and built in 2002 based on the original designs. Image retreived from Wikimedia Commons\n\n\n\n\n\n\n\nComputers within computers?\nIt is possible, and actually quite common, to create computers inside other computers, using the programming capabilities of that computer.\n\n\n\n\n\n\n\n\n\n\n(a) Video from Codeolences on YouTube\n\n\n\n\n\n\n\nFigure 1\n\n\n\nThe above are just some of many devices that are computers in this sense. Appliances like dishwashers/washing machines with cycle settings, handheld electronics like calculators (whether programmable or not), wearables like fitbits, fare gates and metro stops, traffic lights… these are just some of the many devices that work based on computing principles.\n\n\nYou may think the above definition is too general – indeed, in the context of this class, we will almost always be talking specifically about digital computers when we say computer. What is the difference?\nDigital computers have the following two additional properties compared to general computers. They are:\n\nDigital: All the “information” stored is represented by combinations of two different states (0 or 1, i.e., ON or OFF).1\nDeterministic: A given input reliably produces a defined output with every interaction.2\n\nWhen we study the components of computers, the above two properties will allow us to really understand how such devices work and why, as in every case, the device implements these two properties to give us the behavior we need.\n\n\nHardware: The physical components that make up a computer system.\nSoftware: The programs (instructions) that tell the computer (the hardware) what to do.\n\n\nIn the beginning, our focus will be on understanding individual personal computers. Yet, this barely scratches the surface of how computers are used in modern society – we will also need to learn about how many computers can be combined to pool resources and provide services at all times of day, as this is essential to the infrastructure of the internet and a foundational concept in technical support as a profession.\nFor now, we can just know that servers are similar to personal computers, but use specialized hardware that is optimized for being turned on 24/7, for communicating with other servers, and for processing and managing large amounts of data.\n\n\n\nPhoto by Matthieu Beaumont on Unsplash\n\n\nThis is because servers are the necessary infrastructure for running the large popular websites and services many of us use today on a regular basis: Social Media websites like Facebook/Instragram/etc., educational resources like Omnivox/Moodle, online software like Office 365, etc. all run on servers, or on collections of servers, known as server farms.\n\n\nNone for this lecture – stay tuned for the next two lectures!\n\n\nThe following questions invite you to reflect on the key information learned in this lesson. If you can’t answer the question, you can click the corresponding link to review the topic more closely. Future assignments and tests may be based on questions like these:\n\nWhat are the two main properites of computers?\nAre video game consoles computers?\nAre there examples of nonelectonic computers? How do nonelectronic computer compute?\nWhy is binary relevant to computers?\nWhat is the property of computers that means they reliably behave the same way given the same input?\nWhat is the name for the type of computer that is always on, and is specialized for processing large amounts of data and pooling many computing resources in one place?\n\n\n\nThis section contains helpful links to related content. You aren’t required to study these in detail, but it never hurts to learn more.\n\nComputer Basics by GCF Global: We will eventually cover almost all of the material in this free online resource; for now, Parts 1-7 in particular are relevant to what we have learned so far.\n“The Mother of All Demos” This is a 1968 presentation that introduced many of the hardware/graphics concepts we will see today and some we will see in future lectures: the mouse, networking, video conferencing, word documents, hyperlinks, gamer headphones, etc. It is very cool to see the palpable excitement of the 2000+ audience tuning into a passionate presentation of a series of completely new technologies.\nMontréal’s Musée de l’Ordinateur – unfortunately the physical location has been closed since 2022, but the website is still a neat resource for reading on the history of personal computers and their evolution. The author’s bias towards Bill Gates and Windows machines is quite strong (there is much more to the story), but the information provided is reliable and interesting.",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "Introduction to Computers"
     ]
@@ -366,7 +337,7 @@
     "text": "Nonelectronics?\nEven before there were consumer electronics, there were devices made to store and process data – that is, computers! The following are three different examples of nonelectronic devices that have been used for computation.",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "Introduction to Computers"
     ]
@@ -379,7 +350,7 @@
     "text": "Computers within computers?\nIt is possible, and actually quite common, to create computers inside other computers, using the programming capabilities of that computer.",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "Introduction to Computers"
     ]
@@ -392,7 +363,7 @@
     "text": "Footnotes\n\n\nThese digital states are made possible using electrical circuitry. In order to do complex operations with these states, we can use the binary numbering to represent the digital states as a variety of numbers, letters, and other concepts. This digital information can be shared between devices using cables (whether electrical or optical, as we will see)↩︎\nFor one e.g., when you tap your OPUS card on a fare gate, you should expect that it will either let you through (if you have fare) or not (if you don’t). The concept is more general: computer engineering is, in part, the study and practise of making physical interactions with computing devices reliably and predictably produce the same deterministic results under the same physical conditions.↩︎",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "Introduction to Computers"
     ]
@@ -496,7 +467,7 @@
     "text": "The major internal components of desktop computers. Image source: TBA",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "Internal Components"
     ]
@@ -509,7 +480,7 @@
     "text": "Introduction\nIn previous weeks we learned the basic behaviors that define computers – their ability to store, retrieve, and process information. This means that many simple devices, even non-electronics, can be considered computers.\nThe computers that we mostly are concerned with in the computer science profession, however, are generally complicated electronic devices made of many components. In this class, we are going to learn many of the fundamental components that make up modern computing devices.\nWe will continue with the internal, or system, components of a computer – each of these have their own set of interesting behaviors and properties that are worth understanding.",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "Internal Components"
     ]
@@ -522,7 +493,7 @@
     "text": "Lesson overview\nThe system components of a computer are responsible for the following behaviors:\n\nMain needs:\n\nstore information\nprocess information\nretrieve information\n\nAuxiliary needs:\n\nprotection from elements/interference\nsource of electrical power\ntemperature management for heat generated\nstructure\ncommunication between components\ntiers of storage/processing specialized for different purposes\n\n\nMany components will fulfil these needs. Here is a list of the components inside the system unit which we will learn about:\n\nCase\nPower Supply\nMotherboard\nInternal Connectors\nProcessor (CPU)\nCooling Devices\nMemory (RAM)\nGraphics processor (GPU)\nStorage Devices (CD, HDD, SSD, NVME/M2)",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "Internal Components"
     ]
@@ -535,7 +506,7 @@
     "text": "Definitions\nWhen discussing components of any complicated machine, we should try to understand the following about those components:\n\nMake/Model\n\nThe make and model refer to the brand and specific product name of a component.\n\n\n\n\n\n\n\nExample\n\n\n\nHyundai Accent — where Hyundai is the make (manufacturer), and Accent is the model (product).\n\n\nWhy it matters:\n\nWho manufactures the component?\nAre there multiple versions of this model produced by the same brand?\nWhat distinguishes one version from another?\n\n\n\nProperties\n\nProperties describe the quantitative (numerical) and qualitative (descriptive) characteristics of a component that can be compared with similar components.\n\n\n\n\n\n\n\nExample\n\n\n\n\nQuantitative example The 2009 Hyundai Accent has a fuel efficiency of 29 MPG (miles per gallon).\nQualitative example The Hyundai Accent is a hatchback, not a sedan.\n\n\n\nWhy it matters:\n\nWhat performance can be expected from this component?\nIs there a cost-benefit advantage to choosing a component with more suitable properties?\nHow do these traits affect compatibility, efficiency, or user experience?\n\nThese two concepts—make/model and properties—will vary widely depending on the component. Understanding both is essential for every component we’ll discuss today.",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "Internal Components"
     ]
@@ -548,7 +519,7 @@
     "text": "1. Case 🧊\n\n\n\nComputer case helping air circulation inside the system unit. Source: Voltcave\n\n\n\nProvides protection and cooling for the internal components.\nAlso prevents damage from static electricity\n\n\n\n\n\n\n\nQuestion ❔\n\n\n\n\nWhat is static electricity?\nHow is the case projecting from that?\n\n\n\n\nUsually made of plastic, steel or aluminum.\nHelps the fans move air through all components:\n\nto replace warm air with cold air to keep components at stable temperatures\nto prevent build-up of dust\nThere exist many guides/studies for optimal airflow. E.g. Voltcave Guide",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "Internal Components"
     ]
@@ -561,7 +532,7 @@
     "text": "2. Power Supply (PSU) ⚡\nMain purpose: Converts AC power (alternating current) from wall socket to DC power (direct current). Direct current (0 or 5V) is used to power digital circuits.\n\nComputers can only tolerate slight fluctuations in power without needing to shut down!. This is why we need to convert the electric current from the providers to direct current.\nPSUs have their own fans because energy conversion releases a lot of heat!\n\n\n\n\n\n\n\nNever open a power supply!\n\n\n\nThe capacitors contained within can keep a dangerous high voltage, high power charge long after being unplugged.\n\n\n\n\n\n\n\n\nPower Supply rated “Gold”\n\n\n\n\n\n\n\nRegular Power Supply.\n\n\n\n\n\n\n\n\n\n\n\n\nDifference between AC vs DC current.\n\n\n\n2.1 PSU Connectors 🔌🔋\n\nMost power supply connectors are : 20 + 4 pins\nUsually made up of wires of various colors:\n\nYellow 12V\nRed 5V\nOrange 3.3V\nOther colors may be ground 0V\n\n\n\n\n\n\n\n\n\nUsual PSU connectors\n\n\n\n\n2.2 PSU Ratings 🏅\nNot all PSUs efficiently convert AC to DC power!\nTo pick the right power supply for your machine, you must firstly know what’s the wattage required by your system. For this you might need to add all the internal components into the Wattage calculator which will then provide an estimate of the load wattage of this machine.\n\n\n\n\n\n\nExample\n\n\n\nIf you’re building a PC with an Intel Core i7-11700K CPU, an Nvidia GeForce RTX 3070 GPU, 16 gigabytes (GB) of RAM made up of two 8GB sticks, a 1TB solid-state drive (SSD), and a 1TB 7200RPM hard disk drive (HDD), then 512 watts of power would be recommended.\n\n\n\n80 Plus Standard\nThe 80 Plus standard was created to promote efficient enery use of a computer. When selecting a power supply, you might see that many suppliers will carry the 80 Plus certification labels. The efficiency of a power supply gives the ratio of AC power required from an electrical outlet to the useful power converted to DC to be used by a computer (the load wattage).\n\n\n\n\n\n\nExample\n\n\n\nA 75% efficient power supply requires 100W of AC input to provide 75 W of DC load wattage output to a computer. dissipating the remaining 25 W in as heat.\n\n\nIn the North America, the outlet voltage is roughly 115 V. The following table summerizes the efficiency levels for that voltage.\n\n\n\n% of Rated Load\n10%\n20%\n50%\n100%\n\n\n\n\n80 PLUS\n-\n80%\n80%\n80%\n\n\n80 PLUS Bronze\n-\n82%\n85%\n82%\n\n\n80 PLUS Silver\n-\n85%\n88%\n85%\n\n\n80 PLUS Gold\n-\n87%\n90%\n87%\n\n\n80 PLUS Platinum\n-\n90%\n92%\n89%\n\n\n80 PLUS Titanium\n90%\n92%\n94%\n90%\n\n\n\nAfter figuring out the required wattage for your machine, you can then calculate the input wattage required by the PSU to reach the desired load wattage of your machine.\n\nFor more detailed explanation:  How to Choose a Power Supply\n\n\n\n\n2.3 Uninterruptible Power Supply\nIn the case of a power outage, an Uninterruptible Power Supply (UPS) can keep a computer running for a few minutes to several hours depending on the sophistication of the UPS. See  Uninterruptible Power Supply for an example.\nIt’s basically a large battery that keeps charge during normal operation, and powers a computer using its stored charge when the building’s power is cut off.",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "Internal Components"
     ]
@@ -574,7 +545,7 @@
     "text": "3. Motherboard 📟\nMotherboards connect all the major components of the computer: the CPU, RAM, Expansion ports, etc.\n\n\n\nAn ASUS Pro B660M Motherboard. Most motherboards look something like this.\n\n\n\nComposed of various chips all combined into north  and south  bridges\nMain circuit board and controls the electrical pathways (buses) found in a computer.\nThe buses allow data to travel between the various components of a computer.\nVarious form factors, e.g. AT, ATX, LPX, BTX, ITX.\n\n\n\n\nMotherboard form factors, from largest to smallest.\n\n\n\n3.1 Form Factors\n\nAT\n\nInvented by IBM in early 1980s, now obsolete.\nHuge in size (approximately 12 x 13 inches).\nNeeded lots of space for power supply and its various chips.\nLacked external ports, only allowed for monitor and keyboard.\n\nATX\n\nCreated in 1995 to meet the need for more connectors.\nGot off to a slow start but by 1998 became the most common form factor.\nBiggest change to AT was the rear panel with standard set of ports for expansion.\nPower supply position for better airflow, CPU and RAM positioned for easier access.\nVariations 12x9in (full size), 9.6x9.6in ( microATX )\n\nATX and microATX are the most common in personal desktop computers today\n\n\n\nITX\n\nCreated in 2001 to meet the demand for smaller computers.\nITX failed but led to development of smaller form factor (SSF) motherboards.\nMiniITX (6.7x6.7in), NanoITX (4.7x4.7in) and PicoITX (3.8x2.8in)\nCommonly used for embedded systems and specialized devices such as routers.\nRequire very little power, therefore produce less heat.\n\nProprietary\n\nSome computer manufacturers make motherboards that work only with their cases. (Ahemm…🍏)\nServices and upgrades usually need to be handled by authorized dealers.\nOften hard to get replacement parts and they are usually expensive.\n\n\n\n\n3.2 I/O Ports\nYou’ll notice that the I/O Ports (input/output) on the mother board are always located around the same area. This is to keep certain consistency across manufacturer and regardless of the form factors.\n\n\n\n\n\n\n\nI/O Ports location standard accross manufacturer and form factors.\n\n\n\n\n3.3 Expansion Slots\nLet’s have a closer look at what we call expansion slots.\nExpansion slots are ports inside a computer found on the motherboard. They provide the possibility to expand the hardware of your PC.\nFor example, you may want to install a network card, a sound card, and most commonly, a video card.\n\n\n\nExpansion slot\n\n\n\nExpansion slots allow us to increase the functionality of a computer by adding controllers for specific devices (often called adapter cards) e.g. sound, video, NIC (network Interface Card).\n\nPCI used in most computers, commonly used for network interface\nAGP designed to be used by video adapters\nPCIe replaces AGP in newer computers, used for video cards\nISA older, rarely used, 8 or 16 bit\nEISA older, rarely used, 32 bit\nMCA IBM proprietary 32 bit, older, rarely used\nPCI-X 32 bit, can run up to four times faster than PCI\nMiniPCI 32 bit, used by laptops, has three different form factors\n\nIn 2024 : PCI  and PCIe  are the common standards that cover all features required for expansion slots\n\n\n\n\n\n\n\nNetwork Interfact Card\n\n\n\n\n\n\n\nNVidea Video Card\n\n\n\n\n\n\n\n\n\nMultiple expansion slots\n\n\n\n\n\n\n\nTypes of expansion slots. Source: PC Mag\n\n\n\n\n\n\n\n3.4 CPU Socket\nLet’s have a closer look at the CPU Socket, which rests in the motherboard. This is where the CPU will sit.\n\n\n\n\n\n\nThe motherboard…\n\n\n\n\n\n\n\n… and the CPU socket.\n\n\n\n\n\n\nHow to Connect a CPU?\nCPU connection on the motherboard is known as the CPU socket.\nThe CPU is connected to the motherboard in one of two ways:\n\nPin Grid Array – PGA\n\nPins are on the CPU (underside of the processor).\nSocket on motherboard includes holes that line up with the CPU pins.\n\nLand Grid Array – LGA\n\nPins are on the motherboard (on socket) instead of on the processor.\n\n\n\n\n\n\n\n\nPin Grid Array – PGA\n\n\n\n\n\n\n\nLand Grid Array – LGA",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "Internal Components"
     ]
@@ -587,7 +558,7 @@
     "text": "4. Internal Connectors 🔌\nThere are a variety of connectors used to connect components to the motherboard. Two main purposes:\n\nSignals : for communication/data transfer\nPower : not all components connect directly to the power supply, they get power from the motherboard\n\nMost connectors are keyed (can only be inserted one way).\n\n\n\n\n\n\nNote\n\n\n\nAlways check the pins if you have trouble with a connector.\n\n\n\n\n\n\n\n\nQuote\n\n\n\n“If it doesn’t go in like butter, it doesn’t go in at all” – never force a connection! you are likely going to damage the pins.\n\n\n\nExample connectors\n\n\n\n\n\n\nSATA Power Cables\n\n\n\n\n\n\n\nSATA 3 Cables for hard drives with angle connectors\n\n\n\n\n\n\n\n\n\nPCIe (for Video cards).",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "Internal Components"
     ]
@@ -600,7 +571,7 @@
     "text": "5. CPU 🧠\nThe CPU Most important element of the computer.\n\nResponsible for interpreting  and executing  the commands from the software.\ncommunicates instructions for all of the other components of the computer\nWhile the CPU is processing one step of the program, the remaining instructions and the data are stored in a special memory called cache.\n\n\n\n\nA CPU sitting in the CPU socket on the motherboard.\n\n\nWe’ll have a lecture dedicated to the CPU since it is so complicated.\n\nCPU Brands\nIntel: Historically the main CPU manufacturer\nAMD: Relatively recent competitor to Intel\n\n\n\nCPU naming conventions and associated properties.",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "Internal Components"
     ]
@@ -613,7 +584,7 @@
     "text": "6. Cooling Devices 🪭\nThe flow of current between and within electronic components generates heat. Some devices are particularly powerful heat-generators, due to the large current they draw: ::: {.callout-note} - CPUs typically come with their own cooling device - Cooling devices are built into GPUs and Power Supplies :::\nThere are two main types of cooling devices:\n\nFans inside the case increase airflow and removes heat.\nHeat sinks also draw heat away from the CPU core.\n\n\nFans\nThe flow of current between the electronic components generates heat.\nFans inside the case increase airflow and removes heat.\nOccasionally video cards or other components have their own fans to cool them.\n\n\n\n3D model of a computer Fan.\n\n\n\n\nHeat sinks\n\nHeat sinks also draw heat away from the CPU core.\n\nA heat sink is a piece of copper or aluminum that resides between the processor and the CPU fan.\nIt absorbs the heat from the processor and the fan disperses the heat.\n\n\n\n\n\nVariety of heat sinks.",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "Internal Components"
     ]
@@ -626,7 +597,7 @@
     "text": "7. Main Memory (RAM) 📋\nReferred to as RAM (Random Access Memory). They’re connected to RAM slots on the motherboard:\n\n\n\n\n\n\n\nRAM slots.\n\n\nRAM is a collection of integrated circuits (chips). Temporary storage for data and programs that are being accessed by the CPU.\nVolatile memory : contents are erased when the computer is switched off. (or when power is lost)\n\n\n\n\n\n\n\nRAM sticks.\n\n\n\n7.1 Properties\nThere are four main properties of RAM to know:\n\nCapacity:  Total memory (in GB, GigaBytes)\n\nMore RAM means more capacity to hold and process large programs and files.\nMaximum installed is limited by the motherboard and the operating system.\n\nSpeed:  How many operations per second\n\nMany, millions or billions per second\n1MHz = 1 million / second, 1 GHz = 1 billion / second\n\nLatency : How much time delay between communications\nGeneration: See next slides\n\n\n\n7.2 RAM Form Factors\n\nSIMMs (Single In-Line Memory Modules)\n\nHave a single line of connectors.\nNow obsolete.\n\nDIMMs (Dual In-Line Memory Modules)\n\nHave two lines of connectors.\nHave Wider bus (supports 64 bits) 🡪 How can this help? More on this in the coming weeks.\nBecame dominant (no need to state that a memory module is a DIMM).\n\n\n\n\n7.3 RAM Generations\n\n\n\n\n\n\n\nType of RAM\nDescription\n\n\n\n\nSynchronous DRAM (SDRAM)\nDRAM that operates in time with the memory bus.Tied to the system clock like the CPU and the memory controller.Results in very little wasted time.\n\n\nDouble Data Rate SDRAM (DDR)\nDDR transfers data twice as fast as SDRAM.Larger buffer gives it a huge boost.\n\n\nDouble Data Rate 2 SDRAM (DDR2)\nDDR2 decreases noise making it faster than DDR.\n\n\nDouble Data Rate 3 SDRAM (DDR3)\nDDR3 doubles the clock rate of DDR2, consumes less power and generates less heat.\n\n\nDouble Data Rate 4 SDRAM (DDR4)\nDDR4 arrived in 2014 with even faster speeds. (most common RAM type in desktops/laptops today)\n\n\nDouble Data Rate 5 SDRAM (DDR5)\nIntroduced in 2020, is starting to become more widely adopted.\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nMotherboards are usually compatible with only ONE generation of RAM. If you have a motherboard designed for DDR3, it cannot use DDR4 or DDR5.",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "Internal Components"
     ]
@@ -639,7 +610,7 @@
     "text": "8. Graphics Cards (GPU) 🎨\nAlso known as Video cards or Graphical Processing Units\nOne of the most interesting use of expansion slots is the addition of video cards, which contain a special chip called the GPU (Graphical Processing Unit).\nA specialized version of a CPU designed for graphical processing (producing complex output to display on a monitor)\nThe computation needed for graphical processing is generally useful for scientific computing as well (lots of data in parallel)\n\n\n\n\n\n\n\nVideo card location from the outside of the unit tower.\n\n\n\n\n\n\n\n\n\nVideo card (containing the GPU) provides additional video ports.\n\n\n\n\n\n\n\n\n\nFans on the video card itself.\n\n\n\nCPU vs GPU\n\nBoth consume a lot of power and generate a lot of heat\nMore powerful CPUs/GPUs require more powerful power supplies\n\nTDP: __ Thermal Design Power, measures the number of Watts needed to power the device__\n\nBoth have performance measured in  speed __ (operations/second) like RAM__\n\nGPU cannot replace the CPU because their architecture is different and meant for different purposes. GPU is great to parallelize computations! But the GPU is not as versatile as the CPU which has a larger instruction set\n\n\n\n\n\n\n\nDifference between CPU vs GPU internal structures.",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "Internal Components"
     ]
@@ -652,7 +623,7 @@
     "text": "9. Storage Devices 💾\nStorage devices store data permanently. Some are installed inside the case (e.g. hard drive); Some are removable and portable (e.g. external flash drive).\n\n\n\n\n\n\nHard Drive.\n\n\n\n\n\n\n\nSolid State Drive.\n\n\n\n\n\n\n\n\n\nFloppy disk reader (obsolete).\n\n\n\n\n\n\n\nfloppy disks.\n\n\n\n\n\n\n\n\n\nUSB drive.\n\n\n\n\n\n\n\nHP’s fifth-generation of LTO tape drive technology capable of storing up to 3 TB per cartridge.\n\n\n\n\n\n\n\n\n\nMagnetic tape drives used to archive data. They are inexpensive and have high capacity, however they are slow for everyday use.\n\n\n\n\n\n\n\nCD/DVD Drive.\n\n\n\n\n\n\n\nFloppy Drive\nUses 3.5 inch floppy disks (or 5.25 inch floppy disks - older).\nLargely obsolete.\nMagnetic disks store up to 1.44Meg of data.\n\n\n\nFloppy disks plastic casing.\n\n\n\n\n\nA simple floppy disk\n\n\n\n\n\nHard Drive\n\nHard Disk Drive (HDD)\n\nTraditional hard drives.\nUses magnetic-based storage on a moving disk (somewhat like a vinyl player)\nMagnetic hard drives have drive motors that spin the magnetic platters and move the drive heads.\nSpeed measured in revolutions per minute\n\n\n\n\n\nInside a Hard Drive\n\n\n\n\nSolid State Drives (SSD)\n\nDo not have moving parts and use __ semi-conductors__ to store data.\nNon-volatile flash memory chips manage the storage on an SSD, resulting in faster access to data, higher reliability and reduced power usage.\n\n\n\n\n\nSolid State drive\n\n\n\n\n\nTape Drive\nMagnetic tapes are often used for backups or archiving data. Impractical for most individuals, but still used/created to this day! Cost effective when storing more than 1000 TB (lots and lots of data)\n\n\n\nTape drive\n\n\n\n\n\nOptical Drive\n\nUses lasers to read the data on the optical media.\n\nCD (compact disc) 700 Mb\nDVD (digital versatile disc) 4-8 Gb.\nBD (Blu-ray disc) 25-50 Gb.\n\nOptical media can be:\n\nPre-recorded (read only)\nRecordable (write once)\nRe-recordable (read and write multiple times).\n\n\n\n\n\nDVD Drive\n\n\n\n\n\nOptical Drive\n\n\n\n\nInterfaces Types\nInterface Types, in order of oldest to newest\nIDE - Integrated Drive Electronics / Advanced Technology Attachment. - Also called ATA. - Early drive controller interface, originally only supported hard drives up to 540 MB. - Uses a 40 pin connector, and maximum cable length of 46cm (18in).\nEIDE - Enhanced Integrated Drive Electronics (also called ATA-2). - Updated version of IDE, supporting larger drives and direct memory access. - Uses a 40 pin connector.\nPATA - Parallel version of ATA. - Used internally due to maximum cable length of 46cm (18in). - Largely replaced by SATA in newer systems.\nSATA (most commonly used today) - Serial version of ATA, with slimmer and longer cables providing better airflow. - Uses 7-pin connector (less pins means less issues with electromagnetic interference). - SATA hard drives tend to be quieter than IDE drives.\nNote: __ Hot-swapping is the ability to connect and disconnect a device while the computer is on.__\n\n\nExternal Flash Drive\nRemovable storage device that connects to a USB port.\nThese use the same type of non-volatile memory chips as SSDs and do not require power to maintain the data.\n\n\n\nSony 64 Gb USB Drive\n\n\n\n\n\nCruser 4Gb USB Drive\n\n\nTo install a drive internally in a computer, the connection interface on the drive must be the same as the controller on the motherboard.\nMotherboards support different types of interfaces.",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "Internal Components"
     ]
@@ -665,7 +636,7 @@
     "text": "Full disection of a computer 🔬🖥️",
     "crumbs": [
       "Home",
-      "Topics",
+      "Course Notes",
       "Hardware",
       "Internal Components"
     ]
