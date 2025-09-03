@@ -245,7 +245,7 @@ In 2024 __: PCI __ and  __PCIe __ are the common standards that cover all featur
 
 :::
 
-#### 3.4 CPU Socket
+### 3.4 CPU Socket
 
 Let’s have a closer look at the CPU Socket, which rests in the motherboard. This is where the CPU will sit.
 
@@ -305,7 +305,7 @@ Most connectors are  __keyed__  (can only be inserted one way). Note: Always che
 ![PCIe (for Video cards).](_assets/internal-components16.png)
 
 :::
-<!--
+
 
 ## 5. CPU 🧠
 
@@ -315,7 +315,7 @@ The CPU Most important element of the computer.
   * communicates instructions for all of the other components of the computer
   * While the CPU is processing one step of the program, the remaining instructions and the data are stored in a special memory called *cache*.
 
-![Figure caption.](_assets/internal-components29.png)
+![A CPU sitting in the CPU socket on the motherboard.](_assets/internal-components29.png)
 
 We'll have a lecture dedicated to the CPU since it is so complicated.
 
@@ -325,14 +325,15 @@ We'll have a lecture dedicated to the CPU since it is so complicated.
 
 **AMD**: Relatively recent competitor to Intel
 
-![Figure caption.](_assets/internal-components30.png)
+![CPU naming conventions and associated properties.](_assets/internal-components30.png)
 
 
 ## 6. Cooling Devices 🪭
 
 The flow of current between and within electronic components generates heat. Some devices are particularly powerful heat-generators, due to the large current they draw:
-  * CPUs typically come with their own cooling device
-  * Cooling devices are built into GPUs and Power Supplies
+::: {.callout-note}
+- CPUs typically come with their own cooling device
+- Cooling devices are built into GPUs and Power Supplies
 
 There are two main types of cooling devices:
 
@@ -348,7 +349,7 @@ Fans inside the case increase airflow and removes heat.
 
 Occasionally video cards or other components have their own fans to cool them.
 
-![Figure caption.](_assets/internal-components31.jpg)
+![3D model of a computer Fan.](_assets/internal-components31.jpg)
 
 
 ### Heat sinks
@@ -357,23 +358,23 @@ Occasionally video cards or other components have their own fans to cool them.
   * A heat sink is a piece of copper or aluminum that resides between the processor and the CPU fan.
   * It absorbs the heat from the processor and the fan disperses the heat.
 
-![Figure caption.](_assets/internal-components32.jpg)
+![Variety of heat sinks.](_assets/internal-components32.jpg)
 
 
 ## 7. Main Memory (RAM) 📋
 
 Referred to as RAM (Random Access Memory). They're connected to RAM slots on the motherboard:
 
-![Figure caption.](_assets/internal-components33.png){width=66% fig-align="left" fig-alt="alt text."}
+![RAM slots.](_assets/internal-components33.png){width=66% fig-align="left" fig-alt="alt text."}
 
 RAM is a collection of integrated circuits (chips). Temporary storage for data and programs that are being accessed by the CPU.
 
 __Volatile memory__ : contents are erased when the computer is switched off. (or when power is lost)
 
-![Figure caption.](_assets/internal-components34.png){width=66% fig-align="left" fig-alt="alt text."}
+![RAM sticks.](_assets/internal-components34.png){width=66% fig-align="left" fig-alt="alt text."}
 
 
-### Properties
+### 7.1 Properties
 
 There are four main properties of RAM to know:
 
@@ -387,7 +388,7 @@ There are four main properties of RAM to know:
 * __Generation:__  See next slides
 
 
-### RAM Form Factors
+### 7.2 RAM Form Factors
 
 * SIMMs (Single In-Line Memory Modules)
   * Have a single line of connectors.
@@ -398,12 +399,13 @@ There are four main properties of RAM to know:
   * Became dominant (no need to state that a memory module is a DIMM).
 
 
-### RAM Generations
+### 7.3 RAM Generations
 
-| Synchronous DRAM (SDRAM) | DRAM that operates in time with the memory bus.<br />Tied to the system clock like the CPU and the memory controller.<br />Results in very little wasted time. |
-| :-: | :-: |
-| Double Data Rate SDRAM (DDR) | DDR transfers data twice as fast as SDRAM.Larger buffer gives it a huge boost. |
-| Double Data Rate 2 SDRAM (DDR2) | DDR2 decreases noise making it faster than DDR. |
+| Type of RAM                     | Description                                                  |
+| :------------------------------ | :----------------------------------------------------------- |
+| Synchronous DRAM (SDRAM)        | DRAM that operates in time with the memory bus.<br />Tied to the system clock like the CPU and the memory controller.<br />Results in very little wasted time. |
+| Double Data Rate SDRAM (DDR)    | DDR transfers data twice as fast as SDRAM.Larger buffer gives it a huge boost. |
+| Double Data Rate 2 SDRAM (DDR2) | DDR2 decreases noise making it faster than DDR.              |
 | Double Data Rate 3 SDRAM (DDR3) | DDR3 doubles the clock rate of DDR2, consumes less power and generates less heat. |
 | Double Data Rate 4 SDRAM (DDR4) | DDR4 arrived in 2014 with even faster speeds. (most common RAM type in desktops/laptops today) |
 | Double Data Rate 5 SDRAM (DDR5) | Introduced in 2020, is starting to become more widely adopted. |
@@ -415,17 +417,17 @@ __NOTE: Motherboards are usually compatible with only ONE generation of RAM. If 
 
 Also known as Video cards or Graphical Processing Units
 
-One of the most interesting use of expansion slots is the addition of video cards, also known as Graphical Processing Unit.
+One of the most interesting use of expansion slots is the addition of video cards, which contain a special chip called the GPU (Graphical Processing Unit).
 
 A specialized version of a CPU designed for  __graphical__  processing (producing complex output to display on a monitor)
 
 The computation needed for graphical processing is generally useful for scientific computing as well (lots of data in parallel)
 
-![Figure caption.](_assets/internal-components35.png){width=66% fig-align="left" fig-alt="alt text."}
+![Video card location from the outside of the unit tower.](_assets/internal-components35.png){width=66% fig-align="left" fig-alt="alt text."}
 
-![Figure caption.](_assets/internal-components36.png){width=66% fig-align="left" fig-alt="alt text."}
+![Video card (containing the GPU) provides additional video ports.](_assets/internal-components36.png){width=66% fig-align="left" fig-alt="alt text."}
 
-![Figure caption.](_assets/internal-components37.png){width=66% fig-align="left" fig-alt="alt text."}
+![Fans on the video card itself.](_assets/internal-components37.png){width=66% fig-align="left" fig-alt="alt text."}
 
 
 ### CPU vs GPU
@@ -437,7 +439,7 @@ The computation needed for graphical processing is generally useful for scientif
 
 GPU cannot replace the CPU because their architecture is different and meant for different purposes. GPU is great to parallelize computations! But the GPU is not as versatile as the CPU which has a larger instruction set
 
-![Figure caption.](_assets/internal-components38.png){width=66% fig-align="left" fig-alt="alt text."}
+![Difference between CPU vs GPU internal structures.](_assets/internal-components38.png){width=66% fig-align="left" fig-alt="alt text."}
 
 
 ## 9. Storage Devices 💾
@@ -446,29 +448,26 @@ Storage devices store data permanently. Some are installed inside the case (e.g.
 
 ::: {layout-ncol=2}
 
-![Figure caption.](_assets/internal-components39.jpg)
+![Hard Drive.](_assets/internal-components39.jpg)
 
-![Figure caption.](_assets/internal-components40.png)
+![Solid State Drive.](_assets/internal-components40.png)
 
-![Figure caption.](_assets/internal-components41.png)
 
-![Figure caption.](_assets/internal-components42.jpg)
 
-![Figure caption.](_assets/internal-components43.png)
 
-![Figure caption.](_assets/internal-components44.png)
+![Floppy disk reader (obsolete).](_assets/internal-components44.png)
 
-![Figure caption.](_assets/internal-components45.png)
+![floppy disks.](_assets/internal-components45.png)
 
-![Figure caption.](_assets/internal-components46.png)
+![USB drive.](_assets/internal-components46.png)
 
-![Figure caption.](_assets/internal-components47.png)
 
-![Figure caption.](_assets/internal-components48.png)
+![HP's fifth-generation of LTO tape drive technology capable of storing up to 3 TB per cartridge.](_assets/internal-components48.png)
 
-![Figure caption.](_assets/internal-components49.jpg)
+![Magnetic tape drives used to archive data. They are inexpensive and have high capacity, however they are slow for everyday use.](_assets/internal-components50.png)
 
-![Figure caption.](_assets/internal-components50.png)
+![CD/DVD Drive.](_assets/internal-components49.jpg)
+
 
 :::
 
@@ -484,9 +483,9 @@ Largely obsolete.
 
 Magnetic disks store up to 1.44Meg of data.
 
-![Figure caption.](_assets/internal-components51.png)
+![Floppy disks plastic casing.](_assets/internal-components51.png)
 
-![Figure caption.](_assets/internal-components52.png)
+![A simple floppy disk](_assets/internal-components52.png)
 
 
 ---
@@ -500,7 +499,7 @@ Magnetic disks store up to 1.44Meg of data.
   * Magnetic hard drives have drive motors that spin the magnetic platters and move the drive heads.
   * Speed measured in revolutions per minute
 
-![](_assets/internal-components53.jpg)
+![Inside a Hard Drive](_assets/internal-components53.jpg)
 
 
 ---
@@ -510,7 +509,7 @@ Magnetic disks store up to 1.44Meg of data.
   * Do not have moving parts and use __ semi-conductors__  to store data.
   * Non-volatile flash memory chips manage the storage on an SSD, resulting in faster access to data, higher reliability and reduced power usage.
 
-![](_assets/internal-components54.png)
+![Solid State drive](_assets/internal-components54.png)
 
 
 ---
@@ -520,11 +519,7 @@ Magnetic disks store up to 1.44Meg of data.
 
 Magnetic tapes are often used for backups or archiving data. Impractical for most individuals, but still used/created to this day! Cost effective when storing more than 1000 TB (lots and lots of data)
 
-![](_assets/internal-components55.png)
-
-![](_assets/internal-components56.png)
-
-![](_assets/internal-components57.png)
+![Tape drive](_assets/internal-components55.png)
 
 
 ---
@@ -541,23 +536,36 @@ Magnetic tapes are often used for backups or archiving data. Impractical for mos
   * Recordable (write once)
   * Re-recordable (read and write multiple times).
 
-![](_assets/internal-components58.jpg)
+![DVD Drive](_assets/internal-components58.jpg)
 
-![](_assets/internal-components59.jpg)
+![Optical Drive](_assets/internal-components59.jpg)
 
 
 ### Interfaces Types
 
 Interface Types, in order of oldest to newest
 
-| IDE <br />  | Integrated Drive Electronics / Advanced Technology Attachment.<br />Also called ATA.<br />Early drive controller interface, originally only supported hard drives up to 540 MB.<br />Uses a 40 pin connector, and maximum cable length of 46cm (18in). |
-| :-: | :-: |
-| EIDE | Enhanced Integrated Drive Electronics (also called ATA-2).<br />Updated version of IDE, supporting larger drives and direct memory access.<br />Uses a 40 pin connector. |
-| PATA | Parallel version of ATA.<br />Used internally due to maximum cable length of 46cm (18in).<br />Largely replaced by SATA in newer systems. |
-| SATA (most commonly used today) | Serial version of ATA, with slimmer and longer cables providing better airflow.<br />Uses 7-pin connector (less pins means less issues with electromagnetic interference).<br />SATA hard drives tend to be quieter than IDE drives. |
-| eSATA  | External serial ATA, provides a hot-swappable external interface for SATA. |
-| :-: | :-: |
-| SCSI | Small Computer System Interface.<br />Drive controller that can connect up to 15 drives.<br />Internal and external use, uses 25, 50 or 68 pin connector.<br /><br /><br /> |
+**IDE**
+- Integrated Drive Electronics / Advanced Technology Attachment.
+- Also called ATA.
+- Early drive controller interface, originally only supported hard drives up to 540 MB.
+- Uses a 40 pin connector, and maximum cable length of 46cm (18in).
+
+**EIDE**
+- Enhanced Integrated Drive Electronics (also called ATA-2).
+- Updated version of IDE, supporting larger drives and direct memory access.
+- Uses a 40 pin connector.
+
+**PATA**
+- Parallel version of ATA.
+- Used internally due to maximum cable length of 46cm (18in).
+- Largely replaced by SATA in newer systems.
+
+**SATA (most commonly used today)**
+- Serial version of ATA, with slimmer and longer cables providing better airflow.
+- Uses 7-pin connector (less pins means less issues with electromagnetic interference).
+- SATA hard drives tend to be quieter than IDE drives.
+
 
 _Note:_  __ Hot-swapping is the ability to connect and disconnect a device while the computer is on.__
 
@@ -568,20 +576,24 @@ Removable storage device that connects to a USB port.
 
 These use the same type of non-volatile memory chips as SSDs and do not require power to maintain the data.
 
-![](_assets/internal-components60.png)
+![Sony 64 Gb USB Drive](_assets/internal-components60.png)
 
-![](_assets/internal-components61.png)
+![Cruser 4Gb USB Drive](_assets/internal-components61.png)
 
 
 To install a drive internally in a computer, the connection interface on the drive must be the same as the controller on the motherboard.
 
 Motherboards support different types of interfaces.
 
+## Full disection of a computer 🔬🖥️
+{{< video https://www.youtube.com/watch?v=d86ws7mQYIg >}}
+
+
+
+<!--
 ### Computer Memory Hierarchy
 
 Source: https://en.wikipedia.org/wiki/Memory_hierarchy
-
-<!-- 
 ## Exercises
 
 ## Knowledge check
