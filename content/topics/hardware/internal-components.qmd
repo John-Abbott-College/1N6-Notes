@@ -35,15 +35,15 @@ The **system components** of a computer are responsible for the following behavi
 
 Many components will fulfil these needs. Here is a list of the components inside the system unit which we will learn about:
 
-1. [Case](#case-🧊)
-2. [Power Supply](#power-supply-(psu-⚡))
-3. [Motherboard](#motherboard-📟)
+1. [Case](#case)
+2. [Power Supply](#power-supply-psu)
+3. [Motherboard](#motherboard)
 4. [Internal Connectors](#internal-connectors)
-5. [Cooling Devices](#cooling-devices-🪭)
-6. [Processor (CPU)](#cpu-🧠)
-7. [Graphics processor (GPU)](#graphics-cards-(gpu-🎨))
-8. [Memory (RAM)](#main-memory-(ram-📋))
-9. [Storage Devices (CD, HDD, SSD, NVME/M2)](#storage-devices-💾)
+5. [Processor (CPU)](#cpu)
+6. [Cooling Devices](#cooling-devices)
+7. [Memory (RAM)](#main-memory-ram)
+8. [Graphics processor (GPU)](#graphics-cards-gpu)
+9. [Storage Devices (CD, HDD, SSD, NVME/M2)](#storage-devices)
 
 
 ## Definitions
