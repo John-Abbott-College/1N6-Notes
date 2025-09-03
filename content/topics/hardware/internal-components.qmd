@@ -54,7 +54,10 @@ When discussing components of any complicated machine, we should try to understa
 
 * The make and model refer to the brand and specific product name of a component.
 
-> For example: Hyundai Accent — where Hyundai is the make (manufacturer), and Accent is the model (product).
+::: {.callout-note icon=false}
+# Example
+Hyundai Accent — where Hyundai is the make (manufacturer), and Accent is the model (product).
+:::
 
 Why it matters:
 
@@ -67,8 +70,11 @@ Why it matters:
 
 * Properties describe the quantitative (numerical) and qualitative (descriptive) characteristics of a component that can be compared with similar components.
 
-> Quantitative example: The 2009 Hyundai Accent has a fuel efficiency of 29 MPG (miles per gallon).
-Qualitative example: The Hyundai Accent is a hatchback, not a sedan.
+::: {.callout-note icon=false}
+# Example
+- **Quantitative example** The 2009 Hyundai Accent has a fuel efficiency of 29 MPG (miles per gallon).
+- **Qualitative example** The Hyundai Accent is a hatchback, not a sedan.
+:::
 
 Why it matters:
 
@@ -85,7 +91,13 @@ Understanding both is essential for every component we’ll discuss today.
 
 * Provides protection and cooling for the internal components.
 * Also prevents damage from __static electricity__
-> Question: What is static electricity? How is the case projecting from that?
+
+::: {.callout-note icon=false}
+# Question ❔
+- What is static electricity? 
+- How is the case projecting from that?
+:::
+
 * Usually made of plastic, steel or aluminum.
 * Helps the fans move air through all components:
   * to replace warm air with cold air to keep components at stable temperatures
@@ -98,7 +110,11 @@ __Main purpose:__ Converts AC power (alternating current) from wall socket to D
 
 * Computers can only tolerate slight fluctuations in power without  __needing to shut down!__. This is why we need to convert the electric current from the providers to direct current.
 * PSUs have their own fans because energy conversion releases a lot of heat!
-* ⚠️ __Never open a power supply!__  The capacitors contained within can keep a dangerous high voltage, high power charge long after being unplugged.
+
+:::{.callout-warning}
+# Never open a power supply! 
+The capacitors contained within can keep a dangerous high voltage, high power charge long after being unplugged.
+:::
 
 ::: {layout-ncol=2}
 
@@ -127,11 +143,19 @@ __Main purpose:__ Converts AC power (alternating current) from wall socket to D
 Not all PSUs efficiently convert AC to DC power!
 
 To pick the right power supply for your machine, you must firstly know what's the wattage required by your system.  For this you might need to add all the internal components into the [Wattage calculator](https://www.newegg.com/tools/power-supply-calculator?cm_sp=NeweggInsider-_-BuyingGuides-_-ChoosePSU) which will then provide an estimate of the load wattage of this machine. 
-> For example, if you’re building a PC with an Intel Core i7-11700K CPU, an Nvidia GeForce RTX 3070 GPU, 16 gigabytes (GB) of RAM made up of two 8GB sticks, a 1TB solid-state drive (SSD), and a 1TB 7200RPM hard disk drive (HDD), then 512 watts of power would be recommended. 
+
+::: {.callout-note icon=false}
+# Example
+If you’re building a PC with an Intel Core i7-11700K CPU, an Nvidia GeForce RTX 3070 GPU, 16 gigabytes (GB) of RAM made up of two 8GB sticks, a 1TB solid-state drive (SSD), and a 1TB 7200RPM hard disk drive (HDD), then 512 watts of power would be recommended. 
+:::
 
 #### 80 Plus Standard
 The 80 Plus standard was created to promote efficient enery use of a computer. When selecting a power supply, you might see that many suppliers will carry the 80 Plus certification labels. The efficiency of a power supply gives the ratio of AC power required from an electrical outlet to the useful power converted to DC to be used by a computer (the load wattage). 
-> For example: a 75% efficient power supply requires 100W of AC input to provide 75 W of DC load wattage output to a computer. dissipating the remaining 25 W in as heat. 
+
+::: {.callout-note icon=false}
+# Example
+A 75% efficient power supply requires 100W of AC input to provide 75 W of DC load wattage output to a computer. dissipating the remaining 25 W in as heat. 
+:::
 
 In the North America, the outlet voltage is roughly 115 V. The following table summerizes the efficiency levels for that voltage.
 
@@ -289,10 +313,16 @@ There are a variety of connectors used to connect components to the motherboard.
 * __Signals__ : for communication/data transfer
 * __Power__ : not all components connect directly to the power supply, they get power from the motherboard
 
-Most connectors are  __keyed__  (can only be inserted one way). Note: Always check the pins if you have trouble with a connector.
+Most connectors are  __keyed__  (can only be inserted one way). 
 
-> “If it doesn’t go in like butter, it doesn’t go in at all” -- never force a connection! you are likely going to damage the pins.
+:::{.callout-note}
+Always check the pins if you have trouble with a connector.
+:::
 
+::: {.callout-warning}
+# Quote
+“If it doesn’t go in like butter, it doesn’t go in at all” -- never force a connection! you are likely going to damage the pins.
+:::
 ### Example connectors
 
 ::: {layout-ncol=2}
@@ -334,6 +364,7 @@ The flow of current between and within electronic components generates heat. Som
 ::: {.callout-note}
 - CPUs typically come with their own cooling device
 - Cooling devices are built into GPUs and Power Supplies
+:::
 
 There are two main types of cooling devices:
 
@@ -410,8 +441,10 @@ There are four main properties of RAM to know:
 | Double Data Rate 4 SDRAM (DDR4) | DDR4 arrived in 2014 with even faster speeds. (most common RAM type in desktops/laptops today) |
 | Double Data Rate 5 SDRAM (DDR5) | Introduced in 2020, is starting to become more widely adopted. |
 
-__NOTE: Motherboards are usually compatible with only ONE generation of RAM. If you have a motherboard designed for DDR3, it cannot use DDR4 or DDR5.__
+:::{.callout-note}
 
+ Motherboards are usually compatible with only **ONE** generation of RAM. If you have a motherboard designed for DDR3, it cannot use DDR4 or DDR5.
+:::
 
 ## 8. Graphics Cards (GPU) 🎨
 
@@ -451,7 +484,6 @@ Storage devices store data permanently. Some are installed inside the case (e.g.
 ![Hard Drive.](_assets/internal-components39.jpg)
 
 ![Solid State Drive.](_assets/internal-components40.png)
-
 
 
 
