@@ -63,7 +63,7 @@ It's important to have common definitions for the meaning of the lightbulbs bein
 
 ![Every pair of light bulbs is matching and can be controlled from the inside by the CPU or from the outside by the program executing instructions on the CPU.](_assets/understanding-cpus10.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
-:::{.callout-note}
+::: {.callout-note}
 If CPUs only understand machine code (sequence of 1 or 0), how can this C# code be understood by it?
 
 ```csharp
@@ -122,7 +122,8 @@ unknown.](_assets/understanding-cpus16.png "A sample title."){fig-alt="Sample al
 
 ------------------------------------------------------------------------
 :::{.callout-tip}
-### Sample Guy in a Box Problem
+
+# Sample Guy in a Box Problem
 
 Using the following codebook, ask the "Guy in a box" to calculate 2+3
 
@@ -153,6 +154,7 @@ unknown.](_assets/understanding-cpus17.png "A sample title."){fig-alt="Sample al
 A set of commands such as this is called a program. A program is a series
 of command sent to a CPU in a specific order for the CPU to perform
 work.
+
 :::
 
 ------------------------------------------------------------------------
@@ -182,8 +184,8 @@ The most important properties that define CPU behavior are **speed** and **bus w
 
 We measure CPU **speed** : in cycles per second, e.g. megahertz (MHz) or gigahertz (GHz).
 
-:::{.callout-note}
-# Unit of Measurement: 
+::: {.callout-note}
+# Unit of Measurement
 __Hertz__, usually written as **Hz**, denote frequency. 1Hz is "one time per second", 10Hz is "ten times per second".
 We can use **SI Prefixes** (International System of Unit Prefixes) to compare magnitudes easily.
 
@@ -221,7 +223,8 @@ The amount of data processed at a time depends on the "number of lightbulbs" or 
 
 :::{.callout-note icon="false"}
 
-**Question**: how many bits do you need in *bus width* to represent the Guy in the Box and their codebook from the previous problems?
+# Question
+ How many bits do you need in *bus width* to represent the Guy in the Box and their codebook from the previous problems?
 
 :::
 ------------------------------------------------------------------------
@@ -239,6 +242,9 @@ This allows the CPU to send AND receive the following information at the same ti
 ![Various buses inside the CPU. Image source:
 unknown.](_assets/understanding-cpus19.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 ---
+
+::: {.callout-note}
+
 The CPU is constantly talking to the RAM and the hardware components. At every clock interval, new instructions are sent through the control bus. Here are a few common instructions: 
 
 | Instruction | Description                                                  |
@@ -260,7 +266,7 @@ All this information, the instruction, the location of the hardware devices are 
 Lesson](https://www.youtube.com/watch?v=cNN_tTXABUA&) on Youtube
 (excellent video explaination on CPUs)](_assets/understanding-cpus20.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
-
+:::
 
 ------------------------------------------------------------------------
 
