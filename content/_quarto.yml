@@ -41,6 +41,7 @@ website:
           - topics/hardware/introduction-to-computers.qmd
           - topics/hardware/external-components.qmd
           - topics/hardware/internal-components.qmd  
+          - topics/hardware/understanding-cpus.qmd
               
 format:
   html:
