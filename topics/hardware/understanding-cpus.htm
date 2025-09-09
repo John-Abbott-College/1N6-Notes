@@ -29,6 +29,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-0c8acc74dca0c2faaedea4940f202713.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -140,6 +206,13 @@
 </div>
 
   <p class="date">2025-09-28</p>
+</section><section id="TOC">
+<nav role="doc-toc"> 
+<h2 id="toc-title">Table of contents</h2>
+<ul>
+<li><a href="#/cpu-manufacturers" id="/toc-cpu-manufacturers">CPU Manufacturers 🏭</a></li>
+</ul>
+</nav>
 </section>
 <section class="slide level2">
 
@@ -147,7 +220,7 @@
 <img data-src="_assets/understanding-cpus16.png" title="A sample title." alt="Sample alt text. To be replaced!" class="r-stretch quarto-figure-center"><p class="caption">What if all computers contained some guy, trapped in a box? Something to consider. Image source: unknown</p></section>
 <section id="introduction" class="slide level2">
 <h2>Introduction</h2>
-<p>Last week one component we learned was the <strong>CPU </strong> (<em>Central Processing Unit</em>): A complex collection of electronic circuits on one or more integrated circuits (chips).</p>
+<p>Last week one component we learned was the <strong>CPU</strong> (<em>Central Processing Unit</em>): A complex collection of electronic circuits on one or more integrated circuits (chips).</p>
 <p>We learned that the CPU is responsible for:</p>
 <ul>
 <li><em>Executing the instructions in a software program.</em></li>
@@ -160,15 +233,15 @@
 <p>More detail on CPUs. “Guy in Box” analogy, Clock Speed, Codebook, data buses explained.</p>
 </section>
 <section id="cpu-analogy-guy-in-a-box" class="slide level2">
-<h2>CPU Analogy: Guy in a Box</h2>
+<h2>CPU Analogy: Guy in a Box 📦</h2>
 <p>Let’s start with an analogy: CPUs are a “Guy-in-a-box”. This guy:</p>
 <ul>
 <li>can perform any mathematical function quickly.</li>
 <li>lives in a closed-up box so direct communication is impossible.</li>
 </ul>
-<p>Let’s say have 16 light bulbs: 8 for the guy, and 8 for us.</p>
+<p>Our only way of communicating with this guy is via the <strong>External Data Bus</strong>. This is 16 light bulbs: 8 visible inside the box, and 8 visible outside the box. There is a light switch for each pair (inside-outside) the box which allows us to flip both the inside and outside bulbs and hence send binary messages!</p>
 
-<img data-src="_assets/understanding-cpus2.png" title="A sample title." alt="Sample alt text. To be replaced!" class="r-stretch quarto-figure-center"><p class="caption">A sample caption. Image source: unknown.</p></section>
+<img data-src="_assets/understanding-cpus2.png" alt="Man in a box" class="r-stretch quarto-figure-center"><p class="caption">A man in a box analogy. Image source: unknown.</p></section>
 <section class="slide level2">
 
 <div class="column-margin">
@@ -179,19 +252,29 @@
 </figure>
 </div>
 </div>
-<ul>
-<li>The light bulbs:
-<ul>
-<li>can be controlled (turned on or off) by us and by the guy-in-the-box</li>
-<li>Are synchronized (bulb 1 for us has the same value as bulb 1 for the guy)</li>
-</ul></li>
-<li>We can share messages by setting the light bulbs on/off, as long as we:
-<ul>
-<li>Agree on schedule (not changing the lightbulbs at the same time)</li>
-<li>Agree on meaning (share the same interpretation of lightbulb being on/off)</li>
-</ul></li>
-<li>This arrangement is called a <strong>data bus:</strong> a method for transporting data from one component to another using electrical circuits</li>
-</ul>
+<h3 id="data-bus">Data bus 💡💡💡</h3>
+<p>In this analogy this arrangement of light bulbs is called a <strong>data bus:</strong> a method for transporting data from one component to another using electrical circuits. These “light bulbs”: - can be controlled (turned on or off) by us and by the guy-in-the-box - are synchronized (bulb 1 for us has the same value as bulb 1 for the guy) - we can share messages by setting the light bulbs on off, as long as we: agree on schedule (not changing the lightbulbs at the same time) - the meaning (share the same interpretation of lightbulb being on/off)</p>
+</section>
+<section class="slide level2">
+
+<h3 id="codebook-agreeing-on-meaning">Codebook: Agreeing on meaning 📖</h3>
+<p>How do we share the same meaning?</p>
+<p>It’s important to have common definitions for the meaning of the lightbulbs being on/off to understand messages sent by this method CPUs are designed with a <strong>codebook</strong> (instruction set) that defines the commands that we can give to the guy in the box. This codebook is built into each CPU by its manufacturer and is called “machine code”.</p>
+
+<img data-src="_assets/understanding-cpus10.png" title="A sample title." alt="Sample alt text. To be replaced!" class="r-stretch quarto-figure-center"><p class="caption">Every pair of light bulbs is matching and can be controlled from the inside by the CPU or from the outside by the program executing instructions on the CPU.</p><div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>If CPUs only understand machine code (sequence of 1 or 0), how can this C# code be understood by it?</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource csharp number-lines code-with-copy"><code class="sourceCode cs"><span id="cb1-1"><a></a>Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Hello World!"</span><span class="op">);</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
 </section>
 <section class="slide level2">
 
@@ -203,23 +286,31 @@
 <li>We can give the registers names to distinguish them (AX, BX, CX, DX for example)</li>
 </ul>
 
-<img data-src="_assets/understanding-cpus8.png" title="A sample title." alt="Sample alt text. To be replaced!" class="r-stretch quarto-figure-center"><p class="caption">A sample caption. Image source: unknown.</p></section>
+<img data-src="_assets/understanding-cpus8.png" title="A sample title." alt="Sample alt text. To be replaced!" class="r-stretch quarto-figure-center"><p class="caption">Analogy of the registers acting as workstations. Image source: unknown.</p><div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>Are CPU registers made of the same technology as RAM?</p>
+</div>
+</div>
+</div>
+</section>
 <section class="slide level2">
 
-<h3 id="codebook-agreeing-on-meaning">Codebook: Agreeing on meaning</h3>
-<p>It’s important to have common definitions for the meaning of the lightbulbs being on/off to understand messages sent by this method</p>
-<p>CPUs are designed with a <strong>codebook </strong> (instruction set) that defines the commands that we can give to the guy in the box</p>
-
-<img data-src="_assets/understanding-cpus10.png" title="A sample title." alt="Sample alt text. To be replaced!" class="r-stretch quarto-figure-center"><p class="caption">A sample caption. Image source: unknown.</p></section>
-<section class="slide level2">
-
-<h3 id="clock-agreeing-on-schedule">Clock: Agreeing on schedule</h3>
-<p>Now we are ready to communicate with the guy in the boxWe can send them the first command by lighting up the bulbs on the data bus.</p>
+<h3 id="clock-agreeing-on-schedule">Clock: Agreeing on schedule ⏰</h3>
+<p>Now we are ready to communicate with the guy in the box. We can send them the first command by lighting up the bulbs on the data bus.</p>
 <p>But how do they know when we have finished setting up the light bulbs?</p>
-
-<img data-src="_assets/understanding-cpus16.png" title="A sample title." alt="Sample alt text. To be replaced!" class="r-stretch quarto-figure-center"><p class="caption">A sample caption. Image source: unknown.</p></section>
-<section class="slide level2">
-
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_assets/understanding-cpus16.png" title="A sample title." alt="Sample alt text. To be replaced!"></p>
+<figcaption>Clock analogy. Image source: unknown.</figcaption>
+</figure>
+</div>
 <ul>
 <li>We can use a bell activated by a button.</li>
 <li>A real computer uses a special wire called the clock wire (CLK). The CLK wire is turned on and off on a precise and regular schedule. This is called a <strong>clock cycle.</strong></li>
@@ -229,14 +320,28 @@
 <li>The time between each clock cycle is the <strong>speed</strong> that a CPU can perform a given task</li>
 <li>The maximum number of clock cycles a CPU can handle in given period of time is called the clock speed.</li>
 </ul>
-<h3 id="sample-guy-in-a-box-problem">Sample Guy in a Box Problem</h3>
-<p>Using the following codebook, ask the “Guy in a box” to calculate 2+3</p>
-<p>You must send a series of commandsto the CPU. The CPU will act on each command and give you an answer.</p>
-<p>Your answer should be a <strong>sequence of numbers</strong> you could send to the guy in the box to get the right answer.</p>
-
-<img data-src="_assets/understanding-cpus17.png" title="A sample title." alt="Sample alt text. To be replaced!" class="r-stretch quarto-figure-center"><p class="caption">A sample caption. Image source: unknown.</p></section>
-<section class="slide level2">
-
+<table class="caption-top">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">:::{.callout-tip} ### Sample Guy in a Box Problem</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Using the following codebook, ask the “Guy in a box” to calculate 2+3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">You must send a series of commandsto the CPU. The CPU will act on each command and give you an answer.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Your answer should be a <strong>sequence of numbers</strong> you could send to the guy in the box to get the right answer.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><img data-src="_assets/understanding-cpus17.png" title="A sample title." alt="Sample alt text. To be replaced!"></td>
+</tr>
+</tbody>
+</table>
 <h4 id="solution">Solution</h4>
 <pre><code>10000000  The next line is a number, put it in AX
 00000010  The number 2
@@ -244,32 +349,36 @@
 00000011  The number 3
 10110000  Add AX to BX and put the result in AX
 11000000  Place the value of AX on the external data bus</code></pre>
-<p>A set of commands such as this is called a program. A program is a series of command sent to a CPU in a specific order for the CPU to perform work.</p>
+<p>A set of commands such as this is called a program. A program is a series of command sent to a CPU in a specific order for the CPU to perform work. :::</p>
 </section>
 <section id="pipelining" class="slide level2">
-<h2>Pipelining</h2>
+<h2>Pipelining 🚥</h2>
 <ul>
-<li>Almost all CPU instructions feature a set of 4 stages:
-<ul>
+<li>Almost all CPU instructions feature a set of 4 stages:</li>
 <li><strong>Fetch</strong> : retrieve the instruction, address, and data, write them to registers</li>
 <li><strong>Decode</strong> : search for instruction code in codebook, verify it is a real instruction, and that data/address are valid</li>
 <li><strong>Execute</strong> : perform the instruction, update registers with results</li>
-<li><strong>Write: </strong> write to databus to share results</li>
-</ul></li>
+<li><strong>Write:</strong> write to databus to share results</li>
 <li>Rather than have each instruction repeat all of these steps, we can organize CPUs further by specializing our “guy in a box” for each stage</li>
 <li>This is called <strong>pipelining</strong> , and it allows for greater efficiency in CPU programming</li>
 </ul>
 
-<img data-src="_assets/understanding-cpus18.png" title="A sample title." alt="Sample alt text. To be replaced!" class="r-stretch quarto-figure-center"><p class="caption">A sample caption. Image source: unknown.</p></section>
+<img data-src="_assets/understanding-cpus18.png" title="A sample title." alt="Sample alt text. To be replaced!" class="r-stretch quarto-figure-center"><p class="caption">Analogy of multiple men in a box to illustrate the idea of a pipeline.</p></section>
 <section id="cpu-properties" class="slide level2">
-<h2>CPU Properties</h2>
+<h2>CPU Properties 📊</h2>
 <p>The most important properties that define CPU behavior are <strong>speed</strong> and <strong>bus width</strong>: that is, how fast the clock cycle repeats, and how much data per clock cycle the CPU can process.</p>
 <h3 id="clock-speed">Clock Speed</h3>
 <p>We measure CPU <strong>speed</strong> : in cycles per second, e.g.&nbsp;megahertz (MHz) or gigahertz (GHz).</p>
-<blockquote>
-<p><strong>Unit of Measurement: </strong> Hertz, usually written as <strong>Hz</strong>, denote frequency. 1Hz is “one time per second”, 10Hz is “ten times per second”.</p>
-</blockquote>
-<p>We can use <strong>SI Prefixes </strong> (International System of Unit Prefixes) to compare magnitudes easily.</p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Unit of Measurement:</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Hertz</strong>, usually written as <strong>Hz</strong>, denote frequency. 1Hz is “one time per second”, 10Hz is “ten times per second”. We can use <strong>SI Prefixes</strong> (International System of Unit Prefixes) to compare magnitudes easily.</p>
 <p>You will see many of these in computer science over and over again – get to know them well!</p>
 <table class="table-striped table-hover caption-top">
 <caption>SI Prefixes for Frequencies</caption>
@@ -314,40 +423,101 @@
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+</div>
+<h3 id="cpu-cores">CPU Cores</h3>
+<p>A multi-core SPU means that more than one CPU core is integrated into a single chip, each capable of running parallel processes. This means, in theory, that we multiply the amount of information that can be processes, send and recieved from/to the RAM.</p>
+<p>Benefits of Multi-core processors: - Enhancing the multitasking: multiple jobs done at the same time. - Improved performance: Faster and smoother performance. - Energy efficiency: More work can be done with less power.</p>
+<h4 id="cpu-threads">CPU Threads</h4>
+<p>CPU cores and threads are closely related but not the same. A core is a physical unit within the CPU that executes instructions, while a thread is a virtual sequence of instructions assigned to a core. Think of cores as workers and threads as the jobs they carry out.<br>
+&gt; When CPU has 16 threads, it simply means it can run 16 threads simultaneously.</p>
 <h3 id="bus-width">Bus width</h3>
 <p>The amount of data processed at a time depends on the “number of lightbulbs” or the <strong>width</strong> of the <strong>data bus</strong></p>
-<p><strong>Bus width </strong> is measured in bits, e.g.&nbsp;8-bits, 16-bit, 32-bit, 64-bit, etc.</p>
+<p><strong>Bus width</strong> is measured in bits, e.g.&nbsp;8-bits, 16-bit, 32-bit, 64-bit, etc.</p>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
 <p><strong>Question</strong>: how many bits do you need in <em>bus width</em> to represent the Guy in the Box and their codebook from the previous problems?</p>
+</div>
+</div>
+</div>
 </section>
 <section class="slide level2">
 
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_assets/understanding-cpus19.png" title="A sample title." alt="Sample alt text. To be replaced!"></p>
-<figcaption>A sample caption. Image source: unknown.</figcaption>
-</figure>
-</div>
-<p>In actual computers, the CPU receives <strong>instructions</strong> , <strong>addresses memory</strong> , and <strong>data</strong> on separate buses.</p>
+<p>In actual computers, the CPU receives <strong>instructions</strong> ,<strong>addresses memory</strong> , and <strong>data</strong> on separate buses.</p>
 <p>This allows the CPU to send AND receive the following information at the same time:</p>
-<p>What command to perform</p>
-<p>Where in memory the result should be stored</p>
-<p>What data to use to perform the command</p>
+<ul>
+<li><p><strong>Control Bus</strong>: What command to perform</p></li>
+<li><p><strong>Address Bus</strong>: Where in memory the result should be stored</p></li>
+<li><p><strong>Data Bus</strong>: What data to use to perform the command</p></li>
+</ul>
+<p><img data-src="_assets/understanding-cpus19.png" title="A sample title." alt="Sample alt text. To be replaced!"> — The CPU is constantly talking to the RAM and the hardware components. At every clock interval, new instructions are sent through the control bus. Here are a few common instructions:</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 84%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Instruction</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>LOAD</code></td>
+<td>Load this value from RAM</td>
+</tr>
+<tr class="even">
+<td><code>ADD</code></td>
+<td>Add these two numbers</td>
+</tr>
+<tr class="odd">
+<td><code>STORE</code></td>
+<td>Save this value to RAM</td>
+</tr>
+<tr class="even">
+<td><code>COMPARE</code></td>
+<td>Compare these two numbers</td>
+</tr>
+<tr class="odd">
+<td><code>JUMP IF</code></td>
+<td>If a condition is true, jump to this next set of instructions (example : if statement)</td>
+</tr>
+<tr class="even">
+<td><code>JUMP</code></td>
+<td>Jump to this next set of instructions (without any conditions - example function call)</td>
+</tr>
+<tr class="odd">
+<td><code>IN</code></td>
+<td>Read data from the input device (example keyboard)</td>
+</tr>
+<tr class="even">
+<td><code>OUT</code></td>
+<td>Send data to an output device (example printer)</td>
+</tr>
+</tbody>
+</table>
+<p>All this information, the instruction, the location of the hardware devices are all in binary (machine code)! When you write a program in C#, Java, Python, etc. You are programming in high level programming language that will be compiled into machine code by the compiler of this language (or interpreted by the interpreter of this language).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="_assets/understanding-cpus20.png" title="A sample title." alt="Sample alt text. To be replaced!"></p>
-<figcaption>A sample caption. Image source: unknown.</figcaption>
+<figcaption>Illustration of CPU wiring to the RAM. Image source: <strong>Figure from</strong> <a href="https://www.youtube.com/watch?v=cNN_tTXABUA&amp;">In One Lesson</a> on Youtube (excellent video explaination on CPUs)</figcaption>
 </figure>
 </div>
-<p><strong>Figure from </strong> <a href="https://www.youtube.com/watch?v=cNN_tTXABUA&amp;">In One Lesson</a> on Youtube (nice visualization)</p>
 </section>
 <section class="slide level2">
 
-<h3 id="clock-speed-vs-bus-width-compared">Clock Speed vs bus width compared</h3>
+<h3 id="highway-analogy-clock-speed-vs-bus-width">Highway analogy: clock Speed vs bus width</h3>
 <ul>
 <li>You can double check that you understand a scientific concept by checking what <strong>units of measurement</strong> that concept is measured by:</li>
 <li>Highway
 <ul>
-<li><strong>Number of lanes: </strong> (a number)</li>
+<li><strong>Number of lanes:</strong> (a number)</li>
 <li><strong>Speed limit:</strong> (unit distance per time elapsed, e.g.&nbsp;km/h)</li>
 </ul></li>
 <li>System bus
@@ -357,15 +527,22 @@
 </ul></li>
 </ul>
 
-<img data-src="_assets/understanding-cpus21.png" title="A sample title." alt="Sample alt text. To be replaced!" class="r-stretch quarto-figure-center"><p class="caption">A sample caption. Image source: unknown.</p></section>
-<section id="exercises" class="slide level2">
-<h2>Exercises</h2>
-</section>
-<section id="knowledge-check" class="slide level2">
-<h2>Knowledge check</h2>
-</section>
-<section id="additional-references" class="slide level2">
-<h2>Additional references</h2>
+<img data-src="_assets/understanding-cpus21.png" title="A sample title." alt="Sample alt text. To be replaced!" class="r-stretch quarto-figure-center"><p class="caption">Analogy of the highway. Image source: unknown.</p></section>
+<section id="cpu-manufacturers" class="title-slide slide level1 center">
+<h1>CPU Manufacturers 🏭</h1>
+
+<img data-src="_assets/understanding-cpus22.png" style="width:80.0%" class="r-stretch quarto-figure-center"><p class="caption">How to read the CPU model and generation</p><ul>
+<li><strong>Brand</strong>: Refers to company who designed the CPU (often Intel or AMD)</li>
+<li><strong>Tier</strong>: Refers to the ranking of this CPU based on their capacilities and performance. Generally the higher the tier the better the pverall performance of the CPU.</li>
+<li><strong>Generation</strong>: Tells us how new is this CPU compared to another one. Generally, higher generations within the same tier have improved design.</li>
+<li><strong>Model</strong>: It’s a number that uniquely identify a CPU.</li>
+<li><strong>Sufix</strong>: Is an added letter which depending on the manufacturer could refer to different properties of the CPU. For example, intel uses “K” to indicate that the CPU is unlocked and can be overclocked. AMD uses X to indicate that this CPU is already slightly overclocked.</li>
+</ul>
+<!-- ## Exercises
+
+## Knowledge check
+
+## Additional references -->
 
 
 </section>

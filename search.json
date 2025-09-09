@@ -199,7 +199,120 @@
     "href": "topics/hardware/index.html",
     "title": "Hardware",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n\n\n\n\n2025-08-20\n\n\n\n\n\n\n\n\n\n\n\n\nExternal components\n\n\nOverview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors\n\n\n\n\n\n\n\n\n2025-08-25\n\n\n\n\n\n\n\n\n\n\n\n\nInternal Components\n\n\nExplains the most important internal components of desktop computers. Processing, memory, storage, and communication.\n\n\n\n\n\n\n\n\n2025-09-02\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0"
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n\n\n\n\n2025-08-20\n\n\n\n\n\n\n\n\n\n\n\n\nExternal components\n\n\nOverview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors\n\n\n\n\n\n\n\n\n2025-08-25\n\n\n\n\n\n\n\n\n\n\n\n\nInternal Components\n\n\nExplains the most important internal components of desktop computers. Processing, memory, storage, and communication.\n\n\n\n\n\n\n\n\n2025-09-02\n\n\n\n\n\n\n\n\n\n\n\n\nUnderstanding CPUs\n\n\nMore detail on CPUs. “Guy in Box” analogy, Clock Speed, Codebook, Databuses explained.\n\n\n\n\n\n\n\n\n2025-09-28\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0"
+  },
+  {
+    "objectID": "topics/hardware/understanding-cpus.html",
+    "href": "topics/hardware/understanding-cpus.html",
+    "title": "Understanding CPUs",
+    "section": "",
+    "text": "What if all computers contained some guy, trapped in a box? Something to consider. Image source: unknown",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Hardware",
+      "Understanding CPUs"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/understanding-cpus.html#introduction",
+    "href": "topics/hardware/understanding-cpus.html#introduction",
+    "title": "Understanding CPUs",
+    "section": "Introduction",
+    "text": "Introduction\nLast week one component we learned was the CPU (Central Processing Unit): A complex collection of electronic circuits on one or more integrated circuits (chips).\nWe learned that the CPU is responsible for:\n\nExecuting the instructions in a software program.\nCommunicating with other parts of the computer system\n\nToday we’re going to take a deep dive into how the CPU carries out those responsibilities.",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Hardware",
+      "Understanding CPUs"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/understanding-cpus.html#lesson-overview",
+    "href": "topics/hardware/understanding-cpus.html#lesson-overview",
+    "title": "Understanding CPUs",
+    "section": "Lesson Overview",
+    "text": "Lesson Overview\nMore detail on CPUs. “Guy in Box” analogy, Clock Speed, Codebook, data buses explained.",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Hardware",
+      "Understanding CPUs"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/understanding-cpus.html#cpu-analogy-guy-in-a-box",
+    "href": "topics/hardware/understanding-cpus.html#cpu-analogy-guy-in-a-box",
+    "title": "Understanding CPUs",
+    "section": "CPU Analogy: Guy in a Box 📦",
+    "text": "CPU Analogy: Guy in a Box 📦\nLet’s start with an analogy: CPUs are a “Guy-in-a-box”. This guy:\n\ncan perform any mathematical function quickly.\nlives in a closed-up box so direct communication is impossible.\n\nOur only way of communicating with this guy is via the External Data Bus. This is 16 light bulbs: 8 visible inside the box, and 8 visible outside the box. There is a light switch for each pair (inside-outside) the box which allows us to flip both the inside and outside bulbs and hence send binary messages!\n\n\n\nA man in a box analogy. Image source: unknown.\n\n\n\n\n\n\n\n\nA sample caption. Image source: unknown.\n\n\n\nData bus 💡💡💡\nIn this analogy this arrangement of light bulbs is called a data bus: a method for transporting data from one component to another using electrical circuits. These “light bulbs”: - can be controlled (turned on or off) by us and by the guy-in-the-box - are synchronized (bulb 1 for us has the same value as bulb 1 for the guy) - we can share messages by setting the light bulbs on off, as long as we: agree on schedule (not changing the lightbulbs at the same time) - the meaning (share the same interpretation of lightbulb being on/off)\n\n\n\nCodebook: Agreeing on meaning 📖\nHow do we share the same meaning?\nIt’s important to have common definitions for the meaning of the lightbulbs being on/off to understand messages sent by this method CPUs are designed with a codebook (instruction set) that defines the commands that we can give to the guy in the box. This codebook is built into each CPU by its manufacturer and is called “machine code”.\n\n\n\nEvery pair of light bulbs is matching and can be controlled from the inside by the CPU or from the outside by the program executing instructions on the CPU.\n\n\n\n\n\n\n\n\nNote\n\n\n\nIf CPUs only understand machine code (sequence of 1 or 0), how can this C# code be understood by it?\nConsole.WriteLine(\"Hello World!\"); \n\n\n\n\n\nRegisters\nSo far, we can send/receive “messages” from the light bulbs. But, in order to “remember” a message, the guy needs at least a few workstations ( registers ) to copy our messages, otherwise the messages will be lost every time the data bus updates.\n\nRegisters are places to store a very small amount of data temporarily\nRegisters are usually the around the 1-4x the size of the data bus\nWe can give the registers names to distinguish them (AX, BX, CX, DX for example)\n\n\n\n\nAnalogy of the registers acting as workstations. Image source: unknown.\n\n\n\n\n\n\n\n\nNote\n\n\n\nAre CPU registers made of the same technology as RAM?\n\n\n\n\n\nClock: Agreeing on schedule ⏰\nNow we are ready to communicate with the guy in the box. We can send them the first command by lighting up the bulbs on the data bus.\nBut how do they know when we have finished setting up the light bulbs?\n\n\n\nClock analogy. Image source: unknown.\n\n\n\nWe can use a bell activated by a button.\nA real computer uses a special wire called the clock wire (CLK). The CLK wire is turned on and off on a precise and regular schedule. This is called a clock cycle.\nEach time the clock turns on, the state of our lightbulbs is shared with the guy in the box\nThe guy then has until the clock turns off to send a message back\nThe next time the clock turns on, a new message is sent to the CPU\nThe time between each clock cycle is the speed that a CPU can perform a given task\nThe maximum number of clock cycles a CPU can handle in given period of time is called the clock speed.\n\n\n\n\n\n\n\n:::{.callout-tip} ### Sample Guy in a Box Problem\n\n\nUsing the following codebook, ask the “Guy in a box” to calculate 2+3\n\n\nYou must send a series of commandsto the CPU. The CPU will act on each command and give you an answer.\n\n\nYour answer should be a sequence of numbers you could send to the guy in the box to get the right answer.\n\n\n\n\n\n\n\nSolution\n10000000  The next line is a number, put it in AX\n00000010  The number 2\n10010000  The next line is a number, put it in BX\n00000011  The number 3\n10110000  Add AX to BX and put the result in AX\n11000000  Place the value of AX on the external data bus\nA set of commands such as this is called a program. A program is a series of command sent to a CPU in a specific order for the CPU to perform work. :::",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Hardware",
+      "Understanding CPUs"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/understanding-cpus.html#pipelining",
+    "href": "topics/hardware/understanding-cpus.html#pipelining",
+    "title": "Understanding CPUs",
+    "section": "Pipelining 🚥",
+    "text": "Pipelining 🚥\n\nAlmost all CPU instructions feature a set of 4 stages:\nFetch : retrieve the instruction, address, and data, write them to registers\nDecode : search for instruction code in codebook, verify it is a real instruction, and that data/address are valid\nExecute : perform the instruction, update registers with results\nWrite: write to databus to share results\nRather than have each instruction repeat all of these steps, we can organize CPUs further by specializing our “guy in a box” for each stage\nThis is called pipelining , and it allows for greater efficiency in CPU programming\n\n\n\n\nAnalogy of multiple men in a box to illustrate the idea of a pipeline.",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Hardware",
+      "Understanding CPUs"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/understanding-cpus.html#cpu-properties",
+    "href": "topics/hardware/understanding-cpus.html#cpu-properties",
+    "title": "Understanding CPUs",
+    "section": "CPU Properties 📊",
+    "text": "CPU Properties 📊\nThe most important properties that define CPU behavior are speed and bus width: that is, how fast the clock cycle repeats, and how much data per clock cycle the CPU can process.\n\nClock Speed\nWe measure CPU speed : in cycles per second, e.g. megahertz (MHz) or gigahertz (GHz).\n\n\n\n\n\n\nUnit of Measurement:\n\n\n\nHertz, usually written as Hz, denote frequency. 1Hz is “one time per second”, 10Hz is “ten times per second”. We can use SI Prefixes (International System of Unit Prefixes) to compare magnitudes easily.\nYou will see many of these in computer science over and over again – get to know them well!\n\nSI Prefixes for Frequencies\n\n\n\n\n\n\n\n\nUnit\nMeaning\nDefinition\nExamples\n\n\n\n\nHz\nOnce per second\n1/s, or 1Hz\n1-2Hz: human heart-rate at rest (1Hz = 60 beats per minute, 2Hz = 120 bpm)24Hz: framerate of historic cinema20-60Hz: frequency range for bass notes (C0 = 16.35Hz to C2 = 65.4Hz)60-144Hz: framerate of most monitors\n\n\nkHz\nThousand times per second\n1000 Hz\n0.1-2kHz: frequency range for midrange notes (A2=0.110kHz, C7=2kHz)20kHz: maximum frequency audible to human ear740 kHz: Intel 4004 processor clock speed (1971)\n\n\nMHz\nMillion times per second\n1000000 Hz\n8MHz: fastest CPU clock speed in the 70s35MHz: fastest CPU clock speed in the 80s500-1000MHz: fastest CPU clock speed in the 90s)\n\n\nGHz\nBillion times per second\n1000000000 Hz\n2-5GHz: Almost all consumer CPUs in 2024 have base clock speeds in this range9.117 GHz: fastest CPU clock speed ever recorded (2024)\n\n\n\n\n\n\n\nCPU Cores\nA multi-core SPU means that more than one CPU core is integrated into a single chip, each capable of running parallel processes. This means, in theory, that we multiply the amount of information that can be processes, send and recieved from/to the RAM.\nBenefits of Multi-core processors: - Enhancing the multitasking: multiple jobs done at the same time. - Improved performance: Faster and smoother performance. - Energy efficiency: More work can be done with less power.\n\nCPU Threads\nCPU cores and threads are closely related but not the same. A core is a physical unit within the CPU that executes instructions, while a thread is a virtual sequence of instructions assigned to a core. Think of cores as workers and threads as the jobs they carry out.\n&gt; When CPU has 16 threads, it simply means it can run 16 threads simultaneously.\n\n\n\nBus width\nThe amount of data processed at a time depends on the “number of lightbulbs” or the width of the data bus\nBus width is measured in bits, e.g. 8-bits, 16-bit, 32-bit, 64-bit, etc.\n\n\n\n\n\n\nNote\n\n\n\nQuestion: how many bits do you need in bus width to represent the Guy in the Box and their codebook from the previous problems?\n\n\n\nIn actual computers, the CPU receives instructions ,addresses memory , and data on separate buses.\nThis allows the CPU to send AND receive the following information at the same time:\n\nControl Bus: What command to perform\nAddress Bus: Where in memory the result should be stored\nData Bus: What data to use to perform the command\n\n — The CPU is constantly talking to the RAM and the hardware components. At every clock interval, new instructions are sent through the control bus. Here are a few common instructions:\n\n\n\n\n\n\n\nInstruction\nDescription\n\n\n\n\nLOAD\nLoad this value from RAM\n\n\nADD\nAdd these two numbers\n\n\nSTORE\nSave this value to RAM\n\n\nCOMPARE\nCompare these two numbers\n\n\nJUMP IF\nIf a condition is true, jump to this next set of instructions (example : if statement)\n\n\nJUMP\nJump to this next set of instructions (without any conditions - example function call)\n\n\nIN\nRead data from the input device (example keyboard)\n\n\nOUT\nSend data to an output device (example printer)\n\n\n\nAll this information, the instruction, the location of the hardware devices are all in binary (machine code)! When you write a program in C#, Java, Python, etc. You are programming in high level programming language that will be compiled into machine code by the compiler of this language (or interpreted by the interpreter of this language).\n\n\n\nIllustration of CPU wiring to the RAM. Image source: Figure from In One Lesson on Youtube (excellent video explaination on CPUs)\n\n\n\n\n\nHighway analogy: clock Speed vs bus width\n\nYou can double check that you understand a scientific concept by checking what units of measurement that concept is measured by:\nHighway\n\nNumber of lanes: (a number)\nSpeed limit: (unit distance per time elapsed, e.g. km/h)\n\nSystem bus\n\nBus width:  (a number of bits, eg a 32-bit processor)\nBus speed:  (unit information per time elapsed, e.g. bits/second)\n\n\n\n\n\nAnalogy of the highway. Image source: unknown.",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Hardware",
+      "Understanding CPUs"
+    ]
+  },
+  {
+    "objectID": "topics/hardware/understanding-cpus.htm#introduction",
+    "href": "topics/hardware/understanding-cpus.htm#introduction",
+    "title": "Understanding CPUs",
+    "section": "Introduction",
+    "text": "Introduction\nLast week one component we learned was the CPU (Central Processing Unit): A complex collection of electronic circuits on one or more integrated circuits (chips).\nWe learned that the CPU is responsible for:\n\nExecuting the instructions in a software program.\nCommunicating with other parts of the computer system\n\nToday we’re going to take a deep dive into how the CPU carries out those responsibilities."
+  },
+  {
+    "objectID": "topics/hardware/understanding-cpus.htm#lesson-overview",
+    "href": "topics/hardware/understanding-cpus.htm#lesson-overview",
+    "title": "Understanding CPUs",
+    "section": "Lesson Overview",
+    "text": "Lesson Overview\nMore detail on CPUs. “Guy in Box” analogy, Clock Speed, Codebook, data buses explained."
+  },
+  {
+    "objectID": "topics/hardware/understanding-cpus.htm#cpu-analogy-guy-in-a-box",
+    "href": "topics/hardware/understanding-cpus.htm#cpu-analogy-guy-in-a-box",
+    "title": "Understanding CPUs",
+    "section": "CPU Analogy: Guy in a Box 📦",
+    "text": "CPU Analogy: Guy in a Box 📦\nLet’s start with an analogy: CPUs are a “Guy-in-a-box”. This guy:\n\ncan perform any mathematical function quickly.\nlives in a closed-up box so direct communication is impossible.\n\nOur only way of communicating with this guy is via the External Data Bus. This is 16 light bulbs: 8 visible inside the box, and 8 visible outside the box. There is a light switch for each pair (inside-outside) the box which allows us to flip both the inside and outside bulbs and hence send binary messages!\n\nA man in a box analogy. Image source: unknown."
+  },
+  {
+    "objectID": "topics/hardware/understanding-cpus.htm#pipelining",
+    "href": "topics/hardware/understanding-cpus.htm#pipelining",
+    "title": "Understanding CPUs",
+    "section": "Pipelining 🚥",
+    "text": "Pipelining 🚥\n\nAlmost all CPU instructions feature a set of 4 stages:\nFetch : retrieve the instruction, address, and data, write them to registers\nDecode : search for instruction code in codebook, verify it is a real instruction, and that data/address are valid\nExecute : perform the instruction, update registers with results\nWrite: write to databus to share results\nRather than have each instruction repeat all of these steps, we can organize CPUs further by specializing our “guy in a box” for each stage\nThis is called pipelining , and it allows for greater efficiency in CPU programming\n\n\nAnalogy of multiple men in a box to illustrate the idea of a pipeline."
+  },
+  {
+    "objectID": "topics/hardware/understanding-cpus.htm#cpu-properties",
+    "href": "topics/hardware/understanding-cpus.htm#cpu-properties",
+    "title": "Understanding CPUs",
+    "section": "CPU Properties 📊",
+    "text": "CPU Properties 📊\nThe most important properties that define CPU behavior are speed and bus width: that is, how fast the clock cycle repeats, and how much data per clock cycle the CPU can process.\nClock Speed\nWe measure CPU speed : in cycles per second, e.g. megahertz (MHz) or gigahertz (GHz).\n\n\n\n\n\n\nUnit of Measurement:\n\n\nHertz, usually written as Hz, denote frequency. 1Hz is “one time per second”, 10Hz is “ten times per second”. We can use SI Prefixes (International System of Unit Prefixes) to compare magnitudes easily.\nYou will see many of these in computer science over and over again – get to know them well!\n\nSI Prefixes for Frequencies\n\n\n\n\n\n\n\n\nUnit\nMeaning\nDefinition\nExamples\n\n\n\n\nHz\nOnce per second\n1/s, or 1Hz\n1-2Hz: human heart-rate at rest (1Hz = 60 beats per minute, 2Hz = 120 bpm)24Hz: framerate of historic cinema20-60Hz: frequency range for bass notes (C0 = 16.35Hz to C2 = 65.4Hz)60-144Hz: framerate of most monitors\n\n\nkHz\nThousand times per second\n1000 Hz\n0.1-2kHz: frequency range for midrange notes (A2=0.110kHz, C7=2kHz)20kHz: maximum frequency audible to human ear740 kHz: Intel 4004 processor clock speed (1971)\n\n\nMHz\nMillion times per second\n1000000 Hz\n8MHz: fastest CPU clock speed in the 70s35MHz: fastest CPU clock speed in the 80s500-1000MHz: fastest CPU clock speed in the 90s)\n\n\nGHz\nBillion times per second\n1000000000 Hz\n2-5GHz: Almost all consumer CPUs in 2024 have base clock speeds in this range9.117 GHz: fastest CPU clock speed ever recorded (2024)\n\n\n\n\n\n\nCPU Cores\nA multi-core SPU means that more than one CPU core is integrated into a single chip, each capable of running parallel processes. This means, in theory, that we multiply the amount of information that can be processes, send and recieved from/to the RAM.\nBenefits of Multi-core processors: - Enhancing the multitasking: multiple jobs done at the same time. - Improved performance: Faster and smoother performance. - Energy efficiency: More work can be done with less power.\nCPU Threads\nCPU cores and threads are closely related but not the same. A core is a physical unit within the CPU that executes instructions, while a thread is a virtual sequence of instructions assigned to a core. Think of cores as workers and threads as the jobs they carry out.\n&gt; When CPU has 16 threads, it simply means it can run 16 threads simultaneously.\nBus width\nThe amount of data processed at a time depends on the “number of lightbulbs” or the width of the data bus\nBus width is measured in bits, e.g. 8-bits, 16-bit, 32-bit, 64-bit, etc.\n\n\n\nNote\n\n\nQuestion: how many bits do you need in bus width to represent the Guy in the Box and their codebook from the previous problems?"
   },
   {
     "objectID": "topics/operating-systems/index.html",
@@ -227,7 +340,7 @@
     "href": "topics/all-lectures.html",
     "title": "All lectures",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nSubtitle\n\n\n\n\n\n\n\n\n2025-08-20\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n\n\n2025-08-25\n\n\nExternal components\n\n\nOverview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors\n\n\n\n\n\n\n2025-09-02\n\n\nInternal Components\n\n\nExplains the most important internal components of desktop computers. Processing, memory, storage, and communication.\n\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0"
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nSubtitle\n\n\n\n\n\n\n\n\n2025-08-20\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n\n\n2025-08-25\n\n\nExternal components\n\n\nOverview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors\n\n\n\n\n\n\n2025-09-02\n\n\nInternal Components\n\n\nExplains the most important internal components of desktop computers. Processing, memory, storage, and communication.\n\n\n\n\n\n\n2025-09-28\n\n\nUnderstanding CPUs\n\n\nMore detail on CPUs. “Guy in Box” analogy, Clock Speed, Codebook, Databuses explained.\n\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0"
   },
   {
     "objectID": "topics/index.html",

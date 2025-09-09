@@ -1,2 +1,1320 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"></html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.34">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2025-09-28">
+
+<title>Understanding CPUs – Technical Support</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../topics/hardware/internal-components.html" rel="prev">
+<link href="../../_assets/favicons/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4025c78eb06e3211cf54df66d954ffce.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-5e85d73a073fa0015edbd50008fecb46.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-fc3e9ed9771abc10d80693435d8e1aef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": true,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": true,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../_assets/css/styles.css">
+<meta property="og:title" content="Understanding CPUs – Technical Support">
+<meta property="og:description" content="More detail on CPUs. “Guy in Box” analogy, Clock Speed, Codebook, Databuses explained.">
+<meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/hardware/_assets/understanding-cpus16.png">
+<meta property="og:site_name" content="{{< var course.title >}}">
+<meta property="og:image:alt" content="Sample alt text. To be replaced!">
+<meta property="og:image:height" content="249">
+<meta property="og:image:width" content="480">
+</head>
+
+<body class="nav-sidebar docked nav-fixed slimcontent quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = true;
+    const darkModeDefault = authorPrefersDark;
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../_assets/icon-darkbg.svg" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Technical Support</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about/syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../topics/all-lectures.html"> 
+<span class="menu-text">Lectures</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../labs/all-labs.html"> 
+<span class="menu-text">Labs</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Notes</li><li class="breadcrumb-item"><a href="../../topics/hardware/introduction-to-computers.html">Hardware</a></li><li class="breadcrumb-item"><a href="../../topics/hardware/understanding-cpus.html">Understanding CPUs</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Course Notes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Hardware</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/hardware/introduction-to-computers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Computers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/hardware/external-components.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">External components</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/hardware/internal-components.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Internal Components</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/hardware/understanding-cpus.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Understanding CPUs</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#lesson-overview" id="toc-lesson-overview" class="nav-link" data-scroll-target="#lesson-overview">Lesson Overview</a></li>
+  <li><a href="#cpu-analogy-guy-in-a-box" id="toc-cpu-analogy-guy-in-a-box" class="nav-link" data-scroll-target="#cpu-analogy-guy-in-a-box">CPU Analogy: Guy in a Box 📦</a>
+  <ul>
+  <li><a href="#data-bus" id="toc-data-bus" class="nav-link" data-scroll-target="#data-bus">Data bus 💡💡💡</a></li>
+  <li><a href="#codebook-agreeing-on-meaning" id="toc-codebook-agreeing-on-meaning" class="nav-link" data-scroll-target="#codebook-agreeing-on-meaning">Codebook: Agreeing on meaning 📖</a></li>
+  <li><a href="#registers" id="toc-registers" class="nav-link" data-scroll-target="#registers">Registers</a></li>
+  <li><a href="#clock-agreeing-on-schedule" id="toc-clock-agreeing-on-schedule" class="nav-link" data-scroll-target="#clock-agreeing-on-schedule">Clock: Agreeing on schedule ⏰</a>
+  <ul class="collapse">
+  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#pipelining" id="toc-pipelining" class="nav-link" data-scroll-target="#pipelining">Pipelining 🚥</a></li>
+  <li><a href="#cpu-properties" id="toc-cpu-properties" class="nav-link" data-scroll-target="#cpu-properties">CPU Properties 📊</a>
+  <ul>
+  <li><a href="#clock-speed" id="toc-clock-speed" class="nav-link" data-scroll-target="#clock-speed">Clock Speed</a></li>
+  <li><a href="#cpu-cores" id="toc-cpu-cores" class="nav-link" data-scroll-target="#cpu-cores">CPU Cores</a>
+  <ul class="collapse">
+  <li><a href="#cpu-threads" id="toc-cpu-threads" class="nav-link" data-scroll-target="#cpu-threads">CPU Threads</a></li>
+  </ul></li>
+  <li><a href="#bus-width" id="toc-bus-width" class="nav-link" data-scroll-target="#bus-width">Bus width</a></li>
+  <li><a href="#highway-analogy-clock-speed-vs-bus-width" id="toc-highway-analogy-clock-speed-vs-bus-width" class="nav-link" data-scroll-target="#highway-analogy-clock-speed-vs-bus-width">Highway analogy: clock Speed vs bus width</a></li>
+  </ul></li>
+  <li><a href="#cpu-manufacturers" id="toc-cpu-manufacturers" class="nav-link" data-scroll-target="#cpu-manufacturers">CPU Manufacturers 🏭</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Notes</li><li class="breadcrumb-item"><a href="../../topics/hardware/introduction-to-computers.html">Hardware</a></li><li class="breadcrumb-item"><a href="../../topics/hardware/understanding-cpus.html">Understanding CPUs</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Understanding CPUs</h1>
+<p class="subtitle lead">More detail on CPUs. “Guy in Box” analogy, Clock Speed, Codebook, Databuses explained.</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 28, 2025</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">September 9, 2025</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/understanding-cpus16.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="What if all computers contained some guy, trapped in a box? Something to consider. Image source: unknown"><img src="_assets/understanding-cpus16.png" title="A sample title." class="img-fluid figure-img" alt="Sample alt text. To be replaced!"></a></p>
+<figcaption>What if all computers contained some guy, trapped in a box? Something to consider. Image source: unknown</figcaption>
+</figure>
+</div>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Last week one component we learned was the <strong>CPU</strong> (<em>Central Processing Unit</em>): A complex collection of electronic circuits on one or more integrated circuits (chips).</p>
+<p>We learned that the CPU is responsible for:</p>
+<ul>
+<li><em>Executing the instructions in a software program.</em></li>
+<li>Communicating with other parts of the computer system</li>
+</ul>
+<p>Today we’re going to take a deep dive into <em>how</em> the CPU carries out those responsibilities.</p>
+</section>
+<section id="lesson-overview" class="level2">
+<h2 class="anchored" data-anchor-id="lesson-overview">Lesson Overview</h2>
+<p>More detail on CPUs. “Guy in Box” analogy, Clock Speed, Codebook, data buses explained.</p>
+</section>
+<section id="cpu-analogy-guy-in-a-box" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="cpu-analogy-guy-in-a-box">CPU Analogy: Guy in a Box 📦</h2>
+<p>Let’s start with an analogy: CPUs are a “Guy-in-a-box”. This guy:</p>
+<ul>
+<li>can perform any mathematical function quickly.</li>
+<li>lives in a closed-up box so direct communication is impossible.</li>
+</ul>
+<p>Our only way of communicating with this guy is via the <strong>External Data Bus</strong>. This is 16 light bulbs: 8 visible inside the box, and 8 visible outside the box. There is a light switch for each pair (inside-outside) the box which allows us to flip both the inside and outside bulbs and hence send binary messages!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/understanding-cpus2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="A man in a box analogy. Image source: unknown."><img src="_assets/understanding-cpus2.png" class="img-fluid figure-img" alt="Man in a box"></a></p>
+<figcaption>A man in a box analogy. Image source: unknown.</figcaption>
+</figure>
+</div>
+<hr>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/understanding-cpus5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="A sample caption. Image source: unknown."><img src="_assets/understanding-cpus5.png" title="A sample title." class="img-fluid figure-img" alt="Sample alt text. To be replaced!"></a></p>
+<figcaption>A sample caption. Image source: unknown.</figcaption>
+</figure>
+</div>
+</div></div><section id="data-bus" class="level3">
+<h3 class="anchored" data-anchor-id="data-bus">Data bus 💡💡💡</h3>
+<p>In this analogy this arrangement of light bulbs is called a <strong>data bus:</strong> a method for transporting data from one component to another using electrical circuits. These “light bulbs”: - can be controlled (turned on or off) by us and by the guy-in-the-box - are synchronized (bulb 1 for us has the same value as bulb 1 for the guy) - we can share messages by setting the light bulbs on off, as long as we: agree on schedule (not changing the lightbulbs at the same time) - the meaning (share the same interpretation of lightbulb being on/off)</p>
+<hr>
+</section>
+<section id="codebook-agreeing-on-meaning" class="level3">
+<h3 class="anchored" data-anchor-id="codebook-agreeing-on-meaning">Codebook: Agreeing on meaning 📖</h3>
+<p>How do we share the same meaning?</p>
+<p>It’s important to have common definitions for the meaning of the lightbulbs being on/off to understand messages sent by this method CPUs are designed with a <strong>codebook</strong> (instruction set) that defines the commands that we can give to the guy in the box. This codebook is built into each CPU by its manufacturer and is called “machine code”.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/understanding-cpus10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Every pair of light bulbs is matching and can be controlled from the inside by the CPU or from the outside by the program executing instructions on the CPU."><img src="_assets/understanding-cpus10.png" title="A sample title." class="img-fluid figure-img" alt="Sample alt text. To be replaced!"></a></p>
+<figcaption>Every pair of light bulbs is matching and can be controlled from the inside by the CPU or from the outside by the program executing instructions on the CPU.</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If CPUs only understand machine code (sequence of 1 or 0), how can this C# code be understood by it?</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode csharp code-with-copy"><code class="sourceCode cs"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Hello World!"</span><span class="op">);</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<hr>
+</section>
+<section id="registers" class="level3">
+<h3 class="anchored" data-anchor-id="registers">Registers</h3>
+<p>So far, we can send/receive “messages” from the light bulbs. But, in order to “remember” a message, the guy needs at least a few workstations ( <strong>registers</strong> ) to copy our messages, otherwise the messages will be lost every time the data bus updates.</p>
+<ul>
+<li><strong>Registers</strong> are places to store a very small amount of data temporarily</li>
+<li>Registers are usually the around the 1-4x the size of the data bus</li>
+<li>We can give the registers names to distinguish them (AX, BX, CX, DX for example)</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/understanding-cpus8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Analogy of the registers acting as workstations. Image source: unknown."><img src="_assets/understanding-cpus8.png" title="A sample title." class="img-fluid figure-img" alt="Sample alt text. To be replaced!"></a></p>
+<figcaption>Analogy of the registers acting as workstations. Image source: unknown.</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Are CPU registers made of the same technology as RAM?</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="clock-agreeing-on-schedule" class="level3">
+<h3 class="anchored" data-anchor-id="clock-agreeing-on-schedule">Clock: Agreeing on schedule ⏰</h3>
+<p>Now we are ready to communicate with the guy in the box. We can send them the first command by lighting up the bulbs on the data bus.</p>
+<p>But how do they know when we have finished setting up the light bulbs?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/understanding-cpus16.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Clock analogy. Image source: unknown."><img src="_assets/understanding-cpus16.png" title="A sample title." class="img-fluid figure-img" alt="Sample alt text. To be replaced!"></a></p>
+<figcaption>Clock analogy. Image source: unknown.</figcaption>
+</figure>
+</div>
+<ul>
+<li>We can use a bell activated by a button.</li>
+<li>A real computer uses a special wire called the clock wire (CLK). The CLK wire is turned on and off on a precise and regular schedule. This is called a <strong>clock cycle.</strong></li>
+<li>Each time the clock turns on, the state of our lightbulbs is shared with the guy in the box</li>
+<li>The guy then has until the clock turns off to send a message back</li>
+<li>The next time the clock turns on, a new message is sent to the CPU</li>
+<li>The time between each clock cycle is the <strong>speed</strong> that a CPU can perform a given task</li>
+<li>The maximum number of clock cycles a CPU can handle in given period of time is called the clock speed.</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">:::{.callout-tip} ### Sample Guy in a Box Problem</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Using the following codebook, ask the “Guy in a box” to calculate 2+3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">You must send a series of commandsto the CPU. The CPU will act on each command and give you an answer.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Your answer should be a <strong>sequence of numbers</strong> you could send to the guy in the box to get the right answer.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><img src="_assets/understanding-cpus17.png" title="A sample title." class="img-fluid" alt="Sample alt text. To be replaced!"></td>
+</tr>
+</tbody>
+</table>
+<section id="solution" class="level4">
+<h4 class="anchored" data-anchor-id="solution">Solution</h4>
+<pre><code>10000000  The next line is a number, put it in AX
+00000010  The number 2
+10010000  The next line is a number, put it in BX
+00000011  The number 3
+10110000  Add AX to BX and put the result in AX
+11000000  Place the value of AX on the external data bus</code></pre>
+<p>A set of commands such as this is called a program. A program is a series of command sent to a CPU in a specific order for the CPU to perform work. :::</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="pipelining" class="level2">
+<h2 class="anchored" data-anchor-id="pipelining">Pipelining 🚥</h2>
+<ul>
+<li>Almost all CPU instructions feature a set of 4 stages:</li>
+<li><strong>Fetch</strong> : retrieve the instruction, address, and data, write them to registers</li>
+<li><strong>Decode</strong> : search for instruction code in codebook, verify it is a real instruction, and that data/address are valid</li>
+<li><strong>Execute</strong> : perform the instruction, update registers with results</li>
+<li><strong>Write:</strong> write to databus to share results</li>
+<li>Rather than have each instruction repeat all of these steps, we can organize CPUs further by specializing our “guy in a box” for each stage</li>
+<li>This is called <strong>pipelining</strong> , and it allows for greater efficiency in CPU programming</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/understanding-cpus18.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Analogy of multiple men in a box to illustrate the idea of a pipeline."><img src="_assets/understanding-cpus18.png" title="A sample title." class="img-fluid figure-img" alt="Sample alt text. To be replaced!"></a></p>
+<figcaption>Analogy of multiple men in a box to illustrate the idea of a pipeline.</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="cpu-properties" class="level2">
+<h2 class="anchored" data-anchor-id="cpu-properties">CPU Properties 📊</h2>
+<p>The most important properties that define CPU behavior are <strong>speed</strong> and <strong>bus width</strong>: that is, how fast the clock cycle repeats, and how much data per clock cycle the CPU can process.</p>
+<section id="clock-speed" class="level3">
+<h3 class="anchored" data-anchor-id="clock-speed">Clock Speed</h3>
+<p>We measure CPU <strong>speed</strong> : in cycles per second, e.g.&nbsp;megahertz (MHz) or gigahertz (GHz).</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Unit of Measurement:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Hertz</strong>, usually written as <strong>Hz</strong>, denote frequency. 1Hz is “one time per second”, 10Hz is “ten times per second”. We can use <strong>SI Prefixes</strong> (International System of Unit Prefixes) to compare magnitudes easily.</p>
+<p>You will see many of these in computer science over and over again – get to know them well!</p>
+<table class="table-striped table-hover caption-top table">
+<caption>SI Prefixes for Frequencies</caption>
+<colgroup>
+<col style="width: 11%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 55%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Unit</th>
+<th style="text-align: left;">Meaning</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Hz</td>
+<td style="text-align: left;">Once per second</td>
+<td style="text-align: left;">1/s, or 1Hz</td>
+<td style="text-align: left;">1-2Hz: human heart-rate at rest (1Hz = 60 beats per minute, 2Hz = 120 bpm)<br>24Hz: framerate of historic cinema<br>20-60Hz: frequency range for bass notes (C0 = 16.35Hz to C2 = 65.4Hz)<br>60-144Hz: framerate of most monitors</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">kHz</td>
+<td style="text-align: left;">Thousand times per second</td>
+<td style="text-align: left;">1000 Hz</td>
+<td style="text-align: left;">0.1-2kHz: frequency range for midrange notes (A2=0.110kHz, C7=2kHz)<br>20kHz: maximum frequency audible to human ear<br>740 kHz: Intel 4004 processor clock speed (1971)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MHz</td>
+<td style="text-align: left;">Million times per second</td>
+<td style="text-align: left;">1000000 Hz</td>
+<td style="text-align: left;">8MHz: fastest CPU clock speed in the 70s<br>35MHz: fastest CPU clock speed in the 80s<br>500-1000MHz: fastest CPU clock speed in the 90s)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">GHz</td>
+<td style="text-align: left;">Billion times per second</td>
+<td style="text-align: left;">1000000000 Hz</td>
+<td style="text-align: left;">2-5GHz: Almost all consumer CPUs in 2024 have base clock speeds in this range<br>9.117 GHz: fastest CPU clock speed ever recorded (2024)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="cpu-cores" class="level3">
+<h3 class="anchored" data-anchor-id="cpu-cores">CPU Cores</h3>
+<p>A multi-core SPU means that more than one CPU core is integrated into a single chip, each capable of running parallel processes. This means, in theory, that we multiply the amount of information that can be processes, send and recieved from/to the RAM.</p>
+<p>Benefits of Multi-core processors: - Enhancing the multitasking: multiple jobs done at the same time. - Improved performance: Faster and smoother performance. - Energy efficiency: More work can be done with less power.</p>
+<section id="cpu-threads" class="level4">
+<h4 class="anchored" data-anchor-id="cpu-threads">CPU Threads</h4>
+<p>CPU cores and threads are closely related but not the same. A core is a physical unit within the CPU that executes instructions, while a thread is a virtual sequence of instructions assigned to a core. Think of cores as workers and threads as the jobs they carry out.<br>
+&gt; When CPU has 16 threads, it simply means it can run 16 threads simultaneously.</p>
+</section>
+</section>
+<section id="bus-width" class="level3">
+<h3 class="anchored" data-anchor-id="bus-width">Bus width</h3>
+<p>The amount of data processed at a time depends on the “number of lightbulbs” or the <strong>width</strong> of the <strong>data bus</strong></p>
+<p><strong>Bus width</strong> is measured in bits, e.g.&nbsp;8-bits, 16-bit, 32-bit, 64-bit, etc.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Question</strong>: how many bits do you need in <em>bus width</em> to represent the Guy in the Box and their codebook from the previous problems?</p>
+</div>
+</div>
+<hr>
+<p>In actual computers, the CPU receives <strong>instructions</strong> ,<strong>addresses memory</strong> , and <strong>data</strong> on separate buses.</p>
+<p>This allows the CPU to send AND receive the following information at the same time:</p>
+<ul>
+<li><p><strong>Control Bus</strong>: What command to perform</p></li>
+<li><p><strong>Address Bus</strong>: Where in memory the result should be stored</p></li>
+<li><p><strong>Data Bus</strong>: What data to use to perform the command</p></li>
+</ul>
+<p><img src="_assets/understanding-cpus19.png" title="A sample title." class="img-fluid" alt="Sample alt text. To be replaced!"> — The CPU is constantly talking to the RAM and the hardware components. At every clock interval, new instructions are sent through the control bus. Here are a few common instructions:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 84%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Instruction</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>LOAD</code></td>
+<td>Load this value from RAM</td>
+</tr>
+<tr class="even">
+<td><code>ADD</code></td>
+<td>Add these two numbers</td>
+</tr>
+<tr class="odd">
+<td><code>STORE</code></td>
+<td>Save this value to RAM</td>
+</tr>
+<tr class="even">
+<td><code>COMPARE</code></td>
+<td>Compare these two numbers</td>
+</tr>
+<tr class="odd">
+<td><code>JUMP IF</code></td>
+<td>If a condition is true, jump to this next set of instructions (example : if statement)</td>
+</tr>
+<tr class="even">
+<td><code>JUMP</code></td>
+<td>Jump to this next set of instructions (without any conditions - example function call)</td>
+</tr>
+<tr class="odd">
+<td><code>IN</code></td>
+<td>Read data from the input device (example keyboard)</td>
+</tr>
+<tr class="even">
+<td><code>OUT</code></td>
+<td>Send data to an output device (example printer)</td>
+</tr>
+</tbody>
+</table>
+<p>All this information, the instruction, the location of the hardware devices are all in binary (machine code)! When you write a program in C#, Java, Python, etc. You are programming in high level programming language that will be compiled into machine code by the compiler of this language (or interpreted by the interpreter of this language).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/understanding-cpus20.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Illustration of CPU wiring to the RAM. Image source: Figure from In One Lesson on Youtube (excellent video explaination on CPUs)"><img src="_assets/understanding-cpus20.png" title="A sample title." class="img-fluid figure-img" alt="Sample alt text. To be replaced!"></a></p>
+<figcaption>Illustration of CPU wiring to the RAM. Image source: <strong>Figure from</strong> <a href="https://www.youtube.com/watch?v=cNN_tTXABUA&amp;">In One Lesson</a> on Youtube (excellent video explaination on CPUs)</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="highway-analogy-clock-speed-vs-bus-width" class="level3">
+<h3 class="anchored" data-anchor-id="highway-analogy-clock-speed-vs-bus-width">Highway analogy: clock Speed vs bus width</h3>
+<ul>
+<li>You can double check that you understand a scientific concept by checking what <strong>units of measurement</strong> that concept is measured by:</li>
+<li>Highway
+<ul>
+<li><strong>Number of lanes:</strong> (a number)</li>
+<li><strong>Speed limit:</strong> (unit distance per time elapsed, e.g.&nbsp;km/h)</li>
+</ul></li>
+<li>System bus
+<ul>
+<li><strong>Bus width: </strong> (a number of bits, eg a 32-bit processor)</li>
+<li><strong>Bus speed: </strong> (unit information per time elapsed, e.g.&nbsp;bits/second)</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/understanding-cpus21.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Analogy of the highway. Image source: unknown."><img src="_assets/understanding-cpus21.png" title="A sample title." class="img-fluid figure-img" alt="Sample alt text. To be replaced!"></a></p>
+<figcaption>Analogy of the highway. Image source: unknown.</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="cpu-manufacturers" class="level1">
+<h1>CPU Manufacturers 🏭</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/understanding-cpus22.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="How to read the CPU model and generation"><img src="_assets/understanding-cpus22.png" class="img-fluid figure-img" style="width:80.0%" alt="How to read the CPU model and generation"></a></p>
+<figcaption>How to read the CPU model and generation</figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>Brand</strong>: Refers to company who designed the CPU (often Intel or AMD)</li>
+<li><strong>Tier</strong>: Refers to the ranking of this CPU based on their capacilities and performance. Generally the higher the tier the better the pverall performance of the CPU.</li>
+<li><strong>Generation</strong>: Tells us how new is this CPU compared to another one. Generally, higher generations within the same tier have improved design.</li>
+<li><strong>Model</strong>: It’s a number that uniquely identify a CPU.</li>
+<li><strong>Sufix</strong>: Is an added letter which depending on the manufacturer could refer to different properties of the CPU. For example, intel uses “K” to indicate that the CPU is unlocked and can be overclocked. AMD uses X to indicate that this CPU is already slightly overclocked.</li>
+</ul>
+<!-- ## Exercises
+
+## Knowledge check
+
+## Additional references -->
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/John-Abbott-College\.github\.io\/1N6-Notes\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../topics/hardware/internal-components.html" class="pagination-link" aria-label="Internal Components">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Internal Components</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../about/this-site.html">
+<p>About</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"fade","descPosition":"bottom","loop":true,"openEffect":"fade","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>
