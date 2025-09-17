@@ -1,5 +1,5 @@
 ---
-date: 2025-09-XX
+date: 2025-09-19
 draft: true
 subtitle: Lecture subtitle.
 title: Logic Gates and Boolean Algebra
@@ -13,8 +13,7 @@ title: Logic Gates and Boolean Algebra
 
 ### Logic in Computing
 
-Review: CPUs work by receiving messages in the form of a series of 0s
-and 1s.
+Review: CPUs work by receiving messages in the form of a series of 0s and 1s.
 
 Based on the values of the 0s and 1s, and how the CPUs are
 preprogrammed, the CPU can perform arithmetic and make logical decisions
@@ -25,6 +24,7 @@ But, how are "decisions" made? Using a component called a **logic gate**
 conditions.
 
 But, how do logic gates work?
+![Logic Gates](https://media1.tenor.com/m/_dJ2R7W26E0AAAAC/gray-code-gray-counter.gif)
 
 ![A sample caption. Image source:
 unknown.](_assets/logic-gates-and-boolean-algebra0.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}

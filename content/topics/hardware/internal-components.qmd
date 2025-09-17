@@ -87,6 +87,7 @@ Understanding both is essential for every component we’ll discuss today.
 
 ## 1. Case 🧊
 
+
 ![Computer case helping air circulation inside the system unit. Source: Voltcave](_assets/internal-components2.png)
 
 * Provides protection and cooling for the internal components.
@@ -103,7 +104,7 @@ Understanding both is essential for every component we’ll discuss today.
   * to replace warm air with cold air to keep components at stable temperatures
   * to prevent build-up of dust
   * There exist many guides/studies for optimal airflow. E.g.  _[Voltcave Guide](https://voltcave.com/pc-airflow-guide/)_
-
+---
 ## 2. Power Supply (PSU) ⚡
 
 __Main purpose:__ Converts AC power (alternating current) from wall socket to DC power (direct current). Direct current (0 or 5V) is used to power digital circuits.
@@ -111,7 +112,7 @@ __Main purpose:__ Converts AC power (alternating current) from wall socket to D
 * Computers can only tolerate slight fluctuations in power without  __needing to shut down!__. This is why we need to convert the electric current from the providers to direct current.
 * PSUs have their own fans because energy conversion releases a lot of heat!
 
-:::{.callout-warning}
+::: {.callout-warning}
 # Never open a power supply! 
 The capacitors contained within can keep a dangerous high voltage, high power charge long after being unplugged.
 :::
@@ -180,7 +181,7 @@ After figuring out the required wattage for your machine, you can then calculate
 In the case of a power outage, an  __Uninterruptible Power Supply (UPS)__  can keep a computer running for a few minutes to several hours depending on the sophistication of the UPS. See  _[Uninterruptible Power Supply](https://www.wikihow.com/Buy-and-Use-an-Uninterruptible-Power-Supply)_ for an example.
 
 It’s basically a large battery that keeps charge during normal operation, and powers a computer using its stored charge when the building’s power is cut off.
-
+---
 ## 3. Motherboard 📟
 
 Motherboards connect all the major components of the computer: the CPU, RAM, Expansion ports, etc.
@@ -304,8 +305,6 @@ The CPU is connected to the motherboard in one of two ways:
 :::
 
 ---
-
-
 ## 4. Internal Connectors 🔌
 
 There are a variety of connectors used to connect components to the motherboard. Two main purposes:
@@ -336,7 +335,7 @@ Always check the pins if you have trouble with a connector.
 
 :::
 
-
+---
 ## 5. CPU 🧠
 
 The CPU Most important element of the computer.
@@ -357,7 +356,7 @@ We'll have a lecture dedicated to the CPU since it is so complicated.
 
 ![CPU naming conventions and associated properties.](_assets/internal-components30.png)
 
-
+---
 ## 6. Cooling Devices 🪭
 
 The flow of current between and within electronic components generates heat. Some devices are particularly powerful heat-generators, due to the large current they draw:
@@ -391,7 +390,7 @@ Occasionally video cards or other components have their own fans to cool them.
 
 ![Variety of heat sinks.](_assets/internal-components32.jpg)
 
-
+---
 ## 7. Main Memory (RAM) 📋
 
 Referred to as RAM (Random Access Memory). They're connected to RAM slots on the motherboard:
@@ -445,7 +444,7 @@ There are four main properties of RAM to know:
 
  Motherboards are usually compatible with only **ONE** generation of RAM. If you have a motherboard designed for DDR3, it cannot use DDR4 or DDR5.
 :::
-
+---
 ## 8. Graphics Cards (GPU) 🎨
 
 Also known as Video cards or Graphical Processing Units
@@ -474,7 +473,7 @@ GPU cannot replace the CPU because their architecture is different and meant for
 
 ![Difference between CPU vs GPU internal structures.](_assets/internal-components38.png){width=66% fig-align="left" fig-alt="alt text."}
 
-
+---
 ## 9. Storage Devices 💾
 
 Storage devices store data permanently. Some are installed inside the case (e.g. hard drive); Some are removable and portable (e.g. external flash drive).
@@ -621,7 +620,7 @@ Motherboards support different types of interfaces.
 {{< video https://www.youtube.com/watch?v=d86ws7mQYIg >}}
 
 
-
+---
 <!--
 ### Computer Memory Hierarchy
 
