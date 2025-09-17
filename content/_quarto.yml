@@ -42,6 +42,9 @@ website:
           - topics/hardware/external-components.qmd
           - topics/hardware/internal-components.qmd  
           - topics/hardware/understanding-cpus.qmd
+        - section: "Data representation"
+          contents:
+          - topics/data-representation/introduction-to-binary.qmd
               
 format:
   html:
