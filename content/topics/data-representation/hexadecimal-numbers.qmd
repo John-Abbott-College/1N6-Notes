@@ -1,0 +1,64 @@
+---
+date: 2025-09-15
+draft: true
+subtitle: Lecture subtitle.
+title: Introduction to Binary
+
+---
+
+# Hexadecimal Numbers
+
+------------------------------------------------------------------------
+
+As we saw with **Unicode**, computers need to handle very large numbers in order to distinguish between the many possible characters and instructions. While computers have no problem working with large **binary numbers**, __we do!__ Converting 32-bit or 64-bit values from binary to decimal is tedious, which makes __large binary numbers hard for humans to read and write quickly__. We are comfortable using large **decimal numbers**, but the problem is that **10 is not a power of 2**, so it does not align evenly with the binary storage model that computers use. For example, with 4 bits we can represent values up to 16, but to store just a little more, like 17–20, we already need 5 bits. The consequence is that decimal numbers cannot be directly stored in machines built from transistors that can only distinguish between "on" and "off." So what do we do? We turn to **hexadecimal**, a system that maps neatly onto binary while remaining compact and much easier for humans to read and write. 
+
+------------------------------------------------------------------------
+
+-   Introduce a new numeric system! There are infinite possibilities...
+-   **Hexadecimal numbers** are **base 16** .
+-   Note: 16 is a power of 2! 2\^4 = 16
+-   In other words:
+-   with 4 bits, we can store one "hexit", values range from 0-1111 (0 -\> 15 in decimal)
+-   with 8 bits, we can store exactly two "hexits", values range from 0 - 1111 1111 (0 -\> 255 in decimal)
+
+------------------------------------------------------------------------
+
+## Building Hexadecimal Numbers
+
+
+
+> **Riddle**
+>
+> Avatar Aang went to get his first driving license. The clerk asked Aang
+> for his ID to make sure he was old enough to do the driving test. The
+> clerk read his ID, and told him that he is not old enough for the test.
+> They him that he needs to be at least 18.
+>
+> Aang answered, "I'm sorry but you are wrong. I am exactly 18, in
+> decimal. My ID in fact shows my age in Hexadecimal."
+>
+> What age is Aang in Hexadecimal(if he is indeed 18 in decimal?)
+>
+> ![Aang.](/Users/teacher/Documents/1N6-Notes/content/topics/data-representation/_assets/data-representation5.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
+
+
+------------------------------------------------------------------------
+
+## Why Hexadecimal?
+
+Hexadecimal is perfect for matching 4 bits.
+
+Every combination of 4 bits can be matched with one hex number.
+
+*4 bits* can be represented by *1 Hex value ("hexit")*
+
+*8 bits* can be represented by *2 Hex values ("hexit")*
+
+------------------------------------------------------------------------
+
+## Hexadecimal Digits
+
+
+
+### 
