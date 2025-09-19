@@ -8,8 +8,8 @@
     "items": [
       "/topics/hardware/introduction-to-computers.html",
       "/topics/hardware/external-components.html",
-      "/topics/hardware/understanding-cpus.html",
-      "/topics/hardware/internal-components.html"
+      "/topics/hardware/internal-components.html",
+      "/topics/hardware/understanding-cpus.html"
     ]
   },
   {
@@ -31,9 +31,9 @@
     "items": [
       "/topics/hardware/introduction-to-computers.html",
       "/topics/hardware/external-components.html",
+      "/topics/hardware/internal-components.html",
       "/topics/hardware/understanding-cpus.html",
-      "/topics/data-representation/introduction-to-binary.html",
-      "/topics/hardware/internal-components.html"
+      "/topics/data-representation/introduction-to-binary.html"
     ]
   },
   {

@@ -145,12 +145,15 @@
 <h2 id="toc-title">Table of contents</h2>
 <ul>
 <li><a href="#/introduction-to-binary" id="/toc-introduction-to-binary">Introduction to binary</a></li>
-<li><a href="#/representing-numbers-in-binary" id="/toc-representing-numbers-in-binary">Representing Numbers in Binary</a></li>
+<li><a href="#/bits-binary-digits" id="/toc-bits-binary-digits">Bits: BInary digiTs ▪️▫️</a></li>
+<li><a href="#/bytes" id="/toc-bytes">Bytes 🇧</a></li>
+<li><a href="#/binary-to-decimal" id="/toc-binary-to-decimal">Binary to Decimal 🔢</a></li>
+<li><a href="#/decimal-to-binary-10" id="/toc-decimal-to-binary-10">Decimal to Binary 1️⃣0️⃣</a></li>
+<li><a href="#/range-of-numbers-based-on-number-of-bits" id="/toc-range-of-numbers-based-on-number-of-bits">Range of numbers based on number of bits ↔︎️</a></li>
 <li><a href="#/exercises" id="/toc-exercises">Exercises</a></li>
 </ul>
 </nav>
 </section>
-<section>
 <section id="introduction-to-binary" class="title-slide slide level1 center">
 <h1>Introduction to binary</h1>
 <p>Everyone “knows” that computers use “binary” to operate</p>
@@ -201,7 +204,10 @@
 </div>
 </div>
 </section>
-<h3 id="bits-binary-digits">Bits: BInary digiTs</h3>
+
+<section>
+<section id="bits-binary-digits" class="title-slide slide level1 center">
+<h1>Bits: BInary digiTs ▪️▫️</h1>
 <p>So what does binary have to do with computers?</p>
 <p>A <strong>Bit</strong> (Binary Digit) is the basic unit of information representing one of two discrete states. It is the smallest unit of information within the computer. Bits have one of two values:</p>
 <ul>
@@ -209,15 +215,10 @@
 <li><em>0 (False) or 1 (True)</em></li>
 </ul>
 <p>We often compare this to a light switch being either on of off…</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://media1.tenor.com/m/RlK21NHtq5UAAAAd/turn-off-shut-off.gif" title="A sample title." alt="Sample alt text. To be replaced!"></p>
-<figcaption>Comparison between a bit and an ON (1) OFF (0) switch</figcaption>
-</figure>
-</div>
-<section class="slide level2">
 
-<h3 id="how-are-bits-physically-implemented">How are Bits physically implemented? <strong>🔋 ➜ ⚡ / 📴</strong></h3>
+<img data-src="https://media1.tenor.com/m/RlK21NHtq5UAAAAd/turn-off-shut-off.gif" title="A sample title." alt="Sample alt text. To be replaced!" class="r-stretch quarto-figure-center"><p class="caption">Comparison between a bit and an ON (1) OFF (0) switch</p></section>
+<section id="how-are-bits-physically-implemented" class="slide level2">
+<h2>How are Bits physically implemented?</h2>
 <p>There are various ways to design circuits that effectively differentiate between “on” and “off” states. One method involves using a <strong>transistor</strong>, which can either be switched on or off to represent binary information. Another approach uses a <strong>capacitor</strong>, where its state of being charged or discharged conveys the desired data. In <strong>magnetic</strong> disks (like HDDs), information is stored as bits based on the direction of the magnetic field, either north-south or south-north. Similarly, on <strong>optical discs</strong> (such as CD-ROMs), bits are represented by whether a bit on the surface is shiny or not shiny. Lastly, over <strong>telephone lines</strong> or through <strong>radio</strong>, binary data is transmitted using high or low-pitched tones to represent the bits. Each of these methods relies on a distinct physical characteristic to represent binary information reliably.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -231,21 +232,21 @@
 <figcaption>A transistor is ON or OFF in any chip of the computer such as the CPU and GPU Source: <a href="https://www.anypcba.com/upfile/blogs/articles/841/transistor-symbols.webp">Any PCB</a></figcaption>
 </figure>
 </div>
-<h3 id="bytes">Bytes</h3>
+</section></section>
+<section>
+<section id="bytes" class="title-slide slide level1 center">
+<h1>Bytes 🇧</h1>
 <p>A Byte is a collection of bits known as the unit of digital information. Historically, it was the number of bits required to encode a single character.</p>
 <p>1 Byte = 8 bits</p>
 <p>Abbreviation: <strong>B</strong>. E.g. <strong>4B</strong> of storage means <strong>4 Bytes</strong> means <strong>32 bits</strong>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_assets/data-representation3.jpg" title="A sample title." alt="Sample alt text. To be replaced!"></p>
-<figcaption>Bit versus Byte.</figcaption>
-</figure>
-</div>
-</section>
+
+<img data-src="_assets/data-representation3.jpg" title="A sample title." alt="Sample alt text. To be replaced!" class="r-stretch quarto-figure-center"><p class="caption">Bit versus Byte.</p></section>
 <section id="history-of-bytes" class="slide level2">
-<h2>History of Bytes</h2>
+<h2>History of Bytes 📖</h2>
 <p>A byte represents the number of bits used to encode a single <strong>character</strong> in a computer, making it the smallest <strong>addressable</strong> unit of memory in many computer architectures. Historically, the size of a byte was hardware-dependent, with no universal standard governing its size. However, in 1993, a standard was introduced that defined the size of a byte as 8 bits, a convention that is now widely adopted across modern computing systems. This standardization has helped ensure consistency in how data is stored and processed across different platforms and devices.</p>
-<h3 id="si-convention">SI Convention</h3>
+</section>
+<section id="si-convention" class="slide level2">
+<h2>SI Convention 📜</h2>
 <table class="caption-top">
 <colgroup>
 <col style="width: 11%">
@@ -332,7 +333,7 @@
 <p><em>Source: <a href="https://www.nist.gov/pml/owm/metric-si-prefixes">NIST</a></em></p>
 </section>
 <section id="iec-convention" class="slide level2">
-<h2>IEC Convention</h2>
+<h2>IEC Convention 📜</h2>
 <p>To make things confusing, Windows and some other operating system don’t follow the SI convention. They use the symbols Kb, Mb, etc but not referring to the powers of 10 we have seen above. They count the bytes in powers of 2! If a manufacturer makes a hard drive following the SI conventions, wthe operating system will recognize it as less bytes than indicated.</p>
 <p>In this course, we will use the <strong>SI conventions</strong> for Kilobytes as in 1000 bytes and we will differentiate it from powers of 2 using the <strong>IEC convention</strong>. In the end of the 1990s, the IEC adopted new prefixes to differentiate powers of 10 capacities (as described above) and powers of 2 capacities.</p>
 <table class="caption-top">
@@ -416,17 +417,15 @@
 </div>
 </div>
 </section></section>
-<section class="scrollable">
-<section id="representing-numbers-in-binary" class="title-slide slide level1 center">
-<h1>Representing Numbers in Binary</h1>
-
-</section>
-<h3 id="converting-decimal-to-binary">Converting Decimal to Binary</h3>
-<p>To convert a decimal number to binary:</p>
+<section id="binary-to-decimal" class="title-slide slide level1 center scrollable">
+<h1>Binary to Decimal 🔢</h1>
+<p>Similar to the decimal system, the binary system breaksdown a number in powers of 2 composing this number. ::: {layout-ncol=2} <img data-src="_assets/data-representation9.png" alt="Decomposing 735 in powers of 10 Source: Cheever"></p>
+<p><img data-src="_assets/data-representation10.png" alt="Decomposing 181 in powers of 2 Source: Cheever"> :::</p>
+<p>The steps to convert a binary number to decimal is straightforward 📝:</p>
 <ol type="1">
-<li><p>Find the power of 2 value for each bit of the binary number, starting from 0.(e.g., the power of 2 value for the 5th bit of a binary number is: 2<sup>5</sup>=32, etc.)</p></li>
-<li><p>Add all the powers of two <strong>wherever there is a 1</strong> in the bit of the binary number</p></li>
-<li><p>The sum of the powers of two above is the value of the binary number in decimal!</p></li>
+<li><p>4️⃣ Find the power of 2 value for each bit of the binary number, starting from 0.(e.g., the power of 2 value for the 5th bit of a binary numberis: 2<sup>5</sup>=32, etc.)</p></li>
+<li><p>1️⃣ Add all the powers of two <strong>wherever there is a 1</strong> in the bit of the binary number</p></li>
+<li><p>➕ Add those powers of two → this is the decimal!</p></li>
 </ol>
 <table class="caption-top">
 <colgroup>
@@ -483,9 +482,13 @@
 </tbody>
 </table>
 <p>Therefore, <strong>11001<sub>2</sub>=25<sub>10</sub></strong>.</p>
-<h3 id="converting-binary-to-decimal">Converting Binary to Decimal</h3>
+</section>
+
+<section>
+<section id="decimal-to-binary-10" class="title-slide slide level1 center scrollable">
+<h1>Decimal to Binary 1️⃣0️⃣</h1>
 <p>Converting binary to decimal is easy to memorize for small numbers.</p>
-<p>For example:</p>
+<p>For example here is the binary numbers from 0 to 9:</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -560,30 +563,30 @@
 </tbody>
 </table>
 <p>After this lecture, you will have the tools to confidently fill out the rest of this table yourself!</p>
-<p>Well, how do we do it for decimals? A large number, like 2608, is in fact <strong>the combination of multiples of powers of ten</strong>. When we say these numbers in English, we naturally <strong>decompose</strong> the number into its component parts:</p>
-<blockquote>
-<p>2608 is <strong>two thousand + six hundred + eight.</strong></p>
+<p>Well, how do we do it for decimals? A large number, like 735, is in fact <strong>the combination of multiples of powers of ten</strong>. When we say these numbers in English, we naturally <strong>decompose</strong> the number into its component parts:</p>
+
+<img data-src="_assets/data-representation9.png" class="r-stretch quarto-figure-center"><p class="caption">Decomposing 735 in powers of 10 Source: <a href="https://cheever.domains.swarthmore.edu/Ref/BinaryMath/NumSys.html">Cheever</a></p><blockquote>
+<p>735 is <strong>six hundred + thirty + five.</strong></p>
 </blockquote>
 <p>Or, in other words:</p>
 <blockquote>
-<p>2608 = 2x1000 + 2x100 + 0x10 + 8x1</p>
-<p>2608 = <strong>2x10<sup>3</sup> + 6x10<sup>2</sup> + 0x10<sup>1</sup> + 8x10<sup>0</sup></strong></p>
+<p>735 = 7x100 + 3x10 + 5x1</p>
+<p>735 = <strong>7x10<sup>2</sup> +30x10<sup>1</sup> +5x10<sup>0</sup></strong></p>
 </blockquote>
 <p>We can use this exact method, with one key difference, to decompose the value of binary numbers just like decimal numbers.</p>
 <p>What key difference? In Binary, we use <strong>powers of 2 instead of powers of 10</strong>.</p>
-<section class="slide level2 scrollable">
-
-<h3 id="converting-decimal-number-to-binary">Converting Decimal Number to Binary</h3>
-<p>Going the other way (from Decimal to Binary) is a bit less natural – we cannot “see” directly from the decimal representation of a number (like 2608, for instance), how many powers of two are needed to make the equivalent number in binary.</p>
-<p>Instead, we’ll learn an <strong>algorithm</strong> (a series of deterministic steps to solve an analytical problem)</p>
+<p>We’ll learn an <strong>algorithm</strong> to systematically decompose any decimal number into binary:</p>
 <p><strong>Convert Decimal to Binary by Repeated Division</strong></p>
 <ol type="1">
-<li><p>Divide the decimal number by 2 using long division.</p></li>
-<li><p>Note down the <strong>outcome</strong> and <strong>remainder</strong> of the division on the side.</p></li>
-<li><p>Repeat steps 1 and 2 on the outcome until the outcome becomes zero.</p></li>
-<li><p>The binary number will be the series of the remainders, read from <strong>bottom to top</strong> .</p></li>
+<li><p>➗ Divide the decimal number by 2 using long division.</p></li>
+<li><p>✍️ Write down the <strong>quotient</strong> and <strong>remainder</strong> of the division on the side.</p></li>
+<li><p>🔁 Repeat steps 1 and 2 on the outcome.</p></li>
+<li><p>⛔ Stop when the quotient becomes 0.</p></li>
+<li><p>📥 Read the remainders from bottom to top → this is the binary number.</p></li>
 </ol>
-<p>Convert 25 to binary.</p>
+</section>
+<section id="example-convert-25-to-binary." class="slide level2">
+<h2>Example Convert 25 to binary.</h2>
 <p>Long Division (divide the Outcome by 2 at every step): <img data-src="_assets/data-representation7.png"> ————————————————————————</p>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -601,41 +604,50 @@
 </div>
 </div>
 </section>
-<section id="how-many-numbers-can-i-represent" class="slide level2">
-<h2>How many Numbers can I represent?</h2>
+<section class="slide level2">
+
+</section></section>
+<section id="range-of-numbers-based-on-number-of-bits" class="title-slide slide level1 center">
+<h1>Range of numbers based on number of bits ↔︎️</h1>
+<p>When using a fixed number of bits, the total number of unique values we can represent is always limited by 2<sup>𝑛</sup>, where 𝑛 is the number of bits. This means that no matter how we arrange the bits, once all possible combinations are used, we cannot create any new unique numbers without adding more bits. For example, with 3 bits we can only represent 8 values (0–7 in decimal), and with 8 bits (1 byte) we are restricted to 256 values (0–255). This limitation is why larger data types like 2 bytes (16 bits) or 4 bytes (32 bits) are needed when working with bigger numbers.</p>
 <ul>
 <li>1 bit -&gt; can represent 2 numbers
 <ul>
-<li>(0)2 = (0)10</li>
-<li>(1)2 = (1)10</li>
+<li>(0)<sub>2</sub> = (0)<sub>10</sub></li>
+<li>(1)<sub>2</sub> = (1)<sub>10</sub></li>
 </ul></li>
 <li>2 bits -&gt; can represent 4 numbers
 <ul>
-<li>(00)2 = (0)10</li>
-<li>(01)2 = (1)10</li>
-<li>(10)2 = (2)10</li>
-<li>(11)2 = (3)10</li>
+<li>(00)<sub>2</sub> = (0)<sub>10</sub></li>
+<li>(01)<sub>2</sub> = (1)<sub>10</sub></li>
+<li>(10)<sub>2</sub> = (2)<sub>10</sub></li>
+<li>(11)<sub>2</sub> = (3)<sub>10</sub></li>
 <li>Values: 0 to 3 in decimal.</li>
 </ul></li>
 </ul>
-</section>
-<section class="slide level2">
-
-<h3 id="n-bits-how-many-numbers">n Bits ⬄ How many Numbers</h3>
-<p><strong>Possible Test Question</strong></p>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Question</strong></p>
+</div>
+<div class="callout-content">
 <p>How many numbers can I represent in 4 bytes? What is the first and last number?</p>
 <ul>
-<li><strong>n bits </strong></li>
-<li><strong>-&gt; Can represent 2</strong> <strong>n</strong> __ numbers __</li>
-<li><strong>-&gt; Values: from 0 to (2</strong> <strong>n</strong> __ -1)__</li>
-<li>1 Byte -&gt; 8 bit -&gt; 28 numbers (256)</li>
-<li><strong>First Number </strong> 0000 00002 = 010</li>
+<li><strong>n bits </strong> → 4</li>
+<li><strong>Can represent 2<sup>n</sup></strong>* → 16</li>
+<li><strong>-&gt; Values: from 0 to (2</strong> <strong>n</strong> __ -1)_<br>
+</li>
+<li><strong>First Number</strong> 0000 = (0)<sub>10</sub></li>
 <li><strong>Last Number</strong> 1111 11112 = 28-1 = 25510</li>
 <li>2 Byte -&gt; 16 bit -&gt; 216 numbers (65536)</li>
 <li><strong>First Number </strong> 0000 0000 0000 00002 = 010 to</li>
 <li><strong>Last Number</strong> 1111 1111 1111 11112 = 216-1 = 6553510</li>
 </ul>
-</section></section>
+</div>
+</div>
+</div>
+</section>
+
 <section>
 <section id="exercises" class="title-slide slide level1 center">
 <h1>Exercises</h1>
@@ -651,7 +663,7 @@
 <li>100000011000001</li>
 </ul>
 <p>Check your answers (you can google search “1001 binary to decimal” or similar to get an answer)</p>
-<h3 id="converting-decimal-to-binary-1">Converting Decimal to Binary</h3>
+<h3 id="converting-decimal-to-binary">Converting Decimal to Binary</h3>
 <p>Convert the following into binary. <strong>Show your work</strong> .</p>
 <p>10</p>
 <p>64</p>
