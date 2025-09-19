@@ -52,7 +52,7 @@ Note: binary and decimal are not the only possible numeral systems. All that dis
 
 :::
 
-### Bits: BInary digiTs
+# Bits: BInary digiTs ▪️▫️
 
 So what does binary have to do with computers?
 
@@ -67,7 +67,7 @@ We often compare this to a light switch being either on of off...
 
 ------------------------------------------------------------------------
 
-### How are Bits physically implemented?  **🔋 ➜ ⚡ / 📴**
+## How are Bits physically implemented?
 
 There are various ways to design circuits that effectively differentiate between "on" and "off" states. One method involves using a **transistor**, which can either be switched on or off to represent binary information. Another approach uses a **capacitor**, where its state of being charged or discharged conveys the desired data. In **magnetic** disks (like HDDs), information is stored as bits based on the direction of the magnetic field, either north-south or south-north. Similarly, on **optical discs** (such as CD-ROMs), bits are represented by whether a bit on the surface is shiny or not shiny. Lastly, over **telephone lines** or through **radio**, binary data is transmitted using high or low-pitched tones to represent the bits. Each of these methods relies on a distinct physical characteristic to represent binary information reliably.
 
@@ -76,7 +76,7 @@ There are various ways to design circuits that effectively differentiate between
 
 ![A transistor is ON or OFF in any chip of the computer such as the CPU and GPU Source: [Any PCB](https://www.anypcba.com/upfile/blogs/articles/841/transistor-symbols.webp)](https://www.anypcba.com/upfile/blogs/articles/841/transistor-symbols.webp){fig-alt=""}
 
-### Bytes
+# Bytes 🇧
 
 A Byte is a collection of bits known as the unit of digital information. Historically, it was the number of bits required to encode a single character.
 
@@ -87,13 +87,13 @@ Abbreviation: **B**. E.g. **4B** of storage means **4 Bytes** means **32 bits**.
 
 ![Bit versus Byte.](_assets/data-representation3.jpg "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
-## History of Bytes
+## History of Bytes  📖
 
 A byte represents the number of bits used to encode a single **character** in a computer, making it the smallest **addressable** unit of memory in many computer architectures. Historically, the size of a byte was hardware-dependent, with no universal standard governing its size. However, in 1993, a standard was introduced that defined the size of a byte as 8 bits, a convention that is now widely adopted across modern computing systems. This standardization has helped ensure consistency in how data is stored and processed across different platforms and devices.
 
 
 
-### SI Convention
+## SI Convention 📜
 
 | Unit Name  | Symbol | Multiplying Factor | Multiplying factor (in thousands) | Description in English |
 | ---------- | ------ | ------------------ | --------------------------------- | ---------------------- |
@@ -111,7 +111,7 @@ A byte represents the number of bits used to encode a single **character** in a 
 
 
 
-## IEC Convention
+## IEC Convention 📜
 
 To make things confusing, Windows and some other operating system don't follow the SI convention. They use the symbols Kb, Mb, etc but not referring to the powers of 10 we have seen above. They count the bytes in powers of 2! If a manufacturer makes a hard drive following the SI conventions, wthe operating system will recognize it as less bytes than indicated. 
 
@@ -138,21 +138,22 @@ Johnny buys a 1Tb external SSD but once plugs it into his Windows machine, notic
 
 :::
 
-# Representing Numbers in Binary
+# Binary to Decimal  🔢
 
-### Converting Decimal to Binary 
+Similar to the decimal system, the binary system breaksdown a number in powers of 2 composing this number. 
+::: {layout-ncol=2}
+![Decomposing 735 in powers of 10 Source: [Cheever](https://cheever.domains.swarthmore.edu/Ref/BinaryMath/NumSys.html)](_assets/data-representation9.png)
 
-To convert a decimal number to binary: 
+![Decomposing 181 in powers of 2 Source: [Cheever](https://cheever.domains.swarthmore.edu/Ref/BinaryMath/NumSys.html)](_assets/data-representation10.png)
+:::
 
-1. Find the power of 2 value for each bit of the binary number, starting
-   from 0.(e.g., the power of 2 value for the 5th bit of a binary number
-   is: 2^5^=32, etc.)
+The steps to convert a binary number to decimal is straightforward 📝: 
 
-2. Add all the powers of two **wherever there is a 1** in the bit of the
-   binary number
+1. 4️⃣ Find the power of 2 value for each bit of the binary number, starting from 0.(e.g., the power of 2 value for the 5th bit of a binary numberis: 2^5^=32, etc.)
 
-3. The sum of the powers of two above is the value of the binary number in
-   decimal!
+2. 1️⃣ Add all the powers of two **wherever there is a 1** in the bit of the binary number
+
+3. ➕ Add those powers of two → this is the decimal!
 
 
 | Binary Number                             |          1          |    1    |    0    |    0    |    1    |
@@ -164,11 +165,10 @@ To convert a decimal number to binary:
 
 Therefore, **11001~2~=25~10~**.
 
-### Converting Binary to Decimal
-
+# Decimal to Binary 1️⃣0️⃣
 Converting binary to decimal is easy to memorize for small numbers. 
 
-For example: 
+For example here is the binary numbers from 0 to 9: 
 
 | Binary    | Binary |
 | --------- | ------ |
@@ -193,43 +193,41 @@ What about larger numbers? How can we approach this problem systematically, i.e.
 
 After this lecture, you will have the tools to confidently fill out the rest of this table yourself!
 
-Well, how do we do it for decimals? A large number, like 2608, is in fact **the combination of multiples of powers of ten**. When we say these numbers in English, we naturally **decompose** the number into its component parts:
+Well, how do we do it for decimals? A large number, like 735, is in fact **the combination of multiples of powers of ten**. When we say these numbers in English, we naturally **decompose** the number into its component parts:
 
-> 2608 is **two thousand + six hundred + eight.**
+![Decomposing 735 in powers of 10 Source: [Cheever](https://cheever.domains.swarthmore.edu/Ref/BinaryMath/NumSys.html)](_assets/data-representation9.png)
+
+
+> 735 is **six hundred + thirty + five.**
 
 Or, in other words:
 
-> 2608 = 2x1000 + 2x100 + 0x10 + 8x1
+> 735 = 7x100 + 3x10 + 5x1
 >
-> 2608 = **2x10^3^ + 6x10^2^ + 0x10^1^ + 8x10^0^**
+> 735 = **7x10^2^ +30x10^1^ +5x10^0^**
 
 We can use this exact method, with one key difference, to decompose the value of binary numbers just like decimal numbers.
 
 What key difference? In Binary, we use **powers of 2 instead of powers of 10**.
 
 
-
-------------------------------------------------------------------------
-
-### Converting Decimal Number to Binary
-
-Going the other way (from Decimal to Binary) is a bit less natural -- we cannot "see" directly from the decimal representation of a number (like 2608, for instance), how many powers of two are needed to make the equivalent number in binary.
-
-Instead, we'll learn an **algorithm** (a series of deterministic steps to solve an analytical problem)
+We'll learn an **algorithm** to systematically decompose any decimal number into binary:
 
 **Convert Decimal to Binary by Repeated Division**
 
-1. Divide the decimal number by 2 using long division.
+1. ➗ Divide the decimal number by 2 using long division.
 
-2. Note down the **outcome** and **remainder** of the division on the side.
+2. ✍️ Write down the **quotient** and **remainder** of the division on the side.
 
-3. Repeat steps 1 and 2 on the outcome until the outcome becomes zero.
+3. 🔁 Repeat steps 1 and 2 on the outcome.
 
-4. The binary number will be the series of the remainders, read from **bottom to top** .
+4. ⛔ Stop when the quotient becomes 0.
+
+4. 📥 Read the remainders from bottom to top → this is the binary number.
 
 
 
-Convert 25 to binary.
+## Example Convert 25 to binary.
 
 Long Division (divide the Outcome by 2 at every step): 
 ![](_assets/data-representation7.png)
@@ -245,37 +243,35 @@ The higher powers are read from bottom to top, because these have been divided r
 
 :::
 
-How many Numbers can I represent?
-------------------------------------------------------------------------
+---
+# Range of numbers based on number of bits ↔️
+
+When using a fixed number of bits, the total number of unique values we can represent is always limited by 2^𝑛^, where 𝑛 is the number of bits. This means that no matter how we arrange the bits, once all possible combinations are used, we cannot create any new unique numbers without adding more bits. For example, with 3 bits we can only represent 8 values (0–7 in decimal), and with 8 bits (1 byte) we are restricted to 256 values (0–255). This limitation is why larger data types like 2 bytes (16 bits) or 4 bytes (32 bits) are needed when working with bigger numbers.
 
 -   1 bit -\> can represent 2 numbers
-    -   (0)2 = (0)10
-    -   (1)2 = (1)10
+    -   (0)~2~ = (0)~10~
+    -   (1)~2~ = (1)~10~
 -   2 bits -\> can represent 4 numbers
-    -   (00)2 = (0)10
-    -   (01)2 = (1)10
-    -   (10)2 = (2)10
-    -   (11)2 = (3)10
+    -   (00)~2~ = (0)~10~
+    -   (01)~2~ = (1)~10~
+    -   (10)~2~ = (2)~10~
+    -   (11)~2~ = (3)~10~
     -   Values: 0 to 3 in decimal.
 
-------------------------------------------------------------------------
+::: {.callout-note icon="false"}
+# Question
+How many numbers can I represent in 4 bytes? What is the first and last number?
 
-### n Bits ⬄ How many Numbers
-
-**Possible Test Question**
-
-How many numbers can I represent in 4 bytes? What is the first and last
-number?
-
--   **n bits **
--   **-\> Can represent 2** **n** \_\_ numbers \_\_
--   **-\> Values: from 0 to (2** **n** \_\_ -1)\_\_
--   1 Byte -\> 8 bit -\> 28 numbers (256)
--   **First Number ** 0000 00002 = 010
+-   **n bits ** → 4
+-   **Can represent 2^n^*** → 16 
+-   **-\> Values: from 0 to (2** **n** \_\_ -1)\_\
+-   **First Number** 0000 = (0)~10~
 -   **Last Number** 1111 11112 = 28-1 = 25510
 -   2 Byte -\> 16 bit -\> 216 numbers (65536)
 -   **First Number ** 0000 0000 0000 00002 = 010 to
 -   **Last Number** 1111 1111 1111 11112 = 216-1 = 6553510
+
+:::
 
 # Exercises 
 
