@@ -1,6 +1,6 @@
----
 title: Internal Components
 subtitle: Explains the most important internal components of desktop computers. Processing, memory, storage, and communication.
+
 date: 2025-09-02
 ---
 
@@ -55,7 +55,9 @@ When discussing components of any complicated machine, we should try to understa
 * The make and model refer to the brand and specific product name of a component.
 
 ::: {.callout-note icon=false}
+
 # Example
+
 Hyundai Accent — where Hyundai is the make (manufacturer), and Accent is the model (product).
 :::
 
@@ -71,10 +73,12 @@ Why it matters:
 * Properties describe the quantitative (numerical) and qualitative (descriptive) characteristics of a component that can be compared with similar components.
 
 ::: {.callout-note icon=false}
+
 # Example
+
 - **Quantitative example** The 2009 Hyundai Accent has a fuel efficiency of 29 MPG (miles per gallon).
 - **Qualitative example** The Hyundai Accent is a hatchback, not a sedan.
-:::
+  :::
 
 Why it matters:
 
@@ -87,33 +91,36 @@ Understanding both is essential for every component we’ll discuss today.
 
 ## 1. Case 🧊
 
-
 ![Computer case helping air circulation inside the system unit. Source: Voltcave](_assets/internal-components2.png)
 
 * Provides protection and cooling for the internal components.
 * Also prevents damage from __static electricity__
 
 ::: {.callout-note icon=false}
+
 # Question ❔
+
 - What is static electricity? 
 - How is the case projecting from that?
-:::
+  :::
 
 * Usually made of plastic, steel or aluminum.
 * Helps the fans move air through all components:
   * to replace warm air with cold air to keep components at stable temperatures
   * to prevent build-up of dust
   * There exist many guides/studies for optimal airflow. E.g.  _[Voltcave Guide](https://voltcave.com/pc-airflow-guide/)_
----
+
 ## 2. Power Supply (PSU) ⚡
 
-__Main purpose:__ Converts AC power (alternating current) from wall socket to DC power (direct current). Direct current (0 or 5V) is used to power digital circuits.
+__Main purpose:__ Converts AC power (alternating current) from wall socket to DC power (direct current). Direct current (0 or 5V) is used to power digital circuits.
 
 * Computers can only tolerate slight fluctuations in power without  __needing to shut down!__. This is why we need to convert the electric current from the providers to direct current.
 * PSUs have their own fans because energy conversion releases a lot of heat!
 
-::: {.callout-warning}
+:::{.callout-warning}
+
 # Never open a power supply! 
+
 The capacitors contained within can keep a dangerous high voltage, high power charge long after being unplugged.
 :::
 
@@ -146,15 +153,20 @@ Not all PSUs efficiently convert AC to DC power!
 To pick the right power supply for your machine, you must firstly know what's the wattage required by your system.  For this you might need to add all the internal components into the [Wattage calculator](https://www.newegg.com/tools/power-supply-calculator?cm_sp=NeweggInsider-_-BuyingGuides-_-ChoosePSU) which will then provide an estimate of the load wattage of this machine. 
 
 ::: {.callout-note icon=false}
+
 # Example
+
 If you’re building a PC with an Intel Core i7-11700K CPU, an Nvidia GeForce RTX 3070 GPU, 16 gigabytes (GB) of RAM made up of two 8GB sticks, a 1TB solid-state drive (SSD), and a 1TB 7200RPM hard disk drive (HDD), then 512 watts of power would be recommended. 
 :::
 
 #### 80 Plus Standard
+
 The 80 Plus standard was created to promote efficient enery use of a computer. When selecting a power supply, you might see that many suppliers will carry the 80 Plus certification labels. The efficiency of a power supply gives the ratio of AC power required from an electrical outlet to the useful power converted to DC to be used by a computer (the load wattage). 
 
 ::: {.callout-note icon=false}
+
 # Example
+
 A 75% efficient power supply requires 100W of AC input to provide 75 W of DC load wattage output to a computer. dissipating the remaining 25 W in as heat. 
 :::
 
@@ -172,23 +184,23 @@ In the North America, the outlet voltage is roughly 115 V. The following table s
 After figuring out the required wattage for your machine, you can then calculate the input wattage required by the PSU to reach the desired load wattage of your machine. 
 
 
-* For more detailed explanation:  _[How to Choose a Power Supply](https://www.newegg.com/insider/how-to-choose-a-pc-power-supply-buying-guide/)_
+* For more detailed explanation:  _[How to Choose a Power Supply](https://www.newegg.com/insider/how-to-choose-a-pc-power-supply-buying-guide/)_
 
 
 
 ### 2.3 Uninterruptible Power Supply
 
-In the case of a power outage, an  __Uninterruptible Power Supply (UPS)__  can keep a computer running for a few minutes to several hours depending on the sophistication of the UPS. See  _[Uninterruptible Power Supply](https://www.wikihow.com/Buy-and-Use-an-Uninterruptible-Power-Supply)_ for an example.
+In the case of a power outage, an  __Uninterruptible Power Supply (UPS)__  can keep a computer running for a few minutes to several hours depending on the sophistication of the UPS. See  _[Uninterruptible Power Supply](https://www.wikihow.com/Buy-and-Use-an-Uninterruptible-Power-Supply)_ for an example.
 
 It’s basically a large battery that keeps charge during normal operation, and powers a computer using its stored charge when the building’s power is cut off.
----
+
 ## 3. Motherboard 📟
 
 Motherboards connect all the major components of the computer: the CPU, RAM, Expansion ports, etc.
 
 ![An ASUS Pro B660M Motherboard. Most motherboards look something like this.](_assets/internal-components8.png)
 
-- Composed of various chips all combined into  __north __ and  __south__  bridges
+- Composed of various chips all combined into  __north __ and  __south__  bridges
 - Main circuit board and controls the electrical pathways (buses) found in a computer.
 - The buses allow data to travel between the various components of a computer.
 - Various **form factors**, e.g. AT, ATX, LPX, BTX, ITX.
@@ -226,7 +238,7 @@ Motherboards connect all the major components of the computer: the CPU, RAM, Exp
 
 ### 3.2 I/O Ports
 
-You'll notice that the I/O Ports (input/output) on the mother board are always located around the same area. This is to keep certain consistency across manufacturer and regardless of the form factors.
+You'll notice that the I/O Ports (input/output) on the mother board are always located around the same area. This is to keep certain consistency across manufacturer and regardless of the form factors.
 
 ![I/O Ports location standard accross manufacturer and form factors.](_assets/internal-components10.png){width=66% fig-align="left" fig-alt="alt text."}
 
@@ -235,9 +247,9 @@ You'll notice that the I/O Ports (input/output) on the mother board are always l
 
 Let’s have a closer look at what we call expansion slots.
 
-**Expansion slots** are ports inside a computer found on the motherboard. They provide the possibility to expand the hardware of your PC.
+**Expansion slots** are ports inside a computer found on the motherboard. They provide the possibility to expand the hardware of your PC.
 
-For example, you may want to install a network card, a sound card, and most commonly, a video card.
+For example, you may want to install a network card, a sound card, and most commonly, a video card.
 
 ![Expansion slot](_assets/internal-components17.png)
 
@@ -245,14 +257,14 @@ For example, you may want to install a network card, a sound card, and most comm
 
 Expansion slots allow us to increase the functionality of a computer by adding controllers for specific devices (often called adapter cards) e.g. sound, video, NIC (network Interface Card).
 
-- __PCI 		used in most computers, commonly used for network interface__
-- AGP 		designed to be used by video adapters
-- __PCIe		replaces AGP in newer computers, used for video cards__
-- ISA		older, rarely used, 8 or 16 bit
-- EISA		older, rarely used, 32 bit
-- MCA		IBM proprietary 32 bit, older, rarely used
-- PCI-X		32 bit, can run up to four times faster than PCI
-- MiniPCI	32 bit, used by laptops, has three different form factors
+- __PCI     used in most computers, commonly used for network interface__
+- AGP     designed to be used by video adapters
+- __PCIe    replaces AGP in newer computers, used for video cards__
+- ISA   older, rarely used, 8 or 16 bit
+- EISA    older, rarely used, 32 bit
+- MCA   IBM proprietary 32 bit, older, rarely used
+- PCI-X   32 bit, can run up to four times faster than PCI
+- MiniPCI 32 bit, used by laptops, has three different form factors
 
 In 2024 __: PCI __ and  __PCIe __ are the common standards that cover all features required for  __expansion slots__
 
@@ -305,6 +317,8 @@ The CPU is connected to the motherboard in one of two ways:
 :::
 
 ---
+
+
 ## 4. Internal Connectors 🔌
 
 There are a variety of connectors used to connect components to the motherboard. Two main purposes:
@@ -319,9 +333,12 @@ Always check the pins if you have trouble with a connector.
 :::
 
 ::: {.callout-warning}
+
 # Quote
+
 “If it doesn’t go in like butter, it doesn’t go in at all” -- never force a connection! you are likely going to damage the pins.
 :::
+
 ### Example connectors
 
 ::: {layout-ncol=2}
@@ -335,7 +352,7 @@ Always check the pins if you have trouble with a connector.
 
 :::
 
----
+
 ## 5. CPU 🧠
 
 The CPU Most important element of the computer.
@@ -356,14 +373,15 @@ We'll have a lecture dedicated to the CPU since it is so complicated.
 
 ![CPU naming conventions and associated properties.](_assets/internal-components30.png)
 
----
+
 ## 6. Cooling Devices 🪭
 
 The flow of current between and within electronic components generates heat. Some devices are particularly powerful heat-generators, due to the large current they draw:
 ::: {.callout-note}
+
 - CPUs typically come with their own cooling device
 - Cooling devices are built into GPUs and Power Supplies
-:::
+  :::
 
 There are two main types of cooling devices:
 
@@ -384,13 +402,13 @@ Occasionally video cards or other components have their own fans to cool them.
 
 ### Heat sinks
 
-* Heat sinks also draw heat away from the CPU core.
-  * A heat sink is a piece of copper or aluminum that resides between the processor and the CPU fan.
+* Heat sinks also draw heat away from the CPU core.
+  * A heat sink is a piece of copper or aluminum that resides between the processor and the CPU fan.
   * It absorbs the heat from the processor and the fan disperses the heat.
 
 ![Variety of heat sinks.](_assets/internal-components32.jpg)
 
----
+
 ## 7. Main Memory (RAM) 📋
 
 Referred to as RAM (Random Access Memory). They're connected to RAM slots on the motherboard:
@@ -444,10 +462,10 @@ There are four main properties of RAM to know:
 
  Motherboards are usually compatible with only **ONE** generation of RAM. If you have a motherboard designed for DDR3, it cannot use DDR4 or DDR5.
 :::
----
+
 ## 8. Graphics Cards (GPU) 🎨
 
-Also known as Video cards or Graphical Processing Units
+Also known as Video cards or Graphical Processing Units
 
 One of the most interesting use of expansion slots is the addition of video cards, which contain a special chip called the GPU (Graphical Processing Unit).
 
@@ -469,11 +487,11 @@ The computation needed for graphical processing is generally useful for scientif
   * __TDP:__  __ Thermal Design Power, measures the number of Watts needed to power the device__
 * __Both have performance measured in __  __speed__  __ (operations/second) like RAM__
 
-GPU cannot replace the CPU because their architecture is different and meant for different purposes. GPU is great to parallelize computations! But the GPU is not as versatile as the CPU which has a larger instruction set
+GPU cannot replace the CPU because their architecture is different and meant for different purposes. GPU is great to parallelize computations! But the GPU is not as versatile as the CPU which has a larger instruction set
 
 ![Difference between CPU vs GPU internal structures.](_assets/internal-components38.png){width=66% fig-align="left" fig-alt="alt text."}
 
----
+
 ## 9. Storage Devices 💾
 
 Storage devices store data permanently. Some are installed inside the case (e.g. hard drive); Some are removable and portable (e.g. external flash drive).
@@ -538,7 +556,7 @@ Magnetic disks store up to 1.44Meg of data.
 
 * Solid State Drives (SSD)
   * Do not have moving parts and use __ semi-conductors__  to store data.
-  * Non-volatile flash memory chips manage the storage on an SSD, resulting in faster access to data, higher reliability and reduced power usage.
+  * Non-volatile flash memory chips manage the storage on an SSD, resulting in faster access to data, higher reliability and reduced power usage.
 
 ![Solid State drive](_assets/internal-components54.png)
 
@@ -577,22 +595,26 @@ Magnetic tapes are often used for backups or archiving data. Impractical for mos
 Interface Types, in order of oldest to newest
 
 **IDE**
+
 - Integrated Drive Electronics / Advanced Technology Attachment.
 - Also called ATA.
 - Early drive controller interface, originally only supported hard drives up to 540 MB.
 - Uses a 40 pin connector, and maximum cable length of 46cm (18in).
 
 **EIDE**
+
 - Enhanced Integrated Drive Electronics (also called ATA-2).
 - Updated version of IDE, supporting larger drives and direct memory access.
 - Uses a 40 pin connector.
 
 **PATA**
+
 - Parallel version of ATA.
 - Used internally due to maximum cable length of 46cm (18in).
 - Largely replaced by SATA in newer systems.
 
 **SATA (most commonly used today)**
+
 - Serial version of ATA, with slimmer and longer cables providing better airflow.
 - Uses 7-pin connector (less pins means less issues with electromagnetic interference).
 - SATA hard drives tend to be quieter than IDE drives.
@@ -617,16 +639,20 @@ To install a drive internally in a computer, the connection interface on the dri
 Motherboards support different types of interfaces.
 
 ## Full disection of a computer 🔬🖥️
+
 {{< video https://www.youtube.com/watch?v=d86ws7mQYIg >}}
 
 
----
+
 <!--
+
 ### Computer Memory Hierarchy
 
 Source: https://en.wikipedia.org/wiki/Memory_hierarchy
+
 ## Exercises
 
 ## Knowledge check
 
 ## Additional resources -->
+
