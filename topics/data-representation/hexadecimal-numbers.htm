@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <link href="../../_assets/favicons/favicon.ico" rel="icon">
-<script src="../../site_libs/quarto-listing/list.min.js"></script>
-<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-html/tabby.min.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -12,7 +10,8 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b651517ce65839d647a86e2780455cfb.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.24">
 
-  <title>{{&lt; var course.title &gt;}} – Operating Systems</title>
+  <meta name="dcterms.date" content="2025-09-15">
+  <title>{{&lt; var course.title &gt;}} – Introduction to Binary</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -32,35 +31,6 @@
     }
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-06e768f098560084c2d7120de8ad04fb.css">
-  <script>
-
-    window.document.addEventListener("DOMContentLoaded", function (_event) {
-      const listingTargetEl = window.document.querySelector('#listing-listing .list');
-      if (!listingTargetEl) {
-        // No listing discovered, do not attach.
-        return; 
-      }
-
-      const options = {
-        valueNames: ['listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
-        
-        searchColumns: ["listing-categories"],
-      };
-
-      window['quarto-listings'] = window['quarto-listings'] || {};
-      window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-      if (window['quarto-listing-loaded']) {
-        window['quarto-listing-loaded']();
-      }
-    });
-
-    window.addEventListener('hashchange',() => {
-      if (window['quarto-listing-loaded']) {
-        window['quarto-listing-loaded']();
-      }
-    })
-    </script>
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -153,9 +123,9 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Operating Systems – Technical Support">
-<meta property="og:description" content="All lectures related to operating systems can be found here.">
-<meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/operating-systems/_assets/favicons/favicon-32x32.png">
+<meta property="og:title" content="Introduction to Binary – Technical Support">
+<meta property="og:description" content="Lecture subtitle.">
+<meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/data-representation/_assets/favicons/favicon-32x32.png">
 <meta property="og:site_name" content="{{< var course.title >}}">
 </head>
 <body class="quarto-dark">
@@ -163,19 +133,69 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Operating Systems</h1>
-  <p class="subtitle">All lectures related to operating systems can be found here.</p>
+  <h1 class="title">Introduction to Binary</h1>
+  <p class="subtitle">Lecture subtitle.</p>
 
 <div class="quarto-title-authors">
 </div>
 
+  <p class="date">2025-09-15</p>
+</section><section id="TOC">
+<nav role="doc-toc"> 
+<h2 id="toc-title">Table of contents</h2>
+<ul>
+<li><a href="#/hexadecimal-numbers" id="/toc-hexadecimal-numbers">Hexadecimal Numbers</a></li>
+</ul>
+</nav>
+</section>
+<section>
+<section id="hexadecimal-numbers" class="title-slide slide level1 center">
+<h1>Hexadecimal Numbers</h1>
+
 </section>
 <section class="slide level2">
 
-
-
-
+<p>As we saw with <strong>Unicode</strong>, computers need to handle very large numbers in order to distinguish between the many possible characters and instructions. While computers have no problem working with large <strong>binary numbers</strong>, <strong>we do!</strong> Converting 32-bit or 64-bit values from binary to decimal is tedious, which makes <strong>large binary numbers hard for humans to read and write quickly</strong>. We are comfortable using large <strong>decimal numbers</strong>, but the problem is that <strong>10 is not a power of 2</strong>, so it does not align evenly with the binary storage model that computers use. For example, with 4 bits we can represent values up to 16, but to store just a little more, like 17–20, we already need 5 bits. The consequence is that decimal numbers cannot be directly stored in machines built from transistors that can only distinguish between “on” and “off.” So what do we do? We turn to <strong>hexadecimal</strong>, a system that maps neatly onto binary while remaining compact and much easier for humans to read and write.</p>
 </section>
+<section class="slide level2">
+
+<ul>
+<li>Introduce a new numeric system! There are infinite possibilities…</li>
+<li><strong>Hexadecimal numbers</strong> are <strong>base 16</strong> .</li>
+<li>Note: 16 is a power of 2! 2^4 = 16</li>
+<li>In other words:</li>
+<li>with 4 bits, we can store one “hexit”, values range from 0-1111 (0 -&gt; 15 in decimal)</li>
+<li>with 8 bits, we can store exactly two “hexits”, values range from 0 - 1111 1111 (0 -&gt; 255 in decimal)</li>
+</ul>
+</section>
+<section id="building-hexadecimal-numbers" class="slide level2">
+<h2>Building Hexadecimal Numbers</h2>
+<blockquote>
+<p><strong>Riddle</strong></p>
+<p>Avatar Aang went to get his first driving license. The clerk asked Aang for his ID to make sure he was old enough to do the driving test. The clerk read his ID, and told him that he is not old enough for the test. They him that he needs to be at least 18.</p>
+<p>Aang answered, “I’m sorry but you are wrong. I am exactly 18, in decimal. My ID in fact shows my age in Hexadecimal.”</p>
+<p>What age is Aang in Hexadecimal(if he is indeed 18 in decimal?)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../Users/teacher/Documents/1N6-Notes/content/topics/data-representation/_assets/data-representation5.png" title="A sample title." alt="Sample alt text. To be replaced!"></p>
+<figcaption>Aang.</figcaption>
+</figure>
+</div>
+</blockquote>
+</section>
+<section id="why-hexadecimal" class="slide level2">
+<h2>Why Hexadecimal?</h2>
+<p>Hexadecimal is perfect for matching 4 bits.</p>
+<p>Every combination of 4 bits can be matched with one hex number.</p>
+<p><em>4 bits</em> can be represented by <em>1 Hex value (“hexit”)</em></p>
+<p><em>8 bits</em> can be represented by <em>2 Hex values (“hexit”)</em></p>
+</section>
+<section id="hexadecimal-digits" class="slide level2">
+<h2>Hexadecimal Digits</h2>
+<h3 id="section"></h3>
+
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -561,15 +581,4 @@
       </script>
     
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></body></html>
+</body></html>

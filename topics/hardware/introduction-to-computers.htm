@@ -7,8 +7,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.34">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b651517ce65839d647a86e2780455cfb.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.24">
 
   <meta name="dcterms.date" content="2025-08-20">
   <title>{{&lt; var course.title &gt;}} – Introduction to Computers</title>
@@ -30,7 +30,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-0c8acc74dca0c2faaedea4940f202713.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-06e768f098560084c2d7120de8ad04fb.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -206,28 +206,15 @@
 </div>
 <div id="tabset-1-4">
 <p>Game consoles such as PlayStation and Xbox, as well as handheld handheld consoles like Nintendo Switch and Valve Steam Deck, are similar to smartphones in that they technically contain all of the components of a computer, but generally manufactured from <strong>proprietary hardware</strong> that cannot be interchanged with other computers.</p>
-<div id="fig-gameconsoles" class="quarto-layout-panel">
+<div id="fig-gameconsoles" class="quarto-float quarto-figure quarto-figure-center" data-layout-ncol="2">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-gameconsoles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img data-src="_assets/introduction-to-computers-n64.png"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img data-src="_assets/introduction-to-computers-gamecube.png"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p>Video game consoles showed an interesting development in <strong>storage technology</strong> in the elate 90’s: originally, game data AND user save data would be stored on a <strong>writable</strong> <a href="https://en.wikipedia.org/wiki/ROM_cartridge">ROM game cartridge</a> as in the N64 (left). The next generation of systems like Gamecube (right) would provide <strong>read-only</strong> game data on a <a href="https://en.wikipedia.org/wiki/Compact_disc">CD-ROM disk</a> with writable data being stored on a separate <a href="https://en.wikipedia.org/wiki/Memory_card">memory card</a>. Images by <a href="https://pixabay.com/users/aerozol-5124957/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4003939">aerozol</a> from <a href="https://pixabay.com/">Pixabay</a>. :::</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><strong>Nonelectronics?</strong></p>
+<section id="nonelectronics" class="slide level2">
+<h2>Nonelectronics?</h2>
 <p>Even before there were consumer electronics, there were devices made to store and process data – that is, computers! The following are three different examples of nonelectronic devices that have been used for computation.</p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-layout-panel" data-layout-nrow="2">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
@@ -266,14 +253,10 @@
 </div>
 </div>
 </div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><strong>Computers within computers?</strong></p>
+</section>
+<section id="computers-within-computers" class="slide level2">
+<h2>Computers within computers?</h2>
 <p>It is possible, and actually quite common, to create computers <em>inside</em> other computers, using the programming capabilities of that computer.</p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-gameconsoles" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div id="fig-minecraft" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-subfloat-fig">
 <div aria-describedby="fig-minecraft-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -284,8 +267,7 @@
 </figcaption>
 </figure>
 </div>
-</div>
-</div>
+</section>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-gameconsoles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1
@@ -535,7 +517,7 @@ Figure&nbsp;1
         margin: 0.2,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -609,13 +591,14 @@ Figure&nbsp;1
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

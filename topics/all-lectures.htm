@@ -9,8 +9,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.34">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b651517ce65839d647a86e2780455cfb.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.24">
 
   <title>{{&lt; var course.title &gt;}} – All lectures</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -31,7 +31,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-0c8acc74dca0c2faaedea4940f202713.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-06e768f098560084c2d7120de8ad04fb.css">
   <script>
 
     window.document.addEventListener("DOMContentLoaded", function (_event) {
@@ -365,7 +365,7 @@
         margin: 0.2,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -439,13 +439,14 @@
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy
@@ -603,7 +604,7 @@ Subtitle
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-date-sort="1755648000000" data-listing-file-modified-sort="1757431608915" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1873" data-listing-title-sort="Introduction to Computers" data-listing-filename-sort="introduction-to-computers.qmd">
+<tr data-index="0" data-listing-date-sort="1755648000000" data-listing-file-modified-sort="1758291851517" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1873" data-listing-title-sort="Introduction to Computers" data-listing-filename-sort="introduction-to-computers.qmd">
 <td>
 <span class="listing-date">2025-08-20</span>
 </td>
@@ -616,7 +617,7 @@ Subtitle
 
 </tr>
 
-<tr data-index="1" data-listing-date-sort="1756080000000" data-listing-file-modified-sort="1757431608915" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="25" data-listing-word-count-sort="4940" data-listing-title-sort="External components" data-listing-filename-sort="external-components.qmd">
+<tr data-index="1" data-listing-date-sort="1756080000000" data-listing-file-modified-sort="1758291851517" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="25" data-listing-word-count-sort="4940" data-listing-title-sort="External components" data-listing-filename-sort="external-components.qmd">
 <td>
 <span class="listing-date">2025-08-25</span>
 </td>
@@ -629,28 +630,41 @@ Subtitle
 
 </tr>
 
-<tr data-index="2" data-listing-date-sort="1756771200000" data-listing-file-modified-sort="1757431608915" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="17" data-listing-word-count-sort="3336" data-listing-title-sort="Internal Components" data-listing-filename-sort="internal-components.qmd">
+<tr data-index="2" data-listing-date-sort="1757289600000" data-listing-file-modified-sort="1758291851517" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2331" data-listing-title-sort="Understanding CPUs" data-listing-filename-sort="understanding-cpus.qmd">
 <td>
-<span class="listing-date">2025-09-02</span>
-</td>
-<td>
-<a href="../topics/hardware/internal-components.html" class="title listing-title">Internal Components</a>
-</td>
-<td>
-<span class="listing-subtitle">Explains the most important internal components of desktop computers. Processing, memory, storage, and communication.</span>
-</td>
-
-</tr>
-
-<tr data-index="3" data-listing-date-sort="1759017600000" data-listing-file-modified-sort="1757431608916" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2331" data-listing-title-sort="Understanding CPUs" data-listing-filename-sort="understanding-cpus.qmd">
-<td>
-<span class="listing-date">2025-09-28</span>
+<span class="listing-date">2025-09-08</span>
 </td>
 <td>
 <a href="../topics/hardware/understanding-cpus.html" class="title listing-title">Understanding CPUs</a>
 </td>
 <td>
 <span class="listing-subtitle">More detail on CPUs. “Guy in Box” analogy, Clock Speed, Codebook, Databuses explained.</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-listing-date-sort="1757894400000" data-listing-file-modified-sort="1758291851315" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3056" data-listing-title-sort="Introduction to Binary" data-listing-filename-sort="introduction-to-binary.qmd">
+<td>
+<span class="listing-date">2025-09-15</span>
+</td>
+<td>
+<a href="../topics/data-representation/introduction-to-binary.html" class="title listing-title">Introduction to Binary</a>
+</td>
+<td>
+<span class="listing-subtitle">What’s a bit, and how is it implemented in a computer?</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-listing-file-modified-sort="1758291851517" data-listing-reading-time-sort="18" data-listing-word-count-sort="3407" data-listing-title-sort="date: 2025-09-02" data-listing-filename-sort="internal-components.qmd">
+<td>
+<span class="listing-date">&nbsp;</span>
+</td>
+<td>
+<a href="../topics/hardware/internal-components.html" class="title listing-title">date: 2025-09-02</a>
+</td>
+<td>
+<span class="listing-subtitle">&nbsp;</span>
 </td>
 
 </tr>

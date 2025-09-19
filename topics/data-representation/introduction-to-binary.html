@@ -1,2 +1,1452 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"></html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.24">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2025-09-15">
+
+<title>Introduction to Binary – Technical Support</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../topics/hardware/understanding-cpus.html" rel="prev">
+<link href="../../_assets/favicons/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-f54fa83ccd8f86fe7238c9291c42d766.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-8f4e3aabaa80e3e650ae20f2c24f966b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-73c098799d6c67192b4877d1c14b2390.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-7438714e894a917b4843c5da08afe798.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": true,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": true,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../_assets/css/styles.css">
+<meta property="og:title" content="Introduction to Binary – Technical Support">
+<meta property="og:description" content="What’s a bit, and how is it implemented in a computer?">
+<meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/data-representation/_assets/data-representation2.png">
+<meta property="og:site_name" content="{{< var course.title >}}">
+<meta property="og:image:alt" content="">
+<meta property="og:image:height" content="111">
+<meta property="og:image:width" content="1443">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = true;
+    const darkModeDefault = authorPrefersDark;
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../_assets/icon-darkbg.svg" alt="" class="navbar-logo light-content">
+    <img src="../../_assets/icon-darkbg.svg" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Technical Support</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about/syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../topics/all-lectures.html"> 
+<span class="menu-text">Lectures</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../labs/all-labs.html"> 
+<span class="menu-text">Labs</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Notes</li><li class="breadcrumb-item"><a href="../../topics/data-representation/introduction-to-binary.html">Data representation</a></li><li class="breadcrumb-item"><a href="../../topics/data-representation/introduction-to-binary.html">Introduction to Binary</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Course Notes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Hardware</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/hardware/introduction-to-computers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Computers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/hardware/external-components.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">External components</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/hardware/internal-components.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">date: 2025-09-02</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/hardware/understanding-cpus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Understanding CPUs</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Data representation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/data-representation/introduction-to-binary.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Introduction to Binary</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#introduction-to-binary" id="toc-introduction-to-binary" class="nav-link active" data-scroll-target="#introduction-to-binary">Introduction to binary</a>
+  <ul>
+  <li><a href="#bits-binary-digits" id="toc-bits-binary-digits" class="nav-link" data-scroll-target="#bits-binary-digits">Bits: BInary digiTs</a></li>
+  <li><a href="#how-are-bits-physically-implemented" id="toc-how-are-bits-physically-implemented" class="nav-link" data-scroll-target="#how-are-bits-physically-implemented">How are Bits physically implemented? <strong>🔋 ➜ ⚡ / 📴</strong></a></li>
+  <li><a href="#bytes" id="toc-bytes" class="nav-link" data-scroll-target="#bytes">Bytes</a></li>
+  <li><a href="#history-of-bytes" id="toc-history-of-bytes" class="nav-link" data-scroll-target="#history-of-bytes">History of Bytes</a>
+  <ul class="collapse">
+  <li><a href="#si-convention" id="toc-si-convention" class="nav-link" data-scroll-target="#si-convention">SI Convention</a></li>
+  </ul></li>
+  <li><a href="#iec-convention" id="toc-iec-convention" class="nav-link" data-scroll-target="#iec-convention">IEC Convention</a></li>
+  </ul></li>
+  <li><a href="#representing-numbers-in-binary" id="toc-representing-numbers-in-binary" class="nav-link" data-scroll-target="#representing-numbers-in-binary">Representing Numbers in Binary</a>
+  <ul>
+  <li><a href="#converting-decimal-to-binary" id="toc-converting-decimal-to-binary" class="nav-link" data-scroll-target="#converting-decimal-to-binary">Converting Decimal to Binary</a></li>
+  <li><a href="#converting-binary-to-decimal" id="toc-converting-binary-to-decimal" class="nav-link" data-scroll-target="#converting-binary-to-decimal">Converting Binary to Decimal</a></li>
+  <li><a href="#converting-decimal-number-to-binary" id="toc-converting-decimal-number-to-binary" class="nav-link" data-scroll-target="#converting-decimal-number-to-binary">Converting Decimal Number to Binary</a></li>
+  <li><a href="#how-many-numbers-can-i-represent" id="toc-how-many-numbers-can-i-represent" class="nav-link" data-scroll-target="#how-many-numbers-can-i-represent">How many Numbers can I represent?</a>
+  <ul class="collapse">
+  <li><a href="#n-bits-how-many-numbers" id="toc-n-bits-how-many-numbers" class="nav-link" data-scroll-target="#n-bits-how-many-numbers">n Bits ⬄ How many Numbers</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a>
+  <ul>
+  <li><a href="#practise-problems" id="toc-practise-problems" class="nav-link" data-scroll-target="#practise-problems">Practise problems</a></li>
+  <li><a href="#converting-decimal-to-binary-1" id="toc-converting-decimal-to-binary-1" class="nav-link" data-scroll-target="#converting-decimal-to-binary-1">Converting Decimal to Binary</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Notes</li><li class="breadcrumb-item"><a href="../../topics/data-representation/introduction-to-binary.html">Data representation</a></li><li class="breadcrumb-item"><a href="../../topics/data-representation/introduction-to-binary.html">Introduction to Binary</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Introduction to Binary</h1>
+<p class="subtitle lead">What’s a bit, and how is it implemented in a computer?</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 15, 2025</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">September 19, 2025</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction-to-binary" class="level1">
+<h1>Introduction to binary</h1>
+<p>Everyone “knows” that computers use “binary” to operate</p>
+<p>But, as we saw last class, computers don’t “know” anything ultimately, its CPU is just configured to react in particularly sophisticated ways when its switches (the lightbulbs for the “guy in the box”) are turned <strong>on</strong> or <strong>off</strong>.</p>
+<p>So what is binary anyway? And what does it have to do with computers?</p>
+<p>In order to understand the <strong>Binary</strong> numeral system, we can compare it to something we already know: the <strong>Decimal</strong> numeral system.</p>
+<p>In <strong>decimal</strong> , numbers are represented by combinations of <strong>ten </strong> different symbols: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9).</p>
+<p>We call decimal a <strong>base 10</strong> numeral system.</p>
+<blockquote class="blockquote">
+<p>If we have more than “9” of something, another <strong>digit</strong> is needed (another power of ten):</p>
+<ul>
+<li>9 + 1 = 10</li>
+<li>99 + 1 = 100, etc.</li>
+</ul>
+</blockquote>
+<p>How do we represent numbers in binary and how does it compare to binary?</p>
+<p>In <strong>binary</strong> , there are only <strong>two</strong> symbols (0, 1).</p>
+<p>We call binary a <strong>base 2</strong> numeral system.</p>
+<blockquote class="blockquote">
+<p>If we have more than “1” of something, another <strong>bit</strong> (power) is needed:</p>
+<ul>
+<li>1 + 1 = 10 (in english: one plus one equals two)</li>
+<li>11 + 1 = 100 (in english: three plus one equals four)</li>
+</ul>
+</blockquote>
+<p>It’s counterintuitive at first! But there’s nothing fundamentally different about binary than decimal – we’re just more used to using decimal instead. Since we’re reusing the symbols 1 and 0 from the decimal system, there is a convention to use <strong>subscript</strong> to disambiguate between different numeral systems:</p>
+<blockquote class="blockquote">
+<ul>
+<li><p><strong>1<sub>2</sub> + 1<sub>2</sub> = 10<sub>2</sub></strong> is the same as <strong>1<sub>10</sub> + 1<sub>10</sub> = 2<sub>10</sub></strong> is the same as <strong>one plus one equals two</strong></p></li>
+<li><p><strong>11<sub>2</sub> + 1<sub>2</sub> = 100<sub>2</sub></strong> is the same as <strong>3<sub>10</sub> + 1<sub>10</sub> = 4<sub>10</sub></strong> is the same as <strong>three plus one equals four</strong></p></li>
+</ul>
+</blockquote>
+<p>These subscripts are not always required, but can be very useful when the numeral systems are mixed in the same context.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note: binary and decimal are not the only possible numeral systems. All that distinguishes numeral systems is the number of symbols you agree to use to represent numbers – there are infinite possible numeral systems!</p>
+<p><strong>Hexadecimal</strong> is another useful numeral system (16 symbols, or <strong>base 16</strong>) which we will discuss later in the course.</p>
+</div>
+</div>
+<section id="bits-binary-digits" class="level3">
+<h3 class="anchored" data-anchor-id="bits-binary-digits">Bits: BInary digiTs</h3>
+<p>So what does binary have to do with computers?</p>
+<p>A <strong>Bit</strong> (Binary Digit) is the basic unit of information representing one of two discrete states. It is the smallest unit of information within the computer. Bits have one of two values:</p>
+<ul>
+<li><em>0 (off) or 1 (on)</em></li>
+<li><em>0 (False) or 1 (True)</em></li>
+</ul>
+<p>We often compare this to a light switch being either on of off…</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://media1.tenor.com/m/RlK21NHtq5UAAAAd/turn-off-shut-off.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Comparison between a bit and an ON (1) OFF (0) switch"><img src="https://media1.tenor.com/m/RlK21NHtq5UAAAAd/turn-off-shut-off.gif" title="A sample title." class="img-fluid figure-img" alt="Sample alt text. To be replaced!"></a></p>
+<figcaption>Comparison between a bit and an ON (1) OFF (0) switch</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="how-are-bits-physically-implemented" class="level3">
+<h3 class="anchored" data-anchor-id="how-are-bits-physically-implemented">How are Bits physically implemented? <strong>🔋 ➜ ⚡ / 📴</strong></h3>
+<p>There are various ways to design circuits that effectively differentiate between “on” and “off” states. One method involves using a <strong>transistor</strong>, which can either be switched on or off to represent binary information. Another approach uses a <strong>capacitor</strong>, where its state of being charged or discharged conveys the desired data. In <strong>magnetic</strong> disks (like HDDs), information is stored as bits based on the direction of the magnetic field, either north-south or south-north. Similarly, on <strong>optical discs</strong> (such as CD-ROMs), bits are represented by whether a bit on the surface is shiny or not shiny. Lastly, over <strong>telephone lines</strong> or through <strong>radio</strong>, binary data is transmitted using high or low-pitched tones to represent the bits. Each of these methods relies on a distinct physical characteristic to represent binary information reliably.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/data-representation2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Capacitors can be charged or uncharged in RAM"><img src="_assets/data-representation2.png" class="img-fluid figure-img" alt=""></a></p>
+<figcaption>Capacitors can be charged or uncharged in RAM</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://www.anypcba.com/upfile/blogs/articles/841/transistor-symbols.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="A transistor is ON or OFF in any chip of the computer such as the CPU and GPU Source: Any PCB"><img src="https://www.anypcba.com/upfile/blogs/articles/841/transistor-symbols.webp" class="img-fluid figure-img" alt=""></a></p>
+<figcaption>A transistor is ON or OFF in any chip of the computer such as the CPU and GPU Source: <a href="https://www.anypcba.com/upfile/blogs/articles/841/transistor-symbols.webp">Any PCB</a></figcaption>
+</figure>
+</div>
+</section>
+<section id="bytes" class="level3">
+<h3 class="anchored" data-anchor-id="bytes">Bytes</h3>
+<p>A Byte is a collection of bits known as the unit of digital information. Historically, it was the number of bits required to encode a single character.</p>
+<p>1 Byte = 8 bits</p>
+<p>Abbreviation: <strong>B</strong>. E.g. <strong>4B</strong> of storage means <strong>4 Bytes</strong> means <strong>32 bits</strong>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/data-representation3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Bit versus Byte."><img src="_assets/data-representation3.jpg" title="A sample title." class="img-fluid figure-img" alt="Sample alt text. To be replaced!"></a></p>
+<figcaption>Bit versus Byte.</figcaption>
+</figure>
+</div>
+</section>
+<section id="history-of-bytes" class="level2">
+<h2 class="anchored" data-anchor-id="history-of-bytes">History of Bytes</h2>
+<p>A byte represents the number of bits used to encode a single <strong>character</strong> in a computer, making it the smallest <strong>addressable</strong> unit of memory in many computer architectures. Historically, the size of a byte was hardware-dependent, with no universal standard governing its size. However, in 1993, a standard was introduced that defined the size of a byte as 8 bits, a convention that is now widely adopted across modern computing systems. This standardization has helped ensure consistency in how data is stored and processed across different platforms and devices.</p>
+<section id="si-convention" class="level3">
+<h3 class="anchored" data-anchor-id="si-convention">SI Convention</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 6%">
+<col style="width: 20%">
+<col style="width: 37%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Unit Name</th>
+<th>Symbol</th>
+<th>Multiplying Factor</th>
+<th>Multiplying factor (in thousands)</th>
+<th>Description in English</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Byte</td>
+<td>B</td>
+<td>1</td>
+<td>1</td>
+<td><em>One byte</em></td>
+</tr>
+<tr class="even">
+<td>Kilo Byte</td>
+<td>kB</td>
+<td>1000</td>
+<td>1000</td>
+<td><em>One thousand bytes</em></td>
+</tr>
+<tr class="odd">
+<td>Mega Byte</td>
+<td>MB</td>
+<td>1000,000</td>
+<td>1000^2</td>
+<td><em>One million byte</em></td>
+</tr>
+<tr class="even">
+<td>Giga Byte</td>
+<td>GB</td>
+<td>1000,000,000</td>
+<td>1000^3</td>
+<td><em>One billion byte</em></td>
+</tr>
+<tr class="odd">
+<td>Tera Byte</td>
+<td>TB</td>
+<td>1000,000,000,000</td>
+<td>1000^4</td>
+<td><em>One trillion byte</em></td>
+</tr>
+<tr class="even">
+<td>Peta Byte</td>
+<td>PB</td>
+<td>10^15</td>
+<td>1000^5</td>
+<td><em>One quadrillion byte</em></td>
+</tr>
+<tr class="odd">
+<td>Exa Byte</td>
+<td>EB</td>
+<td>10^18</td>
+<td>1000^6</td>
+<td><em>One quintillion byte</em></td>
+</tr>
+<tr class="even">
+<td>Zetta Byte</td>
+<td>ZB</td>
+<td>10^21</td>
+<td>1000^7</td>
+<td><em>One sextillion byte</em></td>
+</tr>
+<tr class="odd">
+<td>Yotta Byte</td>
+<td>YB</td>
+<td>10^24</td>
+<td>1000^8</td>
+<td><em>One septillion byte</em></td>
+</tr>
+</tbody>
+</table>
+<p><em>Source: <a href="https://www.nist.gov/pml/owm/metric-si-prefixes">NIST</a></em></p>
+</section>
+</section>
+<section id="iec-convention" class="level2">
+<h2 class="anchored" data-anchor-id="iec-convention">IEC Convention</h2>
+<p>To make things confusing, Windows and some other operating system don’t follow the SI convention. They use the symbols Kb, Mb, etc but not referring to the powers of 10 we have seen above. They count the bytes in powers of 2! If a manufacturer makes a hard drive following the SI conventions, wthe operating system will recognize it as less bytes than indicated.</p>
+<p>In this course, we will use the <strong>SI conventions</strong> for Kilobytes as in 1000 bytes and we will differentiate it from powers of 2 using the <strong>IEC convention</strong>. In the end of the 1990s, the IEC adopted new prefixes to differentiate powers of 10 capacities (as described above) and powers of 2 capacities.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 9%">
+<col style="width: 27%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Unit Name</th>
+<th>Symbol</th>
+<th>Multiplying Factor</th>
+<th>Multiplying factor (in thousands)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Kibi Byte</td>
+<td>Kib</td>
+<td>1000</td>
+<td>1024</td>
+</tr>
+<tr class="even">
+<td>Debi Byte</td>
+<td>Mib</td>
+<td>1000,000</td>
+<td>1024^2</td>
+</tr>
+<tr class="odd">
+<td>Gibi Byte</td>
+<td>Gib</td>
+<td>1000,000,000</td>
+<td>1024^3</td>
+</tr>
+<tr class="even">
+<td>Tebi Byte</td>
+<td>Tib</td>
+<td>1000,000,000,000</td>
+<td>1024^4</td>
+</tr>
+<tr class="odd">
+<td>Pebi Byte</td>
+<td>Pib</td>
+<td>10^15</td>
+<td>1024^5</td>
+</tr>
+<tr class="even">
+<td>gibi Byte</td>
+<td>Eib</td>
+<td>10^18</td>
+<td>1024^6</td>
+</tr>
+<tr class="odd">
+<td>Zebi Byte</td>
+<td><em>Zib</em></td>
+<td>10^21</td>
+<td>1024^7</td>
+</tr>
+<tr class="even">
+<td>Yobi Byte</td>
+<td>Yib</td>
+<td>10^24</td>
+<td>1024^8</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://en.wikipedia.org/wiki/Byte#Multiple-byte_units" class="uri">https://en.wikipedia.org/wiki/Byte#Multiple-byte_units</a></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Johnny buys a 1Tb external SSD but once plugs it into his Windows machine, noticies there are only 931 Gb. Can you explain why?</p>
+</div>
+</div>
+</section>
+</section>
+<section id="representing-numbers-in-binary" class="level1">
+<h1>Representing Numbers in Binary</h1>
+<section id="converting-decimal-to-binary" class="level3">
+<h3 class="anchored" data-anchor-id="converting-decimal-to-binary">Converting Decimal to Binary</h3>
+<p>To convert a decimal number to binary:</p>
+<ol type="1">
+<li><p>Find the power of 2 value for each bit of the binary number, starting from 0.(e.g., the power of 2 value for the 5th bit of a binary number is: 2<sup>5</sup>=32, etc.)</p></li>
+<li><p>Add all the powers of two <strong>wherever there is a 1</strong> in the bit of the binary number</p></li>
+<li><p>The sum of the powers of two above is the value of the binary number in decimal!</p></li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 46%">
+<col style="width: 21%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Binary Number</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">0</th>
+<th style="text-align: center;">0</th>
+<th style="text-align: center;">1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Step 1: identify each bit</td>
+<td style="text-align: center;">4th bit</td>
+<td style="text-align: center;">3rd bit</td>
+<td style="text-align: center;">2nd bit</td>
+<td style="text-align: center;">1st bit</td>
+<td style="text-align: center;">0th bit</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 2: power of 2</td>
+<td style="text-align: center;">2<sup>4</sup></td>
+<td style="text-align: center;">2<sup>3</sup></td>
+<td style="text-align: center;">2<sup>2</sup></td>
+<td style="text-align: center;">2<sup>1</sup></td>
+<td style="text-align: center;">2<sup>0</sup></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Step 3: include value in sum if it’s a 1.</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Step 4: Add all terms</td>
+<td style="text-align: center;">16 + 8 + 1 = <strong>25</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>Therefore, <strong>11001<sub>2</sub>=25<sub>10</sub></strong>.</p>
+</section>
+<section id="converting-binary-to-decimal" class="level3">
+<h3 class="anchored" data-anchor-id="converting-binary-to-decimal">Converting Binary to Decimal</h3>
+<p>Converting binary to decimal is easy to memorize for small numbers.</p>
+<p>For example:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Binary</th>
+<th>Binary</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0000 0000</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>0000 0001</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>0000 0010</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>0000 0011</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>0000 0100</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>0000 0101</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<td>0000 0110</td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>0000 0111</td>
+<td>8</td>
+</tr>
+<tr class="odd">
+<td>0001 0000</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<p>What about larger numbers? How can we approach this problem systematically, i.e., use a defined method to confidently get the correct answer every time?</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Binary</th>
+<th style="text-align: left;">Decimal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1001</td>
+<td style="text-align: left;">9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1101101</td>
+<td style="text-align: left;">?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1111111</td>
+<td style="text-align: left;">?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">100000011000001</td>
+<td style="text-align: left;">?</td>
+</tr>
+</tbody>
+</table>
+<p>After this lecture, you will have the tools to confidently fill out the rest of this table yourself!</p>
+<p>Well, how do we do it for decimals? A large number, like 2608, is in fact <strong>the combination of multiples of powers of ten</strong>. When we say these numbers in English, we naturally <strong>decompose</strong> the number into its component parts:</p>
+<blockquote class="blockquote">
+<p>2608 is <strong>two thousand + six hundred + eight.</strong></p>
+</blockquote>
+<p>Or, in other words:</p>
+<blockquote class="blockquote">
+<p>2608 = 2x1000 + 2x100 + 0x10 + 8x1</p>
+<p>2608 = <strong>2x10<sup>3</sup> + 6x10<sup>2</sup> + 0x10<sup>1</sup> + 8x10<sup>0</sup></strong></p>
+</blockquote>
+<p>We can use this exact method, with one key difference, to decompose the value of binary numbers just like decimal numbers.</p>
+<p>What key difference? In Binary, we use <strong>powers of 2 instead of powers of 10</strong>.</p>
+<hr>
+</section>
+<section id="converting-decimal-number-to-binary" class="level3">
+<h3 class="anchored" data-anchor-id="converting-decimal-number-to-binary">Converting Decimal Number to Binary</h3>
+<p>Going the other way (from Decimal to Binary) is a bit less natural – we cannot “see” directly from the decimal representation of a number (like 2608, for instance), how many powers of two are needed to make the equivalent number in binary.</p>
+<p>Instead, we’ll learn an <strong>algorithm</strong> (a series of deterministic steps to solve an analytical problem)</p>
+<p><strong>Convert Decimal to Binary by Repeated Division</strong></p>
+<ol type="1">
+<li><p>Divide the decimal number by 2 using long division.</p></li>
+<li><p>Note down the <strong>outcome</strong> and <strong>remainder</strong> of the division on the side.</p></li>
+<li><p>Repeat steps 1 and 2 on the outcome until the outcome becomes zero.</p></li>
+<li><p>The binary number will be the series of the remainders, read from <strong>bottom to top</strong> .</p></li>
+</ol>
+<p>Convert 25 to binary.</p>
+<p>Long Division (divide the Outcome by 2 at every step): <img src="_assets/data-representation7.png" class="img-fluid"> ————————————————————————</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>One way of understanding this algorithm is to apply it to the base 10:</p>
+<p><a href="_assets/data-representation8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="_assets/data-representation8.png" class="img-fluid"></a></p>
+<p>The higher powers are read from bottom to top, because these have been divided repeatedly.</p>
+</div>
+</div>
+</section>
+<section id="how-many-numbers-can-i-represent" class="level2">
+<h2 class="anchored" data-anchor-id="how-many-numbers-can-i-represent">How many Numbers can I represent?</h2>
+<ul>
+<li>1 bit -&gt; can represent 2 numbers
+<ul>
+<li>(0)2 = (0)10</li>
+<li>(1)2 = (1)10</li>
+</ul></li>
+<li>2 bits -&gt; can represent 4 numbers
+<ul>
+<li>(00)2 = (0)10</li>
+<li>(01)2 = (1)10</li>
+<li>(10)2 = (2)10</li>
+<li>(11)2 = (3)10</li>
+<li>Values: 0 to 3 in decimal.</li>
+</ul></li>
+</ul>
+<hr>
+<section id="n-bits-how-many-numbers" class="level3">
+<h3 class="anchored" data-anchor-id="n-bits-how-many-numbers">n Bits ⬄ How many Numbers</h3>
+<p><strong>Possible Test Question</strong></p>
+<p>How many numbers can I represent in 4 bytes? What is the first and last number?</p>
+<ul>
+<li><strong>n bits </strong></li>
+<li><strong>-&gt; Can represent 2</strong> <strong>n</strong> __ numbers __</li>
+<li><strong>-&gt; Values: from 0 to (2</strong> <strong>n</strong> __ -1)__</li>
+<li>1 Byte -&gt; 8 bit -&gt; 28 numbers (256)</li>
+<li><strong>First Number </strong> 0000 00002 = 010</li>
+<li><strong>Last Number</strong> 1111 11112 = 28-1 = 25510</li>
+<li>2 Byte -&gt; 16 bit -&gt; 216 numbers (65536)</li>
+<li><strong>First Number </strong> 0000 0000 0000 00002 = 010 to</li>
+<li><strong>Last Number</strong> 1111 1111 1111 11112 = 216-1 = 6553510</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="exercises" class="level1">
+<h1>Exercises</h1>
+<section id="practise-problems" class="level3">
+<h3 class="anchored" data-anchor-id="practise-problems">Practise problems</h3>
+<p>Convert the following binary numbers to decimal using the method above.</p>
+<ul>
+<li>1001</li>
+<li>1101101</li>
+<li>1000001</li>
+<li>1111111</li>
+<li>100000011000001</li>
+</ul>
+<p>Check your answers (you can google search “1001 binary to decimal” or similar to get an answer)</p>
+</section>
+<section id="converting-decimal-to-binary-1" class="level3">
+<h3 class="anchored" data-anchor-id="converting-decimal-to-binary-1">Converting Decimal to Binary</h3>
+<p>Convert the following into binary. <strong>Show your work</strong> .</p>
+<p>10</p>
+<p>64</p>
+<p>128</p>
+<p>146</p>
+<p>107</p>
+<p>300</p>
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/John-Abbott-College\.github\.io\/1N6-Notes\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../topics/hardware/understanding-cpus.html" class="pagination-link" aria-label="Understanding CPUs">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Understanding CPUs</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../about/this-site.html">
+<p>About</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"fade","descPosition":"bottom","loop":true,"openEffect":"fade","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

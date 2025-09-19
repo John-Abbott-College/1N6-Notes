@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,16 +35,17 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-4025c78eb06e3211cf54df66d954ffce.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-f54fa83ccd8f86fe7238c9291c42d766.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-8f4e3aabaa80e3e650ae20f2c24f966b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5e85d73a073fa0015edbd50008fecb46.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-fc3e9ed9771abc10d80693435d8e1aef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-73c098799d6c67192b4877d1c14b2390.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-7438714e894a917b4843c5da08afe798.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -116,7 +117,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -307,7 +308,8 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../_assets/icon-darkbg.svg" alt="" class="navbar-logo">
+    <img src="../_assets/icon-darkbg.svg" alt="" class="navbar-logo light-content">
+    <img src="../_assets/icon-darkbg.svg" alt="" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Technical Support</span>
@@ -320,7 +322,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -328,7 +330,7 @@ window.Quarto = {
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../topics/all-lectures.html" aria-current="page"> 
+    <a class="nav-link" href="../topics/all-lectures.html"> 
 <span class="menu-text">Lectures</span></a>
   </li>  
   <li class="nav-item">
@@ -357,6 +359,10 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -392,13 +398,30 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../topics/hardware/internal-components.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Internal Components</span></a>
+ <span class="menu-text">date: 2025-09-02</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../topics/hardware/understanding-cpus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Understanding CPUs</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Data representation</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/data-representation/introduction-to-binary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Binary</span></a>
   </div>
 </li>
       </ul>
@@ -412,7 +435,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -432,7 +455,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">September 9, 2025</p>
+      <p class="date-modified">September 19, 2025</p>
     </div>
   </div>
     
@@ -490,7 +513,7 @@ Subtitle
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-date-sort="1755648000000" data-listing-file-modified-sort="1757431608915" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1873" data-listing-title-sort="Introduction to Computers" data-listing-filename-sort="introduction-to-computers.qmd">
+<tr data-index="0" data-listing-date-sort="1755648000000" data-listing-file-modified-sort="1758291851517" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1873" data-listing-title-sort="Introduction to Computers" data-listing-filename-sort="introduction-to-computers.qmd">
 <td>
 <span class="listing-date">2025-08-20</span>
 </td>
@@ -503,7 +526,7 @@ Subtitle
 
 </tr>
 
-<tr data-index="1" data-listing-date-sort="1756080000000" data-listing-file-modified-sort="1757431608915" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="25" data-listing-word-count-sort="4940" data-listing-title-sort="External components" data-listing-filename-sort="external-components.qmd">
+<tr data-index="1" data-listing-date-sort="1756080000000" data-listing-file-modified-sort="1758291851517" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="25" data-listing-word-count-sort="4940" data-listing-title-sort="External components" data-listing-filename-sort="external-components.qmd">
 <td>
 <span class="listing-date">2025-08-25</span>
 </td>
@@ -516,28 +539,41 @@ Subtitle
 
 </tr>
 
-<tr data-index="2" data-listing-date-sort="1756771200000" data-listing-file-modified-sort="1757431608915" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="17" data-listing-word-count-sort="3336" data-listing-title-sort="Internal Components" data-listing-filename-sort="internal-components.qmd">
+<tr data-index="2" data-listing-date-sort="1757289600000" data-listing-file-modified-sort="1758291851517" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2331" data-listing-title-sort="Understanding CPUs" data-listing-filename-sort="understanding-cpus.qmd">
 <td>
-<span class="listing-date">2025-09-02</span>
-</td>
-<td>
-<a href="../topics/hardware/internal-components.html" class="title listing-title">Internal Components</a>
-</td>
-<td>
-<span class="listing-subtitle">Explains the most important internal components of desktop computers. Processing, memory, storage, and communication.</span>
-</td>
-
-</tr>
-
-<tr data-index="3" data-listing-date-sort="1759017600000" data-listing-file-modified-sort="1757431608916" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2331" data-listing-title-sort="Understanding CPUs" data-listing-filename-sort="understanding-cpus.qmd">
-<td>
-<span class="listing-date">2025-09-28</span>
+<span class="listing-date">2025-09-08</span>
 </td>
 <td>
 <a href="../topics/hardware/understanding-cpus.html" class="title listing-title">Understanding CPUs</a>
 </td>
 <td>
 <span class="listing-subtitle">More detail on CPUs. “Guy in Box” analogy, Clock Speed, Codebook, Databuses explained.</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-listing-date-sort="1757894400000" data-listing-file-modified-sort="1758291851315" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3056" data-listing-title-sort="Introduction to Binary" data-listing-filename-sort="introduction-to-binary.qmd">
+<td>
+<span class="listing-date">2025-09-15</span>
+</td>
+<td>
+<a href="../topics/data-representation/introduction-to-binary.html" class="title listing-title">Introduction to Binary</a>
+</td>
+<td>
+<span class="listing-subtitle">What’s a bit, and how is it implemented in a computer?</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-listing-file-modified-sort="1758291851517" data-listing-reading-time-sort="18" data-listing-word-count-sort="3407" data-listing-title-sort="date: 2025-09-02" data-listing-filename-sort="internal-components.qmd">
+<td>
+<span class="listing-date">&nbsp;</span>
+</td>
+<td>
+<a href="../topics/hardware/internal-components.html" class="title listing-title">date: 2025-09-02</a>
+</td>
+<td>
+<span class="listing-subtitle">&nbsp;</span>
 </td>
 
 </tr>
@@ -610,13 +646,14 @@ Subtitle
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
