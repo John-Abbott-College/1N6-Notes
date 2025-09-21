@@ -28,8 +28,8 @@ website:
         href: about/syllabus.qmd
       - text: "Lectures"
         href: topics/all-lectures.qmd
-      - text: "Labs"
-        href: labs/all-labs.qmd
+      - text: "Practice"
+        href: practice/all-exos.qmd
   sidebar:
     style: "docked"
     align: left

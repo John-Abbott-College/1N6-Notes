@@ -99,13 +99,13 @@ A byte represents the number of bits used to encode a single **character** in a 
 | ---------- | ------ | ------------------ | --------------------------------- | ---------------------- |
 | Byte       | B      | 1                  | 1                                 | *One byte*             |
 | Kilo Byte  | kB     | 1000               | 1000                              | *One thousand bytes*   |
-| Mega Byte  | MB     | 1000,000           | 1000^2                            | *One million byte*     |
-| Giga Byte  | GB     | 1000,000,000       | 1000^3                            | *One billion byte*     |
-| Tera Byte  | TB     | 1000,000,000,000   | 1000^4                            | *One trillion byte*    |
-| Peta Byte  | PB     | 10^15              | 1000^5                            | *One quadrillion byte* |
-| Exa Byte   | EB     | 10^18              | 1000^6                            | *One quintillion byte* |
-| Zetta Byte | ZB     | 10^21              | 1000^7                            | *One sextillion byte*  |
-| Yotta Byte | YB     | 10^24              | 1000^8                            | *One septillion byte*  |
+| Mega Byte  | MB     | 1000,000           | 1000^2^                            | *One million byte*     |
+| Giga Byte  | GB     | 1000,000,000       | 1000^3^                            | *One billion byte*     |
+| Tera Byte  | TB     | 1000,000,000,000   | 1000^4^                            | *One trillion byte*    |
+| Peta Byte  | PB     | 10^15              | 1000^5^                            | *One quadrillion byte* |
+| Exa Byte   | EB     | 10^18              | 1000^6^                            | *One quintillion byte* |
+| Zetta Byte | ZB     | 10^21              | 1000^7^                            | *One sextillion byte*  |
+| Yotta Byte | YB     | 10^24              | 1000^8^                            | *One septillion byte*  |
 
 *Source: [NIST](https://www.nist.gov/pml/owm/metric-si-prefixes)*
 
@@ -113,28 +113,28 @@ A byte represents the number of bits used to encode a single **character** in a 
 
 ## IEC Convention 📜
 
-To make things confusing, Windows and some other operating system don't follow the SI convention. They use the symbols Kb, Mb, etc but not referring to the powers of 10 we have seen above. They count the bytes in powers of 2! If a manufacturer makes a hard drive following the SI conventions, wthe operating system will recognize it as less bytes than indicated. 
+To add to the confusion, Windows and some other operating systems don’t follow the SI conventions. They use symbols like Kb and Mb, but instead of referring to powers of 10, they count bytes in powers of 2. This means that if a manufacturer labels a hard drive using **SI conventions**, the operating system may display a smaller capacity than advertised.
 
-In this course, we will use the **SI conventions** for Kilobytes as in 1000 bytes and we will differentiate it from powers of 2 using the **IEC convention**. In the end of the 1990s, the IEC adopted new prefixes to differentiate powers of 10 capacities (as described above) and powers of 2 capacities. 
+In this course, we will stick to the SI conventions, where 1 Kilobyte equals 1000 bytes, and we will distinguish powers of 2 using the **IEC convention**. In the late 1990s, the IEC introduced new prefixes to clearly separate capacities based on powers of 10 from those based on powers of 2.
 
 | Unit Name | Symbol | Multiplying Factor | Multiplying factor (in thousands) |
 | --------- | ------ | ------------------ | --------------------------------- |
 | Kibi Byte | Kib    | 1000               | 1024                              |
-| Debi Byte | Mib    | 1000,000           | 1024^2                            |
-| Gibi Byte | Gib    | 1000,000,000       | 1024^3                            |
-| Tebi Byte | Tib    | 1000,000,000,000   | 1024^4                            |
-| Pebi Byte | Pib    | 10^15              | 1024^5                            |
-| gibi Byte | Eib    | 10^18              | 1024^6                            |
-| Zebi Byte | *Zib*  | 10^21              | 1024^7                            |
-| Yobi Byte | Yib    | 10^24              | 1024^8                            |
+| Debi Byte | Mib    | 1000,000           | 1024^2^                            |
+| Gibi Byte | Gib    | 1000,000,000       | 1024^3^                            |
+| Tebi Byte | Tib    | 1000,000,000,000   | 1024^4^                            |
+| Pebi Byte | Pib    | 10^15              | 1024^5^                            |
+| gibi Byte | Eib    | 10^18              | 1024^6^                            |
+| Zebi Byte | *Zib*  | 10^21              | 1024^7^                            |
+| Yobi Byte | Yib    | 10^24              | 1024^8^                            |
 
 <https://en.wikipedia.org/wiki/Byte#Multiple-byte_units>
 
 
 
 :::{.callout-note}
-
-Johnny buys a 1Tb external SSD but once plugs it into his Windows machine, noticies there are only 931 Gb. Can you explain why?
+# Question
+Johnny buys a 1Tb external SSD but once plugged into his Windows machine, he notices he only has 931 Gb of available memory space. Can you explain why?
 
 :::
 
@@ -187,8 +187,8 @@ What about larger numbers? How can we approach this problem systematically, i.e.
 | Binary  | Decimal |
 | :--     |  :--    |
 | 1001    |  9      |
-| 1101101 | ?      |
-| 1111111 | ?      |
+| 1101101 |  ?      |
+| 1111111 |  ?      |
 | 100000011000001 | ? |
 
 After this lecture, you will have the tools to confidently fill out the rest of this table yourself!
@@ -231,7 +231,7 @@ We'll learn an **algorithm** to systematically decompose any decimal number into
 
 Long Division (divide the Outcome by 2 at every step): 
 ![](_assets/data-representation7.png)
-------------------------------------------------------------------------
+
 
 :::{.callout-note}
 
@@ -264,12 +264,9 @@ How many numbers can I represent in 4 bytes? What is the first and last number?
 
 -   **n bits ** → 4
 -   **Can represent 2^n^*** → 16 
--   **-\> Values: from 0 to (2** **n** \_\_ -1)\_\
+-   **Values: from 0 to (2^n^ -1)** → 0 to 15
 -   **First Number** 0000 = (0)~10~
--   **Last Number** 1111 11112 = 28-1 = 25510
--   2 Byte -\> 16 bit -\> 216 numbers (65536)
--   **First Number ** 0000 0000 0000 00002 = 010 to
--   **Last Number** 1111 1111 1111 11112 = 216-1 = 6553510
+-   **Last Number** 1111 = 16-1 = 15
 
 :::
 

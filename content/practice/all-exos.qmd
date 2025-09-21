@@ -1,0 +1,13 @@
+---
+title: "Practice Problems"
+subtitle: "Listing for all practice problems."
+listing: 
+  type: grid
+  fields: [image, title, subtitle]
+  filter-ui: true
+  sort-ui: [title]
+  sort: title
+  categories: true
+  exclude:
+    filename: "*index.qmd"
+---
