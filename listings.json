@@ -1,29 +1,21 @@
 [
   {
-    "listing": "/labs/all-labs.html",
-    "items": []
-  },
-  {
-    "listing": "/topics/hardware/index.html",
+    "listing": "/practice/all-exos.html",
     "items": [
-      "/topics/hardware/introduction-to-computers.html",
-      "/topics/hardware/external-components.html",
-      "/topics/hardware/internal-components.html",
-      "/topics/hardware/understanding-cpus.html"
+      "/practice/binary-conversions.html"
     ]
   },
   {
-    "listing": "/topics/operating-systems/index.html",
+    "listing": "/announcements/index.html",
     "items": []
   },
   {
-    "listing": "/topics/technical-support/index.html",
-    "items": []
-  },
-  {
-    "listing": "/topics/data-representation/index.html",
+    "listing": "/topics/index.html",
     "items": [
-      "/topics/data-representation/introduction-to-binary.html"
+      "/topics/data-representation/index.html",
+      "/topics/hardware/index.html",
+      "/topics/operating-systems/index.html",
+      "/topics/technical-support/index.html"
     ]
   },
   {
@@ -37,17 +29,27 @@
     ]
   },
   {
-    "listing": "/topics/index.html",
+    "listing": "/topics/data-representation/index.html",
     "items": [
-      "/topics/data-representation/index.html",
-      "/topics/hardware/index.html",
-      "/topics/operating-systems/index.html",
-      "/topics/technical-support/index.html"
+      "/topics/data-representation/introduction-to-binary.html"
     ]
   },
   {
-    "listing": "/announcements/index.html",
+    "listing": "/topics/technical-support/index.html",
     "items": []
+  },
+  {
+    "listing": "/topics/operating-systems/index.html",
+    "items": []
+  },
+  {
+    "listing": "/topics/hardware/index.html",
+    "items": [
+      "/topics/hardware/introduction-to-computers.html",
+      "/topics/hardware/external-components.html",
+      "/topics/hardware/internal-components.html",
+      "/topics/hardware/understanding-cpus.html"
+    ]
   },
   {
     "listing": "/about/index.html",
