@@ -1,0 +1,117 @@
+---
+date: 2025-09-22
+draft: false
+title: Binary maths
+image: "https://www.electronics-tutorials.ws/wp-content/uploads/2022/08/binary-numbers.jpg?fit=4000%2C4000?fit=355,226"
+---
+
+# Question 1
+
+Perform the following binary additions: 
+1. 101 + 11 = 
+2. 111 + 111 =
+3. 1010 + 1010 =
+4. 11101 + 1010 =
+5. 11111 + 11111 =
+
+::: {.callout-tip icon="false" collapse="true"}
+## Solution 
+1. 1000
+2. 1110
+3. 10100
+4. 100111
+5. 111110
+
+::: 
+
+# Question 2
+Convert the following numbers to binary and perform the operation:
+1. (32)~10~ =
+2. (50)~10~ + (32)~10~ = 
+3. (64)~10~ + (4)~10~ =
+4. (100)~10~ + (220)~10~ =
+
+::: {.callout-tip icon="false" collapse="true"}
+## Solution 
+1. 100000
+2. 1010010
+3. 1000100
+4. 101000000
+::: 
+
+# Question 3
+Given the codebook below, write the binary instructions to perform this operation: 
+(100)~10~ + (220)~10~ .
+![](_assets/understanding-cpus17.png)
+- What's the final value on the External Data Bus?
+
+::: {.callout-tip icon="false" collapse="true"}
+## Solution 
+1. 1000 0000
+2. 0110 1110
+3. 1001 0000
+4. 1101 1100
+5. 1011 0000
+6. 1100 0000 
+
+1101110 + 11011100 = 101000000, but since the CPU's bus size is limited to 8 bits, the most significant bit (left most, or highest power) will be lost. The final answer on the ESD is 01000000 (64).
+::: 
+
+# Question 4
+What is -230 in two's complement represetation with an 12 bits bus width? 
+
+::: {.callout-tip icon="false" collapse="true"}
+## Solution 
+
+1. Write 230 in binary: 1 0100 0000
+2. Complete the number of bits to 12 and add a bit for the sign: __0__0001 0100 0000
+3. Flip the bits (one's complement):  __1__1110 1011 1111
+4. Add 1 to get two's complement: __1__1110 1100 0000
+::: 
+
+# Question 5
+Convert the following numbers to binary and perform the operation on an 8-bit CPU:
+1. (50)~10~ - (32)~10~ = 
+2. (64)~10~ - (4)~10~ =
+3. (100)~10~ - (120)~10~ =
+
+
+::: {.callout-tip icon="false" collapse="true"}
+## Solution 
+1. (50)~10~ - (32)~10~ = (50)~10~ + (-32)~10~
+Binary 50: 0011 0010
+Binary 32: 0010 0000
+Invert 32: 1101 1111
+Add 1:     1110 0000
+Operation: 50-32 :
+ 0011 0010
++
+ 1110 0000
+ ----------
+ 0001 0010
+
+2. (64)~10~ - (4)~10~ = (64)~10~ + (-4)~10~
+Binary 64: 0100 0000
+Binary 4:  0000 0100
+Invert 4:  1111 1011
+Add 1:     1111 1100
+Operation 64 - 4:
+  0100 0000
++ 1111 1100
+------------
+  0011  1100
+
+
+3.
+Binary 100: 0110 0100
+Binary 120: 0111 1000
+Invert 120: 1000 0111
+Add 1:      1000 1000
+Operation: 100 - 120:
+ 0110 0100
++ 
+ 1000 1000
+ ---------
+ 1110 1100  (-20)
+
+::: 

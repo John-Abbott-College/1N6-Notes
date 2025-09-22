@@ -127,15 +127,16 @@ c. What's the largest signed number?
 a. 4,294,967,296 (2^32^)
 b. 4,294,967,295 
 c. 2,147,483,648 (2^31^) 
-> Note that for signed numbers, one bit is reserved for the sign. 
+Note that for signed numbers, one bit is reserved for the sign (+/-).
 :::
 
 # Question 4
-What's the smallest number which requires 12 bits? 
+What's the smallest number which **requires** 12 bits? 
 
 ::: {.callout-tip icon="false" collapse="true"}
 # Solution
 2^12^ = 4096
+Note: Any number smaller than 4096, doesn't __require__ 12 bits to be represented in binary. 4096 is the smallest number which requires 12 bits. 
 :::
 
 # Question 5

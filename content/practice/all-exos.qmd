@@ -11,3 +11,9 @@ listing:
   exclude:
     filename: "*index.qmd"
 ---
+
+<!-- 
+::: {.callout-tip icon="false" collapse="true"}
+## Solution
+::: 
+-->
