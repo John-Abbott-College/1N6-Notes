@@ -1,2 +1,1300 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"></html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.24">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2025-09-22">
+
+<title>Logic Gates and Boolean Algebra – Technical Support</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../_assets/favicons/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-f54fa83ccd8f86fe7238c9291c42d766.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-8f4e3aabaa80e3e650ae20f2c24f966b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-73c098799d6c67192b4877d1c14b2390.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-7438714e894a917b4843c5da08afe798.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": true,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": true,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../_assets/css/styles.css">
+<meta property="og:title" content="Logic Gates and Boolean Algebra – Technical Support">
+<meta property="og:description" content="Introduction to AND, OR, NOT, XOR gates.">
+<meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/data-representation/_assets/logic-gates-and-boolean-algebra7.jpg">
+<meta property="og:site_name" content="{{< var course.title >}}">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = true;
+    const darkModeDefault = authorPrefersDark;
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../_assets/icon-darkbg.svg" alt="" class="navbar-logo light-content">
+    <img src="../../_assets/icon-darkbg.svg" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Technical Support</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about/syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../topics/all-lectures.html"> 
+<span class="menu-text">Lectures</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../practice/all-exos.html"> 
+<span class="menu-text">Practice</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Logic Gates and Boolean Algebra</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Course Notes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Hardware</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/hardware/introduction-to-computers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Computers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/hardware/external-components.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">External components</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/hardware/internal-components.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Internal Components</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/hardware/understanding-cpus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Understanding CPUs</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Data representation</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/data-representation/introduction-to-binary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Binary</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#logic-in-electronics" id="toc-logic-in-electronics" class="nav-link" data-scroll-target="#logic-in-electronics">Logic in electronics</a>
+  <ul>
+  <li><a href="#transistors" id="toc-transistors" class="nav-link" data-scroll-target="#transistors">Transistors</a></li>
+  </ul></li>
+  <li><a href="#and-gate" id="toc-and-gate" class="nav-link" data-scroll-target="#and-gate">AND Gate</a>
+  <ul>
+  <li><a href="#symbol" id="toc-symbol" class="nav-link" data-scroll-target="#symbol">Symbol</a></li>
+  <li><a href="#truth-table" id="toc-truth-table" class="nav-link" data-scroll-target="#truth-table">Truth Table</a></li>
+  <li><a href="#truth-table-1" id="toc-truth-table-1" class="nav-link" data-scroll-target="#truth-table-1">Truth Table</a></li>
+  </ul></li>
+  <li><a href="#or-gate" id="toc-or-gate" class="nav-link" data-scroll-target="#or-gate">OR Gate</a>
+  <ul>
+  <li><a href="#symbol-1" id="toc-symbol-1" class="nav-link" data-scroll-target="#symbol-1">Symbol</a></li>
+  <li><a href="#truth-table-2" id="toc-truth-table-2" class="nav-link" data-scroll-target="#truth-table-2">Truth Table</a></li>
+  </ul></li>
+  <li><a href="#not-gate" id="toc-not-gate" class="nav-link" data-scroll-target="#not-gate">NOT Gate</a>
+  <ul>
+  <li><a href="#symbol-2" id="toc-symbol-2" class="nav-link" data-scroll-target="#symbol-2">Symbol</a></li>
+  <li><a href="#truth-table-3" id="toc-truth-table-3" class="nav-link" data-scroll-target="#truth-table-3">Truth Table</a></li>
+  </ul></li>
+  <li><a href="#xor-gate" id="toc-xor-gate" class="nav-link" data-scroll-target="#xor-gate">XOR Gate</a>
+  <ul>
+  <li><a href="#symbol-3" id="toc-symbol-3" class="nav-link" data-scroll-target="#symbol-3">Symbol</a></li>
+  <li><a href="#xor-truth-table" id="toc-xor-truth-table" class="nav-link" data-scroll-target="#xor-truth-table">XOR Truth Table</a></li>
+  </ul></li>
+  <li><a href="#more-complex-gates" id="toc-more-complex-gates" class="nav-link" data-scroll-target="#more-complex-gates">More complex gates</a>
+  <ul>
+  <li><a href="#xor" id="toc-xor" class="nav-link" data-scroll-target="#xor">XOR</a></li>
+  <li><a href="#half-adder" id="toc-half-adder" class="nav-link" data-scroll-target="#half-adder">Half-Adder</a></li>
+  <li><a href="#full-adder" id="toc-full-adder" class="nav-link" data-scroll-target="#full-adder">Full-Adder</a></li>
+  </ul></li>
+  <li><a href="#from-logic-circuits-to-cpus" id="toc-from-logic-circuits-to-cpus" class="nav-link" data-scroll-target="#from-logic-circuits-to-cpus">From Logic Circuits to CPUs</a></li>
+  <li><a href="#boolean-algebra" id="toc-boolean-algebra" class="nav-link" data-scroll-target="#boolean-algebra">Boolean Algebra</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Logic Gates and Boolean Algebra</h1>
+<p class="subtitle lead">Introduction to AND, OR, NOT, XOR gates.</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 22, 2025</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">September 22, 2025</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>In 1946, the world’s first programmable electronic computer was created: the <strong>ENIAC</strong> (Electronic Numerical Integrator and Computer). It was a massive machine, filling an entire room with thousands of vacuum tubes, and yet it laid the foundation for every modern computer we use today.</p>
+<p>The ENIAC was programmed by a pioneering group of women, including <strong>Betty Jean Jennings</strong> and <strong>Fran Bilas</strong>, at the School of Electrical Engineering. During World War II, these women developed an expertise in programming and operating the machine. Their skills became so valuable that they were difficult to replace, even when soldiers returned from the war.</p>
+<p>The ENIAC used vacuum tubes as switches to amplify or switch off the electricity in order to store bits, flip bits, and perform Boolean operations. This allowed the ENIAC to perform basic math and help with calculations.</p>
+<p><strong>Logic gates</strong> are the fundamental building blocks of digital circuits. They take simple inputs (like 0s and 1s) and combine them using basic rules (AND, OR, NOT, XOR) to produce outputs. From these simple operations, computers can add numbers, compare values, store information, and eventually run complex software.</p>
+<p>By studying logic gates, we connect the concepts seen in binary to <strong>electronic hardware</strong>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>The ENIAC Programmers
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<dl>
+<dt><em>In the early days of computing, there was a job called being a computer, where women, mostly women, some men, would calculate and compute. During World War II, there was a large need for mathematical solutions (…)</em></dt>
+<dd>
+<p>Megan Smith, U.S. Chief of Technology</p>
+</dd>
+</dl>
+<p><strong>::: {layout-ncol=2}</strong></p>
+<p><a href="_assets/logic-gates-and-boolean-algebra7.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="_assets/logic-gates-and-boolean-algebra7.jpg" class="img-fluid" width="0"></a></p>
+<p><a href="_assets/logic-gates-and-boolean-algebra8.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="_assets/logic-gates-and-boolean-algebra8.jpg" class="img-fluid" width="0"></a></p>
+</div>
+</div>
+</section>
+<section id="logic-in-electronics" class="level1">
+<h1>Logic in electronics</h1>
+<p>Processors work by reacting to an input of 0s and 1s in specific ways and then returning an output based on the decision. The decision itself happens in a circuit called a <strong>logic gate</strong>, each of which requires at least one transistor, with the inputs and outputs arranged differently by different operations. The most elemental electronic component required to make logic circuits are the <strong>transistors</strong> which we discussed in a previous lecture. These three electronic switches were invented in 1947 and revolutionized the computing world by replacing the vacuum tubes with electrical signals.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/logic-gates-and-boolean-algebra10.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="This is a 2nm IBM wafer containing hundreds if chips which allows 50 billion transistors onto a chip of a fingernail"><img src="_assets/logic-gates-and-boolean-algebra10.jpg" class="img-fluid figure-img" alt="This is a 2nm IBM wafer containing hundreds if chips which allows 50 billion transistors onto a chip of a fingernail"></a></p>
+<figcaption>This is a 2nm IBM wafer containing hundreds if chips which allows 50 billion transistors onto a chip of a fingernail</figcaption>
+</figure>
+</div>
+<p>The number of transistors in an integrated circuit (IC) has historically doubled about every two years, a trend known as <strong>Moore’s Law</strong>. However, since around 2010, the pace of semiconductor advancement has slowed across the industry. This slowdown is largely due to the <strong>physical limits of transistors</strong>, as they approach sizes so small that further miniaturization becomes increasingly difficult and costly.</p>
+<p>[Moore’s Law - The number of transistors on integrated circuit chips (1971-2018)].</p>
+<section id="transistors" class="level2">
+<h2 class="anchored" data-anchor-id="transistors">Transistors</h2>
+<p>A <strong>transistor</strong> is like a tiny switch made from a semiconductor and three parts called the <strong>base, emitter, and collector</strong>. By controlling the base, we can turn the flow of current on or off—just like flipping a light switch. What makes transistors powerful is that they can switch on and off <strong>millions of times per second</strong>. When we connect many transistors together (with other components) to make electronic circuits, they form <strong>logic gates</strong>. The four basic gates you should know:</p>
+<ul>
+<li><code>OR</code></li>
+<li><code>AND</code></li>
+<li><code>NOT</code></li>
+<li><code>XOR</code> : E<strong>x</strong>clusive <strong>OR</strong></li>
+</ul>
+<p>You will use those operations frequently in programming! So make sure to pay attention to this part!</p>
+<p>When combining these gates (AND, OR, XOR, NOT), computers can make “decisions”, and perform <strong>mathematical operations</strong> like addition or more complex tasks such as multiplexing.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/logic-gates-and-boolean-algebra75.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Transistor details"><img src="_assets/logic-gates-and-boolean-algebra75.png" class="img-fluid figure-img" alt="Transistor details"></a></p>
+<figcaption>Transistor details</figcaption>
+</figure>
+</div>
+<p>Each logic gate will take one or more bits as input and return an output. To describe the behaviour of each we will look at their truth table, which list all the possible outcomes of this gate.</p>
+<p>Let’s first understanding them from a conceptual level using simple “True” (1) or “False” (0) statements and watch the output of each gate.</p>
+</section>
+</section>
+<section id="and-gate" class="level1">
+<h1>AND Gate</h1>
+<p>An “AND” is a <strong>conjunction</strong> of two inputs. It returns whether both are true <strong>at the same time</strong>.</p>
+<p>For example: <em>Shrek is an ogre</em> <em>AND</em> <em>Fiona is a princess</em>, both statements are true, therefore the entire statement is true. If one of them was false, the entire statement is incorrect.</p>
+<p>The “AND” gate will return 0 in any other combination. For example:</p>
+<p><em>It’s Tuesday today AND it’s raining</em>, if today is really Tuesday but not raining, this statement is false. <strong>Both statements must be correct for the output of the AND gate to be true.</strong></p>
+<p><em>It’s Friday today AND it’s the weekend</em>, this statement is false because Friday is a week day, we cannot be on the weekend if today is Friday. The “AND” makes this entire statement false.</p>
+<section id="symbol" class="level3">
+<h3 class="anchored" data-anchor-id="symbol">Symbol</h3>
+<p><a href="_assets/logic-gates-and-boolean-algebra43.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="_assets/logic-gates-and-boolean-algebra43.png" height="100"></a></p>
+</section>
+<section id="truth-table" class="level3">
+<h3 class="anchored" data-anchor-id="truth-table">Truth Table</h3>
+<p>A truth table lists out all the independent possibilities of inputs and sets the output of a logic circuit. In the case of the AND gate, the logic gate is straightforward, only if the two inputs are at <code>1</code>, the output will be <code>1</code>. All other possibilities are <code>0</code>.</p>
+</section>
+<section id="truth-table-1" class="level3">
+<h3 class="anchored" data-anchor-id="truth-table-1">Truth Table</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Input 1</th>
+<th>Input 2</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="or-gate" class="level1">
+<h1>OR Gate</h1>
+<p>The “OR” gate is less “strict” than the “AND”, if either of the two inputs or both are true (1), the output is (1). This is what we call a disjunction. Let’s look at an example:</p>
+<p><em>To be healthy you must either train OR eat a lot of vegetables</em>.</p>
+<p>This statement is true if a person trains without eating vegetables, if a person eats vegetables but doesn’t train, or does both. But it won’t be true if a person doesn’t train and doesn’t eat protein.</p>
+<section id="symbol-1" class="level3">
+<h3 class="anchored" data-anchor-id="symbol-1">Symbol</h3>
+<p>The OR gate has two inputs:</p>
+<p><a href="_assets/logic-gates-and-boolean-algebra45.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="_assets/logic-gates-and-boolean-algebra45.png" height="100"></a></p>
+</section>
+<section id="truth-table-2" class="level3">
+<h3 class="anchored" data-anchor-id="truth-table-2">Truth Table</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Input 1</th>
+<th>Input 2</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="not-gate" class="level1">
+<h1>NOT Gate</h1>
+<p>The not gate simply inverts a bit and has only one input. If it’s 1 (true), it becomes 0 (false) and vice versa. Here is an example:</p>
+<p><em>My automatic LED turns ON, when the ambient light is low and turns OFF when the ambient light is high.</em></p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/automatic_light.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="A picture of my automatic LEDs"><img src="_assets/automatic_light.png" class="img-fluid figure-img" alt="A picture of my automatic LEDs"></a></p>
+<figcaption>A picture of my automatic LEDs</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><a href="_assets/automatic_light_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="_assets/automatic_light_2.png" class="img-fluid"></a></p>
+</div>
+</div>
+</div>
+<section id="symbol-2" class="level3">
+<h3 class="anchored" data-anchor-id="symbol-2">Symbol</h3>
+<p>The NOT has only one input:</p>
+<p><a href="_assets/logic-gates-and-boolean-algebra44.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="_assets/logic-gates-and-boolean-algebra44.png" height="100"></a></p>
+</section>
+<section id="truth-table-3" class="level3">
+<h3 class="anchored" data-anchor-id="truth-table-3">Truth Table</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Input</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="xor-gate" class="level1">
+<h1>XOR Gate</h1>
+<p>The XOR gate, or exclusive OR takes two inputs and returns <strong>true</strong> only if both inputs are <strong>different</strong>. For example:</p>
+<p><em>Today is Tuesday or Thursday</em>, this statement is false if today is neither Tuesday nor Thursday. This statement is false if both are true (because in this case they are <strong>mutually</strong> exclusive). It’s only true if today is really a Tuesday or if it’s a Thursday.</p>
+<section id="symbol-3" class="level3">
+<h3 class="anchored" data-anchor-id="symbol-3">Symbol</h3>
+<p>The XOR has two inputs, in this case A and B:</p>
+<p><a href="_assets/logic-gates-and-boolean-algebra47.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="_assets/logic-gates-and-boolean-algebra47.png" height="100"></a></p>
+</section>
+<section id="xor-truth-table" class="level3">
+<h3 class="anchored" data-anchor-id="xor-truth-table">XOR Truth Table</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Input 1</th>
+<th>Input 2</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="more-complex-gates" class="level1">
+<h1>More complex gates</h1>
+<p>These basic gates can allows us to construct more complex gates that perform more complicated operations. Here are a few examples.</p>
+<section id="xor" class="level3">
+<h3 class="anchored" data-anchor-id="xor">XOR</h3>
+<p>Although presented as a simple gate, the XOR is actually more complex and involves connecting multiple AND, OR and NOT gates together as such:</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/logic-gates-and-boolean-algebra37.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="XOR made from other basic gates"><img src="_assets/logic-gates-and-boolean-algebra37.png" class="img-fluid figure-img" alt="XOR made from other basic gates"></a></p>
+<figcaption>XOR made from other basic gates</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/logic-gates-and-boolean-algebra38.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="XOR made from other basic gates"><img src="_assets/logic-gates-and-boolean-algebra38.png" class="img-fluid figure-img" alt="XOR made from other basic gates"></a></p>
+<figcaption>XOR made from other basic gates</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="half-adder" class="level3">
+<h3 class="anchored" data-anchor-id="half-adder">Half-Adder</h3>
+<p>The half adder is a circuit which adds two bits together and keeps track of the Sum and the Carry (i.e.&nbsp;the new power of 2 that carries over). For example:</p>
+<ul>
+<li>0 + 0 = 0(Carry) 0 (Sum)</li>
+<li>1 + 0 = 0 1</li>
+<li>0 + 1 = 0 1</li>
+<li>1 + 1 = 1 0</li>
+</ul>
+<p>The truth table of this gate is:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>S</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>We can achieve this gate by using a XOR gate for the Sum and an AND gate for the Carry.</p>
+<p><a href="_assets/logic-gates-and-boolean-algebra70.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="_assets/logic-gates-and-boolean-algebra70.png" class="img-fluid"></a></p>
+</section>
+<section id="full-adder" class="level3">
+<h3 class="anchored" data-anchor-id="full-adder">Full-Adder</h3>
+<p>The problem with the half-adder is that it doesn’t account for the Carry over from a previous addition. As we have seen in class, when adding two binary numbers we start from the lowest powers and keep must track of the carry over power to the next power of 2, and repeat the addition with the higher powers.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Challenge
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>How would you design such a gate? It takes three inputs and returns two inputs with the Carry and the Sum.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="from-logic-circuits-to-cpus" class="level1">
+<h1>From Logic Circuits to CPUs</h1>
+<p>We will learn very soon, that the CPU is made of a Arithmetic logic unit which is made up entirely from logic circuits such as the ones we have seen so far. The logic circuits of the CPU will determine the bus width of the system (ex: 64-bits).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_assets/logic-gates-and-boolean-algebra74.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="This is a 4-bit CPU"><img src="_assets/logic-gates-and-boolean-algebra74.png" class="img-fluid figure-img" alt="This is a 4-bit CPU"></a></p>
+<figcaption>This is a 4-bit CPU</figcaption>
+</figure>
+</div>
+<p>These CPUs are capable of performing the following operations:</p>
+<ul>
+<li>Add</li>
+<li>Add with Carry</li>
+<li>Subtract</li>
+<li>Subtract with borrow</li>
+<li>One’s complement</li>
+<li>Two’s complement</li>
+<li>Increment</li>
+<li>Decrement</li>
+<li>Pass through</li>
+<li>Logical operations (AND, OR, XOR, NOT)</li>
+<li>Bit shift operation</li>
+</ul>
+</section>
+<section id="boolean-algebra" class="level1">
+<h1>Boolean Algebra</h1>
+<p><strong>Integrated circuits (microchips)</strong> are used to store and process information in the form of <strong>bits</strong>. These bits can be manipulated using <strong>Boolean operations</strong>, which are based on <strong>Boolean algebra</strong> named after, named after the mathematician <strong>George Boole</strong>.</p>
+<p>In Boolean systems, a variable can take on only two values: <strong>0 (false)</strong> or <strong>1 (true)</strong>. By applying Boolean operations, we can manipulate one or more of these values. Boolean algebra is especially important in the <strong>analysis and synthesis of logical expressions</strong>, making it the foundation for how digital circuits and computers work.</p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/John-Abbott-College\.github\.io\/1N6-Notes\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../about/this-site.html">
+<p>About</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"fade","descPosition":"bottom","loop":true,"openEffect":"fade","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

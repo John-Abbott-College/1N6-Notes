@@ -19,7 +19,8 @@
   {
     "listing": "/topics/data-representation/index.html",
     "items": [
-      "/topics/data-representation/introduction-to-binary.html"
+      "/topics/data-representation/introduction-to-binary.html",
+      "/topics/data-representation/logic-gates-and-boolean-algebra.html"
     ]
   },
   {
@@ -29,7 +30,8 @@
       "/topics/hardware/external-components.html",
       "/topics/hardware/internal-components.html",
       "/topics/hardware/understanding-cpus.html",
-      "/topics/data-representation/introduction-to-binary.html"
+      "/topics/data-representation/introduction-to-binary.html",
+      "/topics/data-representation/logic-gates-and-boolean-algebra.html"
     ]
   },
   {
