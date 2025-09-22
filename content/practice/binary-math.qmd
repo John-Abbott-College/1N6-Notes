@@ -1,8 +1,8 @@
 ---
 date: 2025-09-22
 draft: false
-title: Binary maths
-image: "https://www.electronics-tutorials.ws/wp-content/uploads/2022/08/binary-numbers.jpg?fit=4000%2C4000?fit=355,226"
+title: Binary math
+image: "https://www.allaboutcircuits.com/uploads/articles/half-adder-gate-circuit.jpg"
 ---
 
 # Question 1
