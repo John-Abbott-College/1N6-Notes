@@ -37,7 +37,7 @@
   {
     "objectID": "practice/binary-math.html",
     "href": "practice/binary-math.html",
-    "title": "Binary maths",
+    "title": "Binary math",
     "section": "",
     "text": "Question 1\nPerform the following binary additions: 1. 101 + 11 = 2. 111 + 111 = 3. 1010 + 1010 = 4. 11101 + 1010 = 5. 11111 + 11111 =\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n1000\n1110\n10100\n100111\n111110\n\n\n\n\n\n\nQuestion 2\nConvert the following numbers to binary and perform the operation: 1. (32)10 = 2. (50)10 + (32)10 =  3. (64)10 + (4)10 = 4. (100)10 + (220)10 =\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n100000\n1010010\n1000100\n101000000\n\n\n\n\n\n\nQuestion 3\nGiven the codebook below, write the binary instructions to perform this operation: (100)10 + (220)10 .  - What’s the final value on the External Data Bus?\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n1000 0000\n0110 1110\n1001 0000\n1101 1100\n1011 0000\n1100 0000\n\n1101110 + 11011100 = 101000000, but since the CPU’s bus size is limited to 8 bits, the most significant bit (left most, or highest power) will be lost. The final answer on the ESD is 01000000 (64).\n\n\n\n\n\nQuestion 4\nWhat is -230 in two’s complement represetation with an 12 bits bus width?\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\nWrite 230 in binary: 1 0100 0000\nComplete the number of bits to 12 and add a bit for the sign: __0__0001 0100 0000\nFlip the bits (one’s complement): __1__1110 1011 1111\nAdd 1 to get two’s complement: __1__1110 1100 0000\n\n\n\n\n\n\nQuestion 5\nConvert the following numbers to binary and perform the operation on an 8-bit CPU: 1. (50)10 - (32)10 =  2. (64)10 - (4)10 = 3. (100)10 - (120)10 =\n\n\n\n\n\n\nTipSolution\n\n\n\n\n\n\n(50)10 - (32)10 = (50)10 + (-32)10 Binary 50: 0011 0010 Binary 32: 0010 0000 Invert 32: 1101 1111 Add 1: 1110 0000 Operation: 50-32 : 0011 0010\n\n\n1110 0000\n0001 0010\n\n\n(64)10 - (4)10 = (64)10 + (-4)10 Binary 64: 0100 0000 Binary 4: 0000 0100 Invert 4: 1111 1011 Add 1: 1111 1100 Operation 64 - 4: 0100 0000\n\n\n1111 1100\n0011 1100\n\n\nBinary 100: 0110 0100 Binary 120: 0111 1000 Invert 120: 1000 0111 Add 1: 1000 1000 Operation: 100 - 120: 0110 0100\n\n\n\n\n\n1000 1000\n\n\n\n\n1110 1100 (-20)\n\n\n\n\n\n\n\n\n\n\n\n Back to topReuseCC BY-NC-SA 4.0"
   },
@@ -336,48 +336,6 @@
     "text": "No matching items\n Back to topReuseCC BY-NC-SA 4.0"
   },
   {
-    "objectID": "topics/data-representation/index.html",
-    "href": "topics/data-representation/index.html",
-    "title": "Data Representation",
-    "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nIntroduction to Binary\n\n\nWhat’s a bit, and how is it implemented in a computer?\n\n\n\n\n\n\n\n\n2025-09-15\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0"
-  },
-  {
-    "objectID": "topics/data-representation/introduction-to-binary.htm#how-are-bits-physically-implemented",
-    "href": "topics/data-representation/introduction-to-binary.htm#how-are-bits-physically-implemented",
-    "title": "Introduction to Binary",
-    "section": "How are Bits physically implemented?",
-    "text": "How are Bits physically implemented?\nThere are various ways to design circuits that effectively differentiate between “on” and “off” states. One method involves using a transistor, which can either be switched on or off to represent binary information. Another approach uses a capacitor, where its state of being charged or discharged conveys the desired data. In magnetic disks (like HDDs), information is stored as bits based on the direction of the magnetic field, either north-south or south-north. Similarly, on optical discs (such as CD-ROMs), bits are represented by whether a bit on the surface is shiny or not shiny. Lastly, over telephone lines or through radio, binary data is transmitted using high or low-pitched tones to represent the bits. Each of these methods relies on a distinct physical characteristic to represent binary information reliably.\n\n\n\nCapacitors can be charged or uncharged in RAM\n\n\n\n\n\nA transistor is ON or OFF in any chip of the computer such as the CPU and GPU Source: Any PCB"
-  },
-  {
-    "objectID": "topics/data-representation/introduction-to-binary.htm#history-of-bytes",
-    "href": "topics/data-representation/introduction-to-binary.htm#history-of-bytes",
-    "title": "Introduction to Binary",
-    "section": "History of Bytes 📖",
-    "text": "History of Bytes 📖\nA byte represents the number of bits used to encode a single character in a computer, making it the smallest addressable unit of memory in many computer architectures. Historically, the size of a byte was hardware-dependent, with no universal standard governing its size. However, in 1993, a standard was introduced that defined the size of a byte as 8 bits, a convention that is now widely adopted across modern computing systems. This standardization has helped ensure consistency in how data is stored and processed across different platforms and devices."
-  },
-  {
-    "objectID": "topics/data-representation/introduction-to-binary.htm#si-convention",
-    "href": "topics/data-representation/introduction-to-binary.htm#si-convention",
-    "title": "Introduction to Binary",
-    "section": "SI Convention 📜",
-    "text": "SI Convention 📜\n\n\n\n\n\n\n\n\n\n\nUnit Name\nSymbol\nMultiplying Factor\nMultiplying factor (in thousands)\nDescription in English\n\n\n\n\nByte\nB\n1\n1\nOne byte\n\n\nKilo Byte\nkB\n1000\n1000\nOne thousand bytes\n\n\nMega Byte\nMB\n1000,000\n10002\nOne million byte\n\n\nGiga Byte\nGB\n1000,000,000\n10003\nOne billion byte\n\n\nTera Byte\nTB\n1000,000,000,000\n10004\nOne trillion byte\n\n\nPeta Byte\nPB\n10^15\n10005\nOne quadrillion byte\n\n\nExa Byte\nEB\n10^18\n10006\nOne quintillion byte\n\n\nZetta Byte\nZB\n10^21\n10007\nOne sextillion byte\n\n\nYotta Byte\nYB\n10^24\n10008\nOne septillion byte\n\n\n\nSource: NIST"
-  },
-  {
-    "objectID": "topics/data-representation/introduction-to-binary.htm#iec-convention",
-    "href": "topics/data-representation/introduction-to-binary.htm#iec-convention",
-    "title": "Introduction to Binary",
-    "section": "IEC Convention 📜",
-    "text": "IEC Convention 📜\nTo add to the confusion, Windows and some other operating systems don’t follow the SI conventions. They use symbols like Kb and Mb, but instead of referring to powers of 10, they count bytes in powers of 2. This means that if a manufacturer labels a hard drive using SI conventions, the operating system may display a smaller capacity than advertised.\nIn this course, we will stick to the SI conventions, where 1 Kilobyte equals 1000 bytes, and we will distinguish powers of 2 using the IEC convention. In the late 1990s, the IEC introduced new prefixes to clearly separate capacities based on powers of 10 from those based on powers of 2.\n\n\n\n\n\n\n\n\n\nUnit Name\nSymbol\nMultiplying Factor\nMultiplying factor (in thousands)\n\n\n\n\nKibi Byte\nKib\n1000\n1024\n\n\nDebi Byte\nMib\n1000,000\n10242\n\n\nGibi Byte\nGib\n1000,000,000\n10243\n\n\nTebi Byte\nTib\n1000,000,000,000\n10244\n\n\nPebi Byte\nPib\n10^15\n10245\n\n\ngibi Byte\nEib\n10^18\n10246\n\n\nZebi Byte\nZib\n10^21\n10247\n\n\nYobi Byte\nYib\n10^24\n10248\n\n\n\nhttps://en.wikipedia.org/wiki/Byte#Multiple-byte_units\n\n\n\n\n\n\nQuestion\n\n\nJohnny buys a 1Tb external SSD but once plugged into his Windows machine, he notices he only has 931 Gb of available memory space. Can you explain why?"
-  },
-  {
-    "objectID": "topics/data-representation/introduction-to-binary.htm#example-convert-25-to-binary.",
-    "href": "topics/data-representation/introduction-to-binary.htm#example-convert-25-to-binary.",
-    "title": "Introduction to Binary",
-    "section": "Example Convert 25 to binary.",
-    "text": "Example Convert 25 to binary.\nLong Division (divide the Outcome by 2 at every step): \n\n\n\n\n\n\nNote\n\n\nOne way of understanding this algorithm is to apply it to the base 10:\n\nThe higher powers are read from bottom to top, because these have been divided repeatedly."
-  },
-  {
     "objectID": "topics/data-representation/introduction-to-binary.html",
     "href": "topics/data-representation/introduction-to-binary.html",
     "title": "Introduction to Binary",
@@ -454,6 +412,48 @@
       "Data representation",
       "Introduction to Binary"
     ]
+  },
+  {
+    "objectID": "topics/data-representation/introduction-to-binary.htm#how-are-bits-physically-implemented",
+    "href": "topics/data-representation/introduction-to-binary.htm#how-are-bits-physically-implemented",
+    "title": "Introduction to Binary",
+    "section": "How are Bits physically implemented?",
+    "text": "How are Bits physically implemented?\nThere are various ways to design circuits that effectively differentiate between “on” and “off” states. One method involves using a transistor, which can either be switched on or off to represent binary information. Another approach uses a capacitor, where its state of being charged or discharged conveys the desired data. In magnetic disks (like HDDs), information is stored as bits based on the direction of the magnetic field, either north-south or south-north. Similarly, on optical discs (such as CD-ROMs), bits are represented by whether a bit on the surface is shiny or not shiny. Lastly, over telephone lines or through radio, binary data is transmitted using high or low-pitched tones to represent the bits. Each of these methods relies on a distinct physical characteristic to represent binary information reliably.\n\n\n\nCapacitors can be charged or uncharged in RAM\n\n\n\n\n\nA transistor is ON or OFF in any chip of the computer such as the CPU and GPU Source: Any PCB"
+  },
+  {
+    "objectID": "topics/data-representation/introduction-to-binary.htm#history-of-bytes",
+    "href": "topics/data-representation/introduction-to-binary.htm#history-of-bytes",
+    "title": "Introduction to Binary",
+    "section": "History of Bytes 📖",
+    "text": "History of Bytes 📖\nA byte represents the number of bits used to encode a single character in a computer, making it the smallest addressable unit of memory in many computer architectures. Historically, the size of a byte was hardware-dependent, with no universal standard governing its size. However, in 1993, a standard was introduced that defined the size of a byte as 8 bits, a convention that is now widely adopted across modern computing systems. This standardization has helped ensure consistency in how data is stored and processed across different platforms and devices."
+  },
+  {
+    "objectID": "topics/data-representation/introduction-to-binary.htm#si-convention",
+    "href": "topics/data-representation/introduction-to-binary.htm#si-convention",
+    "title": "Introduction to Binary",
+    "section": "SI Convention 📜",
+    "text": "SI Convention 📜\n\n\n\n\n\n\n\n\n\n\nUnit Name\nSymbol\nMultiplying Factor\nMultiplying factor (in thousands)\nDescription in English\n\n\n\n\nByte\nB\n1\n1\nOne byte\n\n\nKilo Byte\nkB\n1000\n1000\nOne thousand bytes\n\n\nMega Byte\nMB\n1000,000\n10002\nOne million byte\n\n\nGiga Byte\nGB\n1000,000,000\n10003\nOne billion byte\n\n\nTera Byte\nTB\n1000,000,000,000\n10004\nOne trillion byte\n\n\nPeta Byte\nPB\n10^15\n10005\nOne quadrillion byte\n\n\nExa Byte\nEB\n10^18\n10006\nOne quintillion byte\n\n\nZetta Byte\nZB\n10^21\n10007\nOne sextillion byte\n\n\nYotta Byte\nYB\n10^24\n10008\nOne septillion byte\n\n\n\nSource: NIST"
+  },
+  {
+    "objectID": "topics/data-representation/introduction-to-binary.htm#iec-convention",
+    "href": "topics/data-representation/introduction-to-binary.htm#iec-convention",
+    "title": "Introduction to Binary",
+    "section": "IEC Convention 📜",
+    "text": "IEC Convention 📜\nTo add to the confusion, Windows and some other operating systems don’t follow the SI conventions. They use symbols like Kb and Mb, but instead of referring to powers of 10, they count bytes in powers of 2. This means that if a manufacturer labels a hard drive using SI conventions, the operating system may display a smaller capacity than advertised.\nIn this course, we will stick to the SI conventions, where 1 Kilobyte equals 1000 bytes, and we will distinguish powers of 2 using the IEC convention. In the late 1990s, the IEC introduced new prefixes to clearly separate capacities based on powers of 10 from those based on powers of 2.\n\n\n\n\n\n\n\n\n\nUnit Name\nSymbol\nMultiplying Factor\nMultiplying factor (in thousands)\n\n\n\n\nKibi Byte\nKib\n1000\n1024\n\n\nDebi Byte\nMib\n1000,000\n10242\n\n\nGibi Byte\nGib\n1000,000,000\n10243\n\n\nTebi Byte\nTib\n1000,000,000,000\n10244\n\n\nPebi Byte\nPib\n10^15\n10245\n\n\ngibi Byte\nEib\n10^18\n10246\n\n\nZebi Byte\nZib\n10^21\n10247\n\n\nYobi Byte\nYib\n10^24\n10248\n\n\n\nhttps://en.wikipedia.org/wiki/Byte#Multiple-byte_units\n\n\n\n\n\n\nQuestion\n\n\nJohnny buys a 1Tb external SSD but once plugged into his Windows machine, he notices he only has 931 Gb of available memory space. Can you explain why?"
+  },
+  {
+    "objectID": "topics/data-representation/introduction-to-binary.htm#example-convert-25-to-binary.",
+    "href": "topics/data-representation/introduction-to-binary.htm#example-convert-25-to-binary.",
+    "title": "Introduction to Binary",
+    "section": "Example Convert 25 to binary.",
+    "text": "Example Convert 25 to binary.\nLong Division (divide the Outcome by 2 at every step): \n\n\n\n\n\n\nNote\n\n\nOne way of understanding this algorithm is to apply it to the base 10:\n\nThe higher powers are read from bottom to top, because these have been divided repeatedly."
+  },
+  {
+    "objectID": "topics/data-representation/index.html",
+    "href": "topics/data-representation/index.html",
+    "title": "Data Representation",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nIntroduction to Binary\n\n\nWhat’s a bit, and how is it implemented in a computer?\n\n\n\n\n\n\n\n\n2025-09-15\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0"
   },
   {
     "objectID": "topics/all-lectures.html",
@@ -900,7 +900,7 @@
     "href": "practice/all-exos.html",
     "title": "Practice Problems",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nBinary conversions\n\n\n\n\n\n\n\n\n\n\n\n\nBinary maths\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0"
+    "text": "Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nBinary conversions\n\n\n\n\n\n\n\n\n\n\n\n\nBinary math\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0"
   },
   {
     "objectID": "about/syllabus.html",
