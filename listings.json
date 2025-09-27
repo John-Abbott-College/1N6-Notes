@@ -1,35 +1,19 @@
 [
   {
-    "listing": "/topics/hardware/index.html",
+    "listing": "/announcements/index.html",
+    "items": []
+  },
+  {
+    "listing": "/about/index.html",
     "items": [
-      "/topics/hardware/introduction-to-computers.html",
-      "/topics/hardware/external-components.html",
-      "/topics/hardware/internal-components.html",
-      "/topics/hardware/understanding-cpus.html"
+      "/about/this-site.html",
+      "/about/calendar.html",
+      "/about/syllabus.html"
     ]
-  },
-  {
-    "listing": "/topics/operating-systems/index.html",
-    "items": []
-  },
-  {
-    "listing": "/topics/technical-support/index.html",
-    "items": []
   },
   {
     "listing": "/topics/data-representation/index.html",
     "items": [
-      "/topics/data-representation/introduction-to-binary.html",
-      "/topics/data-representation/logic-gates-and-boolean-algebra.html"
-    ]
-  },
-  {
-    "listing": "/topics/all-lectures.html",
-    "items": [
-      "/topics/hardware/introduction-to-computers.html",
-      "/topics/hardware/external-components.html",
-      "/topics/hardware/internal-components.html",
-      "/topics/hardware/understanding-cpus.html",
       "/topics/data-representation/introduction-to-binary.html",
       "/topics/data-representation/logic-gates-and-boolean-algebra.html"
     ]
@@ -44,7 +28,31 @@
     ]
   },
   {
-    "listing": "/announcements/index.html",
+    "listing": "/topics/operating-systems/index.html",
+    "items": []
+  },
+  {
+    "listing": "/topics/all-lectures.html",
+    "items": [
+      "/topics/hardware/introduction-to-computers.html",
+      "/topics/hardware/external-components.html",
+      "/topics/hardware/internal-components.html",
+      "/topics/hardware/understanding-cpus.html",
+      "/topics/data-representation/introduction-to-binary.html",
+      "/topics/data-representation/logic-gates-and-boolean-algebra.html"
+    ]
+  },
+  {
+    "listing": "/topics/hardware/index.html",
+    "items": [
+      "/topics/hardware/introduction-to-computers.html",
+      "/topics/hardware/external-components.html",
+      "/topics/hardware/internal-components.html",
+      "/topics/hardware/understanding-cpus.html"
+    ]
+  },
+  {
+    "listing": "/topics/technical-support/index.html",
     "items": []
   },
   {
@@ -52,14 +60,6 @@
     "items": [
       "/practice/binary-conversions.html",
       "/practice/binary-math.html"
-    ]
-  },
-  {
-    "listing": "/about/index.html",
-    "items": [
-      "/about/this-site.html",
-      "/about/calendar.html",
-      "/about/syllabus.html"
     ]
   }
 ]
