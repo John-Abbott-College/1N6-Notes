@@ -102,7 +102,7 @@ Understanding both is essential for every component we’ll discuss today.
 
 - What is static electricity? 
 - How is the case projecting from that?
-  :::
+:::
 
 * Usually made of plastic, steel or aluminum.
 * Helps the fans move air through all components:
@@ -310,9 +310,9 @@ The CPU is connected to the motherboard in one of two ways:
 
 ::: {layout-ncol=2}
 
-![Pin Grid Array – PGA](_assets/internal-components-cpu-lda.png)
+![Land Grid Array – LGA](_assets/internal-components-cpu-lda.png)
 
-![Land Grid Array – LGA](_assets/internal-components-cpu-pga.png)
+![Pin Grid Array – PGA](_assets/internal-components-cpu-pga.png)
 
 :::
 
