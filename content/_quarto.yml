@@ -46,7 +46,7 @@ website:
           contents:
           - topics/data-representation/introduction-to-binary.qmd
           - topics/data-representation/logic-gates-and-boolean-algebra.qmd
-              
+          - topcs/data-representation/binary-math.qmd   
 format:
   html:
     css: _assets/css/styles.css

@@ -78,7 +78,8 @@ Why it matters:
 
 - **Quantitative example** The 2009 Hyundai Accent has a fuel efficiency of 29 MPG (miles per gallon).
 - **Qualitative example** The Hyundai Accent is a hatchback, not a sedan.
-  :::
+
+:::
 
 Why it matters:
 
