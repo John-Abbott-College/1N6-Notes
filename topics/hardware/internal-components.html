@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -41,8 +41,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-f54fa83ccd8f86fe7238c9291c42d766.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-8f4e3aabaa80e3e650ae20f2c24f966b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bb1cd4028f63a369ab283e072cb7d572.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-54c8f25464f32f8783bd446cee98020d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-0586837f6419b9566d7eac124051a580.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -377,6 +377,9 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Logic Gates and Boolean Algebra</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+ <span class="menu-text">topcs/data-representation/binary-math.qmd</span>
+  </li>
       </ul>
   </li>
       </ul>
@@ -398,6 +401,56 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#makemodel" id="toc-makemodel" class="nav-link" data-scroll-target="#makemodel">Make/Model</a></li>
   <li><a href="#properties" id="toc-properties" class="nav-link" data-scroll-target="#properties">Properties</a></li>
   </ul></li>
+  <li><a href="#case" id="toc-case" class="nav-link" data-scroll-target="#case">1. Case 🧊</a></li>
+  <li><a href="#power-supply-psu" id="toc-power-supply-psu" class="nav-link" data-scroll-target="#power-supply-psu">2. Power Supply (PSU) ⚡</a>
+  <ul>
+  <li><a href="#psu-connectors" id="toc-psu-connectors" class="nav-link" data-scroll-target="#psu-connectors">2.1 PSU Connectors 🔌🔋</a></li>
+  <li><a href="#psu-ratings" id="toc-psu-ratings" class="nav-link" data-scroll-target="#psu-ratings">2.2 PSU Ratings 🏅</a>
+  <ul class="collapse">
+  <li><a href="#plus-standard" id="toc-plus-standard" class="nav-link" data-scroll-target="#plus-standard">80 Plus Standard</a></li>
+  </ul></li>
+  <li><a href="#uninterruptible-power-supply" id="toc-uninterruptible-power-supply" class="nav-link" data-scroll-target="#uninterruptible-power-supply">2.3 Uninterruptible Power Supply</a></li>
+  </ul></li>
+  <li><a href="#motherboard" id="toc-motherboard" class="nav-link" data-scroll-target="#motherboard">3. Motherboard 📟</a>
+  <ul>
+  <li><a href="#form-factors" id="toc-form-factors" class="nav-link" data-scroll-target="#form-factors">3.1 Form Factors</a></li>
+  <li><a href="#io-ports" id="toc-io-ports" class="nav-link" data-scroll-target="#io-ports">3.2 I/O Ports</a></li>
+  <li><a href="#expansion-slots" id="toc-expansion-slots" class="nav-link" data-scroll-target="#expansion-slots">3.3 Expansion Slots</a></li>
+  <li><a href="#cpu-socket" id="toc-cpu-socket" class="nav-link" data-scroll-target="#cpu-socket">3.4 CPU Socket</a></li>
+  </ul></li>
+  <li><a href="#internal-connectors" id="toc-internal-connectors" class="nav-link" data-scroll-target="#internal-connectors">4. Internal Connectors 🔌</a>
+  <ul>
+  <li><a href="#example-connectors" id="toc-example-connectors" class="nav-link" data-scroll-target="#example-connectors">Example connectors</a></li>
+  </ul></li>
+  <li><a href="#cpu" id="toc-cpu" class="nav-link" data-scroll-target="#cpu">5. CPU 🧠</a>
+  <ul>
+  <li><a href="#cpu-brands" id="toc-cpu-brands" class="nav-link" data-scroll-target="#cpu-brands">CPU Brands</a></li>
+  </ul></li>
+  <li><a href="#cooling-devices" id="toc-cooling-devices" class="nav-link" data-scroll-target="#cooling-devices">6. Cooling Devices 🪭</a>
+  <ul>
+  <li><a href="#fans" id="toc-fans" class="nav-link" data-scroll-target="#fans">Fans</a></li>
+  <li><a href="#heat-sinks" id="toc-heat-sinks" class="nav-link" data-scroll-target="#heat-sinks">Heat sinks</a></li>
+  </ul></li>
+  <li><a href="#main-memory-ram" id="toc-main-memory-ram" class="nav-link" data-scroll-target="#main-memory-ram">7. Main Memory (RAM) 📋</a>
+  <ul>
+  <li><a href="#properties-1" id="toc-properties-1" class="nav-link" data-scroll-target="#properties-1">7.1 Properties</a></li>
+  <li><a href="#ram-form-factors" id="toc-ram-form-factors" class="nav-link" data-scroll-target="#ram-form-factors">7.2 RAM Form Factors</a></li>
+  <li><a href="#ram-generations" id="toc-ram-generations" class="nav-link" data-scroll-target="#ram-generations">7.3 RAM Generations</a></li>
+  </ul></li>
+  <li><a href="#graphics-cards-gpu" id="toc-graphics-cards-gpu" class="nav-link" data-scroll-target="#graphics-cards-gpu">8. Graphics Cards (GPU) 🎨</a>
+  <ul>
+  <li><a href="#cpu-vs-gpu" id="toc-cpu-vs-gpu" class="nav-link" data-scroll-target="#cpu-vs-gpu">CPU vs GPU</a></li>
+  </ul></li>
+  <li><a href="#storage-devices" id="toc-storage-devices" class="nav-link" data-scroll-target="#storage-devices">9. Storage Devices 💾</a>
+  <ul>
+  <li><a href="#floppy-drive" id="toc-floppy-drive" class="nav-link" data-scroll-target="#floppy-drive">Floppy Drive</a></li>
+  <li><a href="#hard-drive" id="toc-hard-drive" class="nav-link" data-scroll-target="#hard-drive">Hard Drive</a></li>
+  <li><a href="#tape-drive" id="toc-tape-drive" class="nav-link" data-scroll-target="#tape-drive">Tape Drive</a></li>
+  <li><a href="#optical-drive" id="toc-optical-drive" class="nav-link" data-scroll-target="#optical-drive">Optical Drive</a></li>
+  <li><a href="#interfaces-types" id="toc-interfaces-types" class="nav-link" data-scroll-target="#interfaces-types">Interfaces Types</a></li>
+  <li><a href="#external-flash-drive" id="toc-external-flash-drive" class="nav-link" data-scroll-target="#external-flash-drive">External Flash Drive</a></li>
+  </ul></li>
+  <li><a href="#full-disection-of-a-computer" id="toc-full-disection-of-a-computer" class="nav-link" data-scroll-target="#full-disection-of-a-computer">Full disection of a computer 🔬🖥️</a></li>
   </ul>
 </nav>
     </div>
@@ -426,7 +479,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">September 27, 2025</p>
+      <p class="date-modified">September 30, 2025</p>
     </div>
   </div>
     
@@ -511,7 +564,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 <section id="properties" class="level3">
-<h3 class="anchored">Properties</h3>
+<h3 class="anchored" data-anchor-id="properties">Properties</h3>
 <ul>
 <li>Properties describe the quantitative (numerical) and qualitative (descriptive) characteristics of a component that can be compared with similar components.</li>
 </ul>
@@ -526,10 +579,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><p><strong>Quantitative example</strong> The 2009 Hyundai Accent has a fuel efficiency of 29 MPG (miles per gallon).</p></li>
-<li><p><strong>Qualitative example</strong> The Hyundai Accent is a hatchback, not a sedan.</p>
-<p>:::</p></li>
+<li><strong>Quantitative example</strong> The 2009 Hyundai Accent has a fuel efficiency of 29 MPG (miles per gallon).</li>
+<li><strong>Qualitative example</strong> The Hyundai Accent is a hatchback, not a sedan.</li>
 </ul>
+</div>
+</div>
 <p>Why it matters:</p>
 <ul>
 <li>What performance can be expected from this component?</li>
@@ -537,6 +591,8 @@ ul.task-list li input[type="checkbox"] {
 <li>How do these traits affect compatibility, efficiency, or user experience?</li>
 </ul>
 <p>These two concepts—make/model and properties—will vary widely depending on the component. Understanding both is essential for every component we’ll discuss today.</p>
+</section>
+</section>
 <section id="case" class="level2">
 <h2 class="anchored" data-anchor-id="case">1. Case 🧊</h2>
 <div class="quarto-figure quarto-figure-center">
@@ -1047,9 +1103,8 @@ Note
 <h2 class="anchored" data-anchor-id="cooling-devices">6. Cooling Devices 🪭</h2>
 <p>The flow of current between and within electronic components generates heat. Some devices are particularly powerful heat-generators, due to the large current they draw: ::: {.callout-note}</p>
 <ul>
-<li><p>CPUs typically come with their own cooling device</p></li>
-<li><p>Cooling devices are built into GPUs and Power Supplies</p>
-<p>:::</p></li>
+<li>CPUs typically come with their own cooling device</li>
+<li>Cooling devices are built into GPUs and Power Supplies :::</li>
 </ul>
 <p>There are two main types of cooling devices:</p>
 <ul>
@@ -1494,10 +1549,6 @@ Source: https://en.wikipedia.org/wiki/Memory_hierarchy
 ## Additional resources -->
 
 
-</section>
-</div>
-</div>
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->

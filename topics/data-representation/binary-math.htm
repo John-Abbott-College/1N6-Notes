@@ -7,8 +7,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b651517ce65839d647a86e2780455cfb.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.24">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.25">
 
   <meta name="dcterms.date" content="2025-09-15">
   <title>{{&lt; var course.title &gt;}} – Binary Math</title>
@@ -140,12 +140,303 @@
 </div>
 
   <p class="date">2025-09-15</p>
+</section><section id="TOC">
+<nav role="doc-toc"> 
+<h2 id="toc-title">Table of contents</h2>
+<ul>
+<li><a href="#/binary-additions" id="/toc-binary-additions">Binary additions ➕</a></li>
+<li><a href="#/binary-subtractions" id="/toc-binary-subtractions">Binary subtractions ➖</a></li>
+</ul>
+</nav>
 </section>
-<section class="slide level2">
-
-
-
+<section id="binary-additions" class="title-slide slide level1 center">
+<h1>Binary additions ➕</h1>
+<p>In binary, there are only two symbols (<code>0</code>, <code>1</code>). We call binary a <strong>base-2 numeral system</strong>.<br>
+So if we have more than <code>1</code> of something, another bit is needed:</p>
+<ul>
+<li><code>1 + 1 = 10</code> (in English: one plus one equals two)<br>
+</li>
+<li><code>11 + 1 = 100</code> (in English: three plus one equals four)</li>
+</ul>
+<p>It may feel counterintuitive at first 🤯, but there’s nothing fundamentally different about binary compared to decimal, we’re just more used to working in decimal.</p>
+<p>Just like in decimal addition, when a column reaches its maximum digit (9), we carry over a 1 to the next column (the next power of 10). In binary, the idea is the same, but the largest digit is only 1. So whenever we get 1 + 1 in the same column, we carry over to the next place value (the next power of 2).</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="_assets/binary_addition.png"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="_assets/binary_addition2.png"></p>
+</div>
+</div>
+</div>
+<p>Inside the CPU, special circuits called adder gates handle this process automatically. The sum is the result that stays in the current column, while the carry (C) is the extra 1 that “spills over” into the next column (the next power of 2).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_assets/binary_addition3.gif" style="width:80.0%"></p>
+<figcaption>Half-Adder gate <code>1</code>➕<code>1</code> Adds two single binary digits.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_assets/binary_addition4.gif" style="width:80.0%"></p>
+<figcaption>Full-Adder <code>1</code>➕<code>1</code>➕<code>1</code>: Adds two binary digits and includes the carry from a previous addition.</figcaption>
+</figure>
+</div>
 </section>
+
+<section>
+<section id="binary-subtractions" class="title-slide slide level1 center">
+<h1>Binary subtractions ➖</h1>
+<p>When subtracting binary numbers, computer actually convert the left operand to a negative number and performs a simple addition, because this simplifies the hardware of chips. Let’s explore how computers represent negative numbers.</p>
+</section>
+<section id="negative-numbers" class="slide level2">
+<h2>Negative numbers 🌡️</h2>
+<p>Not all numbers in real life are positive, just think of freezing winter temperatures in Canada 🥶 or when bank accounts slip below zero ☹️💸. Because of this, computers must be able to represent not only positive values but also negative ones. In binary, special methods are used to handle negative numbers so that calculations remain accurate and efficient.</p>
+<p>How can be achieve this with a binary system?</p>
+<p>The simple answer is to use the <strong>first bit of a number to represent the sign</strong> and use the remaining bits for the <strong>magnitude</strong> of the number:</p>
+<ul>
+<li><p><strong>1</strong> for negative ➖</p></li>
+<li><p><strong>0</strong> for positive ➕</p></li>
+</ul>
+<h3 id="unsigned-versus-signed">Unsigned versus Signed 🖊️</h3>
+<p>Up to now, we’ve only looked at positive binary numbers, where all the bits are used to represent the value. For signed numbers, however, one bit is set aside to indicate the sign (positive or negative). This reduces the range of values that can be represented.</p>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Example:</strong></p>
+</div>
+<div class="callout-content">
+<p>For example, with 4 bits we can represent the unsigned numbers: 0 to 15, while with the same number of bits we can represent signed numbers -7 to +7.</p>
+<p><img data-src="_assets/signed_unsigned.png" style="width:80.0%"></p>
+</div>
+</div>
+</div>
+<p>With this simple approach however, zero ends up having two representations (positive zero and negative zero), and basic operations are not working as expected, for example: <span class="math display">\[
+5_{10} + −5_{10} = 0101_{2} + 1101_{2} = 0010_{2} \not = 0_{10}  ❌
+\]</span></p>
+<p><span class="math display">\[
+6_{10} + (-2)_{10} =  0110_{2} + 1010_{2} = 0000_{2} \not = 4_{10} ❌
+\]</span></p>
+<p>Here are the binary values from -7 to +7:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Binary</th>
+<th>Decimal Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1 1 1 1</td>
+<td>-7</td>
+</tr>
+<tr class="even">
+<td>1 1 1 0</td>
+<td>-6</td>
+</tr>
+<tr class="odd">
+<td>1 1 0 1</td>
+<td>-5</td>
+</tr>
+<tr class="even">
+<td>1 1 0 0</td>
+<td>-4</td>
+</tr>
+<tr class="odd">
+<td>1 0 1 1</td>
+<td>-3</td>
+</tr>
+<tr class="even">
+<td>1 0 1 0</td>
+<td>-2</td>
+</tr>
+<tr class="odd">
+<td>1 0 0 1</td>
+<td>-1</td>
+</tr>
+<tr class="even">
+<td>1 0 0 0</td>
+<td>-0 ❓ Negative zero??</td>
+</tr>
+<tr class="odd">
+<td>0 0 0 0</td>
+<td>0 ⚠️ Zero appears twice!</td>
+</tr>
+<tr class="even">
+<td>0 0 0 1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>0 0 1 0</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>0 0 1 1</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>0 1 0 0</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>0 1 0 1</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>0 1 1 0</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>0 1 1 1</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="twos-complement" class="slide level2">
+<h2>Two’s complement</h2>
+<p>Two’s complement is the most common way to represent signed numbers in computers. It’s based on mathematical thoeries and help fix the issues seen above with the “simple approach”.</p>
+</section>
+<section class="slide level2 scrollable">
+
+<p><strong>Example: Representing a negative number using Two’s Complement</strong></p>
+<ol type="1">
+<li><p>✍️ <strong>Write the positive version of the number</strong> using all the bits available (including one bit for the sign)</p>
+<ul>
+<li>Example: (5)<sub>10</sub> = (0000 0101)<sub>2</sub></li>
+</ul></li>
+<li><p>🔄 <strong>Invert all the bits</strong> (flip 0 → 1 and 1 → 0).</p>
+<ul>
+<li>0000 0101 → 1111 1010</li>
+<li>This is also called One’s complement.</li>
+</ul></li>
+<li><p>➕1 <strong>Add 1</strong> to the inverted value.</p>
+<ul>
+<li>1111 1010 + 1 = 1111 1011</li>
+</ul></li>
+</ol>
+<p>✅ Therefore, (-5)<sub>10</sub> = (1111 1011)*<sub>2</sub> ​</p>
+<p>Here are the binary representation of numbers from -7 to +7 in two’s complement:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Binary</th>
+<th>Decimal Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1 0 0 0</td>
+<td>-8</td>
+</tr>
+<tr class="even">
+<td>1 0 0 1</td>
+<td>-7</td>
+</tr>
+<tr class="odd">
+<td>1 0 1 0</td>
+<td>-6</td>
+</tr>
+<tr class="even">
+<td>1 0 1 1</td>
+<td>-5</td>
+</tr>
+<tr class="odd">
+<td>1 1 0 0</td>
+<td>-4</td>
+</tr>
+<tr class="even">
+<td>1 1 0 1</td>
+<td>-3</td>
+</tr>
+<tr class="odd">
+<td>1 1 1 0</td>
+<td>-2</td>
+</tr>
+<tr class="even">
+<td>1 1 1 1</td>
+<td>-1</td>
+</tr>
+<tr class="odd">
+<td>0 0 0 0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>0 0 0 1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>0 0 1 0</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>0 0 1 1</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>0 1 0 0</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>0 1 0 1</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>0 1 1 0</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>0 1 1 1</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Example: Representing (-20)<sub>10</sub> in Two’s Complement</strong></p>
+</div>
+<div class="callout-content">
+<p>✍️ <strong>Step 1: How many bits do we need?</strong><br>
+👉 Rule of thumb: if the leftmost bit is <code>1</code>, add an extra bit!<br>
+(because negative numbers should always start with <code>1</code> , and positive numbers with <code>0</code>)</p>
+<p><span class="math display">\[(20)_{10} = (10100)_{2} \;\; \rightarrow \;\; (010100)_{2}\]</span></p>
+<hr>
+<p>🔄 <strong>Step 2: Invert all the bits</strong><br>
+<span class="math display">\[
+010100 \;\; \rightarrow \;\; 101011
+\]</span></p>
+<hr>
+<p>➕1 <strong>Step 3: Add 1 to the inverted value</strong><br>
+<span class="math display">\[
+101011 + 1 = 101100
+\]</span></p>
+<hr>
+<p>✅ <strong>Final Answer:</strong><br>
+<span class="math display">\[
+(-20)_{10} = (101100)_{2}
+\]</span></p>
+</div>
+</div>
+</div>
+<h3 id="math-operations-in-twos-complement">Math operations in Two’s complement</h3>
+<p>Now let’s observe why Two’s complement fixes the simple operations we had earlier:</p>
+<p>🧮 Example 1: <span class="math display">\[
+5_{10} + -5_{10} =  0101_{2} + 1011_{2} = 0000_{2} = 0_{10} ✅
+\]</span></p>
+<p>🧮 Example 2: <span class="math display">\[
+6_{10} + -2_{10} =  0110_{2} + 1110_{2} = 0100_{2} = 4_{10} ✅
+\]</span> 🔄 The <strong>overflow</strong> that happens with fixed bits ensures that we “wrap around” back to <code>0</code> when adding a positive and its negative counterpart.<br>
+💡 <strong>Key Advantage:</strong><br>
+Using <strong>Two’s Complement</strong> makes math operations simpler for computers ⚡. Both signed and unsigned numbers can be added using the <strong>same adder circuits</strong> 🔌.</p>
+<p>👉 For example:<br>
+- <code>4 + 2</code> (unsigned)<br>
+- <code>4 + (-2)</code> (signed)</p>
+<p>Both are handled using the <strong>same hardware adder gate</strong> ➕.</p>
+
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
