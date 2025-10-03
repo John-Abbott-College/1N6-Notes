@@ -1,0 +1,167 @@
+---
+date: 2025-09-30
+draft: false
+title: Logic Gates
+image: "https://www.allaboutcircuits.com/uploads/articles/half-adder-gate-circuit.jpg"
+---
+
+# 1. Logic gates 
+
+On the left is the input to a series of logical circuits.  
+Indicate the resulting output on the right (1 = on, 0 = off) as well as the intermediate binary values at the exit of each gate:
+
+ Logic Gates | Intermediate value |Output (1 or 0)?|
+-------------|--------------------|----------------|  
+|![](_assets/logic_gate1.png){width=200}       |                |
+|![](_assets/logic_gate2.png){width=200}        |                |
+|![](_assets/logic_gate3.png){width=200}        |                |
+|![](_assets/logic_gate4.png){width=200}        |                |
+
+
+
+# 2. Truth table 2 inputs:
+
+Complete the truth table of the following logic circuit: 
+
+![](_assets/logic_gate5.png)
+
+# 3.  Truth table 4 inputs: 
+
+Complete the truth table of the following logic circuit: 
+
+![](_assets/logic_gate6.png)
+
+| **Input 1** | **Input 2** | **Input 3** | **Input4** | **Output** |
+| ----------- | ----------- | ----------- | ---------- | ---------- |
+|             |             |             |            |            |
+|             |             |             |            |            |
+|             |             |             |            |            |
+|             |             |             |            |            |
+
+# 4. Half adders and Full adders
+
+We have seen the half adder logical circuit in class, but we haven’t actually seen why it’s called a half adder. Consider this, if you are trying to add two numbers in a row such as 1 +1 +1. If you try putting two half adder circuits in a row, you will have a problem! 
+The output of one gate would have a sum and a carry, we need to have three inputs in the following gate to perform the following addition! That’s when the full comes in handy:
+
+
+Fill out the truth table of the full adder:
+
+![](_assets/logic_gate7.png)
+
+| **A** | **B** | **Cin** | **S** | **Cout** |
+| ----- | ----- | ------- | ----- | -------- |
+|       |       |         |       |          |
+|       |       |         |       |          |
+|       |       |         |       |          |
+|       |       |         |       |          |
+|       |       |         |       |          |
+|       |       |         |       |          |
+|       |       |         |       |          |
+
+# 5. Exam easy or hard?
+The first section of students of Tech Support collectively decided not to study for their mid-term exam and instead build a truth table to predict if the exam will be easy or hard based on their teacher’s mood. 
+
+They built a logic gate diagram, where the output is a light bulb. If it turns on, the exam will be easy, and everyone passes.
+
+They have four switches that can turn on/off independently. The first switch represents if the weather is above 0 degrees Celsius in Canada. The second switch represents if it’s snowing outside (negative temperatures). The third switch represents if the exam is happening on a Thursday and the last switch represents if the exam is happening on a Friday.  
+
+
+![](_assets/logic_gate8.png)
+
+1. Let’s imagine it is snowing on Exam Day. Build a truth table.
+
+> Hint: Observe the inputs and the gates well. You do not need to try all possibilities. 
+
+| The temperature is above  0 ° C ? | It is a Thursday? | It is a Friday? | Exam is easy? |
+| --------------------------------- | ----------------- | --------------- | ------------- |
+|                                   |                   |                 |               |
+|                                   |                   |                 |               |
+|                                   |                   |                 |               |
+|                                   |                   |                 |               |
+|                                   |                   |                 |               |
+|                                   |                   |                 |               |
+|                                   |                   |                 |               |
+|                                   |                   |                 |               |
+
+2. Let’s imagine it is not snowing on the Exam Day. Build a truth table for all possibilities. 
+| The temperature is above  0 ° C? | It is a Thursday? | It is a Friday? | Exam is easy or not? |
+| -------------------------------- | ----------------- | --------------- | -------------------- |
+|                                  |                   |                 |                      |
+|                                  |                   |                 |                      |
+|                                  |                   |                 |                      |
+|                                  |                   |                 |                      |
+|                                  |                   |                 |                      |
+|                                  |                   |                 |                      |
+|                                  |                   |                 |                      |
+|                                  |                   |                 |                      |
+
+3. One of the inputs seems to not affect the output, which one is it?
+
+4. Simplify the logic circuit be removing this gate. 
+
+
+
+# Solution
+
+1. Logic gates
+
+| Input               | 1 (on) or 0 (off)? |
+| ------------------- | ------------------ |
+| 1     0             | 0                  |
+| 0     1             | 1                  |
+| 0     1             | 1                  |
+| 1  0           0  1 | 1                  |
+
+ 
+
+Truth table 4 inputs and 1 output:
+
+| **Input 1** | **Input 2** | **Input 3** | **Input4** | **Output** |
+| ----------- | ----------- | ----------- | ---------- | ---------- |
+| **0**       | **0**       | **0**       | **0**      | **0**      |
+| **0**       | **1**       | **0**       | **0**      | **0**      |
+| **1**       | **0**       | **0**       | **0**      | **0**      |
+| **1**       | **1**       | **0**       | **0**      | **1**      |
+| **0**       | **0**       | **1**       | **1**      | **1**      |
+| **0**       | **1**       | **1**       | **1**      | **1**      |
+| **1**       | **0**       | **1**       | **1**      | **1**      |
+| **1**       | **1**       | **1**       | **1**      | **0**      |
+| **0**       | **0**       | **1**       | **0**      | **1**      |
+| **0**       | **1**       | **1**       | **0**      | **1**      |
+| **1**       | **0**       | **1**       | **0**      | **1**      |
+| **1**       | **1**       | **1**       | **0**      | **0**      |
+| **0**       | **0**       | **0**       | **1**      | **1**      |
+| **0**       | **1**       | **0**       | **1**      | **1**      |
+| **1**       | **0**       | **0**       | **1**      | **1**      |
+| **1**       | **1**       | **0**       | **1**      | **0**      |
+
+ 
+
+Truth table 2 inputs 1 output:
+
+| **Input**     | **Output** |
+| ------------- | ---------- |
+| **A: 0 B: 0** | **1**      |
+| **A: 1 B: 0** | **0**      |
+| **A: 0 B: 1** | **1**      |
+| **A: 1 B: 1** | **1**      |
+
+ 
+
+ 
+
+Full Adder Truth Table:
+
+| **A** | **B** | **Cin** | **S** | **Cout** |
+| ----- | ----- | ------- | ----- | -------- |
+| 0     | 0     | 0       | 0     | 0        |
+| 0     | 0     | 1       | 1     | 0        |
+| 0     | 1     | 0       | 1     | 0        |
+| 0     | 1     | 1       | 0     | 1        |
+| 1     | 0     | 0       | 1     | 0        |
+| 1     | 0     | 1       | 0     | 1        |
+| 1     | 1     | 0       | 0     | 1        |
+| 1     | 1     | 1       | 1     | 1        |
+
+ 
+
