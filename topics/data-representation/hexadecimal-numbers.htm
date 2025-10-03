@@ -10,8 +10,8 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <meta name="dcterms.date" content="2025-09-15">
-  <title>{{&lt; var course.title &gt;}} – Introduction to Binary</title>
+  <meta name="dcterms.date" content="2025-10-02">
+  <title>{{&lt; var course.title &gt;}} – Hexadecimal numbers</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -123,8 +123,8 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Introduction to Binary – Technical Support">
-<meta property="og:description" content="Lecture subtitle.">
+<meta property="og:title" content="Hexadecimal numbers – Technical Support">
+<meta property="og:description" content="Introduction to the hexadecimal base-16 system.">
 <meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/data-representation/_assets/favicons/favicon-32x32.png">
 <meta property="og:site_name" content="{{< var course.title >}}">
 </head>
@@ -133,43 +133,189 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Introduction to Binary</h1>
-  <p class="subtitle">Lecture subtitle.</p>
+  <h1 class="title">Hexadecimal numbers</h1>
+  <p class="subtitle">Introduction to the hexadecimal base-16 system.</p>
 
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">2025-09-15</p>
+  <p class="date">2025-10-02</p>
 </section><section id="TOC">
 <nav role="doc-toc"> 
 <h2 id="toc-title">Table of contents</h2>
 <ul>
-<li><a href="#/hexadecimal-numbers" id="/toc-hexadecimal-numbers">Hexadecimal Numbers</a></li>
+<li><a href="#/hexadecimal-numbers" id="/toc-hexadecimal-numbers">Hexadecimal Numbers 🔢🟪</a></li>
+<li><a href="#/building-hexadecimal-numbers" id="/toc-building-hexadecimal-numbers">Building Hexadecimal Numbers 🏗️</a></li>
 </ul>
 </nav>
 </section>
 <section>
 <section id="hexadecimal-numbers" class="title-slide slide level1 center">
-<h1>Hexadecimal Numbers</h1>
+<h1>Hexadecimal Numbers 🔢🟪</h1>
+<p>As we saw with Unicode, computers need to handle very large numbers to distinguish between the many possible characters and instructions. While computers work effortlessly with large binary numbers, we don’t! Converting 32-bit or 64-bit values from binary to decimal is tedious, which makes large binary numbers difficult for humans to read and write quickly.</p>
+<p>We’re comfortable with large decimal numbers, but the problem is that 10 is not a power of 2. This means it doesn’t align neatly with the binary storage model computers rely on. For example, with just 4 bits we can represent values up to 16, but to store something slightly larger, like 17–20, we already need 5 bits.</p>
+<p>The result is that decimal numbers cannot be directly stored in machines built from transistors that only distinguish between “on” (1) and “off” (0). So what’s the solution? We turn to hexadecimal—a system that maps perfectly onto binary while staying compact and much easier for humans to read and write.</p>
+<p>Notice that 16 is a power of 2: <span class="math inline">\(2^4 = 16\)</span>. This means every 4 bits (a nibble) can store one hexadecimal digit (a “hexit”), and with 8 bits we can store two “hexits”.</p>
+</section>
+<section id="hexits" class="slide level2">
+<h2>Hexits 🔹</h2>
+<p>The hexadecimal system is base 16 🔢. This means we count from 0 to 15 before moving to the next place value. In decimal, we only have the digits 0–9 🔟. To show the extra numbers (10–15), we use the letters A, B, C, D, E, and F 🔠.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Hexadecimal</th>
+<th style="text-align: center;">Binary</th>
+<th style="text-align: center;">Decimal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0000</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0001</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0010</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0011</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0100</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0101</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0110</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0111</td>
+<td style="text-align: center;">7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">1000</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">1001</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">1010</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">1011</td>
+<td style="text-align: center;">11</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">1100</td>
+<td style="text-align: center;">12</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">1101</td>
+<td style="text-align: center;">13</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">1110</td>
+<td style="text-align: center;">14</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">1111</td>
+<td style="text-align: center;">15</td>
+</tr>
+</tbody>
+</table>
+</section></section>
+<section>
+<section id="building-hexadecimal-numbers" class="title-slide slide level1 center">
+<h1>Building Hexadecimal Numbers 🏗️</h1>
 
 </section>
-<section class="slide level2">
-
-<p>As we saw with <strong>Unicode</strong>, computers need to handle very large numbers in order to distinguish between the many possible characters and instructions. While computers have no problem working with large <strong>binary numbers</strong>, <strong>we do!</strong> Converting 32-bit or 64-bit values from binary to decimal is tedious, which makes <strong>large binary numbers hard for humans to read and write quickly</strong>. We are comfortable using large <strong>decimal numbers</strong>, but the problem is that <strong>10 is not a power of 2</strong>, so it does not align evenly with the binary storage model that computers use. For example, with 4 bits we can represent values up to 16, but to store just a little more, like 17–20, we already need 5 bits. The consequence is that decimal numbers cannot be directly stored in machines built from transistors that can only distinguish between “on” and “off.” So what do we do? We turn to <strong>hexadecimal</strong>, a system that maps neatly onto binary while remaining compact and much easier for humans to read and write.</p>
-</section>
-<section class="slide level2">
-
+<section id="binary-to-hexadecimal-01" class="slide level2 scrollable">
+<h2>Binary to Hexadecimal 0️⃣1️⃣</h2>
+<p>Going from binary to hexadecimal and vice versa is quite straight forward.</p>
+<p>🚀 Steps:</p>
+<ol type="1">
+<li><p>Group the binary number in nibbles (packs of 4 bits) 👉 Example : 0101011011 → 0001 0101 1011</p></li>
+<li><p>Convert each nibble into its hexadecimal digit:</p></li>
+</ol>
 <ul>
-<li>Introduce a new numeric system! There are infinite possibilities…</li>
-<li><strong>Hexadecimal numbers</strong> are <strong>base 16</strong> .</li>
-<li>Note: 16 is a power of 2! 2^4 = 16</li>
-<li>In other words:</li>
-<li>with 4 bits, we can store one “hexit”, values range from 0-1111 (0 -&gt; 15 in decimal)</li>
-<li>with 8 bits, we can store exactly two “hexits”, values range from 0 - 1111 1111 (0 -&gt; 255 in decimal)</li>
+<li>(0001)<sub>2</sub> → (1)<sub>16</sub></li>
+<li>(0101)<sub>2</sub> → (5)<sub>16</sub></li>
+<li>(1011)<sub>2</sub> → (B)<sub>16</sub></li>
 </ul>
+<ol start="3" type="1">
+<li>Write the hex digits in the same order. ✨ 0001 0101 1011 → (15B)<sub>16</sub></li>
+</ol>
+<p>Hexadecimal numbers are often written with the prefix 0x to make their base clear:</p>
+<pre><code>0001 0101 1011 = 0x15B</code></pre>
+<p>✅ Final Answer: 0x15B</p>
+<p>Apply the same approach to convert a hexadecimal number to binary, each hex character will correspond to a nibble (4 bits).</p>
 </section>
-<section id="building-hexadecimal-numbers" class="slide level2">
-<h2>Building Hexadecimal Numbers</h2>
+<section id="decimal-to-hexadecimal" class="slide level2 scrollable">
+<h2>🔢 Decimal to Hexadecimal</h2>
+<p>This is a little less straight forward but it’s still achievable.</p>
+<p>🚀 Steps: 👉 Example: Let’s convert 4,284 in hexadecimal:</p>
+<ol type="1">
+<li>List a few powers of 16 and their decimal values:</li>
+</ol>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Power of 16</th>
+<th><span class="math inline">\(16^4\)</span></th>
+<th><span class="math inline">\(16^3\)</span></th>
+<th><span class="math inline">\(16^2\)</span></th>
+<th><span class="math inline">\(16^1\)</span></th>
+<th><span class="math inline">\(16^0\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Decimal</td>
+<td>1,048,576</td>
+<td>4,096</td>
+<td>256</td>
+<td>16</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<ol start="2" type="1">
+<li><p>Find the largest power of 16 that fits into 4,284. 👉 <span class="math inline">\(16^3 = 4,096\)</span> (fits, since <span class="math inline">\(16^4\)</span> is too big).</p></li>
+<li><p>Divide by this power of 16. 👉 <span class="math inline">\(4284 ÷ 4096 = 1\)</span> remainder 188. 🔹 Next digit: 1</p></li>
+<li><p>Use the next power of 16 (<span class="math inline">\(16^2 = 256\)</span>). 👉 <span class="math inline">\(188 ÷ 256 = 0\)</span> remainder 188. 🔹 Next digit: 0</p></li>
+<li><p>Move to the next power <span class="math inline">\(16^1 = 16\)</span>. 👉 <span class="math inline">\(188 ÷ 16 = 11\)</span> remainder 12. 👉 Decimal 11 = Hex B. 🔹 Next digit: B</p></li>
+<li><p>Finally, <span class="math inline">\(16^0 = 1\)</span>. 👉 <span class="math inline">\(12 ÷ 1 = 12\)</span> remainder 0. 👉 Decimal 12 = Hex C. 🔹 Next digit: C</p></li>
+<li><p>Write the hexadecimal digits in the order of largest to lowest powers:</p></li>
+</ol>
+<p>✅ Final Answer: 0x10BC</p>
 <blockquote>
 <p><strong>Riddle</strong></p>
 <p>Avatar Aang went to get his first driving license. The clerk asked Aang for his ID to make sure he was old enough to do the driving test. The clerk read his ID, and told him that he is not old enough for the test. They him that he needs to be at least 18.</p>
@@ -177,22 +323,11 @@
 <p>What age is Aang in Hexadecimal(if he is indeed 18 in decimal?)</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../../Users/teacher/Documents/1N6-Notes/content/topics/data-representation/_assets/data-representation5.png" title="A sample title." alt="Sample alt text. To be replaced!"></p>
-<figcaption>Aang.</figcaption>
+<p><img data-src="_assets/data-representation5.png" title="A sample title." alt="Sample alt text. To be replaced!"></p>
+<figcaption>Avatar Aang.</figcaption>
 </figure>
 </div>
 </blockquote>
-</section>
-<section id="why-hexadecimal" class="slide level2">
-<h2>Why Hexadecimal?</h2>
-<p>Hexadecimal is perfect for matching 4 bits.</p>
-<p>Every combination of 4 bits can be matched with one hex number.</p>
-<p><em>4 bits</em> can be represented by <em>1 Hex value (“hexit”)</em></p>
-<p><em>8 bits</em> can be represented by <em>2 Hex values (“hexit”)</em></p>
-</section>
-<section id="hexadecimal-digits" class="slide level2">
-<h2>Hexadecimal Digits</h2>
-<h3 id="section"></h3>
 
 
 </section></section>

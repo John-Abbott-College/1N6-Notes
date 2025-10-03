@@ -146,6 +146,8 @@
 <ul>
 <li><a href="#/binary-additions" id="/toc-binary-additions">Binary additions ➕</a></li>
 <li><a href="#/binary-subtractions" id="/toc-binary-subtractions">Binary subtractions ➖</a></li>
+<li><a href="#/unsigned-versus-signed" id="/toc-unsigned-versus-signed">Unsigned versus Signed 🖊️</a></li>
+<li><a href="#/range-of-n-bit-in-twos-complement" id="/toc-range-of-n-bit-in-twos-complement">Range of <code>n</code>-bit in Two’s complement</a></li>
 </ul>
 </nav>
 </section>
@@ -194,25 +196,13 @@ So if we have more than <code>1</code> of something, another bit is needed:</p>
 <h2>Negative numbers 🌡️</h2>
 <p>Not all numbers in real life are positive, just think of freezing winter temperatures in Canada 🥶 or when bank accounts slip below zero ☹️💸. Because of this, computers must be able to represent not only positive values but also negative ones. In binary, special methods are used to handle negative numbers so that calculations remain accurate and efficient.</p>
 <p>How can be achieve this with a binary system?</p>
-<p>The simple answer is to use the <strong>first bit of a number to represent the sign</strong> and use the remaining bits for the <strong>magnitude</strong> of the number:</p>
+<h3 id="signed-magnitudes-representation">Signed Magnitudes ⛰️ Representation</h3>
+<p>The simple answer is to use the <strong>first bit of a number to represent the sign</strong> and use the remaining bits for the <strong>magnitude</strong> of the number. This approach for representing numbers is called <strong>Signed Magnitudes</strong>.</p>
 <ul>
 <li><p><strong>1</strong> for negative ➖</p></li>
 <li><p><strong>0</strong> for positive ➕</p></li>
 </ul>
-<h3 id="unsigned-versus-signed">Unsigned versus Signed 🖊️</h3>
-<p>Up to now, we’ve only looked at positive binary numbers, where all the bits are used to represent the value. For signed numbers, however, one bit is set aside to indicate the sign (positive or negative). This reduces the range of values that can be represented.</p>
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Example:</strong></p>
-</div>
-<div class="callout-content">
-<p>For example, with 4 bits we can represent the unsigned numbers: 0 to 15, while with the same number of bits we can represent signed numbers -7 to +7.</p>
-<p><img data-src="_assets/signed_unsigned.png" style="width:80.0%"></p>
-</div>
-</div>
-</div>
-<p>With this simple approach however, zero ends up having two representations (positive zero and negative zero), and basic operations are not working as expected, for example: <span class="math display">\[
+<p>With this simple approach however, zero ends up having <strong>two representations</strong> (positive zero and negative zero), and basic operations are not working as expected, for example: <span class="math display">\[
 5_{10} + −5_{10} = 0101_{2} + 1101_{2} = 0010_{2} \not = 0_{10}  ❌
 \]</span></p>
 <p><span class="math display">\[
@@ -293,9 +283,7 @@ So if we have more than <code>1</code> of something, another bit is needed:</p>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="twos-complement" class="slide level2">
-<h2>Two’s complement</h2>
+<h3 id="twos-complement-2-representation">Two’s complement 2️ Representation</h3>
 <p>Two’s complement is the most common way to represent signed numbers in computers. It’s based on mathematical thoeries and help fix the issues seen above with the “simple approach”.</p>
 </section>
 <section class="slide level2 scrollable">
@@ -434,9 +422,76 @@ Using <strong>Two’s Complement</strong> makes math operations simpler for comp
 - <code>4 + 2</code> (unsigned)<br>
 - <code>4 + (-2)</code> (signed)</p>
 <p>Both are handled using the <strong>same hardware adder gate</strong> ➕.</p>
-
-
 </section></section>
+<section id="unsigned-versus-signed" class="title-slide slide level1 center">
+<h1>Unsigned versus Signed 🖊️</h1>
+<p>Up to now, we’ve only looked at positive binary numbers, where all the bits are used to represent the value. For signed numbers, however, one bit is set aside to indicate the sign (positive or negative). This reduces the magnitude of the values that can be represented.</p>
+</section>
+
+<section id="range-of-n-bit-in-twos-complement" class="title-slide slide level1 center">
+<h1>Range of <code>n</code>-bit in Two’s complement</h1>
+<p>For the minimum and maximum value that can be stored in a register depends on the numbers of available bits <code>n</code>.</p>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 3%">
+<col style="width: 32%">
+<col style="width: 47%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">n</th>
+<th style="text-align: center;">minimum</th>
+<th style="text-align: center;">maximum</th>
+<th style="text-align: right;">Unique numbers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">$-(2^7) =-128 $</td>
+<td style="text-align: center;"><span class="math inline">\(+(2^7)-1  =+127\)</span></td>
+<td style="text-align: right;">$ (2^8) = 256$</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">16</td>
+<td style="text-align: center;"><span class="math inline">\(-(2^15) =-32,768\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+(2^15)-1 =+32,767\)</span></td>
+<td style="text-align: right;">$ (2^16) = 65,536$</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">32</td>
+<td style="text-align: center;"><span class="math inline">\(-(2^31) =-2,147,483,648\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+(2^31)-1 =+2,147,483,647\)</span>(9+ digits)</td>
+<td style="text-align: right;">$ (2^32) = 4,294,967,296$ (9+ digits)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">64</td>
+<td style="text-align: center;"><span class="math inline">\(-2^63 =-9,223,372,036,854,775,808\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+(2^63)-1 =+9,223,372,036,854,775,807\)</span>(18+ digits)</td>
+<td style="text-align: right;">$ (2^64) = 18,446,744,073,709,551,616$ (18 digits)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(n\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-(2^{n-1})\)</span></td>
+<td style="text-align: center;">$(2^{n-1}) -1 $</td>
+<td style="text-align: right;"><span class="math inline">\(2^n\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Example: Signed vs unsigned 2 bits</strong></p>
+</div>
+<div class="callout-content">
+<p>For example, with 4 bits we can represent the unsigned numbers: 0 to 15, while with the same number of bits we can represent signed numbers -8 to +7 :</p>
+</div>
+</div>
+</div>
+
+
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

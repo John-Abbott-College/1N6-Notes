@@ -10,7 +10,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <meta name="dcterms.date" content="2025-09-15">
+  <meta name="dcterms.date" content="2025-10-02">
   <title>{{&lt; var course.title &gt;}} – Text in Computers</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -139,45 +139,55 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">2025-09-15</p>
+  <p class="date">2025-10-02</p>
 </section><section id="TOC">
 <nav role="doc-toc"> 
 <h2 id="toc-title">Table of contents</h2>
 <ul>
-<li><a href="#/text-in-computers" id="/toc-text-in-computers">Text in Computers</a></li>
+<li><a href="#/text-in-computers" id="/toc-text-in-computers">💻 Text in Computers 📝</a></li>
 </ul>
 </nav>
 </section>
 <section>
 <section id="text-in-computers" class="title-slide slide level1 center">
-<h1>Text in Computers</h1>
-<p>In early years, different computer companies applied the binary system in their own way. The word “cat” would be encoded in binary different on different brands of computers. This made life difficult in terms of being able to transfer data from one system to another.</p>
+<h1>💻 Text in Computers 📝</h1>
+<p>In early years, different computer companies applied the <strong>binary system</strong> in their own way. The word “cat” would be encoded in binary different on different brands of computers. This made life difficult in terms of being able to transfer data from one system to another.</p>
 </section>
 <section id="ascii" class="slide level2">
-<h2>ASCII</h2>
+<h2>🅰️ ASCII</h2>
 <ul>
 <li>ASCII (American Standard Code for Information Interchange)
 <ul>
-<li>Standard introduced that used a 7 bit code with 128 combinations.</li>
+<li>Originally a <strong>7-bit code</strong> with 128 combinations</li>
 </ul></li>
-<li>Later became 8-bits (256 combinations) – <strong>extended </strong> ASCII-8.
+<li>Later expanded to <strong>8 bits</strong> (256 combinations) — called <strong>Extended ASCII-8</strong>
 <ul>
-<li>Note: When people say “ASCII” they are almost always referring to extended ASCII-8</li>
+<li>Note: When people say “ASCII,” they usually mean Extended ASCII-8</li>
 </ul></li>
-<li>Why eight bits?
+<li><strong>Why 8 bits?</strong>
 <ul>
-<li>So each character can be stored in a single byte.</li>
+<li>Each character fits perfectly into <strong>1 byte</strong></li>
 </ul></li>
-<li>CAT 0100 0011 0100 0001 0101 0100</li>
-<li>cat 0110 0011 0110 0001 0111 0100</li>
+<li>Example:
+<ul>
+<li><code>"CAT"</code> → <code>0100 0011 0100 0001 0101 0100</code><br>
+</li>
+<li><code>"cat"</code> → <code>0110 0011 0110 0001 0111 0100</code></li>
+</ul></li>
 </ul>
-<h3 id="ascii-8-table-of-characters">ASCII-8: Table of Characters</h3>
+<h3 id="ascii-8-table-of-characters">📊 ASCII-8: Table of Characters</h3>
 
 <img data-src="https://media.geeksforgeeks.org/wp-content/uploads/20240304094301/ASCII-Table.png" class="r-stretch"><p><em>Information above comes from</em> <a href="https://www.geeksforgeeks.org/dsa/ascii-table/">ASCII Values Alphabets</a></p>
 </section>
 <section id="unicode" class="slide level2">
-<h2>Unicode</h2>
-<p>Although ASCII works fine for English and other Latin-based languages, many other languages need far more than 256 characters. For example, Chinese (汉字), Japanese (漢字), Cyrillic (Кири́ллица), Gujarati (ગુજરાતી), and Urdu (اردو) all require large sets of characters that ASCII simply cannot represent. With only 8 bits, ASCII cannot possibly store the hundreds of thousands of symbols used worldwide. To solve this, we use <strong>Unicode</strong>, which comes in several versions that use different numbers of bits to store data. The most common format is <strong>UTF-8</strong>, an 8-bit variable-width encoding that maximizes compatibility with ASCII while allowing expansion up to 48 bits for larger character sets. <strong>UTF-16</strong> uses 16-bit variable-width encoding and can expand to 32 bits, while <strong>UTF-32</strong> uses a fixed-width 32-bit system where every character takes exactly 32 bits. With over 60,000 characters supported in UTF-16 and more than 4 billion in UTF-32, Unicode can represent virtually every character from every language on the planet. For instance, the code point U+007A represents the Latin small letter <em>z</em> (007A in UTF-16), while U+6C34 represents the Chinese character for water (水), stored as 6C34 in UTF-16. Since the numbers used in UTF-16 and UTF-32 can be extremely large, it is not convenient to write them in binary, which is why we often use <strong>hexadecimal</strong> instead.</p>
+<h2>🌐 Unicode</h2>
+<p>ASCII works well for <strong>English and other Latin-based languages</strong>, but many languages need <strong>more than 256 characters</strong> 🌏. For example:<br>
+- 🇨🇳 Chinese: 汉字 (China)<br>
+- 🇯🇵 Japanese: 漢字 (Japan)<br>
+- 🇷🇺 Cyrillic: Кири́ллица (Russia)<br>
+- 🇮🇳 Gujarati: ગુજરાતી (India)<br>
+- 🇵🇰 Urdu: اردو (Pakistan)</p>
+<p>To solve this, we use <strong>Unicode</strong>, which comes in several versions that use different numbers of bits to store data. The most common format is <strong>UTF-8</strong>, an 8-bit variable-width encoding that maximizes compatibility with ASCII while allowing expansion up to 48 bits for larger character sets. <strong>UTF-16</strong> uses 16-bit variable-width encoding and can expand to 32 bits, while <strong>UTF-32</strong> uses a fixed-width 32-bit system where every character takes exactly 32 bits. With over 60,000 characters supported in UTF-16 and more than 4 billion in UTF-32, Unicode can represent virtually every character from every language on the planet. For instance, the code point U+007A represents the Latin small letter <em>z</em> (007A in UTF-16), while U+6C34 represents the Chinese character for water (水), stored as 6C34 in UTF-16. Since the numbers used in UTF-16 and UTF-32 can be extremely large, it is not convenient to write them in binary, which is why we often use <strong>hexadecimal</strong> instead.</p>
 <p><em>Information adapted from <a href="https://en.wikibooks.org/wiki/A-level_Computing/AQA/Paper_2/Fundamentals_of_data_representation/ASCII_and_unicode">Wikibooks: ASCII and Unicode</a> — you can find more detailed explanations there.</em></p>
 
 

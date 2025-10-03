@@ -16,7 +16,9 @@
     "items": [
       "/topics/data-representation/introduction-to-binary.html",
       "/topics/data-representation/binary-math.html",
-      "/topics/data-representation/logic-gates-and-boolean-algebra.html"
+      "/topics/data-representation/logic-gates-and-boolean-algebra.html",
+      "/topics/data-representation/hexadecimal-numbers.html",
+      "/topics/data-representation/text-in-computers.html"
     ]
   },
   {
@@ -41,7 +43,9 @@
       "/topics/hardware/understanding-cpus.html",
       "/topics/data-representation/introduction-to-binary.html",
       "/topics/data-representation/binary-math.html",
-      "/topics/data-representation/logic-gates-and-boolean-algebra.html"
+      "/topics/data-representation/logic-gates-and-boolean-algebra.html",
+      "/topics/data-representation/hexadecimal-numbers.html",
+      "/topics/data-representation/text-in-computers.html"
     ]
   },
   {

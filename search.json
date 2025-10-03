@@ -717,7 +717,7 @@
     "href": "topics/data-representation/index.html",
     "title": "Data Representation",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nIntroduction to Binary\n\n\nWhat’s a bit, and how is it implemented in a computer?\n\n\n\n\n\n\n\n\n2025-09-15\n\n\n\n\n\n\n\n\n\n\n\n\nBinary Math\n\n\nHow are computers performing additions and subtractions.\n\n\n\n\n\n\n\n\n2025-09-15\n\n\n\n\n\n\n\n\n\n\n\n\nLogic Gates and Boolean Algebra\n\n\nIntroduction to AND, OR, NOT, XOR gates.\n\n\n\n\n\n\n\n\n2025-09-22\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0"
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nIntroduction to Binary\n\n\nWhat’s a bit, and how is it implemented in a computer?\n\n\n\n\n\n\n\n\n2025-09-15\n\n\n\n\n\n\n\n\n\n\n\n\nBinary Math\n\n\nHow are computers performing additions and subtractions.\n\n\n\n\n\n\n\n\n2025-09-15\n\n\n\n\n\n\n\n\n\n\n\n\nLogic Gates and Boolean Algebra\n\n\nIntroduction to AND, OR, NOT, XOR gates.\n\n\n\n\n\n\n\n\n2025-09-22\n\n\n\n\n\n\n\n\n\n\n\n\nHexadecimal numbers\n\n\nIntroduction to the hexadecimal base-16 system.\n\n\n\n\n\n\n\n\n2025-10-02\n\n\n\n\n\n\n\n\n\n\n\n\nText in Computers\n\n\nHow is textual data represented in a computer’s memory.\n\n\n\n\n\n\n\n\n2025-10-02\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0"
   },
   {
     "objectID": "topics/data-representation/logic-gates-and-boolean-algebra.html",
@@ -771,42 +771,166 @@
     "href": "topics/all-lectures.html",
     "title": "All lectures",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nSubtitle\n\n\n\n\n\n\n\n\n2025-08-20\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n\n\n2025-08-25\n\n\nExternal components\n\n\nOverview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors\n\n\n\n\n\n\n2025-09-02\n\n\nInternal Components\n\n\nExplains the most important internal components of desktop computers. Processing, memory, storage, and communication.\n\n\n\n\n\n\n2025-09-08\n\n\nUnderstanding CPUs\n\n\nMore detail on CPUs. “Guy in Box” analogy, Clock Speed, Codebook, Databuses explained.\n\n\n\n\n\n\n2025-09-15\n\n\nIntroduction to Binary\n\n\nWhat’s a bit, and how is it implemented in a computer?\n\n\n\n\n\n\n2025-09-15\n\n\nBinary Math\n\n\nHow are computers performing additions and subtractions.\n\n\n\n\n\n\n2025-09-22\n\n\nLogic Gates and Boolean Algebra\n\n\nIntroduction to AND, OR, NOT, XOR gates.\n\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0"
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nSubtitle\n\n\n\n\n\n\n\n\n2025-08-20\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n\n\n2025-08-25\n\n\nExternal components\n\n\nOverview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors\n\n\n\n\n\n\n2025-09-02\n\n\nInternal Components\n\n\nExplains the most important internal components of desktop computers. Processing, memory, storage, and communication.\n\n\n\n\n\n\n2025-09-08\n\n\nUnderstanding CPUs\n\n\nMore detail on CPUs. “Guy in Box” analogy, Clock Speed, Codebook, Databuses explained.\n\n\n\n\n\n\n2025-09-15\n\n\nIntroduction to Binary\n\n\nWhat’s a bit, and how is it implemented in a computer?\n\n\n\n\n\n\n2025-09-15\n\n\nBinary Math\n\n\nHow are computers performing additions and subtractions.\n\n\n\n\n\n\n2025-09-22\n\n\nLogic Gates and Boolean Algebra\n\n\nIntroduction to AND, OR, NOT, XOR gates.\n\n\n\n\n\n\n2025-10-02\n\n\nHexadecimal numbers\n\n\nIntroduction to the hexadecimal base-16 system.\n\n\n\n\n\n\n2025-10-02\n\n\nText in Computers\n\n\nHow is textual data represented in a computer’s memory.\n\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0"
+  },
+  {
+    "objectID": "topics/data-representation/hexadecimal-numbers.htm#hexits",
+    "href": "topics/data-representation/hexadecimal-numbers.htm#hexits",
+    "title": "Hexadecimal numbers",
+    "section": "Hexits 🔹",
+    "text": "Hexits 🔹\nThe hexadecimal system is base 16 🔢. This means we count from 0 to 15 before moving to the next place value. In decimal, we only have the digits 0–9 🔟. To show the extra numbers (10–15), we use the letters A, B, C, D, E, and F 🔠.\n\n\n\nHexadecimal\nBinary\nDecimal\n\n\n\n\n0\n0000\n0\n\n\n1\n0001\n1\n\n\n2\n0010\n2\n\n\n3\n0011\n3\n\n\n4\n0100\n4\n\n\n5\n0101\n5\n\n\n6\n0110\n6\n\n\n7\n0111\n7\n\n\n8\n1000\n8\n\n\n9\n1001\n9\n\n\nA\n1010\n10\n\n\nB\n1011\n11\n\n\nC\n1100\n12\n\n\nD\n1101\n13\n\n\nE\n1110\n14\n\n\nF\n1111\n15"
+  },
+  {
+    "objectID": "topics/data-representation/hexadecimal-numbers.htm#binary-to-hexadecimal-01",
+    "href": "topics/data-representation/hexadecimal-numbers.htm#binary-to-hexadecimal-01",
+    "title": "Hexadecimal numbers",
+    "section": "Binary to Hexadecimal 0️⃣1️⃣",
+    "text": "Binary to Hexadecimal 0️⃣1️⃣\nGoing from binary to hexadecimal and vice versa is quite straight forward.\n🚀 Steps:\n\nGroup the binary number in nibbles (packs of 4 bits) 👉 Example : 0101011011 → 0001 0101 1011\nConvert each nibble into its hexadecimal digit:\n\n\n(0001)2 → (1)16\n(0101)2 → (5)16\n(1011)2 → (B)16\n\n\nWrite the hex digits in the same order. ✨ 0001 0101 1011 → (15B)16\n\nHexadecimal numbers are often written with the prefix 0x to make their base clear:\n0001 0101 1011 = 0x15B\n✅ Final Answer: 0x15B\nApply the same approach to convert a hexadecimal number to binary, each hex character will correspond to a nibble (4 bits)."
+  },
+  {
+    "objectID": "topics/data-representation/hexadecimal-numbers.htm#decimal-to-hexadecimal",
+    "href": "topics/data-representation/hexadecimal-numbers.htm#decimal-to-hexadecimal",
+    "title": "Hexadecimal numbers",
+    "section": "🔢 Decimal to Hexadecimal",
+    "text": "🔢 Decimal to Hexadecimal\nThis is a little less straight forward but it’s still achievable.\n🚀 Steps: 👉 Example: Let’s convert 4,284 in hexadecimal:\n\nList a few powers of 16 and their decimal values:\n\n\n\n\nPower of 16\n\\(16^4\\)\n\\(16^3\\)\n\\(16^2\\)\n\\(16^1\\)\n\\(16^0\\)\n\n\n\n\nDecimal\n1,048,576\n4,096\n256\n16\n1\n\n\n\n\nFind the largest power of 16 that fits into 4,284. 👉 \\(16^3 = 4,096\\) (fits, since \\(16^4\\) is too big).\nDivide by this power of 16. 👉 \\(4284 ÷ 4096 = 1\\) remainder 188. 🔹 Next digit: 1\nUse the next power of 16 (\\(16^2 = 256\\)). 👉 \\(188 ÷ 256 = 0\\) remainder 188. 🔹 Next digit: 0\nMove to the next power \\(16^1 = 16\\). 👉 \\(188 ÷ 16 = 11\\) remainder 12. 👉 Decimal 11 = Hex B. 🔹 Next digit: B\nFinally, \\(16^0 = 1\\). 👉 \\(12 ÷ 1 = 12\\) remainder 0. 👉 Decimal 12 = Hex C. 🔹 Next digit: C\nWrite the hexadecimal digits in the order of largest to lowest powers:\n\n✅ Final Answer: 0x10BC\n\nRiddle\nAvatar Aang went to get his first driving license. The clerk asked Aang for his ID to make sure he was old enough to do the driving test. The clerk read his ID, and told him that he is not old enough for the test. They him that he needs to be at least 18.\nAang answered, “I’m sorry but you are wrong. I am exactly 18, in decimal. My ID in fact shows my age in Hexadecimal.”\nWhat age is Aang in Hexadecimal(if he is indeed 18 in decimal?)\n\n\n\nAvatar Aang."
+  },
+  {
+    "objectID": "topics/data-representation/hexadecimal-numbers.html",
+    "href": "topics/data-representation/hexadecimal-numbers.html",
+    "title": "Hexadecimal numbers",
+    "section": "",
+    "text": "As we saw with Unicode, computers need to handle very large numbers to distinguish between the many possible characters and instructions. While computers work effortlessly with large binary numbers, we don’t! Converting 32-bit or 64-bit values from binary to decimal is tedious, which makes large binary numbers difficult for humans to read and write quickly.\nWe’re comfortable with large decimal numbers, but the problem is that 10 is not a power of 2. This means it doesn’t align neatly with the binary storage model computers rely on. For example, with just 4 bits we can represent values up to 16, but to store something slightly larger, like 17–20, we already need 5 bits.\nThe result is that decimal numbers cannot be directly stored in machines built from transistors that only distinguish between “on” (1) and “off” (0). So what’s the solution? We turn to hexadecimal—a system that maps perfectly onto binary while staying compact and much easier for humans to read and write.\nNotice that 16 is a power of 2: \\(2^4 = 16\\). This means every 4 bits (a nibble) can store one hexadecimal digit (a “hexit”), and with 8 bits we can store two “hexits”.\n\n\nThe hexadecimal system is base 16 🔢. This means we count from 0 to 15 before moving to the next place value. In decimal, we only have the digits 0–9 🔟. To show the extra numbers (10–15), we use the letters A, B, C, D, E, and F 🔠.\n\n\n\nHexadecimal\nBinary\nDecimal\n\n\n\n\n0\n0000\n0\n\n\n1\n0001\n1\n\n\n2\n0010\n2\n\n\n3\n0011\n3\n\n\n4\n0100\n4\n\n\n5\n0101\n5\n\n\n6\n0110\n6\n\n\n7\n0111\n7\n\n\n8\n1000\n8\n\n\n9\n1001\n9\n\n\nA\n1010\n10\n\n\nB\n1011\n11\n\n\nC\n1100\n12\n\n\nD\n1101\n13\n\n\nE\n1110\n14\n\n\nF\n1111\n15",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Data representation",
+      "Hexadecimal numbers"
+    ]
+  },
+  {
+    "objectID": "topics/data-representation/hexadecimal-numbers.html#hexits",
+    "href": "topics/data-representation/hexadecimal-numbers.html#hexits",
+    "title": "Hexadecimal numbers",
+    "section": "",
+    "text": "The hexadecimal system is base 16 🔢. This means we count from 0 to 15 before moving to the next place value. In decimal, we only have the digits 0–9 🔟. To show the extra numbers (10–15), we use the letters A, B, C, D, E, and F 🔠.\n\n\n\nHexadecimal\nBinary\nDecimal\n\n\n\n\n0\n0000\n0\n\n\n1\n0001\n1\n\n\n2\n0010\n2\n\n\n3\n0011\n3\n\n\n4\n0100\n4\n\n\n5\n0101\n5\n\n\n6\n0110\n6\n\n\n7\n0111\n7\n\n\n8\n1000\n8\n\n\n9\n1001\n9\n\n\nA\n1010\n10\n\n\nB\n1011\n11\n\n\nC\n1100\n12\n\n\nD\n1101\n13\n\n\nE\n1110\n14\n\n\nF\n1111\n15",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Data representation",
+      "Hexadecimal numbers"
+    ]
+  },
+  {
+    "objectID": "topics/data-representation/hexadecimal-numbers.html#binary-to-hexadecimal-01",
+    "href": "topics/data-representation/hexadecimal-numbers.html#binary-to-hexadecimal-01",
+    "title": "Hexadecimal numbers",
+    "section": "Binary to Hexadecimal 0️⃣1️⃣",
+    "text": "Binary to Hexadecimal 0️⃣1️⃣\nGoing from binary to hexadecimal and vice versa is quite straight forward.\n🚀 Steps:\n\nGroup the binary number in nibbles (packs of 4 bits) 👉 Example : 0101011011 → 0001 0101 1011\nConvert each nibble into its hexadecimal digit:\n\n\n(0001)2 → (1)16\n(0101)2 → (5)16\n(1011)2 → (B)16\n\n\nWrite the hex digits in the same order. ✨ 0001 0101 1011 → (15B)16\n\nHexadecimal numbers are often written with the prefix 0x to make their base clear:\n0001 0101 1011 = 0x15B\n✅ Final Answer: 0x15B\nApply the same approach to convert a hexadecimal number to binary, each hex character will correspond to a nibble (4 bits).",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Data representation",
+      "Hexadecimal numbers"
+    ]
+  },
+  {
+    "objectID": "topics/data-representation/hexadecimal-numbers.html#decimal-to-hexadecimal",
+    "href": "topics/data-representation/hexadecimal-numbers.html#decimal-to-hexadecimal",
+    "title": "Hexadecimal numbers",
+    "section": "🔢 Decimal to Hexadecimal",
+    "text": "🔢 Decimal to Hexadecimal\nThis is a little less straight forward but it’s still achievable.\n🚀 Steps: 👉 Example: Let’s convert 4,284 in hexadecimal:\n\nList a few powers of 16 and their decimal values:\n\n\n\n\nPower of 16\n\\(16^4\\)\n\\(16^3\\)\n\\(16^2\\)\n\\(16^1\\)\n\\(16^0\\)\n\n\n\n\nDecimal\n1,048,576\n4,096\n256\n16\n1\n\n\n\n\nFind the largest power of 16 that fits into 4,284. 👉 \\(16^3 = 4,096\\) (fits, since \\(16^4\\) is too big).\nDivide by this power of 16. 👉 \\(4284 ÷ 4096 = 1\\) remainder 188. 🔹 Next digit: 1\nUse the next power of 16 (\\(16^2 = 256\\)). 👉 \\(188 ÷ 256 = 0\\) remainder 188. 🔹 Next digit: 0\nMove to the next power \\(16^1 = 16\\). 👉 \\(188 ÷ 16 = 11\\) remainder 12. 👉 Decimal 11 = Hex B. 🔹 Next digit: B\nFinally, \\(16^0 = 1\\). 👉 \\(12 ÷ 1 = 12\\) remainder 0. 👉 Decimal 12 = Hex C. 🔹 Next digit: C\nWrite the hexadecimal digits in the order of largest to lowest powers:\n\n✅ Final Answer: 0x10BC\n\nRiddle\nAvatar Aang went to get his first driving license. The clerk asked Aang for his ID to make sure he was old enough to do the driving test. The clerk read his ID, and told him that he is not old enough for the test. They him that he needs to be at least 18.\nAang answered, “I’m sorry but you are wrong. I am exactly 18, in decimal. My ID in fact shows my age in Hexadecimal.”\nWhat age is Aang in Hexadecimal(if he is indeed 18 in decimal?)\n\n\n\nAvatar Aang.",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Data representation",
+      "Hexadecimal numbers"
+    ]
+  },
+  {
+    "objectID": "topics/data-representation/text-in-computers.htm#ascii",
+    "href": "topics/data-representation/text-in-computers.htm#ascii",
+    "title": "Text in Computers",
+    "section": "🅰️ ASCII",
+    "text": "🅰️ ASCII\n\nASCII (American Standard Code for Information Interchange)\n\nOriginally a 7-bit code with 128 combinations\n\nLater expanded to 8 bits (256 combinations) — called Extended ASCII-8\n\nNote: When people say “ASCII,” they usually mean Extended ASCII-8\n\nWhy 8 bits?\n\nEach character fits perfectly into 1 byte\n\nExample:\n\n\"CAT\" → 0100 0011 0100 0001 0101 0100\n\n\"cat\" → 0110 0011 0110 0001 0111 0100\n\n\n📊 ASCII-8: Table of Characters\n\nInformation above comes from ASCII Values Alphabets"
+  },
+  {
+    "objectID": "topics/data-representation/text-in-computers.htm#unicode",
+    "href": "topics/data-representation/text-in-computers.htm#unicode",
+    "title": "Text in Computers",
+    "section": "🌐 Unicode",
+    "text": "🌐 Unicode\nASCII works well for English and other Latin-based languages, but many languages need more than 256 characters 🌏. For example:\n- 🇨🇳 Chinese: 汉字 (China)\n- 🇯🇵 Japanese: 漢字 (Japan)\n- 🇷🇺 Cyrillic: Кири́ллица (Russia)\n- 🇮🇳 Gujarati: ગુજરાતી (India)\n- 🇵🇰 Urdu: اردو (Pakistan)\nTo solve this, we use Unicode, which comes in several versions that use different numbers of bits to store data. The most common format is UTF-8, an 8-bit variable-width encoding that maximizes compatibility with ASCII while allowing expansion up to 48 bits for larger character sets. UTF-16 uses 16-bit variable-width encoding and can expand to 32 bits, while UTF-32 uses a fixed-width 32-bit system where every character takes exactly 32 bits. With over 60,000 characters supported in UTF-16 and more than 4 billion in UTF-32, Unicode can represent virtually every character from every language on the planet. For instance, the code point U+007A represents the Latin small letter z (007A in UTF-16), while U+6C34 represents the Chinese character for water (水), stored as 6C34 in UTF-16. Since the numbers used in UTF-16 and UTF-32 can be extremely large, it is not convenient to write them in binary, which is why we often use hexadecimal instead.\nInformation adapted from Wikibooks: ASCII and Unicode — you can find more detailed explanations there."
+  },
+  {
+    "objectID": "topics/data-representation/text-in-computers.html",
+    "href": "topics/data-representation/text-in-computers.html",
+    "title": "Text in Computers",
+    "section": "",
+    "text": "In early years, different computer companies applied the binary system in their own way. The word “cat” would be encoded in binary different on different brands of computers. This made life difficult in terms of being able to transfer data from one system to another.\n\n\n\nASCII (American Standard Code for Information Interchange)\n\nOriginally a 7-bit code with 128 combinations\n\nLater expanded to 8 bits (256 combinations) — called Extended ASCII-8\n\nNote: When people say “ASCII,” they usually mean Extended ASCII-8\n\nWhy 8 bits?\n\nEach character fits perfectly into 1 byte\n\nExample:\n\n\"CAT\" → 0100 0011 0100 0001 0101 0100\n\n\"cat\" → 0110 0011 0110 0001 0111 0100\n\n\n\n\n\nInformation above comes from ASCII Values Alphabets\n\n\n\n\nASCII works well for English and other Latin-based languages, but many languages need more than 256 characters 🌏. For example:\n- 🇨🇳 Chinese: 汉字 (China)\n- 🇯🇵 Japanese: 漢字 (Japan)\n- 🇷🇺 Cyrillic: Кири́ллица (Russia)\n- 🇮🇳 Gujarati: ગુજરાતી (India)\n- 🇵🇰 Urdu: اردو (Pakistan)\nTo solve this, we use Unicode, which comes in several versions that use different numbers of bits to store data. The most common format is UTF-8, an 8-bit variable-width encoding that maximizes compatibility with ASCII while allowing expansion up to 48 bits for larger character sets. UTF-16 uses 16-bit variable-width encoding and can expand to 32 bits, while UTF-32 uses a fixed-width 32-bit system where every character takes exactly 32 bits. With over 60,000 characters supported in UTF-16 and more than 4 billion in UTF-32, Unicode can represent virtually every character from every language on the planet. For instance, the code point U+007A represents the Latin small letter z (007A in UTF-16), while U+6C34 represents the Chinese character for water (水), stored as 6C34 in UTF-16. Since the numbers used in UTF-16 and UTF-32 can be extremely large, it is not convenient to write them in binary, which is why we often use hexadecimal instead.\nInformation adapted from Wikibooks: ASCII and Unicode — you can find more detailed explanations there.",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Data representation",
+      "Text in Computers"
+    ]
+  },
+  {
+    "objectID": "topics/data-representation/text-in-computers.html#ascii",
+    "href": "topics/data-representation/text-in-computers.html#ascii",
+    "title": "Text in Computers",
+    "section": "",
+    "text": "ASCII (American Standard Code for Information Interchange)\n\nOriginally a 7-bit code with 128 combinations\n\nLater expanded to 8 bits (256 combinations) — called Extended ASCII-8\n\nNote: When people say “ASCII,” they usually mean Extended ASCII-8\n\nWhy 8 bits?\n\nEach character fits perfectly into 1 byte\n\nExample:\n\n\"CAT\" → 0100 0011 0100 0001 0101 0100\n\n\"cat\" → 0110 0011 0110 0001 0111 0100\n\n\n\n\n\nInformation above comes from ASCII Values Alphabets",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Data representation",
+      "Text in Computers"
+    ]
+  },
+  {
+    "objectID": "topics/data-representation/text-in-computers.html#unicode",
+    "href": "topics/data-representation/text-in-computers.html#unicode",
+    "title": "Text in Computers",
+    "section": "",
+    "text": "ASCII works well for English and other Latin-based languages, but many languages need more than 256 characters 🌏. For example:\n- 🇨🇳 Chinese: 汉字 (China)\n- 🇯🇵 Japanese: 漢字 (Japan)\n- 🇷🇺 Cyrillic: Кири́ллица (Russia)\n- 🇮🇳 Gujarati: ગુજરાતી (India)\n- 🇵🇰 Urdu: اردو (Pakistan)\nTo solve this, we use Unicode, which comes in several versions that use different numbers of bits to store data. The most common format is UTF-8, an 8-bit variable-width encoding that maximizes compatibility with ASCII while allowing expansion up to 48 bits for larger character sets. UTF-16 uses 16-bit variable-width encoding and can expand to 32 bits, while UTF-32 uses a fixed-width 32-bit system where every character takes exactly 32 bits. With over 60,000 characters supported in UTF-16 and more than 4 billion in UTF-32, Unicode can represent virtually every character from every language on the planet. For instance, the code point U+007A represents the Latin small letter z (007A in UTF-16), while U+6C34 represents the Chinese character for water (水), stored as 6C34 in UTF-16. Since the numbers used in UTF-16 and UTF-32 can be extremely large, it is not convenient to write them in binary, which is why we often use hexadecimal instead.\nInformation adapted from Wikibooks: ASCII and Unicode — you can find more detailed explanations there.",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Data representation",
+      "Text in Computers"
+    ]
   },
   {
     "objectID": "topics/data-representation/binary-math.htm#negative-numbers",
     "href": "topics/data-representation/binary-math.htm#negative-numbers",
     "title": "Binary Math",
     "section": "Negative numbers 🌡️",
-    "text": "Negative numbers 🌡️\nNot all numbers in real life are positive, just think of freezing winter temperatures in Canada 🥶 or when bank accounts slip below zero ☹️💸. Because of this, computers must be able to represent not only positive values but also negative ones. In binary, special methods are used to handle negative numbers so that calculations remain accurate and efficient.\nHow can be achieve this with a binary system?\nThe simple answer is to use the first bit of a number to represent the sign and use the remaining bits for the magnitude of the number:\n\n1 for negative ➖\n0 for positive ➕\n\nUnsigned versus Signed 🖊️\nUp to now, we’ve only looked at positive binary numbers, where all the bits are used to represent the value. For signed numbers, however, one bit is set aside to indicate the sign (positive or negative). This reduces the range of values that can be represented.\n\n\n\nExample:\n\n\nFor example, with 4 bits we can represent the unsigned numbers: 0 to 15, while with the same number of bits we can represent signed numbers -7 to +7.\n\n\n\n\nWith this simple approach however, zero ends up having two representations (positive zero and negative zero), and basic operations are not working as expected, for example: \\[\n5_{10} + −5_{10} = 0101_{2} + 1101_{2} = 0010_{2} \\not = 0_{10}  ❌\n\\]\n\\[\n6_{10} + (-2)_{10} =  0110_{2} + 1010_{2} = 0000_{2} \\not = 4_{10} ❌\n\\]\nHere are the binary values from -7 to +7:\n\n\n\nBinary\nDecimal Value\n\n\n\n\n1 1 1 1\n-7\n\n\n1 1 1 0\n-6\n\n\n1 1 0 1\n-5\n\n\n1 1 0 0\n-4\n\n\n1 0 1 1\n-3\n\n\n1 0 1 0\n-2\n\n\n1 0 0 1\n-1\n\n\n1 0 0 0\n-0 ❓ Negative zero??\n\n\n0 0 0 0\n0 ⚠️ Zero appears twice!\n\n\n0 0 0 1\n1\n\n\n0 0 1 0\n2\n\n\n0 0 1 1\n3\n\n\n0 1 0 0\n4\n\n\n0 1 0 1\n5\n\n\n0 1 1 0\n6\n\n\n0 1 1 1\n7"
-  },
-  {
-    "objectID": "topics/data-representation/binary-math.htm#twos-complement",
-    "href": "topics/data-representation/binary-math.htm#twos-complement",
-    "title": "Binary Math",
-    "section": "Two’s complement",
-    "text": "Two’s complement\nTwo’s complement is the most common way to represent signed numbers in computers. It’s based on mathematical thoeries and help fix the issues seen above with the “simple approach”."
+    "text": "Negative numbers 🌡️\nNot all numbers in real life are positive, just think of freezing winter temperatures in Canada 🥶 or when bank accounts slip below zero ☹️💸. Because of this, computers must be able to represent not only positive values but also negative ones. In binary, special methods are used to handle negative numbers so that calculations remain accurate and efficient.\nHow can be achieve this with a binary system?\nSigned Magnitudes ⛰️ Representation\nThe simple answer is to use the first bit of a number to represent the sign and use the remaining bits for the magnitude of the number. This approach for representing numbers is called Signed Magnitudes.\n\n1 for negative ➖\n0 for positive ➕\n\nWith this simple approach however, zero ends up having two representations (positive zero and negative zero), and basic operations are not working as expected, for example: \\[\n5_{10} + −5_{10} = 0101_{2} + 1101_{2} = 0010_{2} \\not = 0_{10}  ❌\n\\]\n\\[\n6_{10} + (-2)_{10} =  0110_{2} + 1010_{2} = 0000_{2} \\not = 4_{10} ❌\n\\]\nHere are the binary values from -7 to +7:\n\n\n\nBinary\nDecimal Value\n\n\n\n\n1 1 1 1\n-7\n\n\n1 1 1 0\n-6\n\n\n1 1 0 1\n-5\n\n\n1 1 0 0\n-4\n\n\n1 0 1 1\n-3\n\n\n1 0 1 0\n-2\n\n\n1 0 0 1\n-1\n\n\n1 0 0 0\n-0 ❓ Negative zero??\n\n\n0 0 0 0\n0 ⚠️ Zero appears twice!\n\n\n0 0 0 1\n1\n\n\n0 0 1 0\n2\n\n\n0 0 1 1\n3\n\n\n0 1 0 0\n4\n\n\n0 1 0 1\n5\n\n\n0 1 1 0\n6\n\n\n0 1 1 1\n7\n\n\n\nTwo’s complement 2️ Representation\nTwo’s complement is the most common way to represent signed numbers in computers. It’s based on mathematical thoeries and help fix the issues seen above with the “simple approach”."
   },
   {
     "objectID": "topics/data-representation/binary-math.html",
     "href": "topics/data-representation/binary-math.html",
     "title": "Binary Math",
     "section": "",
-    "text": "In binary, there are only two symbols (0, 1). We call binary a base-2 numeral system.\nSo if we have more than 1 of something, another bit is needed:\n\n1 + 1 = 10 (in English: one plus one equals two)\n\n11 + 1 = 100 (in English: three plus one equals four)\n\nIt may feel counterintuitive at first 🤯, but there’s nothing fundamentally different about binary compared to decimal, we’re just more used to working in decimal.\nJust like in decimal addition, when a column reaches its maximum digit (9), we carry over a 1 to the next column (the next power of 10). In binary, the idea is the same, but the largest digit is only 1. So whenever we get 1 + 1 in the same column, we carry over to the next place value (the next power of 2).\n\n\n\n\n\n\n\n\n\n\nInside the CPU, special circuits called adder gates handle this process automatically. The sum is the result that stays in the current column, while the carry (C) is the extra 1 that “spills over” into the next column (the next power of 2).\n\n\n\nHalf-Adder gate 1➕1 Adds two single binary digits.\n\n\n\n\n\nFull-Adder 1➕1➕1: Adds two binary digits and includes the carry from a previous addition."
+    "text": "In binary, there are only two symbols (0, 1). We call binary a base-2 numeral system.\nSo if we have more than 1 of something, another bit is needed:\n\n1 + 1 = 10 (in English: one plus one equals two)\n\n11 + 1 = 100 (in English: three plus one equals four)\n\nIt may feel counterintuitive at first 🤯, but there’s nothing fundamentally different about binary compared to decimal, we’re just more used to working in decimal.\nJust like in decimal addition, when a column reaches its maximum digit (9), we carry over a 1 to the next column (the next power of 10). In binary, the idea is the same, but the largest digit is only 1. So whenever we get 1 + 1 in the same column, we carry over to the next place value (the next power of 2).\n\n\n\n\n\n\n\n\n\n\nInside the CPU, special circuits called adder gates handle this process automatically. The sum is the result that stays in the current column, while the carry (C) is the extra 1 that “spills over” into the next column (the next power of 2).\n\n\n\nHalf-Adder gate 1➕1 Adds two single binary digits.\n\n\n\n\n\nFull-Adder 1➕1➕1: Adds two binary digits and includes the carry from a previous addition.",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Data representation",
+      "Binary Math"
+    ]
   },
   {
     "objectID": "topics/data-representation/binary-math.html#negative-numbers",
     "href": "topics/data-representation/binary-math.html#negative-numbers",
     "title": "Binary Math",
     "section": "Negative numbers 🌡️",
-    "text": "Negative numbers 🌡️\nNot all numbers in real life are positive, just think of freezing winter temperatures in Canada 🥶 or when bank accounts slip below zero ☹️💸. Because of this, computers must be able to represent not only positive values but also negative ones. In binary, special methods are used to handle negative numbers so that calculations remain accurate and efficient.\nHow can be achieve this with a binary system?\nThe simple answer is to use the first bit of a number to represent the sign and use the remaining bits for the magnitude of the number:\n\n1 for negative ➖\n0 for positive ➕\n\n\nUnsigned versus Signed 🖊️\nUp to now, we’ve only looked at positive binary numbers, where all the bits are used to represent the value. For signed numbers, however, one bit is set aside to indicate the sign (positive or negative). This reduces the range of values that can be represented.\n\n\n\n\n\n\nNoteExample:\n\n\n\nFor example, with 4 bits we can represent the unsigned numbers: 0 to 15, while with the same number of bits we can represent signed numbers -7 to +7.\n\n\n\nWith this simple approach however, zero ends up having two representations (positive zero and negative zero), and basic operations are not working as expected, for example: \\[\n5_{10} + −5_{10} = 0101_{2} + 1101_{2} = 0010_{2} \\not = 0_{10}  ❌\n\\]\n\\[\n6_{10} + (-2)_{10} =  0110_{2} + 1010_{2} = 0000_{2} \\not = 4_{10} ❌\n\\]\nHere are the binary values from -7 to +7:\n\n\n\nBinary\nDecimal Value\n\n\n\n\n1 1 1 1\n-7\n\n\n1 1 1 0\n-6\n\n\n1 1 0 1\n-5\n\n\n1 1 0 0\n-4\n\n\n1 0 1 1\n-3\n\n\n1 0 1 0\n-2\n\n\n1 0 0 1\n-1\n\n\n1 0 0 0\n-0 ❓ Negative zero??\n\n\n0 0 0 0\n0 ⚠️ Zero appears twice!\n\n\n0 0 0 1\n1\n\n\n0 0 1 0\n2\n\n\n0 0 1 1\n3\n\n\n0 1 0 0\n4\n\n\n0 1 0 1\n5\n\n\n0 1 1 0\n6\n\n\n0 1 1 1\n7"
-  },
-  {
-    "objectID": "topics/data-representation/binary-math.html#twos-complement",
-    "href": "topics/data-representation/binary-math.html#twos-complement",
-    "title": "Binary Math",
-    "section": "Two’s complement",
-    "text": "Two’s complement\nTwo’s complement is the most common way to represent signed numbers in computers. It’s based on mathematical thoeries and help fix the issues seen above with the “simple approach”.\n\nExample: Representing a negative number using Two’s Complement\n\n✍️ Write the positive version of the number using all the bits available (including one bit for the sign)\n\nExample: (5)10 = (0000 0101)2\n\n🔄 Invert all the bits (flip 0 → 1 and 1 → 0).\n\n0000 0101 → 1111 1010\nThis is also called One’s complement.\n\n➕1 Add 1 to the inverted value.\n\n1111 1010 + 1 = 1111 1011\n\n\n✅ Therefore, (-5)10 = (1111 1011)*2 ​\nHere are the binary representation of numbers from -7 to +7 in two’s complement:\n\n\n\nBinary\nDecimal Value\n\n\n\n\n1 0 0 0\n-8\n\n\n1 0 0 1\n-7\n\n\n1 0 1 0\n-6\n\n\n1 0 1 1\n-5\n\n\n1 1 0 0\n-4\n\n\n1 1 0 1\n-3\n\n\n1 1 1 0\n-2\n\n\n1 1 1 1\n-1\n\n\n0 0 0 0\n0\n\n\n0 0 0 1\n1\n\n\n0 0 1 0\n2\n\n\n0 0 1 1\n3\n\n\n0 1 0 0\n4\n\n\n0 1 0 1\n5\n\n\n0 1 1 0\n6\n\n\n0 1 1 1\n7\n\n\n\n\n\n\n\n\n\nNoteExample: Representing (-20)10 in Two’s Complement\n\n\n\n✍️ Step 1: How many bits do we need?\n👉 Rule of thumb: if the leftmost bit is 1, add an extra bit!\n(because negative numbers should always start with 1 , and positive numbers with 0)\n\\[(20)_{10} = (10100)_{2} \\;\\; \\rightarrow \\;\\; (010100)_{2}\\]\n\n🔄 Step 2: Invert all the bits\n\\[\n010100 \\;\\; \\rightarrow \\;\\; 101011\n\\]\n\n➕1 Step 3: Add 1 to the inverted value\n\\[\n101011 + 1 = 101100\n\\]\n\n✅ Final Answer:\n\\[\n(-20)_{10} = (101100)_{2}\n\\]\n\n\n\nMath operations in Two’s complement\nNow let’s observe why Two’s complement fixes the simple operations we had earlier:\n🧮 Example 1: \\[\n5_{10} + -5_{10} =  0101_{2} + 1011_{2} = 0000_{2} = 0_{10} ✅\n\\]\n🧮 Example 2: \\[\n6_{10} + -2_{10} =  0110_{2} + 1110_{2} = 0100_{2} = 4_{10} ✅\n\\] 🔄 The overflow that happens with fixed bits ensures that we “wrap around” back to 0 when adding a positive and its negative counterpart.\n💡 Key Advantage:\nUsing Two’s Complement makes math operations simpler for computers ⚡. Both signed and unsigned numbers can be added using the same adder circuits 🔌.\n👉 For example:\n- 4 + 2 (unsigned)\n- 4 + (-2) (signed)\nBoth are handled using the same hardware adder gate ➕."
+    "text": "Negative numbers 🌡️\nNot all numbers in real life are positive, just think of freezing winter temperatures in Canada 🥶 or when bank accounts slip below zero ☹️💸. Because of this, computers must be able to represent not only positive values but also negative ones. In binary, special methods are used to handle negative numbers so that calculations remain accurate and efficient.\nHow can be achieve this with a binary system?\n\nSigned Magnitudes ⛰️ Representation\nThe simple answer is to use the first bit of a number to represent the sign and use the remaining bits for the magnitude of the number. This approach for representing numbers is called Signed Magnitudes.\n\n1 for negative ➖\n0 for positive ➕\n\nWith this simple approach however, zero ends up having two representations (positive zero and negative zero), and basic operations are not working as expected, for example: \\[\n5_{10} + −5_{10} = 0101_{2} + 1101_{2} = 0010_{2} \\not = 0_{10}  ❌\n\\]\n\\[\n6_{10} + (-2)_{10} =  0110_{2} + 1010_{2} = 0000_{2} \\not = 4_{10} ❌\n\\]\nHere are the binary values from -7 to +7:\n\n\n\nBinary\nDecimal Value\n\n\n\n\n1 1 1 1\n-7\n\n\n1 1 1 0\n-6\n\n\n1 1 0 1\n-5\n\n\n1 1 0 0\n-4\n\n\n1 0 1 1\n-3\n\n\n1 0 1 0\n-2\n\n\n1 0 0 1\n-1\n\n\n1 0 0 0\n-0 ❓ Negative zero??\n\n\n0 0 0 0\n0 ⚠️ Zero appears twice!\n\n\n0 0 0 1\n1\n\n\n0 0 1 0\n2\n\n\n0 0 1 1\n3\n\n\n0 1 0 0\n4\n\n\n0 1 0 1\n5\n\n\n0 1 1 0\n6\n\n\n0 1 1 1\n7\n\n\n\n\n\nTwo’s complement 2️ Representation\nTwo’s complement is the most common way to represent signed numbers in computers. It’s based on mathematical thoeries and help fix the issues seen above with the “simple approach”.\n\nExample: Representing a negative number using Two’s Complement\n\n✍️ Write the positive version of the number using all the bits available (including one bit for the sign)\n\nExample: (5)10 = (0000 0101)2\n\n🔄 Invert all the bits (flip 0 → 1 and 1 → 0).\n\n0000 0101 → 1111 1010\nThis is also called One’s complement.\n\n➕1 Add 1 to the inverted value.\n\n1111 1010 + 1 = 1111 1011\n\n\n✅ Therefore, (-5)10 = (1111 1011)*2 ​\nHere are the binary representation of numbers from -7 to +7 in two’s complement:\n\n\n\nBinary\nDecimal Value\n\n\n\n\n1 0 0 0\n-8\n\n\n1 0 0 1\n-7\n\n\n1 0 1 0\n-6\n\n\n1 0 1 1\n-5\n\n\n1 1 0 0\n-4\n\n\n1 1 0 1\n-3\n\n\n1 1 1 0\n-2\n\n\n1 1 1 1\n-1\n\n\n0 0 0 0\n0\n\n\n0 0 0 1\n1\n\n\n0 0 1 0\n2\n\n\n0 0 1 1\n3\n\n\n0 1 0 0\n4\n\n\n0 1 0 1\n5\n\n\n0 1 1 0\n6\n\n\n0 1 1 1\n7\n\n\n\n\n\n\n\n\n\nNoteExample: Representing (-20)10 in Two’s Complement\n\n\n\n✍️ Step 1: How many bits do we need?\n👉 Rule of thumb: if the leftmost bit is 1, add an extra bit!\n(because negative numbers should always start with 1 , and positive numbers with 0)\n\\[(20)_{10} = (10100)_{2} \\;\\; \\rightarrow \\;\\; (010100)_{2}\\]\n\n🔄 Step 2: Invert all the bits\n\\[\n010100 \\;\\; \\rightarrow \\;\\; 101011\n\\]\n\n➕1 Step 3: Add 1 to the inverted value\n\\[\n101011 + 1 = 101100\n\\]\n\n✅ Final Answer:\n\\[\n(-20)_{10} = (101100)_{2}\n\\]\n\n\n\n\nMath operations in Two’s complement\nNow let’s observe why Two’s complement fixes the simple operations we had earlier:\n🧮 Example 1: \\[\n5_{10} + -5_{10} =  0101_{2} + 1011_{2} = 0000_{2} = 0_{10} ✅\n\\]\n🧮 Example 2: \\[\n6_{10} + -2_{10} =  0110_{2} + 1110_{2} = 0100_{2} = 4_{10} ✅\n\\] 🔄 The overflow that happens with fixed bits ensures that we “wrap around” back to 0 when adding a positive and its negative counterpart.\n💡 Key Advantage:\nUsing Two’s Complement makes math operations simpler for computers ⚡. Both signed and unsigned numbers can be added using the same adder circuits 🔌.\n👉 For example:\n- 4 + 2 (unsigned)\n- 4 + (-2) (signed)\nBoth are handled using the same hardware adder gate ➕.",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Data representation",
+      "Binary Math"
+    ]
   },
   {
     "objectID": "topics/hardware/index.html",
