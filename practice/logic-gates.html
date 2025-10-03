@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-09-30">
 
-<title>About – Technical Support</title>
+<title>Logic Gates – Technical Support</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +32,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../_assets/favicons/favicon.ico" rel="icon">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -46,6 +45,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-0586837f6419b9566d7eac124051a580.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark-ff0e6c5b4aa938eb4c4c7b8b95710214.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -73,70 +75,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../_assets/css/styles.css">
-<meta property="og:title" content="About – Technical Support">
+<meta property="og:title" content="Logic Gates – Technical Support">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/about/_assets/favicons/favicon-32x32.png">
+<meta property="og:image" content="https://www.allaboutcircuits.com/uploads/articles/half-adder-gate-circuit.jpg">
 <meta property="og:site_name" content="{{< var course.title >}}">
 </head>
 
@@ -349,7 +293,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">About</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Logic Gates</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -457,8 +401,19 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#logic-gates" id="toc-logic-gates" class="nav-link active" data-scroll-target="#logic-gates">1. Logic gates</a></li>
+  <li><a href="#truth-table-2-inputs" id="toc-truth-table-2-inputs" class="nav-link" data-scroll-target="#truth-table-2-inputs">2. Truth table 2 inputs:</a></li>
+  <li><a href="#truth-table-4-inputs" id="toc-truth-table-4-inputs" class="nav-link" data-scroll-target="#truth-table-4-inputs">3. Truth table 4 inputs:</a></li>
+  <li><a href="#half-adders-and-full-adders" id="toc-half-adders-and-full-adders" class="nav-link" data-scroll-target="#half-adders-and-full-adders">4. Half adders and Full adders</a></li>
+  <li><a href="#exam-easy-or-hard" id="toc-exam-easy-or-hard" class="nav-link" data-scroll-target="#exam-easy-or-hard">5. Exam easy or hard?</a></li>
+  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -466,7 +421,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Logic Gates</h1>
 </div>
 
 
@@ -474,6 +429,12 @@ window.Quarto = {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 30, 2025</p>
+    </div>
+  </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
@@ -489,58 +450,504 @@ window.Quarto = {
 </header>
 
 
-<p>About this site</p>
+<section id="logic-gates" class="level1">
+<h1>1. Logic gates</h1>
+<p>On the left is the input to a series of logical circuits.<br>
+Indicate the resulting output on the right (1 = on, 0 = off) as well as the intermediate binary values at the exit of each gate:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Logic Gates</th>
+<th>Intermediate value</th>
+<th>Output (1 or 0)?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img src="_assets/logic_gate1.png" class="img-fluid" width="200"></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><img src="_assets/logic_gate2.png" class="img-fluid" width="200"></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><img src="_assets/logic_gate3.png" class="img-fluid" width="200"></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><img src="_assets/logic_gate4.png" class="img-fluid" width="200"></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="truth-table-2-inputs" class="level1">
+<h1>2. Truth table 2 inputs:</h1>
+<p>Complete the truth table of the following logic circuit:</p>
+<p><a href="_assets/logic_gate5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="_assets/logic_gate5.png" class="img-fluid"></a></p>
+</section>
+<section id="truth-table-4-inputs" class="level1">
+<h1>3. Truth table 4 inputs:</h1>
+<p>Complete the truth table of the following logic circuit:</p>
+<p><a href="_assets/logic_gate6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="_assets/logic_gate6.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>Input 1</strong></th>
+<th><strong>Input 2</strong></th>
+<th><strong>Input 3</strong></th>
+<th><strong>Input4</strong></th>
+<th><strong>Output</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="half-adders-and-full-adders" class="level1">
+<h1>4. Half adders and Full adders</h1>
+<p>We have seen the half adder logical circuit in class, but we haven’t actually seen why it’s called a half adder. Consider this, if you are trying to add two numbers in a row such as 1 +1 +1. If you try putting two half adder circuits in a row, you will have a problem! The output of one gate would have a sum and a carry, we need to have three inputs in the following gate to perform the following addition! That’s when the full comes in handy:</p>
+<p>Fill out the truth table of the full adder:</p>
+<p><a href="_assets/logic_gate7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="_assets/logic_gate7.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>A</strong></th>
+<th><strong>B</strong></th>
+<th><strong>Cin</strong></th>
+<th><strong>S</strong></th>
+<th><strong>Cout</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="exam-easy-or-hard" class="level1">
+<h1>5. Exam easy or hard?</h1>
+<p>The first section of students of Tech Support collectively decided not to study for their mid-term exam and instead build a truth table to predict if the exam will be easy or hard based on their teacher’s mood.</p>
+<p>They built a logic gate diagram, where the output is a light bulb. If it turns on, the exam will be easy, and everyone passes.</p>
+<p>They have four switches that can turn on/off independently. The first switch represents if the weather is above 0 degrees Celsius in Canada. The second switch represents if it’s snowing outside (negative temperatures). The third switch represents if the exam is happening on a Thursday and the last switch represents if the exam is happening on a Friday.</p>
+<p><a href="_assets/logic_gate8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="_assets/logic_gate8.png" class="img-fluid"></a></p>
+<ol type="1">
+<li>Let’s imagine it is snowing on Exam Day. Build a truth table.</li>
+</ol>
+<blockquote class="blockquote">
+<p>Hint: Observe the inputs and the gates well. You do not need to try all possibilities.</p>
+</blockquote>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 42%">
+<col style="width: 21%">
+<col style="width: 19%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>The temperature is above 0 ° C ?</th>
+<th>It is a Thursday?</th>
+<th>It is a Friday?</th>
+<th>Exam is easy?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ol start="2" type="1">
+<li><p>Let’s imagine it is not snowing on the Exam Day. Build a truth table for all possibilities. | The temperature is above 0 ° C? | It is a Thursday? | It is a Friday? | Exam is easy or not? | | ——————————– | —————– | ————— | ——————– | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |</p></li>
+<li><p>One of the inputs seems to not affect the output, which one is it?</p></li>
+<li><p>Simplify the logic circuit be removing this gate.</p></li>
+</ol>
+</section>
+<section id="solution" class="level1">
+<h1>Solution</h1>
+<ol type="1">
+<li>Logic gates</li>
+</ol>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Input</th>
+<th>1 (on) or 0 (off)?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1 0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>0 1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>0 1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>1 0 0 1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Truth table 4 inputs and 1 output:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>Input 1</strong></th>
+<th><strong>Input 2</strong></th>
+<th><strong>Input 3</strong></th>
+<th><strong>Input4</strong></th>
+<th><strong>Output</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+</tr>
+<tr class="even">
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+</tr>
+<tr class="even">
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="even">
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="even">
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="even">
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="even">
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="even">
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="even">
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Truth table 2 inputs 1 output:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>Input</strong></th>
+<th><strong>Output</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>A: 0 B: 0</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="even">
+<td><strong>A: 1 B: 0</strong></td>
+<td><strong>0</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>A: 0 B: 1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="even">
+<td><strong>A: 1 B: 1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Full Adder Truth Table:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>A</strong></th>
+<th><strong>B</strong></th>
+<th><strong>Cin</strong></th>
+<th><strong>S</strong></th>
+<th><strong>Cout</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1759499891959" data-listing-reading-time-sort="3" data-listing-word-count-sort="402">
-<a href="../about/this-site.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="_assets/colophon.jpg" alt="From Wikipedia: In publishing, a colophon is a brief statement containing information about the publication of a book… Some web pages also have colophons, which frequently contain (X)HTML, CSS, or usability standards compliance information and links to website validation tests." style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-About this website
-</h5>
-<div class="card-subtitle listing-subtitle">
-Description of technologies and resources used to build this website. Acknowledgements, copyright, terms of use, etc. can be found on this page.
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1759499891959" data-listing-reading-time-sort="1" data-listing-word-count-sort="97">
-<a href="../about/calendar.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="_assets/ticktock.jpg" alt="Captain Hook holds a timepiece high with one hand, and points at the clock hands with his hook hand." style="height: 150px;" title="Time doesn't have to be your downfall, if you plan ahead." class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Calendar
-</h5>
-<div class="card-subtitle listing-subtitle">
-Roadmap for course deliverables; record of lectures &amp; activites we have covered along the way.
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1759499891959" data-listing-reading-time-sort="4" data-listing-word-count-sort="736">
-<a href="../about/syllabus.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="_assets/tech_support_intro.jpg" alt="alt text" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Syllabus
-</h5>
-<div class="card-subtitle listing-subtitle">
-Course description outlining goals, expectations, resources, and other important information.
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -974,6 +1381,38 @@ Course description outlining goals, expectations, resources, and other important
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"fade","descPosition":"bottom","loop":true,"openEffect":"fade","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
