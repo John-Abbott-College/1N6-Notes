@@ -1,37 +1,43 @@
 ---
-date: 2025-09-15
-draft: true
+date: 2025-10-02
+draft: false
 subtitle: How is textual data represented in a computer's memory.
 title: Text in Computers
 ---
 
-# Text in Computers
+# 💻 Text in Computers 📝
 
-In early years, different computer companies applied the binary system in their own way. The word "cat" would be encoded in binary different on different brands of computers. This made life difficult in terms of being able to transfer data from one system to another.
+In early years, different computer companies applied the **binary system** in their own way. The word "cat" would be encoded in binary different on different brands of computers. This made life difficult in terms of being able to transfer data from one system to another.
 
-------------------------------------------------------------------------
-
-## ASCII
+## 🅰️ ASCII
 
 -   ASCII (American Standard Code for Information Interchange)
-    -   Standard introduced that used a 7 bit code with 128 combinations.
--   Later became 8-bits (256 combinations) -- **extended ** ASCII-8.
-    -   Note: When people say "ASCII" they are almost always referring to extended ASCII-8
--   Why eight bits?
-    -   So each character can be stored in a single byte.
--   CAT 0100 0011 0100 0001 0101 0100
--   cat 0110 0011 0110 0001 0111 0100
+    - Originally a **7-bit code** with 128 combinations 
+-   Later expanded to **8 bits** (256 combinations) — called **Extended ASCII-8** 
+    - Note: When people say "ASCII," they usually mean Extended ASCII-8 
+- **Why 8 bits?**  
+  - Each character fits perfectly into **1 byte** 
+- Example:  
+  - `"CAT"` → `0100 0011 0100 0001 0101 0100`  
+  - `"cat"` → `0110 0011 0110 0001 0111 0100`
 
-### ASCII-8: Table of Characters
+### 📊 ASCII-8: Table of Characters
 
 ![](https://media.geeksforgeeks.org/wp-content/uploads/20240304094301/ASCII-Table.png)
 
 *Information above comes from* [ASCII Values Alphabets](https://www.geeksforgeeks.org/dsa/ascii-table/)
 
-------------------------------------------------------------------------
 
-## Unicode
 
-Although ASCII works fine for English and other Latin-based languages, many other languages need far more than 256 characters. For example, Chinese (汉字), Japanese (漢字), Cyrillic (Кири́ллица), Gujarati (ગુજરાતી), and Urdu (اردو) all require large sets of characters that ASCII simply cannot represent. With only 8 bits, ASCII cannot possibly store the hundreds of thousands of symbols used worldwide. To solve this, we use **Unicode**, which comes in several versions that use different numbers of bits to store data. The most common format is **UTF-8**, an 8-bit variable-width encoding that maximizes compatibility with ASCII while allowing expansion up to 48 bits for larger character sets. **UTF-16** uses 16-bit variable-width encoding and can expand to 32 bits, while **UTF-32** uses a fixed-width 32-bit system where every character takes exactly 32 bits. With over 60,000 characters supported in UTF-16 and more than 4 billion in UTF-32, Unicode can represent virtually every character from every language on the planet. For instance, the code point U+007A represents the Latin small letter *z* (007A in UTF-16), while U+6C34 represents the Chinese character for water (水), stored as 6C34 in UTF-16. Since the numbers used in UTF-16 and UTF-32 can be extremely large, it is not convenient to write them in binary, which is why we often use **hexadecimal** instead.  
+## 🌐 Unicode
+
+ASCII works well for **English and other Latin-based languages**, but many languages need **more than 256 characters** 🌏. For example:  
+- 🇨🇳 Chinese: 汉字 (China)  
+- 🇯🇵 Japanese: 漢字 (Japan)  
+- 🇷🇺 Cyrillic: Кири́ллица (Russia)  
+- 🇮🇳 Gujarati: ગુજરાતી  (India)  
+- 🇵🇰 Urdu: اردو (Pakistan) 
+
+To solve this, we use **Unicode**, which comes in several versions that use different numbers of bits to store data. The most common format is **UTF-8**, an 8-bit variable-width encoding that maximizes compatibility with ASCII while allowing expansion up to 48 bits for larger character sets. **UTF-16** uses 16-bit variable-width encoding and can expand to 32 bits, while **UTF-32** uses a fixed-width 32-bit system where every character takes exactly 32 bits. With over 60,000 characters supported in UTF-16 and more than 4 billion in UTF-32, Unicode can represent virtually every character from every language on the planet. For instance, the code point U+007A represents the Latin small letter *z* (007A in UTF-16), while U+6C34 represents the Chinese character for water (水), stored as 6C34 in UTF-16. Since the numbers used in UTF-16 and UTF-32 can be extremely large, it is not convenient to write them in binary, which is why we often use **hexadecimal** instead.  
 
 *Information adapted from [Wikibooks: ASCII and Unicode](https://en.wikibooks.org/wiki/A-level_Computing/AQA/Paper_2/Fundamentals_of_data_representation/ASCII_and_unicode) — you can find more detailed explanations there.*

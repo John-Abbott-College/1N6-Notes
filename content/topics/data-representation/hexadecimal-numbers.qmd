@@ -1,31 +1,113 @@
 ---
-date: 2025-09-15
-draft: true
-subtitle: Lecture subtitle.
-title: Introduction to Binary
+date: 2025-10-02
+draft: false
+subtitle: Introduction to the hexadecimal base-16 system.
+title: Hexadecimal numbers 
 
 ---
 
-# Hexadecimal Numbers
-
-------------------------------------------------------------------------
-
-As we saw with **Unicode**, computers need to handle very large numbers in order to distinguish between the many possible characters and instructions. While computers have no problem working with large **binary numbers**, __we do!__ Converting 32-bit or 64-bit values from binary to decimal is tedious, which makes __large binary numbers hard for humans to read and write quickly__. We are comfortable using large **decimal numbers**, but the problem is that **10 is not a power of 2**, so it does not align evenly with the binary storage model that computers use. For example, with 4 bits we can represent values up to 16, but to store just a little more, like 17–20, we already need 5 bits. The consequence is that decimal numbers cannot be directly stored in machines built from transistors that can only distinguish between "on" and "off." So what do we do? We turn to **hexadecimal**, a system that maps neatly onto binary while remaining compact and much easier for humans to read and write. 
-
-------------------------------------------------------------------------
-
--   Introduce a new numeric system! There are infinite possibilities...
--   **Hexadecimal numbers** are **base 16** .
--   Note: 16 is a power of 2! 2\^4 = 16
--   In other words:
--   with 4 bits, we can store one "hexit", values range from 0-1111 (0 -\> 15 in decimal)
--   with 8 bits, we can store exactly two "hexits", values range from 0 - 1111 1111 (0 -\> 255 in decimal)
-
-------------------------------------------------------------------------
-
-## Building Hexadecimal Numbers
+# Hexadecimal Numbers 🔢🟪
 
 
+As we saw with Unicode, computers need to handle very large numbers to distinguish between the many possible characters and instructions. While computers work effortlessly with large binary numbers, we don’t! Converting 32-bit or 64-bit values from binary to decimal is tedious, which makes large binary numbers difficult for humans to read and write quickly.
+
+We’re comfortable with large decimal numbers, but the problem is that 10 is not a power of 2. This means it doesn’t align neatly with the binary storage model computers rely on. For example, with just 4 bits we can represent values up to 16, but to store something slightly larger, like 17–20, we already need 5 bits.
+
+The result is that decimal numbers cannot be directly stored in machines built from transistors that only distinguish between "on" (1) and "off" (0). So what’s the solution? We turn to hexadecimal—a system that maps perfectly onto binary while staying compact and much easier for humans to read and write.
+
+Notice that 16 is a power of 2: $2^4 = 16$. This means every 4 bits (a nibble) can store one hexadecimal digit (a "hexit"), and with 8 bits we can store two "hexits".
+
+## Hexits 🔹
+The hexadecimal system is base 16 🔢. This means we count from 0 to 15 before moving to the next place value. In decimal, we only have the digits 0–9 🔟. To show the extra numbers (10–15), we use the letters A, B, C, D, E, and F 🔠.
+
+| Hexadecimal | Binary | Decimal |
+| :---------: | :----: | :-----: |
+|      0      |  0000  |    0    |
+|      1      |  0001  |    1    |
+|      2      |  0010  |    2    |
+|      3      |  0011  |    3    |
+|      4      |  0100  |    4    |
+|      5      |  0101  |    5    |
+|      6      |  0110  |    6    |
+|      7      |  0111  |    7    |
+|      8      |  1000  |    8    |
+|      9      |  1001  |    9    |
+|      A      |  1010  |   10    |
+|      B      |  1011  |   11    |
+|      C      |  1100  |   12    |
+|      D      |  1101  |   13    |
+|      E      |  1110  |   14    |
+|      F      |  1111  |   15    |
+
+
+# Building Hexadecimal Numbers 🏗️
+
+## Binary to Hexadecimal 0️⃣1️⃣
+Going from binary to hexadecimal and vice versa is quite straight forward. 
+
+🚀 Steps:
+
+1. Group the binary number in nibbles (packs of 4 bits)
+👉  Example : 0101011011 →  0001 0101 1011
+
+
+2. Convert each nibble into its hexadecimal digit:
+- (0001)~2~ → (1)~16~
+- (0101)~2~ → (5)~16~
+- (1011)~2~ → (B)~16~
+
+
+3. Write the hex digits in the same order.
+✨ 0001 0101 1011 → (15B)~16~
+
+
+Hexadecimal numbers are often written with the prefix 0x to make their base clear:
+```
+0001 0101 1011 = 0x15B
+```
+✅ Final Answer: 0x15B
+
+Apply the same approach to convert a hexadecimal number to binary, each hex character will correspond to a nibble (4 bits). 
+
+
+## 🔢  Decimal to Hexadecimal
+This is a little less straight forward but it's still achievable. 
+
+🚀 Steps: 
+👉  Example: Let's convert 4,284 in hexadecimal:
+
+1. List a few powers of 16 and their decimal values:
+
+
+| Power of 16 | $16^4$    | $16^3$ | $16^2$ | $16^1$ | $16^0$ |
+| ----------- | --------- | ------ | ------ | ------ | ------ |
+| Decimal     | 1,048,576 | 4,096  | 256    | 16     | 1      |
+
+
+2. Find the largest power of 16 that fits into 4,284.
+👉 $16^3 = 4,096$ (fits, since $16^4$ is too big).
+
+3. Divide by this power of 16.
+👉 $4284 ÷ 4096 = 1$ remainder 188.
+🔹 Next digit: 1
+
+4. Use the next power of 16 ($16^2 = 256$).
+👉 $188 ÷ 256 = 0$ remainder 188.
+🔹 Next digit: 0
+
+5. Move to the next power $16^1 = 16$.
+👉 $188 ÷ 16 = 11$ remainder 12.
+👉 Decimal 11 = Hex B.
+🔹 Next digit: B
+
+6. Finally, $16^0 = 1$.
+👉 $12 ÷ 1 = 12$ remainder 0.
+👉 Decimal 12 = Hex C.
+🔹 Next digit: C
+
+7. Write the hexadecimal digits in the order of largest to lowest powers:
+
+✅ Final Answer: 0x10BC
 
 > **Riddle**
 >
@@ -39,26 +121,5 @@ As we saw with **Unicode**, computers need to handle very large numbers in order
 >
 > What age is Aang in Hexadecimal(if he is indeed 18 in decimal?)
 >
-> ![Aang.](/Users/teacher/Documents/1N6-Notes/content/topics/data-representation/_assets/data-representation5.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+> ![Avatar Aang.](_assets/data-representation5.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
-
-
-------------------------------------------------------------------------
-
-## Why Hexadecimal?
-
-Hexadecimal is perfect for matching 4 bits.
-
-Every combination of 4 bits can be matched with one hex number.
-
-*4 bits* can be represented by *1 Hex value ("hexit")*
-
-*8 bits* can be represented by *2 Hex values ("hexit")*
-
-------------------------------------------------------------------------
-
-## Hexadecimal Digits
-
-
-
-### 

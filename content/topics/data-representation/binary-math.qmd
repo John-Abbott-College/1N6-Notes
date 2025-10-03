@@ -39,26 +39,19 @@ When subtracting binary numbers, computer actually convert the left operand to a
 
 Not all numbers in real life are positive, just think of freezing winter temperatures in Canada 🥶 or when bank accounts slip below zero ☹️💸. Because of this, computers must be able to represent not only positive values but also negative ones. In binary, special methods are used to handle negative numbers so that calculations remain accurate and efficient.
 
+
 How can be achieve this with a binary system?
 
-The simple answer is to use the **first bit of a number to represent the sign** and use the remaining bits for the **magnitude** of the number:
+### Signed Magnitudes ⛰️ Representation
+
+The simple answer is to use the **first bit of a number to represent the sign** and use the remaining bits for the **magnitude** of the number. This approach for representing numbers is called **Signed Magnitudes**. 
 
 - **1** for negative ➖
 
 - **0** for positive ➕
 
-### Unsigned versus Signed 🖊️
 
-Up to now, we’ve only looked at positive binary numbers, where all the bits are used to represent the value. For signed numbers, however, one bit is set aside to indicate the sign (positive or negative). This reduces the range of values that can be represented. 
-
-:::{.callout-note icon="false"}
-# Example:
-For example, with 4 bits we can represent the unsigned numbers: 0 to 15, while with the same number of bits we can represent signed numbers -7 to +7. 
-
-![](_assets/signed_unsigned.png){width=80%}
-:::
-
-With this simple approach however,  zero ends up having two representations (positive zero and negative zero), and basic operations are not working as expected, for example:
+With this simple approach however, zero ends up having __two representations__ (positive zero and negative zero), and basic operations are not working as expected, for example:
 $$
 5_{10} + −5_{10} = 0101_{2} + 1101_{2} = 0010_{2} \not = 0_{10}  ❌
 $$
@@ -88,7 +81,7 @@ Here are the binary values from -7 to +7:
 | 0 1 1 0  |  6                 |
 | 0 1 1 1  |  7                 |
 
-## Two's complement 
+### Two's complement 2️ Representation
 
 Two's complement is the most common way to represent signed numbers in computers. It's based on mathematical thoeries and help fix the issues seen above with the "simple approach". 
 
@@ -191,3 +184,30 @@ Using **Two’s Complement** makes math operations simpler for computers ⚡. Bo
 - `4 + (-2)` (signed)  
 
 Both are handled using the **same hardware adder gate** ➕.  
+
+
+
+# Unsigned versus Signed  🖊️
+
+Up to now, we’ve only looked at positive binary numbers, where all the bits are used to represent the value. For signed numbers, however, one bit is set aside to indicate the sign (positive or negative). This reduces the magnitude of the values that can be represented. 
+
+# Range of `n`-bit in Two's complement
+
+For the minimum and maximum value that can be stored in a register depends on the numbers of available bits `n`.
+
+|  n   |               minimum               |                       maximum                       |  Unique numbers  |
+| :--: | :---------------------------------: | :-------------------------------------------------: |-----------------:|
+|  8   |          $-(2^7)  =-128 $           |                  $+(2^7)-1  =+127$                  |$ (2^8) = 256$    | 
+|  16  |         $-(2^15) =-32,768$          |                $+(2^15)-1 =+32,767$                 |$ (2^16) = 65,536$    | 
+|  32  |      $-(2^31) =-2,147,483,648$      |       $+(2^31)-1 =+2,147,483,647$(9+ digits)        |$ (2^32) = 4,294,967,296$ (9+ digits)     | 
+|  64  | $-2^63 =-9,223,372,036,854,775,808$ | $+(2^63)-1 =+9,223,372,036,854,775,807$(18+ digits) |$ (2^64) = 18,446,744,073,709,551,616$ (18 digits)    | 
+|  $n$   |         $-(2^{n-1})$          |                  $(2^{n-1}) -1 $                  |$2^n$   | 
+
+
+
+:::{.callout-note icon="false"}
+# Example: Signed vs unsigned 2 bits
+For example, with 4 bits we can represent the unsigned numbers: 0 to 15, while with the same number of bits we can represent signed numbers -8 to +7 :
+
+
+:::
