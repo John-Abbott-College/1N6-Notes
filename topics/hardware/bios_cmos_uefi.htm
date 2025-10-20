@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <link href="../../_assets/favicons/favicon.ico" rel="icon">
-<script src="../../site_libs/quarto-listing/list.min.js"></script>
-<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-html/tabby.min.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -12,7 +10,8 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>{{&lt; var course.title &gt;}} – Data Representation</title>
+  <meta name="dcterms.date" content="2025-10-20">
+  <title>{{&lt; var course.title &gt;}} – BIOS, CMOS, UEFI</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -32,35 +31,6 @@
     }
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-06e768f098560084c2d7120de8ad04fb.css">
-  <script>
-
-    window.document.addEventListener("DOMContentLoaded", function (_event) {
-      const listingTargetEl = window.document.querySelector('#listing-listing .list');
-      if (!listingTargetEl) {
-        // No listing discovered, do not attach.
-        return; 
-      }
-
-      const options = {
-        valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
-        
-        searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
-      };
-
-      window['quarto-listings'] = window['quarto-listings'] || {};
-      window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-      if (window['quarto-listing-loaded']) {
-        window['quarto-listing-loaded']();
-      }
-    });
-
-    window.addEventListener('hashchange',() => {
-      if (window['quarto-listing-loaded']) {
-        window['quarto-listing-loaded']();
-      }
-    })
-    </script>
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -153,9 +123,9 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Data Representation – Technical Support">
-<meta property="og:description" content="All lectures related to logic &amp; data representation can be found here.">
-<meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/data-representation/_assets/favicons/favicon-32x32.png">
+<meta property="og:title" content="BIOS, CMOS, UEFI – Technical Support">
+<meta property="og:description" content="Basic Input/Output services (computer firmware)">
+<meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/hardware/_assets/favicons/favicon-32x32.png">
 <meta property="og:site_name" content="{{< var course.title >}}">
 </head>
 <body class="quarto-dark">
@@ -163,19 +133,172 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Data Representation</h1>
-  <p class="subtitle">All lectures related to logic &amp; data representation can be found here.</p>
+  <h1 class="title">BIOS, CMOS, UEFI</h1>
+  <p class="subtitle">Basic Input/Output services (computer firmware)</p>
 
 <div class="quarto-title-authors">
 </div>
 
+  <p class="date">2025-10-20</p>
+</section><section id="TOC">
+<nav role="doc-toc"> 
+<h2 id="toc-title">Table of contents</h2>
+<ul>
+<li><a href="#/bios" id="/toc-bios">BIOS 🔧</a></li>
+<li><a href="#/cmos" id="/toc-cmos">CMOS 💾</a></li>
+<li><a href="#/uefi" id="/toc-uefi">UEFI 🚀</a></li>
+</ul>
+</nav>
 </section>
-<section class="slide level2">
-
-
-
-
+<section>
+<section id="bios" class="title-slide slide level1 center">
+<h1>BIOS 🔧</h1>
+<p>Have you ever wondered how simply pressing the power button makes a whole computer come to life? The ON/OFF button only supplies electricity to the motherboard — but what actually triggers the operating system to load into memory is a special built-in program called the BIOS.</p>
+<p>The BIOS (Basic Input/Output System) is embedded program on the motherboard that initializes the computer’s input and output devices during startup. The motherboard is often referred to as the <strong>firmware</strong> of the motherboard.</p>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Firmware vs Software</strong></p>
+</div>
+<div class="callout-content">
+<p>A <strong>firmware</strong> is a low level code running on ROM (Read-only-memory) chips of a hardware device to directly control it. It’s often written in low level languages like Assembly, C/C++,or Rust.</p>
+<p>A <strong>software</strong>, on the other hand, refers to higher-level programs/instructions created by developers (like you!). Software relies on the firmware to interact with the hardware. It includes components such as the operating system.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_assets/bios_firmware.png"></p>
+<figcaption>Firmware vs Software</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
 </section>
+<section id="bios-chip" class="slide level2">
+<h2>BIOS Chip</h2>
+<p>The BIOS is burnt onto a read only memory chip built-into the motherboard: <img data-src="_assets/bios_chip.png" style="width:50.0%"></p>
+<h3 id="read-only-memory-rom">Read Only Memory (ROM)</h3>
+<p>ROM chips contain instructions that are directly accessed by the CPU, for example booting the computer and loading the operating system. Those chips retain their content even when the computer is powered off. Over time the ROM chips have evolved from purely ROM which can never be earased or over-written to EEPROM which are now electronically earasable and programmable. The information written on EEPROM can be rewritten without having to remove the actual chip from the computer.</p>
+</section>
+<section id="power-on-self-test" class="slide level2">
+<h2>Power-on-Self Test</h2>
+<p>When the motherboard receives power, the BIOS loads from its dedicated chip into memory and immediately performs a diagnostic procedure called the Power-On Self-Test (POST). The order of hardware devices checked during the BIOS is typically from the most important components (CPU, RAM, CPU fan, graphics card) to the less essential peripherals (mouse, keyboard).</p>
+<p>This special test is called <strong>POST</strong> or Power-On-Self Test and will be helpful in troubleshooting any problem. The post test uses a combination of lights and sounds codes to indicate issues. Typically a black screen (BIOS) with error messages will be insicated.</p>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Optiplex 990 POST test example</strong></p>
+</div>
+<div class="callout-content">
+<p>On some PCs such as the Dell OptiPlex series, there exists up to 4 LED lights on the front panel which light up during the POST test and indicate error codes if an error occurs. Here is an example of an error code which happened during the POST:</p>
+<p><img data-src="_assets/bios_post_optiplex990_2.png.jpg"></p>
+<p>When searching through the <a href="https://f5k.fandom.com/wiki/Front_Panel_Lights_-_Optiplex_990">error codes</a> for the Optiplex 990, this is the meaning of this code:</p>
+<p><img data-src="_assets/bios_post_optiplex990.png"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="boot-order" class="slide level2 scrollable">
+<h2>Boot order</h2>
+<p>After running the POST, the BIOS will search for the boot device, i.e.&nbsp;the storage device containing the operating system. For that, the BIOS will check for a special software called the “boot loader” which loads the operating system into memory. To find this software, the BIOS will go through the boot <strong>order</strong> starting from the first device in the order (often the permanent storage devices (SSD or HDD)), then through the secondary and tertiary devices (ex: CD-ROM drives, and/or removable disks) until it finds a bootable device.</p>
+<h3 id="changing-the-boot-order">Changing the boot order</h3>
+<p>When installing a new operating system or using a data recovery tool, the boot order might need to be alterned.</p>
+<ol type="1">
+<li>Turn ON or restart the computer</li>
+<li>During POST, open the BIOS setup utility <strong>by pressing the F2, F10 or F12 key</strong> (Dell and Hp) and sometimes F1.</li>
+<li>Once in the BIOS setup utility, use the arrow keys to navigate through the menu.</li>
+</ol>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>BIOS setup utlity</strong></p>
+</div>
+<div class="callout-content">
+<p>The BIOS appearance might be different from one manufacturer to another. For example, you may have a horizontal bar at the top of the screen as such:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://www.lifewire.com/thmb/knKqfOlW0V5rzR80bfeJ40wtYQ8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/phoenixbios-setup-main-screen-59959547c41244001039e3b1.PNG"></p>
+<figcaption>Example of BIOS setup utility Source: <a href="https://www.lifewire.com/change-the-boot-order-in-bios-2624528">LifeWire</a></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<ol start="4" type="1">
+<li>Follow the BIOS’s navigation instructions, locate the boot order option.</li>
+</ol>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Example of boot order option</strong></p>
+</div>
+<div class="callout-content">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://www.lifewire.com/thmb/iHFCQi83ogMGY1o54NindqREFNk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/boot-options-hard-drive-first-59959648054ad900119c6714.PNG"></p>
+<figcaption>Example of boot order in the BIOS settings tool</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<ol start="5" type="1">
+<li><p>Following the BIOS’s instructions, modify the boot order so that the boot device you wish to use is at the top.</p></li>
+<li><p>Confirm the changes, this may re-start the computer.</p></li>
+</ol>
+<p>Once the computer restarts, it’ll attempt to boot from the first device specified in the order. If it cannot boot, it’ll try the next device in the list.</p>
+<p>Source: <a href="https://www.lifewire.com/change-the-boot-order-in-bios-2624528">Mastering BIOS: How to Change the Boot Order By Time Fisher. July 18, 2025. LifeWire</a></p>
+</section>
+<section id="other-system-setup-options" class="slide level2">
+<h2>Other System Setup options</h2>
+<p>Altough the BIOS is stored on a Read-only Programmable memory chip, some of its settings are changeable and will be stored on the CMOS chip. Here are a few settings that are changeable:</p>
+<ul>
+<li><p>🕒 <strong>System Date/Time</strong> Sets the system’s date and time.</p></li>
+<li><p>💾 <strong>Boot Sequence</strong> Defines the order in which the BIOS attempts to load the operating system.</p></li>
+<li><p>🔌 <strong>Plug and Play</strong> Allows automatic detection of connected hardware devices.</p></li>
+<li><p>⌨️ <strong>Mouse / Keyboard</strong> Enables Num Lock, auto-detect the mouse, and adjust input settings.</p></li>
+<li><p>💽 <strong>Drive Configuration</strong> Configures storage devices such as hard drives, CD-ROMs, and floppy drives.</p></li>
+<li><p>🔐 <strong>Security</strong> Sets or changes passwords to restrict access to the computer.</p></li>
+<li><p>⚡ <strong>Power Management</strong> Enables or disables power-saving features and adjust standby or suspend timers.</p></li>
+</ul>
+</section></section>
+<section id="cmos" class="title-slide slide level1 center">
+<h1>CMOS 💾</h1>
+<p>After the computer is turn off, certain settings such as: <strong>the Date and time</strong>,<strong>hardware settings</strong> need to be saved. In addition to those, the custom settings of the BIOS, for example the <strong>Boot order</strong> must be saved as well, an updated hardware device. These settings, called <strong>system setup</strong>, are stored on another chip on the motherboard called CMOS (complementary metal-oxide semiconductor).</p>
+
+<img data-src="_assets/cmos_battery.png" style="width:50.0%" class="r-stretch"><p>The CMOS is made of silicon germanium and is powered by a coin-sized CR2032 cell battery, referred to as the <strong>CMOS battery</strong>. Most CMOS batteries will last the lifetime of a motherboard (up to 10 yearsin most cases), altough it sometimes needs to be replaced.</p>
+<p>Signs of a dead or dying CMOS battery are: - Incorrect or slow system date and time. - Loss of BIOS settings. - Corresponding Error code during POST.</p>
+</section>
+
+<section>
+<section id="uefi" class="title-slide slide level1 center">
+<h1>UEFI 🚀</h1>
+<p>For decades, the BIOS remained the hallmark of the computer booting despite the fast improvements of the computers, it did not. Intel developed the <strong>Extensible Frameworkd Interface (EFI)</strong> - an open system of standards for developing computer firmware. The UEFI is the evolution of the BIOS. It boots faster, and offers more secure boot. It was developed by Intel. Let’s have a deeper look on how the UEFI improves on the limitations of the BIOS.</p>
+</section>
+<section id="bios-versus-uefi" class="slide level2">
+<h2>BIOS versus UEFI</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Limitations of BIOS ⚙️</strong> <img data-src="https://www.easeus.fr/images/en/screenshot/partition-manager/uefi-bios-boot-mode.png" alt="BIOS is legacy!"> * 🏭 <strong>Manufacturer-specific</strong>: Each motherboard manufacturer had to create its own custom BIOS, tailored to specific hardware components.</p>
+<ul>
+<li><p>💾 <strong>Limited memory space</strong>: BIOS runs in 16-bit processor mode and has only 1 MB of space to operate.</p></li>
+<li><p>🐢 <strong>Slow initialization</strong>: It struggles to initialize multiple hardware devices simultaneously, resulting in slower boot times on modern computers.</p></li>
+<li><p>🚫 <strong>Storage limit</strong>: Can only boot from drives up to 2.1 TB in size.</p></li>
+<li><p>⌨️ <strong>Keyboard-only support</strong>: BIOS can only recognize keyboard input (no mouse support).</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>🚀 Advantages of UEFI</strong> <img data-src="https://www.easeus.fr/images/en/screenshot/partition-manager/uefi-access.png" alt="UEFI"></p>
+<ul>
+<li><p>🌍 <strong>Standardized and universal</strong>: Follows the EFI standard and is independant on the architecture of the computer.</p></li>
+<li><p>⚡ <strong>64-bit mode &amp; more memory</strong>: UEFI can run in 32 or 64-bit mode and is not limited in allocated memory.</p></li>
+<li><p>⚙️ <strong>Parallel hardware initialization</strong>: It can initialize multiple hardware devices simultaneously, resulting in much faster boot times.</p></li>
+<li><p>💽 <strong>Supports Large Drives</strong>: UEFI can boot from drives larger than 2 TB, thanks to the GPT (GUID Partition Table) format.</p></li>
+<li><p>🖱️ <strong>Mouse and GUI Support</strong>: UEFI includes a user-friendly graphical user interface with both mouse and keyboard support,colors and even animation, making setup and navigation more user-friendly.</p></li>
+<li><p>🛡️ <strong>Secure Boot Protection</strong> UEFI also includes a built-in feature called <strong>Secure Boot</strong>, which prevents digitally unsigned drivers from loading. This helps protect against malicious software such as rootkits.</p></li>
+</ul>
+</div></div>
+
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -561,155 +684,4 @@
       </script>
     
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1757894400000" data-listing-file-modified-sort="1760970514948" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1838">
-<div class="thumbnail"><a href="../../topics/data-representation/binary-math.html" class="no-external">
-
-<!-- img(9CEB782EFEE6)[progressive=false, height=]:listing:topics/data-representation/binary-math.html -->
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../topics/data-representation/binary-math.html" class="no-external">Binary Math</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../../topics/data-representation/binary-math.html" class="no-external">How are computers performing additions and subtractions.</a>
-</div>
-<div class="delink listing-description"><a href="../../topics/data-representation/binary-math.html" class="no-external">
-<!-- desc(5A0113B34292)[max=175]:topics/data-representation/binary-math.html -->
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../topics/data-representation/binary-math.html" class="no-external">
-<div class="listing-date">
-2025-09-15
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1757894400000" data-listing-file-modified-sort="1760970514948" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3099">
-<div class="thumbnail"><a href="../../topics/data-representation/introduction-to-binary.html" class="no-external">
-
-<!-- img(9CEB782EFEE6)[progressive=false, height=]:listing:topics/data-representation/introduction-to-binary.html -->
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../topics/data-representation/introduction-to-binary.html" class="no-external">Introduction to Binary</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../../topics/data-representation/introduction-to-binary.html" class="no-external">What’s a bit, and how is it implemented in a computer?</a>
-</div>
-<div class="delink listing-description"><a href="../../topics/data-representation/introduction-to-binary.html" class="no-external">
-<!-- desc(5A0113B34292)[max=175]:topics/data-representation/introduction-to-binary.html -->
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../topics/data-representation/introduction-to-binary.html" class="no-external">
-<div class="listing-date">
-2025-09-15
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1758499200000" data-listing-file-modified-sort="1760970514949" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1927">
-<div class="thumbnail"><a href="../../topics/data-representation/logic-gates-and-boolean-algebra.html" class="no-external">
-
-<!-- img(9CEB782EFEE6)[progressive=false, height=]:listing:topics/data-representation/logic-gates-and-boolean-algebra.html -->
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../topics/data-representation/logic-gates-and-boolean-algebra.html" class="no-external">Logic Gates and Boolean Algebra</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../../topics/data-representation/logic-gates-and-boolean-algebra.html" class="no-external">Introduction to AND, OR, NOT, XOR gates.</a>
-</div>
-<div class="delink listing-description"><a href="../../topics/data-representation/logic-gates-and-boolean-algebra.html" class="no-external">
-<!-- desc(5A0113B34292)[max=175]:topics/data-representation/logic-gates-and-boolean-algebra.html -->
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../topics/data-representation/logic-gates-and-boolean-algebra.html" class="no-external">
-<div class="listing-date">
-2025-09-22
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1759363200000" data-listing-file-modified-sort="1760970514948" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1049">
-<div class="thumbnail"><a href="../../topics/data-representation/hexadecimal-numbers.html" class="no-external">
-
-<!-- img(9CEB782EFEE6)[progressive=false, height=]:listing:topics/data-representation/hexadecimal-numbers.html -->
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../topics/data-representation/hexadecimal-numbers.html" class="no-external">Hexadecimal numbers</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../../topics/data-representation/hexadecimal-numbers.html" class="no-external">Introduction to the hexadecimal base-16 system.</a>
-</div>
-<div class="delink listing-description"><a href="../../topics/data-representation/hexadecimal-numbers.html" class="no-external">
-<!-- desc(5A0113B34292)[max=175]:topics/data-representation/hexadecimal-numbers.html -->
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../topics/data-representation/hexadecimal-numbers.html" class="no-external">
-<div class="listing-date">
-2025-10-02
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1759363200000" data-listing-file-modified-sort="1760970514949" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="371">
-<div class="thumbnail"><a href="../../topics/data-representation/text-in-computers.html" class="no-external">
-
-<!-- img(9CEB782EFEE6)[progressive=false, height=]:listing:topics/data-representation/text-in-computers.html -->
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../topics/data-representation/text-in-computers.html" class="no-external">Text in Computers</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../../topics/data-representation/text-in-computers.html" class="no-external">How is textual data represented in a computer’s memory.</a>
-</div>
-<div class="delink listing-description"><a href="../../topics/data-representation/text-in-computers.html" class="no-external">
-<!-- desc(5A0113B34292)[max=175]:topics/data-representation/text-in-computers.html -->
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../topics/data-representation/text-in-computers.html" class="no-external">
-<div class="listing-date">
-2025-10-02
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></body></html>
+</body></html>

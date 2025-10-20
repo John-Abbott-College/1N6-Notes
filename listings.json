@@ -1,15 +1,34 @@
 [
   {
-    "listing": "/announcements/index.html",
-    "items": []
-  },
-  {
     "listing": "/about/index.html",
     "items": [
       "/about/this-site.html",
       "/about/calendar.html",
       "/about/syllabus.html"
     ]
+  },
+  {
+    "listing": "/topics/technical-support/index.html",
+    "items": []
+  },
+  {
+    "listing": "/topics/all-lectures.html",
+    "items": [
+      "/topics/hardware/introduction-to-computers.html",
+      "/topics/hardware/external-components.html",
+      "/topics/hardware/internal-components.html",
+      "/topics/hardware/understanding-cpus.html",
+      "/topics/data-representation/binary-math.html",
+      "/topics/data-representation/introduction-to-binary.html",
+      "/topics/data-representation/logic-gates-and-boolean-algebra.html",
+      "/topics/data-representation/hexadecimal-numbers.html",
+      "/topics/data-representation/text-in-computers.html",
+      "/topics/hardware/bios_cmos_uefi.html"
+    ]
+  },
+  {
+    "listing": "/announcements/index.html",
+    "items": []
   },
   {
     "listing": "/practice/all-exos.html",
@@ -20,27 +39,20 @@
     ]
   },
   {
-    "listing": "/topics/technical-support/index.html",
-    "items": []
-  },
-  {
     "listing": "/topics/hardware/index.html",
     "items": [
       "/topics/hardware/introduction-to-computers.html",
       "/topics/hardware/external-components.html",
       "/topics/hardware/internal-components.html",
-      "/topics/hardware/understanding-cpus.html"
+      "/topics/hardware/understanding-cpus.html",
+      "/topics/hardware/bios_cmos_uefi.html"
     ]
   },
   {
-    "listing": "/topics/all-lectures.html",
+    "listing": "/topics/data-representation/index.html",
     "items": [
-      "/topics/hardware/introduction-to-computers.html",
-      "/topics/hardware/external-components.html",
-      "/topics/hardware/internal-components.html",
-      "/topics/hardware/understanding-cpus.html",
-      "/topics/data-representation/introduction-to-binary.html",
       "/topics/data-representation/binary-math.html",
+      "/topics/data-representation/introduction-to-binary.html",
       "/topics/data-representation/logic-gates-and-boolean-algebra.html",
       "/topics/data-representation/hexadecimal-numbers.html",
       "/topics/data-representation/text-in-computers.html"
@@ -57,16 +69,6 @@
       "/topics/hardware/index.html",
       "/topics/operating-systems/index.html",
       "/topics/technical-support/index.html"
-    ]
-  },
-  {
-    "listing": "/topics/data-representation/index.html",
-    "items": [
-      "/topics/data-representation/introduction-to-binary.html",
-      "/topics/data-representation/binary-math.html",
-      "/topics/data-representation/logic-gates-and-boolean-algebra.html",
-      "/topics/data-representation/hexadecimal-numbers.html",
-      "/topics/data-representation/text-in-computers.html"
     ]
   }
 ]
