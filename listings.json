@@ -1,5 +1,9 @@
 [
   {
+    "listing": "/announcements/index.html",
+    "items": []
+  },
+  {
     "listing": "/about/index.html",
     "items": [
       "/about/this-site.html",
@@ -8,8 +12,30 @@
     ]
   },
   {
-    "listing": "/topics/technical-support/index.html",
-    "items": []
+    "listing": "/topics/data-representation/index.html",
+    "items": [
+      "/topics/data-representation/introduction-to-binary.html",
+      "/topics/data-representation/binary-math.html",
+      "/topics/data-representation/logic-gates-and-boolean-algebra.html",
+      "/topics/data-representation/hexadecimal-numbers.html",
+      "/topics/data-representation/text-in-computers.html"
+    ]
+  },
+  {
+    "listing": "/topics/index.html",
+    "items": [
+      "/topics/data-representation/index.html",
+      "/topics/hardware/index.html",
+      "/topics/operating-systems/index.html",
+      "/topics/technical-support/index.html"
+    ]
+  },
+  {
+    "listing": "/topics/operating-systems/index.html",
+    "items": [
+      "/topics/operating-systems/operating-system-intro.html",
+      "/topics/operating-systems/file-systems.html"
+    ]
   },
   {
     "listing": "/topics/all-lectures.html",
@@ -18,24 +44,14 @@
       "/topics/hardware/external-components.html",
       "/topics/hardware/internal-components.html",
       "/topics/hardware/understanding-cpus.html",
-      "/topics/data-representation/binary-math.html",
       "/topics/data-representation/introduction-to-binary.html",
+      "/topics/data-representation/binary-math.html",
       "/topics/data-representation/logic-gates-and-boolean-algebra.html",
       "/topics/data-representation/hexadecimal-numbers.html",
       "/topics/data-representation/text-in-computers.html",
-      "/topics/hardware/bios_cmos_uefi.html"
-    ]
-  },
-  {
-    "listing": "/announcements/index.html",
-    "items": []
-  },
-  {
-    "listing": "/practice/all-exos.html",
-    "items": [
-      "/practice/binary-conversions.html",
-      "/practice/binary-math.html",
-      "/practice/logic-gates.html"
+      "/topics/hardware/bios_cmos_uefi.html",
+      "/topics/operating-systems/operating-system-intro.html",
+      "/topics/operating-systems/file-systems.html"
     ]
   },
   {
@@ -49,26 +65,16 @@
     ]
   },
   {
-    "listing": "/topics/data-representation/index.html",
-    "items": [
-      "/topics/data-representation/binary-math.html",
-      "/topics/data-representation/introduction-to-binary.html",
-      "/topics/data-representation/logic-gates-and-boolean-algebra.html",
-      "/topics/data-representation/hexadecimal-numbers.html",
-      "/topics/data-representation/text-in-computers.html"
-    ]
-  },
-  {
-    "listing": "/topics/operating-systems/index.html",
+    "listing": "/topics/technical-support/index.html",
     "items": []
   },
   {
-    "listing": "/topics/index.html",
+    "listing": "/practice/all-exos.html",
     "items": [
-      "/topics/data-representation/index.html",
-      "/topics/hardware/index.html",
-      "/topics/operating-systems/index.html",
-      "/topics/technical-support/index.html"
+      "/practice/binary-conversions.html",
+      "/practice/binary-math.html",
+      "/practice/Diskpart cheat sheet.html",
+      "/practice/logic-gates.html"
     ]
   }
 ]

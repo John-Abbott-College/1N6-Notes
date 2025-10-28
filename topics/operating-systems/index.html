@@ -44,8 +44,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-54c8f25464f32f8783bd446cee98020d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-47eb7dfbbfea21801d7336de686fdbf8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-bb163020fb3465961474956d5afeaf95.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-0586837f6419b9566d7eac124051a580.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-ff0e6c5b4aa938eb4c4c7b8b95710214.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -83,9 +83,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
       
-      searchColumns: ["listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -465,7 +465,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -485,7 +485,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">October 20, 2025</p>
+      <p class="date-modified">October 28, 2025</p>
     </div>
   </div>
     
@@ -502,13 +502,75 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-date-sort" data-direction="asc">
+        Date - Oldest
+      </option>
+      <option value="listing-date-sort" data-direction="desc">
+        Date - Newest
+      </option>
+      <option value="listing-title" data-direction="asc">
+        Title
+      </option>
+    </select>
+  </div>
     <div class="input-group input-group-sm quarto-listing-filter">
       <span class="input-group-text"><i class="bi bi-search"></i></span>
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
 <div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1761609600000" data-listing-file-modified-sort="1761684972550" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="726">
+<div class="thumbnail"><a href="../../topics/operating-systems/operating-system-intro.html" class="no-external">
 
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../topics/operating-systems/operating-system-intro.html" class="no-external">Windows, Mac OS and Linux</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../../topics/operating-systems/operating-system-intro.html" class="no-external">Introduction to Operating Sytems</a>
+</div>
+<div class="delink listing-description"><a href="../../topics/operating-systems/operating-system-intro.html" class="no-external">
+The operating system (OS) is the main software that controls a computer’s hardware, manages the file system, and runs applications. It provides a user-friendly interface…
+</a></div>
+</div>
+<div class="metadata">
+<a href="../../topics/operating-systems/operating-system-intro.html" class="no-external">
+<div class="listing-date">
+2025-10-28
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1761684972549">
+<div class="thumbnail"><a href="../../topics/operating-systems/file-systems.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../topics/operating-systems/file-systems.html" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="../../topics/operating-systems/file-systems.html" class="no-external"></a>
+</div>
+<div class="delink listing-description"><a href="../../topics/operating-systems/file-systems.html" class="no-external">
+<section class="quarto-appendix-contents" id="quarto-reuse"><div class="quarto-appendix-contents"><div>CC BY-NC-SA 4.0</div></div></section>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../../topics/operating-systems/file-systems.html" class="no-external">
+</a>
+</div>
+</div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->

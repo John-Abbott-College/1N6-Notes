@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<link href="../_assets/favicons/favicon.ico" rel="icon">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-html/tabby.min.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../../_assets/favicons/favicon.ico" rel="icon">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>{{&lt; var course.title &gt;}} – Topics</title>
+  <meta name="dcterms.date" content="2025-10-27">
+  <title>{{&lt; var course.title &gt;}} – How is the OS organized?</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -31,40 +30,11 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-06e768f098560084c2d7120de8ad04fb.css">
-  <script>
-
-    window.document.addEventListener("DOMContentLoaded", function (_event) {
-      const listingTargetEl = window.document.querySelector('#listing-listing .list');
-      if (!listingTargetEl) {
-        // No listing discovered, do not attach.
-        return; 
-      }
-
-      const options = {
-        valueNames: ['listing-image','listing-title','listing-subtitle','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-        
-        searchColumns: ["listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
-      };
-
-      window['quarto-listings'] = window['quarto-listings'] || {};
-      window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-      if (window['quarto-listing-loaded']) {
-        window['quarto-listing-loaded']();
-      }
-    });
-
-    window.addEventListener('hashchange',() => {
-      if (window['quarto-listing-loaded']) {
-        window['quarto-listing-loaded']();
-      }
-    })
-    </script>
-  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-06e768f098560084c2d7120de8ad04fb.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -153,9 +123,9 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Topics – Technical Support">
-<meta property="og:description" content="Directory listing for all topics covered in this course.">
-<meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/_assets/favicons/favicon-32x32.png">
+<meta property="og:title" content="How is the OS organized? – Technical Support">
+<meta property="og:description" content="Architecture of an Operating Sytems">
+<meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/operating-systems/_assets/favicons/favicon-32x32.png">
 <meta property="og:site_name" content="{{< var course.title >}}">
 </head>
 <body class="quarto-dark">
@@ -163,16 +133,129 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Topics</h1>
-  <p class="subtitle">Directory listing for all topics covered in this course.</p>
+  <h1 class="title">How is the OS organized?</h1>
+  <p class="subtitle">Architecture of an Operating Sytems</p>
 
 <div class="quarto-title-authors">
 </div>
 
+  <p class="date">2025-10-27</p>
+</section><section id="TOC">
+<nav role="doc-toc"> 
+<h2 id="toc-title">Table of contents</h2>
+<ul>
+<li><a href="#/kernel-vs-shell" id="/toc-kernel-vs-shell">Kernel vs Shell</a></li>
+<li><a href="#/program-process-versus-thread" id="/toc-program-process-versus-thread">Program, process versus thread</a></li>
+<li><a href="#/activity---task-manager" id="/toc-activity---task-manager">Activity - Task manager</a></li>
+<li><a href="#/virtualization" id="/toc-virtualization">Virtualization</a></li>
+<li><a href="#/talking-to-hardware" id="/toc-talking-to-hardware">Talking to hardware</a></li>
+<li><a href="#/paging" id="/toc-paging">Paging</a></li>
+<li><a href="#/device-drivers" id="/toc-device-drivers">Device drivers</a></li>
+</ul>
+</nav>
 </section>
-<section class="slide level2">
+<section id="kernel-vs-shell" class="title-slide slide level1 center">
+<h1>Kernel vs Shell</h1>
+<p>Most operating system are made up of two important parts: - The Kernel - The Shell</p>
+<p>ADD IMAGE</p>
+<p>The <strong>Kernel</strong> is the innermost part of the operating system and it is responsible for controlling the <strong>computer hardware components</strong>. It interacts with the devices such as the <strong>processor, the main memory, the storage devices, the inputs devices, output devices and communcation devices</strong>. It will directly communicate with the firmware installed on the devices through <strong>device drivers</strong>. It ensures the system’s stability.</p>
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>An analogy we could think of is a traffic controller at a busy airport. Where the programs running are like the airplanes and the hardware are the gates, runways, various terminals. The traffic controller must carefully coordinate takeoffs and landings, allocating runway space and assigning gates to the various airplanes going through. It’s must avoid collisions!</p>
+</div>
+</div>
+</div>
+<p>The <strong>Shell</strong> is an interface allowing the user to interact with all those functionalities. This interaction can either be through a graphical user interace (GUI- pronounced Gooey) or via command prompts which are user friendly commands that are understood by the OS. These commands are translated into binary by the <strong>command interpreter</strong>. Here are a few examples of shells (command-line):</p>
+<ul>
+<li>Bash (Linux, Mac and other Unix-like operating systems)</li>
+<li>BAT (Windows and MS-DOS)</li>
+</ul>
+</section>
 
+<section id="program-process-versus-thread" class="title-slide slide level1 center">
+<h1>Program, process versus thread</h1>
+<p>You might sometimes hear these terms being used interchangably and will get a chance to learn what each one is in depth in your Operating System course.</p>
+<p>A <strong>program</strong> is a set of instructions written by a programmer like yourself, which runs when the operating system loads it into memory. You may have multiple instances of the same program, they are each running independantly inside a <strong>process</strong>.</p>
+<p>A <strong>process</strong> is an active and single instance of a program running in memory (RAM), which is independant from other processes and has its own allocated memory to operate in. The OS identifies each process using a “PID” or process ID.</p>
+<p>A <strong>thread</strong> is smaller unit of running instructions, allowing a process to run various tasks simulatenously. Does it ring a bell? CPU threads are pathways to run software threads allocated by the OS. The goal is to enable multi-tasking.</p>
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Analogy</strong></p>
+</div>
+<div class="callout-content">
+<p>Imagine the Operating System acting as the chef of a restaurant under which various sous-chefs are working on various recipes. All receipes are written by a programmers and stored in a large file cabinet, the <strong>storage device</strong>. As soon as a customer requests a cake to be baked, chef-OS pulls out the recipe and assigns it to one of his sous-chefs, gives him all the ingredients, an oven (CPU) and a portion of the workspace (RAM). If the OS wants to speed up the process, he could assign assistants to work under the sous-chef, running various tasks in parallel, but all sharing the same space and resources.</p>
+</div>
+</div>
+</div>
+</section>
 
+<section id="activity---task-manager" class="title-slide slide level1 center">
+<h1>Activity - Task manager</h1>
+<p>To observe the various process currently running on your computer, you can open the Task Manager on Windows: 1. Press the Alt + Ctrl + Del 2. Open the Task Manager</p>
+<p>You’ll probably realize that many programs are actually using multiple processes at the same time!</p>
+</section>
+
+<section id="virtualization" class="title-slide slide level1 center">
+<h1>Virtualization</h1>
+<p>Let’s go back to the restaurant analogy. What if the restaurant is full, and all available space is being utilized by the sous-chefs. Customer are still requesting meals and Chef-OS needs to find additional space to work on urgent meals. To optimize the space a little bit, he noticed that some sous-chefs are currently prepping ingredients for the next day and could be moved to the food storage cold room at the back to free-up some space for the more urgent meals that need to be cooked in the next hour. Sous-chef then added a table in the cold room and ordered his sous-chefs to work there!</p>
+<p>This is a process in computer we’ve seen before, it’s called <strong>virtualization</strong>. It’s when a system runs out of available memory and needs to start borrowing space on the storage device to keep running. This can be useful to temporarily solve the problem of insufficient memory, but on the long run can be damaging. The sous-chefs won’t tolerate those working conditions! ADD IMAGE</p>
+</section>
+
+<section id="talking-to-hardware" class="title-slide slide level1 center">
+<h1>Talking to hardware</h1>
+<p>How the OS speaks to the CPU, RAM and storage is a complex process and is out of scope for this course, but it’s useful to build a mental image to to tie in all the knowledge we’ve learned for far.</p>
+<p>Let’s remind that the CPU is nothing more but an ultra complex maze of transistors connected through wires to the RAM. Those various wires are connected to the RAM to fetch the address and value of a piece of data. The clock controls how freqently the CPU processes the next instruction. This process only works in binary with transistors being set to 1 or 0. Every CPU has an “instruction set” (understood by us as english-like commands <code>MOV</code>, <code>ADD</code>, <code>NOT</code>, <code>AND</code>, <code>OR</code> but understood by the CPU as binary instructions). The operating system allocates space in RAM and copies the machine code of a program (after it’s been translated by a compiler) into that allocated space. It then set the CPU’s program counter (a register) to the starting address of the program currently in memory. This action will initiate the execution of the program. The OS has a crucial role for each hardware component, this table is a brief summary of the OS’s interactions.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 49%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Physical Interaction</th>
+<th>OS Role</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>CPU</strong></td>
+<td>Switches billions of transistors via voltage changes</td>
+<td>Executes OS instructions, manages timing</td>
+</tr>
+<tr class="even">
+<td><strong>RAM</strong></td>
+<td>Stores charge states (1s and 0s)</td>
+<td>OS allocates and tracks memory</td>
+</tr>
+<tr class="odd">
+<td><strong>Storage</strong></td>
+<td>Moves electrons or magnetic fields</td>
+<td>OS handles file systems and I/O commands</td>
+</tr>
+<tr class="even">
+<td><strong>Buses</strong></td>
+<td>Carry voltage signals between chips</td>
+<td>OS schedules and coordinates data transfers</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section id="paging" class="title-slide slide level1 center">
+<h1>Paging</h1>
+<p>Another useful process which the OS takes care of is called <strong>Pagging</strong>. That stems from the idea that the workspaces aren’t always available in a contiguous space in the RAM sticks. The OS needs to keep track of which spaces or “pages” in memory are currently available and allocate them to the process that needs it. Each program might have various pages scattered accross the RAM stick, and this is managed by the OS. Going back to the restaurant example, let’s imaging that two sous-chefs are working on the same order but are working appart from each other, one sous-chef has workstation 5 and the other has workstation 8 but needs more room to start cooking another element in the recipe. Chef-OS might choose to allocate workstation 4 for this sous-chef. This can quickly get confusing, so Chef-OS created a table with the list of various chefs and their assigned stations. ADD IMAGE ADD IMAGE</p>
+</section>
+
+<section id="device-drivers" class="title-slide slide level1 center">
+<h1>Device drivers</h1>
+<p>The operating system interacts with the hardware through special software called <strong>device driver</strong> which are responsible for communicating directly with the firmware of a hardware device.</p>
 
 
 </section>
@@ -184,19 +267,19 @@
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
-  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -561,84 +644,4 @@
       </script>
     
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1761684972331" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<div class="thumbnail"><a href="../topics/data-representation/index.html" class="no-external">
-
-<!-- img(9CEB782EFEE6)[progressive=false, height=]:listing:topics/data-representation/index.html -->
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../topics/data-representation/index.html" class="no-external">Data Representation</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../topics/data-representation/index.html" class="no-external">All lectures related to logic &amp; data representation can be found here.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../topics/data-representation/index.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1761684972549" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<div class="thumbnail"><a href="../topics/hardware/index.html" class="no-external">
-
-<!-- img(9CEB782EFEE6)[progressive=false, height=]:listing:topics/hardware/index.html -->
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../topics/hardware/index.html" class="no-external">Hardware</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../topics/hardware/index.html" class="no-external">All lectures related to computer hardware can be found here.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../topics/hardware/index.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1761684972549" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<div class="thumbnail"><a href="../topics/operating-systems/index.html" class="no-external">
-
-<!-- img(9CEB782EFEE6)[progressive=false, height=]:listing:topics/operating-systems/index.html -->
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../topics/operating-systems/index.html" class="no-external">Operating Systems</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../topics/operating-systems/index.html" class="no-external">All lectures related to operating systems can be found here.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../topics/operating-systems/index.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1761684972551" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<div class="thumbnail"><a href="../topics/technical-support/index.html" class="no-external">
-
-<!-- img(9CEB782EFEE6)[progressive=false, height=]:listing:topics/technical-support/index.html -->
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../topics/technical-support/index.html" class="no-external">Technical Support</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../topics/technical-support/index.html" class="no-external">All lectures related to technical support can be found here.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../topics/technical-support/index.html" class="no-external">
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></body></html>
+</body></html>
