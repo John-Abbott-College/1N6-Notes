@@ -1,0 +1,76 @@
+---
+date: 2025-10-27
+subtitle: Architecture of an Operating Sytems 
+title: How is the OS organized?
+draft: true
+---
+# Kernel vs Shell
+Most operating system are made up of two important parts:
+- The Kernel
+- The Shell 
+
+ADD IMAGE 
+
+The **Kernel** is the innermost part of the operating system and it is responsible for controlling the **computer hardware components**. It interacts with the devices such as the **processor, the main memory, the storage devices, the inputs devices, output devices and communcation devices**. It will directly communicate with the firmware installed on the devices through **device drivers**. It ensures the system's stability.
+
+:::{.callout-tip icon="false"}
+An analogy we could think of is a traffic controller at a busy airport. Where the programs running are like the airplanes and the hardware are the gates, runways, various terminals. The traffic controller must carefully coordinate takeoffs and landings, allocating runway space and assigning gates to the various airplanes going through. It's must avoid collisions!
+:::
+
+The **Shell** is an interface allowing the user to interact with all those functionalities. This interaction can either be through a graphical user interace (GUI- pronounced Gooey) or via command prompts which are user friendly commands that are understood by the OS. These commands are translated into binary by the __command interpreter__.  Here are a few examples of shells (command-line):
+
+- Bash (Linux, Mac and other Unix-like operating systems)
+- BAT (Windows and MS-DOS)
+
+
+# Program, process versus thread
+
+You might sometimes hear these terms being used interchangably and will get a chance to learn what each one is in depth in your Operating System course. 
+
+A **program** is a set of instructions written by a programmer like yourself, which runs when the operating system loads it into memory. You may have multiple instances of the same program, they are each running independantly inside a **process**.
+
+A **process** is an active and single instance of a program  running in memory (RAM), which is independant from other processes and has its own allocated memory to operate in. The OS identifies each process using a "PID" or process ID. 
+
+A **thread** is smaller unit of running instructions, allowing a process to run various tasks simulatenously. Does it ring a bell? CPU threads are pathways to run software threads allocated by the OS. The goal is to enable multi-tasking. 
+
+:::{.callout-tip icon="false"}
+# Analogy
+Imagine the Operating System acting as the chef of a restaurant under which various sous-chefs are working on various recipes. All receipes are written by a programmers and stored in a large file cabinet, the **storage device**. As soon as a customer requests a cake to be baked, chef-OS pulls out the recipe and assigns it to one of his sous-chefs, gives him all the ingredients, an oven (CPU) and a portion of the workspace (RAM). If the OS wants to speed up the process, he could assign assistants to work under the sous-chef, running various tasks in parallel, but all sharing the same space and resources. 
+:::
+
+# Activity - Task manager
+To observe the various process currently running on your computer, you can open the Task Manager on Windows: 
+1. Press the Alt + Ctrl + Del 
+2. Open the Task Manager
+
+You'll probably realize that many programs are actually using multiple processes at the same time!
+
+# Virtualization
+Let's go back to the restaurant analogy. What if the restaurant is full, and all available space is being utilized by the sous-chefs. Customer are still requesting meals and Chef-OS needs to find additional space to work on urgent meals. To optimize the space a little bit, he noticed that some sous-chefs are currently prepping ingredients for the next day and could be moved to the food storage cold room at the back to free-up some space for the more urgent meals that need to be cooked in the next hour. Sous-chef then added a table in the cold room and ordered his sous-chefs to work there! 
+
+This is a process in computer we've seen before, it's called **virtualization**. It's when a system runs out of available memory and needs to start borrowing space on the storage device to keep running. This can be useful to temporarily solve the problem of insufficient memory, but on the long run can be damaging. The sous-chefs won't tolerate those working conditions!
+ADD IMAGE
+
+# Talking to hardware 
+How the OS speaks to the CPU, RAM and storage is a complex process and is out of scope for this course, but it's useful to build a mental image to to tie in all the knowledge we've learned for far. 
+
+Let's remind that the CPU is nothing more but an ultra complex maze of transistors connected through wires to the RAM. Those various wires are connected to the RAM to fetch the address and value of a piece of data. The clock controls how freqently the CPU processes the next instruction. This process only works in binary with transistors being set to 1 or 0. Every CPU has an "instruction set" (understood by us as english-like commands `MOV`, `ADD`, `NOT`, `AND`, `OR` but understood by the CPU as binary instructions). The operating system allocates space in RAM and copies the machine code of a program (after it's been translated by a compiler) into that allocated space. It then set the CPU's program counter (a register) to the starting address of the program currently in memory. This action will initiate the execution of the program. The OS has a crucial role for each hardware component, this table is a brief summary of the OS's interactions. 
+
+| Component   | Physical Interaction                                 | OS Role                                     |
+| ----------- | ---------------------------------------------------- | ------------------------------------------- |
+| **CPU**     | Switches billions of transistors via voltage changes | Executes OS instructions, manages timing    |
+| **RAM**     | Stores charge states (1s and 0s)                     | OS allocates and tracks memory              |
+| **Storage** | Moves electrons or magnetic fields                   | OS handles file systems and I/O commands    |
+| **Buses**   | Carry voltage signals between chips                  | OS schedules and coordinates data transfers |
+
+
+# Paging
+Another useful process which the OS takes care of is called **Pagging**. That stems from the idea that the workspaces aren't always available in a contiguous space in the RAM sticks. The OS needs to keep track of which spaces or "pages" in memory are currently available and allocate them to the process that needs it. Each program might have various pages scattered accross the RAM stick, and this is managed by the OS. 
+Going back to the restaurant example, let's imaging that two sous-chefs are working on the same order but are working appart from each other, one sous-chef has workstation 5 and the other has workstation 8 but needs more room to start cooking another element in the recipe. Chef-OS might choose to allocate workstation 4 for this sous-chef. This can quickly get confusing, so Chef-OS created a table with the list of various chefs and their assigned stations.
+ADD IMAGE
+ADD IMAGE 
+
+# Device drivers
+
+The operating system interacts with the hardware through special software called **device driver** which are responsible for communicating directly with the firmware of a hardware device. 
+

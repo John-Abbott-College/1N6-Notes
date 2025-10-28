@@ -1,0 +1,91 @@
+---
+date: 2025-10-28
+subtitle: Introduction to Operating Sytems 
+title: Windows, Mac OS and Linux
+draft: false
+---
+
+# What's an operating sytem?
+The operating system (OS) is the main software that controls a computer’s hardware, manages the file system, and runs applications. It provides a user-friendly interface that allows users to interact with the computer without writing binary code for the CPU.
+
+The OS is always active and is the first program loaded into memory when the computer starts. All other applications operate within it, while the OS handles memory and process allocation for each one. It also manages input and output operations and switches efficiently between different tasks.
+
+## Loading the boot loader
+
+As we've seen in the hardware module, the firmware of the motherboard, the BIOS (or UEFI) is responsible for "waking up" the hardware and loading the operating system. The BIOS/UEFI looks for a bootable device based on the **boot order**. The first boot device in the list should have a "boot sector" in which the "boot loader", a special software is located, will load the OS into memory. This process will follow the __legacy__ MBR parition style or the more modern **UEFI** GPT partition style.
+
+- **MBR**: In legacy systems, the BIOS looks for the __Master Boot Record (MBR)__ located on the first sector of the boot disk. MBR has limitations which we will cover later.
+
+- **GPT** : In modern systems, the UEFI uses the __GUID Partition Table__ instead 
+
+# History of OS
+We've marked a few key events in the history of operating systems. Try to organize them in chronological order:
+
+<iframe src="https://learningapps.org/watch?v=p8uio4zwj25" style="border:0px;width:100%;height:500px" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+
+# Windows 🪟
+
+## The days of MS-DOS
+If we’re going to discuss Windows, it’s important to mention its predecessor: MS-DOS. This was a command-line–only operating system developed for x86 systems (based on the Intel 8088 CPU architecture). It was originally created by Tim Paterson at Seattle Computer Products. In 1981, Microsoft acquired the company, hired Paterson, and adapted the system for its own personal computers—rebranding it as MS-DOS.
+
+![MS-DOS](https://upload.wikimedia.org/wikipedia/commons/a/a8/Multitasking_MS-DOS_4.00_Command.png)
+
+Most MS-DOS commands are still supported by Windows Command Prompt __CMD__.
+
+# Windows CMD Commands
+These commands will be explored in this course. 
+
+- `cd` : Changes the current directory
+- `echo`: writes input text to a standard output (file or console)
+- `dir`: short for directory, it prints out the current directory
+- `del` : deletes a file 
+- `copy`: creates a copy of a file and moves it elsewhere in the filesystem or to another device. In modern Windows, it can be used to concatenate files together or copy multiple files.
+- `rename`: moves files or renames them. 
+
+
+# Linux 🐧
+
+Linux is built on the Unix operating system and is both free and open source, meaning anyone can use, modify, and distribute it.
+
+There are many Linux distributions, which are complete operating systems built around the Linux kernel and bundled with additional software for specific purposes. Some popular examples include:
+
+- Fedora – Popular among developers
+
+- Ubuntu – Great choice for beginners
+
+- Debian
+
+- Solus
+
+- Deepin
+
+- Linux Mint
+
+## Unix vs Linux
+
+For beginners, Unix and Linux are often confusing. Unix was developed in the 1960s and served as the foundation for many modern operating systems, including macOS and Linux. You could compare Unix to Linux in the same way MS-DOS relates to Windows; both laid the groundwork for more advanced systems. However, there is one key difference: Linux was written entirely from scratch by Linus Torvalds, though it was designed to follow the Unix architecture.
+
+## Linux Commands
+
+Linux commands are fundamental tools used in the command line interface (CLI) to interact with the operating system. Common examples include:
+
+`ls` : Lists contents of directories
+`cd` : Changes the current directory
+`pwd` : Displays the current directory path
+`cp`, `mv`, `rm` : Used to copy, move, and delete files respectively
+`sudo` : Executes commands with administrative (root) privileges
+`free` : Shows memory usage
+`df` : Checks disk space usage
+`top` : Monitors running processes
+
+[Here](https://www.geeksforgeeks.org/linux-unix/linux-commands/) is a more extensive list of commands for Linux. 
+
+
+# Mac OS 🍏
+
+Although macOS is also a Unix-based operating system, it is a proprietary platform developed by Apple and closely integrated with Apple hardware. It is well-known for its user-friendly design and optimized experience for professional users. This course will not focus heavily on macOS; however, most Linux commands still apply since both systems share Unix roots. You are encouraged to explore the Mac computers in P-322 and become familiar with this operating system because this will come in handy for future courses. 
+
+
+# References
+1. [Geeks for geeks - Operating System Tutorial](https://www.geeksforgeeks.org/operating-systems/operating-systems/)
+2. [What is an Operating System? by Geeks for geeks](https://www.geeksforgeeks.org/operating-systems/what-is-an-operating-system/)
