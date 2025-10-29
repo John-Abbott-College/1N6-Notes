@@ -53,7 +53,7 @@ website:
           - topics/data-representation/hexadecimal-numbers.qmd
         - section: "Operating Systems"
           contents:
-          - topics/operating-systems/operating-systems-intro.qmd
+          - topics/operating-systems/operating-system-intro.qmd
 
 format:
   html:
