@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.8.25">
 
   <meta name="dcterms.date" content="2025-10-28">
-  <title>{{&lt; var course.title &gt;}} – Windows, Mac OS and Linux</title>
+  <title>{{&lt; var course.title &gt;}} – Introduction to Operating Sytems</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -123,8 +123,8 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Windows, Mac OS and Linux – Technical Support">
-<meta property="og:description" content="Introduction to Operating Sytems">
+<meta property="og:title" content="Introduction to Operating Sytems – Technical Support">
+<meta property="og:description" content="Windows, Linux and Others">
 <meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/operating-systems/_assets/favicons/favicon-32x32.png">
 <meta property="og:site_name" content="{{< var course.title >}}">
 </head>
@@ -133,8 +133,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Windows, Mac OS and Linux</h1>
-  <p class="subtitle">Introduction to Operating Sytems</p>
+  <h1 class="title">Introduction to Operating Sytems</h1>
+  <p class="subtitle">Windows, Linux and Others</p>
 
 <div class="quarto-title-authors">
 </div>
@@ -147,9 +147,11 @@
 <li><a href="#/whats-an-operating-sytem" id="/toc-whats-an-operating-sytem">What’s an operating sytem?</a></li>
 <li><a href="#/history-of-os" id="/toc-history-of-os">History of OS</a></li>
 <li><a href="#/windows" id="/toc-windows">Windows 🪟</a></li>
-<li><a href="#/windows-cmd-commands" id="/toc-windows-cmd-commands">Windows CMD Commands</a></li>
 <li><a href="#/linux" id="/toc-linux">Linux 🐧</a></li>
 <li><a href="#/mac-os" id="/toc-mac-os">Mac OS 🍏</a></li>
+<li><a href="#/chrome" id="/toc-chrome">Chrome</a></li>
+<li><a href="#/server-operating-systems" id="/toc-server-operating-systems">Server Operating Systems</a></li>
+<li><a href="#/mobile-operating-systems" id="/toc-mobile-operating-systems">Mobile Operating systems</a></li>
 <li><a href="#/references" id="/toc-references">References</a></li>
 </ul>
 </nav>
@@ -185,9 +187,42 @@
 <p>If we’re going to discuss Windows, it’s important to mention its predecessor: MS-DOS. This was a command-line–only operating system developed for x86 systems (based on the Intel 8088 CPU architecture). It was originally created by Tim Paterson at Seattle Computer Products. In 1981, Microsoft acquired the company, hired Paterson, and adapted the system for its own personal computers—rebranding it as MS-DOS.</p>
 
 <img data-src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Multitasking_MS-DOS_4.00_Command.png" class="r-stretch quarto-figure-center"><p class="caption">MS-DOS</p><p>Most MS-DOS commands are still supported by Windows Command Prompt <strong>CMD</strong>.</p>
-</section></section>
-<section id="windows-cmd-commands" class="title-slide slide level1 center">
-<h1>Windows CMD Commands</h1>
+</section>
+<section id="windows-over-the-years" class="slide level2">
+<h2>Windows over the years</h2>
+<iframe data-external="1" src="https://www.youtube.com/embed/pYxNs5kYJwk" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Windows 9</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>What happened to Windows 9?</strong> It Never came out! Some believe this was a Marketing strategy to signify that Windows 10 is the <strong>last major version of Windows</strong> and it’s a <strong>“revolutionary version”</strong>. In the end, it wasn’t revolution,and was certainly not the last Windows version.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="windows-11" class="slide level2">
+<h2>Windows 11</h2>
+<p>The latest version of Windows is Windows 11. These are the important features:</p>
+<ul>
+<li><p><strong>UEFI</strong> Firmware Required: Windows 11 only supports motherboards with UEFI; legacy BIOS systems are not compatible.</p></li>
+<li><p><strong>Secure Boot</strong>: Must be enabled in the system firmware.</p></li>
+<li><p><strong>Trusted Platform Module (TPM)</strong>: Version 2.0 or higher is required for installation.</p></li>
+<li><p><strong>Zero Trust Compatibility</strong>: All users, processes, and services must be verified and trusted at every level of the system.</p></li>
+<li><p><strong>Internet Connection</strong>: Needed during setup to complete installation and sign in with a Microsoft account. 👉 Actually, there is a way to bypass to those setup steps. More on this during the lab.</p></li>
+<li><p><strong>Other features</strong>: All editions except the Home ed, come with BitLocker and OneDrive for Business. BitLocker gives the ability to encrypt the storage device to prevent information theft. OneDrive allows for file synchronization to the cloud.</p></li>
+</ul>
+</section>
+<section id="windows-11-system-requirements" class="slide level2">
+<h2>Windows 11: System requirements</h2>
+<ul>
+<li><strong>RAM</strong> : 4Gb Minimum</li>
+<li><strong>CPU</strong> : 1Ghz, 2 Cores</li>
+</ul>
+</section>
+<section id="windows-cmd-commands" class="slide level2">
+<h2>Windows CMD Commands</h2>
 <p>These commands will be explored in this course.</p>
 <ul>
 <li><code>cd</code> : Changes the current directory</li>
@@ -197,13 +232,12 @@
 <li><code>copy</code>: creates a copy of a file and moves it elsewhere in the filesystem or to another device. In modern Windows, it can be used to concatenate files together or copy multiple files.</li>
 <li><code>rename</code>: moves files or renames them.</li>
 </ul>
-</section>
-
+</section></section>
 <section>
 <section id="linux" class="title-slide slide level1 center">
 <h1>Linux 🐧</h1>
 <p>Linux is built on the Unix operating system and is both free and open source, meaning anyone can use, modify, and distribute it.</p>
-<p>There are many Linux distributions, which are complete operating systems built around the Linux kernel and bundled with additional software for specific purposes. Some popular examples include:</p>
+<p>There are many Linux distributions, which are complete operating systems built around the Linux kernel and bundled with additional software for specific purposes. Some are used for servers. Here are some popular examples:</p>
 <ul>
 <li><p>Fedora – Popular among developers</p></li>
 <li><p>Ubuntu – Great choice for beginners</p></li>
@@ -215,7 +249,7 @@
 </section>
 <section id="unix-vs-linux" class="slide level2">
 <h2>Unix vs Linux</h2>
-<p>For beginners, Unix and Linux are often confusing. Unix was developed in the 1960s and served as the foundation for many modern operating systems, including macOS and Linux. You could compare Unix to Linux in the same way MS-DOS relates to Windows; both laid the groundwork for more advanced systems. However, there is one key difference: Linux was written entirely from scratch by Linus Torvalds, though it was designed to follow the Unix architecture.</p>
+<p>For beginners, Unix and Linux are often confusing. Unix was developed in the 1960s by AT&amp;T and served as the foundation for many modern operating systems, including macOS and Linux. You could compare Unix to Linux in the same way MS-DOS relates to Windows; both laid the groundwork for more advanced systems. However, there is one key difference: Linux was written entirely from scratch by Linus Torvalds, though it was designed to follow the Unix architecture.</p>
 </section>
 <section id="linux-commands" class="slide level2">
 <h2>Linux Commands</h2>
@@ -226,7 +260,26 @@
 </section></section>
 <section id="mac-os" class="title-slide slide level1 center">
 <h1>Mac OS 🍏</h1>
-<p>Although macOS is also a Unix-based operating system, it is a proprietary platform developed by Apple and closely integrated with Apple hardware. It is well-known for its user-friendly design and optimized experience for professional users. This course will not focus heavily on macOS; however, most Linux commands still apply since both systems share Unix roots. You are encouraged to explore the Mac computers in P-322 and become familiar with this operating system because this will come in handy for future courses.</p>
+<p>Although macOS is also a Unix-based operating system, it is a proprietary platform developed by Apple and closely integrated with Apple hardware. Developed in the 1980s, it is well-known for its user-friendly design and optimized experience for professional users. This course will not focus on macOS; however, most Linux commands still apply since both systems share Unix roots. You are encouraged to explore the Mac computers in P-322 and become familiar with this operating system because this will come in handy for future courses.</p>
+
+<img data-src="https://www.apple.com/newsroom/images/product/os/macos/standard/apple_macos-bigsur-availability_redesign_11122020_big.jpg.small_2x.jpg" class="r-stretch quarto-figure-center"><p class="caption">Macbook Pro</p></section>
+
+<section id="chrome" class="title-slide slide level1 center">
+<h1>Chrome</h1>
+<p>This OS was designed by Google around the 2010s. It’s a Linux kernel- based and derived from the free software Chromium OS. Chrome OS uses Google Chrome as the main interface allowing users to only use Web Apps. This course will not focus on Chrome OS.</p>
+
+<img data-src="https://miro.medium.com/v2/resize:fit:1100/format:webp/0*L7iDfb9sRYgG9Pad.png" class="r-stretch quarto-figure-center"><p class="caption">Chrome OS</p></section>
+
+<section id="server-operating-systems" class="title-slide slide level1 center">
+<h1>Server Operating Systems</h1>
+<p>These are designed for corporate environment servicing multiple users with a wide range of needs. They generally provide network resources including server applications, centralized data storage, network print queues, RAID and backup systems.</p>
+</section>
+
+<section id="mobile-operating-systems" class="title-slide slide level1 center">
+<h1>Mobile Operating systems</h1>
+<p>Mobile devices such as Smart phones and tablets have their own light weight operating systems. They manage the specific hardware of mobile devices, provide network connectivity, and intuitive user experience. There exist many mobile operating systems, but the most popular ones are <strong>Android</strong> developed by Google and <strong>iOS</strong> developed by Apple:</p>
+
+<img data-src="https://a.storyblok.com/f/47007/2400x1551/b3cba6007c/operatingsystem_glossary.png/m/2880x0/filters:quality(80).png" class="r-stretch quarto-figure-center"><p class="caption">Android and iOS</p><p>Other operating systems: - Harmony OS (Huawei) - Tizen (Samsung) - Windows mobile (Microsoft) - WebOS</p>
 </section>
 
 <section id="references" class="title-slide slide level1 center scrollable">

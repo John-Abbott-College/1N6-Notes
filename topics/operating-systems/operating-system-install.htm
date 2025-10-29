@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <link href="../../_assets/favicons/favicon.ico" rel="icon">
-<script src="../../site_libs/quarto-listing/list.min.js"></script>
-<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-html/tabby.min.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -12,7 +10,8 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>{{&lt; var course.title &gt;}} – Hardware</title>
+  <meta name="dcterms.date" content="2025-10-30">
+  <title>{{&lt; var course.title &gt;}} – Installing OS</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -32,35 +31,6 @@
     }
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-06e768f098560084c2d7120de8ad04fb.css">
-  <script>
-
-    window.document.addEventListener("DOMContentLoaded", function (_event) {
-      const listingTargetEl = window.document.querySelector('#listing-listing .list');
-      if (!listingTargetEl) {
-        // No listing discovered, do not attach.
-        return; 
-      }
-
-      const options = {
-        valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
-        
-        searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
-      };
-
-      window['quarto-listings'] = window['quarto-listings'] || {};
-      window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-      if (window['quarto-listing-loaded']) {
-        window['quarto-listing-loaded']();
-      }
-    });
-
-    window.addEventListener('hashchange',() => {
-      if (window['quarto-listing-loaded']) {
-        window['quarto-listing-loaded']();
-      }
-    })
-    </script>
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -153,9 +123,9 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Hardware – Technical Support">
-<meta property="og:description" content="All lectures related to computer hardware can be found here.">
-<meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/hardware/_assets/favicons/favicon-32x32.png">
+<meta property="og:title" content="Installing OS – Technical Support">
+<meta property="og:description" content="Single boot, Dual boot and Virtual machines">
+<meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/operating-systems/_assets/favicons/favicon-32x32.png">
 <meta property="og:site_name" content="{{< var course.title >}}">
 </head>
 <body class="quarto-dark">
@@ -163,19 +133,86 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Hardware</h1>
-  <p class="subtitle">All lectures related to computer hardware can be found here.</p>
+  <h1 class="title">Installing OS</h1>
+  <p class="subtitle">Single boot, Dual boot and Virtual machines</p>
 
 <div class="quarto-title-authors">
 </div>
 
+  <p class="date">2025-10-30</p>
+</section><section id="TOC">
+<nav role="doc-toc"> 
+<h2 id="toc-title">Table of contents</h2>
+<ul>
+<li><a href="#/single-boot" id="/toc-single-boot">Single boot 🪟</a></li>
+<li><a href="#/dual-boot" id="/toc-dual-boot">Dual boot 🌓</a></li>
+<li><a href="#/virtualization" id="/toc-virtualization">Virtualization 🪆</a></li>
+</ul>
+</nav>
 </section>
 <section class="slide level2">
 
-
-
-
+<p>Most commercial computers come with an operating system pre-installed on the disk. While most users keep and use the OS that comes with their computer, it is possible to upgrade, change, or install another one. The three most common operating systems for personal computers are Microsoft Windows, macOS, and Linux.</p>
 </section>
+<section>
+<section id="single-boot" class="title-slide slide level1 center">
+<h1>Single boot 🪟</h1>
+<p>This is a mode where only a single operating system is installed on a system. When the computer is turned on, it’ll boot into that operating system.</p>
+</section>
+<section id="clean-installation" class="slide level2">
+<h2>Clean Installation</h2>
+<p>A clean installation is an installation where the target&nbsp;disk partition&nbsp;is <strong>erased</strong> prior to actual installation. A clean installation should be carried out:</p>
+<ul>
+<li>When a computer is passed from one person to another.</li>
+<li>When the OS that was installed is corrupt.</li>
+<li>When the primary hard drive has been replaced</li>
+</ul>
+<p>To perform a clean installation, a series of common steps are done. Order those steps and validate your understanding!</p>
+<iframe src="https://learningapps.org/watch?v=pi0b8rb0325" style="border:0px;width:100%;height:500px" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+</iframe>
+</section></section>
+<section>
+<section id="dual-boot" class="title-slide slide level1 center">
+<h1>Dual boot 🌓</h1>
+<p>Exploring or installing multiple operating systems can offer flexibility, learning opportunities, and practical benefits for different types of users. <strong>Dual booting</strong> indicates installing a second operating system on a separate partition of a hard drive. On boot, a prompt will allow the user to choose the OS. To switch the OS, a reboot is <strong>required</strong>.</p>
+
+<img data-src="https://upload.wikimedia.org/wikipedia/commons/c/cf/GRUB_with_ubuntu_and_windows_vista.png" class="r-stretch quarto-figure-center"><p class="caption">GRUB menu on power-on allowing user to select the OS to boot</p></section>
+<section id="pros" class="slide level2">
+<h2>Pros</h2>
+<ul>
+<li>🧠 <strong>Learn new systems:</strong> Users can experiment with Linux while still keeping access to their Windows OS.</li>
+<li>💾 <strong>Access more software:</strong> Some applications are developed exclusively for specific platforms.</li>
+<li>🧪 <strong>Test across systems:</strong> Developers can natively test software designed for multiple OSs, and web designers can preview sites using native browsers.</li>
+<li>🎮 <strong>Game safely:</strong> Gamers can test or tweak setups without risking their main Windows installation. 😄</li>
+</ul>
+</section>
+<section id="cons" class="slide level2">
+<h2>Cons</h2>
+<ul>
+<li><p><strong>Disk space</strong> Perhaps the biggest factor when setting up multiple operating systems on a personal computer is the available disk space.Running multiple operating systems means the need to allocate space for each operating system and each systems file storage.</p></li>
+<li><p><strong>Switching between operating systems</strong> User tend to find hard to move the work environment between multiple OSs (running application and files).</p></li>
+</ul>
+</section></section>
+<section>
+<section id="virtualization" class="title-slide slide level1 center">
+<h1>Virtualization 🪆</h1>
+<p>This is no the same thing as <strong>Memory Virtualization</strong> which we learnt about when a system runs out of RAM. <strong>Virtualization</strong> is the process of hosting virual operating systems within a host operating system.</p>
+
+<img data-src="https://www.pcsteps.com/wp-content/uploads/2017/06/How-To-Create-a-Windows-Virtual-Machine-in-Linux-and-Windows-Featured.png" class="r-stretch"></section>
+<section id="pros-1" class="slide level2">
+<h2>Pros</h2>
+<ul>
+<li><p>🧳 <strong>Save space:</strong> Virtual machines help reduce the physical space required for separate hardware setups.</p></li>
+<li><p>💼 <strong>Business-friendly:</strong> Switching between operating systems is quick and seamless, making virtualization ideal for workplace productivity.</p></li>
+</ul>
+<p>*⚙️ <strong>Efficient resource use:</strong> High-performance servers can host several virtual machines, each dedicated to specific tasks or departments.</p>
+</section>
+<section id="cons-1" class="slide level2">
+<h2>Cons</h2>
+<p>*🐢 <strong>Performance trade-off:</strong> Running several virtual machines can slow down the host operating system, especially on lower-end hardware.</p>
+
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -561,155 +598,4 @@
       </script>
     
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1755648000000" data-listing-file-modified-sort="1761774200825" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1873">
-<div class="thumbnail"><a href="../../topics/hardware/introduction-to-computers.html" class="no-external">
-
-<!-- img(9CEB782EFEE6)[progressive=false, height=]:listing:topics/hardware/introduction-to-computers.html -->
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../topics/hardware/introduction-to-computers.html" class="no-external">Introduction to Computers</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../../topics/hardware/introduction-to-computers.html" class="no-external">The fundamental properties of computers explained with examples and definitions.</a>
-</div>
-<div class="delink listing-description"><a href="../../topics/hardware/introduction-to-computers.html" class="no-external">
-<!-- desc(5A0113B34292)[max=175]:topics/hardware/introduction-to-computers.html -->
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../topics/hardware/introduction-to-computers.html" class="no-external">
-<div class="listing-date">
-2025-08-20
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1756080000000" data-listing-file-modified-sort="1761774200825" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="25" data-listing-word-count-sort="4940">
-<div class="thumbnail"><a href="../../topics/hardware/external-components.html" class="no-external">
-
-<!-- img(9CEB782EFEE6)[progressive=false, height=]:listing:topics/hardware/external-components.html -->
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../topics/hardware/external-components.html" class="no-external">External components</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../../topics/hardware/external-components.html" class="no-external">Overview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors</a>
-</div>
-<div class="delink listing-description"><a href="../../topics/hardware/external-components.html" class="no-external">
-<!-- desc(5A0113B34292)[max=175]:topics/hardware/external-components.html -->
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../topics/hardware/external-components.html" class="no-external">
-<div class="listing-date">
-2025-08-25
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1756771200000" data-listing-file-modified-sort="1761774200825" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="17" data-listing-word-count-sort="3386">
-<div class="thumbnail"><a href="../../topics/hardware/internal-components.html" class="no-external">
-
-<!-- img(9CEB782EFEE6)[progressive=false, height=]:listing:topics/hardware/internal-components.html -->
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../topics/hardware/internal-components.html" class="no-external">Internal Components</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../../topics/hardware/internal-components.html" class="no-external">Explains the most important internal components of desktop computers. Processing, memory, storage, and communication.</a>
-</div>
-<div class="delink listing-description"><a href="../../topics/hardware/internal-components.html" class="no-external">
-<!-- desc(5A0113B34292)[max=175]:topics/hardware/internal-components.html -->
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../topics/hardware/internal-components.html" class="no-external">
-<div class="listing-date">
-2025-09-02
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1757289600000" data-listing-file-modified-sort="1761774200825" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2331">
-<div class="thumbnail"><a href="../../topics/hardware/understanding-cpus.html" class="no-external">
-
-<!-- img(9CEB782EFEE6)[progressive=false, height=]:listing:topics/hardware/understanding-cpus.html -->
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../topics/hardware/understanding-cpus.html" class="no-external">Understanding CPUs</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../../topics/hardware/understanding-cpus.html" class="no-external">More detail on CPUs. “Guy in Box” analogy, Clock Speed, Codebook, Databuses explained.</a>
-</div>
-<div class="delink listing-description"><a href="../../topics/hardware/understanding-cpus.html" class="no-external">
-<!-- desc(5A0113B34292)[max=175]:topics/hardware/understanding-cpus.html -->
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../topics/hardware/understanding-cpus.html" class="no-external">
-<div class="listing-date">
-2025-09-08
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1760918400000" data-listing-file-modified-sort="1761774200825" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1257">
-<div class="thumbnail"><a href="../../topics/hardware/bios_cmos_uefi.html" class="no-external">
-
-<!-- img(9CEB782EFEE6)[progressive=false, height=]:listing:topics/hardware/bios_cmos_uefi.html -->
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../topics/hardware/bios_cmos_uefi.html" class="no-external">BIOS, CMOS, UEFI</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../../topics/hardware/bios_cmos_uefi.html" class="no-external">Basic Input/Output services (computer firmware)</a>
-</div>
-<div class="delink listing-description"><a href="../../topics/hardware/bios_cmos_uefi.html" class="no-external">
-<!-- desc(5A0113B34292)[max=175]:topics/hardware/bios_cmos_uefi.html -->
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../topics/hardware/bios_cmos_uefi.html" class="no-external">
-<div class="listing-date">
-2025-10-20
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></body></html>
+</body></html>

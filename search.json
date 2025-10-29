@@ -755,6 +755,126 @@
     "text": "Data Representation\n\n\nAll lectures related to logic & data representation can be found here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHardware\n\n\nAll lectures related to computer hardware can be found here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOperating Systems\n\n\nAll lectures related to operating systems can be found here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTechnical Support\n\n\nAll lectures related to technical support can be found here.\n\n\n\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0"
   },
   {
+    "objectID": "topics/operating-systems/operating-system-install.html",
+    "href": "topics/operating-systems/operating-system-install.html",
+    "title": "Installing OS",
+    "section": "",
+    "text": "Most commercial computers come with an operating system pre-installed on the disk. While most users keep and use the OS that comes with their computer, it is possible to upgrade, change, or install another one. The three most common operating systems for personal computers are Microsoft Windows, macOS, and Linux.",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Installing OS"
+    ]
+  },
+  {
+    "objectID": "topics/operating-systems/operating-system-install.html#clean-installation",
+    "href": "topics/operating-systems/operating-system-install.html#clean-installation",
+    "title": "Installing OS",
+    "section": "Clean Installation",
+    "text": "Clean Installation\nA clean installation is an installation where the target disk partition is erased prior to actual installation. A clean installation should be carried out:\n\nWhen a computer is passed from one person to another.\nWhen the OS that was installed is corrupt.\nWhen the primary hard drive has been replaced\n\nTo perform a clean installation, a series of common steps are done. Order those steps and validate your understanding!",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Installing OS"
+    ]
+  },
+  {
+    "objectID": "topics/operating-systems/operating-system-install.html#pros",
+    "href": "topics/operating-systems/operating-system-install.html#pros",
+    "title": "Installing OS",
+    "section": "Pros",
+    "text": "Pros\n\n🧠 Learn new systems: Users can experiment with Linux while still keeping access to their Windows OS.\n💾 Access more software: Some applications are developed exclusively for specific platforms.\n🧪 Test across systems: Developers can natively test software designed for multiple OSs, and web designers can preview sites using native browsers.\n🎮 Game safely: Gamers can test or tweak setups without risking their main Windows installation. 😄",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Installing OS"
+    ]
+  },
+  {
+    "objectID": "topics/operating-systems/operating-system-install.html#cons",
+    "href": "topics/operating-systems/operating-system-install.html#cons",
+    "title": "Installing OS",
+    "section": "Cons",
+    "text": "Cons\n\nDisk space Perhaps the biggest factor when setting up multiple operating systems on a personal computer is the available disk space.Running multiple operating systems means the need to allocate space for each operating system and each systems file storage.\nSwitching between operating systems User tend to find hard to move the work environment between multiple OSs (running application and files).",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Installing OS"
+    ]
+  },
+  {
+    "objectID": "topics/operating-systems/operating-system-install.html#pros-1",
+    "href": "topics/operating-systems/operating-system-install.html#pros-1",
+    "title": "Installing OS",
+    "section": "Pros",
+    "text": "Pros\n\n🧳 Save space: Virtual machines help reduce the physical space required for separate hardware setups.\n💼 Business-friendly: Switching between operating systems is quick and seamless, making virtualization ideal for workplace productivity.\n\n*⚙️ Efficient resource use: High-performance servers can host several virtual machines, each dedicated to specific tasks or departments.",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Installing OS"
+    ]
+  },
+  {
+    "objectID": "topics/operating-systems/operating-system-install.html#cons-1",
+    "href": "topics/operating-systems/operating-system-install.html#cons-1",
+    "title": "Installing OS",
+    "section": "Cons",
+    "text": "Cons\n*🐢 Performance trade-off: Running several virtual machines can slow down the host operating system, especially on lower-end hardware.",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Installing OS"
+    ]
+  },
+  {
+    "objectID": "topics/operating-systems/operating-system-install.htm#clean-installation",
+    "href": "topics/operating-systems/operating-system-install.htm#clean-installation",
+    "title": "Installing OS",
+    "section": "Clean Installation",
+    "text": "Clean Installation\nA clean installation is an installation where the target disk partition is erased prior to actual installation. A clean installation should be carried out:\n\nWhen a computer is passed from one person to another.\nWhen the OS that was installed is corrupt.\nWhen the primary hard drive has been replaced\n\nTo perform a clean installation, a series of common steps are done. Order those steps and validate your understanding!"
+  },
+  {
+    "objectID": "topics/operating-systems/operating-system-install.htm#pros",
+    "href": "topics/operating-systems/operating-system-install.htm#pros",
+    "title": "Installing OS",
+    "section": "Pros",
+    "text": "Pros\n\n🧠 Learn new systems: Users can experiment with Linux while still keeping access to their Windows OS.\n💾 Access more software: Some applications are developed exclusively for specific platforms.\n🧪 Test across systems: Developers can natively test software designed for multiple OSs, and web designers can preview sites using native browsers.\n🎮 Game safely: Gamers can test or tweak setups without risking their main Windows installation. 😄"
+  },
+  {
+    "objectID": "topics/operating-systems/operating-system-install.htm#cons",
+    "href": "topics/operating-systems/operating-system-install.htm#cons",
+    "title": "Installing OS",
+    "section": "Cons",
+    "text": "Cons\n\nDisk space Perhaps the biggest factor when setting up multiple operating systems on a personal computer is the available disk space.Running multiple operating systems means the need to allocate space for each operating system and each systems file storage.\nSwitching between operating systems User tend to find hard to move the work environment between multiple OSs (running application and files)."
+  },
+  {
+    "objectID": "topics/operating-systems/operating-system-install.htm#pros-1",
+    "href": "topics/operating-systems/operating-system-install.htm#pros-1",
+    "title": "Installing OS",
+    "section": "Pros",
+    "text": "Pros\n\n🧳 Save space: Virtual machines help reduce the physical space required for separate hardware setups.\n💼 Business-friendly: Switching between operating systems is quick and seamless, making virtualization ideal for workplace productivity.\n\n*⚙️ Efficient resource use: High-performance servers can host several virtual machines, each dedicated to specific tasks or departments."
+  },
+  {
+    "objectID": "topics/operating-systems/operating-system-install.htm#cons-1",
+    "href": "topics/operating-systems/operating-system-install.htm#cons-1",
+    "title": "Installing OS",
+    "section": "Cons",
+    "text": "Cons\n*🐢 Performance trade-off: Running several virtual machines can slow down the host operating system, especially on lower-end hardware."
+  },
+  {
+    "objectID": "topics/operating-systems/index.html",
+    "href": "topics/operating-systems/index.html",
+    "title": "Operating Systems",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nIntroduction to Operating Sytems\n\n\nWindows, Linux and Others\n\n\n\n\n\n\n\n\n2025-10-28\n\n\n\n\n\n\n\n\n\n\n\n\nInstalling OS\n\n\nSingle boot, Dual boot and Virtual machines\n\n\n\n\n\n\n\n\n2025-10-30\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0"
+  },
+  {
     "objectID": "topics/operating-systems/file-systems.html",
     "href": "topics/operating-systems/file-systems.html",
     "title": "{{< var course.title >}}",
@@ -762,103 +882,176 @@
     "text": "Back to topReuseCC BY-NC-SA 4.0"
   },
   {
-    "objectID": "topics/operating-systems/index.html",
-    "href": "topics/operating-systems/index.html",
-    "title": "Operating Systems",
-    "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nWindows, Mac OS and Linux\n\n\nIntroduction to Operating Sytems\n\n\n\n\n\n\n\n\n2025-10-28\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0"
-  },
-  {
     "objectID": "topics/operating-systems/operating-system-intro.htm#loading-the-boot-loader",
     "href": "topics/operating-systems/operating-system-intro.htm#loading-the-boot-loader",
-    "title": "Windows, Mac OS and Linux",
+    "title": "Introduction to Operating Sytems",
     "section": "Loading the boot loader",
     "text": "Loading the boot loader\nAs we’ve seen in the hardware module, the firmware of the motherboard, the BIOS (or UEFI) is responsible for “waking up” the hardware and loading the operating system. The BIOS/UEFI looks for a bootable device based on the boot order. The first boot device in the list should have a “boot sector” in which the “boot loader”, a special software is located, will load the OS into memory. This process will follow the legacy MBR parition style or the more modern UEFI GPT partition style.\n\nMBR: In legacy systems, the BIOS looks for the Master Boot Record (MBR) located on the first sector of the boot disk. MBR has limitations which we will cover later.\nGPT : In modern systems, the UEFI uses the GUID Partition Table instead"
   },
   {
     "objectID": "topics/operating-systems/operating-system-intro.htm#the-days-of-ms-dos",
     "href": "topics/operating-systems/operating-system-intro.htm#the-days-of-ms-dos",
-    "title": "Windows, Mac OS and Linux",
+    "title": "Introduction to Operating Sytems",
     "section": "The days of MS-DOS",
     "text": "The days of MS-DOS\nIf we’re going to discuss Windows, it’s important to mention its predecessor: MS-DOS. This was a command-line–only operating system developed for x86 systems (based on the Intel 8088 CPU architecture). It was originally created by Tim Paterson at Seattle Computer Products. In 1981, Microsoft acquired the company, hired Paterson, and adapted the system for its own personal computers—rebranding it as MS-DOS.\n\nMS-DOSMost MS-DOS commands are still supported by Windows Command Prompt CMD."
   },
   {
+    "objectID": "topics/operating-systems/operating-system-intro.htm#windows-over-the-years",
+    "href": "topics/operating-systems/operating-system-intro.htm#windows-over-the-years",
+    "title": "Introduction to Operating Sytems",
+    "section": "Windows over the years",
+    "text": "Windows over the years\n\n\n\n\nWindows 9\n\n\nWhat happened to Windows 9? It Never came out! Some believe this was a Marketing strategy to signify that Windows 10 is the last major version of Windows and it’s a “revolutionary version”. In the end, it wasn’t revolution,and was certainly not the last Windows version."
+  },
+  {
+    "objectID": "topics/operating-systems/operating-system-intro.htm#windows-11",
+    "href": "topics/operating-systems/operating-system-intro.htm#windows-11",
+    "title": "Introduction to Operating Sytems",
+    "section": "Windows 11",
+    "text": "Windows 11\nThe latest version of Windows is Windows 11. These are the important features:\n\nUEFI Firmware Required: Windows 11 only supports motherboards with UEFI; legacy BIOS systems are not compatible.\nSecure Boot: Must be enabled in the system firmware.\nTrusted Platform Module (TPM): Version 2.0 or higher is required for installation.\nZero Trust Compatibility: All users, processes, and services must be verified and trusted at every level of the system.\nInternet Connection: Needed during setup to complete installation and sign in with a Microsoft account. 👉 Actually, there is a way to bypass to those setup steps. More on this during the lab.\nOther features: All editions except the Home ed, come with BitLocker and OneDrive for Business. BitLocker gives the ability to encrypt the storage device to prevent information theft. OneDrive allows for file synchronization to the cloud."
+  },
+  {
+    "objectID": "topics/operating-systems/operating-system-intro.htm#windows-11-system-requirements",
+    "href": "topics/operating-systems/operating-system-intro.htm#windows-11-system-requirements",
+    "title": "Introduction to Operating Sytems",
+    "section": "Windows 11: System requirements",
+    "text": "Windows 11: System requirements\n\nRAM : 4Gb Minimum\nCPU : 1Ghz, 2 Cores"
+  },
+  {
+    "objectID": "topics/operating-systems/operating-system-intro.htm#windows-cmd-commands",
+    "href": "topics/operating-systems/operating-system-intro.htm#windows-cmd-commands",
+    "title": "Introduction to Operating Sytems",
+    "section": "Windows CMD Commands",
+    "text": "Windows CMD Commands\nThese commands will be explored in this course.\n\ncd : Changes the current directory\necho: writes input text to a standard output (file or console)\ndir: short for directory, it prints out the current directory\ndel : deletes a file\ncopy: creates a copy of a file and moves it elsewhere in the filesystem or to another device. In modern Windows, it can be used to concatenate files together or copy multiple files.\nrename: moves files or renames them."
+  },
+  {
     "objectID": "topics/operating-systems/operating-system-intro.htm#unix-vs-linux",
     "href": "topics/operating-systems/operating-system-intro.htm#unix-vs-linux",
-    "title": "Windows, Mac OS and Linux",
+    "title": "Introduction to Operating Sytems",
     "section": "Unix vs Linux",
-    "text": "Unix vs Linux\nFor beginners, Unix and Linux are often confusing. Unix was developed in the 1960s and served as the foundation for many modern operating systems, including macOS and Linux. You could compare Unix to Linux in the same way MS-DOS relates to Windows; both laid the groundwork for more advanced systems. However, there is one key difference: Linux was written entirely from scratch by Linus Torvalds, though it was designed to follow the Unix architecture."
+    "text": "Unix vs Linux\nFor beginners, Unix and Linux are often confusing. Unix was developed in the 1960s by AT&T and served as the foundation for many modern operating systems, including macOS and Linux. You could compare Unix to Linux in the same way MS-DOS relates to Windows; both laid the groundwork for more advanced systems. However, there is one key difference: Linux was written entirely from scratch by Linus Torvalds, though it was designed to follow the Unix architecture."
   },
   {
     "objectID": "topics/operating-systems/operating-system-intro.htm#linux-commands",
     "href": "topics/operating-systems/operating-system-intro.htm#linux-commands",
-    "title": "Windows, Mac OS and Linux",
+    "title": "Introduction to Operating Sytems",
     "section": "Linux Commands",
     "text": "Linux Commands\nLinux commands are fundamental tools used in the command line interface (CLI) to interact with the operating system. Common examples include:\nls : Lists contents of directories cd : Changes the current directory pwd : Displays the current directory path mkdir: Creates a new directory touch: Creates a file cat: Concatenates and displays the content of files. echo: Prints out a given string to a standard output (terminal or file) cp, mv, rm : Used to copy, move, and delete files respectively\nsudo : Executes commands with administrative (root) privileges free : Shows memory usage df : Checks disk space usage top : Monitors running processes\nHere is a more extensive list of commands for Linux."
   },
   {
     "objectID": "topics/operating-systems/operating-system-intro.html",
     "href": "topics/operating-systems/operating-system-intro.html",
-    "title": "Windows, Mac OS and Linux",
+    "title": "Introduction to Operating Sytems",
     "section": "",
     "text": "The operating system (OS) is the main software that controls a computer’s hardware, manages the file system, and runs applications. It provides a user-friendly interface that allows users to interact with the computer without writing binary code for the CPU.\nThe OS is always active and is the first program loaded into memory when the computer starts. All other applications operate within it, while the OS handles memory and process allocation for each one. It also manages input and output operations and switches efficiently between different tasks.\n\n\nAs we’ve seen in the hardware module, the firmware of the motherboard, the BIOS (or UEFI) is responsible for “waking up” the hardware and loading the operating system. The BIOS/UEFI looks for a bootable device based on the boot order. The first boot device in the list should have a “boot sector” in which the “boot loader”, a special software is located, will load the OS into memory. This process will follow the legacy MBR parition style or the more modern UEFI GPT partition style.\n\nMBR: In legacy systems, the BIOS looks for the Master Boot Record (MBR) located on the first sector of the boot disk. MBR has limitations which we will cover later.\nGPT : In modern systems, the UEFI uses the GUID Partition Table instead",
     "crumbs": [
       "Home",
       "Course Notes",
       "Operating Systems",
-      "Windows, Mac OS and Linux"
+      "Introduction to Operating Sytems"
     ]
   },
   {
     "objectID": "topics/operating-systems/operating-system-intro.html#loading-the-boot-loader",
     "href": "topics/operating-systems/operating-system-intro.html#loading-the-boot-loader",
-    "title": "Windows, Mac OS and Linux",
+    "title": "Introduction to Operating Sytems",
     "section": "",
     "text": "As we’ve seen in the hardware module, the firmware of the motherboard, the BIOS (or UEFI) is responsible for “waking up” the hardware and loading the operating system. The BIOS/UEFI looks for a bootable device based on the boot order. The first boot device in the list should have a “boot sector” in which the “boot loader”, a special software is located, will load the OS into memory. This process will follow the legacy MBR parition style or the more modern UEFI GPT partition style.\n\nMBR: In legacy systems, the BIOS looks for the Master Boot Record (MBR) located on the first sector of the boot disk. MBR has limitations which we will cover later.\nGPT : In modern systems, the UEFI uses the GUID Partition Table instead",
     "crumbs": [
       "Home",
       "Course Notes",
       "Operating Systems",
-      "Windows, Mac OS and Linux"
+      "Introduction to Operating Sytems"
     ]
   },
   {
     "objectID": "topics/operating-systems/operating-system-intro.html#the-days-of-ms-dos",
     "href": "topics/operating-systems/operating-system-intro.html#the-days-of-ms-dos",
-    "title": "Windows, Mac OS and Linux",
+    "title": "Introduction to Operating Sytems",
     "section": "The days of MS-DOS",
     "text": "The days of MS-DOS\nIf we’re going to discuss Windows, it’s important to mention its predecessor: MS-DOS. This was a command-line–only operating system developed for x86 systems (based on the Intel 8088 CPU architecture). It was originally created by Tim Paterson at Seattle Computer Products. In 1981, Microsoft acquired the company, hired Paterson, and adapted the system for its own personal computers—rebranding it as MS-DOS.\n\n\n\nMS-DOS\n\n\nMost MS-DOS commands are still supported by Windows Command Prompt CMD.",
     "crumbs": [
       "Home",
       "Course Notes",
       "Operating Systems",
-      "Windows, Mac OS and Linux"
+      "Introduction to Operating Sytems"
+    ]
+  },
+  {
+    "objectID": "topics/operating-systems/operating-system-intro.html#windows-over-the-years",
+    "href": "topics/operating-systems/operating-system-intro.html#windows-over-the-years",
+    "title": "Introduction to Operating Sytems",
+    "section": "Windows over the years",
+    "text": "Windows over the years\n\n\n\n\n\n\n\nNoteWindows 9\n\n\n\nWhat happened to Windows 9? It Never came out! Some believe this was a Marketing strategy to signify that Windows 10 is the last major version of Windows and it’s a “revolutionary version”. In the end, it wasn’t revolution,and was certainly not the last Windows version.",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Introduction to Operating Sytems"
+    ]
+  },
+  {
+    "objectID": "topics/operating-systems/operating-system-intro.html#windows-11",
+    "href": "topics/operating-systems/operating-system-intro.html#windows-11",
+    "title": "Introduction to Operating Sytems",
+    "section": "Windows 11",
+    "text": "Windows 11\nThe latest version of Windows is Windows 11. These are the important features:\n\nUEFI Firmware Required: Windows 11 only supports motherboards with UEFI; legacy BIOS systems are not compatible.\nSecure Boot: Must be enabled in the system firmware.\nTrusted Platform Module (TPM): Version 2.0 or higher is required for installation.\nZero Trust Compatibility: All users, processes, and services must be verified and trusted at every level of the system.\nInternet Connection: Needed during setup to complete installation and sign in with a Microsoft account. 👉 Actually, there is a way to bypass to those setup steps. More on this during the lab.\nOther features: All editions except the Home ed, come with BitLocker and OneDrive for Business. BitLocker gives the ability to encrypt the storage device to prevent information theft. OneDrive allows for file synchronization to the cloud.",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Introduction to Operating Sytems"
+    ]
+  },
+  {
+    "objectID": "topics/operating-systems/operating-system-intro.html#windows-11-system-requirements",
+    "href": "topics/operating-systems/operating-system-intro.html#windows-11-system-requirements",
+    "title": "Introduction to Operating Sytems",
+    "section": "Windows 11: System requirements",
+    "text": "Windows 11: System requirements\n\nRAM : 4Gb Minimum\nCPU : 1Ghz, 2 Cores",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Introduction to Operating Sytems"
+    ]
+  },
+  {
+    "objectID": "topics/operating-systems/operating-system-intro.html#windows-cmd-commands",
+    "href": "topics/operating-systems/operating-system-intro.html#windows-cmd-commands",
+    "title": "Introduction to Operating Sytems",
+    "section": "Windows CMD Commands",
+    "text": "Windows CMD Commands\nThese commands will be explored in this course.\n\ncd : Changes the current directory\necho: writes input text to a standard output (file or console)\ndir: short for directory, it prints out the current directory\ndel : deletes a file\ncopy: creates a copy of a file and moves it elsewhere in the filesystem or to another device. In modern Windows, it can be used to concatenate files together or copy multiple files.\nrename: moves files or renames them.",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Introduction to Operating Sytems"
     ]
   },
   {
     "objectID": "topics/operating-systems/operating-system-intro.html#unix-vs-linux",
     "href": "topics/operating-systems/operating-system-intro.html#unix-vs-linux",
-    "title": "Windows, Mac OS and Linux",
+    "title": "Introduction to Operating Sytems",
     "section": "Unix vs Linux",
-    "text": "Unix vs Linux\nFor beginners, Unix and Linux are often confusing. Unix was developed in the 1960s and served as the foundation for many modern operating systems, including macOS and Linux. You could compare Unix to Linux in the same way MS-DOS relates to Windows; both laid the groundwork for more advanced systems. However, there is one key difference: Linux was written entirely from scratch by Linus Torvalds, though it was designed to follow the Unix architecture.",
+    "text": "Unix vs Linux\nFor beginners, Unix and Linux are often confusing. Unix was developed in the 1960s by AT&T and served as the foundation for many modern operating systems, including macOS and Linux. You could compare Unix to Linux in the same way MS-DOS relates to Windows; both laid the groundwork for more advanced systems. However, there is one key difference: Linux was written entirely from scratch by Linus Torvalds, though it was designed to follow the Unix architecture.",
     "crumbs": [
       "Home",
       "Course Notes",
       "Operating Systems",
-      "Windows, Mac OS and Linux"
+      "Introduction to Operating Sytems"
     ]
   },
   {
     "objectID": "topics/operating-systems/operating-system-intro.html#linux-commands",
     "href": "topics/operating-systems/operating-system-intro.html#linux-commands",
-    "title": "Windows, Mac OS and Linux",
+    "title": "Introduction to Operating Sytems",
     "section": "Linux Commands",
     "text": "Linux Commands\nLinux commands are fundamental tools used in the command line interface (CLI) to interact with the operating system. Common examples include:\nls : Lists contents of directories cd : Changes the current directory pwd : Displays the current directory path mkdir: Creates a new directory touch: Creates a file cat: Concatenates and displays the content of files. echo: Prints out a given string to a standard output (terminal or file) cp, mv, rm : Used to copy, move, and delete files respectively\nsudo : Executes commands with administrative (root) privileges free : Shows memory usage df : Checks disk space usage top : Monitors running processes\nHere is a more extensive list of commands for Linux.",
     "crumbs": [
       "Home",
       "Course Notes",
       "Operating Systems",
-      "Windows, Mac OS and Linux"
+      "Introduction to Operating Sytems"
     ]
   },
   {
@@ -866,7 +1059,7 @@
     "href": "topics/all-lectures.html",
     "title": "All lectures",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nSubtitle\n\n\n\n\n\n\n\n\n2025-08-20\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n\n\n2025-08-25\n\n\nExternal components\n\n\nOverview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors\n\n\n\n\n\n\n2025-09-02\n\n\nInternal Components\n\n\nExplains the most important internal components of desktop computers. Processing, memory, storage, and communication.\n\n\n\n\n\n\n2025-09-08\n\n\nUnderstanding CPUs\n\n\nMore detail on CPUs. “Guy in Box” analogy, Clock Speed, Codebook, Databuses explained.\n\n\n\n\n\n\n2025-09-15\n\n\nIntroduction to Binary\n\n\nWhat’s a bit, and how is it implemented in a computer?\n\n\n\n\n\n\n2025-09-15\n\n\nBinary Math\n\n\nHow are computers performing additions and subtractions.\n\n\n\n\n\n\n2025-09-22\n\n\nLogic Gates and Boolean Algebra\n\n\nIntroduction to AND, OR, NOT, XOR gates.\n\n\n\n\n\n\n2025-10-02\n\n\nHexadecimal numbers\n\n\nIntroduction to the hexadecimal base-16 system.\n\n\n\n\n\n\n2025-10-02\n\n\nText in Computers\n\n\nHow is textual data represented in a computer’s memory.\n\n\n\n\n\n\n2025-10-20\n\n\nBIOS, CMOS, UEFI\n\n\nBasic Input/Output services (computer firmware)\n\n\n\n\n\n\n2025-10-28\n\n\nWindows, Mac OS and Linux\n\n\nIntroduction to Operating Sytems\n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0"
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nSubtitle\n\n\n\n\n\n\n\n\n2025-08-20\n\n\nIntroduction to Computers\n\n\nThe fundamental properties of computers explained with examples and definitions.\n\n\n\n\n\n\n2025-08-25\n\n\nExternal components\n\n\nOverview of many external components, or peripheral devices, used by and for computers. Input devices, Output devices, and connectors\n\n\n\n\n\n\n2025-09-02\n\n\nInternal Components\n\n\nExplains the most important internal components of desktop computers. Processing, memory, storage, and communication.\n\n\n\n\n\n\n2025-09-08\n\n\nUnderstanding CPUs\n\n\nMore detail on CPUs. “Guy in Box” analogy, Clock Speed, Codebook, Databuses explained.\n\n\n\n\n\n\n2025-09-15\n\n\nIntroduction to Binary\n\n\nWhat’s a bit, and how is it implemented in a computer?\n\n\n\n\n\n\n2025-09-15\n\n\nBinary Math\n\n\nHow are computers performing additions and subtractions.\n\n\n\n\n\n\n2025-09-22\n\n\nLogic Gates and Boolean Algebra\n\n\nIntroduction to AND, OR, NOT, XOR gates.\n\n\n\n\n\n\n2025-10-02\n\n\nHexadecimal numbers\n\n\nIntroduction to the hexadecimal base-16 system.\n\n\n\n\n\n\n2025-10-02\n\n\nText in Computers\n\n\nHow is textual data represented in a computer’s memory.\n\n\n\n\n\n\n2025-10-20\n\n\nBIOS, CMOS, UEFI\n\n\nBasic Input/Output services (computer firmware)\n\n\n\n\n\n\n2025-10-28\n\n\nIntroduction to Operating Sytems\n\n\nWindows, Linux and Others\n\n\n\n\n\n\n2025-10-30\n\n\nInstalling OS\n\n\nSingle boot, Dual boot and Virtual machines\n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY-NC-SA 4.0"
   },
   {
     "objectID": "topics/data-representation/hexadecimal-numbers.htm#hexits",

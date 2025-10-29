@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2025-10-28">
 
-<title>Windows, Mac OS and Linux – Technical Support</title>
+<title>Introduction to Operating Sytems – Technical Support</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,6 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../topics/operating-systems/operating-system-install.html" rel="next">
 <link href="../../topics/data-representation/hexadecimal-numbers.html" rel="prev">
 <link href="../../_assets/favicons/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
@@ -79,8 +80,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../_assets/css/styles.css">
-<meta property="og:title" content="Windows, Mac OS and Linux – Technical Support">
-<meta property="og:description" content="Introduction to Operating Sytems">
+<meta property="og:title" content="Introduction to Operating Sytems – Technical Support">
+<meta property="og:description" content="Windows, Linux and Others">
 <meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/operating-systems/_assets/favicons/favicon-32x32.png">
 <meta property="og:site_name" content="{{< var course.title >}}">
 </head>
@@ -294,7 +295,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Notes</li><li class="breadcrumb-item"><a href="../../topics/operating-systems/operating-system-intro.html">Operating Systems</a></li><li class="breadcrumb-item"><a href="../../topics/operating-systems/operating-system-intro.html">Windows, Mac OS and Linux</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Notes</li><li class="breadcrumb-item"><a href="../../topics/operating-systems/operating-system-intro.html">Operating Systems</a></li><li class="breadcrumb-item"><a href="../../topics/operating-systems/operating-system-intro.html">Introduction to Operating Sytems</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -413,7 +414,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../topics/operating-systems/operating-system-intro.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Windows, Mac OS and Linux</span></a>
+ <span class="menu-text">Introduction to Operating Sytems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/operating-systems/operating-system-install.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Installing OS</span></a>
   </div>
 </li>
       </ul>
@@ -438,14 +445,20 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#windows" id="toc-windows" class="nav-link" data-scroll-target="#windows">Windows 🪟</a>
   <ul>
   <li><a href="#the-days-of-ms-dos" id="toc-the-days-of-ms-dos" class="nav-link" data-scroll-target="#the-days-of-ms-dos">The days of MS-DOS</a></li>
-  </ul></li>
+  <li><a href="#windows-over-the-years" id="toc-windows-over-the-years" class="nav-link" data-scroll-target="#windows-over-the-years">Windows over the years</a></li>
+  <li><a href="#windows-11" id="toc-windows-11" class="nav-link" data-scroll-target="#windows-11">Windows 11</a></li>
+  <li><a href="#windows-11-system-requirements" id="toc-windows-11-system-requirements" class="nav-link" data-scroll-target="#windows-11-system-requirements">Windows 11: System requirements</a></li>
   <li><a href="#windows-cmd-commands" id="toc-windows-cmd-commands" class="nav-link" data-scroll-target="#windows-cmd-commands">Windows CMD Commands</a></li>
+  </ul></li>
   <li><a href="#linux" id="toc-linux" class="nav-link" data-scroll-target="#linux">Linux 🐧</a>
   <ul>
   <li><a href="#unix-vs-linux" id="toc-unix-vs-linux" class="nav-link" data-scroll-target="#unix-vs-linux">Unix vs Linux</a></li>
   <li><a href="#linux-commands" id="toc-linux-commands" class="nav-link" data-scroll-target="#linux-commands">Linux Commands</a></li>
   </ul></li>
   <li><a href="#mac-os" id="toc-mac-os" class="nav-link" data-scroll-target="#mac-os">Mac OS 🍏</a></li>
+  <li><a href="#chrome" id="toc-chrome" class="nav-link" data-scroll-target="#chrome">Chrome</a></li>
+  <li><a href="#server-operating-systems" id="toc-server-operating-systems" class="nav-link" data-scroll-target="#server-operating-systems">Server Operating Systems</a></li>
+  <li><a href="#mobile-operating-systems" id="toc-mobile-operating-systems" class="nav-link" data-scroll-target="#mobile-operating-systems">Mobile Operating systems</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
@@ -454,10 +467,10 @@ ul.task-list li input[type="checkbox"] {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Notes</li><li class="breadcrumb-item"><a href="../../topics/operating-systems/operating-system-intro.html">Operating Systems</a></li><li class="breadcrumb-item"><a href="../../topics/operating-systems/operating-system-intro.html">Windows, Mac OS and Linux</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Notes</li><li class="breadcrumb-item"><a href="../../topics/operating-systems/operating-system-intro.html">Operating Systems</a></li><li class="breadcrumb-item"><a href="../../topics/operating-systems/operating-system-intro.html">Introduction to Operating Sytems</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Windows, Mac OS and Linux</h1>
-<p class="subtitle lead">Introduction to Operating Sytems</p>
+<h1 class="title">Introduction to Operating Sytems</h1>
+<p class="subtitle lead">Windows, Linux and Others</p>
 </div>
 
 
@@ -518,9 +531,44 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>Most MS-DOS commands are still supported by Windows Command Prompt <strong>CMD</strong>.</p>
 </section>
+<section id="windows-over-the-years" class="level2">
+<h2 class="anchored" data-anchor-id="windows-over-the-years">Windows over the years</h2>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/pYxNs5kYJwk" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Windows 9
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>What happened to Windows 9?</strong> It Never came out! Some believe this was a Marketing strategy to signify that Windows 10 is the <strong>last major version of Windows</strong> and it’s a <strong>“revolutionary version”</strong>. In the end, it wasn’t revolution,and was certainly not the last Windows version.</p>
+</div>
+</div>
 </section>
-<section id="windows-cmd-commands" class="level1">
-<h1>Windows CMD Commands</h1>
+<section id="windows-11" class="level2">
+<h2 class="anchored" data-anchor-id="windows-11">Windows 11</h2>
+<p>The latest version of Windows is Windows 11. These are the important features:</p>
+<ul>
+<li><p><strong>UEFI</strong> Firmware Required: Windows 11 only supports motherboards with UEFI; legacy BIOS systems are not compatible.</p></li>
+<li><p><strong>Secure Boot</strong>: Must be enabled in the system firmware.</p></li>
+<li><p><strong>Trusted Platform Module (TPM)</strong>: Version 2.0 or higher is required for installation.</p></li>
+<li><p><strong>Zero Trust Compatibility</strong>: All users, processes, and services must be verified and trusted at every level of the system.</p></li>
+<li><p><strong>Internet Connection</strong>: Needed during setup to complete installation and sign in with a Microsoft account. 👉 Actually, there is a way to bypass to those setup steps. More on this during the lab.</p></li>
+<li><p><strong>Other features</strong>: All editions except the Home ed, come with BitLocker and OneDrive for Business. BitLocker gives the ability to encrypt the storage device to prevent information theft. OneDrive allows for file synchronization to the cloud.</p></li>
+</ul>
+</section>
+<section id="windows-11-system-requirements" class="level2">
+<h2 class="anchored" data-anchor-id="windows-11-system-requirements">Windows 11: System requirements</h2>
+<ul>
+<li><strong>RAM</strong> : 4Gb Minimum</li>
+<li><strong>CPU</strong> : 1Ghz, 2 Cores</li>
+</ul>
+</section>
+<section id="windows-cmd-commands" class="level2">
+<h2 class="anchored" data-anchor-id="windows-cmd-commands">Windows CMD Commands</h2>
 <p>These commands will be explored in this course.</p>
 <ul>
 <li><code>cd</code> : Changes the current directory</li>
@@ -531,10 +579,11 @@ ul.task-list li input[type="checkbox"] {
 <li><code>rename</code>: moves files or renames them.</li>
 </ul>
 </section>
+</section>
 <section id="linux" class="level1">
 <h1>Linux 🐧</h1>
 <p>Linux is built on the Unix operating system and is both free and open source, meaning anyone can use, modify, and distribute it.</p>
-<p>There are many Linux distributions, which are complete operating systems built around the Linux kernel and bundled with additional software for specific purposes. Some popular examples include:</p>
+<p>There are many Linux distributions, which are complete operating systems built around the Linux kernel and bundled with additional software for specific purposes. Some are used for servers. Here are some popular examples:</p>
 <ul>
 <li><p>Fedora – Popular among developers</p></li>
 <li><p>Ubuntu – Great choice for beginners</p></li>
@@ -545,7 +594,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <section id="unix-vs-linux" class="level2">
 <h2 class="anchored" data-anchor-id="unix-vs-linux">Unix vs Linux</h2>
-<p>For beginners, Unix and Linux are often confusing. Unix was developed in the 1960s and served as the foundation for many modern operating systems, including macOS and Linux. You could compare Unix to Linux in the same way MS-DOS relates to Windows; both laid the groundwork for more advanced systems. However, there is one key difference: Linux was written entirely from scratch by Linus Torvalds, though it was designed to follow the Unix architecture.</p>
+<p>For beginners, Unix and Linux are often confusing. Unix was developed in the 1960s by AT&amp;T and served as the foundation for many modern operating systems, including macOS and Linux. You could compare Unix to Linux in the same way MS-DOS relates to Windows; both laid the groundwork for more advanced systems. However, there is one key difference: Linux was written entirely from scratch by Linus Torvalds, though it was designed to follow the Unix architecture.</p>
 </section>
 <section id="linux-commands" class="level2">
 <h2 class="anchored" data-anchor-id="linux-commands">Linux Commands</h2>
@@ -557,7 +606,38 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="mac-os" class="level1">
 <h1>Mac OS 🍏</h1>
-<p>Although macOS is also a Unix-based operating system, it is a proprietary platform developed by Apple and closely integrated with Apple hardware. It is well-known for its user-friendly design and optimized experience for professional users. This course will not focus heavily on macOS; however, most Linux commands still apply since both systems share Unix roots. You are encouraged to explore the Mac computers in P-322 and become familiar with this operating system because this will come in handy for future courses.</p>
+<p>Although macOS is also a Unix-based operating system, it is a proprietary platform developed by Apple and closely integrated with Apple hardware. Developed in the 1980s, it is well-known for its user-friendly design and optimized experience for professional users. This course will not focus on macOS; however, most Linux commands still apply since both systems share Unix roots. You are encouraged to explore the Mac computers in P-322 and become familiar with this operating system because this will come in handy for future courses.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://www.apple.com/newsroom/images/product/os/macos/standard/apple_macos-bigsur-availability_redesign_11122020_big.jpg.small_2x.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Macbook Pro"><img src="https://www.apple.com/newsroom/images/product/os/macos/standard/apple_macos-bigsur-availability_redesign_11122020_big.jpg.small_2x.jpg" class="img-fluid figure-img" alt="Macbook Pro"></a></p>
+<figcaption>Macbook Pro</figcaption>
+</figure>
+</div>
+</section>
+<section id="chrome" class="level1">
+<h1>Chrome</h1>
+<p>This OS was designed by Google around the 2010s. It’s a Linux kernel- based and derived from the free software Chromium OS. Chrome OS uses Google Chrome as the main interface allowing users to only use Web Apps. This course will not focus on Chrome OS.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://miro.medium.com/v2/resize:fit:1100/format:webp/0*L7iDfb9sRYgG9Pad.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Chrome OS"><img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/0*L7iDfb9sRYgG9Pad.png" class="img-fluid figure-img" alt="Chrome OS"></a></p>
+<figcaption>Chrome OS</figcaption>
+</figure>
+</div>
+</section>
+<section id="server-operating-systems" class="level1">
+<h1>Server Operating Systems</h1>
+<p>These are designed for corporate environment servicing multiple users with a wide range of needs. They generally provide network resources including server applications, centralized data storage, network print queues, RAID and backup systems.</p>
+</section>
+<section id="mobile-operating-systems" class="level1">
+<h1>Mobile Operating systems</h1>
+<p>Mobile devices such as Smart phones and tablets have their own light weight operating systems. They manage the specific hardware of mobile devices, provide network connectivity, and intuitive user experience. There exist many mobile operating systems, but the most popular ones are <strong>Android</strong> developed by Google and <strong>iOS</strong> developed by Apple:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://a.storyblok.com/f/47007/2400x1551/b3cba6007c/operatingsystem_glossary.png/m/2880x0/filters:quality(80).png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Android and iOS"><img src="https://a.storyblok.com/f/47007/2400x1551/b3cba6007c/operatingsystem_glossary.png/m/2880x0/filters:quality(80).png" class="img-fluid figure-img" alt="Android and iOS"></a></p>
+<figcaption>Android and iOS</figcaption>
+</figure>
+</div>
+<p>Other operating systems: - Harmony OS (Huawei) - Tizen (Samsung) - Windows mobile (Microsoft) - WebOS</p>
 </section>
 <section id="references" class="level1">
 <h1>References</h1>
@@ -990,6 +1070,9 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../../topics/operating-systems/operating-system-install.html" class="pagination-link" aria-label="Installing OS">
+        <span class="nav-page-text">Installing OS</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
