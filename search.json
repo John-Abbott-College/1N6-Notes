@@ -794,42 +794,72 @@
     "href": "topics/operating-systems/operating-system-intro.htm#linux-commands",
     "title": "Windows, Mac OS and Linux",
     "section": "Linux Commands",
-    "text": "Linux Commands\nLinux commands are fundamental tools used in the command line interface (CLI) to interact with the operating system. Common examples include:\nls : Lists contents of directories cd : Changes the current directory pwd : Displays the current directory path cp, mv, rm : Used to copy, move, and delete files respectively sudo : Executes commands with administrative (root) privileges free : Shows memory usage df : Checks disk space usage top : Monitors running processes\nHere is a more extensive list of commands for Linux."
+    "text": "Linux Commands\nLinux commands are fundamental tools used in the command line interface (CLI) to interact with the operating system. Common examples include:\nls : Lists contents of directories cd : Changes the current directory pwd : Displays the current directory path mkdir: Creates a new directory touch: Creates a file cat: Concatenates and displays the content of files. echo: Prints out a given string to a standard output (terminal or file) cp, mv, rm : Used to copy, move, and delete files respectively\nsudo : Executes commands with administrative (root) privileges free : Shows memory usage df : Checks disk space usage top : Monitors running processes\nHere is a more extensive list of commands for Linux."
   },
   {
     "objectID": "topics/operating-systems/operating-system-intro.html",
     "href": "topics/operating-systems/operating-system-intro.html",
     "title": "Windows, Mac OS and Linux",
     "section": "",
-    "text": "The operating system (OS) is the main software that controls a computer’s hardware, manages the file system, and runs applications. It provides a user-friendly interface that allows users to interact with the computer without writing binary code for the CPU.\nThe OS is always active and is the first program loaded into memory when the computer starts. All other applications operate within it, while the OS handles memory and process allocation for each one. It also manages input and output operations and switches efficiently between different tasks.\n\n\nAs we’ve seen in the hardware module, the firmware of the motherboard, the BIOS (or UEFI) is responsible for “waking up” the hardware and loading the operating system. The BIOS/UEFI looks for a bootable device based on the boot order. The first boot device in the list should have a “boot sector” in which the “boot loader”, a special software is located, will load the OS into memory. This process will follow the legacy MBR parition style or the more modern UEFI GPT partition style.\n\nMBR: In legacy systems, the BIOS looks for the Master Boot Record (MBR) located on the first sector of the boot disk. MBR has limitations which we will cover later.\nGPT : In modern systems, the UEFI uses the GUID Partition Table instead"
+    "text": "The operating system (OS) is the main software that controls a computer’s hardware, manages the file system, and runs applications. It provides a user-friendly interface that allows users to interact with the computer without writing binary code for the CPU.\nThe OS is always active and is the first program loaded into memory when the computer starts. All other applications operate within it, while the OS handles memory and process allocation for each one. It also manages input and output operations and switches efficiently between different tasks.\n\n\nAs we’ve seen in the hardware module, the firmware of the motherboard, the BIOS (or UEFI) is responsible for “waking up” the hardware and loading the operating system. The BIOS/UEFI looks for a bootable device based on the boot order. The first boot device in the list should have a “boot sector” in which the “boot loader”, a special software is located, will load the OS into memory. This process will follow the legacy MBR parition style or the more modern UEFI GPT partition style.\n\nMBR: In legacy systems, the BIOS looks for the Master Boot Record (MBR) located on the first sector of the boot disk. MBR has limitations which we will cover later.\nGPT : In modern systems, the UEFI uses the GUID Partition Table instead",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Windows, Mac OS and Linux"
+    ]
   },
   {
     "objectID": "topics/operating-systems/operating-system-intro.html#loading-the-boot-loader",
     "href": "topics/operating-systems/operating-system-intro.html#loading-the-boot-loader",
     "title": "Windows, Mac OS and Linux",
     "section": "",
-    "text": "As we’ve seen in the hardware module, the firmware of the motherboard, the BIOS (or UEFI) is responsible for “waking up” the hardware and loading the operating system. The BIOS/UEFI looks for a bootable device based on the boot order. The first boot device in the list should have a “boot sector” in which the “boot loader”, a special software is located, will load the OS into memory. This process will follow the legacy MBR parition style or the more modern UEFI GPT partition style.\n\nMBR: In legacy systems, the BIOS looks for the Master Boot Record (MBR) located on the first sector of the boot disk. MBR has limitations which we will cover later.\nGPT : In modern systems, the UEFI uses the GUID Partition Table instead"
+    "text": "As we’ve seen in the hardware module, the firmware of the motherboard, the BIOS (or UEFI) is responsible for “waking up” the hardware and loading the operating system. The BIOS/UEFI looks for a bootable device based on the boot order. The first boot device in the list should have a “boot sector” in which the “boot loader”, a special software is located, will load the OS into memory. This process will follow the legacy MBR parition style or the more modern UEFI GPT partition style.\n\nMBR: In legacy systems, the BIOS looks for the Master Boot Record (MBR) located on the first sector of the boot disk. MBR has limitations which we will cover later.\nGPT : In modern systems, the UEFI uses the GUID Partition Table instead",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Windows, Mac OS and Linux"
+    ]
   },
   {
     "objectID": "topics/operating-systems/operating-system-intro.html#the-days-of-ms-dos",
     "href": "topics/operating-systems/operating-system-intro.html#the-days-of-ms-dos",
     "title": "Windows, Mac OS and Linux",
     "section": "The days of MS-DOS",
-    "text": "The days of MS-DOS\nIf we’re going to discuss Windows, it’s important to mention its predecessor: MS-DOS. This was a command-line–only operating system developed for x86 systems (based on the Intel 8088 CPU architecture). It was originally created by Tim Paterson at Seattle Computer Products. In 1981, Microsoft acquired the company, hired Paterson, and adapted the system for its own personal computers—rebranding it as MS-DOS.\n\n\n\nMS-DOS\n\n\nMost MS-DOS commands are still supported by Windows Command Prompt CMD."
+    "text": "The days of MS-DOS\nIf we’re going to discuss Windows, it’s important to mention its predecessor: MS-DOS. This was a command-line–only operating system developed for x86 systems (based on the Intel 8088 CPU architecture). It was originally created by Tim Paterson at Seattle Computer Products. In 1981, Microsoft acquired the company, hired Paterson, and adapted the system for its own personal computers—rebranding it as MS-DOS.\n\n\n\nMS-DOS\n\n\nMost MS-DOS commands are still supported by Windows Command Prompt CMD.",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Windows, Mac OS and Linux"
+    ]
   },
   {
     "objectID": "topics/operating-systems/operating-system-intro.html#unix-vs-linux",
     "href": "topics/operating-systems/operating-system-intro.html#unix-vs-linux",
     "title": "Windows, Mac OS and Linux",
     "section": "Unix vs Linux",
-    "text": "Unix vs Linux\nFor beginners, Unix and Linux are often confusing. Unix was developed in the 1960s and served as the foundation for many modern operating systems, including macOS and Linux. You could compare Unix to Linux in the same way MS-DOS relates to Windows; both laid the groundwork for more advanced systems. However, there is one key difference: Linux was written entirely from scratch by Linus Torvalds, though it was designed to follow the Unix architecture."
+    "text": "Unix vs Linux\nFor beginners, Unix and Linux are often confusing. Unix was developed in the 1960s and served as the foundation for many modern operating systems, including macOS and Linux. You could compare Unix to Linux in the same way MS-DOS relates to Windows; both laid the groundwork for more advanced systems. However, there is one key difference: Linux was written entirely from scratch by Linus Torvalds, though it was designed to follow the Unix architecture.",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Windows, Mac OS and Linux"
+    ]
   },
   {
     "objectID": "topics/operating-systems/operating-system-intro.html#linux-commands",
     "href": "topics/operating-systems/operating-system-intro.html#linux-commands",
     "title": "Windows, Mac OS and Linux",
     "section": "Linux Commands",
-    "text": "Linux Commands\nLinux commands are fundamental tools used in the command line interface (CLI) to interact with the operating system. Common examples include:\nls : Lists contents of directories cd : Changes the current directory pwd : Displays the current directory path cp, mv, rm : Used to copy, move, and delete files respectively sudo : Executes commands with administrative (root) privileges free : Shows memory usage df : Checks disk space usage top : Monitors running processes\nHere is a more extensive list of commands for Linux."
+    "text": "Linux Commands\nLinux commands are fundamental tools used in the command line interface (CLI) to interact with the operating system. Common examples include:\nls : Lists contents of directories cd : Changes the current directory pwd : Displays the current directory path mkdir: Creates a new directory touch: Creates a file cat: Concatenates and displays the content of files. echo: Prints out a given string to a standard output (terminal or file) cp, mv, rm : Used to copy, move, and delete files respectively\nsudo : Executes commands with administrative (root) privileges free : Shows memory usage df : Checks disk space usage top : Monitors running processes\nHere is a more extensive list of commands for Linux.",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Windows, Mac OS and Linux"
+    ]
   },
   {
     "objectID": "topics/all-lectures.html",
