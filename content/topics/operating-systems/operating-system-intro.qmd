@@ -1,7 +1,7 @@
 ---
 date: 2025-10-28
-subtitle: Introduction to Operating Sytems 
-title: Windows, Mac OS and Linux
+title: Introduction to Operating Sytems 
+subtitle: Windows, Linux and Others
 draft: false
 ---
 
@@ -32,7 +32,41 @@ If we’re going to discuss Windows, it’s important to mention its predecessor
 
 Most MS-DOS commands are still supported by Windows Command Prompt __CMD__.
 
-# Windows CMD Commands
+## Windows over the years
+
+{{< video https://www.youtube.com/watch?v=pYxNs5kYJwk >}}
+
+:::{.callout-note icon="false"}
+# Windows 9
+**What happened to Windows 9?**
+It Never came out! Some believe this was a Marketing strategy to signify that Windows 10 is the **last major version of Windows** and it’s a **"revolutionary version"**. In the end, it wasn't revolution,and was certainly not the last Windows version. 
+
+:::
+
+## Windows 11
+
+The latest version of Windows is Windows 11. These are the important features:
+
+- **UEFI** Firmware Required: Windows 11 only supports motherboards with UEFI; legacy BIOS systems are not compatible.
+
+- **Secure Boot**: Must be enabled in the system firmware.
+
+- **Trusted Platform Module (TPM)**: Version 2.0 or higher is required for installation.
+
+- **Zero Trust Compatibility**: All users, processes, and services must be verified and trusted at every level of the system.
+
+- **Internet Connection**: Needed during setup to complete installation and sign in with a Microsoft account. 
+👉 Actually, there is a way to bypass to those setup steps. More on this during the lab.
+
+- **Other features**: All editions except the Home ed, come with BitLocker and OneDrive for Business. BitLocker gives the ability to encrypt the storage device to prevent information theft. OneDrive allows for file synchronization to the cloud.  
+
+## Windows 11: System requirements
+
+- **RAM** : 4Gb Minimum 
+- **CPU** : 1Ghz, 2 Cores
+
+
+## Windows CMD Commands
 These commands will be explored in this course. 
 
 - `cd` : Changes the current directory
@@ -47,7 +81,7 @@ These commands will be explored in this course.
 
 Linux is built on the Unix operating system and is both free and open source, meaning anyone can use, modify, and distribute it.
 
-There are many Linux distributions, which are complete operating systems built around the Linux kernel and bundled with additional software for specific purposes. Some popular examples include:
+There are many Linux distributions, which are complete operating systems built around the Linux kernel and bundled with additional software for specific purposes. Some are used for servers. Here are some popular examples:
 
 - Fedora – Popular among developers
 
@@ -63,7 +97,7 @@ There are many Linux distributions, which are complete operating systems built a
 
 ## Unix vs Linux
 
-For beginners, Unix and Linux are often confusing. Unix was developed in the 1960s and served as the foundation for many modern operating systems, including macOS and Linux. You could compare Unix to Linux in the same way MS-DOS relates to Windows; both laid the groundwork for more advanced systems. However, there is one key difference: Linux was written entirely from scratch by Linus Torvalds, though it was designed to follow the Unix architecture.
+For beginners, Unix and Linux are often confusing. Unix was developed in the 1960s by AT&T and served as the foundation for many modern operating systems, including macOS and Linux. You could compare Unix to Linux in the same way MS-DOS relates to Windows; both laid the groundwork for more advanced systems. However, there is one key difference: Linux was written entirely from scratch by Linus Torvalds, though it was designed to follow the Unix architecture.
 
 ## Linux Commands
 
@@ -88,7 +122,34 @@ Linux commands are fundamental tools used in the command line interface (CLI) to
 
 # Mac OS 🍏
 
-Although macOS is also a Unix-based operating system, it is a proprietary platform developed by Apple and closely integrated with Apple hardware. It is well-known for its user-friendly design and optimized experience for professional users. This course will not focus heavily on macOS; however, most Linux commands still apply since both systems share Unix roots. You are encouraged to explore the Mac computers in P-322 and become familiar with this operating system because this will come in handy for future courses. 
+Although macOS is also a Unix-based operating system, it is a proprietary platform developed by Apple and closely integrated with Apple hardware. Developed in the 1980s, it is well-known for its user-friendly design and optimized experience for professional users. This course will not focus on macOS; however, most Linux commands still apply since both systems share Unix roots. You are encouraged to explore the Mac computers in P-322 and become familiar with this operating system because this will come in handy for future courses. 
+
+![Macbook Pro](https://www.apple.com/newsroom/images/product/os/macos/standard/apple_macos-bigsur-availability_redesign_11122020_big.jpg.small_2x.jpg)
+
+# Chrome 
+
+This OS was designed by Google around the 2010s. It's a Linux kernel- based and derived from the free software Chromium OS. Chrome OS uses Google Chrome as the main interface allowing users to only use Web Apps. 
+This course will not focus on Chrome OS.
+
+![Chrome OS](https://miro.medium.com/v2/resize:fit:1100/format:webp/0*L7iDfb9sRYgG9Pad.png)
+
+# Server Operating Systems
+
+These are designed for corporate environment servicing multiple users with a wide range of needs. They generally provide network resources including server applications, centralized data storage, network print queues, RAID and backup systems.
+
+# Mobile Operating systems
+
+Mobile devices such as Smart phones and tablets have their own light weight operating systems. They manage the specific hardware of mobile devices, provide network connectivity, and intuitive user experience. There exist many mobile operating systems, but the most popular ones are **Android** developed by Google and **iOS** developed by Apple:
+
+![Android and iOS](https://a.storyblok.com/f/47007/2400x1551/b3cba6007c/operatingsystem_glossary.png/m/2880x0/filters:quality(80))
+
+Other operating systems:
+- Harmony OS (Huawei)
+- Tizen (Samsung)
+- Windows mobile (Microsoft)
+- WebOS
+
+
 
 
 # References

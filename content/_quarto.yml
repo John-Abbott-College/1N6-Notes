@@ -54,6 +54,7 @@ website:
         - section: "Operating Systems"
           contents:
           - topics/operating-systems/operating-system-intro.qmd
+          - topics/operating-systems/operating-system-install.qmd
 
 format:
   html:
