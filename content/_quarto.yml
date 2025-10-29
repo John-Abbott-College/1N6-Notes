@@ -51,6 +51,10 @@ website:
           - topics/data-representation/binary-math.qmd   
           - topics/data-representation/text-in-computers.qmd
           - topics/data-representation/hexadecimal-numbers.qmd
+        - section: "Operating Systems"
+          contents:
+          - topics/operating-systems/operating-systems-intro.qmd
+
 format:
   html:
     css: _assets/css/styles.css
