@@ -1,0 +1,10 @@
+---
+date: 2025-10-27
+subtitle: File Systems
+title: How files are saved in computers
+draft: false
+---
+
+# Paging
+
+# Segmentation 

@@ -1,7 +1,7 @@
 ---
 date: 2025-10-28
-title: Introduction to Operating Sytems 
-subtitle: Windows, Linux and Others
+title: Introduction
+subtitle: History of Windows, Linux and Others
 draft: false
 ---
 
@@ -144,9 +144,13 @@ Mobile devices such as Smart phones and tablets have their own light weight oper
 ![Android and iOS](https://a.storyblok.com/f/47007/2400x1551/b3cba6007c/operatingsystem_glossary.png/m/2880x0/filters:quality(80))
 
 Other operating systems:
+
 - Harmony OS (Huawei)
+
 - Tizen (Samsung)
+
 - Windows mobile (Microsoft)
+
 - WebOS
 
 
