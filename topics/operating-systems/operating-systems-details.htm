@@ -10,7 +10,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <meta name="dcterms.date" content="2025-10-27">
+  <meta name="dcterms.date" content="2025-11-03">
   <title>{{&lt; var course.title &gt;}} – How is the OS organized?</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -139,17 +139,17 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">2025-10-27</p>
+  <p class="date">2025-11-03</p>
 </section><section id="TOC">
 <nav role="doc-toc"> 
 <h2 id="toc-title">Table of contents</h2>
 <ul>
 <li><a href="#/kernel-vs-shell" id="/toc-kernel-vs-shell">Kernel vs Shell</a></li>
-<li><a href="#/memory-management" id="/toc-memory-management">Memory Management</a></li>
-<li><a href="#/virtualization" id="/toc-virtualization">Virtualization</a></li>
 <li><a href="#/program-process-versus-thread" id="/toc-program-process-versus-thread">Program, process versus thread</a></li>
-<li><a href="#/talking-to-hardware" id="/toc-talking-to-hardware">Talking to hardware</a></li>
-<li><a href="#/device-drivers" id="/toc-device-drivers">Device drivers</a></li>
+<li><a href="#/os-and-the-cpu" id="/toc-os-and-the-cpu">OS and the CPU</a></li>
+<li><a href="#/os-and-ram" id="/toc-os-and-ram">OS and RAM</a></li>
+<li><a href="#/virtualization" id="/toc-virtualization">Virtualization</a></li>
+<li><a href="#/os-and-hardware---summary" id="/toc-os-and-hardware---summary">OS and Hardware - summary</a></li>
 <li><a href="#/references" id="/toc-references">References</a></li>
 </ul>
 </nav>
@@ -163,63 +163,34 @@
 <figcaption>The Kernel is the core of the operating system</figcaption>
 </figure>
 </div>
-<p>The <strong>Kernel</strong> is the innermost part of the operating system and it is responsible for controlling the <strong>computer hardware components</strong>. It interacts with the devices such as the <strong>processor, the main memory, the storage devices, the inputs devices, output devices and communcation devices</strong>. It will directly communicate with the firmware installed on the devices through <strong>device drivers</strong>. It ensures the system’s stability.</p>
+<p>The <strong>Kernel</strong> is the innermost part of the operating system and it is responsible for controlling the <strong>computer hardware components</strong>. It interacts with the devices such as the <strong>processor, the main memory, the storage devices, the inputs devices, output devices and communcation devices</strong>. It talks to the hardware through device drivers (small programs that connect the OS to each device) and keeps the system stable and running smoothly.</p>
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <p><strong>OS is the Air traffic controller</strong></p>
 </div>
 <div class="callout-content">
-<p>An analogy we could think of is a traffic controller at a busy airport. Where the programs running are like the airplanes and the hardware are the gates, runways, various terminals. The traffic controller must carefully coordinate takeoffs and landings, allocating runway space and assigning gates to the various airplanes going through. It’s must avoid collisions!</p>
-<p><img data-src="data:image/jpeg;base64,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"></p>
+<p>You can think of the OS an air traffic controller at a busy airport. Where the <strong>programs</strong> running are like the airplanes and the hardware are the gates, runways, various terminals. The traffic controller must carefully coordinate takeoffs and landings, allocating runway space and assigning gates to the various airplanes going through. It’s must avoid collisions!</p>
+<p><img data-src="_assets/airport_os.png"></p>
 </div>
 </div>
 </div>
-<p>The <strong>Shell</strong> is an interface allowing the user to interact with all those functionalities. This interaction can either be through a graphical user interace (GUI- pronounced Gooey) or via command prompts which are user friendly commands that are understood by the OS. These commands are translated into binary by the <strong>command interpreter</strong>. Here are a few examples of shells (command-line):</p>
+<p>The Shell is the part of the operating system that lets the user interact with its functions. This can be done in two ways:</p>
 <ul>
-<li>Bash (Linux, Mac and other Unix-like operating systems)</li>
-<li>BAT (Windows and MS-DOS)</li>
+<li><p>Through a <strong>Graphical User Interface (GUI)</strong> — often called “Gooey” — using windows, icons, and menus.</p></li>
+<li><p>Through a <strong>Command-Line Interface (CLI)</strong> — by typing commands that the OS understands.</p></li>
+</ul>
+<p>These typed commands are converted into binary instructions by the command interpreter, so the computer can execute them.</p>
+<p>Examples of command-line shells include:</p>
+<ul>
+<li><p><strong>Bash</strong> – used in Linux, macOS, and other Unix-based systems</p></li>
+<li><p><strong>BAT</strong> – used in Windows and MS-DOS</p></li>
 </ul>
 </section>
 
-<section>
-<section id="memory-management" class="title-slide slide level1 center">
-<h1>Memory Management</h1>
-<p>The OS Kernel’s most important functions is to manage the memory (RAM), most specifically it’ll allocate space in the RAM for various programs to run. Before diving into this process, let’s look at how memory is organized. Every RAM stick is made of <strong>millions of memory cells organized as a matrix</strong> as we’ve learnt in the hardware module. To read/write to those cells, special circuitry connected to embedded wires called <strong>address lines</strong> can precisely access each “group” of 8 bits (1 byte) of data.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_assets/ram_memory.png"></p>
-<figcaption>How the memory cells are accessed</figcaption>
-</figure>
-</div>
-<p>If a piece of data requires more space that just 8 bits, it’ll be stored accross multiple spaces (multiple addresses occupied by that one value). Each combination of address bits can help us access one memory space in the RAM. Each address is in binary but often displayed in hexadecimal to make it more readable.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://runestone.academy/ns/books/published/welcomecs/_images/memory.png"></p>
-<figcaption>Representation of the memory space, Source: <a href="https://runestone.academy/ns/books/published/welcomecs/ComputerArchitecture/Memory.html">Main Memory</a> by Chemketa College - Computer Science Department.</figcaption>
-</figure>
-</div>
-<p>But! Modern CPUs have 64-bit bus width and similar number of bits for the address bus widths. Does that mean there are 18446744073.709553 Gb of unique addresses in the RAM? In other words, a CPU might think there are <span class="math inline">\(2^{64}\)</span> possible memory locations. If each address maps to 1 byte of data, that would mean there’s ~18 million Tera bytes of data stored. Obviously not! Even the most performant computers only have a few hundreads of Gb of RAM to work with. This is all taken care of by the Operating System who will map out these “logical addresses” to real “physical addresses” on the RAM.</p>
-</section>
-<h3 id="virtual-memory">Virtual Memory</h3>
-<p>Virtual memory or logical memory is an abstraction of the memory location created by the Operating system to give the “illusion” to any program executing on the CPU that there is a lot more memory than there actually is! The job of the OS to map this virutal memory to physical memory and make sure it updates the mapping table.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Virtual_memory.svg/500px-Virtual_memory.svg.png"></p>
-<figcaption>Virtual Memory Source: <a href="https://en.wikipedia.org/wiki/Virtual_memory">Wikipedia</a></figcaption>
-</figure>
-</div></section>
-<section id="virtualization" class="title-slide slide level1 center">
-<h1>Virtualization</h1>
-<p>Let’s return to the restaurant analogy. Imagine the restaurant is completely full, and every bit of workspace is being used by the sous-chefs. New customer orders keep coming in, and Chef-OS needs more room to prepare urgent meals.</p>
-<p>To make space, the chef notices that some sous-chefs are only prepping ingredients for tomorrow, not cooking right away. So, he decides to move them to the cold storage room at the back to free up tables for the urgent dishes. The sous-chefs set up a small workspace there and continue working, though it’s not ideal!</p>
-<p>In computing, this is similar to virtual memory or swap space. When the system runs out of RAM, it borrows space from the storage drive to keep processes running. It helps temporarily, but relying on it too much can slow things down — and just like the sous-chefs, your computer won’t like working in those conditions!</p>
-
-<img data-src=".png" class="r-stretch quarto-figure-center"><p class="caption">Sous-chefs working in the cold room — representing data being moved from RAM to storage</p></section>
-
 <section id="program-process-versus-thread" class="title-slide slide level1 center">
 <h1>Program, process versus thread</h1>
-<p>You might hear these terms used interchangeably, but you’ll explore them in more detail in your Operating Systems course.</p>
+<p>You might hear these terms used interchangeably, but they aren’t and you’ll learn them in more depth in your Operating Systems course.</p>
 <p>A <strong>program</strong> 📜 is a set of instructions written by a programmer like you. It runs when the operating system loads it into memory. You can have several instances of the same program running at once — each one is a separate <strong>process</strong>.</p>
 <p>A <strong>process</strong> ⚙️ is one active instance of a program running in memory (RAM). Each process works independently and has its own memory space. The OS keeps track of them using a unique <strong>process ID (PID)</strong>.</p>
 <p>A <strong>thread</strong> 🧵 is a smaller unit of work inside a process. Threads let a process perform multiple tasks at the same time — just like CPU threads let the OS run several software threads simultaneously for multitasking.</p>
@@ -230,7 +201,7 @@
 </div>
 <div class="callout-content">
 <p><img data-src="_assets/resturant-analogy.png"></p>
-<p>Imagine the Operating System as the head chef in a busy restaurant, with several sous-chefs working under them. All the recipes—written 📜 by programmers—are stored in a large file cabinet (the storage device).</p>
+<p>Imagine the Operating System as the head chef in a busy restaurant, with several sous-chefs working under him. All the recipes—written 📜 by programmers—are stored in a large file cabinet (the storage device).</p>
 <p>When a customer orders a cake, the chef (OS) retrieves the recipe, assigns it to a sous-chef, and provides the necessary ingredients, an oven (CPU), and a workspace (RAM) ⚙️</p>
 <p>To speed things up, the chef can assign assistants to help the sous-chef, each handling smaller tasks in parallel 🧵, all sharing the same resources.</p>
 </div>
@@ -249,10 +220,88 @@
 </div>
 </section>
 
-<section id="talking-to-hardware" class="title-slide slide level1 center">
-<h1>Talking to hardware</h1>
-<p>How the OS speaks to the CPU, RAM and storage is a complex process and is out of scope for this course, but it’s useful to build a mental picture to to tie in all the knowledge we’ve learned for far.</p>
-<p>Let’s remind that the CPU is nothing more but an ultra complex maze of transistors connected through wires to the RAM. Those various wires are connected to the RAM to fetch the address and value of a piece of data. The clock controls how freqently the CPU processes instructions. This process only works in binary with transistors being set to 1 or 0. Every CPU has an “instruction set” (understood by us as english-like commands <code>MOV</code>, <code>ADD</code>, <code>NOT</code>, <code>AND</code>, <code>OR</code> but understood by the CPU as binary instructions). The operating system allocates space in RAM and copies the machine code of a program (after it’s been translated by a compiler) into that allocated space. It then sets the CPU’s program counter (a register) to the starting address of the program currently in memory. This action will initiate the execution of the program. The OS has a crucial role for each hardware component, this table is a brief summary of the OS’s interactions.</p>
+<section id="os-and-the-cpu" class="title-slide slide level1 center">
+<h1>OS and the CPU</h1>
+<p>How the OS speaks to the CPU, RAM and storage is a complex process and is out of scope for this course, but it’s useful to build a mental picture to to tie-in all the knowledge we’ve learned for far.</p>
+<p>At this stage, you know that the CPU is an incredibly complex network of transistors linked by wires to the RAM. These connections allow the CPU to fetch data by reading specific addresses and values from memory. The clock determines how often the CPU processes instructions, all happening in binary, where each transistor is either on (1) or off (0).</p>
+<p>When a program runs, the operating system reserves space in RAM and loads the program’s machine code (binary intructions) into that space. It then updates the CPU’s program counter (a special register) to the starting address of the program in memory, this is what starts the execution of a program. In other words, the OS is the true brains of the computer and uses the CPU as its high speed calculator!</p>
+<p>The OS also frequently switches the CPU’s focus from one program to another, creating the illusion of <strong>multitasking</strong>. In reality, the CPU is performing rapid task switching, handling one task at a time but so quickly that it feels simultaneous.</p>
+</section>
+
+<section>
+<section id="os-and-ram" class="title-slide slide level1 center">
+<h1>OS and RAM</h1>
+<p>The OS’s most important function is to manage the memory (RAM), more specifically it’ll allocate space in the RAM for various programs to run. Before diving into this process, let’s take a look at how memory is organized.</p>
+<p>Every RAM stick is made of <strong>millions of memory cells organized as a matrix</strong> as learnt in the hardware module. To read/write to those cells, special circuitry connected to embedded wires called <strong>address lines</strong> can precisely access each “group” of 8 bits (1 byte) of data.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_assets/ram_memory.png"></p>
+<figcaption>How the memory cells are accessed</figcaption>
+</figure>
+</div>
+<p>If a data value needs more than 8 bits, it spans multiple memory locations. This means that a single value can occupy several addresses. Each unique combination of address bits identifies one specific memory location in RAM. Although addresses are stored in binary, they’re typically shown in hexadecimal for easier reading.</p>
+<p><img data-src="https://runestone.academy/ns/books/published/welcomecs/_images/memory.png" alt="Representation of the memory space, Source: Main Memory by Chemketa College - Computer Science Department."> However, modern CPUs use 64-bit data buses and 64-bit address buses. This means, in theory, a CPU could access up to <span class="math inline">\(2^{64}\)</span> memory locations. If each location stores just 1 byte, that would equal roughly 18 million terabytes (<span class="math inline">\(10^{18}\)</span> bytes) of memory!</p>
+<p>Of course, that’s not the case! Even the most powerful computers today have only a few hundred gigabytes of RAM. The operating system manages this difference by mapping logical addresses (what the CPU thinks exists) to physical addresses (the actual locations in RAM).</p>
+</section>
+<h3 id="virtual-memory">Virtual Memory</h3>
+<p>Virtual memory or logical memory is an abstraction of the memory location created by the Operating system to give the “illusion” to any program executing on the CPU that there is a lot more memory than there actually is! The job of the OS to map this virutal memory to physical memory and make sure it updates the mapping table.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Virtual_memory.svg/500px-Virtual_memory.svg.png"></p>
+<figcaption>Virtual Memory Source: <a href="https://en.wikipedia.org/wiki/Virtual_memory">Wikipedia</a></figcaption>
+</figure>
+</div></section>
+<section id="virtualization" class="title-slide slide level1 center scrollable">
+<h1>Virtualization</h1>
+<p>Let’s return to the restaurant analogy. Imagine the restaurant is completely full, and every bit of workspace is being used by the sous-chefs. New customer orders keep coming in, and Chef-OS needs more room to prepare urgent meals.</p>
+<p>To make space, the chef notices that some sous-chefs are only prepping ingredients for tomorrow, not cooking right away. So, he decides to move them to the cold storage room at the back to free up tables for the urgent dishes. The sous-chefs set up a small workspace there and continue working, though it’s not ideal!</p>
+<p>In computing, this is similar to virtual memory or swap space. When the system runs out of RAM, it borrows space from the storage drive to keep processes running. It helps temporarily, but relying on it too much can slow things down — and just like the sous-chefs, your computer won’t like working in those conditions!</p>
+
+<img data-src=".png" class="r-stretch quarto-figure-center"><p class="caption">Sous-chefs working in the cold room — representing data being moved from RAM to storage</p><div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Question</strong></p>
+</div>
+<div class="callout-content">
+<p>An operating system allocates 1-byte memory blocks for two processes, A and B, running concurrently. The following sequence of events occurs:</p>
+<ol type="1">
+<li><p>Process B starts and stores the value 1024 in memory.</p></li>
+<li><p>Process A starts and attempts to store the string “HELLO” in memory, but block 3 is already occupied by a third, unknown process.</p></li>
+<li><p>Process B frees some memory space and stores the value 128.</p></li>
+<li><p>Process A appends more text to its initial message, resulting in “HELLO WORLD!”.</p></li>
+</ol>
+<p>Assume each letter is 1 byte and that the OS allocates the memory blocks based on which are currently free. Determine in which order each piece of information will be stored in the physical RAM:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Address</th>
+<th>Data</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0x00</td>
+<td>?</td>
+</tr>
+<tr class="even">
+<td>0x01</td>
+<td>?</td>
+</tr>
+<tr class="odd">
+<td>0x02</td>
+<td>?</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://learningapps.org/watch?v=px6sx8drj25">Validate your answer here</a></p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="os-and-hardware---summary" class="title-slide slide level1 center">
+<h1>OS and Hardware - summary</h1>
+<p>The OS manages similar interactions with all hardware components. The following table summarizes these relationships.</p>
 <table class="caption-top">
 <colgroup>
 <col style="width: 10%">
@@ -289,16 +338,23 @@
 </tr>
 </tbody>
 </table>
-</section>
-
-<section id="device-drivers" class="title-slide slide level1 center">
-<h1>Device drivers</h1>
-<p>The operating system interacts with the hardware through special software called <strong>device driver</strong> which are responsible for communicating directly with the firmware of a hardware device.</p>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Practice questions</strong></p>
+</div>
+<div class="callout-content">
+<p>Answer the “Self-check” questions at the end of this module: https://runestone.academy/ns/books/published/welcomecs/OperatingSystems/VirtualMemory.html</p>
+</div>
+</div>
+</div>
 </section>
 
 <section id="references" class="title-slide slide level1 center scrollable">
 <h1>References</h1>
 <ol type="1">
+<li><a href="https://runestone.academy/ns/books/published/welcomecs/ComputerArchitecture/Memory.html">Main Memory</a></li>
+<li><a href="https://runestone.academy/ns/books/published/welcomecs/OperatingSystems/VirtualMemory.html">Memory Management</a></li>
 <li><a href="https://www.youtube.com/watch?v=A9WLYbE0p-I">What is Virtual Memory</a></li>
 </ol>
 
