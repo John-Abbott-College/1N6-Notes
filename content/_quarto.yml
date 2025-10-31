@@ -42,7 +42,7 @@ website:
           - topics/hardware/external-components.qmd
           - topics/hardware/internal-components.qmd  
           - topics/hardware/understanding-cpus.qmd
-          - href: topics/hardware/chips_ram_cpu.pdf.pdf
+          - href: topics/hardware/chips_ram_cpu.pdf
             text: "Chipets, CPU and RAM" # This will open the PDF in a new tab/window
           - topics/hardware/bios_cmos_uefi.qmd
           
