@@ -59,7 +59,7 @@ This is no the same thing as **Memory Virtualization** which we learnt about whe
 
 * 💼 **Business-friendly:** Switching between operating systems is quick and seamless, making virtualization ideal for workplace productivity.
 
-*⚙️ **Efficient resource use:** High-performance servers can host several virtual machines, each dedicated to specific tasks or departments.
+* ⚙️ **Efficient resource use:** High-performance servers can host several virtual machines, each dedicated to specific tasks or departments.
 
 ## Cons
 *🐢 **Performance trade-off:** Running several virtual machines can slow down the host operating system, especially on lower-end hardware.

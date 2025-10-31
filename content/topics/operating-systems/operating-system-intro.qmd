@@ -103,19 +103,19 @@ For beginners, Unix and Linux are often confusing. Unix was developed in the 196
 
 Linux commands are fundamental tools used in the command line interface (CLI) to interact with the operating system. Common examples include:
 
-`ls` : Lists contents of directories
-`cd` : Changes the current directory
-`pwd` : Displays the current directory path
-`mkdir`: Creates a new directory
-`touch`: Creates a file
-`cat`: Concatenates and displays the content of files. 
-`echo`: Prints out a given string to a standard output (terminal or file)
-`cp`, `mv`, `rm` : Used to copy, move, and delete files respectively
+-`ls` : Lists contents of directories
+-`cd` : Changes the current directory
+-`pwd` : Displays the current directory path
+-`mkdir`: Creates a new directory
+-`touch`: Creates a file
+-`cat`: Concatenates and displays the content of files. 
+-`echo`: Prints out a given string to a standard output (terminal or file)
+-`cp`, `mv`, `rm` : Used to copy, move, and delete files respectively
 
-`sudo` : Executes commands with administrative (root) privileges
-`free` : Shows memory usage
-`df` : Checks disk space usage
-`top` : Monitors running processes
+-`sudo` : Executes commands with administrative (root) privileges
+-`free` : Shows memory usage
+-`df` : Checks disk space usage
+-`top` : Monitors running processes
 
 [Here](https://www.geeksforgeeks.org/linux-unix/linux-commands/) is a more extensive list of commands for Linux. 
 
@@ -141,7 +141,7 @@ These are designed for corporate environment servicing multiple users with a wid
 
 Mobile devices such as Smart phones and tablets have their own light weight operating systems. They manage the specific hardware of mobile devices, provide network connectivity, and intuitive user experience. There exist many mobile operating systems, but the most popular ones are **Android** developed by Google and **iOS** developed by Apple:
 
-![Android and iOS](https://a.storyblok.com/f/47007/2400x1551/b3cba6007c/operatingsystem_glossary.png/m/2880x0/filters:quality(80))
+![Android and iOS](https://www.cwstechnology.com/wp-content/uploads/2024/07/iOS-vs-Android.png)
 
 Other operating systems:
 

@@ -33,25 +33,25 @@ Examples of command-line shells include:
 
 - **Bash** – used in Linux, macOS, and other Unix-based systems
 
-- **BAT** – used in Windows and MS-DOS
+- **Cmd** – used in Windows (used to be MS-DOS)  
 
 
 # Program, process versus thread
 
-You might hear these terms used interchangeably, but they aren't and you’ll learn them in more depth in your Operating Systems course.
+You might hear these terms used interchangeably, but they **aren't** the same and you’ll learn them in more depth in your *Operating Systems* course next year.
 
-A **program** 📜 is a set of instructions written by a programmer like you. It runs when the operating system loads it into memory. You can have several instances of the same program running at once — each one is a separate **process**.
+A **program** 📜 is a set of instructions written by a programmer like you. It runs when the operating system loads it into memory. You can have several instances of the same program running at once, each one is a separate **process**.
 
 A **process** ⚙️ is one active instance of a program running in memory (RAM). Each process works independently and has its own memory space. The OS keeps track of them using a unique **process ID (PID)**.
 
-A **thread** 🧵 is a smaller unit of work inside a process. Threads let a process perform multiple tasks at the same time — just like CPU threads let the OS run several software threads simultaneously for multitasking.
-
+A **thread** 🧵 is a smaller unit of work inside a process. Threads let a process perform multiple tasks at the same time, just like **CPU threads** let the OS run several software threads simultaneously for **multitasking**. This will not be part of any evaluation in this course, but it's still useful to understand when you start developing apps and web apps.
+ 
 
 :::{.callout-tip icon="false"}
 # Resturant Analogy
 ![](_assets/resturant-analogy.png)
 
-Imagine the Operating System as the head chef in a busy restaurant, with several sous-chefs working under him. All the recipes—written 📜 by programmers—are stored in a large file cabinet (the storage device).
+Imagine the Operating System as the head chef in a busy restaurant, with several sous-chefs working under him. All the recipes—written 📜 by programmers are stored in a large file cabinet (the storage device).
 
 When a customer orders a cake, the chef (OS) retrieves the recipe, assigns it to a sous-chef, and provides the necessary ingredients, an oven (CPU), and a workspace (RAM) ⚙️
 
@@ -65,21 +65,31 @@ To observe the various process currently running on your computer, you can open 
 1. Press the Alt + Ctrl + Del 
 2. Open the Task Manager
 
-You'll probably realize that many programs are actually using multiple processes at the same time!
+On a Mac, the equivalent is the _Activity Monitor_ and on Linux it's the _System Monitor_ (or type the `top` command to display processes in the Terminal).
 
+You'll probably realize that many programs are actually using **multiple processes** at the same time!
+
+Sometimes, a process is stalling or not responding. A useful tip is to know how to force it to stop running.
+3. Right click the frozen program, click "End Task"
 :::
 
 # OS and the CPU
 
 How the OS speaks to the CPU, RAM and storage is a complex process and is out of scope for this course, but it's useful to build a mental picture to to tie-in all the knowledge we've learned for far. 
 
-At this stage, you know that the CPU is an incredibly complex network of transistors linked by wires to the RAM. These connections allow the CPU to fetch data by reading specific addresses and values from memory. The clock determines how often the CPU processes instructions, all happening in binary, where each transistor is either on (1) or off (0).
+At this stage, you know that the CPU is an incredibly complex network of transistors linked by wires to the RAM. These connections allow the CPU to **fetches** instructions and data by reading specific **addresses** and values from memory. It then **decodes** them using its built-in codebook. The clock determines how often the CPU **executes** instructions, all happening in binary, where each transistor is either ON (1) or OFF (0).
 
-When a program runs, the operating system reserves space in RAM and loads the program’s machine code (binary intructions) into that space. It then updates the CPU’s program counter (a special register) to the starting address of the program in memory, this is what starts the execution of a program. In other words, the OS is the true brains of the computer and uses the CPU as its high speed calculator!
+When a computer boots up, the BIOS (after the POST and hardware initialization) takes control of the CPU, and loads the Operating system. The OS will ten take control of the CPU to perform. 
+When an app/program is launched, the operating system **reserves space in RAM** and loads the program’s machine code (binary intructions) into that space. It then updates the **CPU’s program counter** (a special register) to the starting address of the program in memory, this is what starts the execution of a program. In other words, the OS is the true brains of the computer and uses the CPU as its high speed calculator!
 
 The OS also frequently switches the CPU’s focus from one program to another, creating the illusion of **multitasking**. In reality, the CPU is performing rapid task switching, handling one task at a time but so quickly that it feels simultaneous.
 
+:::{.callout-note icon="false"}
+# Organize this series of events..
 
+<iframe src="https://learningapps.org/watch?v=pb5scy8uk25" style="border:0px;width:100%;height:500px" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+
+:::
 
 # OS and RAM
 
@@ -92,12 +102,29 @@ Every RAM stick is made of **millions of memory cells organized as a matrix** as
 If a data value needs more than 8 bits, it spans multiple memory locations. This means that a single value can occupy several addresses. Each unique combination of address bits identifies one specific memory location in RAM. Although addresses are stored in binary, they’re typically shown in hexadecimal for easier reading.
 
 ![Representation of the memory space, Source: [Main Memory](https://runestone.academy/ns/books/published/welcomecs/ComputerArchitecture/Memory.html) by Chemketa College - Computer Science Department.](https://runestone.academy/ns/books/published/welcomecs/_images/memory.png)
-However, modern CPUs use 64-bit data buses and 64-bit address buses.
+
+:::{.callout-note icon="false"}
+# Organize the RAM
+
+You are working under Chef- OS who is trying to organize the following processes, in the various kitchen workstation of 8 bits. Three processes (sous-chefs) are competing for space in the RAM!
+1. Process A wants to save the unsigned number 128 
+2. Process B wants to save the ascii text "Hi"
+3. Process C wants to save the color #CCOOCC
+4. Process B wants to modify the text to "Hi!"
+
+Assume that the OS is going to assign space by order of available workstations. 
+
+<iframe src="https://learningapps.org/watch?v=p2tsi2cgc25" style="border:0px;width:100%;height:500px" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+:::
+
+### Logical Memory
+
+Modern CPUs use 64-bit data buses and 64-bit address buses.
 This means, in theory, a CPU could access up to $2^{64}$ memory locations.
 If each location stores just 1 byte, that would equal roughly 18 million terabytes ($10^{18}$ bytes) of memory!
 
 Of course, that’s not the case! Even the most powerful computers today have only a few hundred gigabytes of RAM.
-The operating system manages this difference by mapping logical addresses (what the CPU thinks exists) to physical addresses (the actual locations in RAM).
+The operating system manages this difference by mapping logical addresses (what the programs running on CPU thinks exists) to physical addresses (the actual locations in RAM).
 
 
 ### Virtual Memory
@@ -115,7 +142,7 @@ To make space, the chef notices that some sous-chefs are only prepping ingredien
 
 In computing, this is similar to virtual memory or swap space. When the system runs out of RAM, it borrows space from the storage drive to keep processes running. It helps temporarily, but relying on it too much can slow things down — and just like the sous-chefs, your computer won’t like working in those conditions!
 
-![Sous-chefs working in the cold room — representing data being moved from RAM to storage]()
+![Sous-chefs working in the cold room — representing data being moved from RAM to storage. Image Generated by Copilot](_assets/virtual_memory_cold_room.png)
 
 :::{.callout-note icon="false"}
 # Question
