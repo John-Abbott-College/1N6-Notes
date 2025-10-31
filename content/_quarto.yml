@@ -42,6 +42,8 @@ website:
           - topics/hardware/external-components.qmd
           - topics/hardware/internal-components.qmd  
           - topics/hardware/understanding-cpus.qmd
+          - href: topics/hardware/chips_ram_cpu.pdf.pdf
+            text: "Chipets, CPU and RAM" # This will open the PDF in a new tab/window
           - topics/hardware/bios_cmos_uefi.qmd
           
         - section: "Data representation"
@@ -51,11 +53,14 @@ website:
           - topics/data-representation/binary-math.qmd   
           - topics/data-representation/text-in-computers.qmd
           - topics/data-representation/hexadecimal-numbers.qmd
+
         - section: "Operating Systems"
           contents:
           - topics/operating-systems/operating-system-intro.qmd
           - topics/operating-systems/operating-system-install.qmd
           - topics/operating-systems/operating-systems-details.qmd
+          - href: topics/operating-systems/disk_partitions_file_systems.pdf
+            text: "Disk and File Systems" # This will open the PDF in a new tab/window
 
 format:
   html:
