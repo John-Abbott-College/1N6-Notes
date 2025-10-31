@@ -10,7 +10,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <meta name="dcterms.date" content="2025-11-03">
+  <meta name="dcterms.date" content="2025-10-31">
   <title>{{&lt; var course.title &gt;}} – How is the OS organized?</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -139,7 +139,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">2025-11-03</p>
+  <p class="date">2025-10-31</p>
 </section><section id="TOC">
 <nav role="doc-toc"> 
 <h2 id="toc-title">Table of contents</h2>
@@ -184,16 +184,16 @@
 <p>Examples of command-line shells include:</p>
 <ul>
 <li><p><strong>Bash</strong> – used in Linux, macOS, and other Unix-based systems</p></li>
-<li><p><strong>BAT</strong> – used in Windows and MS-DOS</p></li>
+<li><p><strong>Cmd</strong> – used in Windows (used to be MS-DOS)</p></li>
 </ul>
 </section>
 
 <section id="program-process-versus-thread" class="title-slide slide level1 center">
 <h1>Program, process versus thread</h1>
-<p>You might hear these terms used interchangeably, but they aren’t and you’ll learn them in more depth in your Operating Systems course.</p>
-<p>A <strong>program</strong> 📜 is a set of instructions written by a programmer like you. It runs when the operating system loads it into memory. You can have several instances of the same program running at once — each one is a separate <strong>process</strong>.</p>
+<p>You might hear these terms used interchangeably, but they <strong>aren’t</strong> the same and you’ll learn them in more depth in your <em>Operating Systems</em> course next year.</p>
+<p>A <strong>program</strong> 📜 is a set of instructions written by a programmer like you. It runs when the operating system loads it into memory. You can have several instances of the same program running at once, each one is a separate <strong>process</strong>.</p>
 <p>A <strong>process</strong> ⚙️ is one active instance of a program running in memory (RAM). Each process works independently and has its own memory space. The OS keeps track of them using a unique <strong>process ID (PID)</strong>.</p>
-<p>A <strong>thread</strong> 🧵 is a smaller unit of work inside a process. Threads let a process perform multiple tasks at the same time — just like CPU threads let the OS run several software threads simultaneously for multitasking.</p>
+<p>A <strong>thread</strong> 🧵 is a smaller unit of work inside a process. Threads let a process perform multiple tasks at the same time, just like <strong>CPU threads</strong> let the OS run several software threads simultaneously for <strong>multitasking</strong>. This will not be part of any evaluation in this course, but it’s still useful to understand when you start developing apps and web apps.</p>
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -201,7 +201,7 @@
 </div>
 <div class="callout-content">
 <p><img data-src="_assets/resturant-analogy.png"></p>
-<p>Imagine the Operating System as the head chef in a busy restaurant, with several sous-chefs working under him. All the recipes—written 📜 by programmers—are stored in a large file cabinet (the storage device).</p>
+<p>Imagine the Operating System as the head chef in a busy restaurant, with several sous-chefs working under him. All the recipes—written 📜 by programmers are stored in a large file cabinet (the storage device).</p>
 <p>When a customer orders a cake, the chef (OS) retrieves the recipe, assigns it to a sous-chef, and provides the necessary ingredients, an oven (CPU), and a workspace (RAM) ⚙️</p>
 <p>To speed things up, the chef can assign assistants to help the sous-chef, each handling smaller tasks in parallel 🧵, all sharing the same resources.</p>
 </div>
@@ -214,7 +214,9 @@
 </div>
 <div class="callout-content">
 <p>To observe the various process currently running on your computer, you can open the Task Manager on Windows: 1. Press the Alt + Ctrl + Del 2. Open the Task Manager</p>
-<p>You’ll probably realize that many programs are actually using multiple processes at the same time!</p>
+<p>On a Mac, the equivalent is the <em>Activity Monitor</em> and on Linux it’s the <em>System Monitor</em> (or type the <code>top</code> command to display processes in the Terminal).</p>
+<p>You’ll probably realize that many programs are actually using <strong>multiple processes</strong> at the same time!</p>
+<p>Sometimes, a process is stalling or not responding. A useful tip is to know how to force it to stop running. 3. Right click the frozen program, click “End Task”</p>
 </div>
 </div>
 </div>
@@ -223,9 +225,20 @@
 <section id="os-and-the-cpu" class="title-slide slide level1 center">
 <h1>OS and the CPU</h1>
 <p>How the OS speaks to the CPU, RAM and storage is a complex process and is out of scope for this course, but it’s useful to build a mental picture to to tie-in all the knowledge we’ve learned for far.</p>
-<p>At this stage, you know that the CPU is an incredibly complex network of transistors linked by wires to the RAM. These connections allow the CPU to fetch data by reading specific addresses and values from memory. The clock determines how often the CPU processes instructions, all happening in binary, where each transistor is either on (1) or off (0).</p>
-<p>When a program runs, the operating system reserves space in RAM and loads the program’s machine code (binary intructions) into that space. It then updates the CPU’s program counter (a special register) to the starting address of the program in memory, this is what starts the execution of a program. In other words, the OS is the true brains of the computer and uses the CPU as its high speed calculator!</p>
+<p>At this stage, you know that the CPU is an incredibly complex network of transistors linked by wires to the RAM. These connections allow the CPU to <strong>fetches</strong> instructions and data by reading specific <strong>addresses</strong> and values from memory. It then <strong>decodes</strong> them using its built-in codebook. The clock determines how often the CPU <strong>executes</strong> instructions, all happening in binary, where each transistor is either ON (1) or OFF (0).</p>
+<p>When a computer boots up, the BIOS (after the POST and hardware initialization) takes control of the CPU, and loads the Operating system. The OS will ten take control of the CPU to perform. When an app/program is launched, the operating system <strong>reserves space in RAM</strong> and loads the program’s machine code (binary intructions) into that space. It then updates the <strong>CPU’s program counter</strong> (a special register) to the starting address of the program in memory, this is what starts the execution of a program. In other words, the OS is the true brains of the computer and uses the CPU as its high speed calculator!</p>
 <p>The OS also frequently switches the CPU’s focus from one program to another, creating the illusion of <strong>multitasking</strong>. In reality, the CPU is performing rapid task switching, handling one task at a time but so quickly that it feels simultaneous.</p>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Organize this series of events..</strong></p>
+</div>
+<div class="callout-content">
+<iframe src="https://learningapps.org/watch?v=pb5scy8uk25" style="border:0px;width:100%;height:500px" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+</iframe>
+</div>
+</div>
+</div>
 </section>
 
 <section>
@@ -240,9 +253,29 @@
 </figure>
 </div>
 <p>If a data value needs more than 8 bits, it spans multiple memory locations. This means that a single value can occupy several addresses. Each unique combination of address bits identifies one specific memory location in RAM. Although addresses are stored in binary, they’re typically shown in hexadecimal for easier reading.</p>
-<p><img data-src="https://runestone.academy/ns/books/published/welcomecs/_images/memory.png" alt="Representation of the memory space, Source: Main Memory by Chemketa College - Computer Science Department."> However, modern CPUs use 64-bit data buses and 64-bit address buses. This means, in theory, a CPU could access up to <span class="math inline">\(2^{64}\)</span> memory locations. If each location stores just 1 byte, that would equal roughly 18 million terabytes (<span class="math inline">\(10^{18}\)</span> bytes) of memory!</p>
-<p>Of course, that’s not the case! Even the most powerful computers today have only a few hundred gigabytes of RAM. The operating system manages this difference by mapping logical addresses (what the CPU thinks exists) to physical addresses (the actual locations in RAM).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://runestone.academy/ns/books/published/welcomecs/_images/memory.png"></p>
+<figcaption>Representation of the memory space, Source: <a href="https://runestone.academy/ns/books/published/welcomecs/ComputerArchitecture/Memory.html">Main Memory</a> by Chemketa College - Computer Science Department.</figcaption>
+</figure>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Organize the RAM</strong></p>
+</div>
+<div class="callout-content">
+<p>You are working under Chef- OS who is trying to organize the following processes, in the various kitchen workstation of 8 bits. Three processes (sous-chefs) are competing for space in the RAM! 1. Process A wants to save the unsigned number 128 2. Process B wants to save the ascii text “Hi” 3. Process C wants to save the color #CCOOCC 4. Process B wants to modify the text to “Hi!”</p>
+<p>Assume that the OS is going to assign space by order of available workstations.</p>
+<iframe src="https://learningapps.org/watch?v=p2tsi2cgc25" style="border:0px;width:100%;height:500px" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+</iframe>
+</div>
+</div>
+</div>
 </section>
+<h3 id="logical-memory">Logical Memory</h3>
+<p>Modern CPUs use 64-bit data buses and 64-bit address buses. This means, in theory, a CPU could access up to <span class="math inline">\(2^{64}\)</span> memory locations. If each location stores just 1 byte, that would equal roughly 18 million terabytes (<span class="math inline">\(10^{18}\)</span> bytes) of memory!</p>
+<p>Of course, that’s not the case! Even the most powerful computers today have only a few hundred gigabytes of RAM. The operating system manages this difference by mapping logical addresses (what the programs running on CPU thinks exists) to physical addresses (the actual locations in RAM).</p>
 <h3 id="virtual-memory">Virtual Memory</h3>
 <p>Virtual memory or logical memory is an abstraction of the memory location created by the Operating system to give the “illusion” to any program executing on the CPU that there is a lot more memory than there actually is! The job of the OS to map this virutal memory to physical memory and make sure it updates the mapping table.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -257,7 +290,7 @@
 <p>To make space, the chef notices that some sous-chefs are only prepping ingredients for tomorrow, not cooking right away. So, he decides to move them to the cold storage room at the back to free up tables for the urgent dishes. The sous-chefs set up a small workspace there and continue working, though it’s not ideal!</p>
 <p>In computing, this is similar to virtual memory or swap space. When the system runs out of RAM, it borrows space from the storage drive to keep processes running. It helps temporarily, but relying on it too much can slow things down — and just like the sous-chefs, your computer won’t like working in those conditions!</p>
 
-<img data-src=".png" class="r-stretch quarto-figure-center"><p class="caption">Sous-chefs working in the cold room — representing data being moved from RAM to storage</p><div class="callout callout-note no-icon callout-titled callout-style-default">
+<img data-src="_assets/virtual_memory_cold_room.png" class="r-stretch quarto-figure-center"><p class="caption">Sous-chefs working in the cold room — representing data being moved from RAM to storage. Image Generated by Copilot</p><div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <p><strong>Question</strong></p>
