@@ -61,6 +61,8 @@ website:
           - topics/operating-systems/operating-systems-details.qmd
           - href: topics/operating-systems/disk_partitions_file_systems.pdf
             text: "Disk and File Systems" # This will open the PDF in a new tab/window
+          - href: topics/operating-systems/permissions_users_registries.pdf
+            text: "Permissions, Users and Registries" # This will open the PDF in a new tab/window
 
 format:
   html:
