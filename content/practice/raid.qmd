@@ -1,0 +1,71 @@
+---
+date: 2025-11-25
+draft: false
+title: RAID
+image: "https://cdn.hostadvice.com/2018/02/RAID-1.png"
+---
+
+# RAID- 0
+
+1. Complete this activity. Use full screen for improved experience:
+
+
+<iframe src="https://learningapps.org/watch?v=pd83wdcn325" style="border:0px;width:80%;height:500px" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+
+2. What's the maximum capacity of four disks in RAID-0 if one is 500Gb and the rest are 1Tb?
+
+:::{.callout-tip icon="false" collapse="true"}
+Answer: 4 x 500Gb = 2Tb
+
+:::
+3. What's the percentage of data loss if 1 disk fails? 
+
+:::{.callout-tip icon="false" collapse="true"}
+Answer: 25%
+
+:::
+
+# RAID- 1
+
+1. Complete this activity. Use full screen for improved experience:
+
+
+<iframe src="https://learningapps.org/watch?v=pmo3czaga25" style="border:0px;width:80%;height:500px" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+
+2. What's the maximum capacity of four disks in RAID-1 if one is 500Gb and the remaining ones are 2TB?
+
+:::{.callout-tip icon="false" collapse="true"}
+Answer: 1 x 500Gb. Just copied 4 times. 
+:::
+
+3. What's the percentage of data loss if 1 disk fails? 
+
+:::{.callout-tip icon="false" collapse="true"}
+Answer: 0%
+:::
+
+# RAID-5
+
+1. Complete this activity. Use full screen for improved experience:
+
+
+<iframe src="https://learningapps.org/watch?v=pfd8r7bx225" style="border:0px;width:100%;height:500px" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+
+2. What's the maximum capacity of four disks in RAID-5 if one is 500Gb and the remaining ones are 2TB?
+
+:::{.callout-tip icon="false" collapse="true"}
+Answer: 3 x 500Gb (because one saved for parity) = 1.5 Tb
+:::
+
+3. What's the percentage of data loss if 1 disk fails? 
+
+:::{.callout-tip icon="false" collapse="true"}
+Answer: 0%
+
+:::
+
+# RAID-6
+
+1. Complete this activity. Use full screen for improved experience:
+
+<iframe src="https://learningapps.org/watch?v=pdbqdx2m225" style="border:0px;width:100%;height:500px" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
