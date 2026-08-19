@@ -27,3 +27,18 @@ $firacode-web-font-path: "https://fonts.googleapis.com/css2?family=Fira+Code:wgh
 @if $firacode-web-font-path {
   @import url($firacode-web-font-path);
 }
+
+/* Make top-level sidebar section headings more prominent */
+.sidebar-item-section > .sidebar-item-container > .sidebar-item-text,
+.sidebar-item-section > .sidebar-item-text {
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
+  
+}
+/* Increase font size of sub-items under sections */
+#quarto-sidebar .sidebar-section .sidebar-item-text,
+#quarto-sidebar .sidebar-section .nav-link {
+  font-size: 1.1rem; /* Change this value to adjust size */
+  padding: 0.5rem 0;
+}
+
