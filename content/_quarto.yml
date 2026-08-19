@@ -32,6 +32,7 @@ website:
         href: practice/all-exos.qmd
   sidebar:
     style: "docked"
+    collapse-level: 2
     align: left
     contents: 
       - section: "Course Notes"
