@@ -1,44 +1,29 @@
 $min-contrast-ratio:   4.5 !default;
 
-// Fonts
+// // Fonts
 
-// stylelint-disable-next-line value-keyword-case
-$font-family-sans-serif: "Fira Sans Condensed", Ubuntu, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+// // stylelint-disable-next-line value-keyword-case
+// $font-family-sans-serif: "Fira Sans Condensed", Ubuntu, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
-// stylelint-disable-next-line value-keyword-case
-// adapted from: https://qwtel.com/posts/software/the-monospaced-system-ui-css-font-stack/
-$font-family-monospace: "Fira Code", ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+// // stylelint-disable-next-line value-keyword-case
+// // adapted from: https://qwtel.com/posts/software/the-monospaced-system-ui-css-font-stack/
+// $font-family-monospace: "Fira Code", ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
-/*-- scss:rules --*/
+// /*-- scss:rules --*/
 
-// Variables
+// // Variables
 
-$ubuntu-web-font-path: "https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" !default;
-@if $ubuntu-web-font-path {
-  @import url($ubuntu-web-font-path);
-}
+// $ubuntu-web-font-path: "https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" !default;
+// @if $ubuntu-web-font-path {
+//   @import url($ubuntu-web-font-path);
+// }
 
-$firasans-web-font-path: "https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" !default;
-@if $firasans-web-font-path {
-  @import url($firasans-web-font-path);
-}
+// $firasans-web-font-path: "https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" !default;
+// @if $firasans-web-font-path {
+//   @import url($firasans-web-font-path);
+// }
 
-$firacode-web-font-path: "https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" !default;
-@if $firacode-web-font-path {
-  @import url($firacode-web-font-path);
-}
-
-/* Make top-level sidebar section headings more prominent */
-.sidebar-item-section > .sidebar-item-container > .sidebar-item-text,
-.sidebar-item-section > .sidebar-item-text {
-  font-size: 1.1rem;
-  padding: 0.5rem 0;
-  
-}
-/* Increase font size of sub-items under sections */
-#quarto-sidebar .sidebar-section .sidebar-item-text,
-#quarto-sidebar .sidebar-section .nav-link {
-  font-size: 1.1rem; /* Change this value to adjust size */
-  padding: 0.5rem 0;
-}
-
+// $firacode-web-font-path: "https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" !default;
+// @if $firacode-web-font-path {
+//   @import url($firacode-web-font-path);
+// }

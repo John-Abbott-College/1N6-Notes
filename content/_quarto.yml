@@ -32,7 +32,7 @@ website:
         href: practice/all-exos.qmd
   sidebar:
     style: "docked"
-    collapse-level: 2
+    collapse-level: 4
     align: left
     contents: 
       - section: "Course Notes"
@@ -76,22 +76,16 @@ format:
     toc: true
     toc-depth: 4
     grid:
-          sidebar-width: 250px # Adjust this value as desired
+      sidebar-width: 400px
+      body-width: 1300px
+      margin-width: 200px   # Increase this to push the right margin/TOC further right
+      gutter-width: 4rem
     toc-title: Contents
     date-modified: last-modified
     highlight-style: a11y
     theme: 
-      dark: darkly
-      light: flatly
-    margin-left: 1em
-    margin-right: 1em
-    margin-top: 1em
-    margin-bottom: 1em
-    linestretch: 1.7
-    lightbox:
-      match: auto
-      effect: fade
-      loop: true
+      dark: [darkly, _assets/css/customization-dark.scss]
+      light: [flatly, _assets/css/customization-light.scss]
     copyright:
       holder: Michael Haaf
       year: 2025
