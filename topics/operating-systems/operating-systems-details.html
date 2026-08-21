@@ -50,11 +50,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-eaeb381c6b7494c50009502241a4985c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-53352993af95ec58665fb062f77396a5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-e8a33c19c2c070dc347c5387d8909d0d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-8d35a7ef1a730318a8e712429d7fb6aa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-902e66ec0fedf50c917e78468cbc51c5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -118,7 +115,6 @@ window.Quarto = {
 <meta property="og:description" content="Architecture of an Operating Sytems">
 <meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/operating-systems/_assets/kernel_hardare.png">
 <meta property="og:site_name" content="Technical Support">
-<meta property="og:image:alt" content="The Kernel is the core of the operating system">
 <meta property="og:image:height" content="480">
 <meta property="og:image:width" content="608">
 </head>
@@ -355,13 +351,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Hardware</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../topics/hardware/introduction-to-computers.html" class="sidebar-item-text sidebar-link">
@@ -402,13 +398,13 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Data representation</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../topics/data-representation/introduction-to-binary.html" class="sidebar-item-text sidebar-link">
@@ -545,7 +541,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">August 19, 2026</p>
+      <p class="date-modified">August 21, 2026</p>
     </div>
   </div>
     
@@ -561,7 +557,7 @@ window.Quarto = {
 <p>Most operating system are made up of two important parts: - The Kernel - The Shell</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="_assets/kernel_hardare.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="The Kernel is the core of the operating system"><img src="_assets/kernel_hardare.png" class="img-fluid figure-img" alt="The Kernel is the core of the operating system"></a></p>
+<p><img src="_assets/kernel_hardare.png" class="img-fluid figure-img"></p>
 <figcaption>The Kernel is the core of the operating system</figcaption>
 </figure>
 </div>
@@ -577,7 +573,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p>You can think of the OS an air traffic controller at a busy airport. Where the <strong>programs</strong> running are like the airplanes and the hardware are the gates, runways, various terminals. The traffic controller must carefully coordinate takeoffs and landings, allocating runway space and assigning gates to the various airplanes going through. It’s must avoid collisions!</p>
-<p><a href="_assets/airport_os.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="_assets/airport_os.png" class="img-fluid"></a></p>
+<p><img src="_assets/airport_os.png" class="img-fluid"></p>
 </div>
 </div>
 <p>The Shell is the part of the operating system that lets the user interact with its functions. This can be done in two ways:</p>
@@ -608,7 +604,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><a href="_assets/resturant-analogy.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="_assets/resturant-analogy.png" class="img-fluid"></a></p>
+<p><img src="_assets/resturant-analogy.png" class="img-fluid"></p>
 <p>Imagine the Operating System as the head chef in a busy restaurant, with several sous-chefs working under him. All the recipes—written 📜 by programmers are stored in a large file cabinet (the storage device).</p>
 <p>When a customer orders a cake, the chef (OS) retrieves the recipe, assigns it to a sous-chef, and provides the necessary ingredients, an oven (CPU), and a workspace (RAM) ⚙️</p>
 <p>To speed things up, the chef can assign assistants to help the sous-chef, each handling smaller tasks in parallel 🧵, all sharing the same resources.</p>
@@ -658,14 +654,14 @@ window.Quarto = {
 <p>Every RAM stick is made of <strong>millions of memory cells organized as a matrix</strong> as learnt in the hardware module. To read/write to those cells, special circuitry connected to embedded wires called <strong>address lines</strong> can precisely access each “group” of 8 bits (1 byte) of data.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="_assets/ram_memory.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="How the memory cells are accessed"><img src="_assets/ram_memory.png" class="img-fluid figure-img" alt="How the memory cells are accessed"></a></p>
+<p><img src="_assets/ram_memory.png" class="img-fluid figure-img"></p>
 <figcaption>How the memory cells are accessed</figcaption>
 </figure>
 </div>
 <p>If a data value needs more than 8 bits, it spans multiple memory locations. This means that a single value can occupy several addresses. Each unique combination of address bits identifies one specific memory location in RAM. Although addresses are stored in binary, they’re typically shown in hexadecimal for easier reading.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://runestone.academy/ns/books/published/welcomecs/_images/memory.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Representation of the memory space, Source: Main Memory by Chemketa College - Computer Science Department."><img src="https://runestone.academy/ns/books/published/welcomecs/_images/memory.png" class="img-fluid figure-img" alt="Representation of the memory space, Source: Main Memory by Chemketa College - Computer Science Department."></a></p>
+<p><img src="https://runestone.academy/ns/books/published/welcomecs/_images/memory.png" class="img-fluid figure-img"></p>
 <figcaption>Representation of the memory space, Source: <a href="https://runestone.academy/ns/books/published/welcomecs/ComputerArchitecture/Memory.html">Main Memory</a> by Chemketa College - Computer Science Department.</figcaption>
 </figure>
 </div>
@@ -695,7 +691,7 @@ window.Quarto = {
 <p>Virtual memory or logical memory is an abstraction of the memory location created by the Operating system to give the “illusion” to any program executing on the CPU that there is a lot more memory than there actually is! The job of the OS to map this virutal memory to physical memory and make sure it updates the mapping table.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Virtual_memory.svg/500px-Virtual_memory.svg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Virtual Memory Source: Wikipedia"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Virtual_memory.svg/500px-Virtual_memory.svg.png" class="img-fluid figure-img" alt="Virtual Memory Source: Wikipedia"></a></p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Virtual_memory.svg/500px-Virtual_memory.svg.png" class="img-fluid figure-img"></p>
 <figcaption>Virtual Memory Source: <a href="https://en.wikipedia.org/wiki/Virtual_memory">Wikipedia</a></figcaption>
 </figure>
 </div>
@@ -708,7 +704,7 @@ window.Quarto = {
 <p>In computing, this is similar to virtual memory or swap space. When the system runs out of RAM, it borrows space from the storage drive to keep processes running. It helps temporarily, but relying on it too much can slow things down — and just like the sous-chefs, your computer won’t like working in those conditions!</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="_assets/virtual_memory_cold_room.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Sous-chefs working in the cold room — representing data being moved from RAM to storage. Image Generated by Copilot"><img src="_assets/virtual_memory_cold_room.png" class="img-fluid figure-img" alt="Sous-chefs working in the cold room — representing data being moved from RAM to storage. Image Generated by Copilot"></a></p>
+<p><img src="_assets/virtual_memory_cold_room.png" class="img-fluid figure-img"></p>
 <figcaption>Sous-chefs working in the cold room — representing data being moved from RAM to storage. Image Generated by Copilot</figcaption>
 </figure>
 </div>
@@ -1266,38 +1262,6 @@ window.Quarto = {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"fade","descPosition":"bottom","loop":true,"openEffect":"fade","selector":".lightbox"});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 
