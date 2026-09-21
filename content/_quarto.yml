@@ -76,7 +76,7 @@ format:
     toc: true
     toc-depth: 4
     grid:
-      sidebar-width: 400px
+      sidebar-width: 350px
       body-width: 1300px
       margin-width: 200px   # Increase this to push the right margin/TOC further right
       gutter-width: 4rem
