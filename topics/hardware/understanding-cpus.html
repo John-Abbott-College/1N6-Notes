@@ -85,8 +85,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-eaeb381c6b7494c50009502241a4985c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-5e332a0b20c677e0b3a169f825bbf167.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-fb46dd48833dc6fcfcf85c415d9b0865.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-c8d27ff7f68ee7408084917cd79dddba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-26582cbb2517c20bd3c3c4d20a79438f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -516,10 +516,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#data-bus" id="toc-data-bus" class="nav-link" data-scroll-target="#data-bus">Data bus 💡💡💡</a></li>
   <li><a href="#codebook-agreeing-on-meaning" id="toc-codebook-agreeing-on-meaning" class="nav-link" data-scroll-target="#codebook-agreeing-on-meaning">Codebook: Agreeing on meaning 📖</a></li>
   <li><a href="#registers" id="toc-registers" class="nav-link" data-scroll-target="#registers">Registers</a></li>
-  <li><a href="#clock-agreeing-on-schedule" id="toc-clock-agreeing-on-schedule" class="nav-link" data-scroll-target="#clock-agreeing-on-schedule">Clock: Agreeing on schedule ⏰</a>
-  <ul class="collapse">
-  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a></li>
-  </ul></li>
+  <li><a href="#clock-agreeing-on-schedule" id="toc-clock-agreeing-on-schedule" class="nav-link" data-scroll-target="#clock-agreeing-on-schedule">Clock: Agreeing on schedule ⏰</a></li>
   </ul></li>
   <li><a href="#pipelining" id="toc-pipelining" class="nav-link" data-scroll-target="#pipelining">Pipelining 🚥</a></li>
   <li><a href="#cpu-properties" id="toc-cpu-properties" class="nav-link" data-scroll-target="#cpu-properties">CPU Properties 📊</a>
@@ -561,7 +558,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">September 21, 2026</p>
+      <p class="date-modified">October 5, 2026</p>
     </div>
   </div>
     
@@ -694,31 +691,27 @@ Note
 <li>The time between each clock cycle is the <strong>speed</strong> that a CPU can perform a given task</li>
 <li>The maximum number of clock cycles a CPU can handle in given period of time is called the clock speed.</li>
 </ul>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 100%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">:::{.callout-tip}</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"># Sample Guy in a Box Problem</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Using the following codebook, ask the “Guy in a box” to calculate 2+3</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">You must send a series of commandsto the CPU. The CPU will act on each command and give you an answer.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Your answer should be a <strong>sequence of numbers</strong> you could send to the guy in the box to get the right answer.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><img src="_assets/understanding-cpus17.png" title="A sample title." class="img-fluid" alt="Sample alt text. To be replaced!"></td>
-</tr>
-</tbody>
-</table>
+<hr>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Sample Guy in a Box Problem
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Using the following codebook, ask the “Guy in a box” to calculate 2+3</p>
+<p>You must send a series of commandsto the CPU. The CPU will act on each command and give you an answer.</p>
+<p>Your answer should be a <strong>sequence of numbers</strong> you could send to the guy in the box to get the right answer.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="_assets/understanding-cpus17.png" title="A sample title." class="img-fluid figure-img" alt="Sample alt text. To be replaced!"></p>
+<figcaption>A sample caption. Image source: unknown.</figcaption>
+</figure>
+</div>
+<hr>
 <section id="solution" class="level4">
 <h4 class="anchored" data-anchor-id="solution">Solution</h4>
 <pre><code>10000000  The next line is a number, put it in AX
@@ -728,9 +721,10 @@ Note
 10110000  Add AX to BX and put the result in AX
 11000000  Place the value of AX on the external data bus</code></pre>
 <p>A set of commands such as this is called a program. A program is a series of command sent to a CPU in a specific order for the CPU to perform work.</p>
-<p>:::</p>
-<hr>
 </section>
+</div>
+</div>
+<hr>
 </section>
 </section>
 <section id="pipelining" class="level2">

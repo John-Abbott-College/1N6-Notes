@@ -311,13 +311,8 @@
 <h3 id="clock-agreeing-on-schedule">Clock: Agreeing on schedule ⏰</h3>
 <p>Now we are ready to communicate with the guy in the box. We can send them the first command by lighting up the bulbs on the data bus.</p>
 <p>But how do they know when we have finished setting up the light bulbs?</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="_assets/understanding-cpus16.png" title="A sample title." alt="Sample alt text. To be replaced!"></p>
-<figcaption>Clock analogy. Image source: unknown.</figcaption>
-</figure>
-</div>
-<ul>
+
+<img data-src="_assets/understanding-cpus16.png" title="A sample title." alt="Sample alt text. To be replaced!" class="r-stretch quarto-figure-center"><p class="caption">Clock analogy. Image source: unknown.</p><ul>
 <li>We can use a bell activated by a button.</li>
 <li>A real computer uses a special wire called the clock wire (CLK). The CLK wire is turned on and off on a precise and regular schedule. This is called a <strong>clock cycle.</strong></li>
 <li>Each time the clock turns on, the state of our lightbulbs is shared with the guy in the box</li>
@@ -326,31 +321,28 @@
 <li>The time between each clock cycle is the <strong>speed</strong> that a CPU can perform a given task</li>
 <li>The maximum number of clock cycles a CPU can handle in given period of time is called the clock speed.</li>
 </ul>
-<table class="caption-top">
-<colgroup>
-<col style="width: 100%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">:::{.callout-tip}</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"># Sample Guy in a Box Problem</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Using the following codebook, ask the “Guy in a box” to calculate 2+3</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">You must send a series of commandsto the CPU. The CPU will act on each command and give you an answer.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Your answer should be a <strong>sequence of numbers</strong> you could send to the guy in the box to get the right answer.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><img data-src="_assets/understanding-cpus17.png" title="A sample title." alt="Sample alt text. To be replaced!"></td>
-</tr>
-</tbody>
-</table>
+</section>
+<section class="slide level2">
+
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Sample Guy in a Box Problem</strong></p>
+</div>
+<div class="callout-content">
+<p>Using the following codebook, ask the “Guy in a box” to calculate 2+3</p>
+<p>You must send a series of commandsto the CPU. The CPU will act on each command and give you an answer.</p>
+<p>Your answer should be a <strong>sequence of numbers</strong> you could send to the guy in the box to get the right answer.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_assets/understanding-cpus17.png" title="A sample title." alt="Sample alt text. To be replaced!"></p>
+<figcaption>A sample caption. Image source: unknown.</figcaption>
+</figure>
+</div>
+<hr>
 <h4 id="solution">Solution</h4>
 <pre><code>10000000  The next line is a number, put it in AX
 00000010  The number 2
@@ -359,7 +351,9 @@
 10110000  Add AX to BX and put the result in AX
 11000000  Place the value of AX on the external data bus</code></pre>
 <p>A set of commands such as this is called a program. A program is a series of command sent to a CPU in a specific order for the CPU to perform work.</p>
-<p>:::</p>
+</div>
+</div>
+</div>
 </section>
 <section id="pipelining" class="slide level2">
 <h2>Pipelining 🚥</h2>

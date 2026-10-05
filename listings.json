@@ -1,5 +1,14 @@
 [
   {
+    "listing": "/topics/operating-systems/index.html",
+    "items": [
+      "/topics/operating-systems/file-systems.html",
+      "/topics/operating-systems/operating-system-intro.html",
+      "/topics/operating-systems/operating-system-install.html",
+      "/topics/operating-systems/operating-systems-details.html"
+    ]
+  },
+  {
     "listing": "/practice/all-exos.html",
     "items": [
       "/practice/binary-conversions.html",
@@ -10,32 +19,12 @@
     ]
   },
   {
-    "listing": "/topics/all-lectures.html",
-    "items": [
-      "/topics/hardware/introduction-to-computers.html",
-      "/topics/hardware/external-components.html",
-      "/topics/hardware/internal-components.html",
-      "/topics/hardware/understanding-cpus.html",
-      "/topics/data-representation/binary-math.html",
-      "/topics/data-representation/introduction-to-binary.html",
-      "/topics/data-representation/logic-gates-and-boolean-algebra.html",
-      "/topics/data-representation/text-in-computers.html",
-      "/topics/data-representation/hexadecimal-numbers.html",
-      "/topics/hardware/bios_cmos_uefi.html",
-      "/topics/operating-systems/file-systems.html",
-      "/topics/operating-systems/operating-system-intro.html",
-      "/topics/operating-systems/operating-system-install.html",
-      "/topics/operating-systems/operating-systems-details.html"
-    ]
+    "listing": "/announcements/index.html",
+    "items": []
   },
   {
-    "listing": "/topics/operating-systems/index.html",
-    "items": [
-      "/topics/operating-systems/file-systems.html",
-      "/topics/operating-systems/operating-system-intro.html",
-      "/topics/operating-systems/operating-system-install.html",
-      "/topics/operating-systems/operating-systems-details.html"
-    ]
+    "listing": "/topics/technical-support/index.html",
+    "items": []
   },
   {
     "listing": "/topics/index.html",
@@ -57,18 +46,33 @@
     ]
   },
   {
+    "listing": "/topics/all-lectures.html",
+    "items": [
+      "/topics/hardware/introduction-to-computers.html",
+      "/topics/hardware/external-components.html",
+      "/topics/hardware/internal-components.html",
+      "/topics/hardware/understanding-cpus.html",
+      "/topics/data-representation/introduction-to-binary.html",
+      "/topics/data-representation/binary-math.html",
+      "/topics/data-representation/logic-gates-and-boolean-algebra.html",
+      "/topics/data-representation/text-in-computers.html",
+      "/topics/data-representation/hexadecimal-numbers.html",
+      "/topics/hardware/bios_cmos_uefi.html",
+      "/topics/operating-systems/file-systems.html",
+      "/topics/operating-systems/operating-system-intro.html",
+      "/topics/operating-systems/operating-system-install.html",
+      "/topics/operating-systems/operating-systems-details.html"
+    ]
+  },
+  {
     "listing": "/topics/data-representation/index.html",
     "items": [
-      "/topics/data-representation/binary-math.html",
       "/topics/data-representation/introduction-to-binary.html",
+      "/topics/data-representation/binary-math.html",
       "/topics/data-representation/logic-gates-and-boolean-algebra.html",
       "/topics/data-representation/text-in-computers.html",
       "/topics/data-representation/hexadecimal-numbers.html"
     ]
-  },
-  {
-    "listing": "/topics/technical-support/index.html",
-    "items": []
   },
   {
     "listing": "/about/index.html",
@@ -77,9 +81,5 @@
       "/about/calendar.html",
       "/about/syllabus.html"
     ]
-  },
-  {
-    "listing": "/announcements/index.html",
-    "items": []
   }
 ]
