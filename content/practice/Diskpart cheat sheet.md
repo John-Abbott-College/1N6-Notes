@@ -1,3 +1,10 @@
+---
+date: 2026-10-01
+draft: true
+title: Diskpart cheat sheet
+image: "https://learn.microsoft.com/en-us/windows-server/administration/media/diskpart/diskpart-2.png"
+---
+
 # Diskpart cheat sheet
 
 ## Opening Diskpart
