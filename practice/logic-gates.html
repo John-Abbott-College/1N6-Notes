@@ -469,12 +469,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#logic-gates" id="toc-logic-gates" class="nav-link active" data-scroll-target="#logic-gates">1. Logic gates</a></li>
+  <li><a href="#short-questions" id="toc-short-questions" class="nav-link active" data-scroll-target="#short-questions">Short Questions</a></li>
+  <li><a href="#logic-gates" id="toc-logic-gates" class="nav-link" data-scroll-target="#logic-gates">1. Logic gates</a></li>
   <li><a href="#truth-table-2-inputs" id="toc-truth-table-2-inputs" class="nav-link" data-scroll-target="#truth-table-2-inputs">2. Truth table 2 inputs:</a></li>
   <li><a href="#truth-table-4-inputs" id="toc-truth-table-4-inputs" class="nav-link" data-scroll-target="#truth-table-4-inputs">3. Truth table 4 inputs:</a></li>
   <li><a href="#half-adders-and-full-adders" id="toc-half-adders-and-full-adders" class="nav-link" data-scroll-target="#half-adders-and-full-adders">4. Half adders and Full adders</a></li>
   <li><a href="#exam-easy-or-hard" id="toc-exam-easy-or-hard" class="nav-link" data-scroll-target="#exam-easy-or-hard">5. Exam easy or hard?</a></li>
-  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a></li>
   </ul>
 </nav>
     </div>
@@ -513,15 +513,47 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="short-questions" class="level1">
+<h1>Short Questions</h1>
+<p>Generated from the notes with the help of Claude AI:</p>
+<ol type="1">
+<li><p>In a half-adder, what does the Carry represent?</p></li>
+<li><p>What are the Sum and Carry outputs when A = 1 and B = 1?</p></li>
+<li><p>What is the main limitation of a half-adder, and how does a full-adder address it?</p></li>
+<li><p>How many inputs and outputs does a full-adder have, and what are they?</p></li>
+<li><p>What are the Sum and Carry of a full-adder if all three inputs are 1?</p></li>
+</ol>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>The Carry is the new power of 2 that carries over to the next position.</p></li>
+<li><p>When A = 1 and B = 1, the Sum is 0 and the Carry is 1 (1 + 1 = 10 in binary).</p></li>
+<li><p>A half-adder doesn’t account for a Carry coming from a previous addition. When adding multi-bit numbers, each position must include the carry from the lower position, which a half-adder can’t take as an input.</p></li>
+<li><p>A full-adder has 3 inputs (A, B and the Carry-in) and 2 outputs (Sum and Carry-out).</p></li>
+<li><p>If all three inputs are 1, then 1 + 1 + 1 = 3 = 11 in binary, so the Sum is 1 and the Carry is 1.</p></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
 <section id="logic-gates" class="level1">
 <h1>1. Logic gates</h1>
-<p>On the left is the input to a series of logical circuits.<br>
-Indicate the resulting output on the right (1 = on, 0 = off) as well as the intermediate binary values at the exit of each gate:</p>
+<p>On the left is the input to a series of logical circuits.</p>
+<p>Indicate the resulting output on the right (1 = on, 0 = off) as well as the intermediate binary values at the exit of each gate:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Logic Gates</th>
-<th>Intermediate value</th>
 <th>Output (1 or 0)?</th>
 </tr>
 </thead>
@@ -529,30 +561,84 @@ Indicate the resulting output on the right (1 = on, 0 = off) as well as the inte
 <tr class="odd">
 <td><img src="_assets/logic_gate1.png" class="img-fluid" width="200"></td>
 <td></td>
-<td></td>
 </tr>
 <tr class="even">
 <td><img src="_assets/logic_gate2.png" class="img-fluid" width="200"></td>
-<td></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><img src="_assets/logic_gate3.png" class="img-fluid" width="200"></td>
 <td></td>
-<td></td>
 </tr>
 <tr class="even">
 <td><img src="_assets/logic_gate4.png" class="img-fluid" width="200"></td>
 <td></td>
-<td></td>
 </tr>
 </tbody>
 </table>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Circuit</th>
+<th>1 (on) or 0 (off)?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Note: For circuit 4, the exit of the AND gate is 0 and the exit of the OR gate is 1.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="truth-table-2-inputs" class="level1">
 <h1>2. Truth table 2 inputs:</h1>
-<p>Complete the truth table of the following logic circuit:</p>
+<p>Complete the truth table of the following logic circuit and provide the intermediate values at the exit of each gate:</p>
 <p><img src="_assets/logic_gate5.png" class="img-fluid"></p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Truth table 2 inputs 1 output: | <strong>A</strong> | <strong>B</strong> | <strong>AND</strong> | <strong>NOT</strong> | <strong>NOR</strong> | <strong>OR</strong> | <strong>Output</strong> | | —– | —– | ——- | ——- | ——- | —— | ———- | | <strong>0</strong> | <strong>0</strong> | <strong>0</strong> | <strong>1</strong> | <strong>0</strong> | <strong>0</strong> | <strong>0</strong> | | <strong>1</strong> | <strong>0</strong> | <strong>0</strong> | <strong>0</strong> | <strong>1</strong> | <strong>1</strong> | <strong>1</strong> | | <strong>0</strong> | <strong>1</strong> | <strong>0</strong> | <strong>1</strong> | <strong>0</strong> | <strong>0</strong> | <strong>0</strong> | | <strong>1</strong> | <strong>1</strong> | <strong>1</strong> | <strong>0</strong> | <strong>0</strong> | <strong>1</strong> | <strong>1</strong> |</p>
+</div>
+</div>
+</div>
 </section>
 <section id="truth-table-4-inputs" class="level1">
 <h1>3. Truth table 4 inputs:</h1>
@@ -599,6 +685,146 @@ Indicate the resulting output on the right (1 = on, 0 = off) as well as the inte
 </tr>
 </tbody>
 </table>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>Input 1</strong></th>
+<th><strong>Input 2</strong></th>
+<th><strong>Input 3</strong></th>
+<th><strong>Input4</strong></th>
+<th><strong>Output</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+</tr>
+<tr class="even">
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+</tr>
+<tr class="even">
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="even">
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="even">
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="even">
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="even">
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="even">
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="even">
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 </section>
 <section id="half-adders-and-full-adders" class="level1">
 <h1>4. Half adders and Full adders</h1>
@@ -667,6 +893,91 @@ Indicate the resulting output on the right (1 = on, 0 = off) as well as the inte
 </tr>
 </tbody>
 </table>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Full Adder Truth Table:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>A</strong></th>
+<th><strong>B</strong></th>
+<th><strong>Cin</strong></th>
+<th><strong>S</strong></th>
+<th><strong>Cout</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 </section>
 <section id="exam-easy-or-hard" class="level1">
 <h1>5. Exam easy or hard?</h1>
@@ -747,265 +1058,78 @@ Indicate the resulting output on the right (1 = on, 0 = off) as well as the inte
 </tbody>
 </table>
 <ol start="2" type="1">
-<li><p>Let’s imagine it is not snowing on the Exam Day. Build a truth table for all possibilities. | The temperature is above 0 ° C? | It is a Thursday? | It is a Friday? | Exam is easy or not? | | ——————————– | —————– | ————— | ——————– | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |</p></li>
+<li>Let’s imagine it is not snowing on the Exam Day. Build a truth table for all possibilities.</li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 20%">
+<col style="width: 17%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>The temperature is above 0 ° C?</th>
+<th>It is a Thursday?</th>
+<th>It is a Friday?</th>
+<th>Exam is easy or not?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ol start="3" type="1">
 <li><p>One of the inputs seems to not affect the output, which one is it?</p></li>
 <li><p>Simplify the logic circuit be removing this gate.</p></li>
 </ol>
-</section>
-<section id="solution" class="level1">
-<h1>Solution</h1>
-<ol type="1">
-<li>Logic gates</li>
-</ol>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Input</th>
-<th>1 (on) or 0 (off)?</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1 0</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td>0 1</td>
-<td>1</td>
-</tr>
-<tr class="odd">
-<td>0 1</td>
-<td>1</td>
-</tr>
-<tr class="even">
-<td>1 0 0 1</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<p>Truth table 4 inputs and 1 output:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th><strong>Input 1</strong></th>
-<th><strong>Input 2</strong></th>
-<th><strong>Input 3</strong></th>
-<th><strong>Input4</strong></th>
-<th><strong>Output</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>0</strong></td>
-<td><strong>0</strong></td>
-<td><strong>0</strong></td>
-<td><strong>0</strong></td>
-<td><strong>0</strong></td>
-</tr>
-<tr class="even">
-<td><strong>0</strong></td>
-<td><strong>1</strong></td>
-<td><strong>0</strong></td>
-<td><strong>0</strong></td>
-<td><strong>0</strong></td>
-</tr>
-<tr class="odd">
-<td><strong>1</strong></td>
-<td><strong>0</strong></td>
-<td><strong>0</strong></td>
-<td><strong>0</strong></td>
-<td><strong>0</strong></td>
-</tr>
-<tr class="even">
-<td><strong>1</strong></td>
-<td><strong>1</strong></td>
-<td><strong>0</strong></td>
-<td><strong>0</strong></td>
-<td><strong>1</strong></td>
-</tr>
-<tr class="odd">
-<td><strong>0</strong></td>
-<td><strong>0</strong></td>
-<td><strong>1</strong></td>
-<td><strong>1</strong></td>
-<td><strong>1</strong></td>
-</tr>
-<tr class="even">
-<td><strong>0</strong></td>
-<td><strong>1</strong></td>
-<td><strong>1</strong></td>
-<td><strong>1</strong></td>
-<td><strong>1</strong></td>
-</tr>
-<tr class="odd">
-<td><strong>1</strong></td>
-<td><strong>0</strong></td>
-<td><strong>1</strong></td>
-<td><strong>1</strong></td>
-<td><strong>1</strong></td>
-</tr>
-<tr class="even">
-<td><strong>1</strong></td>
-<td><strong>1</strong></td>
-<td><strong>1</strong></td>
-<td><strong>1</strong></td>
-<td><strong>0</strong></td>
-</tr>
-<tr class="odd">
-<td><strong>0</strong></td>
-<td><strong>0</strong></td>
-<td><strong>1</strong></td>
-<td><strong>0</strong></td>
-<td><strong>1</strong></td>
-</tr>
-<tr class="even">
-<td><strong>0</strong></td>
-<td><strong>1</strong></td>
-<td><strong>1</strong></td>
-<td><strong>0</strong></td>
-<td><strong>1</strong></td>
-</tr>
-<tr class="odd">
-<td><strong>1</strong></td>
-<td><strong>0</strong></td>
-<td><strong>1</strong></td>
-<td><strong>0</strong></td>
-<td><strong>1</strong></td>
-</tr>
-<tr class="even">
-<td><strong>1</strong></td>
-<td><strong>1</strong></td>
-<td><strong>1</strong></td>
-<td><strong>0</strong></td>
-<td><strong>0</strong></td>
-</tr>
-<tr class="odd">
-<td><strong>0</strong></td>
-<td><strong>0</strong></td>
-<td><strong>0</strong></td>
-<td><strong>1</strong></td>
-<td><strong>1</strong></td>
-</tr>
-<tr class="even">
-<td><strong>0</strong></td>
-<td><strong>1</strong></td>
-<td><strong>0</strong></td>
-<td><strong>1</strong></td>
-<td><strong>1</strong></td>
-</tr>
-<tr class="odd">
-<td><strong>1</strong></td>
-<td><strong>0</strong></td>
-<td><strong>0</strong></td>
-<td><strong>1</strong></td>
-<td><strong>1</strong></td>
-</tr>
-<tr class="even">
-<td><strong>1</strong></td>
-<td><strong>1</strong></td>
-<td><strong>0</strong></td>
-<td><strong>1</strong></td>
-<td><strong>0</strong></td>
-</tr>
-</tbody>
-</table>
-<p>Truth table 2 inputs 1 output:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th><strong>Input</strong></th>
-<th><strong>Output</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>A: 0 B: 0</strong></td>
-<td><strong>1</strong></td>
-</tr>
-<tr class="even">
-<td><strong>A: 1 B: 0</strong></td>
-<td><strong>0</strong></td>
-</tr>
-<tr class="odd">
-<td><strong>A: 0 B: 1</strong></td>
-<td><strong>1</strong></td>
-</tr>
-<tr class="even">
-<td><strong>A: 1 B: 1</strong></td>
-<td><strong>1</strong></td>
-</tr>
-</tbody>
-</table>
-<p>Full Adder Truth Table:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th><strong>A</strong></th>
-<th><strong>B</strong></th>
-<th><strong>Cin</strong></th>
-<th><strong>S</strong></th>
-<th><strong>Cout</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr class="odd">
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr class="odd">
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr class="even">
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
 
 
 </section>
