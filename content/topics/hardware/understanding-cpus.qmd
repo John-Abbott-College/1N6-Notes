@@ -121,6 +121,7 @@ unknown.](_assets/understanding-cpus16.png "A sample title."){fig-alt="Sample al
   of time is called the clock speed.
 
 ------------------------------------------------------------------------
+
 :::{.callout-tip}
 
 # Sample Guy in a Box Problem

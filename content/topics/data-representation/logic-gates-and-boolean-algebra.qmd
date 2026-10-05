@@ -25,11 +25,10 @@ By studying logic gates, we connect the concepts seen in binary to **electronic 
 
 ~ Megan Smith, U.S. Chief of Technology 
 
-**::: {layout-ncol=2}**
+<img src="_assets/logic-gates-and-boolean-algebra7.jpg" width=50%/>
 
-![](_assets/logic-gates-and-boolean-algebra7.jpg){width=0.5}
+<img src="_assets/logic-gates-and-boolean-algebra8.jpg" width=50%/>
 
-![](_assets/logic-gates-and-boolean-algebra8.jpg){width=0.5}
 
 ::: 
 
