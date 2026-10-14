@@ -165,6 +165,96 @@ By organizing these steps in a conveyor-belt fashion (called **pipelining**), ou
 ![Analogy of multiple men in a box to illustrate the idea of a pipeline.](_assets/understanding-cpus18.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 
+## CPU Architecture 
+
+### x86 versus x64
+
+The "x86" versus "x64" CPU architectures refers to a differences in the bus width of a CPU and its instruction book. The "x86" architecture were 32-bit CPUs such as the Intel 8086 and common in the 80s and 90s. As for the "x64", it's today's more common architecture of 64-bits CPUs. We will see in more details, when introducing operating system how 64-bits CPUs can access more memory spaces when we talk about 
+
+:::: {.columns}
+::: {.column width="50%"}
+**x86 (32-bits)**
+
+![x86](_assets/understanding-cpus31.png){.same-height}
+
+- 32 bits of data can travel at once in between system components
+- There are $2^{32}$ possible number with 32-bits
+- The CPU can therefore access 2^32 - 4 billion unique memory locations 
+- This means it can use up to a maximum of **4Gb of RAM** (in theory)
+
+
+
+:::
+
+::: {.column width="50%"}
+**x64 (64-bits)**
+
+![x64](_assets/understanding-cpus32.png){.same-height}
+
+- Processes **64 bits** of data at a time
+- Can address $2^{64}$ ≈ **18 quintillion** memory locations (that's 4 billion × 4 billion!)
+- Far more RAM than any computer has today
+
+:::
+
+
+Almost all modern hardware and software today use x64 (64-bit) architecture.
+64-bits system offer:
+🔒 Better security features
+🎨 Improved graphics and performance
+⚡ Support for larger amounts of memory
+
+💡But! Some older applications still rely on 32-bit (x86) support — so many systems remain backward compatible to run older software.
+
+::::
+
+::: {.callout-tip title="Why does it matter?"}
+A 64-bit CPU can run both 32-bit and 64-bit software, but a 32-bit CPU can **only** run 32-bit software. Almost all modern computers are 64-bit.
+:::
+
+### CPU components
+
+Each CPU core containts the following **components**:
+
+- **Arithmetic Logic Unit (ALU)**
+  - Performs **basic arithmetic** operations: adding, subtracting, multiplication, and division
+  - Performs **logical operations**, like comparisons
+- **Control Unit (CU)**
+  - Manages **all operations** within the processor
+  - Instructs the ALU on which arithmetic or logical operation to perform
+  - Works in sync with the **system clock**
+  - Routes **data internally**, making sure it is fetched and delivered to the correct locations
+- **Memory Unit (MU)** 
+  -  The MU or MMU (Memory management unit) translate virtual memory into physical memory (more on that later)
+- **Registers**: temporary storage for data coming from memory heading to the processor, coming from the processor after processing, or being worked on by the processor
+- **L1 Cache** : stores most recently saved data/instructions coming from RAM. Very fast short-term memory. 
+
+As well as data buses for the internal routing of data and instructions: 
+
+- **Internal data bus**: connects the internal components of the processor to the motherboard
+- **External data path**: used to fetch data from memory to the processor
+- **Address lines**: used to specify the exact location in memory where data can be found
+
+
+![CPU Components](_assets/understanding-cpus27.jpg)
+
+### Other Types of CPUs
+
+### ARM chips
+
+- Simplified CPUs called **Advanced RISC Machine** (ARM), where RISC stands for *Reduced Instruction Set Computing*
+- A **simplified instruction set**
+- Higher processing speed and reduced workload
+- Used in Arduinos and Raspberry Pis
+- The Apple M1 chip used in the MacBook Air is an ARM chip
+
+### Accelerated Processing Unit (APU)
+
+- APUs are **CPUs with combined graphics processing capabilities**
+- Not as powerful as a dedicated GPU
+- A great option for budget gaming
+
+
 ## CPU Manufacturers 🏭
 
 - **Desktops, laptops, and servers**: **Intel** and **AMD** are the two most popular manufacturers.
@@ -350,92 +440,3 @@ Imagine the **CPU as a worker** trying to complete tasks.
 
 When the CPU needs data, it searches from the fastest memory to the slowest, and it stops as soon as it finds what it needs:
 
-
-## CPU Architecture 
-
-### x86 versus x64
-
-:::: {.columns}
-::: {.column width="50%"}
-**x86 (32-bits)**
-
-![x86](_assets/understanding-cpus31.png){.same-height}
-
-- 32 bits of data can travel at once in between system components
-- There are $2^{32}$ possible number with 32-bits
-- The CPU can therefore access 2^32 - 4 billion unique memory locations 
-- This means it can use up to a maximum of **4Gb of RAM** (in theory)
-
-
-
-:::
-
-::: {.column width="50%"}
-**x64 (64-bits)**
-
-![x64](_assets/understanding-cpus32.png){.same-height}
-
-- Processes **64 bits** of data at a time
-- Can address $2^{64}$ ≈ **18 quintillion** memory locations (that's 4 billion × 4 billion!)
-- Far more RAM than any computer has today
-
-
-:::
-::::
-
-
-Almost all modern hardware and software today use x64 (64-bit) architecture.
-64-bits system offer:
-🔒 Better security features
-🎨 Improved graphics and performance
-⚡ Support for larger amounts of memory
-
-💡But! Some older applications still rely on 32-bit (x86) support — so many systems remain backward compatible to run older software.
-
-::::
-
-::: {.callout-tip title="Why does it matter?"}
-A 64-bit CPU can run both 32-bit and 64-bit software, but a 32-bit CPU can **only** run 32-bit software. Almost all modern computers are 64-bit.
-:::
-
-### CPU components
-
-Each CPU core containts the following **components**:
-
-- **Arithmetic Logic Unit (ALU)**
-  - Performs **basic arithmetic** operations: adding, subtracting, multiplication, and division
-  - Performs **logical operations**, like comparisons
-- **Control Unit (CU)**
-  - Manages **all operations** within the processor
-  - Instructs the ALU on which arithmetic or logical operation to perform
-  - Works in sync with the **system clock**
-  - Routes **data internally**, making sure it is fetched and delivered to the correct locations
-- **Memory Unit (MU)** 
-  -  The MU or MMU (Memory management unit) translate virtual memory into physical memory (more on that later)
-- **Registers**: temporary storage for data coming from memory heading to the processor, coming from the processor after processing, or being worked on by the processor
-- **L1 Cache** : stores most recently saved data/instructions coming from RAM. Very fast short-term memory. 
-
-As well as data buses for the internal routing of data and instructions: 
-
-- **Internal data bus**: connects the internal components of the processor to the motherboard
-- **External data path**: used to fetch data from memory to the processor
-- **Address lines**: used to specify the exact location in memory where data can be found
-
-
-![CPU Components](_assets/understanding-cpus27.jpg)
-
-### Other Types of CPUs
-
-### ARM chips
-
-- Simplified CPUs called **Advanced RISC Machine** (ARM), where RISC stands for *Reduced Instruction Set Computing*
-- A **simplified instruction set**
-- Higher processing speed and reduced workload
-- Used in Arduinos and Raspberry Pis
-- The Apple M1 chip used in the MacBook Air is an ARM chip
-
-### Accelerated Processing Unit (APU)
-
-- APUs are **CPUs with combined graphics processing capabilities**
-- Not as powerful as a dedicated GPU
-- A great option for budget gaming

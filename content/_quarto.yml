@@ -44,8 +44,8 @@ website:
           - topics/hardware/internal-components.qmd  
           - topics/hardware/understanding-cpus.qmd
           - topics/hardware/understanding-cpus2.qmd
-          - href: topics/hardware/chips_ram_cpu.pdf
-            text: "Chipets, CPU and RAM" # This will open the PDF in a new tab/window
+          - topics/hardware/ram.qmd
+          - topics/hardware/chipsets.qmd
           - topics/hardware/bios_cmos_uefi.qmd
           
         - section: "Data representation"
