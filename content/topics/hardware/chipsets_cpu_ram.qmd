@@ -1,0 +1,516 @@
+---
+title: Chipsets, CPU and RAM
+subtitle: How logic gates become chips, and how the chipset, the processor, and main memory work together inside a computer
+date: 2025-09-16
+---
+
+Adapted from the original [slides](./chips_ram_cpu.pdf){target="_blank"} with the help of Claude AI for restructuring. 
+
+```{mermaid}
+%%| fig-cap: "From simple switches to a working computer. Each step combines the previous one into something more powerful."
+%%| fig-align: center
+flowchart LR
+    A["Logic gates<br/>AND, OR, XOR, NOT"] --> B["Integrated circuits<br/>(chips)"]
+    B --> C["Chipset"]
+    B --> D["CPU"]
+    B --> E["RAM"]
+    C --> F["Motherboard"]
+    D --> F
+    E --> F
+```
+
+## Introduction
+
+We previously learned how information is represented in computer systems (**binary** and **logical circuits**). In particular, we saw how simple **switches** could be used to represent AND, OR, XOR, and NOT logic in electrical devices.
+
+Combining these simple "gates" into more sophisticated devices lets engineers create **Integrated Circuits (ICs)**, or, as we more commonly call them, **chips**.
+
+Today we finish learning about some of the most important chips in a computer, introduced earlier:
+
+- **Chipsets**: the traffic controllers of the motherboard
+- **Central Processing Unit (CPU)**: the brains of the computer
+- **Main memory (RAM)**: the working space of the CPU
+
+
+## Lesson overview
+
+- From logic gates to the motherboard
+- The chipset
+  - Northbridge and southbridge
+  - Modern chipsets (the PCH)
+  - Buses: width, speed, and x86 vs x64
+- Main memory (RAM)
+  - Data rate, capacity, channels, error checking, latency
+  - Virtual memory
+- Knowledge check
+
+::: {.callout-tip icon="false"  title="☆Learning Objectives"}
+
+Upon completing this lesson, you should be able to: 
+
+- **Explain** what a chipset does and how northbridge and southbridge differ
+- **Calculate** how much data a bus can move using bus width and speed
+- **Describe** the main components of a CPU and the features used to choose one
+- **Explain** how the cache hierarchy speeds up processing
+- **Classify** the various memory types of a computer (Cache, RAM, Storage)
+- **Read** RAM specifications.
+- **Explain** why virtual memory is not ideal
+
+:::
+
+
+## From Logic Gates to the Motherboard ⎇ 
+
+Logic gates are the "atoms" of computing. A single chip can contain a handful of them (like the **7408 quad AND gate**, which holds four AND gates in a 14-pin package) or billions of them (like a modern CPU).
+
+When many chips are placed on one circuit board and connected together, we get a **motherboard**. The Acer T3-710 board below is composed of many integrated components.
+
+::: {.callout-note title="Acer T3-710 motherboard: labeled components" collapse="true"}
+
+
+<img src="https://us.v-cdn.net/6029997/uploads/WUZD4RBUZZT2/image.png" />
+
+| No. | Label | Description |
+|----:|-------|-------------|
+| 1 | ATX_12V | 4-pin ATX power connector |
+| 2 | CPU | CPU socket |
+| 3 | CPU_FAN | CPU fan connector |
+| 4 | DIMM1~2 | 240-pin DDR3L SDRAM slots |
+| 5 | CLR_CMOS | Clear CMOS header with jumper |
+| 6 | SYS_FAN | System fan connector |
+| 7 | ATX_POWER | Standard 24-pin ATX power connector |
+| 8 | SATA1~2 | SATA 6 Gb/s connectors |
+| 9 | M.2_2 | M.2 SSD connector |
+| 10 | F_PANEL | Front panel connector |
+| 11 | F_USB1 | Front panel USB 3.0 connector |
+| 12 | USB3F1 | Front panel USB 3.0 connector |
+| 13 | F_USB2 | Front panel USB 2.0 connector |
+| 14 | M.2_1 | M.2 WLAN connector |
+| 15 | PCIE16X | PCIe x16 slot |
+| 16 | BAT1 | Battery slot |
+| 17 | F_AUDIO | Front panel audio connector |
+| 18 | PCIE1X | PCIe x1 slot |
+| 19 | AUDIO | Rear panel audio ports |
+| 20 | USB2_LAN | RJ45 + USB 2.0 ports |
+| 21 | USB3X2 | USB 3.0 ports |
+| 22 | HDMI1~2 | HDMI ports |
+
+:::
+
+## The Chipset ⚙️ 
+
+A **chipset** is a group of **microchips** on a computer's motherboard that manages **communication** between the CPU, memory, storage, and peripheral devices.
+
+**Key functions**
+
+- Controls the **data flow** between components
+- Determines what **hardware** (RAM, CPU, GPU, etc.) is **supported**
+- Manages **input/output** functions (USB, audio, networking)
+- Affects system performance and **upgrade options**
+
+In other words, the chipset **dictates hardware compatibility** across components. All the different hardware components communicate with the CPU *through* the chipset.
+
+**Examples**
+
+- Intel **Z790**: supports modern CPUs, PCIe 5.0, and DDR5 memory
+- AMD **B650**: designed for Ryzen processors
+
+### How did chipsets evolve?
+
+Older motherboards were designed with **many different chips scattered all over the board**, each controlling a different function: bus controllers, memory controllers, keyboard controllers, and so on.
+
+As technology progressed, engineers decided to **reduce** the number of chips and **centralize** them. The few chips that now do the same job are what we call a **chipset**.
+
+### Northbridge and Southbridge
+
+Most traditional chipsets are divided into two distinct components.
+
+```{mermaid}
+%%| fig-cap: "A traditional chipset. Everything reaches the CPU through the northbridge, and slower devices reach the northbridge through the southbridge."
+%%| fig-align: center
+flowchart TD
+    CPU["CPU"] -- "Frontside bus" --> NB["NORTHBRIDGE"]
+    NB -. "Backside bus" .- CACHE["Cache"]
+    NB --- MEM["Memory controller (RAM)"]
+    NB --- GFX["PCIe / AGP controller (graphics)"]
+    NB --- SB["SOUTHBRIDGE"]
+    SB --- STO["SATA / IDE / floppy controllers"]
+    SB --- AUD["Onboard audio"]
+    SB --- LAN["Onboard LAN"]
+    SB --- USB["USB / serial / parallel"]
+    SB --- PCI["PCI expansion bus"]
+```
+
+| | **Northbridge** | **Southbridge** |
+|---|---|---|
+| **Function** | Connects the CPU to **high-speed** components (RAM, graphics card, PCI Express) | Connects to **slower peripheral devices** and handles input/output (I/O) |
+| **Speed** | Works **faster**: optimized for actions per second | Works **slower**: does not need high-speed communication |
+| **Location** | Close to the CPU, often **under a heatsink** because it runs hot | Found **lower** on the motherboard (hence "south") |
+| **Example connections** | CPU ↔ RAM, CPU ↔ GPU (through AGP or PCIe) | USB ports, hard drives (SATA/IDE), audio, BIOS, network controllers |
+
+::: {.callout-note title="Why is the northbridge faster?"}
+It connects the **most used and most important** components of the motherboard, so it is optimized for speed. But faster actions per second come at a cost: the northbridge is a source of **heat** and needs to be cooled by heatsinks and fans.
+:::
+
+To communicate with any other component, data goes through the northbridge, then the southbridge. For example, to send data from the hard drive to main memory:
+
+```{mermaid}
+%%| fig-align: center
+flowchart LR
+    HDD["Hard drive"] --> SB["Southbridge"] --> NB["Northbridge"] --> RAM["Main memory"]
+```
+
+### Modern motherboards and chipsets
+
+Modern chipsets integrate the **northbridge directly into the CPU chip**. The remaining southbridge functions are handled by a single controller called the **Platform Controller Hub (PCH)**.
+
+```{mermaid}
+%%| fig-cap: "A modern layout. Performance-sensitive components talk directly to the CPU."
+%%| fig-align: center
+flowchart LR
+    subgraph CPUCHIP["CPU chip (northbridge built in)"]
+        CORE["Cores + memory controller + PCIe lanes"]
+    end
+    CORE --- RAM["RAM"]
+    CORE --- GPU["Graphics card"]
+    CORE --- PCH["Platform Controller Hub (PCH)"]
+    PCH --- STO["Storage (SATA)"]
+    PCH --- USB["USB"]
+    PCH --- NET["Audio and networking"]
+```
+
+**New design advantages**
+
+- Sensitive hardware components communicate **directly with the CPU**
+- **Reduces system latency**, so data moves faster
+- **Increases responsiveness** and overall performance
+- Less sensitive hardware (storage, USB) benefits from improved efficiency
+
+::: {.callout-tip title="Fun fact"}
+Earlier PCs had separate northbridge and southbridge chips. Modern systems combine them into a single chipset for efficiency.
+:::
+
+## Buses 🛣️ 
+
+A **bus** is the pathway that data uses to travel between components. When we speak about the motherboard bus width, we usually refer to the **frontside bus (FSB)**, the link between the CPU and the northbridge. It is also called the **CPU bus** or **processor bus**.
+
+### Why is the bus important?
+
+A good way to double-check that you understand a scientific concept is to check **what units of measurement** it uses.
+
+| | **Highway** | **System bus** |
+|---|---|---|
+| **How many "lanes"?** | **Number of lanes**: a number. Determines how many cars can use the highway at once | **Bus width**: a number of bits (e.g. a 32-bit processor). Determines how much information flows along the bus at a time |
+| **How fast?** | **Speed limit**: distance per time (e.g. km/h). Determines how fast cars can drive | **Bus speed**: information per time (e.g. bits/second). Determines how fast information can travel |
+
+> Activity: A highway has 6 lanes (6 cars can pass together). On each lane, 3 cars pass per second. How many cars pass per second on this highway?
+
+::: {.callout-caution title="Expand to see the answer" collapse="true"}
+6 lanes × 3 cars per second per lane = **18 cars per second**.
+
+The same reasoning applies to a bus: **width × speed = throughput**.
+:::
+
+### x86 versus x64
+
+| | **x86 (32-bit systems)** | **x64 (64-bit systems)** |
+|---|---|---|
+| **Data per trip** | 32 bits can travel at once between system components | 64 bits can travel at once between system components |
+| **Distinct values** | 2^32^ ≈ 4.3 billion | 2^64^ ≈ 18 quintillion |
+
+::: {.callout-note title="Careful with the numbers"}
+A 32-bit bus moves **32 bits** at a time. The figure 2^32^ ≈ 4 billion is the number of *different values* that 32 bits can represent (for example, memory addresses), which is why 32-bit systems are limited to about 4 GB of RAM.
+:::
+
+Almost all modern hardware and software today use the **x64 (64-bit)** architecture. 64-bit systems offer:
+
+- 🔒 Better **security** features
+- 🎨 Improved **graphics and performance**
+- ⚡ Support for **larger amounts of memory**
+
+But some older applications still rely on **32-bit (x86)** support, so many systems remain **backward compatible** to run older software.
+
+
+### What do the cores of a CPU do?
+
+- ⚙️ Executing program instructions
+- ➗ Performing calculations
+- 📊 Managing data flow inside the CPU
+- 🤝 Coordinating with other components
+
+### A program, up close
+
+Here is a tiny program for an early CPU. Each line of binary is a command, and the commands must be sent **in a specific order** for the CPU to perform work.
+
+| Binary | Meaning |
+|--------|---------|
+| `10000000` | The next line is a number, put it in the **AX** register |
+| `00000010` | The number 2 |
+| `10010000` | The next line is a number, put it in the **BX** register |
+| `00000011` | The number 3 |
+| `10110000` | Add AX to BX and put the result in AX |
+| `11000000` | Place the value of AX on the external data bus |
+
+A set of commands such as this is called a **program**.
+
+
+
+## Main Memory (RAM)
+
+- Referred to as **RAM** (Random Access Memory)
+- A collection of **integrated circuits** (chips)
+- Considered the "**primary**" storage for the CPU
+- **Temporary** storage for **data** and **programs** that are being accessed by the CPU
+- **Volatile** memory: contents are erased when the computer is switched off (or when power is lost)
+
+### Why use main memory?
+
+Did you ever wonder why games take time to load? That is the time it takes to copy all the files of the game from the storage device (long-term memory) into the working memory of the main memory, which the CPU can access much faster and much more easily.
+
+| Memory | Read/write speed |
+|--------|------------------|
+| RAM | 12,800 MB/s |
+| SSD | 456 MB/s |
+
+More RAM means more capacity to hold and process large programs and files. The maximum amount installed is limited by the **motherboard** and the **operating system**.
+
+### A short history
+
+- Early computers had RAM installed on the motherboard as **individual chips**. These were difficult to install and often became loose.
+- Designers then created **memory modules**: special circuit boards on which the memory chips are soldered.
+- Modules attach to the motherboard through **memory slots**, so memory can be added or replaced easily.
+
+## Main Memory Features
+
+### 1) Data rate
+
+**SDRAM**
+
+- The original main memory was the **Synchronous Dynamic Random Access Memory (SDRAM)**
+- It is **synchronized** with the motherboard speed
+- For a 32-bit bus, if the motherboard runs at 100 MHz, the SDRAM speed was also 100 MHz × 32 bits of data sent/received
+
+**DDR SDRAM**
+
+- The first leap in RAM technology was **Double Data Rate** RAM
+- For every tick of the motherboard clock, DDR sends/receives **2 bits** of information instead of just 1
+- This "doubles" the speed: 2 × 100 MHz × 32 bits
+
+**How can we tell the generations apart?** By the **number of pins** and the **position of the notch**.
+
+| Type | Pins | Notches | Clock speed | Rating by transfer rate | Rating by bandwidth |
+|------|-----:|:-------:|------------:|-------------------------|---------------------|
+| SDRAM | 168 | 2 | 100 MHz | SD-100 | PC-800 |
+| DDR | 184 | 1 | 100 MHz | DDR-200 | PC-1600 |
+| DDR2 | 240 | 1 | 100 MHz | DDR2-400 | PC2-3200 |
+| DDR3 | 240 | 1 | 100 MHz | DDR3-800 | PC3-6400 |
+| DDR4 | 288 | 1 | 100 MHz | DDR4-1600 | PC4-12800 |
+| DDR5 | 288 | 1 | 100 MHz | DDR5-3200 | PC5-25600 |
+
+::: {.callout-tip title="Decoding the names"}
+The "PC" number is the bandwidth in MB/s: it equals the transfer rate multiplied by 8 bytes (a 64-bit module). For example, DDR4-1600 × 8 = **PC4-12800**.
+
+DDR2 and DDR3 both have 240 pins, so the **notch position** is what keeps you from installing the wrong one.
+:::
+
+### 2) RAM capacity
+
+- Every stick of RAM has a **capacity** (in GB), which is the amount of information the RAM can store
+- The capacity depends on the **size of the chips** (1 Gb, 4 Gb, 16 Gb, etc.)
+- The capacity also depends on whether the RAM is **SIMM** or **DIMM**
+
+| | **SIMM** (Single Inline Memory Module) | **DIMM** (Dual Inline Memory Module) |
+|---|---|---|
+| **Era** | Older type of memory module. Common in early computers (e.g. Pentium I) | Modern type used in most computers today |
+| **Contacts** | One set of electrical contacts. Both sides of the stick are connected to the same circuit | Separate electrical contacts on each side of the module |
+| **Chips** | A single row of memory chips | Can hold chips on **both sides**, effectively doubling capacity (e.g. 2 GB → 4 GB) |
+| **Data path** | 32-bit | **64-bit**, leading to faster performance |
+
+**SO-DIMM** modules are smaller RAM sticks used in **laptops**.
+
+**Serial Presence Detect (SPD)**
+
+How can we get all the specs of the currently installed RAM sticks? Each RAM stick includes an **SPD chip** that stores detailed information about the memory, such as speed, size, manufacturer, and timings. A tool like **CPU-Z** can read the SPD chip, so you can view all the RAM specifications **without physically opening your computer**.
+
+### 3) RAM channels
+
+- Most motherboards have a limited number of RAM slots, usually **2 or 4**
+- RAM is typically sold in **pairs of sticks** to take advantage of **dual-channel** performance
+- With **dual-channel** memory architecture, the CPU can access data from **two RAM sticks at the same time** instead of just one. This **doubles the data bandwidth**, making the system faster and more efficient.
+
+Motherboards with four slots usually label them **A1, A2, B1, B2**:
+
+- Slots **A1 and A2** belong to one memory channel
+- Slots **B1 and B2** belong to the second channel
+- To activate dual channel, install the sticks in **matching colored or labeled slots**, e.g. **A2 and B2**
+- For the best performance, the RAM sticks should be **identical**: same size, speed, and brand if possible
+
+::: {.callout-warning title="What happens if RAM is installed incorrectly?"}
+If you put both sticks in the **same channel** (e.g. A1 and A2), the motherboard treats them as **single-channel** memory:
+
+- The system can only access one stick at a time
+- Memory bandwidth is cut in half
+- Overall performance drops (especially noticeable in gaming, video editing, or multitasking)
+
+The PC still works, but you won't be using it to its best capacity.
+:::
+
+### 4) Memory redundancy and error checking
+
+Memory errors happen when **data is not stored or retrieved correctly** from the RAM chips. Computers use different types of memory to detect and correct them.
+
+| | **Non-parity** | **Parity** | **ECC** |
+|---|---|---|---|
+| **Other name** | | True parity | Error checking and correcting |
+| **Detects errors?** | No | Yes | Yes (multiple-bit errors) |
+| **Corrects errors?** | No | No | Yes (1-bit errors) |
+| **How it works** | Nothing extra. If an error occurs, the OS has no way of knowing and data can be corrupted without warning | Extra chips act as parity chips. A memory error is detected and the OS is informed | Detects multiple-bit errors and corrects 1-bit errors automatically |
+| **Cost** | Cheapest, works fine for most applications | Middle | Most expensive |
+
+### 5) RAM latency
+
+**Latency** is the small **delay** that occurs when the memory controller begins accessing a line of data from RAM. RAM with **lower latency** responds **faster**, while RAM with **higher latency** takes slightly longer to deliver data.
+
+::: {.callout-note title="Latency is a general concept"}
+In physics and engineering, latency is a time delay between the cause and the effect of some physical change in a system. It is a consequence of the limited velocity at which any physical interaction can propagate.
+
+Remember from Class 2: CRT monitors have lower latency than LCD/LED monitors because electrons travel faster in a vacuum than through digital circuits.
+:::
+
+## Virtual Memory
+
+Every computer can use a portion of its **hard drive** as **temporary RAM** when the system runs out of physical memory. This is called **virtual memory**, and it uses a section of the drive known as a **swap file** or **page file**.
+
+When the computer's real RAM becomes full, the operating system **moves ("swaps")** some data or inactive programs from RAM to the page file. This **frees up space** in RAM for the programs you are currently using.
+
+### Example
+
+Assume your computer has **4 GB of RAM** and several programs installed on your hard drive (**A, B, C, D**).
+
+1. You are running programs **A, B, and C**, and they fill the RAM.
+2. You want to run program **D**, but there is **no more free RAM**.
+3. A **page file** on your hard drive acts as a temporary storage box. The least-used program (say **B**) is **swapped out** of RAM into the page file.
+4. Program **D** can now run in the freed space.
+5. Later, if you try to use **B** again, it cannot run from the page file. Another less-used program must swap out, and then **B is swapped back** into RAM.
+
+```{mermaid}
+%%| fig-cap: "Virtual memory swapping. Programs move between RAM and the page file on the hard drive."
+%%| fig-align: center
+flowchart LR
+    subgraph RAM["RAM (4 GB)"]
+        A["Program A"]
+        B["Program B"]
+        C["Program C"]
+    end
+    B -- "1. swap out (least used)" --> PF[("Page file<br/>on hard drive")]
+    PF -- "2. swap in later" --> RAM2["Program B back in RAM"]
+    D["Program D"] -- "runs in the freed space" --> RAM
+```
+
+::: {.callout-warning title="Disk thrashing"}
+Swapping is invisible to the user, but it **takes time** and Windows will slow down. If the page file is accessed too frequently, you may notice the hard drive LED going crazy. This is called **disk thrashing**, and it indicates that the computer would benefit from **more RAM**.
+:::
+
+> Exam question: Why is virtual memory not ideal?
+
+::: {.callout-caution title="Expand to see the answer" collapse="true"}
+Because the hard drive is much **slower** than RAM. Every swap costs time, so the whole system slows down, and when the page file is accessed too often the computer suffers from disk thrashing. The real fix is to install more physical RAM.
+:::
+
+## Key takeaways
+
+::: {.callout-important title="Remember"}
+- The **chipset** controls data flow between CPU, memory, storage, and peripherals, and it determines which hardware is compatible.
+- In modern systems the **northbridge is inside the CPU** and the **PCH** replaces the southbridge.
+- **Bus throughput = width × speed**.
+- A CPU is made of an **ALU** and a **Control Unit**, plus registers and buses, and uses **pipelining** to work on several instructions at once.
+- Choose a CPU by **socket (PGA/LGA)**, **clock speed**, **cores**, and **cache**.
+- **Cache (SRAM)** is small, fast, and expensive. **RAM (DRAM)** is larger, slower, and cheaper. Both are **volatile**.
+- Install RAM in **matching channel slots** to get dual-channel performance.
+- **Virtual memory** extends RAM with the hard drive, but it is much slower.
+:::
+
+## Knowledge check
+
+1. Which chipset component is typically integrated directly into the CPU in modern systems?
+
+    a. Southbridge
+    b. Northbridge
+    c. The BIOS
+    d. The Platform Controller Hub (PCH)
+
+2. A CPU has an 80 MHz, 64-bit bus. How much data can it move per second?
+
+    a. 320 MB/s
+    b. 400 MB/s
+    c. 640 MB/s
+    d. 5,120 MB/s
+
+3. Which level of CPU cache is shared by all the cores?
+
+    a. L1
+    b. L2
+    c. L3
+    d. Registers
+
+4. Which statement about SRAM and DRAM is INCORRECT?
+
+    a. SRAM needs constant refreshing to keep its data.
+    b. SRAM is faster than DRAM.
+    c. DRAM uses transistors and capacitors.
+    d. Both SRAM and DRAM are volatile.
+
+5. In a socket where the pins are located on the motherboard rather than on the processor, which connection type is used?
+
+    a. PGA
+    b. LGA
+    c. SO-DIMM
+    d. ECC
+
+6. A user installs two identical RAM sticks in slots A1 and A2 of a motherboard with four slots. What is the result?
+
+    a. The computer will not start.
+    b. The sticks run in dual-channel mode at double speed.
+    c. The motherboard treats them as single-channel memory and bandwidth is cut in half.
+    d. The sticks automatically become ECC memory.
+
+7. Which type of memory can both detect and correct 1-bit errors automatically?
+
+    a. Non-parity memory
+    b. Parity memory
+    c. ECC memory
+    d. SO-DIMM memory
+
+8. Which of the following statements about overclocking and throttling are correct? (Select all that apply.)
+
+    a. Overclocking makes a processor run faster than its original specification.
+    b. Overclocking can increase heat and reduce CPU lifespan.
+    c. Throttling makes a processor run below its rated speed to reduce heat and power use.
+    d. Throttling is commonly used on desktop servers to increase performance.
+
+9. What is "disk thrashing"?
+
+    a. The hard drive failing because of physical damage
+    b. The CPU running too hot and slowing down
+    c. Excessive swapping between RAM and the page file, which slows the computer down
+    d. Deleting the page file to free space
+
+10. Which of the following are advantages of 64-bit (x64) systems over 32-bit (x86) systems? (Select all that apply.)
+
+    a. Better security features
+    b. Support for larger amounts of memory
+    c. Improved graphics and performance
+    d. Every old 32-bit program runs faster
+
+::: {.callout-caution title="Expand to see the answers" collapse="true"}
+1. b. Northbridge
+2. c. 80 million cycles/s × 8 bytes = 640 MB/s
+3. c. L3
+4. a. It is DRAM that needs constant refreshing, not SRAM.
+5. b. LGA
+6. c. Both sticks are in the same channel, so dual channel is not activated. Use A2 and B2 instead.
+7. c. ECC memory
+8. a., b., c.
+9. c.
+10. a., b., c.
+:::

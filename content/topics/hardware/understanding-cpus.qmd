@@ -1,11 +1,12 @@
 ---
 date: 2025-09-08
-subtitle: More detail on CPUs. "Guy in Box" analogy, Clock Speed, Codebook, Databuses explained.
-title: Understanding CPUs
+title: CPU as a Man in box
+subtitle: Role of a CPU, "Guy in Box" analogy, Clock Speed, Codebook, Databuses explained.
 draft: false
 ---
 
 ![What if all computers contained some guy, trapped in a box? Something to consider. Image source: unknown](_assets/understanding-cpus16.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
+
 
 ## Introduction
 
@@ -19,9 +20,57 @@ We learned that the CPU is responsible for:
 
 Today we're going to take a deep dive into *how* the CPU carries out those responsibilities.
 
+
 ## Lesson Overview
 
 More detail on CPUs. "Guy in Box" analogy, Clock Speed, Codebook, data buses explained.
+
+
+::: {.callout-tip icon="false" title="☆Learning Objectives"}
+
+Upon completing this lesson, you should be able to: 
+
+- **Describe** the role of the CPU as the brains of the computer.
+
+- **Use** the guy in the box analogy to explain how a CPU recieves instructions on a schedule, stores temporary values in its registers and communicate through the external data bus.
+
+:::
+
+## Role of a CPU 
+
+The Central Processing Unit (CPU) is the most important element of the computer in terms of computing power.
+
+- The **brains** of the computer
+- Responsible for **interpreting and executing** the commands from the software
+- Executes a **program**: a sequence of stored instructions
+- While the CPU is processing one step of the program, the remaining instructions and the data are stored in a special memory called **cache**
+
+Almost all modern devices include a CPU: desktops, laptops, tablets, smartphones, TVs, TV boxes, vending machines, traffic lights, and smart devices (fridges, washers, light bulbs).
+
+:::{.callout-note collapse="true" title="CPU History"}
+
+### CPU history
+
+The first CPU was the **Intel 4004**, developed at Intel Corp by Ted Hoff and introduced in **1971**: He proposed the idea of using a single universal chip instead of variety of custom chips. 
+
+::: {layout-ncol=2}
+![Intel 4004](_assets/understanding-cpus23.jpg){fig-alt=""}
+
+![Marcian Edward "Ted" Hoff ](_assets/understanding-cpus25.png){fig-alt=""}
+:::
+
+| Property | Intel 4004 |
+|----------|-----------|
+| Clock speed | 108 kHz |
+| Transistors | 2,300 |
+| Performance | 60,000 operations per second (OPS) |
+| Memory addressed | 640 bytes |
+| Cost at launch | $200 |
+
+> Fun Fact:
+> The Intel 4004 was the first commercially available microprocessor, laying the foundation for all modern CPUs.
+
+:::
 
 ## CPU Analogy: Guy in a Box 📦
 
@@ -90,6 +139,7 @@ unknown.](_assets/understanding-cpus8.png "A sample title."){fig-alt="Sample alt
 
 ::: {.callout-note}
 Are CPU registers made of the same technology as RAM? 
+
 :::
 ------------------------------------------------------------------------
 
@@ -124,7 +174,7 @@ unknown.](_assets/understanding-cpus16.png "A sample title."){fig-alt="Sample al
 
 :::{.callout-tip}
 
-# Sample Guy in a Box Problem
+### Sample Guy in a Box Problem
 
 Using the following codebook, ask the "Guy in a box" to calculate 2+3
 
@@ -160,147 +210,3 @@ work.
 
 ------------------------------------------------------------------------
 
-## Pipelining 🚥
-
--   Almost all CPU instructions feature a set of 4 stages:
--   **Fetch** : retrieve the instruction, address, and data, write
-    them to registers
--   **Decode** : search for instruction code in codebook, verify it
-    is a real instruction, and that data/address are valid
--   **Execute** : perform the instruction, update registers with
-    results
--   **Write:** write to databus to share results
--   Rather than have each instruction repeat all of these steps, we can organize CPUs further by specializing our "guy in a box" for each stage
--  This is called **pipelining** , and it allows for greater efficiency in CPU programming
-
-![Analogy of multiple men in a box to illustrate the idea of a pipeline.](_assets/understanding-cpus18.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
-
-------------------------------------------------------------------------
-
-## CPU Properties 📊
-
-The most important properties that define CPU behavior are **speed** and **bus width**: that is, how fast the clock cycle repeats, and how much data per clock cycle the CPU can process.
-
-### Clock Speed 
-
-We measure CPU **speed** : in cycles per second, e.g. megahertz (MHz) or gigahertz (GHz).
-
-::: {.callout-note}
-# Unit of Measurement
-__Hertz__, usually written as **Hz**, denote frequency. 1Hz is "one time per second", 10Hz is "ten times per second".
-We can use **SI Prefixes** (International System of Unit Prefixes) to compare magnitudes easily.
-
-You will see many of these in computer science over and over again --
-get to know them well!
-
-| Unit | Meaning | Definition | Examples |
-| :- | :-- | :-- | :--------- |
-| Hz | Once per second | 1/s, or 1Hz | 1-2Hz: human heart-rate at rest (1Hz = 60 beats per minute, 2Hz = 120 bpm)<br />24Hz: framerate of historic cinema<br />20-60Hz: frequency range for bass notes (C0 = 16.35Hz to C2 = 65.4Hz)<br />60-144Hz: framerate of most monitors |
-| kHz | Thousand times per second | 1000 Hz | 0.1-2kHz: frequency range for midrange notes (A2=0.110kHz, C7=2kHz)<br />20kHz: maximum frequency audible to human ear<br />740 kHz: Intel 4004 processor clock speed (1971) |
-| MHz | Million times per second | 1000000 Hz | 8MHz: fastest CPU clock speed in the 70s<br />35MHz: fastest CPU clock speed in the 80s<br />500-1000MHz: fastest CPU clock speed in the 90s) |
-| GHz | Billion times per second | 1000000000 Hz | 2-5GHz: Almost all consumer CPUs in 2024 have base clock speeds in this range<br />9.117 GHz: fastest CPU clock speed ever recorded (2024) |
-
-: SI Prefixes for Frequencies {.striped .hover}
-:::
-
-### CPU Cores
-A multi-core SPU means that more than one CPU core is integrated into a single chip, each capable of running parallel processes. This means, in theory, that we multiply the amount of information that can be processes, send and recieved from/to the RAM.
-
-Benefits of Multi-core processors:
-- Enhancing the multitasking: multiple jobs done at the same time.
-- Improved performance: Faster and smoother performance.
-- Energy efficiency: More work can be done with less power.
-
-#### CPU Threads
-CPU cores and threads are closely related but not the same. A core is a physical unit within the CPU that executes instructions, while a thread is a virtual sequence of instructions assigned to a core.
-Think of cores as workers and threads as the jobs they carry out.  
-> When CPU has 16 threads, it simply means it can run 16 threads simultaneously.   
-
-### Bus width
-
-The amount of data processed at a time depends on the "number of lightbulbs" or the **width** of the **data bus**
-
-**Bus width** is measured in bits, e.g. 8-bits, 16-bit, 32-bit, 64-bit, etc.
-
-:::{.callout-note icon="false"}
-
-# Question
- How many bits do you need in *bus width* to represent the Guy in the Box and their codebook from the previous problems?
-
-:::
-------------------------------------------------------------------------
-
-In actual computers, the CPU receives **instructions** ,**addresses memory** , and **data** on separate buses.
-
-This allows the CPU to send AND receive the following information at the same time:
-
-- **Control Bus**: What command to perform
-
-- **Address Bus**: Where in memory the result should be stored
-
-- **Data Bus**: What data to use to perform the command
-
-![Various buses inside the CPU. Image source:
-unknown.](_assets/understanding-cpus19.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
----
-
-::: {.callout-note}
-
-The CPU is constantly talking to the RAM and the hardware components. At every clock interval, new instructions are sent through the control bus. Here are a few common instructions: 
-
-| Instruction | Description                                                  |
-| ----------- | ------------------------------------------------------------ |
-| `LOAD`      | Load this value from RAM                                     |
-| `ADD`       | Add these two numbers                                        |
-| `STORE`     | Save this value to RAM                                       |
-| `COMPARE`   | Compare these two numbers                                    |
-| `JUMP IF`   | If a condition is true, jump to this next set of instructions (example : if statement) |
-| `JUMP`      | Jump to this next set of instructions (without any conditions - example function call) |
-| `IN`        | Read data from the input device (example keyboard)           |
-| `OUT`       | Send data to an output device (example printer)              |
-
-All this information, the instruction, the location of the hardware devices are all in binary (machine code)! When you write a program in C#, Java, Python, etc. You are programming in high level programming language that will be compiled into machine code by the compiler of this language (or interpreted by the interpreter of this language). 
-
-
-![Illustration of CPU wiring to the RAM. Image source:
-**Figure from** [In One
-Lesson](https://www.youtube.com/watch?v=cNN_tTXABUA&) on Youtube
-(excellent video explaination on CPUs)](_assets/understanding-cpus20.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
-
-:::
-
-------------------------------------------------------------------------
-
-### Highway analogy: clock Speed vs bus width 
-
--   You can double check that you understand a scientific concept by
-    checking what **units of measurement** that concept is measured by:
--   Highway
-    -   **Number of lanes:** (a number)
-    -   **Speed limit:** (unit distance per time elapsed, e.g. km/h)
--   System bus
-    -   **Bus width: ** (a number of bits, eg a 32-bit processor)
-    -   **Bus speed: ** (unit information per time elapsed,
-        e.g. bits/second)
-
-![Analogy of the highway. Image source:
-unknown.](_assets/understanding-cpus21.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
-
-
-# CPU Manufacturers 🏭
-![How to read the CPU model and generation](_assets/understanding-cpus22.png){width=80%}
-
-- **Brand**: Refers to company who designed the CPU (often Intel or AMD)
-- **Tier**: Refers to the ranking of this CPU based on their capacilities and performance. Generally the higher the tier the better the pverall performance of the CPU.
-- **Generation**: Tells us how new is this CPU compared to another one. Generally, higher generations within the same tier have improved design.
-- **Model**: It's a number that uniquely identify a CPU.
-- **Sufix**: Is an added letter which depending on the manufacturer could refer to different properties of the CPU. For example, intel uses "K" to indicate that the CPU is unlocked and can be overclocked. AMD uses X to indicate that this CPU is already slightly overclocked. 
-
-
-
-
-<!-- ## Exercises
-
-## Knowledge check
-
-## Additional references -->

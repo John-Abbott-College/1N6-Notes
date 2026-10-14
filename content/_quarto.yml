@@ -43,6 +43,7 @@ website:
           - topics/hardware/external-components.qmd
           - topics/hardware/internal-components.qmd  
           - topics/hardware/understanding-cpus.qmd
+          - topics/hardware/understanding-cpus2.qmd
           - href: topics/hardware/chips_ram_cpu.pdf
             text: "Chipets, CPU and RAM" # This will open the PDF in a new tab/window
           - topics/hardware/bios_cmos_uefi.qmd
@@ -84,8 +85,8 @@ format:
     date-modified: last-modified
     highlight-style: a11y
     theme: 
-      dark: [darkly, _assets/css/customization-dark.scss]
       light: [flatly, _assets/css/customization-light.scss]
+      dark: [darkly, _assets/css/customization-dark.scss]
     copyright:
       holder: Michael Haaf
       year: 2025
