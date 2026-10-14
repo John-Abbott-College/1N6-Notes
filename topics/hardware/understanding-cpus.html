@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2025-09-08">
 
-<title>Understanding CPUs – Technical Support</title>
+<title>CPU as a Man in box – Technical Support</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -72,7 +72,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../topics/hardware/chips_ram_cpu.pdf" rel="next">
+<link href="../../topics/hardware/understanding-cpus2.html" rel="next">
 <link href="../../topics/hardware/internal-components.html" rel="prev">
 <link href="../../_assets/favicons/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
@@ -81,12 +81,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3419ea62b3ca2d77d3d547f86109e84e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-eaeb381c6b7494c50009502241a4985c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e21500bb30e7ce080c64316834ee3be8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-09606243866072c1aa00d3ff38fff5fe.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e21500bb30e7ce080c64316834ee3be8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-c8d27ff7f68ee7408084917cd79dddba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark-26582cbb2517c20bd3c3c4d20a79438f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-c8d27ff7f68ee7408084917cd79dddba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -117,8 +119,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../_assets/css/styles.css">
-<meta property="og:title" content="Understanding CPUs – Technical Support">
-<meta property="og:description" content="More detail on CPUs. “Guy in Box” analogy, Clock Speed, Codebook, Databuses explained.">
+<meta property="og:title" content="CPU as a Man in box – Technical Support">
+<meta property="og:description" content="Role of a CPU, “Guy in Box” analogy, Clock Speed, Codebook, Databuses explained.">
 <meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/hardware/_assets/understanding-cpus16.png">
 <meta property="og:site_name" content="Technical Support">
 <meta property="og:image:alt" content="Sample alt text. To be replaced!">
@@ -126,7 +128,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta property="og:image:width" content="480">
 </head>
 
-<body class="nav-sidebar docked nav-fixed slimcontent quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar docked nav-fixed slimcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -268,8 +270,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         changeGiscusTheme();
       }
     };
-    const authorPrefersDark = true;
+    const authorPrefersDark = false;
     const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
     // Dark / light mode switch
     window.quartoToggleColorScheme = () => {
@@ -335,7 +339,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Notes</li><li class="breadcrumb-item"><a href="../../topics/hardware/introduction-to-computers.html">Hardware</a></li><li class="breadcrumb-item"><a href="../../topics/hardware/understanding-cpus.html">Understanding CPUs</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Notes</li><li class="breadcrumb-item"><a href="../../topics/hardware/introduction-to-computers.html">Hardware</a></li><li class="breadcrumb-item"><a href="../../topics/hardware/understanding-cpus.html">CPU as a Man in box</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -386,6 +390,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../topics/hardware/understanding-cpus.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">CPU as a Man in box</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/hardware/understanding-cpus2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Understanding CPUs</span></a>
   </div>
 </li>
@@ -511,6 +521,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#lesson-overview" id="toc-lesson-overview" class="nav-link" data-scroll-target="#lesson-overview">Lesson Overview</a></li>
+  <li><a href="#role-of-a-cpu" id="toc-role-of-a-cpu" class="nav-link" data-scroll-target="#role-of-a-cpu">Role of a CPU</a></li>
   <li><a href="#cpu-analogy-guy-in-a-box" id="toc-cpu-analogy-guy-in-a-box" class="nav-link" data-scroll-target="#cpu-analogy-guy-in-a-box">CPU Analogy: Guy in a Box 📦</a>
   <ul>
   <li><a href="#data-bus" id="toc-data-bus" class="nav-link" data-scroll-target="#data-bus">Data bus 💡💡💡</a></li>
@@ -518,18 +529,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#registers" id="toc-registers" class="nav-link" data-scroll-target="#registers">Registers</a></li>
   <li><a href="#clock-agreeing-on-schedule" id="toc-clock-agreeing-on-schedule" class="nav-link" data-scroll-target="#clock-agreeing-on-schedule">Clock: Agreeing on schedule ⏰</a></li>
   </ul></li>
-  <li><a href="#pipelining" id="toc-pipelining" class="nav-link" data-scroll-target="#pipelining">Pipelining 🚥</a></li>
-  <li><a href="#cpu-properties" id="toc-cpu-properties" class="nav-link" data-scroll-target="#cpu-properties">CPU Properties 📊</a>
-  <ul>
-  <li><a href="#clock-speed" id="toc-clock-speed" class="nav-link" data-scroll-target="#clock-speed">Clock Speed</a></li>
-  <li><a href="#cpu-cores" id="toc-cpu-cores" class="nav-link" data-scroll-target="#cpu-cores">CPU Cores</a>
-  <ul class="collapse">
-  <li><a href="#cpu-threads" id="toc-cpu-threads" class="nav-link" data-scroll-target="#cpu-threads">CPU Threads</a></li>
-  </ul></li>
-  <li><a href="#bus-width" id="toc-bus-width" class="nav-link" data-scroll-target="#bus-width">Bus width</a></li>
-  <li><a href="#highway-analogy-clock-speed-vs-bus-width" id="toc-highway-analogy-clock-speed-vs-bus-width" class="nav-link" data-scroll-target="#highway-analogy-clock-speed-vs-bus-width">Highway analogy: clock Speed vs bus width</a></li>
-  </ul></li>
-  <li><a href="#cpu-manufacturers" id="toc-cpu-manufacturers" class="nav-link" data-scroll-target="#cpu-manufacturers">CPU Manufacturers 🏭</a></li>
   </ul>
 </nav>
     </div>
@@ -537,10 +536,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content page-columns page-full" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Notes</li><li class="breadcrumb-item"><a href="../../topics/hardware/introduction-to-computers.html">Hardware</a></li><li class="breadcrumb-item"><a href="../../topics/hardware/understanding-cpus.html">Understanding CPUs</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Notes</li><li class="breadcrumb-item"><a href="../../topics/hardware/introduction-to-computers.html">Hardware</a></li><li class="breadcrumb-item"><a href="../../topics/hardware/understanding-cpus.html">CPU as a Man in box</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Understanding CPUs</h1>
-<p class="subtitle lead">More detail on CPUs. “Guy in Box” analogy, Clock Speed, Codebook, Databuses explained.</p>
+<h1 class="title">CPU as a Man in box</h1>
+<p class="subtitle lead">Role of a CPU, “Guy in Box” analogy, Clock Speed, Codebook, Databuses explained.</p>
 </div>
 
 
@@ -558,7 +557,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">October 5, 2026</p>
+      <p class="date-modified">October 14, 2026</p>
     </div>
   </div>
     
@@ -588,6 +587,104 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lesson-overview" class="level2">
 <h2 class="anchored" data-anchor-id="lesson-overview">Lesson Overview</h2>
 <p>More detail on CPUs. “Guy in Box” analogy, Clock Speed, Codebook, data buses explained.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="☆Learning Objectives">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>☆Learning Objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Upon completing this lesson, you should be able to:</p>
+<ul>
+<li><p><strong>Describe</strong> the role of the CPU as the brains of the computer.</p></li>
+<li><p><strong>Use</strong> the guy in the box analogy to explain how a CPU recieves instructions on a schedule, stores temporary values in its registers and communicate through the external data bus.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="role-of-a-cpu" class="level2">
+<h2 class="anchored" data-anchor-id="role-of-a-cpu">Role of a CPU</h2>
+<p>The Central Processing Unit (CPU) is the most important element of the computer in terms of computing power.</p>
+<ul>
+<li>The <strong>brains</strong> of the computer</li>
+<li>Responsible for <strong>interpreting and executing</strong> the commands from the software</li>
+<li>Executes a <strong>program</strong>: a sequence of stored instructions</li>
+<li>While the CPU is processing one step of the program, the remaining instructions and the data are stored in a special memory called <strong>cache</strong></li>
+</ul>
+<p>Almost all modern devices include a CPU: desktops, laptops, tablets, smartphones, TVs, TV boxes, vending machines, traffic lights, and smart devices (fridges, washers, light bulbs).</p>
+<div class="callout callout-style-default callout-note callout-titled" title="CPU History">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>CPU History
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<section id="cpu-history" class="level3 callout-body-container callout-body">
+<h3 class="anchored" data-anchor-id="cpu-history">CPU history</h3>
+<p>The first CPU was the <strong>Intel 4004</strong>, developed at Intel Corp by Ted Hoff and introduced in <strong>1971</strong>: He proposed the idea of using a single universal chip instead of variety of custom chips.</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="_assets/understanding-cpus23.jpg" class="img-fluid figure-img" alt=""></p>
+<figcaption>Intel 4004</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="_assets/understanding-cpus25.png" class="img-fluid figure-img" alt=""></p>
+<figcaption>Marcian Edward “Ted” Hoff</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Property</th>
+<th>Intel 4004</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Clock speed</td>
+<td>108 kHz</td>
+</tr>
+<tr class="even">
+<td>Transistors</td>
+<td>2,300</td>
+</tr>
+<tr class="odd">
+<td>Performance</td>
+<td>60,000 operations per second (OPS)</td>
+</tr>
+<tr class="even">
+<td>Memory addressed</td>
+<td>640 bytes</td>
+</tr>
+<tr class="odd">
+<td>Cost at launch</td>
+<td>$200</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>Fun Fact: The Intel 4004 was the first commercially available microprocessor, laying the foundation for all modern CPUs.</p>
+</blockquote>
+</section>
+</div>
+</div>
 </section>
 <section id="cpu-analogy-guy-in-a-box" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="cpu-analogy-guy-in-a-box">CPU Analogy: Guy in a Box 📦</h2>
@@ -725,240 +822,9 @@ Note
 </div>
 </div>
 <hr>
-</section>
-</section>
-<section id="pipelining" class="level2">
-<h2 class="anchored" data-anchor-id="pipelining">Pipelining 🚥</h2>
-<ul>
-<li>Almost all CPU instructions feature a set of 4 stages:</li>
-<li><strong>Fetch</strong> : retrieve the instruction, address, and data, write them to registers</li>
-<li><strong>Decode</strong> : search for instruction code in codebook, verify it is a real instruction, and that data/address are valid</li>
-<li><strong>Execute</strong> : perform the instruction, update registers with results</li>
-<li><strong>Write:</strong> write to databus to share results</li>
-<li>Rather than have each instruction repeat all of these steps, we can organize CPUs further by specializing our “guy in a box” for each stage</li>
-<li>This is called <strong>pipelining</strong> , and it allows for greater efficiency in CPU programming</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="_assets/understanding-cpus18.png" title="A sample title." class="img-fluid figure-img" alt="Sample alt text. To be replaced!"></p>
-<figcaption>Analogy of multiple men in a box to illustrate the idea of a pipeline.</figcaption>
-</figure>
-</div>
-<hr>
-</section>
-<section id="cpu-properties" class="level2">
-<h2 class="anchored" data-anchor-id="cpu-properties">CPU Properties 📊</h2>
-<p>The most important properties that define CPU behavior are <strong>speed</strong> and <strong>bus width</strong>: that is, how fast the clock cycle repeats, and how much data per clock cycle the CPU can process.</p>
-<section id="clock-speed" class="level3">
-<h3 class="anchored" data-anchor-id="clock-speed">Clock Speed</h3>
-<p>We measure CPU <strong>speed</strong> : in cycles per second, e.g.&nbsp;megahertz (MHz) or gigahertz (GHz).</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Unit of Measurement
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Hertz</strong>, usually written as <strong>Hz</strong>, denote frequency. 1Hz is “one time per second”, 10Hz is “ten times per second”. We can use <strong>SI Prefixes</strong> (International System of Unit Prefixes) to compare magnitudes easily.</p>
-<p>You will see many of these in computer science over and over again – get to know them well!</p>
-<table class="table-striped table-hover caption-top table">
-<caption>SI Prefixes for Frequencies</caption>
-<colgroup>
-<col style="width: 11%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 55%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Unit</th>
-<th style="text-align: left;">Meaning</th>
-<th style="text-align: left;">Definition</th>
-<th style="text-align: left;">Examples</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Hz</td>
-<td style="text-align: left;">Once per second</td>
-<td style="text-align: left;">1/s, or 1Hz</td>
-<td style="text-align: left;">1-2Hz: human heart-rate at rest (1Hz = 60 beats per minute, 2Hz = 120 bpm)<br>24Hz: framerate of historic cinema<br>20-60Hz: frequency range for bass notes (C0 = 16.35Hz to C2 = 65.4Hz)<br>60-144Hz: framerate of most monitors</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">kHz</td>
-<td style="text-align: left;">Thousand times per second</td>
-<td style="text-align: left;">1000 Hz</td>
-<td style="text-align: left;">0.1-2kHz: frequency range for midrange notes (A2=0.110kHz, C7=2kHz)<br>20kHz: maximum frequency audible to human ear<br>740 kHz: Intel 4004 processor clock speed (1971)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">MHz</td>
-<td style="text-align: left;">Million times per second</td>
-<td style="text-align: left;">1000000 Hz</td>
-<td style="text-align: left;">8MHz: fastest CPU clock speed in the 70s<br>35MHz: fastest CPU clock speed in the 80s<br>500-1000MHz: fastest CPU clock speed in the 90s)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">GHz</td>
-<td style="text-align: left;">Billion times per second</td>
-<td style="text-align: left;">1000000000 Hz</td>
-<td style="text-align: left;">2-5GHz: Almost all consumer CPUs in 2024 have base clock speeds in this range<br>9.117 GHz: fastest CPU clock speed ever recorded (2024)</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</section>
-<section id="cpu-cores" class="level3">
-<h3 class="anchored" data-anchor-id="cpu-cores">CPU Cores</h3>
-<p>A multi-core SPU means that more than one CPU core is integrated into a single chip, each capable of running parallel processes. This means, in theory, that we multiply the amount of information that can be processes, send and recieved from/to the RAM.</p>
-<p>Benefits of Multi-core processors: - Enhancing the multitasking: multiple jobs done at the same time. - Improved performance: Faster and smoother performance. - Energy efficiency: More work can be done with less power.</p>
-<section id="cpu-threads" class="level4">
-<h4 class="anchored" data-anchor-id="cpu-threads">CPU Threads</h4>
-<p>CPU cores and threads are closely related but not the same. A core is a physical unit within the CPU that executes instructions, while a thread is a virtual sequence of instructions assigned to a core. Think of cores as workers and threads as the jobs they carry out.<br>
-&gt; When CPU has 16 threads, it simply means it can run 16 threads simultaneously.</p>
-</section>
-</section>
-<section id="bus-width" class="level3">
-<h3 class="anchored" data-anchor-id="bus-width">Bus width</h3>
-<p>The amount of data processed at a time depends on the “number of lightbulbs” or the <strong>width</strong> of the <strong>data bus</strong></p>
-<p><strong>Bus width</strong> is measured in bits, e.g.&nbsp;8-bits, 16-bit, 32-bit, 64-bit, etc.</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Question
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>How many bits do you need in <em>bus width</em> to represent the Guy in the Box and their codebook from the previous problems?</p>
-</div>
-</div>
-<hr>
-<p>In actual computers, the CPU receives <strong>instructions</strong> ,<strong>addresses memory</strong> , and <strong>data</strong> on separate buses.</p>
-<p>This allows the CPU to send AND receive the following information at the same time:</p>
-<ul>
-<li><p><strong>Control Bus</strong>: What command to perform</p></li>
-<li><p><strong>Address Bus</strong>: Where in memory the result should be stored</p></li>
-<li><p><strong>Data Bus</strong>: What data to use to perform the command</p></li>
-</ul>
-<p><img src="_assets/understanding-cpus19.png" title="A sample title." class="img-fluid" alt="Sample alt text. To be replaced!"> —</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The CPU is constantly talking to the RAM and the hardware components. At every clock interval, new instructions are sent through the control bus. Here are a few common instructions:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 15%">
-<col style="width: 84%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Instruction</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>LOAD</code></td>
-<td>Load this value from RAM</td>
-</tr>
-<tr class="even">
-<td><code>ADD</code></td>
-<td>Add these two numbers</td>
-</tr>
-<tr class="odd">
-<td><code>STORE</code></td>
-<td>Save this value to RAM</td>
-</tr>
-<tr class="even">
-<td><code>COMPARE</code></td>
-<td>Compare these two numbers</td>
-</tr>
-<tr class="odd">
-<td><code>JUMP IF</code></td>
-<td>If a condition is true, jump to this next set of instructions (example : if statement)</td>
-</tr>
-<tr class="even">
-<td><code>JUMP</code></td>
-<td>Jump to this next set of instructions (without any conditions - example function call)</td>
-</tr>
-<tr class="odd">
-<td><code>IN</code></td>
-<td>Read data from the input device (example keyboard)</td>
-</tr>
-<tr class="even">
-<td><code>OUT</code></td>
-<td>Send data to an output device (example printer)</td>
-</tr>
-</tbody>
-</table>
-<p>All this information, the instruction, the location of the hardware devices are all in binary (machine code)! When you write a program in C#, Java, Python, etc. You are programming in high level programming language that will be compiled into machine code by the compiler of this language (or interpreted by the interpreter of this language).</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="_assets/understanding-cpus20.png" title="A sample title." class="img-fluid figure-img" alt="Sample alt text. To be replaced!"></p>
-<figcaption>Illustration of CPU wiring to the RAM. Image source: <strong>Figure from</strong> <a href="https://www.youtube.com/watch?v=cNN_tTXABUA&amp;">In One Lesson</a> on Youtube (excellent video explaination on CPUs)</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="highway-analogy-clock-speed-vs-bus-width" class="level3">
-<h3 class="anchored" data-anchor-id="highway-analogy-clock-speed-vs-bus-width">Highway analogy: clock Speed vs bus width</h3>
-<ul>
-<li>You can double check that you understand a scientific concept by checking what <strong>units of measurement</strong> that concept is measured by:</li>
-<li>Highway
-<ul>
-<li><strong>Number of lanes:</strong> (a number)</li>
-<li><strong>Speed limit:</strong> (unit distance per time elapsed, e.g.&nbsp;km/h)</li>
-</ul></li>
-<li>System bus
-<ul>
-<li><strong>Bus width: </strong> (a number of bits, eg a 32-bit processor)</li>
-<li><strong>Bus speed: </strong> (unit information per time elapsed, e.g.&nbsp;bits/second)</li>
-</ul></li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="_assets/understanding-cpus21.png" title="A sample title." class="img-fluid figure-img" alt="Sample alt text. To be replaced!"></p>
-<figcaption>Analogy of the highway. Image source: unknown.</figcaption>
-</figure>
-</div>
-</section>
-</section>
-<section id="cpu-manufacturers" class="level1">
-<h1>CPU Manufacturers 🏭</h1>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="_assets/understanding-cpus22.png" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption>How to read the CPU model and generation</figcaption>
-</figure>
-</div>
-<ul>
-<li><strong>Brand</strong>: Refers to company who designed the CPU (often Intel or AMD)</li>
-<li><strong>Tier</strong>: Refers to the ranking of this CPU based on their capacilities and performance. Generally the higher the tier the better the pverall performance of the CPU.</li>
-<li><strong>Generation</strong>: Tells us how new is this CPU compared to another one. Generally, higher generations within the same tier have improved design.</li>
-<li><strong>Model</strong>: It’s a number that uniquely identify a CPU.</li>
-<li><strong>Sufix</strong>: Is an added letter which depending on the manufacturer could refer to different properties of the CPU. For example, intel uses “K” to indicate that the CPU is unlocked and can be overclocked. AMD uses X to indicate that this CPU is already slightly overclocked.</li>
-</ul>
-<!-- ## Exercises
-
-## Knowledge check
-
-## Additional references -->
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
@@ -1382,8 +1248,8 @@ Note
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../topics/hardware/chips_ram_cpu.pdf" class="pagination-link" aria-label="Chipets, CPU and RAM">
-        <span class="nav-page-text">Chipets, CPU and RAM</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../topics/hardware/understanding-cpus2.html" class="pagination-link" aria-label="Understanding CPUs">
+        <span class="nav-page-text">Understanding CPUs</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

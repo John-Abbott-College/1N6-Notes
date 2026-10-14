@@ -1,0 +1,2030 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2025-09-16">
+
+<title>Chipsets, CPU and RAM – Technical Support</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../_assets/favicons/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e21500bb30e7ce080c64316834ee3be8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-09606243866072c1aa00d3ff38fff5fe.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e21500bb30e7ce080c64316834ee3be8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-c8d27ff7f68ee7408084917cd79dddba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-26582cbb2517c20bd3c3c4d20a79438f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-c8d27ff7f68ee7408084917cd79dddba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": true,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": true,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../../_assets/css/styles.css">
+<meta property="og:title" content="Chipsets, CPU and RAM – Technical Support">
+<meta property="og:description" content="How logic gates become chips, and how the chipset, the processor, and main memory work together inside a computer">
+<meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/hardware/_assets/favicons/favicon-32x32.png">
+<meta property="og:site_name" content="Technical Support">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../_assets/icon-darkbg.svg" alt="" class="navbar-logo light-content">
+    <img src="../../_assets/icon-darkbg.svg" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Technical Support</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about/syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../topics/all-lectures.html"> 
+<span class="menu-text">Lectures</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../practice/all-exos.html"> 
+<span class="menu-text">Practice</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Chipsets, CPU and RAM</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Course Notes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Hardware</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/hardware/introduction-to-computers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Computers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/hardware/external-components.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">External components</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/hardware/internal-components.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Internal Components</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/hardware/understanding-cpus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CPU as a Man in box</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/hardware/understanding-cpus2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Understanding CPUs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/hardware/chips_ram_cpu.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chipets, CPU and RAM</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/hardware/bios_cmos_uefi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">BIOS, CMOS, UEFI</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Data representation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/data-representation/introduction-to-binary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Binary</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/data-representation/logic-gates-and-boolean-algebra.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Logic Gates and Boolean Algebra</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/data-representation/binary-math.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Binary Math</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/data-representation/text-in-computers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Text in Computers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/data-representation/hexadecimal-numbers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hexadecimal numbers</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Operating Systems</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/operating-systems/operating-system-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/operating-systems/operating-system-install.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Installing OS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/operating-systems/operating-systems-details.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How is the OS organized?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/operating-systems/disk_partitions_file_systems.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Disk and File Systems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/operating-systems/permissions_users_registries.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Permissions, Users and Registries</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/operating-systems/servers_and_raid.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Servers and RAID</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topcis/operating-systems/software_licensing.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Software Licensing</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#lesson-overview" id="toc-lesson-overview" class="nav-link" data-scroll-target="#lesson-overview">Lesson overview</a></li>
+  <li><a href="#from-logic-gates-to-the-motherboard" id="toc-from-logic-gates-to-the-motherboard" class="nav-link" data-scroll-target="#from-logic-gates-to-the-motherboard">From Logic Gates to the Motherboard ⎇</a></li>
+  <li><a href="#the-chipset" id="toc-the-chipset" class="nav-link" data-scroll-target="#the-chipset">The Chipset ⚙️</a>
+  <ul>
+  <li><a href="#how-did-chipsets-evolve" id="toc-how-did-chipsets-evolve" class="nav-link" data-scroll-target="#how-did-chipsets-evolve">How did chipsets evolve?</a></li>
+  <li><a href="#northbridge-and-southbridge" id="toc-northbridge-and-southbridge" class="nav-link" data-scroll-target="#northbridge-and-southbridge">Northbridge and Southbridge</a></li>
+  <li><a href="#modern-motherboards-and-chipsets" id="toc-modern-motherboards-and-chipsets" class="nav-link" data-scroll-target="#modern-motherboards-and-chipsets">Modern motherboards and chipsets</a></li>
+  </ul></li>
+  <li><a href="#buses" id="toc-buses" class="nav-link" data-scroll-target="#buses">Buses 🛣️</a>
+  <ul>
+  <li><a href="#why-is-the-bus-important" id="toc-why-is-the-bus-important" class="nav-link" data-scroll-target="#why-is-the-bus-important">Why is the bus important?</a></li>
+  <li><a href="#x86-versus-x64" id="toc-x86-versus-x64" class="nav-link" data-scroll-target="#x86-versus-x64">x86 versus x64</a></li>
+  <li><a href="#what-do-the-cores-of-a-cpu-do" id="toc-what-do-the-cores-of-a-cpu-do" class="nav-link" data-scroll-target="#what-do-the-cores-of-a-cpu-do">What do the cores of a CPU do?</a></li>
+  <li><a href="#a-program-up-close" id="toc-a-program-up-close" class="nav-link" data-scroll-target="#a-program-up-close">A program, up close</a></li>
+  </ul></li>
+  <li><a href="#main-memory-ram" id="toc-main-memory-ram" class="nav-link" data-scroll-target="#main-memory-ram">Main Memory (RAM)</a>
+  <ul>
+  <li><a href="#why-use-main-memory" id="toc-why-use-main-memory" class="nav-link" data-scroll-target="#why-use-main-memory">Why use main memory?</a></li>
+  <li><a href="#a-short-history" id="toc-a-short-history" class="nav-link" data-scroll-target="#a-short-history">A short history</a></li>
+  </ul></li>
+  <li><a href="#main-memory-features" id="toc-main-memory-features" class="nav-link" data-scroll-target="#main-memory-features">Main Memory Features</a>
+  <ul>
+  <li><a href="#data-rate" id="toc-data-rate" class="nav-link" data-scroll-target="#data-rate">1) Data rate</a></li>
+  <li><a href="#ram-capacity" id="toc-ram-capacity" class="nav-link" data-scroll-target="#ram-capacity">2) RAM capacity</a></li>
+  <li><a href="#ram-channels" id="toc-ram-channels" class="nav-link" data-scroll-target="#ram-channels">3) RAM channels</a></li>
+  <li><a href="#memory-redundancy-and-error-checking" id="toc-memory-redundancy-and-error-checking" class="nav-link" data-scroll-target="#memory-redundancy-and-error-checking">4) Memory redundancy and error checking</a></li>
+  <li><a href="#ram-latency" id="toc-ram-latency" class="nav-link" data-scroll-target="#ram-latency">5) RAM latency</a></li>
+  </ul></li>
+  <li><a href="#virtual-memory" id="toc-virtual-memory" class="nav-link" data-scroll-target="#virtual-memory">Virtual Memory</a>
+  <ul>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
+  </ul></li>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">Key takeaways</a></li>
+  <li><a href="#knowledge-check" id="toc-knowledge-check" class="nav-link" data-scroll-target="#knowledge-check">Knowledge check</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Chipsets, CPU and RAM</h1>
+<p class="subtitle lead">How logic gates become chips, and how the chipset, the processor, and main memory work together inside a computer</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 16, 2025</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">October 14, 2026</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Adapted from the original <a href="./chips_ram_cpu.pdf" target="_blank">slides</a> with the help of Claude AI for restructuring.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A["Logic gates&lt;br/&gt;AND, OR, XOR, NOT"] --&gt; B["Integrated circuits&lt;br/&gt;(chips)"]
+    B --&gt; C["Chipset"]
+    B --&gt; D["CPU"]
+    B --&gt; E["RAM"]
+    C --&gt; F["Motherboard"]
+    D --&gt; F
+    E --&gt; F
+</pre>
+</div>
+<p></p><figcaption> From simple switches to a working computer. Each step combines the previous one into something more powerful.</figcaption> </figure><p></p>
+</div>
+</div>
+</div>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>We previously learned how information is represented in computer systems (<strong>binary</strong> and <strong>logical circuits</strong>). In particular, we saw how simple <strong>switches</strong> could be used to represent AND, OR, XOR, and NOT logic in electrical devices.</p>
+<p>Combining these simple “gates” into more sophisticated devices lets engineers create <strong>Integrated Circuits (ICs)</strong>, or, as we more commonly call them, <strong>chips</strong>.</p>
+<p>Today we finish learning about some of the most important chips in a computer, introduced earlier:</p>
+<ul>
+<li><strong>Chipsets</strong>: the traffic controllers of the motherboard</li>
+<li><strong>Central Processing Unit (CPU)</strong>: the brains of the computer</li>
+<li><strong>Main memory (RAM)</strong>: the working space of the CPU</li>
+</ul>
+</section>
+<section id="lesson-overview" class="level2">
+<h2 class="anchored" data-anchor-id="lesson-overview">Lesson overview</h2>
+<ul>
+<li>From logic gates to the motherboard</li>
+<li>The chipset
+<ul>
+<li>Northbridge and southbridge</li>
+<li>Modern chipsets (the PCH)</li>
+<li>Buses: width, speed, and x86 vs x64</li>
+</ul></li>
+<li>Main memory (RAM)
+<ul>
+<li>Data rate, capacity, channels, error checking, latency</li>
+<li>Virtual memory</li>
+</ul></li>
+<li>Knowledge check</li>
+</ul>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="☆Learning Objectives">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>☆Learning Objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Upon completing this lesson, you should be able to:</p>
+<ul>
+<li><strong>Explain</strong> what a chipset does and how northbridge and southbridge differ</li>
+<li><strong>Calculate</strong> how much data a bus can move using bus width and speed</li>
+<li><strong>Describe</strong> the main components of a CPU and the features used to choose one</li>
+<li><strong>Explain</strong> how the cache hierarchy speeds up processing</li>
+<li><strong>Classify</strong> the various memory types of a computer (Cache, RAM, Storage)</li>
+<li><strong>Read</strong> RAM specifications.</li>
+<li><strong>Explain</strong> why virtual memory is not ideal</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="from-logic-gates-to-the-motherboard" class="level2">
+<h2 class="anchored" data-anchor-id="from-logic-gates-to-the-motherboard">From Logic Gates to the Motherboard ⎇</h2>
+<p>Logic gates are the “atoms” of computing. A single chip can contain a handful of them (like the <strong>7408 quad AND gate</strong>, which holds four AND gates in a 14-pin package) or billions of them (like a modern CPU).</p>
+<p>When many chips are placed on one circuit board and connected together, we get a <strong>motherboard</strong>. The Acer T3-710 board below is composed of many integrated components.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Acer T3-710 motherboard: labeled components">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Acer T3-710 motherboard: labeled components
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><img src="https://us.v-cdn.net/6029997/uploads/WUZD4RBUZZT2/image.png"></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">No.</th>
+<th>Label</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td>ATX_12V</td>
+<td>4-pin ATX power connector</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td>CPU</td>
+<td>CPU socket</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td>CPU_FAN</td>
+<td>CPU fan connector</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td>DIMM1~2</td>
+<td>240-pin DDR3L SDRAM slots</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td>CLR_CMOS</td>
+<td>Clear CMOS header with jumper</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td>SYS_FAN</td>
+<td>System fan connector</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td>ATX_POWER</td>
+<td>Standard 24-pin ATX power connector</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td>SATA1~2</td>
+<td>SATA 6 Gb/s connectors</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td>M.2_2</td>
+<td>M.2 SSD connector</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10</td>
+<td>F_PANEL</td>
+<td>Front panel connector</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">11</td>
+<td>F_USB1</td>
+<td>Front panel USB 3.0 connector</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">12</td>
+<td>USB3F1</td>
+<td>Front panel USB 3.0 connector</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">13</td>
+<td>F_USB2</td>
+<td>Front panel USB 2.0 connector</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">14</td>
+<td>M.2_1</td>
+<td>M.2 WLAN connector</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">15</td>
+<td>PCIE16X</td>
+<td>PCIe x16 slot</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">16</td>
+<td>BAT1</td>
+<td>Battery slot</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">17</td>
+<td>F_AUDIO</td>
+<td>Front panel audio connector</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">18</td>
+<td>PCIE1X</td>
+<td>PCIe x1 slot</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">19</td>
+<td>AUDIO</td>
+<td>Rear panel audio ports</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">20</td>
+<td>USB2_LAN</td>
+<td>RJ45 + USB 2.0 ports</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">21</td>
+<td>USB3X2</td>
+<td>USB 3.0 ports</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">22</td>
+<td>HDMI1~2</td>
+<td>HDMI ports</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="the-chipset" class="level2">
+<h2 class="anchored" data-anchor-id="the-chipset">The Chipset ⚙️</h2>
+<p>A <strong>chipset</strong> is a group of <strong>microchips</strong> on a computer’s motherboard that manages <strong>communication</strong> between the CPU, memory, storage, and peripheral devices.</p>
+<p><strong>Key functions</strong></p>
+<ul>
+<li>Controls the <strong>data flow</strong> between components</li>
+<li>Determines what <strong>hardware</strong> (RAM, CPU, GPU, etc.) is <strong>supported</strong></li>
+<li>Manages <strong>input/output</strong> functions (USB, audio, networking)</li>
+<li>Affects system performance and <strong>upgrade options</strong></li>
+</ul>
+<p>In other words, the chipset <strong>dictates hardware compatibility</strong> across components. All the different hardware components communicate with the CPU <em>through</em> the chipset.</p>
+<p><strong>Examples</strong></p>
+<ul>
+<li>Intel <strong>Z790</strong>: supports modern CPUs, PCIe 5.0, and DDR5 memory</li>
+<li>AMD <strong>B650</strong>: designed for Ryzen processors</li>
+</ul>
+<section id="how-did-chipsets-evolve" class="level3">
+<h3 class="anchored" data-anchor-id="how-did-chipsets-evolve">How did chipsets evolve?</h3>
+<p>Older motherboards were designed with <strong>many different chips scattered all over the board</strong>, each controlling a different function: bus controllers, memory controllers, keyboard controllers, and so on.</p>
+<p>As technology progressed, engineers decided to <strong>reduce</strong> the number of chips and <strong>centralize</strong> them. The few chips that now do the same job are what we call a <strong>chipset</strong>.</p>
+</section>
+<section id="northbridge-and-southbridge" class="level3">
+<h3 class="anchored" data-anchor-id="northbridge-and-southbridge">Northbridge and Southbridge</h3>
+<p>Most traditional chipsets are divided into two distinct components.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    CPU["CPU"] -- "Frontside bus" --&gt; NB["NORTHBRIDGE"]
+    NB -. "Backside bus" .- CACHE["Cache"]
+    NB --- MEM["Memory controller (RAM)"]
+    NB --- GFX["PCIe / AGP controller (graphics)"]
+    NB --- SB["SOUTHBRIDGE"]
+    SB --- STO["SATA / IDE / floppy controllers"]
+    SB --- AUD["Onboard audio"]
+    SB --- LAN["Onboard LAN"]
+    SB --- USB["USB / serial / parallel"]
+    SB --- PCI["PCI expansion bus"]
+</pre>
+</div>
+<p></p><figcaption> A traditional chipset. Everything reaches the CPU through the northbridge, and slower devices reach the northbridge through the southbridge.</figcaption> </figure><p></p>
+</div>
+</div>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Northbridge</strong></th>
+<th><strong>Southbridge</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Function</strong></td>
+<td>Connects the CPU to <strong>high-speed</strong> components (RAM, graphics card, PCI Express)</td>
+<td>Connects to <strong>slower peripheral devices</strong> and handles input/output (I/O)</td>
+</tr>
+<tr class="even">
+<td><strong>Speed</strong></td>
+<td>Works <strong>faster</strong>: optimized for actions per second</td>
+<td>Works <strong>slower</strong>: does not need high-speed communication</td>
+</tr>
+<tr class="odd">
+<td><strong>Location</strong></td>
+<td>Close to the CPU, often <strong>under a heatsink</strong> because it runs hot</td>
+<td>Found <strong>lower</strong> on the motherboard (hence “south”)</td>
+</tr>
+<tr class="even">
+<td><strong>Example connections</strong></td>
+<td>CPU ↔︎ RAM, CPU ↔︎ GPU (through AGP or PCIe)</td>
+<td>USB ports, hard drives (SATA/IDE), audio, BIOS, network controllers</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled" title="Why is the northbridge faster?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Why is the northbridge faster?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It connects the <strong>most used and most important</strong> components of the motherboard, so it is optimized for speed. But faster actions per second come at a cost: the northbridge is a source of <strong>heat</strong> and needs to be cooled by heatsinks and fans.</p>
+</div>
+</div>
+<p>To communicate with any other component, data goes through the northbridge, then the southbridge. For example, to send data from the hard drive to main memory:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    HDD["Hard drive"] --&gt; SB["Southbridge"] --&gt; NB["Northbridge"] --&gt; RAM["Main memory"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="modern-motherboards-and-chipsets" class="level3">
+<h3 class="anchored" data-anchor-id="modern-motherboards-and-chipsets">Modern motherboards and chipsets</h3>
+<p>Modern chipsets integrate the <strong>northbridge directly into the CPU chip</strong>. The remaining southbridge functions are handled by a single controller called the <strong>Platform Controller Hub (PCH)</strong>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    subgraph CPUCHIP["CPU chip (northbridge built in)"]
+        CORE["Cores + memory controller + PCIe lanes"]
+    end
+    CORE --- RAM["RAM"]
+    CORE --- GPU["Graphics card"]
+    CORE --- PCH["Platform Controller Hub (PCH)"]
+    PCH --- STO["Storage (SATA)"]
+    PCH --- USB["USB"]
+    PCH --- NET["Audio and networking"]
+</pre>
+</div>
+<p></p><figcaption> A modern layout. Performance-sensitive components talk directly to the CPU.</figcaption> </figure><p></p>
+</div>
+</div>
+</div>
+<p><strong>New design advantages</strong></p>
+<ul>
+<li>Sensitive hardware components communicate <strong>directly with the CPU</strong></li>
+<li><strong>Reduces system latency</strong>, so data moves faster</li>
+<li><strong>Increases responsiveness</strong> and overall performance</li>
+<li>Less sensitive hardware (storage, USB) benefits from improved efficiency</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled" title="Fun fact">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Fun fact
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Earlier PCs had separate northbridge and southbridge chips. Modern systems combine them into a single chipset for efficiency.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="buses" class="level2">
+<h2 class="anchored" data-anchor-id="buses">Buses 🛣️</h2>
+<p>A <strong>bus</strong> is the pathway that data uses to travel between components. When we speak about the motherboard bus width, we usually refer to the <strong>frontside bus (FSB)</strong>, the link between the CPU and the northbridge. It is also called the <strong>CPU bus</strong> or <strong>processor bus</strong>.</p>
+<section id="why-is-the-bus-important" class="level3">
+<h3 class="anchored" data-anchor-id="why-is-the-bus-important">Why is the bus important?</h3>
+<p>A good way to double-check that you understand a scientific concept is to check <strong>what units of measurement</strong> it uses.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Highway</strong></th>
+<th><strong>System bus</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>How many “lanes”?</strong></td>
+<td><strong>Number of lanes</strong>: a number. Determines how many cars can use the highway at once</td>
+<td><strong>Bus width</strong>: a number of bits (e.g.&nbsp;a 32-bit processor). Determines how much information flows along the bus at a time</td>
+</tr>
+<tr class="even">
+<td><strong>How fast?</strong></td>
+<td><strong>Speed limit</strong>: distance per time (e.g.&nbsp;km/h). Determines how fast cars can drive</td>
+<td><strong>Bus speed</strong>: information per time (e.g.&nbsp;bits/second). Determines how fast information can travel</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>Activity: A highway has 6 lanes (6 cars can pass together). On each lane, 3 cars pass per second. How many cars pass per second on this highway?</p>
+</blockquote>
+<div class="callout callout-style-default callout-caution callout-titled" title="Expand to see the answer">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Expand to see the answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>6 lanes × 3 cars per second per lane = <strong>18 cars per second</strong>.</p>
+<p>The same reasoning applies to a bus: <strong>width × speed = throughput</strong>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="x86-versus-x64" class="level3">
+<h3 class="anchored" data-anchor-id="x86-versus-x64">x86 versus x64</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>x86 (32-bit systems)</strong></th>
+<th><strong>x64 (64-bit systems)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Data per trip</strong></td>
+<td>32 bits can travel at once between system components</td>
+<td>64 bits can travel at once between system components</td>
+</tr>
+<tr class="even">
+<td><strong>Distinct values</strong></td>
+<td>2<sup>32</sup> ≈ 4.3 billion</td>
+<td>2<sup>64</sup> ≈ 18 quintillion</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled" title="Careful with the numbers">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Careful with the numbers
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A 32-bit bus moves <strong>32 bits</strong> at a time. The figure 2<sup>32</sup> ≈ 4 billion is the number of <em>different values</em> that 32 bits can represent (for example, memory addresses), which is why 32-bit systems are limited to about 4 GB of RAM.</p>
+</div>
+</div>
+<p>Almost all modern hardware and software today use the <strong>x64 (64-bit)</strong> architecture. 64-bit systems offer:</p>
+<ul>
+<li>🔒 Better <strong>security</strong> features</li>
+<li>🎨 Improved <strong>graphics and performance</strong></li>
+<li>⚡ Support for <strong>larger amounts of memory</strong></li>
+</ul>
+<p>But some older applications still rely on <strong>32-bit (x86)</strong> support, so many systems remain <strong>backward compatible</strong> to run older software.</p>
+</section>
+<section id="what-do-the-cores-of-a-cpu-do" class="level3">
+<h3 class="anchored" data-anchor-id="what-do-the-cores-of-a-cpu-do">What do the cores of a CPU do?</h3>
+<ul>
+<li>⚙️ Executing program instructions</li>
+<li>➗ Performing calculations</li>
+<li>📊 Managing data flow inside the CPU</li>
+<li>🤝 Coordinating with other components</li>
+</ul>
+</section>
+<section id="a-program-up-close" class="level3">
+<h3 class="anchored" data-anchor-id="a-program-up-close">A program, up close</h3>
+<p>Here is a tiny program for an early CPU. Each line of binary is a command, and the commands must be sent <strong>in a specific order</strong> for the CPU to perform work.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 47%">
+<col style="width: 52%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Binary</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>10000000</code></td>
+<td>The next line is a number, put it in the <strong>AX</strong> register</td>
+</tr>
+<tr class="even">
+<td><code>00000010</code></td>
+<td>The number 2</td>
+</tr>
+<tr class="odd">
+<td><code>10010000</code></td>
+<td>The next line is a number, put it in the <strong>BX</strong> register</td>
+</tr>
+<tr class="even">
+<td><code>00000011</code></td>
+<td>The number 3</td>
+</tr>
+<tr class="odd">
+<td><code>10110000</code></td>
+<td>Add AX to BX and put the result in AX</td>
+</tr>
+<tr class="even">
+<td><code>11000000</code></td>
+<td>Place the value of AX on the external data bus</td>
+</tr>
+</tbody>
+</table>
+<p>A set of commands such as this is called a <strong>program</strong>.</p>
+</section>
+</section>
+<section id="main-memory-ram" class="level2">
+<h2 class="anchored" data-anchor-id="main-memory-ram">Main Memory (RAM)</h2>
+<ul>
+<li>Referred to as <strong>RAM</strong> (Random Access Memory)</li>
+<li>A collection of <strong>integrated circuits</strong> (chips)</li>
+<li>Considered the “<strong>primary</strong>” storage for the CPU</li>
+<li><strong>Temporary</strong> storage for <strong>data</strong> and <strong>programs</strong> that are being accessed by the CPU</li>
+<li><strong>Volatile</strong> memory: contents are erased when the computer is switched off (or when power is lost)</li>
+</ul>
+<section id="why-use-main-memory" class="level3">
+<h3 class="anchored" data-anchor-id="why-use-main-memory">Why use main memory?</h3>
+<p>Did you ever wonder why games take time to load? That is the time it takes to copy all the files of the game from the storage device (long-term memory) into the working memory of the main memory, which the CPU can access much faster and much more easily.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Memory</th>
+<th>Read/write speed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>RAM</td>
+<td>12,800 MB/s</td>
+</tr>
+<tr class="even">
+<td>SSD</td>
+<td>456 MB/s</td>
+</tr>
+</tbody>
+</table>
+<p>More RAM means more capacity to hold and process large programs and files. The maximum amount installed is limited by the <strong>motherboard</strong> and the <strong>operating system</strong>.</p>
+</section>
+<section id="a-short-history" class="level3">
+<h3 class="anchored" data-anchor-id="a-short-history">A short history</h3>
+<ul>
+<li>Early computers had RAM installed on the motherboard as <strong>individual chips</strong>. These were difficult to install and often became loose.</li>
+<li>Designers then created <strong>memory modules</strong>: special circuit boards on which the memory chips are soldered.</li>
+<li>Modules attach to the motherboard through <strong>memory slots</strong>, so memory can be added or replaced easily.</li>
+</ul>
+</section>
+</section>
+<section id="main-memory-features" class="level2">
+<h2 class="anchored" data-anchor-id="main-memory-features">Main Memory Features</h2>
+<section id="data-rate" class="level3">
+<h3 class="anchored" data-anchor-id="data-rate">1) Data rate</h3>
+<p><strong>SDRAM</strong></p>
+<ul>
+<li>The original main memory was the <strong>Synchronous Dynamic Random Access Memory (SDRAM)</strong></li>
+<li>It is <strong>synchronized</strong> with the motherboard speed</li>
+<li>For a 32-bit bus, if the motherboard runs at 100 MHz, the SDRAM speed was also 100 MHz × 32 bits of data sent/received</li>
+</ul>
+<p><strong>DDR SDRAM</strong></p>
+<ul>
+<li>The first leap in RAM technology was <strong>Double Data Rate</strong> RAM</li>
+<li>For every tick of the motherboard clock, DDR sends/receives <strong>2 bits</strong> of information instead of just 1</li>
+<li>This “doubles” the speed: 2 × 100 MHz × 32 bits</li>
+</ul>
+<p><strong>How can we tell the generations apart?</strong> By the <strong>number of pins</strong> and the <strong>position of the notch</strong>.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 11%">
+<col style="width: 16%">
+<col style="width: 31%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th style="text-align: right;">Pins</th>
+<th style="text-align: center;">Notches</th>
+<th style="text-align: right;">Clock speed</th>
+<th>Rating by transfer rate</th>
+<th>Rating by bandwidth</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>SDRAM</td>
+<td style="text-align: right;">168</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: right;">100 MHz</td>
+<td>SD-100</td>
+<td>PC-800</td>
+</tr>
+<tr class="even">
+<td>DDR</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: right;">100 MHz</td>
+<td>DDR-200</td>
+<td>PC-1600</td>
+</tr>
+<tr class="odd">
+<td>DDR2</td>
+<td style="text-align: right;">240</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: right;">100 MHz</td>
+<td>DDR2-400</td>
+<td>PC2-3200</td>
+</tr>
+<tr class="even">
+<td>DDR3</td>
+<td style="text-align: right;">240</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: right;">100 MHz</td>
+<td>DDR3-800</td>
+<td>PC3-6400</td>
+</tr>
+<tr class="odd">
+<td>DDR4</td>
+<td style="text-align: right;">288</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: right;">100 MHz</td>
+<td>DDR4-1600</td>
+<td>PC4-12800</td>
+</tr>
+<tr class="even">
+<td>DDR5</td>
+<td style="text-align: right;">288</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: right;">100 MHz</td>
+<td>DDR5-3200</td>
+<td>PC5-25600</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-tip callout-titled" title="Decoding the names">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Decoding the names
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The “PC” number is the bandwidth in MB/s: it equals the transfer rate multiplied by 8 bytes (a 64-bit module). For example, DDR4-1600 × 8 = <strong>PC4-12800</strong>.</p>
+<p>DDR2 and DDR3 both have 240 pins, so the <strong>notch position</strong> is what keeps you from installing the wrong one.</p>
+</div>
+</div>
+</section>
+<section id="ram-capacity" class="level3">
+<h3 class="anchored" data-anchor-id="ram-capacity">2) RAM capacity</h3>
+<ul>
+<li>Every stick of RAM has a <strong>capacity</strong> (in GB), which is the amount of information the RAM can store</li>
+<li>The capacity depends on the <strong>size of the chips</strong> (1 Gb, 4 Gb, 16 Gb, etc.)</li>
+<li>The capacity also depends on whether the RAM is <strong>SIMM</strong> or <strong>DIMM</strong></li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>SIMM</strong> (Single Inline Memory Module)</th>
+<th><strong>DIMM</strong> (Dual Inline Memory Module)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Era</strong></td>
+<td>Older type of memory module. Common in early computers (e.g.&nbsp;Pentium I)</td>
+<td>Modern type used in most computers today</td>
+</tr>
+<tr class="even">
+<td><strong>Contacts</strong></td>
+<td>One set of electrical contacts. Both sides of the stick are connected to the same circuit</td>
+<td>Separate electrical contacts on each side of the module</td>
+</tr>
+<tr class="odd">
+<td><strong>Chips</strong></td>
+<td>A single row of memory chips</td>
+<td>Can hold chips on <strong>both sides</strong>, effectively doubling capacity (e.g.&nbsp;2 GB → 4 GB)</td>
+</tr>
+<tr class="even">
+<td><strong>Data path</strong></td>
+<td>32-bit</td>
+<td><strong>64-bit</strong>, leading to faster performance</td>
+</tr>
+</tbody>
+</table>
+<p><strong>SO-DIMM</strong> modules are smaller RAM sticks used in <strong>laptops</strong>.</p>
+<p><strong>Serial Presence Detect (SPD)</strong></p>
+<p>How can we get all the specs of the currently installed RAM sticks? Each RAM stick includes an <strong>SPD chip</strong> that stores detailed information about the memory, such as speed, size, manufacturer, and timings. A tool like <strong>CPU-Z</strong> can read the SPD chip, so you can view all the RAM specifications <strong>without physically opening your computer</strong>.</p>
+</section>
+<section id="ram-channels" class="level3">
+<h3 class="anchored" data-anchor-id="ram-channels">3) RAM channels</h3>
+<ul>
+<li>Most motherboards have a limited number of RAM slots, usually <strong>2 or 4</strong></li>
+<li>RAM is typically sold in <strong>pairs of sticks</strong> to take advantage of <strong>dual-channel</strong> performance</li>
+<li>With <strong>dual-channel</strong> memory architecture, the CPU can access data from <strong>two RAM sticks at the same time</strong> instead of just one. This <strong>doubles the data bandwidth</strong>, making the system faster and more efficient.</li>
+</ul>
+<p>Motherboards with four slots usually label them <strong>A1, A2, B1, B2</strong>:</p>
+<ul>
+<li>Slots <strong>A1 and A2</strong> belong to one memory channel</li>
+<li>Slots <strong>B1 and B2</strong> belong to the second channel</li>
+<li>To activate dual channel, install the sticks in <strong>matching colored or labeled slots</strong>, e.g.&nbsp;<strong>A2 and B2</strong></li>
+<li>For the best performance, the RAM sticks should be <strong>identical</strong>: same size, speed, and brand if possible</li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled" title="What happens if RAM is installed incorrectly?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>What happens if RAM is installed incorrectly?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you put both sticks in the <strong>same channel</strong> (e.g.&nbsp;A1 and A2), the motherboard treats them as <strong>single-channel</strong> memory:</p>
+<ul>
+<li>The system can only access one stick at a time</li>
+<li>Memory bandwidth is cut in half</li>
+<li>Overall performance drops (especially noticeable in gaming, video editing, or multitasking)</li>
+</ul>
+<p>The PC still works, but you won’t be using it to its best capacity.</p>
+</div>
+</div>
+</section>
+<section id="memory-redundancy-and-error-checking" class="level3">
+<h3 class="anchored" data-anchor-id="memory-redundancy-and-error-checking">4) Memory redundancy and error checking</h3>
+<p>Memory errors happen when <strong>data is not stored or retrieved correctly</strong> from the RAM chips. Computers use different types of memory to detect and correct them.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Non-parity</strong></th>
+<th><strong>Parity</strong></th>
+<th><strong>ECC</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Other name</strong></td>
+<td></td>
+<td>True parity</td>
+<td>Error checking and correcting</td>
+</tr>
+<tr class="even">
+<td><strong>Detects errors?</strong></td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes (multiple-bit errors)</td>
+</tr>
+<tr class="odd">
+<td><strong>Corrects errors?</strong></td>
+<td>No</td>
+<td>No</td>
+<td>Yes (1-bit errors)</td>
+</tr>
+<tr class="even">
+<td><strong>How it works</strong></td>
+<td>Nothing extra. If an error occurs, the OS has no way of knowing and data can be corrupted without warning</td>
+<td>Extra chips act as parity chips. A memory error is detected and the OS is informed</td>
+<td>Detects multiple-bit errors and corrects 1-bit errors automatically</td>
+</tr>
+<tr class="odd">
+<td><strong>Cost</strong></td>
+<td>Cheapest, works fine for most applications</td>
+<td>Middle</td>
+<td>Most expensive</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ram-latency" class="level3">
+<h3 class="anchored" data-anchor-id="ram-latency">5) RAM latency</h3>
+<p><strong>Latency</strong> is the small <strong>delay</strong> that occurs when the memory controller begins accessing a line of data from RAM. RAM with <strong>lower latency</strong> responds <strong>faster</strong>, while RAM with <strong>higher latency</strong> takes slightly longer to deliver data.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Latency is a general concept">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Latency is a general concept
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In physics and engineering, latency is a time delay between the cause and the effect of some physical change in a system. It is a consequence of the limited velocity at which any physical interaction can propagate.</p>
+<p>Remember from Class 2: CRT monitors have lower latency than LCD/LED monitors because electrons travel faster in a vacuum than through digital circuits.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="virtual-memory" class="level2">
+<h2 class="anchored" data-anchor-id="virtual-memory">Virtual Memory</h2>
+<p>Every computer can use a portion of its <strong>hard drive</strong> as <strong>temporary RAM</strong> when the system runs out of physical memory. This is called <strong>virtual memory</strong>, and it uses a section of the drive known as a <strong>swap file</strong> or <strong>page file</strong>.</p>
+<p>When the computer’s real RAM becomes full, the operating system <strong>moves (“swaps”)</strong> some data or inactive programs from RAM to the page file. This <strong>frees up space</strong> in RAM for the programs you are currently using.</p>
+<section id="example" class="level3">
+<h3 class="anchored" data-anchor-id="example">Example</h3>
+<p>Assume your computer has <strong>4 GB of RAM</strong> and several programs installed on your hard drive (<strong>A, B, C, D</strong>).</p>
+<ol type="1">
+<li>You are running programs <strong>A, B, and C</strong>, and they fill the RAM.</li>
+<li>You want to run program <strong>D</strong>, but there is <strong>no more free RAM</strong>.</li>
+<li>A <strong>page file</strong> on your hard drive acts as a temporary storage box. The least-used program (say <strong>B</strong>) is <strong>swapped out</strong> of RAM into the page file.</li>
+<li>Program <strong>D</strong> can now run in the freed space.</li>
+<li>Later, if you try to use <strong>B</strong> again, it cannot run from the page file. Another less-used program must swap out, and then <strong>B is swapped back</strong> into RAM.</li>
+</ol>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    subgraph RAM["RAM (4 GB)"]
+        A["Program A"]
+        B["Program B"]
+        C["Program C"]
+    end
+    B -- "1. swap out (least used)" --&gt; PF[("Page file&lt;br/&gt;on hard drive")]
+    PF -- "2. swap in later" --&gt; RAM2["Program B back in RAM"]
+    D["Program D"] -- "runs in the freed space" --&gt; RAM
+</pre>
+</div>
+<p></p><figcaption> Virtual memory swapping. Programs move between RAM and the page file on the hard drive.</figcaption> </figure><p></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled" title="Disk thrashing">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Disk thrashing
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Swapping is invisible to the user, but it <strong>takes time</strong> and Windows will slow down. If the page file is accessed too frequently, you may notice the hard drive LED going crazy. This is called <strong>disk thrashing</strong>, and it indicates that the computer would benefit from <strong>more RAM</strong>.</p>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>Exam question: Why is virtual memory not ideal?</p>
+</blockquote>
+<div class="callout callout-style-default callout-caution callout-titled" title="Expand to see the answer">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Expand to see the answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Because the hard drive is much <strong>slower</strong> than RAM. Every swap costs time, so the whole system slows down, and when the page file is accessed too often the computer suffers from disk thrashing. The real fix is to install more physical RAM.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="key-takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="key-takeaways">Key takeaways</h2>
+<div class="callout callout-style-default callout-important callout-titled" title="Remember">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Remember
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>The <strong>chipset</strong> controls data flow between CPU, memory, storage, and peripherals, and it determines which hardware is compatible.</li>
+<li>In modern systems the <strong>northbridge is inside the CPU</strong> and the <strong>PCH</strong> replaces the southbridge.</li>
+<li><strong>Bus throughput = width × speed</strong>.</li>
+<li>A CPU is made of an <strong>ALU</strong> and a <strong>Control Unit</strong>, plus registers and buses, and uses <strong>pipelining</strong> to work on several instructions at once.</li>
+<li>Choose a CPU by <strong>socket (PGA/LGA)</strong>, <strong>clock speed</strong>, <strong>cores</strong>, and <strong>cache</strong>.</li>
+<li><strong>Cache (SRAM)</strong> is small, fast, and expensive. <strong>RAM (DRAM)</strong> is larger, slower, and cheaper. Both are <strong>volatile</strong>.</li>
+<li>Install RAM in <strong>matching channel slots</strong> to get dual-channel performance.</li>
+<li><strong>Virtual memory</strong> extends RAM with the hard drive, but it is much slower.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="knowledge-check" class="level2">
+<h2 class="anchored" data-anchor-id="knowledge-check">Knowledge check</h2>
+<ol type="1">
+<li><p>Which chipset component is typically integrated directly into the CPU in modern systems?</p>
+<ol type="a">
+<li>Southbridge</li>
+<li>Northbridge</li>
+<li>The BIOS</li>
+<li>The Platform Controller Hub (PCH)</li>
+</ol></li>
+<li><p>A CPU has an 80 MHz, 64-bit bus. How much data can it move per second?</p>
+<ol type="a">
+<li>320 MB/s</li>
+<li>400 MB/s</li>
+<li>640 MB/s</li>
+<li>5,120 MB/s</li>
+</ol></li>
+<li><p>Which level of CPU cache is shared by all the cores?</p>
+<ol type="a">
+<li>L1</li>
+<li>L2</li>
+<li>L3</li>
+<li>Registers</li>
+</ol></li>
+<li><p>Which statement about SRAM and DRAM is INCORRECT?</p>
+<ol type="a">
+<li>SRAM needs constant refreshing to keep its data.</li>
+<li>SRAM is faster than DRAM.</li>
+<li>DRAM uses transistors and capacitors.</li>
+<li>Both SRAM and DRAM are volatile.</li>
+</ol></li>
+<li><p>In a socket where the pins are located on the motherboard rather than on the processor, which connection type is used?</p>
+<ol type="a">
+<li>PGA</li>
+<li>LGA</li>
+<li>SO-DIMM</li>
+<li>ECC</li>
+</ol></li>
+<li><p>A user installs two identical RAM sticks in slots A1 and A2 of a motherboard with four slots. What is the result?</p>
+<ol type="a">
+<li>The computer will not start.</li>
+<li>The sticks run in dual-channel mode at double speed.</li>
+<li>The motherboard treats them as single-channel memory and bandwidth is cut in half.</li>
+<li>The sticks automatically become ECC memory.</li>
+</ol></li>
+<li><p>Which type of memory can both detect and correct 1-bit errors automatically?</p>
+<ol type="a">
+<li>Non-parity memory</li>
+<li>Parity memory</li>
+<li>ECC memory</li>
+<li>SO-DIMM memory</li>
+</ol></li>
+<li><p>Which of the following statements about overclocking and throttling are correct? (Select all that apply.)</p>
+<ol type="a">
+<li>Overclocking makes a processor run faster than its original specification.</li>
+<li>Overclocking can increase heat and reduce CPU lifespan.</li>
+<li>Throttling makes a processor run below its rated speed to reduce heat and power use.</li>
+<li>Throttling is commonly used on desktop servers to increase performance.</li>
+</ol></li>
+<li><p>What is “disk thrashing”?</p>
+<ol type="a">
+<li>The hard drive failing because of physical damage</li>
+<li>The CPU running too hot and slowing down</li>
+<li>Excessive swapping between RAM and the page file, which slows the computer down</li>
+<li>Deleting the page file to free space</li>
+</ol></li>
+<li><p>Which of the following are advantages of 64-bit (x64) systems over 32-bit (x86) systems? (Select all that apply.)</p>
+<ol type="a">
+<li>Better security features</li>
+<li>Support for larger amounts of memory</li>
+<li>Improved graphics and performance</li>
+<li>Every old 32-bit program runs faster</li>
+</ol></li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled" title="Expand to see the answers">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Expand to see the answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><ol start="2" type="a">
+<li>Northbridge</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>80 million cycles/s × 8 bytes = 640 MB/s</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>L3</li>
+</ol></li>
+<li><ol type="a">
+<li>It is DRAM that needs constant refreshing, not SRAM.</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>LGA</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>Both sticks are in the same channel, so dual channel is not activated. Use A2 and B2 instead.</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>ECC memory</li>
+</ol></li>
+<li>a., b., c.</li>
+<li><ol start="3" type="a">
+<li></li>
+</ol></li>
+<li>a., b., c.</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/John-Abbott-College\.github\.io\/1N6-Notes\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../about/this-site.html">
+<p>About</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

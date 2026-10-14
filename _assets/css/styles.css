@@ -1,16 +1,28 @@
 /* css styles */
 
 figure {
-    display: inline-block;
-    border: 1px dotted;
+    display: block;
+    /* border: 1px dotted; */
     padding: 2rem;
+    text-align: center;
 }
 figure img {
-    vertical-align: top;
     max-width: 500px;
 }
+/* Center all images, with or without a caption */
+figure img,
+main p > img {
+    display: block;
+    margin-inline: auto;
+}
+/* Images side by side in columns: same height so the text below lines up */
+img.same-height {
+    height: 250px !important;
+    width: auto;
+    object-fit: contain;
+}
 figure figcaption {
-    text-align: left;
+    text-align: center;
 }
 
 
@@ -28,3 +40,11 @@ figure figcaption {
   padding: 0.5rem 0;
 }
 
+/* Callouts use the same font size as the body (Quarto default is .9rem) */
+.callout .callout-body,
+.callout > div.callout-header {
+  font-size: inherit !important;
+}
+
+table tbody tr:nth-child(odd) { background-color: rgba(127, 127, 127, .12); }
+table th, table td { border-bottom: 1px solid rgba(127, 127, 127, .35); }

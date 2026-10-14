@@ -9,21 +9,16 @@
     ]
   },
   {
-    "listing": "/practice/all-exos.html",
+    "listing": "/topics/hardware/index.html",
     "items": [
-      "/practice/binary-conversions.html",
-      "/practice/binary-math.html",
-      "/practice/logic-gates.html",
-      "/practice/raid.html"
+      "/topics/hardware/introduction-to-computers.html",
+      "/topics/hardware/external-components.html",
+      "/topics/hardware/internal-components.html",
+      "/topics/hardware/understanding-cpus.html",
+      "/topics/hardware/chipsets_cpu_ram.html",
+      "/topics/hardware/bios_cmos_uefi.html",
+      "/topics/hardware/understanding-cpus2.html"
     ]
-  },
-  {
-    "listing": "/announcements/index.html",
-    "items": []
-  },
-  {
-    "listing": "/topics/technical-support/index.html",
-    "items": []
   },
   {
     "listing": "/topics/index.html",
@@ -35,13 +30,20 @@
     ]
   },
   {
-    "listing": "/topics/hardware/index.html",
+    "listing": "/topics/technical-support/index.html",
+    "items": []
+  },
+  {
+    "listing": "/announcements/index.html",
+    "items": []
+  },
+  {
+    "listing": "/practice/all-exos.html",
     "items": [
-      "/topics/hardware/introduction-to-computers.html",
-      "/topics/hardware/external-components.html",
-      "/topics/hardware/internal-components.html",
-      "/topics/hardware/understanding-cpus.html",
-      "/topics/hardware/bios_cmos_uefi.html"
+      "/practice/binary-conversions.html",
+      "/practice/binary-math.html",
+      "/practice/logic-gates.html",
+      "/practice/raid.html"
     ]
   },
   {
@@ -53,6 +55,7 @@
       "/topics/hardware/understanding-cpus.html",
       "/topics/data-representation/introduction-to-binary.html",
       "/topics/data-representation/binary-math.html",
+      "/topics/hardware/chipsets_cpu_ram.html",
       "/topics/data-representation/logic-gates-and-boolean-algebra.html",
       "/topics/data-representation/text-in-computers.html",
       "/topics/data-representation/hexadecimal-numbers.html",
@@ -60,7 +63,8 @@
       "/topics/operating-systems/file-systems.html",
       "/topics/operating-systems/operating-system-intro.html",
       "/topics/operating-systems/operating-system-install.html",
-      "/topics/operating-systems/operating-systems-details.html"
+      "/topics/operating-systems/operating-systems-details.html",
+      "/topics/hardware/understanding-cpus2.html"
     ]
   },
   {
