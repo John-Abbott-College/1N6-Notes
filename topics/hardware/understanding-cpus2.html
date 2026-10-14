@@ -37,7 +37,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../topics/hardware/chips_ram_cpu.pdf" rel="next">
+<link href="../../topics/hardware/ram.html" rel="next">
 <link href="../../topics/hardware/understanding-cpus.html" rel="prev">
 <link href="../../_assets/favicons/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
@@ -395,8 +395,14 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../topics/hardware/chips_ram_cpu.pdf" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chipets, CPU and RAM</span></a>
+  <a href="../../topics/hardware/ram.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">RAM</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/hardware/chipsets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chipsets</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -528,6 +534,14 @@ window.Quarto = {
   </ul></li>
   <li><a href="#cpu-and-ram-interactions" id="toc-cpu-and-ram-interactions" class="nav-link" data-scroll-target="#cpu-and-ram-interactions">CPU and RAM interactions</a></li>
   <li><a href="#pipelining" id="toc-pipelining" class="nav-link" data-scroll-target="#pipelining">Pipelining 🚥</a></li>
+  <li><a href="#cpu-architecture" id="toc-cpu-architecture" class="nav-link" data-scroll-target="#cpu-architecture">CPU Architecture</a>
+  <ul>
+  <li><a href="#x86-versus-x64" id="toc-x86-versus-x64" class="nav-link" data-scroll-target="#x86-versus-x64">x86 versus x64</a></li>
+  <li><a href="#cpu-components" id="toc-cpu-components" class="nav-link" data-scroll-target="#cpu-components">CPU components</a></li>
+  <li><a href="#other-types-of-cpus" id="toc-other-types-of-cpus" class="nav-link" data-scroll-target="#other-types-of-cpus">Other Types of CPUs</a></li>
+  <li><a href="#arm-chips" id="toc-arm-chips" class="nav-link" data-scroll-target="#arm-chips">ARM chips</a></li>
+  <li><a href="#accelerated-processing-unit-apu" id="toc-accelerated-processing-unit-apu" class="nav-link" data-scroll-target="#accelerated-processing-unit-apu">Accelerated Processing Unit (APU)</a></li>
+  </ul></li>
   <li><a href="#cpu-manufacturers" id="toc-cpu-manufacturers" class="nav-link" data-scroll-target="#cpu-manufacturers">CPU Manufacturers 🏭</a></li>
   <li><a href="#choosing-a-cpu" id="toc-choosing-a-cpu" class="nav-link" data-scroll-target="#choosing-a-cpu">Choosing a CPU</a>
   <ul>
@@ -544,14 +558,6 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#cache-levels" id="toc-cache-levels" class="nav-link" data-scroll-target="#cache-levels">Cache levels</a></li>
   </ul></li>
-  </ul></li>
-  <li><a href="#cpu-architecture" id="toc-cpu-architecture" class="nav-link" data-scroll-target="#cpu-architecture">CPU Architecture</a>
-  <ul>
-  <li><a href="#x86-versus-x64" id="toc-x86-versus-x64" class="nav-link" data-scroll-target="#x86-versus-x64">x86 versus x64</a></li>
-  <li><a href="#cpu-components" id="toc-cpu-components" class="nav-link" data-scroll-target="#cpu-components">CPU components</a></li>
-  <li><a href="#other-types-of-cpus" id="toc-other-types-of-cpus" class="nav-link" data-scroll-target="#other-types-of-cpus">Other Types of CPUs</a></li>
-  <li><a href="#arm-chips" id="toc-arm-chips" class="nav-link" data-scroll-target="#arm-chips">ARM chips</a></li>
-  <li><a href="#accelerated-processing-unit-apu" id="toc-accelerated-processing-unit-apu" class="nav-link" data-scroll-target="#accelerated-processing-unit-apu">Accelerated Processing Unit (APU)</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -819,6 +825,113 @@ window.Quarto = {
 </figure>
 </div>
 </section>
+<section id="cpu-architecture" class="level2">
+<h2 class="anchored" data-anchor-id="cpu-architecture">CPU Architecture</h2>
+<section id="x86-versus-x64" class="level3">
+<h3 class="anchored" data-anchor-id="x86-versus-x64">x86 versus x64</h3>
+<p>The “x86” versus “x64” CPU architectures refers to a differences in the bus width of a CPU and its instruction book. The “x86” architecture were 32-bit CPUs such as the Intel 8086 and common in the 80s and 90s. As for the “x64”, it’s today’s more common architecture of 64-bits CPUs. We will see in more details, when introducing operating system how 64-bits CPUs can access more memory spaces when we talk about</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>x86 (32-bits)</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="_assets/understanding-cpus31.png" class="same-height img-fluid figure-img"></p>
+<figcaption>x86</figcaption>
+</figure>
+</div>
+<ul>
+<li>32 bits&nbsp;of data can travel at once in between&nbsp;system components</li>
+<li>There are <span class="math inline">\(2^{32}\)</span> possible number with 32-bits</li>
+<li>The CPU can therefore access 2^32&nbsp;- 4 billion unique memory locations</li>
+<li>This means it can use up to a maximum of <strong>4Gb of RAM</strong> (in theory)</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>x64 (64-bits)</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="_assets/understanding-cpus32.png" class="same-height img-fluid figure-img"></p>
+<figcaption>x64</figcaption>
+</figure>
+</div>
+<ul>
+<li>Processes <strong>64 bits</strong> of data at a time</li>
+<li>Can address <span class="math inline">\(2^{64}\)</span> ≈ <strong>18 quintillion</strong> memory locations (that’s 4 billion × 4 billion!)</li>
+<li>Far more RAM than any computer has today</li>
+</ul>
+</div><p>Almost all modern hardware and software today use x64 (64-bit) architecture. 64-bits system offer: 🔒 Better security features 🎨 Improved graphics and performance ⚡ Support for larger amounts of memory</p><p>💡But! Some older applications still rely on 32-bit (x86) support — so many systems remain backward compatible to run older software.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Why does it matter?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Why does it matter?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A 64-bit CPU can run both 32-bit and 64-bit software, but a 32-bit CPU can <strong>only</strong> run 32-bit software. Almost all modern computers are 64-bit.</p>
+</div>
+</div>
+</section>
+<section id="cpu-components" class="level3">
+<h3 class="anchored" data-anchor-id="cpu-components">CPU components</h3>
+<p>Each CPU core containts the following <strong>components</strong>:</p>
+<ul>
+<li><strong>Arithmetic Logic Unit (ALU)</strong>
+<ul>
+<li>Performs <strong>basic arithmetic</strong> operations: adding, subtracting, multiplication, and division</li>
+<li>Performs <strong>logical operations</strong>, like comparisons</li>
+</ul></li>
+<li><strong>Control Unit (CU)</strong>
+<ul>
+<li>Manages <strong>all operations</strong> within the processor</li>
+<li>Instructs the ALU on which arithmetic or logical operation to perform</li>
+<li>Works in sync with the <strong>system clock</strong></li>
+<li>Routes <strong>data internally</strong>, making sure it is fetched and delivered to the correct locations</li>
+</ul></li>
+<li><strong>Memory Unit (MU)</strong>
+<ul>
+<li>The MU or MMU (Memory management unit) translate virtual memory into physical memory (more on that later)</li>
+</ul></li>
+<li><strong>Registers</strong>: temporary storage for data coming from memory heading to the processor, coming from the processor after processing, or being worked on by the processor</li>
+<li><strong>L1 Cache</strong> : stores most recently saved data/instructions coming from RAM. Very fast short-term memory.</li>
+</ul>
+<p>As well as data buses for the internal routing of data and instructions:</p>
+<ul>
+<li><strong>Internal data bus</strong>: connects the internal components of the processor to the motherboard</li>
+<li><strong>External data path</strong>: used to fetch data from memory to the processor</li>
+<li><strong>Address lines</strong>: used to specify the exact location in memory where data can be found</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="_assets/understanding-cpus27.jpg" class="img-fluid figure-img"></p>
+<figcaption>CPU Components</figcaption>
+</figure>
+</div>
+</section>
+<section id="other-types-of-cpus" class="level3">
+<h3 class="anchored" data-anchor-id="other-types-of-cpus">Other Types of CPUs</h3>
+</section>
+<section id="arm-chips" class="level3">
+<h3 class="anchored" data-anchor-id="arm-chips">ARM chips</h3>
+<ul>
+<li>Simplified CPUs called <strong>Advanced RISC Machine</strong> (ARM), where RISC stands for <em>Reduced Instruction Set Computing</em></li>
+<li>A <strong>simplified instruction set</strong></li>
+<li>Higher processing speed and reduced workload</li>
+<li>Used in Arduinos and Raspberry Pis</li>
+<li>The Apple M1 chip used in the MacBook Air is an ARM chip</li>
+</ul>
+</section>
+<section id="accelerated-processing-unit-apu" class="level3">
+<h3 class="anchored" data-anchor-id="accelerated-processing-unit-apu">Accelerated Processing Unit (APU)</h3>
+<ul>
+<li>APUs are <strong>CPUs with combined graphics processing capabilities</strong></li>
+<li>Not as powerful as a dedicated GPU</li>
+<li>A great option for budget gaming</li>
+</ul>
+</section>
+</section>
 <section id="cpu-manufacturers" class="level2">
 <h2 class="anchored" data-anchor-id="cpu-manufacturers">CPU Manufacturers 🏭</h2>
 <ul>
@@ -988,7 +1101,7 @@ window.Quarto = {
 <p>Activity: Bus speed and bus width. A CPU has a 100 MHz, 32-bit bus. How many bytes per second can it process? Now compare it with a second CPU with an 80 MHz, 64-bit bus. Which of the two is faster at sending information?</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="Expand to see the answer">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -997,7 +1110,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li>First CPU: 100 million cycles/s × 32 bits = 3,200 Mbit/s = <strong>400 MB/s</strong></li>
@@ -1167,118 +1280,9 @@ window.Quarto = {
 </div>
 </div>
 <p>When the CPU needs data, it searches from the fastest memory to the slowest, and it stops as soon as it finds what it needs:</p>
-</section>
-</section>
-</section>
-<section id="cpu-architecture" class="level2">
-<h2 class="anchored" data-anchor-id="cpu-architecture">CPU Architecture</h2>
-<section id="x86-versus-x64" class="level3">
-<h3 class="anchored" data-anchor-id="x86-versus-x64">x86 versus x64</h3>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>x86 (32-bits)</strong></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="_assets/understanding-cpus31.png" class="same-height img-fluid figure-img"></p>
-<figcaption>x86</figcaption>
-</figure>
-</div>
-<ul>
-<li>32 bits&nbsp;of data can travel at once in between&nbsp;system components</li>
-<li>There are <span class="math inline">\(2^{32}\)</span> possible number with 32-bits</li>
-<li>The CPU can therefore access 2^32&nbsp;- 4 billion unique memory locations</li>
-<li>This means it can use up to a maximum of <strong>4Gb of RAM</strong> (in theory)</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><strong>x64 (64-bits)</strong></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="_assets/understanding-cpus32.png" class="same-height img-fluid figure-img"></p>
-<figcaption>x64</figcaption>
-</figure>
-</div>
-<ul>
-<li>Processes <strong>64 bits</strong> of data at a time</li>
-<li>Can address <span class="math inline">\(2^{64}\)</span> ≈ <strong>18 quintillion</strong> memory locations (that’s 4 billion × 4 billion!)</li>
-<li>Far more RAM than any computer has today</li>
-</ul>
-</div>
-</div>
-<p>Almost all modern hardware and software today use x64 (64-bit) architecture. 64-bits system offer: 🔒 Better security features 🎨 Improved graphics and performance ⚡ Support for larger amounts of memory</p>
-<p>💡But! Some older applications still rely on 32-bit (x86) support — so many systems remain backward compatible to run older software.</p>
-<p>::::</p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Why does it matter?">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Why does it matter?
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>A 64-bit CPU can run both 32-bit and 64-bit software, but a 32-bit CPU can <strong>only</strong> run 32-bit software. Almost all modern computers are 64-bit.</p>
-</div>
-</div>
-</section>
-<section id="cpu-components" class="level3">
-<h3 class="anchored" data-anchor-id="cpu-components">CPU components</h3>
-<p>Each CPU core containts the following <strong>components</strong>:</p>
-<ul>
-<li><strong>Arithmetic Logic Unit (ALU)</strong>
-<ul>
-<li>Performs <strong>basic arithmetic</strong> operations: adding, subtracting, multiplication, and division</li>
-<li>Performs <strong>logical operations</strong>, like comparisons</li>
-</ul></li>
-<li><strong>Control Unit (CU)</strong>
-<ul>
-<li>Manages <strong>all operations</strong> within the processor</li>
-<li>Instructs the ALU on which arithmetic or logical operation to perform</li>
-<li>Works in sync with the <strong>system clock</strong></li>
-<li>Routes <strong>data internally</strong>, making sure it is fetched and delivered to the correct locations</li>
-</ul></li>
-<li><strong>Memory Unit (MU)</strong>
-<ul>
-<li>The MU or MMU (Memory management unit) translate virtual memory into physical memory (more on that later)</li>
-</ul></li>
-<li><strong>Registers</strong>: temporary storage for data coming from memory heading to the processor, coming from the processor after processing, or being worked on by the processor</li>
-<li><strong>L1 Cache</strong> : stores most recently saved data/instructions coming from RAM. Very fast short-term memory.</li>
-</ul>
-<p>As well as data buses for the internal routing of data and instructions:</p>
-<ul>
-<li><strong>Internal data bus</strong>: connects the internal components of the processor to the motherboard</li>
-<li><strong>External data path</strong>: used to fetch data from memory to the processor</li>
-<li><strong>Address lines</strong>: used to specify the exact location in memory where data can be found</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="_assets/understanding-cpus27.jpg" class="img-fluid figure-img"></p>
-<figcaption>CPU Components</figcaption>
-</figure>
-</div>
-</section>
-<section id="other-types-of-cpus" class="level3">
-<h3 class="anchored" data-anchor-id="other-types-of-cpus">Other Types of CPUs</h3>
-</section>
-<section id="arm-chips" class="level3">
-<h3 class="anchored" data-anchor-id="arm-chips">ARM chips</h3>
-<ul>
-<li>Simplified CPUs called <strong>Advanced RISC Machine</strong> (ARM), where RISC stands for <em>Reduced Instruction Set Computing</em></li>
-<li>A <strong>simplified instruction set</strong></li>
-<li>Higher processing speed and reduced workload</li>
-<li>Used in Arduinos and Raspberry Pis</li>
-<li>The Apple M1 chip used in the MacBook Air is an ARM chip</li>
-</ul>
-</section>
-<section id="accelerated-processing-unit-apu" class="level3">
-<h3 class="anchored" data-anchor-id="accelerated-processing-unit-apu">Accelerated Processing Unit (APU)</h3>
-<ul>
-<li>APUs are <strong>CPUs with combined graphics processing capabilities</strong></li>
-<li>Not as powerful as a dedicated GPU</li>
-<li>A great option for budget gaming</li>
-</ul>
 
 
+</section>
 </section>
 </section>
 
@@ -1703,8 +1707,8 @@ window.Quarto = {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../topics/hardware/chips_ram_cpu.pdf" class="pagination-link" aria-label="Chipets, CPU and RAM">
-        <span class="nav-page-text">Chipets, CPU and RAM</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../topics/hardware/ram.html" class="pagination-link" aria-label="RAM">
+        <span class="nav-page-text">RAM</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

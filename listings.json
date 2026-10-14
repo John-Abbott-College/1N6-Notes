@@ -15,27 +15,11 @@
       "/topics/hardware/external-components.html",
       "/topics/hardware/internal-components.html",
       "/topics/hardware/understanding-cpus.html",
-      "/topics/hardware/chipsets_cpu_ram.html",
+      "/topics/hardware/chipsets.html",
+      "/topics/hardware/ram.html",
       "/topics/hardware/bios_cmos_uefi.html",
       "/topics/hardware/understanding-cpus2.html"
     ]
-  },
-  {
-    "listing": "/topics/index.html",
-    "items": [
-      "/topics/data-representation/index.html",
-      "/topics/hardware/index.html",
-      "/topics/operating-systems/index.html",
-      "/topics/technical-support/index.html"
-    ]
-  },
-  {
-    "listing": "/topics/technical-support/index.html",
-    "items": []
-  },
-  {
-    "listing": "/announcements/index.html",
-    "items": []
   },
   {
     "listing": "/practice/all-exos.html",
@@ -47,6 +31,23 @@
     ]
   },
   {
+    "listing": "/announcements/index.html",
+    "items": []
+  },
+  {
+    "listing": "/topics/technical-support/index.html",
+    "items": []
+  },
+  {
+    "listing": "/topics/index.html",
+    "items": [
+      "/topics/data-representation/index.html",
+      "/topics/hardware/index.html",
+      "/topics/operating-systems/index.html",
+      "/topics/technical-support/index.html"
+    ]
+  },
+  {
     "listing": "/topics/all-lectures.html",
     "items": [
       "/topics/hardware/introduction-to-computers.html",
@@ -55,7 +56,8 @@
       "/topics/hardware/understanding-cpus.html",
       "/topics/data-representation/introduction-to-binary.html",
       "/topics/data-representation/binary-math.html",
-      "/topics/hardware/chipsets_cpu_ram.html",
+      "/topics/hardware/chipsets.html",
+      "/topics/hardware/ram.html",
       "/topics/data-representation/logic-gates-and-boolean-algebra.html",
       "/topics/data-representation/text-in-computers.html",
       "/topics/data-representation/hexadecimal-numbers.html",

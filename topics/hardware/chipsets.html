@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2025-09-16">
 
-<title>Chipsets, CPU and RAM – Technical Support</title>
+<title>Chipsets – Technical Support</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,6 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../topics/hardware/bios_cmos_uefi.html" rel="next">
+<link href="../../topics/hardware/ram.html" rel="prev">
 <link href="../../_assets/favicons/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -85,8 +87,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../_assets/css/styles.css">
-<meta property="og:title" content="Chipsets, CPU and RAM – Technical Support">
-<meta property="og:description" content="How logic gates become chips, and how the chipset, the processor, and main memory work together inside a computer">
+<meta property="og:title" content="Chipsets – Technical Support">
+<meta property="og:description" content="How logic gates become chips, and how the chipset, the processor, and main memory are connected">
 <meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/hardware/_assets/favicons/favicon-32x32.png">
 <meta property="og:site_name" content="Technical Support">
 </head>
@@ -302,7 +304,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Chipsets, CPU and RAM</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Notes</li><li class="breadcrumb-item"><a href="../../topics/hardware/introduction-to-computers.html">Hardware</a></li><li class="breadcrumb-item"><a href="../../topics/hardware/chipsets.html">Chipsets</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -364,8 +366,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../topics/hardware/chips_ram_cpu.pdf" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chipets, CPU and RAM</span></a>
+  <a href="../../topics/hardware/ram.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">RAM</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/hardware/chipsets.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Chipsets</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -495,28 +503,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#why-is-the-bus-important" id="toc-why-is-the-bus-important" class="nav-link" data-scroll-target="#why-is-the-bus-important">Why is the bus important?</a></li>
   <li><a href="#x86-versus-x64" id="toc-x86-versus-x64" class="nav-link" data-scroll-target="#x86-versus-x64">x86 versus x64</a></li>
-  <li><a href="#what-do-the-cores-of-a-cpu-do" id="toc-what-do-the-cores-of-a-cpu-do" class="nav-link" data-scroll-target="#what-do-the-cores-of-a-cpu-do">What do the cores of a CPU do?</a></li>
-  <li><a href="#a-program-up-close" id="toc-a-program-up-close" class="nav-link" data-scroll-target="#a-program-up-close">A program, up close</a></li>
   </ul></li>
-  <li><a href="#main-memory-ram" id="toc-main-memory-ram" class="nav-link" data-scroll-target="#main-memory-ram">Main Memory (RAM)</a>
-  <ul>
-  <li><a href="#why-use-main-memory" id="toc-why-use-main-memory" class="nav-link" data-scroll-target="#why-use-main-memory">Why use main memory?</a></li>
-  <li><a href="#a-short-history" id="toc-a-short-history" class="nav-link" data-scroll-target="#a-short-history">A short history</a></li>
-  </ul></li>
-  <li><a href="#main-memory-features" id="toc-main-memory-features" class="nav-link" data-scroll-target="#main-memory-features">Main Memory Features</a>
-  <ul>
-  <li><a href="#data-rate" id="toc-data-rate" class="nav-link" data-scroll-target="#data-rate">1) Data rate</a></li>
-  <li><a href="#ram-capacity" id="toc-ram-capacity" class="nav-link" data-scroll-target="#ram-capacity">2) RAM capacity</a></li>
-  <li><a href="#ram-channels" id="toc-ram-channels" class="nav-link" data-scroll-target="#ram-channels">3) RAM channels</a></li>
-  <li><a href="#memory-redundancy-and-error-checking" id="toc-memory-redundancy-and-error-checking" class="nav-link" data-scroll-target="#memory-redundancy-and-error-checking">4) Memory redundancy and error checking</a></li>
-  <li><a href="#ram-latency" id="toc-ram-latency" class="nav-link" data-scroll-target="#ram-latency">5) RAM latency</a></li>
-  </ul></li>
-  <li><a href="#virtual-memory" id="toc-virtual-memory" class="nav-link" data-scroll-target="#virtual-memory">Virtual Memory</a>
-  <ul>
-  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
-  </ul></li>
-  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">Key takeaways</a></li>
-  <li><a href="#knowledge-check" id="toc-knowledge-check" class="nav-link" data-scroll-target="#knowledge-check">Knowledge check</a></li>
   </ul>
 </nav>
     </div>
@@ -524,10 +511,10 @@ ul.task-list li input[type="checkbox"] {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Notes</li><li class="breadcrumb-item"><a href="../../topics/hardware/introduction-to-computers.html">Hardware</a></li><li class="breadcrumb-item"><a href="../../topics/hardware/chipsets.html">Chipsets</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Chipsets, CPU and RAM</h1>
-<p class="subtitle lead">How logic gates become chips, and how the chipset, the processor, and main memory work together inside a computer</p>
+<h1 class="title">Chipsets</h1>
+<p class="subtitle lead">How logic gates become chips, and how the chipset, the processor, and main memory are connected</p>
 </div>
 
 
@@ -897,6 +884,8 @@ ul.task-list li input[type="checkbox"] {
     PCH --- STO["Storage (SATA)"]
     PCH --- USB["USB"]
     PCH --- NET["Audio and networking"]
+    style CORE fill:#ffffff,stroke:#333,color:#000
+    style CPUCHIP fill:transparent,stroke:#333,stroke-dasharray:5 5
 </pre>
 </div>
 <p></p><figcaption> A modern layout. Performance-sensitive components talk directly to the CPU.</figcaption> </figure><p></p>
@@ -1026,567 +1015,9 @@ ul.task-list li input[type="checkbox"] {
 <li>⚡ Support for <strong>larger amounts of memory</strong></li>
 </ul>
 <p>But some older applications still rely on <strong>32-bit (x86)</strong> support, so many systems remain <strong>backward compatible</strong> to run older software.</p>
-</section>
-<section id="what-do-the-cores-of-a-cpu-do" class="level3">
-<h3 class="anchored" data-anchor-id="what-do-the-cores-of-a-cpu-do">What do the cores of a CPU do?</h3>
-<ul>
-<li>⚙️ Executing program instructions</li>
-<li>➗ Performing calculations</li>
-<li>📊 Managing data flow inside the CPU</li>
-<li>🤝 Coordinating with other components</li>
-</ul>
-</section>
-<section id="a-program-up-close" class="level3">
-<h3 class="anchored" data-anchor-id="a-program-up-close">A program, up close</h3>
-<p>Here is a tiny program for an early CPU. Each line of binary is a command, and the commands must be sent <strong>in a specific order</strong> for the CPU to perform work.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 47%">
-<col style="width: 52%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Binary</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>10000000</code></td>
-<td>The next line is a number, put it in the <strong>AX</strong> register</td>
-</tr>
-<tr class="even">
-<td><code>00000010</code></td>
-<td>The number 2</td>
-</tr>
-<tr class="odd">
-<td><code>10010000</code></td>
-<td>The next line is a number, put it in the <strong>BX</strong> register</td>
-</tr>
-<tr class="even">
-<td><code>00000011</code></td>
-<td>The number 3</td>
-</tr>
-<tr class="odd">
-<td><code>10110000</code></td>
-<td>Add AX to BX and put the result in AX</td>
-</tr>
-<tr class="even">
-<td><code>11000000</code></td>
-<td>Place the value of AX on the external data bus</td>
-</tr>
-</tbody>
-</table>
-<p>A set of commands such as this is called a <strong>program</strong>.</p>
-</section>
-</section>
-<section id="main-memory-ram" class="level2">
-<h2 class="anchored" data-anchor-id="main-memory-ram">Main Memory (RAM)</h2>
-<ul>
-<li>Referred to as <strong>RAM</strong> (Random Access Memory)</li>
-<li>A collection of <strong>integrated circuits</strong> (chips)</li>
-<li>Considered the “<strong>primary</strong>” storage for the CPU</li>
-<li><strong>Temporary</strong> storage for <strong>data</strong> and <strong>programs</strong> that are being accessed by the CPU</li>
-<li><strong>Volatile</strong> memory: contents are erased when the computer is switched off (or when power is lost)</li>
-</ul>
-<section id="why-use-main-memory" class="level3">
-<h3 class="anchored" data-anchor-id="why-use-main-memory">Why use main memory?</h3>
-<p>Did you ever wonder why games take time to load? That is the time it takes to copy all the files of the game from the storage device (long-term memory) into the working memory of the main memory, which the CPU can access much faster and much more easily.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Memory</th>
-<th>Read/write speed</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>RAM</td>
-<td>12,800 MB/s</td>
-</tr>
-<tr class="even">
-<td>SSD</td>
-<td>456 MB/s</td>
-</tr>
-</tbody>
-</table>
-<p>More RAM means more capacity to hold and process large programs and files. The maximum amount installed is limited by the <strong>motherboard</strong> and the <strong>operating system</strong>.</p>
-</section>
-<section id="a-short-history" class="level3">
-<h3 class="anchored" data-anchor-id="a-short-history">A short history</h3>
-<ul>
-<li>Early computers had RAM installed on the motherboard as <strong>individual chips</strong>. These were difficult to install and often became loose.</li>
-<li>Designers then created <strong>memory modules</strong>: special circuit boards on which the memory chips are soldered.</li>
-<li>Modules attach to the motherboard through <strong>memory slots</strong>, so memory can be added or replaced easily.</li>
-</ul>
-</section>
-</section>
-<section id="main-memory-features" class="level2">
-<h2 class="anchored" data-anchor-id="main-memory-features">Main Memory Features</h2>
-<section id="data-rate" class="level3">
-<h3 class="anchored" data-anchor-id="data-rate">1) Data rate</h3>
-<p><strong>SDRAM</strong></p>
-<ul>
-<li>The original main memory was the <strong>Synchronous Dynamic Random Access Memory (SDRAM)</strong></li>
-<li>It is <strong>synchronized</strong> with the motherboard speed</li>
-<li>For a 32-bit bus, if the motherboard runs at 100 MHz, the SDRAM speed was also 100 MHz × 32 bits of data sent/received</li>
-</ul>
-<p><strong>DDR SDRAM</strong></p>
-<ul>
-<li>The first leap in RAM technology was <strong>Double Data Rate</strong> RAM</li>
-<li>For every tick of the motherboard clock, DDR sends/receives <strong>2 bits</strong> of information instead of just 1</li>
-<li>This “doubles” the speed: 2 × 100 MHz × 32 bits</li>
-</ul>
-<p><strong>How can we tell the generations apart?</strong> By the <strong>number of pins</strong> and the <strong>position of the notch</strong>.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 7%">
-<col style="width: 7%">
-<col style="width: 11%">
-<col style="width: 16%">
-<col style="width: 31%">
-<col style="width: 26%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Type</th>
-<th style="text-align: right;">Pins</th>
-<th style="text-align: center;">Notches</th>
-<th style="text-align: right;">Clock speed</th>
-<th>Rating by transfer rate</th>
-<th>Rating by bandwidth</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>SDRAM</td>
-<td style="text-align: right;">168</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: right;">100 MHz</td>
-<td>SD-100</td>
-<td>PC-800</td>
-</tr>
-<tr class="even">
-<td>DDR</td>
-<td style="text-align: right;">184</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: right;">100 MHz</td>
-<td>DDR-200</td>
-<td>PC-1600</td>
-</tr>
-<tr class="odd">
-<td>DDR2</td>
-<td style="text-align: right;">240</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: right;">100 MHz</td>
-<td>DDR2-400</td>
-<td>PC2-3200</td>
-</tr>
-<tr class="even">
-<td>DDR3</td>
-<td style="text-align: right;">240</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: right;">100 MHz</td>
-<td>DDR3-800</td>
-<td>PC3-6400</td>
-</tr>
-<tr class="odd">
-<td>DDR4</td>
-<td style="text-align: right;">288</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: right;">100 MHz</td>
-<td>DDR4-1600</td>
-<td>PC4-12800</td>
-</tr>
-<tr class="even">
-<td>DDR5</td>
-<td style="text-align: right;">288</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: right;">100 MHz</td>
-<td>DDR5-3200</td>
-<td>PC5-25600</td>
-</tr>
-</tbody>
-</table>
-<div class="callout callout-style-default callout-tip callout-titled" title="Decoding the names">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Decoding the names
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The “PC” number is the bandwidth in MB/s: it equals the transfer rate multiplied by 8 bytes (a 64-bit module). For example, DDR4-1600 × 8 = <strong>PC4-12800</strong>.</p>
-<p>DDR2 and DDR3 both have 240 pins, so the <strong>notch position</strong> is what keeps you from installing the wrong one.</p>
-</div>
-</div>
-</section>
-<section id="ram-capacity" class="level3">
-<h3 class="anchored" data-anchor-id="ram-capacity">2) RAM capacity</h3>
-<ul>
-<li>Every stick of RAM has a <strong>capacity</strong> (in GB), which is the amount of information the RAM can store</li>
-<li>The capacity depends on the <strong>size of the chips</strong> (1 Gb, 4 Gb, 16 Gb, etc.)</li>
-<li>The capacity also depends on whether the RAM is <strong>SIMM</strong> or <strong>DIMM</strong></li>
-</ul>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th><strong>SIMM</strong> (Single Inline Memory Module)</th>
-<th><strong>DIMM</strong> (Dual Inline Memory Module)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Era</strong></td>
-<td>Older type of memory module. Common in early computers (e.g.&nbsp;Pentium I)</td>
-<td>Modern type used in most computers today</td>
-</tr>
-<tr class="even">
-<td><strong>Contacts</strong></td>
-<td>One set of electrical contacts. Both sides of the stick are connected to the same circuit</td>
-<td>Separate electrical contacts on each side of the module</td>
-</tr>
-<tr class="odd">
-<td><strong>Chips</strong></td>
-<td>A single row of memory chips</td>
-<td>Can hold chips on <strong>both sides</strong>, effectively doubling capacity (e.g.&nbsp;2 GB → 4 GB)</td>
-</tr>
-<tr class="even">
-<td><strong>Data path</strong></td>
-<td>32-bit</td>
-<td><strong>64-bit</strong>, leading to faster performance</td>
-</tr>
-</tbody>
-</table>
-<p><strong>SO-DIMM</strong> modules are smaller RAM sticks used in <strong>laptops</strong>.</p>
-<p><strong>Serial Presence Detect (SPD)</strong></p>
-<p>How can we get all the specs of the currently installed RAM sticks? Each RAM stick includes an <strong>SPD chip</strong> that stores detailed information about the memory, such as speed, size, manufacturer, and timings. A tool like <strong>CPU-Z</strong> can read the SPD chip, so you can view all the RAM specifications <strong>without physically opening your computer</strong>.</p>
-</section>
-<section id="ram-channels" class="level3">
-<h3 class="anchored" data-anchor-id="ram-channels">3) RAM channels</h3>
-<ul>
-<li>Most motherboards have a limited number of RAM slots, usually <strong>2 or 4</strong></li>
-<li>RAM is typically sold in <strong>pairs of sticks</strong> to take advantage of <strong>dual-channel</strong> performance</li>
-<li>With <strong>dual-channel</strong> memory architecture, the CPU can access data from <strong>two RAM sticks at the same time</strong> instead of just one. This <strong>doubles the data bandwidth</strong>, making the system faster and more efficient.</li>
-</ul>
-<p>Motherboards with four slots usually label them <strong>A1, A2, B1, B2</strong>:</p>
-<ul>
-<li>Slots <strong>A1 and A2</strong> belong to one memory channel</li>
-<li>Slots <strong>B1 and B2</strong> belong to the second channel</li>
-<li>To activate dual channel, install the sticks in <strong>matching colored or labeled slots</strong>, e.g.&nbsp;<strong>A2 and B2</strong></li>
-<li>For the best performance, the RAM sticks should be <strong>identical</strong>: same size, speed, and brand if possible</li>
-</ul>
-<div class="callout callout-style-default callout-warning callout-titled" title="What happens if RAM is installed incorrectly?">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>What happens if RAM is installed incorrectly?
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If you put both sticks in the <strong>same channel</strong> (e.g.&nbsp;A1 and A2), the motherboard treats them as <strong>single-channel</strong> memory:</p>
-<ul>
-<li>The system can only access one stick at a time</li>
-<li>Memory bandwidth is cut in half</li>
-<li>Overall performance drops (especially noticeable in gaming, video editing, or multitasking)</li>
-</ul>
-<p>The PC still works, but you won’t be using it to its best capacity.</p>
-</div>
-</div>
-</section>
-<section id="memory-redundancy-and-error-checking" class="level3">
-<h3 class="anchored" data-anchor-id="memory-redundancy-and-error-checking">4) Memory redundancy and error checking</h3>
-<p>Memory errors happen when <strong>data is not stored or retrieved correctly</strong> from the RAM chips. Computers use different types of memory to detect and correct them.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th><strong>Non-parity</strong></th>
-<th><strong>Parity</strong></th>
-<th><strong>ECC</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Other name</strong></td>
-<td></td>
-<td>True parity</td>
-<td>Error checking and correcting</td>
-</tr>
-<tr class="even">
-<td><strong>Detects errors?</strong></td>
-<td>No</td>
-<td>Yes</td>
-<td>Yes (multiple-bit errors)</td>
-</tr>
-<tr class="odd">
-<td><strong>Corrects errors?</strong></td>
-<td>No</td>
-<td>No</td>
-<td>Yes (1-bit errors)</td>
-</tr>
-<tr class="even">
-<td><strong>How it works</strong></td>
-<td>Nothing extra. If an error occurs, the OS has no way of knowing and data can be corrupted without warning</td>
-<td>Extra chips act as parity chips. A memory error is detected and the OS is informed</td>
-<td>Detects multiple-bit errors and corrects 1-bit errors automatically</td>
-</tr>
-<tr class="odd">
-<td><strong>Cost</strong></td>
-<td>Cheapest, works fine for most applications</td>
-<td>Middle</td>
-<td>Most expensive</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="ram-latency" class="level3">
-<h3 class="anchored" data-anchor-id="ram-latency">5) RAM latency</h3>
-<p><strong>Latency</strong> is the small <strong>delay</strong> that occurs when the memory controller begins accessing a line of data from RAM. RAM with <strong>lower latency</strong> responds <strong>faster</strong>, while RAM with <strong>higher latency</strong> takes slightly longer to deliver data.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Latency is a general concept">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Latency is a general concept
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>In physics and engineering, latency is a time delay between the cause and the effect of some physical change in a system. It is a consequence of the limited velocity at which any physical interaction can propagate.</p>
-<p>Remember from Class 2: CRT monitors have lower latency than LCD/LED monitors because electrons travel faster in a vacuum than through digital circuits.</p>
-</div>
-</div>
-</section>
-</section>
-<section id="virtual-memory" class="level2">
-<h2 class="anchored" data-anchor-id="virtual-memory">Virtual Memory</h2>
-<p>Every computer can use a portion of its <strong>hard drive</strong> as <strong>temporary RAM</strong> when the system runs out of physical memory. This is called <strong>virtual memory</strong>, and it uses a section of the drive known as a <strong>swap file</strong> or <strong>page file</strong>.</p>
-<p>When the computer’s real RAM becomes full, the operating system <strong>moves (“swaps”)</strong> some data or inactive programs from RAM to the page file. This <strong>frees up space</strong> in RAM for the programs you are currently using.</p>
-<section id="example" class="level3">
-<h3 class="anchored" data-anchor-id="example">Example</h3>
-<p>Assume your computer has <strong>4 GB of RAM</strong> and several programs installed on your hard drive (<strong>A, B, C, D</strong>).</p>
-<ol type="1">
-<li>You are running programs <strong>A, B, and C</strong>, and they fill the RAM.</li>
-<li>You want to run program <strong>D</strong>, but there is <strong>no more free RAM</strong>.</li>
-<li>A <strong>page file</strong> on your hard drive acts as a temporary storage box. The least-used program (say <strong>B</strong>) is <strong>swapped out</strong> of RAM into the page file.</li>
-<li>Program <strong>D</strong> can now run in the freed space.</li>
-<li>Later, if you try to use <strong>B</strong> again, it cannot run from the page file. Another less-used program must swap out, and then <strong>B is swapped back</strong> into RAM.</li>
-</ol>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-    subgraph RAM["RAM (4 GB)"]
-        A["Program A"]
-        B["Program B"]
-        C["Program C"]
-    end
-    B -- "1. swap out (least used)" --&gt; PF[("Page file&lt;br/&gt;on hard drive")]
-    PF -- "2. swap in later" --&gt; RAM2["Program B back in RAM"]
-    D["Program D"] -- "runs in the freed space" --&gt; RAM
-</pre>
-</div>
-<p></p><figcaption> Virtual memory swapping. Programs move between RAM and the page file on the hard drive.</figcaption> </figure><p></p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-warning callout-titled" title="Disk thrashing">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Disk thrashing
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Swapping is invisible to the user, but it <strong>takes time</strong> and Windows will slow down. If the page file is accessed too frequently, you may notice the hard drive LED going crazy. This is called <strong>disk thrashing</strong>, and it indicates that the computer would benefit from <strong>more RAM</strong>.</p>
-</div>
-</div>
-<blockquote class="blockquote">
-<p>Exam question: Why is virtual memory not ideal?</p>
-</blockquote>
-<div class="callout callout-style-default callout-caution callout-titled" title="Expand to see the answer">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Caution</span>Expand to see the answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Because the hard drive is much <strong>slower</strong> than RAM. Every swap costs time, so the whole system slows down, and when the page file is accessed too often the computer suffers from disk thrashing. The real fix is to install more physical RAM.</p>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="key-takeaways" class="level2">
-<h2 class="anchored" data-anchor-id="key-takeaways">Key takeaways</h2>
-<div class="callout callout-style-default callout-important callout-titled" title="Remember">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Remember
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>The <strong>chipset</strong> controls data flow between CPU, memory, storage, and peripherals, and it determines which hardware is compatible.</li>
-<li>In modern systems the <strong>northbridge is inside the CPU</strong> and the <strong>PCH</strong> replaces the southbridge.</li>
-<li><strong>Bus throughput = width × speed</strong>.</li>
-<li>A CPU is made of an <strong>ALU</strong> and a <strong>Control Unit</strong>, plus registers and buses, and uses <strong>pipelining</strong> to work on several instructions at once.</li>
-<li>Choose a CPU by <strong>socket (PGA/LGA)</strong>, <strong>clock speed</strong>, <strong>cores</strong>, and <strong>cache</strong>.</li>
-<li><strong>Cache (SRAM)</strong> is small, fast, and expensive. <strong>RAM (DRAM)</strong> is larger, slower, and cheaper. Both are <strong>volatile</strong>.</li>
-<li>Install RAM in <strong>matching channel slots</strong> to get dual-channel performance.</li>
-<li><strong>Virtual memory</strong> extends RAM with the hard drive, but it is much slower.</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="knowledge-check" class="level2">
-<h2 class="anchored" data-anchor-id="knowledge-check">Knowledge check</h2>
-<ol type="1">
-<li><p>Which chipset component is typically integrated directly into the CPU in modern systems?</p>
-<ol type="a">
-<li>Southbridge</li>
-<li>Northbridge</li>
-<li>The BIOS</li>
-<li>The Platform Controller Hub (PCH)</li>
-</ol></li>
-<li><p>A CPU has an 80 MHz, 64-bit bus. How much data can it move per second?</p>
-<ol type="a">
-<li>320 MB/s</li>
-<li>400 MB/s</li>
-<li>640 MB/s</li>
-<li>5,120 MB/s</li>
-</ol></li>
-<li><p>Which level of CPU cache is shared by all the cores?</p>
-<ol type="a">
-<li>L1</li>
-<li>L2</li>
-<li>L3</li>
-<li>Registers</li>
-</ol></li>
-<li><p>Which statement about SRAM and DRAM is INCORRECT?</p>
-<ol type="a">
-<li>SRAM needs constant refreshing to keep its data.</li>
-<li>SRAM is faster than DRAM.</li>
-<li>DRAM uses transistors and capacitors.</li>
-<li>Both SRAM and DRAM are volatile.</li>
-</ol></li>
-<li><p>In a socket where the pins are located on the motherboard rather than on the processor, which connection type is used?</p>
-<ol type="a">
-<li>PGA</li>
-<li>LGA</li>
-<li>SO-DIMM</li>
-<li>ECC</li>
-</ol></li>
-<li><p>A user installs two identical RAM sticks in slots A1 and A2 of a motherboard with four slots. What is the result?</p>
-<ol type="a">
-<li>The computer will not start.</li>
-<li>The sticks run in dual-channel mode at double speed.</li>
-<li>The motherboard treats them as single-channel memory and bandwidth is cut in half.</li>
-<li>The sticks automatically become ECC memory.</li>
-</ol></li>
-<li><p>Which type of memory can both detect and correct 1-bit errors automatically?</p>
-<ol type="a">
-<li>Non-parity memory</li>
-<li>Parity memory</li>
-<li>ECC memory</li>
-<li>SO-DIMM memory</li>
-</ol></li>
-<li><p>Which of the following statements about overclocking and throttling are correct? (Select all that apply.)</p>
-<ol type="a">
-<li>Overclocking makes a processor run faster than its original specification.</li>
-<li>Overclocking can increase heat and reduce CPU lifespan.</li>
-<li>Throttling makes a processor run below its rated speed to reduce heat and power use.</li>
-<li>Throttling is commonly used on desktop servers to increase performance.</li>
-</ol></li>
-<li><p>What is “disk thrashing”?</p>
-<ol type="a">
-<li>The hard drive failing because of physical damage</li>
-<li>The CPU running too hot and slowing down</li>
-<li>Excessive swapping between RAM and the page file, which slows the computer down</li>
-<li>Deleting the page file to free space</li>
-</ol></li>
-<li><p>Which of the following are advantages of 64-bit (x64) systems over 32-bit (x86) systems? (Select all that apply.)</p>
-<ol type="a">
-<li>Better security features</li>
-<li>Support for larger amounts of memory</li>
-<li>Improved graphics and performance</li>
-<li>Every old 32-bit program runs faster</li>
-</ol></li>
-</ol>
-<div class="callout callout-style-default callout-caution callout-titled" title="Expand to see the answers">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Caution</span>Expand to see the answers
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol type="1">
-<li><ol start="2" type="a">
-<li>Northbridge</li>
-</ol></li>
-<li><ol start="3" type="a">
-<li>80 million cycles/s × 8 bytes = 640 MB/s</li>
-</ol></li>
-<li><ol start="3" type="a">
-<li>L3</li>
-</ol></li>
-<li><ol type="a">
-<li>It is DRAM that needs constant refreshing, not SRAM.</li>
-</ol></li>
-<li><ol start="2" type="a">
-<li>LGA</li>
-</ol></li>
-<li><ol start="3" type="a">
-<li>Both sticks are in the same channel, so dual channel is not activated. Use A2 and B2 instead.</li>
-</ol></li>
-<li><ol start="3" type="a">
-<li>ECC memory</li>
-</ol></li>
-<li>a., b., c.</li>
-<li><ol start="3" type="a">
-<li></li>
-</ol></li>
-<li>a., b., c.</li>
-</ol>
-</div>
-</div>
-</div>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
@@ -2003,6 +1434,18 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../topics/hardware/ram.html" class="pagination-link" aria-label="RAM">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">RAM</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../topics/hardware/bios_cmos_uefi.html" class="pagination-link" aria-label="BIOS, CMOS, UEFI">
+        <span class="nav-page-text">BIOS, CMOS, UEFI</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
