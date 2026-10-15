@@ -6,3 +6,5 @@ venv/
 .venv/
 
 .luarc.json
+
+.DS_Store
