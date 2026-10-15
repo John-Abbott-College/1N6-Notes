@@ -232,3 +232,24 @@ Almost all modern hardware and software today use the **x64 (64-bit)** architect
 
 But some older applications still rely on **32-bit (x86)** support, so many systems remain **backward compatible** to run older software.
 
+
+## Knowledge check
+
+1. Which chipset component is typically integrated directly into the CPU in modern systems?
+
+    a. Southbridge
+    b. Northbridge
+    c. The BIOS
+    d. The Platform Controller Hub (PCH)
+
+2. Which of the following are advantages of 64-bit (x64) systems over 32-bit (x86) systems? (Select all that apply.)
+
+    a. Better security features
+    b. Support for larger amounts of memory
+    c. Improved graphics and performance
+    d. Every old 32-bit program runs faster
+
+::: {.callout-caution title="Expand to see the answers" collapse="true"}
+1. b. Northbridge
+2. a., b., c.
+:::
