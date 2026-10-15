@@ -116,7 +116,7 @@ unknown.](_assets/understanding-cpus19.png "A sample title."){fig-alt="Sample al
 ---
 
 
-## CPU and RAM interactions 
+## CPU and RAM interactions 🤝 
 
 
 The CPU is constantly talking to the RAM and the hardware components. At every clock interval, new instructions are sent through the control bus. Here is a simplified design of an 8-bits CPU called the Scott CPU: 
@@ -165,7 +165,7 @@ By organizing these steps in a conveyor-belt fashion (called **pipelining**), ou
 ![Analogy of multiple men in a box to illustrate the idea of a pipeline.](_assets/understanding-cpus18.png "A sample title."){fig-alt="Sample alt text. To be replaced!"}
 
 
-## CPU Architecture 
+## CPU Architecture 🏗️
 
 ### x86 versus x64
 
@@ -214,6 +214,10 @@ A 64-bit CPU can run both 32-bit and 64-bit software, but a 32-bit CPU can **onl
 
 ### CPU components
 
+::: {.columns}
+
+::: {.column width=67%}
+
 Each CPU core containts the following **components**:
 
 - **Arithmetic Logic Unit (ALU)**
@@ -229,14 +233,21 @@ Each CPU core containts the following **components**:
 - **Registers**: temporary storage for data coming from memory heading to the processor, coming from the processor after processing, or being worked on by the processor
 - **L1 Cache** : stores most recently saved data/instructions coming from RAM. Very fast short-term memory. 
 
-As well as data buses for the internal routing of data and instructions: 
+:::
+
+::: {.column width=33%}
+
+![CPU Components](_assets/understanding-cpus27.jpg)
+
+:::
+
+:::
+
+The CPU also has data buses for the internal routing of data and instructions: 
 
 - **Internal data bus**: connects the internal components of the processor to the motherboard
 - **External data path**: used to fetch data from memory to the processor
 - **Address lines**: used to specify the exact location in memory where data can be found
-
-
-![CPU Components](_assets/understanding-cpus27.jpg)
 
 ### Other Types of CPUs
 
@@ -264,13 +275,13 @@ As well as data buses for the internal routing of data and instructions:
 Desktop and server CPUs focus on **high performance**, while mobile CPUs are designed for **power efficiency and compact size**.
 :::
 
+![How to read the CPU model and generation](_assets/understanding-cpus22.png){width=80%}
+
 - **Brand**: Refers to company who designed the CPU (often Intel or AMD)
 - **Tier**: Refers to the ranking of this CPU based on their capacilities and performance. Generally the higher the tier the better the pverall performance of the CPU.
 - **Generation**: Tells us how new is this CPU compared to another one. Generally, higher generations within the same tier have improved design.
 - **Model**: It's a number that uniquely identify a CPU.
 - **Sufix**: Is an added letter which depending on the manufacturer could refer to different properties of the CPU. For example, intel uses "K" to indicate that the CPU is unlocked and can be overclocked. AMD uses X to indicate that this CPU is already slightly overclocked. 
-
-![How to read the CPU model and generation](_assets/understanding-cpus22.png){width=80%}
 
 **Reading a CPU name**
 
@@ -282,7 +293,7 @@ Desktop and server CPUs focus on **high performance**, while mobile CPUs are des
 | **Model** | 900 | 900 |
 | **Suffix** | K | X |
 
-## Choosing a CPU
+## Choosing a CPU 🤔
 
 When choosing a CPU, there are four main features to look at.
 
@@ -327,11 +338,11 @@ CPU clock speed is the **number of cycles per second** the CPU can perform. For 
 | 1 MHz | 1 million Hz |
 | 1 GHz | 1 billion Hz |
 
-#### Overclocking and throttling
+#### 🏎️ Overclocking and 🐢 Throttling
 
 :::: {.columns}
 ::: {.column width="50%"}
-**Overclocking**
+**Overclocking 🏎️**
 
 - **What is it?** Making a processor run **faster than its original specification**
 - **Effect:** Higher performance, **more heat**
@@ -339,7 +350,7 @@ CPU clock speed is the **number of cycles per second** the CPU can perform. For 
 :::
 
 ::: {.column width="50%"}
-**Throttling**
+**Throttling 🐢**
 
 - **What is it?** When the processor runs **below its rated speed**
 - **Effect:** Lower performance, **less heat and power consumption**
@@ -401,10 +412,6 @@ The CPU stores the **most recently used data and instructions** in its **cache**
 CPU caches are organized into **three levels** to balance speed and size. Each level is a trade-off between **speed** and **capacity** to maximize CPU performance:
 
 
-<img src="_assets/understanding-cpus26.png" width=80%/>
-
-L1, L2 and L3 Cache. Image source: <https://www.geekompc.com/what-is-cpu-cache/>
-
 ::: {.panel-tabset}
 
 #### L1: internal cache
@@ -428,6 +435,9 @@ L1, L2 and L3 Cache. Image source: <https://www.geekompc.com/what-is-cpu-cache/>
 
 :::
 
+![L1, L2 and L3 Cache. Image source: <https://www.geekompc.com/what-is-cpu-cache/>](_assets/understanding-cpus26.png){width=80%}
+
+
 ::: {.callout-note title="Analogy: the office filing system"}
 Imagine the **CPU as a worker** trying to complete tasks.
 
@@ -440,3 +450,51 @@ Imagine the **CPU as a worker** trying to complete tasks.
 
 When the CPU needs data, it searches from the fastest memory to the slowest, and it stops as soon as it finds what it needs:
 
+
+## Knowledge check
+
+
+1. A CPU has an 80 MHz, 64-bit bus. How much data can it move per second?
+
+    a. 320 MB/s
+    b. 400 MB/s
+    c. 640 MB/s
+    d. 5,120 MB/s
+
+2. Which level of CPU cache is shared by all the cores?
+
+    a. L1
+    b. L2
+    c. L3
+    d. Registers
+
+3. Which statement about SRAM and DRAM is INCORRECT?
+
+    a. SRAM needs constant refreshing to keep its data.
+    b. SRAM is faster than DRAM.
+    c. DRAM uses transistors and capacitors.
+    d. Both SRAM and DRAM are volatile.
+
+4. In a socket where the pins are located on the motherboard rather than on the processor, which connection type is used?
+
+    a. PGA
+    b. LGA
+    c. SO-DIMM
+    d. ECC
+
+
+5. Which of the following statements about overclocking and throttling are correct? (Select all that apply.)
+
+    a. Overclocking makes a processor run faster than its original specification.
+    b. Overclocking can increase heat and reduce CPU lifespan.
+    c. Throttling makes a processor run below its rated speed to reduce heat and power use.
+    d. Throttling is commonly used on desktop servers to increase performance.
+
+::: {.callout-caution title="Expand to see the answers" collapse="true"}
+
+1. c. 80 million cycles/s × 8 bytes = 640 MB/s
+2. c. L3
+3. a. It is DRAM that needs constant refreshing, not SRAM.
+4. b. LGA
+5. a., b., c.
+:::
