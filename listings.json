@@ -16,9 +16,9 @@
       "/topics/hardware/internal-components.html",
       "/topics/hardware/understanding-cpus.html",
       "/topics/hardware/chipsets.html",
-      "/topics/hardware/ram.html",
       "/topics/hardware/bios_cmos_uefi.html",
-      "/topics/hardware/understanding-cpus2.html"
+      "/topics/hardware/understanding-cpus2.html",
+      "/topics/hardware/ram.html"
     ]
   },
   {
@@ -57,7 +57,6 @@
       "/topics/data-representation/introduction-to-binary.html",
       "/topics/data-representation/binary-math.html",
       "/topics/hardware/chipsets.html",
-      "/topics/hardware/ram.html",
       "/topics/data-representation/logic-gates-and-boolean-algebra.html",
       "/topics/data-representation/text-in-computers.html",
       "/topics/data-representation/hexadecimal-numbers.html",
@@ -66,7 +65,8 @@
       "/topics/operating-systems/operating-system-intro.html",
       "/topics/operating-systems/operating-system-install.html",
       "/topics/operating-systems/operating-systems-details.html",
-      "/topics/hardware/understanding-cpus2.html"
+      "/topics/hardware/understanding-cpus2.html",
+      "/topics/hardware/ram.html"
     ]
   },
   {

@@ -10,7 +10,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.10.19">
 
-  <meta name="dcterms.date" content="2025-09-16">
+  <meta name="dcterms.date" content="2026-10-14">
   <title>{{&lt; var course.title &gt;}} – RAM</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -148,7 +148,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">2025-09-16</p>
+  <p class="date">2026-10-14</p>
 </section>
 <section class="slide level2">
 
@@ -193,7 +193,9 @@
 </section>
 <section id="main-memory-features" class="slide level2">
 <h2>Main Memory Features</h2>
-<h3 id="data-rate">1) Data rate</h3>
+<h3 id="serial-presence-detect-spd">Serial Presence Detect (SPD)</h3>
+<p>How can we get all the specs of the currently installed RAM sticks? Each RAM stick includes an <strong>SPD chip</strong> that stores detailed information about the memory, such as speed, size, manufacturer, and timings. A tool like <strong>CPU-Z</strong> can read the SPD chip, so you can view all the RAM specifications <strong>without physically opening your computer</strong>.</p>
+<h3 id="data-rate">1- Data rate 🚀</h3>
 <p><strong>SDRAM</strong></p>
 <ul>
 <li>The original main memory was the <strong>Synchronous Dynamic Random Access Memory (SDRAM)</strong></li>
@@ -207,6 +209,12 @@
 <li>This “doubles” the speed: 2 × 100 MHz × 32 bits</li>
 </ul>
 <p><strong>How can we tell the generations apart?</strong> By the <strong>number of pins</strong> and the <strong>position of the notch</strong>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_assets/ram1.png" height="300"></p>
+<figcaption>RAM Generations</figcaption>
+</figure>
+</div>
 <table class="caption-top">
 <colgroup>
 <col style="width: 7%">
@@ -293,12 +301,7 @@
 </div>
 </div>
 </div>
-<h3 id="ram-capacity">2) RAM capacity</h3>
-<ul>
-<li>Every stick of RAM has a <strong>capacity</strong> (in GB), which is the amount of information the RAM can store</li>
-<li>The capacity depends on the <strong>size of the chips</strong> (1 Gb, 4 Gb, 16 Gb, etc.)</li>
-<li>The capacity also depends on whether the RAM is <strong>SIMM</strong> or <strong>DIMM</strong></li>
-</ul>
+<h4 id="electrical-pins-configuration">Electrical Pins Configuration ⚡</h4>
 <table class="caption-top">
 <colgroup>
 <col style="width: 33%">
@@ -314,21 +317,26 @@
 </thead>
 <tbody>
 <tr class="odd">
+<td><strong>Image</strong></td>
+<td><img data-src="_assets/ram6.jpg" width="200" alt="SIMM"></td>
+<td><img data-src="_assets/ram7.jpg" width="200" alt="DIMM"></td>
+</tr>
+<tr class="even">
 <td><strong>Era</strong></td>
 <td>Older type of memory module. Common in early computers (e.g.&nbsp;Pentium I)</td>
 <td>Modern type used in most computers today</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong>Contacts</strong></td>
 <td>One set of electrical contacts. Both sides of the stick are connected to the same circuit</td>
 <td>Separate electrical contacts on each side of the module</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong>Chips</strong></td>
 <td>A single row of memory chips</td>
 <td>Can hold chips on <strong>both sides</strong>, effectively doubling capacity (e.g.&nbsp;2 GB → 4 GB)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong>Data path</strong></td>
 <td>32-bit</td>
 <td><strong>64-bit</strong>, leading to faster performance</td>
@@ -336,21 +344,48 @@
 </tbody>
 </table>
 <p><strong>SO-DIMM</strong> modules are smaller RAM sticks used in <strong>laptops</strong>.</p>
-<p><strong>Serial Presence Detect (SPD)</strong></p>
-<p>How can we get all the specs of the currently installed RAM sticks? Each RAM stick includes an <strong>SPD chip</strong> that stores detailed information about the memory, such as speed, size, manufacturer, and timings. A tool like <strong>CPU-Z</strong> can read the SPD chip, so you can view all the RAM specifications <strong>without physically opening your computer</strong>.</p>
-<h3 id="ram-channels">3) RAM channels</h3>
+<h3 id="ram-capacity">2- RAM capacity 📦</h3>
+<ul>
+<li>Every stick of RAM has a <strong>capacity</strong> (in GB), which is the amount of information the RAM can store</li>
+<li>The capacity depends on the <strong>size of the chips</strong> (1 Gb, 4 Gb, 16 Gb, etc.)</li>
+<li>The capacity also depends on whether the RAM is <strong>SIMM</strong> or <strong>DIMM</strong></li>
+</ul>
+<h3 id="ram-channels">3- RAM channels 📺</h3>
 <ul>
 <li>Most motherboards have a limited number of RAM slots, usually <strong>2 or 4</strong></li>
 <li>RAM is typically sold in <strong>pairs of sticks</strong> to take advantage of <strong>dual-channel</strong> performance</li>
 <li>With <strong>dual-channel</strong> memory architecture, the CPU can access data from <strong>two RAM sticks at the same time</strong> instead of just one. This <strong>doubles the data bandwidth</strong>, making the system faster and more efficient.</li>
 </ul>
 <p>Motherboards with four slots usually label them <strong>A1, A2, B1, B2</strong>:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_assets/ram2.png"></p>
+<figcaption>Labelled RAM slots on a motherboard. <a href="https://www.corsair.com/ca/en/explorer/diy-builder/memory/which-ram-slots-should-i-use/?srsltid=AU7gw4V2ovp5Nu5dMbHiCmQ-E_WYkRc6DjIkGG1UqJQlBKfL6bNUMFxR">Image source</a></figcaption>
+</figure>
+</div>
 <ul>
 <li>Slots <strong>A1 and A2</strong> belong to one memory channel</li>
 <li>Slots <strong>B1 and B2</strong> belong to the second channel</li>
-<li>To activate dual channel, install the sticks in <strong>matching colored or labeled slots</strong>, e.g.&nbsp;<strong>A2 and B2</strong></li>
-<li>For the best performance, the RAM sticks should be <strong>identical</strong>: same size, speed, and brand if possible</li>
+<li>To activate dual channel, install <strong>DIMM</strong> sticks in <strong>matching colored or labeled slots</strong>, e.g.&nbsp;<strong>A2 and B2</strong></li>
+<li>For the best performance, the RAM sticks in the same channel should be <strong>identical</strong>: same size, speed, and brand if possible</li>
 </ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_assets/ram3.png"></p>
+<figcaption>2x1Gb DIMM</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_assets/ram4.png"></p>
+<figcaption>2x 1Gb + 2x 512Mb DIMM</figcaption>
+</figure>
+</div>
+</div></div>
+<p>Source of images: <a href="https://www.compuram.de/blog/en/single-dual-and-multi-channel-memory-modes/">CompuRAM</a></p>
 <div title="What happens if RAM is installed incorrectly?">
 <div class="callout callout-warning callout-titled callout-style-default">
 <div class="callout-body">
@@ -361,7 +396,7 @@
 <p><strong>What happens if RAM is installed incorrectly?</strong></p>
 </div>
 <div class="callout-content">
-<p>If you put both sticks in the <strong>same channel</strong> (e.g.&nbsp;A1 and A2), the motherboard treats them as <strong>single-channel</strong> memory:</p>
+<p>If you put both sticks in the <strong>same channel</strong> (e.g.&nbsp;A1 and A2), the motherboard treats them as <strong>single-channel</strong> memory.</p>
 <ul>
 <li>The system can only access one stick at a time</li>
 <li>Memory bandwidth is cut in half</li>
@@ -372,7 +407,7 @@
 </div>
 </div>
 </div>
-<h3 id="memory-redundancy-and-error-checking">4) Memory redundancy and error checking</h3>
+<h3 id="memory-redundancy-and-error-checking">4- Memory redundancy and error checking 🚨</h3>
 <p>Memory errors happen when <strong>data is not stored or retrieved correctly</strong> from the RAM chips. Computers use different types of memory to detect and correct them.</p>
 <table class="caption-top">
 <colgroup>
@@ -422,7 +457,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="ram-latency">5) RAM latency</h3>
+<h3 id="ram-latency">5- RAM latency ⏱️</h3>
 <p><strong>Latency</strong> is the small <strong>delay</strong> that occurs when the memory controller begins accessing a line of data from RAM. RAM with <strong>lower latency</strong> responds <strong>faster</strong>, while RAM with <strong>higher latency</strong> takes slightly longer to deliver data.</p>
 <div title="Latency is a general concept">
 <div class="callout callout-note callout-titled callout-style-default">
@@ -442,7 +477,7 @@
 </div>
 </section>
 <section id="virtual-memory" class="slide level2 scrollable">
-<h2>Virtual Memory</h2>
+<h2>Virtual Memory 👻</h2>
 <p>Every computer can use a portion of its <strong>hard drive</strong> as <strong>temporary RAM</strong> when the system runs out of physical memory. This is called <strong>virtual memory</strong>, and it uses a section of the drive known as a <strong>swap file</strong> or <strong>page file</strong>.</p>
 <p>When the computer’s real RAM becomes full, the operating system <strong>moves (“swaps”)</strong> some data or inactive programs from RAM to the page file. This <strong>frees up space</strong> in RAM for the programs you are currently using.</p>
 <h3 id="example">Example</h3>
@@ -460,14 +495,14 @@
 <p></p><figure class=""><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart LR
-    subgraph RAM["RAM (4 GB)"]
-        A["Program A"]
-        B["Program B"]
-        C["Program C"]
+    D["Program D"] -- "2. runs in the freed space" --&gt; RAM
+    subgraph RAM["Physical RAM (4 GB)"]
+        direction TB
+        A["Program A"] ~~~ B["Program B"] ~~~ C["Program C"]
     end
-    B -- "1. swap out (least used)" --&gt; PF[("Page file&lt;br/&gt;on hard drive")]
-    PF -- "2. swap in later" --&gt; RAM2["Program B back in RAM"]
-    D["Program D"] -- "runs in the freed space" --&gt; RAM
+    RAM -- "1. swap out B (least used)" --&gt; PF[("Page file&lt;br/&gt;on hard drive")]
+    PF -- "3. swap back in later" --&gt; RAM
+    style RAM fill:transparent,stroke:#333
 </pre>
 </div>
 <p></p><figcaption> Virtual memory swapping. Programs move between RAM and the page file on the hard drive.</figcaption> </figure><p></p>
@@ -502,7 +537,7 @@
 <p><strong>Expand to see the answer</strong></p>
 </div>
 <div class="callout-content">
-<p>Because the hard drive is much <strong>slower</strong> than RAM. Every swap costs time, so the whole system slows down, and when the page file is accessed too often the computer suffers from disk thrashing. The real fix is to install more physical RAM.</p>
+<p>Because the hard drive is much <strong>slower</strong> than RAM. Every swap costs time, so the whole system slows down, and when the page file is accessed <strong>too often</strong> the computer suffers from disk thrashing. The real fix is to install more physical RAM or replacing the software that’s using up too much RAM (i.e.&nbsp;get rid of Windows 😈).</p>
 </div>
 </div>
 </div>
@@ -521,12 +556,6 @@
 </div>
 <div class="callout-content">
 <ul>
-<li>The <strong>chipset</strong> controls data flow between CPU, memory, storage, and peripherals, and it determines which hardware is compatible.</li>
-<li>In modern systems the <strong>northbridge is inside the CPU</strong> and the <strong>PCH</strong> replaces the southbridge.</li>
-<li><strong>Bus throughput = width × speed</strong>.</li>
-<li>A CPU is made of an <strong>ALU</strong> and a <strong>Control Unit</strong>, plus registers and buses, and uses <strong>pipelining</strong> to work on several instructions at once.</li>
-<li>Choose a CPU by <strong>socket (PGA/LGA)</strong>, <strong>clock speed</strong>, <strong>cores</strong>, and <strong>cache</strong>.</li>
-<li><strong>Cache (SRAM)</strong> is small, fast, and expensive. <strong>RAM (DRAM)</strong> is larger, slower, and cheaper. Both are <strong>volatile</strong>.</li>
 <li>Install RAM in <strong>matching channel slots</strong> to get dual-channel performance.</li>
 <li><strong>Virtual memory</strong> extends RAM with the hard drive, but it is much slower.</li>
 </ul>
@@ -538,41 +567,6 @@
 <section id="knowledge-check" class="slide level2 scrollable">
 <h2>Knowledge check</h2>
 <ol type="1">
-<li><p>Which chipset component is typically integrated directly into the CPU in modern systems?</p>
-<ol type="a">
-<li>Southbridge</li>
-<li>Northbridge</li>
-<li>The BIOS</li>
-<li>The Platform Controller Hub (PCH)</li>
-</ol></li>
-<li><p>A CPU has an 80 MHz, 64-bit bus. How much data can it move per second?</p>
-<ol type="a">
-<li>320 MB/s</li>
-<li>400 MB/s</li>
-<li>640 MB/s</li>
-<li>5,120 MB/s</li>
-</ol></li>
-<li><p>Which level of CPU cache is shared by all the cores?</p>
-<ol type="a">
-<li>L1</li>
-<li>L2</li>
-<li>L3</li>
-<li>Registers</li>
-</ol></li>
-<li><p>Which statement about SRAM and DRAM is INCORRECT?</p>
-<ol type="a">
-<li>SRAM needs constant refreshing to keep its data.</li>
-<li>SRAM is faster than DRAM.</li>
-<li>DRAM uses transistors and capacitors.</li>
-<li>Both SRAM and DRAM are volatile.</li>
-</ol></li>
-<li><p>In a socket where the pins are located on the motherboard rather than on the processor, which connection type is used?</p>
-<ol type="a">
-<li>PGA</li>
-<li>LGA</li>
-<li>SO-DIMM</li>
-<li>ECC</li>
-</ol></li>
 <li><p>A user installs two identical RAM sticks in slots A1 and A2 of a motherboard with four slots. What is the result?</p>
 <ol type="a">
 <li>The computer will not start.</li>
@@ -587,26 +581,12 @@
 <li>ECC memory</li>
 <li>SO-DIMM memory</li>
 </ol></li>
-<li><p>Which of the following statements about overclocking and throttling are correct? (Select all that apply.)</p>
-<ol type="a">
-<li>Overclocking makes a processor run faster than its original specification.</li>
-<li>Overclocking can increase heat and reduce CPU lifespan.</li>
-<li>Throttling makes a processor run below its rated speed to reduce heat and power use.</li>
-<li>Throttling is commonly used on desktop servers to increase performance.</li>
-</ol></li>
 <li><p>What is “disk thrashing”?</p>
 <ol type="a">
 <li>The hard drive failing because of physical damage</li>
 <li>The CPU running too hot and slowing down</li>
 <li>Excessive swapping between RAM and the page file, which slows the computer down</li>
 <li>Deleting the page file to free space</li>
-</ol></li>
-<li><p>Which of the following are advantages of 64-bit (x64) systems over 32-bit (x86) systems? (Select all that apply.)</p>
-<ol type="a">
-<li>Better security features</li>
-<li>Support for larger amounts of memory</li>
-<li>Improved graphics and performance</li>
-<li>Every old 32-bit program runs faster</li>
 </ol></li>
 </ol>
 <div title="Expand to see the answers">
@@ -620,32 +600,15 @@
 </div>
 <div class="callout-content">
 <ol type="1">
-<li><ol start="2" type="a">
-<li>Northbridge</li>
-</ol></li>
-<li><ol start="3" type="a">
-<li>80 million cycles/s × 8 bytes = 640 MB/s</li>
-</ol></li>
-<li><ol start="3" type="a">
-<li>L3</li>
-</ol></li>
-<li><ol type="a">
-<li>It is DRAM that needs constant refreshing, not SRAM.</li>
-</ol></li>
-<li><ol start="2" type="a">
-<li>LGA</li>
-</ol></li>
 <li><ol start="3" type="a">
 <li>Both sticks are in the same channel, so dual channel is not activated. Use A2 and B2 instead.</li>
 </ol></li>
 <li><ol start="3" type="a">
 <li>ECC memory</li>
 </ol></li>
-<li>a., b., c.</li>
 <li><ol start="3" type="a">
 <li></li>
 </ol></li>
-<li>a., b., c.</li>
 </ol>
 </div>
 </div>

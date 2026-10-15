@@ -532,9 +532,9 @@ window.Quarto = {
   </ul></li>
   <li><a href="#bus-width" id="toc-bus-width" class="nav-link" data-scroll-target="#bus-width">3- Bus width</a></li>
   </ul></li>
-  <li><a href="#cpu-and-ram-interactions" id="toc-cpu-and-ram-interactions" class="nav-link" data-scroll-target="#cpu-and-ram-interactions">CPU and RAM interactions</a></li>
+  <li><a href="#cpu-and-ram-interactions" id="toc-cpu-and-ram-interactions" class="nav-link" data-scroll-target="#cpu-and-ram-interactions">CPU and RAM interactions 🤝</a></li>
   <li><a href="#pipelining" id="toc-pipelining" class="nav-link" data-scroll-target="#pipelining">Pipelining 🚥</a></li>
-  <li><a href="#cpu-architecture" id="toc-cpu-architecture" class="nav-link" data-scroll-target="#cpu-architecture">CPU Architecture</a>
+  <li><a href="#cpu-architecture" id="toc-cpu-architecture" class="nav-link" data-scroll-target="#cpu-architecture">CPU Architecture 🏗️</a>
   <ul>
   <li><a href="#x86-versus-x64" id="toc-x86-versus-x64" class="nav-link" data-scroll-target="#x86-versus-x64">x86 versus x64</a></li>
   <li><a href="#cpu-components" id="toc-cpu-components" class="nav-link" data-scroll-target="#cpu-components">CPU components</a></li>
@@ -543,12 +543,12 @@ window.Quarto = {
   <li><a href="#accelerated-processing-unit-apu" id="toc-accelerated-processing-unit-apu" class="nav-link" data-scroll-target="#accelerated-processing-unit-apu">Accelerated Processing Unit (APU)</a></li>
   </ul></li>
   <li><a href="#cpu-manufacturers" id="toc-cpu-manufacturers" class="nav-link" data-scroll-target="#cpu-manufacturers">CPU Manufacturers 🏭</a></li>
-  <li><a href="#choosing-a-cpu" id="toc-choosing-a-cpu" class="nav-link" data-scroll-target="#choosing-a-cpu">Choosing a CPU</a>
+  <li><a href="#choosing-a-cpu" id="toc-choosing-a-cpu" class="nav-link" data-scroll-target="#choosing-a-cpu">Choosing a CPU 🤔</a>
   <ul>
   <li><a href="#socket-how-to-connect-a-cpu" id="toc-socket-how-to-connect-a-cpu" class="nav-link" data-scroll-target="#socket-how-to-connect-a-cpu">1 - Socket: how to connect a CPU</a></li>
   <li><a href="#clock-speed-1" id="toc-clock-speed-1" class="nav-link" data-scroll-target="#clock-speed-1">2 - Clock speed</a>
   <ul class="collapse">
-  <li><a href="#overclocking-and-throttling" id="toc-overclocking-and-throttling" class="nav-link" data-scroll-target="#overclocking-and-throttling">Overclocking and throttling</a></li>
+  <li><a href="#overclocking-and-throttling" id="toc-overclocking-and-throttling" class="nav-link" data-scroll-target="#overclocking-and-throttling">🏎️ Overclocking and 🐢 Throttling</a></li>
   </ul></li>
   <li><a href="#cores" id="toc-cores" class="nav-link" data-scroll-target="#cores">3 - Cores</a>
   <ul class="collapse">
@@ -559,6 +559,7 @@ window.Quarto = {
   <li><a href="#cache-levels" id="toc-cache-levels" class="nav-link" data-scroll-target="#cache-levels">Cache levels</a></li>
   </ul></li>
   </ul></li>
+  <li><a href="#knowledge-check" id="toc-knowledge-check" class="nav-link" data-scroll-target="#knowledge-check">Knowledge check</a></li>
   </ul>
 </nav>
     </div>
@@ -749,7 +750,7 @@ window.Quarto = {
 </section>
 </section>
 <section id="cpu-and-ram-interactions" class="level2">
-<h2 class="anchored" data-anchor-id="cpu-and-ram-interactions">CPU and RAM interactions</h2>
+<h2 class="anchored" data-anchor-id="cpu-and-ram-interactions">CPU and RAM interactions 🤝</h2>
 <p>The CPU is constantly talking to the RAM and the hardware components. At every clock interval, new instructions are sent through the control bus. Here is a simplified design of an 8-bits CPU called the Scott CPU:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -826,7 +827,7 @@ window.Quarto = {
 </div>
 </section>
 <section id="cpu-architecture" class="level2">
-<h2 class="anchored" data-anchor-id="cpu-architecture">CPU Architecture</h2>
+<h2 class="anchored" data-anchor-id="cpu-architecture">CPU Architecture 🏗️</h2>
 <section id="x86-versus-x64" class="level3">
 <h3 class="anchored" data-anchor-id="x86-versus-x64">x86 versus x64</h3>
 <p>The “x86” versus “x64” CPU architectures refers to a differences in the bus width of a CPU and its instruction book. The “x86” architecture were 32-bit CPUs such as the Intel 8086 and common in the 80s and 90s. As for the “x64”, it’s today’s more common architecture of 64-bits CPUs. We will see in more details, when introducing operating system how 64-bits CPUs can access more memory spaces when we talk about</p>
@@ -876,6 +877,8 @@ window.Quarto = {
 </section>
 <section id="cpu-components" class="level3">
 <h3 class="anchored" data-anchor-id="cpu-components">CPU components</h3>
+<div class="columns">
+<div class="column" style="width:67%;">
 <p>Each CPU core containts the following <strong>components</strong>:</p>
 <ul>
 <li><strong>Arithmetic Logic Unit (ALU)</strong>
@@ -897,18 +900,21 @@ window.Quarto = {
 <li><strong>Registers</strong>: temporary storage for data coming from memory heading to the processor, coming from the processor after processing, or being worked on by the processor</li>
 <li><strong>L1 Cache</strong> : stores most recently saved data/instructions coming from RAM. Very fast short-term memory.</li>
 </ul>
-<p>As well as data buses for the internal routing of data and instructions:</p>
-<ul>
-<li><strong>Internal data bus</strong>: connects the internal components of the processor to the motherboard</li>
-<li><strong>External data path</strong>: used to fetch data from memory to the processor</li>
-<li><strong>Address lines</strong>: used to specify the exact location in memory where data can be found</li>
-</ul>
+</div><div class="column" style="width:33%;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="_assets/understanding-cpus27.jpg" class="img-fluid figure-img"></p>
 <figcaption>CPU Components</figcaption>
 </figure>
 </div>
+</div>
+</div>
+<p>The CPU also has data buses for the internal routing of data and instructions:</p>
+<ul>
+<li><strong>Internal data bus</strong>: connects the internal components of the processor to the motherboard</li>
+<li><strong>External data path</strong>: used to fetch data from memory to the processor</li>
+<li><strong>Address lines</strong>: used to specify the exact location in memory where data can be found</li>
+</ul>
 </section>
 <section id="other-types-of-cpus" class="level3">
 <h3 class="anchored" data-anchor-id="other-types-of-cpus">Other Types of CPUs</h3>
@@ -951,6 +957,12 @@ window.Quarto = {
 <p>Desktop and server CPUs focus on <strong>high performance</strong>, while mobile CPUs are designed for <strong>power efficiency and compact size</strong>.</p>
 </div>
 </div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="_assets/understanding-cpus22.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>How to read the CPU model and generation</figcaption>
+</figure>
+</div>
 <ul>
 <li><strong>Brand</strong>: Refers to company who designed the CPU (often Intel or AMD)</li>
 <li><strong>Tier</strong>: Refers to the ranking of this CPU based on their capacilities and performance. Generally the higher the tier the better the pverall performance of the CPU.</li>
@@ -958,12 +970,6 @@ window.Quarto = {
 <li><strong>Model</strong>: It’s a number that uniquely identify a CPU.</li>
 <li><strong>Sufix</strong>: Is an added letter which depending on the manufacturer could refer to different properties of the CPU. For example, intel uses “K” to indicate that the CPU is unlocked and can be overclocked. AMD uses X to indicate that this CPU is already slightly overclocked.</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="_assets/understanding-cpus22.png" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption>How to read the CPU model and generation</figcaption>
-</figure>
-</div>
 <p><strong>Reading a CPU name</strong></p>
 <table class="caption-top table">
 <thead>
@@ -1003,7 +1009,7 @@ window.Quarto = {
 </table>
 </section>
 <section id="choosing-a-cpu" class="level2">
-<h2 class="anchored" data-anchor-id="choosing-a-cpu">Choosing a CPU</h2>
+<h2 class="anchored" data-anchor-id="choosing-a-cpu">Choosing a CPU 🤔</h2>
 <p>When choosing a CPU, there are four main features to look at.</p>
 <section id="socket-how-to-connect-a-cpu" class="level3">
 <h3 class="anchored" data-anchor-id="socket-how-to-connect-a-cpu">1 - Socket: how to connect a CPU</h3>
@@ -1079,17 +1085,17 @@ window.Quarto = {
 </tbody>
 </table>
 <section id="overclocking-and-throttling" class="level4">
-<h4 class="anchored" data-anchor-id="overclocking-and-throttling">Overclocking and throttling</h4>
+<h4 class="anchored" data-anchor-id="overclocking-and-throttling">🏎️ Overclocking and 🐢 Throttling</h4>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><strong>Overclocking</strong></p>
+<p><strong>Overclocking 🏎️</strong></p>
 <ul>
 <li><strong>What is it?</strong> Making a processor run <strong>faster than its original specification</strong></li>
 <li><strong>Effect:</strong> Higher performance, <strong>more heat</strong></li>
 <li><strong>Notes:</strong> Not generally recommended: can <strong>increase heat and reduce CPU lifespan</strong></li>
 </ul>
 </div><div class="column" style="width:50%;">
-<p><strong>Throttling</strong></p>
+<p><strong>Throttling 🐢</strong></p>
 <ul>
 <li><strong>What is it?</strong> When the processor runs <strong>below its rated speed</strong></li>
 <li><strong>Effect:</strong> Lower performance, <strong>less heat and power consumption</strong></li>
@@ -1231,8 +1237,6 @@ window.Quarto = {
 <section id="cache-levels" class="level4">
 <h4 class="anchored" data-anchor-id="cache-levels">Cache levels</h4>
 <p>CPU caches are organized into <strong>three levels</strong> to balance speed and size. Each level is a trade-off between <strong>speed</strong> and <strong>capacity</strong> to maximize CPU performance:</p>
-<p><img src="_assets/understanding-cpus26.png" width="80%/"></p>
-<p>L1, L2 and L3 Cache. Image source: <a href="https://www.geekompc.com/what-is-cpu-cache/" class="uri">https://www.geekompc.com/what-is-cpu-cache/</a></p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">L1: internal cache</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">L2: external cache</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">L3: shared cache</a></li></ul>
 <div class="tab-content">
@@ -1260,6 +1264,12 @@ window.Quarto = {
 </div>
 </div>
 </div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="_assets/understanding-cpus26.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>L1, L2 and L3 Cache. Image source: <a href="https://www.geekompc.com/what-is-cpu-cache/" class="uri">https://www.geekompc.com/what-is-cpu-cache/</a></figcaption>
+</figure>
+</div>
 <div class="callout callout-style-default callout-note callout-titled" title="Analogy: the office filing system">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1280,10 +1290,80 @@ window.Quarto = {
 </div>
 </div>
 <p>When the CPU needs data, it searches from the fastest memory to the slowest, and it stops as soon as it finds what it needs:</p>
-
-
 </section>
 </section>
+</section>
+<section id="knowledge-check" class="level2">
+<h2 class="anchored" data-anchor-id="knowledge-check">Knowledge check</h2>
+<ol type="1">
+<li><p>A CPU has an 80 MHz, 64-bit bus. How much data can it move per second?</p>
+<ol type="a">
+<li>320 MB/s</li>
+<li>400 MB/s</li>
+<li>640 MB/s</li>
+<li>5,120 MB/s</li>
+</ol></li>
+<li><p>Which level of CPU cache is shared by all the cores?</p>
+<ol type="a">
+<li>L1</li>
+<li>L2</li>
+<li>L3</li>
+<li>Registers</li>
+</ol></li>
+<li><p>Which statement about SRAM and DRAM is INCORRECT?</p>
+<ol type="a">
+<li>SRAM needs constant refreshing to keep its data.</li>
+<li>SRAM is faster than DRAM.</li>
+<li>DRAM uses transistors and capacitors.</li>
+<li>Both SRAM and DRAM are volatile.</li>
+</ol></li>
+<li><p>In a socket where the pins are located on the motherboard rather than on the processor, which connection type is used?</p>
+<ol type="a">
+<li>PGA</li>
+<li>LGA</li>
+<li>SO-DIMM</li>
+<li>ECC</li>
+</ol></li>
+<li><p>Which of the following statements about overclocking and throttling are correct? (Select all that apply.)</p>
+<ol type="a">
+<li>Overclocking makes a processor run faster than its original specification.</li>
+<li>Overclocking can increase heat and reduce CPU lifespan.</li>
+<li>Throttling makes a processor run below its rated speed to reduce heat and power use.</li>
+<li>Throttling is commonly used on desktop servers to increase performance.</li>
+</ol></li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled" title="Expand to see the answers">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Expand to see the answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><ol start="3" type="a">
+<li>80 million cycles/s × 8 bytes = 640 MB/s</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>L3</li>
+</ol></li>
+<li><ol type="a">
+<li>It is DRAM that needs constant refreshing, not SRAM.</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>LGA</li>
+</ol></li>
+<li>a., b., c.</li>
+</ol>
+</div>
+</div>
+</div>
+
+
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
