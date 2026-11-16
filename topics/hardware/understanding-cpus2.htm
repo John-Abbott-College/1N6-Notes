@@ -7,14 +7,14 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.10.19">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.11.9">
 
   <meta name="dcterms.date" content="2026-10-13">
   <title>{{&lt; var course.title &gt;}} – Understanding CPUs</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
   <style>
@@ -36,7 +36,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-84b150702567ae7e15cad124fb9039e2.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-cc8b919cb54a81e0e7637d206f4c56fe.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -131,8 +131,10 @@
   </style>
 <meta property="og:title" content="Understanding CPUs – Technical Support">
 <meta property="og:description" content="A deeper dive into the CPU’s properties, internal units, cache memory and architectures.">
-<meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/hardware/_assets/favicons/favicon-32x32.png">
+<meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/_assets/favicons/favicon-32x32.png">
 <meta property="og:site_name" content="Technical Support">
+<meta property="og:image:height" content="32">
+<meta property="og:image:width" content="32">
 </head>
 <body class="quarto-dark">
   <div class="reveal">
@@ -150,7 +152,6 @@
 <section id="introduction" class="slide level2">
 <h2>Introduction</h2>
 <p>In this lesson, we will breakdown the internal components of a CPU (ALU, MU, CU, Registers), we will explore various properties of a CPU, including the cores and cache memory. Then we will learn about various CPU architectures such as the x86 and the ARM chips.</p>
-<div title="☆Learning Objectives">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -167,7 +168,6 @@
 <li><p><strong>Decode</strong> a CPU model name into brand, tier, generation, model, and suffix.</p></li>
 <li><p><strong>Distinguish</strong> between the different CPU architectures.</p></li>
 </ul>
-</div>
 </div>
 </div>
 </div>
@@ -232,7 +232,6 @@
 <h3 id="bus-width">3- Bus width</h3>
 <p>The amount of data processed at a time depends on the “number of lightbulbs” or the <strong>width</strong> of the <strong>data bus</strong></p>
 <p><strong>Bus width</strong> is measured in bits, e.g.&nbsp;8-bits, 16-bit, 32-bit, 64-bit, etc.</p>
-<div title="Highway analogy: clock Speed vs bus width ">
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -260,7 +259,6 @@
 <p><img data-src="_assets/understanding-cpus21.png" title="A sample title." alt="Sample alt text. To be replaced!"></p>
 <figcaption>Analogy of the highway. Image source: unknown.</figcaption>
 </figure>
-</div>
 </div>
 </div>
 </div>
@@ -388,7 +386,6 @@
 </ul>
 </div><p>Almost all modern hardware and software today use x64 (64-bit) architecture. 64-bits system offer: 🔒 Better security features 🎨 Improved graphics and performance ⚡ Support for larger amounts of memory</p><p>💡But! Some older applications still rely on 32-bit (x86) support — so many systems remain backward compatible to run older software.</p>
 </div>
-<div title="Why does it matter?">
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -399,7 +396,6 @@
 </div>
 <div class="callout-content">
 <p>A 64-bit CPU can run both 32-bit and 64-bit software, but a 32-bit CPU can <strong>only</strong> run 32-bit software. Almost all modern computers are 64-bit.</p>
-</div>
 </div>
 </div>
 </div>
@@ -463,7 +459,6 @@
 <li><strong>Desktops, laptops, and servers</strong>: <strong>Intel</strong> and <strong>AMD</strong> are the two most popular manufacturers.</li>
 <li><strong>Mobile devices</strong>: <strong>NVIDIA, Qualcomm, Samsung, and Apple</strong> are major manufacturers of mobile CPUs, used in smartphones, tablets, TV boxes, and other mobile devices.</li>
 </ul>
-<div title="Different goals">
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -474,7 +469,6 @@
 </div>
 <div class="callout-content">
 <p>Desktop and server CPUs focus on <strong>high performance</strong>, while mobile CPUs are designed for <strong>power efficiency and compact size</strong>.</p>
-</div>
 </div>
 </div>
 </div>
@@ -555,7 +549,6 @@
 <li><strong>What does the other side have?</strong> The CPU has flat contact pads</li>
 </ul>
 </div></div>
-<div title="Be careful with LGA sockets">
 <div class="callout callout-warning callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -566,7 +559,6 @@
 </div>
 <div class="callout-content">
 <p>Because the pins are in the socket, they bend easily. Never force a CPU into an LGA socket.</p>
-</div>
 </div>
 </div>
 </div>
@@ -618,7 +610,6 @@
 <blockquote>
 <p>Activity: Bus speed and bus width. A CPU has a 100 MHz, 32-bit bus. How many bytes per second can it process? Now compare it with a second CPU with an 80 MHz, 64-bit bus. Which of the two is faster at sending information?</p>
 </blockquote>
-<div title="Expand to see the answer">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -630,7 +621,6 @@
 <li>Second CPU: 80 million cycles/s × 64 bits = 5,120 Mbit/s = <strong>640 MB/s</strong></li>
 </ul>
 <p>The second CPU moves more data, even though its clock is slower. The power consumption of the first CPU is bigger because of its higher clock rate.</p>
-</div>
 </div>
 </div>
 </div>
@@ -770,7 +760,6 @@
 <figcaption>L1, L2 and L3 Cache. Image source: <a href="https://www.geekompc.com/what-is-cpu-cache/" class="uri">https://www.geekompc.com/what-is-cpu-cache/</a></figcaption>
 </figure>
 </div>
-<div title="Analogy: the office filing system">
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -787,7 +776,6 @@
 <li><strong>L3 cache = storage room.</strong> Holds papers for everyone in the office. Slowest of the three, but largest.</li>
 </ul>
 <p><img src="_assets/understanding-cpus28.png" width="30%" fig-align="center"></p>
-</div>
 </div>
 </div>
 </div>
@@ -832,7 +820,6 @@
 <li>Throttling is commonly used on desktop servers to increase performance.</li>
 </ol></li>
 </ol>
-<div title="Expand to see the answers">
 <div class="callout callout-caution callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -857,7 +844,6 @@
 </ol></li>
 <li>a., b., c.</li>
 </ol>
-</div>
 </div>
 </div>
 </div>
@@ -899,7 +885,7 @@
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"\u003ci class=\"fas fa-gear\">\u003c/i>","content":"\u003cul class=\"slide-menu-items\">\n\u003cli class=\"slide-tool-item active\" data-item=\"0\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\">\u003ckbd>f\u003c/kbd> Fullscreen\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"1\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\">\u003ckbd>s\u003c/kbd> Speaker View\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"2\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\">\u003ckbd>o\u003c/kbd> Slide Overview\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"3\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\">\u003ckbd>e\u003c/kbd> PDF Export Mode\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"4\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\">\u003ckbd>r\u003c/kbd> Scroll View Mode\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"5\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\">\u003ckbd>?\u003c/kbd> Keyboard Help\u003c/a>\u003c/li>\n\u003c/ul>"}],"openButton":true,"openButtonLabel":"Slide menu"},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -1154,7 +1140,8 @@
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }
           // Inspect non-navigation links and adorn them if external
-         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          window.quartoDecorateExternalLinks = function (root) {
+         var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
           for (var i=0; i<links.length; i++) {
             const link = links[i];
             if (!isInternal(link.href)) {
@@ -1163,8 +1150,69 @@
               if (link.dataset.originalHref !== undefined) {
                 link.href = link.dataset.originalHref;
               }
+              if (!link.classList.contains('no-external-icon')) {
+              }
             }
           }
+          };
+          window.quartoDecorateExternalLinks(window.document);
+        // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+        // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+        const hideOnEscAndFocusOut = {
+          name: 'hideOnEscAndFocusOut',
+          defaultValue: true,
+          fn(instance) {
+            const dismiss = () => {
+              // A show scheduled by the trigger delay would otherwise reopen it
+              instance.clearDelayTimeouts();
+              instance.hide();
+            };
+            const onKeyDown = (event) => {
+              if (event.key !== 'Escape') {
+                return;
+              }
+              // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+              // except an open reveal.js slide menu, which Esc should close too.
+              // The menu handles keys only when its keyboard option is on.
+              const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+                window.Reveal.getConfig().menu?.keyboard !== false;
+              if (!menuHandlesEsc) {
+                event.stopPropagation();
+              }
+              if (instance.popper.contains(window.document.activeElement)) {
+                // Disabled while refocusing so the focus trigger does not reopen it
+                instance.disable();
+                instance.reference.focus();
+                instance.enable();
+              }
+              dismiss();
+            };
+            const onFocusOut = (event) => {
+              const target = event.relatedTarget;
+              if (target && !instance.reference.contains(target) &&
+                  !instance.popper.contains(target)) {
+                dismiss();
+              }
+            };
+            // On the trigger too: a click trigger (code-annotations: select) has no
+            // blur handling. Attached for the instance's lifetime so leaving the
+            // trigger also cancels a show still pending on the trigger delay.
+            instance.reference.addEventListener('focusout', onFocusOut);
+            return {
+              onShow() {
+                window.document.addEventListener('keydown', onKeyDown, true);
+                instance.popper.addEventListener('focusout', onFocusOut);
+              },
+              onHide() {
+                window.document.removeEventListener('keydown', onKeyDown, true);
+                instance.popper.removeEventListener('focusout', onFocusOut);
+              },
+              onDestroy() {
+                instance.reference.removeEventListener('focusout', onFocusOut);
+              },
+            };
+          },
+        };
         function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
           const config = {
             allowHTML: true,
@@ -1178,6 +1226,7 @@
             interactiveBorder: 10,
             theme: 'light-border',
             placement: 'bottom-start',
+            plugins: [hideOnEscAndFocusOut],
           };
           if (contentFn) {
             config.content = contentFn;

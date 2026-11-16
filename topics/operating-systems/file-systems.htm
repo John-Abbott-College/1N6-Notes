@@ -7,14 +7,14 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.10.19">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.11.9">
 
-  <meta name="dcterms.date" content="2025-10-27">
-  <title>{{&lt; var course.title &gt;}} – How files are saved in computers</title>
+  <meta name="dcterms.date" content="2025-11-16">
+  <title>{{&lt; var course.title &gt;}} – File Systems</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
   <style>
@@ -35,8 +35,74 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-84b150702567ae7e15cad124fb9039e2.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-cc8b919cb54a81e0e7637d206f4c56fe.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -129,39 +195,538 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="How files are saved in computers – Technical Support">
-<meta property="og:description" content="File Systems">
-<meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/operating-systems/_assets/favicons/favicon-32x32.png">
+<meta property="og:title" content="File Systems – Technical Support">
+<meta property="og:description" content="How files are saved in computers">
+<meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/_assets/favicons/favicon-32x32.png">
 <meta property="og:site_name" content="Technical Support">
+<meta property="og:image:height" content="32">
+<meta property="og:image:width" content="32">
 </head>
 <body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">How files are saved in computers</h1>
-  <p class="subtitle">File Systems</p>
+  <h1 class="title">File Systems</h1>
+  <p class="subtitle">How files are saved in computers</p>
 
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">2025-10-27</p>
+  <p class="date">2025-11-16</p>
 </section><section id="TOC">
-<nav role="doc-toc"> 
+<nav role="doc-toc" aria-labelledby="toc-title">
 <h2 id="toc-title">Table of contents</h2>
 <ul>
-<li><a href="#/paging" id="/toc-paging">Paging</a></li>
-<li><a href="#/segmentation" id="/toc-segmentation">Segmentation</a></li>
+<li><a href="#/introduction" id="/toc-introduction">Introduction</a></li>
+<li><a href="#/text-files" id="/toc-text-files">Text Files</a></li>
+<li><a href="#/file-metadata" id="/toc-file-metadata">File Metadata</a></li>
+<li><a href="#/file-systems" id="/toc-file-systems">File Systems</a></li>
+<li><a href="#/deleting-files" id="/toc-deleting-files">Deleting Files</a></li>
+<li><a href="#/topics-for-further-research" id="/toc-topics-for-further-research">Topics for Further Research</a></li>
 </ul>
 </nav>
 </section>
-<section id="paging" class="title-slide slide level1 center">
-<h1>Paging</h1>
+<section class="slide level2">
+
+<p>Adapted from the original <a href="./disk_partitions_file_systems.pdf" target="_blank">slides</a> with the help of Claude AI for restructuring.</p>
+<p>This page covers how files are organized once a disk has been partitioned and formatted. For partition styles, disk types and volumes, see <a href="../../topics/operating-systems/disk-partitions.html">Disk Partitions</a>.</p>
+</section>
+<section>
+<section id="introduction" class="title-slide slide level1 center">
+<h1>Introduction</h1>
+<blockquote>
+<p>This section was made by Sandy Bultena for <strong>Programming in Science</strong> (Fall 2024). All credits and thanks to her.</p>
+</blockquote>
+<p>Computers only think in terms of 1s and 0s (binary). Every bit of information on your computer is coded in binary and the your computer will translate one set of of 1s and 0s to another when displaying information on your screen.</p>
+
+<img data-src="_assets/file_systems/img0.png" style="width:80.0%" class="r-stretch"></section>
+<section id="whats-a-file" class="slide level2">
+<h2>What’s a file?</h2>
+<p>On a computer, you probably have pictures, word documents, saved video games, applications, code, plus a whole lot more. It would be very difficult if every time you opened Word, every document that you ever wrote was all smushed together.</p>
+<p>So, to make your life easier, your computer organizes data into discrete elements, called files. Each file has the data for one thing only, for example, one picture, one Word Document, one application, etc.</p>
+<p>In the old days, files used to be a document that was printed on paper. Today, most people refer to files as a document of some kind (picture, code, Word, etc) that is stored on your computer.</p>
+</section>
+<section id="computer-file-system" class="slide level2">
+<h2>Computer file-system</h2>
+<p>To make the transition from storing files on paper, in paper folders, in filing cabinets, to storing files on computers easier, the powers that be decided to use the same names, i.e.&nbsp;files and folders.</p>
+<blockquote>
+<p>NOTE: before computers were used everywhere, folders used to be called directories and the words mean EXACTLY the same thing, so if your teachers forget, and says “directory”, remember that they actually mean folder.</p>
+</blockquote>
+<p>So, in a folder you can have files and other folders.</p>
+<p>Since folders are not longer physical things, we need a way to envision them.</p>
+<p>In short, folders (or directories) are organized into a tree format.</p>
+<pre><code>My Documents
+     | --- English
+     |   |-&gt; Assignment 1.docx
+     |   |-&gt; Assignment 2.docx
+     | --- Programming
+     |   | --- Assignment 1
+     |   |   |-&gt; Instructions.pdf
+     |   |   |-&gt; code.py
+     |   |   |-&gt; output.txt
+     |   |   |--- Assignment 2
+     |   |   |   | -&gt; Instructions.pdf
+     |   |   |   | -&gt; code.py
+     |   |   |   | -&gt; output.csv</code></pre>
+</section>
+<section id="what-is-a-file-extension" class="slide level2">
+<h2>What is a File Extension?</h2>
+<p>The file extension is defined as the last bit of a file name that follows the last dot (.) Kinda of like a last name. It determines the <strong>file format</strong> of each file.</p>
+<p>Example: code.py has a file extension .py. A word document typically has the extension .docx, so the filename is typically assignment 1.docx.</p>
+<h3 id="why-dont-i-see-them-in-file-explorer">Why don’t I see them in File Explorer?</h3>
+<p>The developers at Microsoft have designed File Explorer to be easy(?) for non-programmers to use, and so by default they hide the file extension.</p>
+<p>But, you are now a programmer, and you absolutely need to know what the file extensions are…</p>
+<p>Please follow the instructions in: MS Windows Support - Show file extensions</p>
+<h3 id="why-do-we-use-file-extensions">Why do we use File Extensions?</h3>
+<p>The file extensions give a hint to the operating system (Windows/Linux/Mac) as to what type of data is in the file. So if the extension is .png then the operating system knows that it is a picture, and if you double click the filename in File Explorer, it will call the appropriate program that can show you the picture.</p>
+<p>Likewise if the file extension is .docx, double clicking the file in File Explorer will open Microsoft Office which in turn will read the file and display it to you.</p>
+</section>
+<section id="common-file-formats" class="slide level2">
+<h2>Common file formats</h2>
+<p>There are many types of files: text files, music files, photos and videos.A <strong>file format</strong> defines how data is organized and stored inside a file. When saving a file, the OS or application follows a specific standard format to structure the data correctly.</p>
+<ul>
+<li>Examples of standard file formats: <strong>JPEG</strong>, <strong>MP4</strong> and <strong>DOCX</strong>.</li>
+<li>Programmers can also create their own custom formats to store data in a unique way. However, a <strong>non-standard format</strong> can only be read by the applications that created it.</li>
+</ul>
+
+<img data-src="_assets/file_systems/img11.jpg" width="350" class="r-stretch quarto-figure-center"><p class="caption">Common file formats</p></section></section>
+<section>
+<section id="text-files" class="title-slide slide level1 center">
+<h1>Text Files</h1>
+<ul>
+<li>Text files are commonly known as <strong>.TXT</strong> files.</li>
+<li>They are often created and opened using programs like Notepad or TextEdit.</li>
+<li>Even though they display readable text, the data is still stored in <strong>binary</strong> (0s and 1s) inside the computer.</li>
+<li>Text files are useful for saving simple information, such as notes, configuration data, or source code.</li>
+<li>They do not include special formatting (like bold, color, or images), only text characters.</li>
+</ul>
+<p>Here is how the text <code>Hello World</code> is stored in binary, using ASCII:</p>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 19%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>ASCII</th>
+<th>H</th>
+<th>e</th>
+<th>l</th>
+<th>l</th>
+<th>o</th>
+<th>(space)</th>
+<th>W</th>
+<th>o</th>
+<th>r</th>
+<th>l</th>
+<th>d</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Binary</td>
+<td>01001000</td>
+<td>01100101</td>
+<td>01101100</td>
+<td>01101100</td>
+<td>01101111</td>
+<td>00100000</td>
+<td>01010111</td>
+<td>01101111</td>
+<td>01110010</td>
+<td>01101100</td>
+<td>01100100</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="text-files-vs.-formatted-text-files" class="slide level2">
+<h2>Text Files vs.&nbsp;Formatted Text Files</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 29%">
+<col style="width: 56%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th>Text File (.TXT)</th>
+<th>Formatted Text File (.DOCX, .PDF)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Content type</td>
+<td>Plain text only</td>
+<td>Text with formatting, images, and layout</td>
+</tr>
+<tr class="even">
+<td>Editable with</td>
+<td>Notepad, TextEdit</td>
+<td>Word processors (e.g., MS Word)</td>
+</tr>
+<tr class="odd">
+<td>File size</td>
+<td>Small</td>
+<td>Larger (due to extra formatting data)</td>
+</tr>
+<tr class="even">
+<td>Readability</td>
+<td>Human-readable</td>
+<td>May require specific software</td>
+</tr>
+<tr class="odd">
+<td>Use case</td>
+<td>Notes, code, configuration</td>
+<td>Reports, documents, presentations</td>
+</tr>
+</tbody>
+</table>
+</section></section>
+<section>
+<section id="file-metadata" class="title-slide slide level1 center">
+<h1>File Metadata</h1>
+<p>Some file formats, like videos, images, or documents, need more structure than simple text files. To read these files correctly, computers must store <strong>extra information</strong> about the file. This extra information is called <strong>metadata</strong>, which means “<strong>data about data</strong>.”</p>
+<p>File metadata describes important details about the file’s contents, such as:</p>
+<ul>
+<li>File type and format</li>
+<li>File size</li>
+<li>Creation or modification date</li>
+<li>Author or source information</li>
+</ul>
+<p>Metadata helps the operating system or application understand how to open, display, or process the file. It is usually stored at the <strong>beginning</strong> of the file, before the actual data, in a section called the <strong>file header</strong>.</p>
+
+<img data-src="_assets/file_systems/img8.png" width="450" class="r-stretch quarto-figure-center"><p class="caption">A photo’s data and its metadata</p></section>
+<section id="example-bitmap-photo-bmp" class="slide level2">
+<h2>Example: Bitmap Photo (BMP)</h2>
+<p>A BMP file starts with the letters <code>BM</code>, followed by metadata fields such as the file size, offset, header size, photo width and height, planes and color depth. The actual pixel data comes after the metadata.</p>
+
+<img data-src="_assets/file_systems/img9.png" class="r-stretch quarto-figure-center"><p class="caption">Metadata of a BMP photo. Source and details: <a href="https://en.wikipedia.org/wiki/BMP_file_format" target="_blank">BMP file format</a></p></section>
+<section id="files-and-file-formats" class="slide level2">
+<h2>Files and File Formats</h2>
+<p>Under the hood, all files are the same: <strong>long lists of numbers</strong>, stored as binary, on a storage device. Every file is made up of two main parts:</p>
+<ul>
+<li><strong>Metadata</strong>: information about the file (e.g., name, size, type, and structure).</li>
+<li><strong>Actual data</strong>: the real content inside the file (e.g., text, image pixels, or audio signals).</li>
+</ul>
+<p>The <strong>file format</strong> determines how the data and metadata are organized. Without the correct file format, a program wouldn’t know how to read or display the data properly. In other words, file formats are the key that unlocks the meaning of the binary data inside a file.</p>
+
+<img data-src="_assets/file_systems/img10.png" width="400" class="r-stretch quarto-figure-center"><p class="caption">The same image stored in two different formats: vector vs.&nbsp;bitmap</p></section></section>
+<section>
+<section id="file-systems" class="title-slide slide level1 center">
+<h1>File Systems</h1>
+<p>A <strong>file system</strong> is the method an operating system uses to <strong>store</strong>, <strong>organize</strong>, and <strong>manage</strong> files on a storage device.</p>
+</section>
+<section id="saving-files-to-storage-devices" class="slide level2">
+<h2>Saving Files to Storage Devices</h2>
+<p>When you save a file, the file system decides <strong>where</strong> and <strong>how</strong> the data is stored on the device. It keeps track of:</p>
+<ul>
+<li>File names and locations</li>
+<li>File size and type</li>
+<li>Date created or modified</li>
+<li>Access permissions (who can read or edit the file)</li>
+</ul>
+<p>The file system acts like a <strong>digital librarian</strong>, keeping everything in order so files can easily be found and opened later. Without a file system, data on a storage device would be unorganized, making it impossible to locate or retrieve files.</p>
+<p>Common file systems include:</p>
+<ul>
+<li><strong>NTFS</strong>: used by Windows</li>
+<li><strong>APFS</strong>: used by macOS</li>
+<li><strong>EXT4</strong>: used by Linux</li>
+</ul>
+</section>
+<section id="how-the-file-system-manages-files-and-directories" class="slide level2">
+<h2>How the File System Manages Files and Directories</h2>
+<ul>
+<li>Organizes data into files with names, types, and sizes.</li>
+<li>Uses <strong>directories</strong> (folders) to group and arrange files.</li>
+<li>Creates a <strong>hierarchical structure</strong> starting from the <strong>root directory</strong>.</li>
+<li>Tracks each file’s location using allocation tables or indexes (e.g., FAT, inodes).</li>
+<li>Stores metadata: creation date, permissions, size, etc.</li>
+<li>Controls access with file permissions (read, write, execute).</li>
+<li>Supports operations like create, open, move, rename, and delete.</li>
+</ul>
+</section>
+<section id="windows-file-systems" class="slide level2">
+<h2>Windows File Systems</h2>
+<ul>
+<li><strong>NTFS</strong> (New Technology File System)
+<ul>
+<li>Supports partition sizes up to <strong>16 exabytes</strong> (in theory).</li>
+<li>More security features and extended attributes than FAT.</li>
+</ul></li>
+<li><strong>FAT32</strong> (File Allocation Table 32-bit)
+<ul>
+<li>Supports partition sizes up to <strong>2 terabytes</strong>.</li>
+<li>Limits file size to <strong>4 GB</strong>.</li>
+<li>Used by Windows XP and older versions.</li>
+</ul></li>
+</ul>
+</section>
+<section id="how-file-systems-work" class="slide level2">
+<h2>How File Systems Work</h2>
+<h3 id="storage-in-early-computers">Storage in Early Computers</h3>
+<ul>
+<li>In the early days of computing, when systems could perform only one task at a time, storage was managed as <strong>one continuous file</strong>.</li>
+<li>Data was written <strong>sequentially</strong>, starting from the beginning of the storage medium.</li>
+<li>As the computer produced output, data filled the storage in order, until the entire capacity was used.</li>
+<li>There was no concept of folders or file systems: all data existed as a <strong>single stream</strong> of information.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_assets/file_systems/img13.png"></p>
+<figcaption>Early storage: one continuous stream of bits</figcaption>
+</figure>
+</div>
+<h3 id="a-simple-file-system">A Simple File System</h3>
+<p>As computing power and storage capacity grew, more than one file needed to be stored at the same time. How would we store multiple files?</p>
+<ul>
+<li>The simplest solution is to store files <strong>back-to-back</strong>.</li>
+<li>But how would the computer know where each file <strong>begins and ends</strong>?</li>
+<li>Storage devices have no idea what a file is. They are just a mechanism for storing data.</li>
+</ul>
+<h3 id="solution-the-directory-file">Solution: The Directory File</h3>
+<p>A <strong>directory file</strong> is a special file added to the storage so the OS can find the files on the disk.</p>
+<ul>
+<li>It is kept at <strong>location zero</strong> (before any data).</li>
+<li>It includes the <strong>names of all the files</strong> in storage (e.g., the file <code>Todo.txt</code> has the filename <code>Todo</code> and the extension <code>txt</code>).</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_assets/file_systems/img14.png"></p>
+<figcaption>Files stored back-to-back, with a directory file at the start</figcaption>
+</figure>
+</div>
+<p>The directory file also stores <strong>metadata</strong> about each file, including where it begins and how long it is:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_assets/file_systems/img15.png"></p>
+<figcaption>A directory file storing metadata for each file</figcaption>
+</figure>
+</div>
+<p>If a file is added, removed, or renamed, the information in the directory file must be <strong>updated</strong>.</p>
+</section>
+<section id="main-issue-with-the-simple-file-system" class="slide level2">
+<h2>Main Issue with the Simple File System</h2>
+<p>Stacking files back-to-back is <strong>not</strong> a proper solution for storing data:</p>
+<ul>
+<li>Files <strong>grow</strong> in size as more data is added to them.</li>
+<li>A growing file will <strong>overwrite</strong> the data of the file next to it.</li>
+<li>Example: if data is added to <code>Todo.txt</code>, there is no room for it without overwriting part of <code>OS.exe</code>.</li>
+</ul>
+</section>
+<section id="modern-file-systems-blocks" class="slide level2">
+<h2>Modern File Systems: Blocks</h2>
+<p>To avoid overwriting the data of other files, modern file systems:</p>
+<ul>
+<li>Store data in <strong>fixed-size blocks</strong>.</li>
+<li>Leave extra space for a file to grow. This extra space is called <strong>slack space</strong>.</li>
+<li>Use the same block size for all file data, which simplifies management.</li>
+<li>Let a file occupy <strong>more than one block</strong> if needed or as it grows.</li>
+</ul>
+
+<img data-src="_assets/file_systems/img18.png" class="r-stretch quarto-figure-center"><p class="caption">Files stored in fixed-size blocks, with slack space at the end of each block</p><p>The directory file keeps track of <strong>each block</strong> occupied by a file:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Created</th>
+<th>Last Modified</th>
+<th>Owner</th>
+<th>Read/Write</th>
+<th>Blocks</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Todo.txt</td>
+<td>11:15 2/2/2017</td>
+<td>10:14 9/26/2019</td>
+<td>Michael</td>
+<td>r/w</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>OS.exe</td>
+<td>14:15 12/1/2015</td>
+<td>14:15 12/1/2015</td>
+<td>admin</td>
+<td>r</td>
+<td>2, 9, 5</td>
+</tr>
+<tr class="odd">
+<td>exam.docx</td>
+<td>22:14 9/20/2019</td>
+<td>10:30 9/26/2019</td>
+<td>Gabriel</td>
+<td>r/w</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>code.c</td>
+<td>10:14 8/26/2021</td>
+<td>14:14 9/14/2021</td>
+<td>Helen</td>
+<td>r/w</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<p>Using blocks:</p>
+<ul>
+<li>Allows files to be broken into chunks and stored across many blocks.</li>
+<li>Lets files easily grow or shrink in size:
+<ul>
+<li><strong>Grow</strong> → needs more space → a new free block is allocated.</li>
+<li><strong>Shrink</strong> → space is no longer needed → the reserved block is deallocated.</li>
+</ul></li>
+<li>A file can grow to occupy as many blocks as needed.</li>
+<li>Blocks might not be located next to each other, or even in order.</li>
+</ul>
+</section>
+<section id="fragmentation" class="slide level2">
+<h2>Fragmentation</h2>
+<p>A file being broken up across storage is called <strong>fragmentation</strong>. It is the result of files being created, deleted and modified.</p>
+<ul>
+<li>Fragmentation occurs when a file is split into multiple parts and stored in different locations on the storage device, instead of in one continuous block.</li>
+<li>This increases the time needed to access the file, especially on <strong>hard disk drives (HDDs)</strong>, which rely on moving mechanical parts to read data.</li>
+<li>Large files spread across many scattered blocks take longer to read, because the disk head must move back and forth to gather all the pieces.</li>
+</ul>
+</section>
+<section id="defragmentation" class="slide level2">
+<h2>Defragmentation</h2>
+<p><strong>Defragmentation</strong> is the process of reorganizing data on a storage device so that each file’s blocks are stored <strong>together and in the correct order</strong>. This reduces fragmentation, allowing the operating system to access files more quickly and improving overall disk performance.</p>
+<p>Modern file systems are designed to minimize the need for defragmentation:</p>
+<ul>
+<li>Larger block sizes create more slack space, reducing the need to allocate additional blocks.</li>
+<li><strong>Scatter allocation</strong>: files may be spread across the disk to leave enough space for growth.</li>
+<li>Defragmentation can run in the background without interrupting normal use.</li>
+</ul>
+<p>Impact of newer storage hardware:</p>
+<ul>
+<li>Modern HDDs are faster and can read fragmented data more efficiently thanks to parallelization.</li>
+<li><strong>SSDs do not benefit from defragmentation</strong>, because their data is not physically separated in a meaningful way. Running defragmentation on an SSD <strong>reduces its lifespan</strong> without improving performance, so it is <strong>not recommended</strong>.</li>
+</ul>
+</section>
+<section id="flat-vs.-hierarchical-file-systems" class="slide level2">
+<h2>Flat vs.&nbsp;Hierarchical File Systems</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 59%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Flat File System</th>
+<th>Hierarchical File System</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>All data is saved on <strong>one level</strong></td>
+<td>Related files can be stored in <strong>directories</strong> (also known as <strong>folders</strong>)</td>
+</tr>
+<tr class="even">
+<td>Similar to the examples above</td>
+<td>Directories can be <strong>nested</strong> inside other directories</td>
+</tr>
+<tr class="odd">
+<td>No notion of directories</td>
+<td>Extra metadata is needed to track what is a file and what is a directory</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>The top directory is known as the <strong>root directory</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_assets/file_systems/img19.png" width="450"></p>
+<figcaption>A hierarchical file system: directories nested inside directories</figcaption>
+</figure>
+</div>
+<p>To support directories inside directories, the directory file needs an extra column that marks which entries are directories:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_assets/file_systems/img17.png"></p>
+<figcaption>A directory file with a “Directory” column</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_assets/file_systems/img16.png" width="450"></p>
+<figcaption>The hierarchical directory structure of a Linux system, starting from the root <code>/</code></figcaption>
+</figure>
+</div>
+</section>
+<section id="activities" class="slide level2 scrollable">
+<h2>Activities</h2>
+<h3 id="manipulate-files-using-cmd">Manipulate Files Using CMD</h3>
+<ol type="1">
+<li>Open the command prompt (<code>cmd</code>).</li>
+<li>Navigate to the desktop.</li>
+<li>Create a directory called <code>meals</code>.</li>
+<li>Create a file called <code>breakfast</code>.</li>
+<li>Write the line <code>coffee</code> inside the file.</li>
+<li>Write the line <code>toasts</code>.</li>
+<li>Open the file.</li>
+</ol>
+<p>Some useful commands:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bat number-lines code-with-copy"><code class="sourceCode dosbat"><span id="cb2-1"><a aria-label="1"></a><span class="bu">cd</span> desktop</span>
+<span id="cb2-2"><a aria-label="2"></a><span class="bu">mkdir</span> meals</span>
+<span id="cb2-3"><a aria-label="3"></a><span class="bu">echo</span> coffee <span class="kw">&gt;</span> breakfast.txt</span>
+<span id="cb2-4"><a aria-label="4"></a><span class="bu">type</span> breakfast.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<h3 id="view-raw-data-in-hexadecimal">View Raw Data in Hexadecimal</h3>
+<p>In PowerShell, you can view the raw bytes of a file in hexadecimal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource powershell number-lines code-with-copy"><code class="sourceCode powershell"><span id="cb3-1"><a aria-label="1"></a>format-hex filename</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section></section>
+<section>
+<section id="deleting-files" class="title-slide slide level1 center">
+<h1>Deleting Files</h1>
 
 </section>
-
-<section id="segmentation" class="title-slide slide level1 center">
-<h1>Segmentation</h1>
+<section id="how-does-deleting-a-file-work" class="slide level2">
+<h2>How Does Deleting a File Work?</h2>
+<ul>
+<li>The user experience varies across operating systems, but the underlying behavior is largely the same.</li>
+<li>Most operating systems provide a <strong>Recycle Bin</strong> (or <strong>Trash</strong>) directory. When you use the default delete command, the file is <strong>moved</strong> to this directory rather than removed immediately.</li>
+<li>The Recycle Bin works like any other folder: files can be recovered simply by moving them out of the bin.</li>
+</ul>
+</section>
+<section id="deleting-a-file-permanently" class="slide level2">
+<h2>Deleting a File Permanently</h2>
+<p>To remove a file permanently, it must be deleted <strong>bypassing the Recycle Bin</strong>, either with a special delete command (e.g., <strong>Shift + Delete</strong> on Windows) or with command-line tools that do not move the file to the bin.</p>
+<p>You might think that clicking “Empty Recycle Bin” actually deletes your files. But how does it really work? Does it move the files to a “Recycle Bin 2”? Not quite. To understand, remember how data is stored: in <strong>blocks</strong> on the storage device.</p>
+<p><strong>Answer:</strong> the OS <strong>removes the file from its directory file</strong>. The operating system no longer “knows” about the file (there is no way to reference it), and its blocks are considered <strong>free space</strong>.</p>
+</section>
+<section id="is-the-data-really-gone" class="slide level2">
+<h2>Is the Data Really Gone?</h2>
+<ul>
+<li>Data deleted this way <strong>can still be recovered</strong>!</li>
+<li>Recovery can be very difficult: optimizing data recovery programs is an open field of research.</li>
+<li>In principle, you can view all the bits in free space and recover the data directly.</li>
+<li>The problem: the longer the bits stay in free space, the more likely they will be <strong>overwritten</strong> by a new file or block. Eventually, the data can become unrecoverable in its original form.</li>
+</ul>
+</section></section>
+<section id="topics-for-further-research" class="title-slide slide level1 center">
+<h1>Topics for Further Research</h1>
+<ul>
+<li>How to view and understand file metadata</li>
+<li>The difference between deleting, recycling, and wiping your data on different operating systems</li>
+<li>How file recovery works</li>
+</ul>
 
 
 </section>
@@ -200,7 +765,7 @@
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"\u003ci class=\"fas fa-gear\">\u003c/i>","content":"\u003cul class=\"slide-menu-items\">\n\u003cli class=\"slide-tool-item active\" data-item=\"0\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\">\u003ckbd>f\u003c/kbd> Fullscreen\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"1\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\">\u003ckbd>s\u003c/kbd> Speaker View\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"2\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\">\u003ckbd>o\u003c/kbd> Slide Overview\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"3\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\">\u003ckbd>e\u003c/kbd> PDF Export Mode\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"4\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\">\u003ckbd>r\u003c/kbd> Scroll View Mode\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"5\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\">\u003ckbd>?\u003c/kbd> Keyboard Help\u003c/a>\u003c/li>\n\u003c/ul>"}],"openButton":true,"openButtonLabel":"Slide menu"},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -455,7 +1020,8 @@
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }
           // Inspect non-navigation links and adorn them if external
-         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          window.quartoDecorateExternalLinks = function (root) {
+         var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
           for (var i=0; i<links.length; i++) {
             const link = links[i];
             if (!isInternal(link.href)) {
@@ -464,8 +1030,69 @@
               if (link.dataset.originalHref !== undefined) {
                 link.href = link.dataset.originalHref;
               }
+              if (!link.classList.contains('no-external-icon')) {
+              }
             }
           }
+          };
+          window.quartoDecorateExternalLinks(window.document);
+        // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+        // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+        const hideOnEscAndFocusOut = {
+          name: 'hideOnEscAndFocusOut',
+          defaultValue: true,
+          fn(instance) {
+            const dismiss = () => {
+              // A show scheduled by the trigger delay would otherwise reopen it
+              instance.clearDelayTimeouts();
+              instance.hide();
+            };
+            const onKeyDown = (event) => {
+              if (event.key !== 'Escape') {
+                return;
+              }
+              // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+              // except an open reveal.js slide menu, which Esc should close too.
+              // The menu handles keys only when its keyboard option is on.
+              const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+                window.Reveal.getConfig().menu?.keyboard !== false;
+              if (!menuHandlesEsc) {
+                event.stopPropagation();
+              }
+              if (instance.popper.contains(window.document.activeElement)) {
+                // Disabled while refocusing so the focus trigger does not reopen it
+                instance.disable();
+                instance.reference.focus();
+                instance.enable();
+              }
+              dismiss();
+            };
+            const onFocusOut = (event) => {
+              const target = event.relatedTarget;
+              if (target && !instance.reference.contains(target) &&
+                  !instance.popper.contains(target)) {
+                dismiss();
+              }
+            };
+            // On the trigger too: a click trigger (code-annotations: select) has no
+            // blur handling. Attached for the instance's lifetime so leaving the
+            // trigger also cancels a show still pending on the trigger delay.
+            instance.reference.addEventListener('focusout', onFocusOut);
+            return {
+              onShow() {
+                window.document.addEventListener('keydown', onKeyDown, true);
+                instance.popper.addEventListener('focusout', onFocusOut);
+              },
+              onHide() {
+                window.document.removeEventListener('keydown', onKeyDown, true);
+                instance.popper.removeEventListener('focusout', onFocusOut);
+              },
+              onDestroy() {
+                instance.reference.removeEventListener('focusout', onFocusOut);
+              },
+            };
+          },
+        };
         function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
           const config = {
             allowHTML: true,
@@ -479,6 +1106,7 @@
             interactiveBorder: 10,
             theme: 'light-border',
             placement: 'bottom-start',
+            plugins: [hideOnEscAndFocusOut],
           };
           if (contentFn) {
             config.content = contentFn;

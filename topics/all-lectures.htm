@@ -9,13 +9,13 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.10.19">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.11.9">
 
   <title>{{&lt; var course.title &gt;}} – All lectures</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
@@ -37,7 +37,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-84b150702567ae7e15cad124fb9039e2.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-cc8b919cb54a81e0e7637d206f4c56fe.css">
   <script>
 
     window.document.addEventListener("DOMContentLoaded", function (_event) {
@@ -60,12 +60,6 @@
         window['quarto-listing-loaded']();
       }
     });
-
-    window.addEventListener('hashchange',() => {
-      if (window['quarto-listing-loaded']) {
-        window['quarto-listing-loaded']();
-      }
-    })
     </script>
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -161,8 +155,10 @@
   </style>
 <meta property="og:title" content="All lectures – Technical Support">
 <meta property="og:description" content="Listing for all lecture material provided in this course.">
-<meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/_assets/favicons/favicon-32x32.png">
+<meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/_assets/favicons/favicon-32x32.png">
 <meta property="og:site_name" content="Technical Support">
+<meta property="og:image:height" content="32">
+<meta property="og:image:width" content="32">
 </head>
 <body class="quarto-dark">
   <div class="reveal">
@@ -217,7 +213,7 @@
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"\u003ci class=\"fas fa-gear\">\u003c/i>","content":"\u003cul class=\"slide-menu-items\">\n\u003cli class=\"slide-tool-item active\" data-item=\"0\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\">\u003ckbd>f\u003c/kbd> Fullscreen\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"1\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\">\u003ckbd>s\u003c/kbd> Speaker View\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"2\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\">\u003ckbd>o\u003c/kbd> Slide Overview\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"3\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\">\u003ckbd>e\u003c/kbd> PDF Export Mode\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"4\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\">\u003ckbd>r\u003c/kbd> Scroll View Mode\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"5\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\">\u003ckbd>?\u003c/kbd> Keyboard Help\u003c/a>\u003c/li>\n\u003c/ul>"}],"openButton":true,"openButtonLabel":"Slide menu"},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -472,7 +468,8 @@
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }
           // Inspect non-navigation links and adorn them if external
-         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          window.quartoDecorateExternalLinks = function (root) {
+         var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
           for (var i=0; i<links.length; i++) {
             const link = links[i];
             if (!isInternal(link.href)) {
@@ -481,8 +478,69 @@
               if (link.dataset.originalHref !== undefined) {
                 link.href = link.dataset.originalHref;
               }
+              if (!link.classList.contains('no-external-icon')) {
+              }
             }
           }
+          };
+          window.quartoDecorateExternalLinks(window.document);
+        // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+        // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+        const hideOnEscAndFocusOut = {
+          name: 'hideOnEscAndFocusOut',
+          defaultValue: true,
+          fn(instance) {
+            const dismiss = () => {
+              // A show scheduled by the trigger delay would otherwise reopen it
+              instance.clearDelayTimeouts();
+              instance.hide();
+            };
+            const onKeyDown = (event) => {
+              if (event.key !== 'Escape') {
+                return;
+              }
+              // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+              // except an open reveal.js slide menu, which Esc should close too.
+              // The menu handles keys only when its keyboard option is on.
+              const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+                window.Reveal.getConfig().menu?.keyboard !== false;
+              if (!menuHandlesEsc) {
+                event.stopPropagation();
+              }
+              if (instance.popper.contains(window.document.activeElement)) {
+                // Disabled while refocusing so the focus trigger does not reopen it
+                instance.disable();
+                instance.reference.focus();
+                instance.enable();
+              }
+              dismiss();
+            };
+            const onFocusOut = (event) => {
+              const target = event.relatedTarget;
+              if (target && !instance.reference.contains(target) &&
+                  !instance.popper.contains(target)) {
+                dismiss();
+              }
+            };
+            // On the trigger too: a click trigger (code-annotations: select) has no
+            // blur handling. Attached for the instance's lifetime so leaving the
+            // trigger also cancels a show still pending on the trigger delay.
+            instance.reference.addEventListener('focusout', onFocusOut);
+            return {
+              onShow() {
+                window.document.addEventListener('keydown', onKeyDown, true);
+                instance.popper.addEventListener('focusout', onFocusOut);
+              },
+              onHide() {
+                window.document.removeEventListener('keydown', onKeyDown, true);
+                instance.popper.removeEventListener('focusout', onFocusOut);
+              },
+              onDestroy() {
+                instance.reference.removeEventListener('focusout', onFocusOut);
+              },
+            };
+          },
+        };
         function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
           const config = {
             allowHTML: true,
@@ -496,6 +554,7 @@
             interactiveBorder: 10,
             theme: 'light-border',
             placement: 'bottom-start',
+            plugins: [hideOnEscAndFocusOut],
           };
           if (contentFn) {
             config.content = contentFn;
@@ -610,7 +669,7 @@ Subtitle
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-date-sort="1755648000000" data-listing-file-modified-sort="1792031502984" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1873" data-listing-title-sort="Introduction to Computers" data-listing-filename-sort="introduction-to-computers.qmd">
+<tr data-index="0" data-listing-date-sort="1755648000000" data-listing-file-modified-sort="1794849474575" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1873" data-listing-title-sort="Introduction to Computers" data-listing-filename-sort="introduction-to-computers.qmd">
 <td>
 <span class="listing-date">2025-08-20</span>
 </td>
@@ -623,7 +682,7 @@ Subtitle
 
 </tr>
 
-<tr data-index="1" data-listing-date-sort="1756080000000" data-listing-file-modified-sort="1792031502984" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="25" data-listing-word-count-sort="4940" data-listing-title-sort="External components" data-listing-filename-sort="external-components.qmd">
+<tr data-index="1" data-listing-date-sort="1756080000000" data-listing-file-modified-sort="1794849474574" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="25" data-listing-word-count-sort="4940" data-listing-title-sort="External components" data-listing-filename-sort="external-components.qmd">
 <td>
 <span class="listing-date">2025-08-25</span>
 </td>
@@ -636,7 +695,7 @@ Subtitle
 
 </tr>
 
-<tr data-index="2" data-listing-date-sort="1756771200000" data-listing-file-modified-sort="1792031502984" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="17" data-listing-word-count-sort="3386" data-listing-title-sort="Internal Components" data-listing-filename-sort="internal-components.qmd">
+<tr data-index="2" data-listing-date-sort="1756771200000" data-listing-file-modified-sort="1794849474574" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="17" data-listing-word-count-sort="3386" data-listing-title-sort="Internal Components" data-listing-filename-sort="internal-components.qmd">
 <td>
 <span class="listing-date">2025-09-02</span>
 </td>
@@ -649,7 +708,7 @@ Subtitle
 
 </tr>
 
-<tr data-index="3" data-listing-date-sort="1757289600000" data-listing-file-modified-sort="1792031502984" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1176" data-listing-title-sort="CPU as a Man in box" data-listing-filename-sort="understanding-cpus.qmd">
+<tr data-index="3" data-listing-date-sort="1757289600000" data-listing-file-modified-sort="1794849474575" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1176" data-listing-title-sort="CPU as a Man in box" data-listing-filename-sort="understanding-cpus.qmd">
 <td>
 <span class="listing-date">2025-09-08</span>
 </td>
@@ -662,7 +721,7 @@ Subtitle
 
 </tr>
 
-<tr data-index="4" data-listing-date-sort="1757894400000" data-listing-file-modified-sort="1792031502789" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3099" data-listing-title-sort="Introduction to Binary" data-listing-filename-sort="introduction-to-binary.qmd">
+<tr data-index="4" data-listing-date-sort="1757894400000" data-listing-file-modified-sort="1794849474336" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3099" data-listing-title-sort="Introduction to Binary" data-listing-filename-sort="introduction-to-binary.qmd">
 <td>
 <span class="listing-date">2025-09-15</span>
 </td>
@@ -675,7 +734,7 @@ Subtitle
 
 </tr>
 
-<tr data-index="5" data-listing-date-sort="1757894400000" data-listing-file-modified-sort="1792031502789" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1838" data-listing-title-sort="Binary Math" data-listing-filename-sort="binary-math.qmd">
+<tr data-index="5" data-listing-date-sort="1757894400000" data-listing-file-modified-sort="1794849474335" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1838" data-listing-title-sort="Binary Math" data-listing-filename-sort="binary-math.qmd">
 <td>
 <span class="listing-date">2025-09-15</span>
 </td>
@@ -688,7 +747,7 @@ Subtitle
 
 </tr>
 
-<tr data-index="6" data-listing-date-sort="1757980800000" data-listing-file-modified-sort="1792031502984" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1669" data-listing-title-sort="Chipsets" data-listing-filename-sort="chipsets.qmd">
+<tr data-index="6" data-listing-date-sort="1757980800000" data-listing-file-modified-sort="1794849474574" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1669" data-listing-title-sort="Chipsets" data-listing-filename-sort="chipsets.qmd">
 <td>
 <span class="listing-date">2025-09-16</span>
 </td>
@@ -701,7 +760,7 @@ Subtitle
 
 </tr>
 
-<tr data-index="7" data-listing-date-sort="1758499200000" data-listing-file-modified-sort="1792031502789" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1930" data-listing-title-sort="Logic Gates and Boolean Algebra" data-listing-filename-sort="logic-gates-and-boolean-algebra.qmd">
+<tr data-index="7" data-listing-date-sort="1758499200000" data-listing-file-modified-sort="1794849474336" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1930" data-listing-title-sort="Logic Gates and Boolean Algebra" data-listing-filename-sort="logic-gates-and-boolean-algebra.qmd">
 <td>
 <span class="listing-date">2025-09-22</span>
 </td>
@@ -714,7 +773,7 @@ Subtitle
 
 </tr>
 
-<tr data-index="8" data-listing-date-sort="1759363200000" data-listing-file-modified-sort="1792031502789" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="371" data-listing-title-sort="Text in Computers" data-listing-filename-sort="text-in-computers.qmd">
+<tr data-index="8" data-listing-date-sort="1759363200000" data-listing-file-modified-sort="1794849474336" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="371" data-listing-title-sort="Text in Computers" data-listing-filename-sort="text-in-computers.qmd">
 <td>
 <span class="listing-date">2025-10-02</span>
 </td>
@@ -727,7 +786,7 @@ Subtitle
 
 </tr>
 
-<tr data-index="9" data-listing-date-sort="1759363200000" data-listing-file-modified-sort="1792031502789" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1049" data-listing-title-sort="Hexadecimal numbers" data-listing-filename-sort="hexadecimal-numbers.qmd">
+<tr data-index="9" data-listing-date-sort="1759363200000" data-listing-file-modified-sort="1794849474335" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1049" data-listing-title-sort="Hexadecimal numbers" data-listing-filename-sort="hexadecimal-numbers.qmd">
 <td>
 <span class="listing-date">2025-10-02</span>
 </td>
@@ -740,7 +799,7 @@ Subtitle
 
 </tr>
 
-<tr data-index="10" data-listing-date-sort="1760918400000" data-listing-file-modified-sort="1792031502975" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1257" data-listing-title-sort="BIOS, CMOS, UEFI" data-listing-filename-sort="bios_cmos_uefi.qmd">
+<tr data-index="10" data-listing-date-sort="1760918400000" data-listing-file-modified-sort="1794849474564" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1257" data-listing-title-sort="BIOS, CMOS, UEFI" data-listing-filename-sort="bios_cmos_uefi.qmd">
 <td>
 <span class="listing-date">2025-10-20</span>
 </td>
@@ -753,20 +812,7 @@ Subtitle
 
 </tr>
 
-<tr data-index="11" data-listing-date-sort="1761523200000" data-listing-file-modified-sort="1792031503007" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3" data-listing-title-sort="How files are saved in computers" data-listing-filename-sort="file-systems.qmd">
-<td>
-<span class="listing-date">2025-10-27</span>
-</td>
-<td>
-<a href="../topics/operating-systems/file-systems.html" class="title listing-title">How files are saved in computers</a>
-</td>
-<td>
-<span class="listing-subtitle">File Systems</span>
-</td>
-
-</tr>
-
-<tr data-index="12" data-listing-date-sort="1761609600000" data-listing-file-modified-sort="1792031503007" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1124" data-listing-title-sort="Introduction" data-listing-filename-sort="operating-system-intro.qmd">
+<tr data-index="11" data-listing-date-sort="1761609600000" data-listing-file-modified-sort="1794849474618" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1124" data-listing-title-sort="Introduction" data-listing-filename-sort="operating-system-intro.qmd">
 <td>
 <span class="listing-date">2025-10-28</span>
 </td>
@@ -779,7 +825,7 @@ Subtitle
 
 </tr>
 
-<tr data-index="13" data-listing-date-sort="1761782400000" data-listing-file-modified-sort="1792031503007" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="457" data-listing-title-sort="Installing OS" data-listing-filename-sort="operating-system-install.qmd">
+<tr data-index="12" data-listing-date-sort="1761782400000" data-listing-file-modified-sort="1794849474618" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="589" data-listing-title-sort="Installing OS" data-listing-filename-sort="operating-system-install.qmd">
 <td>
 <span class="listing-date">2025-10-30</span>
 </td>
@@ -792,7 +838,7 @@ Subtitle
 
 </tr>
 
-<tr data-index="14" data-listing-date-sort="1761868800000" data-listing-file-modified-sort="1792031503007" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1858" data-listing-title-sort="How is the OS organized?" data-listing-filename-sort="operating-systems-details.qmd">
+<tr data-index="13" data-listing-date-sort="1761868800000" data-listing-file-modified-sort="1794849474618" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1858" data-listing-title-sort="How is the OS organized?" data-listing-filename-sort="operating-systems-details.qmd">
 <td>
 <span class="listing-date">2025-10-31</span>
 </td>
@@ -805,7 +851,20 @@ Subtitle
 
 </tr>
 
-<tr data-index="15" data-listing-date-sort="1791849600000" data-listing-file-modified-sort="1792031502984" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="17" data-listing-word-count-sort="3342" data-listing-title-sort="Understanding CPUs" data-listing-filename-sort="understanding-cpus2.qmd">
+<tr data-index="14" data-listing-date-sort="1763251200000" data-listing-file-modified-sort="1794849474614" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1450" data-listing-title-sort="Disk Partitions" data-listing-filename-sort="disk-partitions.qmd">
+<td>
+<span class="listing-date">2025-11-16</span>
+</td>
+<td>
+<a href="../topics/operating-systems/disk-partitions.html" class="title listing-title">Disk Partitions</a>
+</td>
+<td>
+<span class="listing-subtitle">Partition styles, disk types and volumes</span>
+</td>
+
+</tr>
+
+<tr data-index="15" data-listing-date-sort="1791849600000" data-listing-file-modified-sort="1794849474575" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="17" data-listing-word-count-sort="3342" data-listing-title-sort="Understanding CPUs" data-listing-filename-sort="understanding-cpus2.qmd">
 <td>
 <span class="listing-date">2026-10-13</span>
 </td>
@@ -818,7 +877,7 @@ Subtitle
 
 </tr>
 
-<tr data-index="16" data-listing-date-sort="1791936000000" data-listing-file-modified-sort="1792031502984" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1789" data-listing-title-sort="RAM" data-listing-filename-sort="ram.qmd">
+<tr data-index="16" data-listing-date-sort="1791936000000" data-listing-file-modified-sort="1794849474575" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1789" data-listing-title-sort="RAM" data-listing-filename-sort="ram.qmd">
 <td>
 <span class="listing-date">2026-10-14</span>
 </td>

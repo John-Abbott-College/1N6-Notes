@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.19">
+<meta name="generator" content="quarto-1.11.9">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-10-27">
+<meta name="dcterms.date" content="2025-11-16">
 
-<title>How files are saved in computers – Technical Support</title>
+<title>File Systems – Technical Support</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -27,6 +27,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -37,21 +72,24 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../topics/operating-systems/permissions_users_registries.pdf" rel="next">
+<link href="../../topics/operating-systems/disk-partitions.html" rel="prev">
 <link href="../../_assets/favicons/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e21500bb30e7ce080c64316834ee3be8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-09606243866072c1aa00d3ff38fff5fe.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e21500bb30e7ce080c64316834ee3be8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b1528b1cba7e9f63f59baa7408a6f56.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-3db608c3aac2db220582703da11e8ac9.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b1528b1cba7e9f63f59baa7408a6f56.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c8d27ff7f68ee7408084917cd79dddba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-26582cbb2517c20bd3c3c4d20a79438f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-c8d27ff7f68ee7408084917cd79dddba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-904f336e53e28b090f5695927510fa6a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-3f2b062867d74b1ee8f7672d8f9694b3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-904f336e53e28b090f5695927510fa6a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -82,13 +120,15 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../_assets/css/styles.css">
-<meta property="og:title" content="How files are saved in computers – Technical Support">
-<meta property="og:description" content="File Systems">
-<meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/operating-systems/_assets/favicons/favicon-32x32.png">
+<meta property="og:title" content="File Systems – Technical Support">
+<meta property="og:description" content="How files are saved in computers">
+<meta property="og:image" content="https://John-Abbott-College.github.io/1N6-Notes/topics/operating-systems/_assets/file_systems/img0.png">
 <meta property="og:site_name" content="Technical Support">
+<meta property="og:image:height" content="310">
+<meta property="og:image:width" content="802">
 </head>
 
-<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar docked nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -111,6 +151,7 @@ ul.task-list li input[type="checkbox"] {
       for (let i=0; i < toggles.length; i++) {
         const toggle = toggles[i];
         if (toggle) {
+          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
           if (alternate) {
             toggle.classList.add("alternate");
           } else {
@@ -140,13 +181,19 @@ ul.task-list li input[type="checkbox"] {
       manageTransitions('#quarto-margin-sidebar .nav-link', true);
       // Switch the toggles
       setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455).
+    // Not run on load: stylesheets are set before first paint there, and
+    // scrolling would undo the scroll to a URL fragment (#14973).
+    // The one pixel nudge keeps the reader where they were.
+    const refreshSafariScrollbar = () => {
       if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
         manageTransitions("body", false);
-        window.scrollTo(0, 1);
+        const scrollY = window.scrollY;
+        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
         setTimeout(() => {
-          window.scrollTo(0, 0);
+          window.scrollTo(0, scrollY);
           manageTransitions("body", true);
         }, 40);
       }
@@ -240,6 +287,7 @@ ul.task-list li input[type="checkbox"] {
       // Read the current dark / light value
       let toAlternate = !hasAlternateSentinel();
       toggleColorMode(toAlternate);
+      refreshSafariScrollbar();
       setStyleSentinel(toAlternate);
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
@@ -254,7 +302,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
@@ -265,8 +313,7 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Technical Support</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -290,17 +337,18 @@ ul.task-list li input[type="checkbox"] {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
 </div>
+            <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">How files are saved in computers</li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item">Course Notes</li><li class="breadcrumb-item"><a href="../../topics/operating-systems/operating-system-intro.html">Operating Systems</a></li><li class="breadcrumb-item"><a href="../../topics/operating-systems/file-systems.html">File Systems</a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
@@ -308,27 +356,21 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto" aria-label="Section">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Course Notes</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">Course Notes</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Hardware</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-2-label">Hardware</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../topics/hardware/introduction-to-computers.html" class="sidebar-item-text sidebar-link">
@@ -381,13 +423,10 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Data representation</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-3-label">Data representation</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../topics/data-representation/introduction-to-binary.html" class="sidebar-item-text sidebar-link">
@@ -422,23 +461,14 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Operating Systems</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-controls="quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-4-label">Operating Systems</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-4" aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../topics/operating-systems/operating-system-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../topics/operating-systems/operating-system-install.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Installing OS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -449,8 +479,20 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../topics/operating-systems/disk_partitions_file_systems.pdf" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Disk and File Systems</span></a>
+  <a href="../../topics/operating-systems/operating-system-install.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Installing OS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/operating-systems/disk-partitions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Disk Partitions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/operating-systems/file-systems.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">File Systems</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -481,23 +523,70 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#paging" id="toc-paging" class="nav-link active" data-scroll-target="#paging">Paging</a></li>
-  <li><a href="#segmentation" id="toc-segmentation" class="nav-link" data-scroll-target="#segmentation">Segmentation</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <ul>
+  <li><a href="#whats-a-file" id="toc-whats-a-file" class="nav-link" data-scroll-target="#whats-a-file">What’s a file?</a></li>
+  <li><a href="#computer-file-system" id="toc-computer-file-system" class="nav-link" data-scroll-target="#computer-file-system">Computer file-system</a></li>
+  <li><a href="#what-is-a-file-extension" id="toc-what-is-a-file-extension" class="nav-link" data-scroll-target="#what-is-a-file-extension">What is a File Extension?</a>
+  <ul class="collapse">
+  <li><a href="#why-dont-i-see-them-in-file-explorer" id="toc-why-dont-i-see-them-in-file-explorer" class="nav-link" data-scroll-target="#why-dont-i-see-them-in-file-explorer">Why don’t I see them in File Explorer?</a></li>
+  <li><a href="#why-do-we-use-file-extensions" id="toc-why-do-we-use-file-extensions" class="nav-link" data-scroll-target="#why-do-we-use-file-extensions">Why do we use File Extensions?</a></li>
+  </ul></li>
+  <li><a href="#common-file-formats" id="toc-common-file-formats" class="nav-link" data-scroll-target="#common-file-formats">Common file formats</a></li>
+  </ul></li>
+  <li><a href="#text-files" id="toc-text-files" class="nav-link" data-scroll-target="#text-files">Text Files</a>
+  <ul>
+  <li><a href="#text-files-vs.-formatted-text-files" id="toc-text-files-vs.-formatted-text-files" class="nav-link" data-scroll-target="#text-files-vs.-formatted-text-files">Text Files vs.&nbsp;Formatted Text Files</a></li>
+  </ul></li>
+  <li><a href="#file-metadata" id="toc-file-metadata" class="nav-link" data-scroll-target="#file-metadata">File Metadata</a>
+  <ul>
+  <li><a href="#example-bitmap-photo-bmp" id="toc-example-bitmap-photo-bmp" class="nav-link" data-scroll-target="#example-bitmap-photo-bmp">Example: Bitmap Photo (BMP)</a></li>
+  <li><a href="#files-and-file-formats" id="toc-files-and-file-formats" class="nav-link" data-scroll-target="#files-and-file-formats">Files and File Formats</a></li>
+  </ul></li>
+  <li><a href="#file-systems" id="toc-file-systems" class="nav-link" data-scroll-target="#file-systems">File Systems</a>
+  <ul>
+  <li><a href="#saving-files-to-storage-devices" id="toc-saving-files-to-storage-devices" class="nav-link" data-scroll-target="#saving-files-to-storage-devices">Saving Files to Storage Devices</a></li>
+  <li><a href="#how-the-file-system-manages-files-and-directories" id="toc-how-the-file-system-manages-files-and-directories" class="nav-link" data-scroll-target="#how-the-file-system-manages-files-and-directories">How the File System Manages Files and Directories</a></li>
+  <li><a href="#windows-file-systems" id="toc-windows-file-systems" class="nav-link" data-scroll-target="#windows-file-systems">Windows File Systems</a></li>
+  <li><a href="#how-file-systems-work" id="toc-how-file-systems-work" class="nav-link" data-scroll-target="#how-file-systems-work">How File Systems Work</a>
+  <ul class="collapse">
+  <li><a href="#storage-in-early-computers" id="toc-storage-in-early-computers" class="nav-link" data-scroll-target="#storage-in-early-computers">Storage in Early Computers</a></li>
+  <li><a href="#a-simple-file-system" id="toc-a-simple-file-system" class="nav-link" data-scroll-target="#a-simple-file-system">A Simple File System</a></li>
+  <li><a href="#solution-the-directory-file" id="toc-solution-the-directory-file" class="nav-link" data-scroll-target="#solution-the-directory-file">Solution: The Directory File</a></li>
+  </ul></li>
+  <li><a href="#main-issue-with-the-simple-file-system" id="toc-main-issue-with-the-simple-file-system" class="nav-link" data-scroll-target="#main-issue-with-the-simple-file-system">Main Issue with the Simple File System</a></li>
+  <li><a href="#modern-file-systems-blocks" id="toc-modern-file-systems-blocks" class="nav-link" data-scroll-target="#modern-file-systems-blocks">Modern File Systems: Blocks</a></li>
+  <li><a href="#fragmentation" id="toc-fragmentation" class="nav-link" data-scroll-target="#fragmentation">Fragmentation</a></li>
+  <li><a href="#defragmentation" id="toc-defragmentation" class="nav-link" data-scroll-target="#defragmentation">Defragmentation</a></li>
+  <li><a href="#flat-vs.-hierarchical-file-systems" id="toc-flat-vs.-hierarchical-file-systems" class="nav-link" data-scroll-target="#flat-vs.-hierarchical-file-systems">Flat vs.&nbsp;Hierarchical File Systems</a></li>
+  <li><a href="#activities" id="toc-activities" class="nav-link" data-scroll-target="#activities">Activities</a>
+  <ul class="collapse">
+  <li><a href="#manipulate-files-using-cmd" id="toc-manipulate-files-using-cmd" class="nav-link" data-scroll-target="#manipulate-files-using-cmd">Manipulate Files Using CMD</a></li>
+  <li><a href="#view-raw-data-in-hexadecimal" id="toc-view-raw-data-in-hexadecimal" class="nav-link" data-scroll-target="#view-raw-data-in-hexadecimal">View Raw Data in Hexadecimal</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#deleting-files" id="toc-deleting-files" class="nav-link" data-scroll-target="#deleting-files">Deleting Files</a>
+  <ul>
+  <li><a href="#how-does-deleting-a-file-work" id="toc-how-does-deleting-a-file-work" class="nav-link" data-scroll-target="#how-does-deleting-a-file-work">How Does Deleting a File Work?</a></li>
+  <li><a href="#deleting-a-file-permanently" id="toc-deleting-a-file-permanently" class="nav-link" data-scroll-target="#deleting-a-file-permanently">Deleting a File Permanently</a></li>
+  <li><a href="#is-the-data-really-gone" id="toc-is-the-data-really-gone" class="nav-link" data-scroll-target="#is-the-data-really-gone">Is the Data Really Gone?</a></li>
+  </ul></li>
+  <li><a href="#topics-for-further-research" id="toc-topics-for-further-research" class="nav-link" data-scroll-target="#topics-for-further-research">Topics for Further Research</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content" tabindex="-1">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item">Course Notes</li><li class="breadcrumb-item"><a href="../../topics/operating-systems/operating-system-intro.html">Operating Systems</a></li><li class="breadcrumb-item"><a href="../../topics/operating-systems/file-systems.html">File Systems</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">How files are saved in computers</h1>
-<p class="subtitle lead">File Systems</p>
+<h1 class="title">File Systems</h1>
+<p class="subtitle lead">How files are saved in computers</p>
 </div>
 
 
@@ -508,14 +597,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 27, 2025</p>
+      <p class="date">November 16, 2025</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">October 15, 2026</p>
+      <p class="date-modified">November 16, 2026</p>
     </div>
   </div>
     
@@ -526,11 +615,536 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="paging" class="level1">
-<h1>Paging</h1>
+<p>Adapted from the original <a href="./disk_partitions_file_systems.pdf" target="_blank">slides</a> with the help of Claude AI for restructuring.</p>
+<p>This page covers how files are organized once a disk has been partitioned and formatted. For partition styles, disk types and volumes, see <a href="../../topics/operating-systems/disk-partitions.html">Disk Partitions</a>.</p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<blockquote class="blockquote">
+<p>This section was made by Sandy Bultena for <strong>Programming in Science</strong> (Fall 2024). All credits and thanks to her.</p>
+</blockquote>
+<p>Computers only think in terms of 1s and 0s (binary). Every bit of information on your computer is coded in binary and the your computer will translate one set of of 1s and 0s to another when displaying information on your screen.</p>
+<p><img src="_assets/file_systems/img0.png" class="img-fluid" style="width:80.0%"></p>
+<section id="whats-a-file" class="level2">
+<h2 class="anchored" data-anchor-id="whats-a-file">What’s a file?</h2>
+<p>On a computer, you probably have pictures, word documents, saved video games, applications, code, plus a whole lot more. It would be very difficult if every time you opened Word, every document that you ever wrote was all smushed together.</p>
+<p>So, to make your life easier, your computer organizes data into discrete elements, called files. Each file has the data for one thing only, for example, one picture, one Word Document, one application, etc.</p>
+<p>In the old days, files used to be a document that was printed on paper. Today, most people refer to files as a document of some kind (picture, code, Word, etc) that is stored on your computer.</p>
 </section>
-<section id="segmentation" class="level1">
-<h1>Segmentation</h1>
+<section id="computer-file-system" class="level2">
+<h2 class="anchored" data-anchor-id="computer-file-system">Computer file-system</h2>
+<p>To make the transition from storing files on paper, in paper folders, in filing cabinets, to storing files on computers easier, the powers that be decided to use the same names, i.e.&nbsp;files and folders.</p>
+<blockquote class="blockquote">
+<p>NOTE: before computers were used everywhere, folders used to be called directories and the words mean EXACTLY the same thing, so if your teachers forget, and says “directory”, remember that they actually mean folder.</p>
+</blockquote>
+<p>So, in a folder you can have files and other folders.</p>
+<p>Since folders are not longer physical things, we need a way to envision them.</p>
+<p>In short, folders (or directories) are organized into a tree format.</p>
+<pre><code>My Documents
+     | --- English
+     |   |-&gt; Assignment 1.docx
+     |   |-&gt; Assignment 2.docx
+     | --- Programming
+     |   | --- Assignment 1
+     |   |   |-&gt; Instructions.pdf
+     |   |   |-&gt; code.py
+     |   |   |-&gt; output.txt
+     |   |   |--- Assignment 2
+     |   |   |   | -&gt; Instructions.pdf
+     |   |   |   | -&gt; code.py
+     |   |   |   | -&gt; output.csv</code></pre>
+</section>
+<section id="what-is-a-file-extension" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-a-file-extension">What is a File Extension?</h2>
+<p>The file extension is defined as the last bit of a file name that follows the last dot (.) Kinda of like a last name. It determines the <strong>file format</strong> of each file.</p>
+<p>Example: code.py has a file extension .py. A word document typically has the extension .docx, so the filename is typically assignment 1.docx.</p>
+<section id="why-dont-i-see-them-in-file-explorer" class="level3">
+<h3 class="anchored" data-anchor-id="why-dont-i-see-them-in-file-explorer">Why don’t I see them in File Explorer?</h3>
+<p>The developers at Microsoft have designed File Explorer to be easy(?) for non-programmers to use, and so by default they hide the file extension.</p>
+<p>But, you are now a programmer, and you absolutely need to know what the file extensions are…</p>
+<p>Please follow the instructions in: MS Windows Support - Show file extensions</p>
+</section>
+<section id="why-do-we-use-file-extensions" class="level3">
+<h3 class="anchored" data-anchor-id="why-do-we-use-file-extensions">Why do we use File Extensions?</h3>
+<p>The file extensions give a hint to the operating system (Windows/Linux/Mac) as to what type of data is in the file. So if the extension is .png then the operating system knows that it is a picture, and if you double click the filename in File Explorer, it will call the appropriate program that can show you the picture.</p>
+<p>Likewise if the file extension is .docx, double clicking the file in File Explorer will open Microsoft Office which in turn will read the file and display it to you.</p>
+</section>
+</section>
+<section id="common-file-formats" class="level2">
+<h2 class="anchored" data-anchor-id="common-file-formats">Common file formats</h2>
+<p>There are many types of files: text files, music files, photos and videos.A <strong>file format</strong> defines how data is organized and stored inside a file. When saving a file, the OS or application follows a specific standard format to structure the data correctly.</p>
+<ul>
+<li>Examples of standard file formats: <strong>JPEG</strong>, <strong>MP4</strong> and <strong>DOCX</strong>.</li>
+<li>Programmers can also create their own custom formats to store data in a unique way. However, a <strong>non-standard format</strong> can only be read by the applications that created it.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="_assets/file_systems/img11.jpg" class="img-fluid figure-img" width="350"></p>
+<figcaption>Common file formats</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="text-files" class="level1">
+<h1>Text Files</h1>
+<ul>
+<li>Text files are commonly known as <strong>.TXT</strong> files.</li>
+<li>They are often created and opened using programs like Notepad or TextEdit.</li>
+<li>Even though they display readable text, the data is still stored in <strong>binary</strong> (0s and 1s) inside the computer.</li>
+<li>Text files are useful for saving simple information, such as notes, configuration data, or source code.</li>
+<li>They do not include special formatting (like bold, color, or images), only text characters.</li>
+</ul>
+<p>Here is how the text <code>Hello World</code> is stored in binary, using ASCII:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 19%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>ASCII</th>
+<th>H</th>
+<th>e</th>
+<th>l</th>
+<th>l</th>
+<th>o</th>
+<th>(space)</th>
+<th>W</th>
+<th>o</th>
+<th>r</th>
+<th>l</th>
+<th>d</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Binary</td>
+<td>01001000</td>
+<td>01100101</td>
+<td>01101100</td>
+<td>01101100</td>
+<td>01101111</td>
+<td>00100000</td>
+<td>01010111</td>
+<td>01101111</td>
+<td>01110010</td>
+<td>01101100</td>
+<td>01100100</td>
+</tr>
+</tbody>
+</table>
+<section id="text-files-vs.-formatted-text-files" class="level2">
+<h2 class="anchored" data-anchor-id="text-files-vs.-formatted-text-files">Text Files vs.&nbsp;Formatted Text Files</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 29%">
+<col style="width: 56%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th>Text File (.TXT)</th>
+<th>Formatted Text File (.DOCX, .PDF)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Content type</td>
+<td>Plain text only</td>
+<td>Text with formatting, images, and layout</td>
+</tr>
+<tr class="even">
+<td>Editable with</td>
+<td>Notepad, TextEdit</td>
+<td>Word processors (e.g., MS Word)</td>
+</tr>
+<tr class="odd">
+<td>File size</td>
+<td>Small</td>
+<td>Larger (due to extra formatting data)</td>
+</tr>
+<tr class="even">
+<td>Readability</td>
+<td>Human-readable</td>
+<td>May require specific software</td>
+</tr>
+<tr class="odd">
+<td>Use case</td>
+<td>Notes, code, configuration</td>
+<td>Reports, documents, presentations</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="file-metadata" class="level1">
+<h1>File Metadata</h1>
+<p>Some file formats, like videos, images, or documents, need more structure than simple text files. To read these files correctly, computers must store <strong>extra information</strong> about the file. This extra information is called <strong>metadata</strong>, which means “<strong>data about data</strong>.”</p>
+<p>File metadata describes important details about the file’s contents, such as:</p>
+<ul>
+<li>File type and format</li>
+<li>File size</li>
+<li>Creation or modification date</li>
+<li>Author or source information</li>
+</ul>
+<p>Metadata helps the operating system or application understand how to open, display, or process the file. It is usually stored at the <strong>beginning</strong> of the file, before the actual data, in a section called the <strong>file header</strong>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="_assets/file_systems/img8.png" class="img-fluid figure-img" width="450"></p>
+<figcaption>A photo’s data and its metadata</figcaption>
+</figure>
+</div>
+<section id="example-bitmap-photo-bmp" class="level2">
+<h2 class="anchored" data-anchor-id="example-bitmap-photo-bmp">Example: Bitmap Photo (BMP)</h2>
+<p>A BMP file starts with the letters <code>BM</code>, followed by metadata fields such as the file size, offset, header size, photo width and height, planes and color depth. The actual pixel data comes after the metadata.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="_assets/file_systems/img9.png" class="img-fluid figure-img"></p>
+<figcaption>Metadata of a BMP photo. Source and details: <a href="https://en.wikipedia.org/wiki/BMP_file_format" target="_blank">BMP file format</a></figcaption>
+</figure>
+</div>
+</section>
+<section id="files-and-file-formats" class="level2">
+<h2 class="anchored" data-anchor-id="files-and-file-formats">Files and File Formats</h2>
+<p>Under the hood, all files are the same: <strong>long lists of numbers</strong>, stored as binary, on a storage device. Every file is made up of two main parts:</p>
+<ul>
+<li><strong>Metadata</strong>: information about the file (e.g., name, size, type, and structure).</li>
+<li><strong>Actual data</strong>: the real content inside the file (e.g., text, image pixels, or audio signals).</li>
+</ul>
+<p>The <strong>file format</strong> determines how the data and metadata are organized. Without the correct file format, a program wouldn’t know how to read or display the data properly. In other words, file formats are the key that unlocks the meaning of the binary data inside a file.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="_assets/file_systems/img10.png" class="img-fluid figure-img" width="400"></p>
+<figcaption>The same image stored in two different formats: vector vs.&nbsp;bitmap</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="file-systems" class="level1">
+<h1>File Systems</h1>
+<p>A <strong>file system</strong> is the method an operating system uses to <strong>store</strong>, <strong>organize</strong>, and <strong>manage</strong> files on a storage device.</p>
+<section id="saving-files-to-storage-devices" class="level2">
+<h2 class="anchored" data-anchor-id="saving-files-to-storage-devices">Saving Files to Storage Devices</h2>
+<p>When you save a file, the file system decides <strong>where</strong> and <strong>how</strong> the data is stored on the device. It keeps track of:</p>
+<ul>
+<li>File names and locations</li>
+<li>File size and type</li>
+<li>Date created or modified</li>
+<li>Access permissions (who can read or edit the file)</li>
+</ul>
+<p>The file system acts like a <strong>digital librarian</strong>, keeping everything in order so files can easily be found and opened later. Without a file system, data on a storage device would be unorganized, making it impossible to locate or retrieve files.</p>
+<p>Common file systems include:</p>
+<ul>
+<li><strong>NTFS</strong>: used by Windows</li>
+<li><strong>APFS</strong>: used by macOS</li>
+<li><strong>EXT4</strong>: used by Linux</li>
+</ul>
+</section>
+<section id="how-the-file-system-manages-files-and-directories" class="level2">
+<h2 class="anchored" data-anchor-id="how-the-file-system-manages-files-and-directories">How the File System Manages Files and Directories</h2>
+<ul>
+<li>Organizes data into files with names, types, and sizes.</li>
+<li>Uses <strong>directories</strong> (folders) to group and arrange files.</li>
+<li>Creates a <strong>hierarchical structure</strong> starting from the <strong>root directory</strong>.</li>
+<li>Tracks each file’s location using allocation tables or indexes (e.g., FAT, inodes).</li>
+<li>Stores metadata: creation date, permissions, size, etc.</li>
+<li>Controls access with file permissions (read, write, execute).</li>
+<li>Supports operations like create, open, move, rename, and delete.</li>
+</ul>
+</section>
+<section id="windows-file-systems" class="level2">
+<h2 class="anchored" data-anchor-id="windows-file-systems">Windows File Systems</h2>
+<ul>
+<li><strong>NTFS</strong> (New Technology File System)
+<ul>
+<li>Supports partition sizes up to <strong>16 exabytes</strong> (in theory).</li>
+<li>More security features and extended attributes than FAT.</li>
+</ul></li>
+<li><strong>FAT32</strong> (File Allocation Table 32-bit)
+<ul>
+<li>Supports partition sizes up to <strong>2 terabytes</strong>.</li>
+<li>Limits file size to <strong>4 GB</strong>.</li>
+<li>Used by Windows XP and older versions.</li>
+</ul></li>
+</ul>
+</section>
+<section id="how-file-systems-work" class="level2">
+<h2 class="anchored" data-anchor-id="how-file-systems-work">How File Systems Work</h2>
+<section id="storage-in-early-computers" class="level3">
+<h3 class="anchored" data-anchor-id="storage-in-early-computers">Storage in Early Computers</h3>
+<ul>
+<li>In the early days of computing, when systems could perform only one task at a time, storage was managed as <strong>one continuous file</strong>.</li>
+<li>Data was written <strong>sequentially</strong>, starting from the beginning of the storage medium.</li>
+<li>As the computer produced output, data filled the storage in order, until the entire capacity was used.</li>
+<li>There was no concept of folders or file systems: all data existed as a <strong>single stream</strong> of information.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="_assets/file_systems/img13.png" class="img-fluid figure-img"></p>
+<figcaption>Early storage: one continuous stream of bits</figcaption>
+</figure>
+</div>
+</section>
+<section id="a-simple-file-system" class="level3">
+<h3 class="anchored" data-anchor-id="a-simple-file-system">A Simple File System</h3>
+<p>As computing power and storage capacity grew, more than one file needed to be stored at the same time. How would we store multiple files?</p>
+<ul>
+<li>The simplest solution is to store files <strong>back-to-back</strong>.</li>
+<li>But how would the computer know where each file <strong>begins and ends</strong>?</li>
+<li>Storage devices have no idea what a file is. They are just a mechanism for storing data.</li>
+</ul>
+</section>
+<section id="solution-the-directory-file" class="level3">
+<h3 class="anchored" data-anchor-id="solution-the-directory-file">Solution: The Directory File</h3>
+<p>A <strong>directory file</strong> is a special file added to the storage so the OS can find the files on the disk.</p>
+<ul>
+<li>It is kept at <strong>location zero</strong> (before any data).</li>
+<li>It includes the <strong>names of all the files</strong> in storage (e.g., the file <code>Todo.txt</code> has the filename <code>Todo</code> and the extension <code>txt</code>).</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="_assets/file_systems/img14.png" class="img-fluid figure-img"></p>
+<figcaption>Files stored back-to-back, with a directory file at the start</figcaption>
+</figure>
+</div>
+<p>The directory file also stores <strong>metadata</strong> about each file, including where it begins and how long it is:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="_assets/file_systems/img15.png" class="img-fluid figure-img"></p>
+<figcaption>A directory file storing metadata for each file</figcaption>
+</figure>
+</div>
+<p>If a file is added, removed, or renamed, the information in the directory file must be <strong>updated</strong>.</p>
+</section>
+</section>
+<section id="main-issue-with-the-simple-file-system" class="level2">
+<h2 class="anchored" data-anchor-id="main-issue-with-the-simple-file-system">Main Issue with the Simple File System</h2>
+<p>Stacking files back-to-back is <strong>not</strong> a proper solution for storing data:</p>
+<ul>
+<li>Files <strong>grow</strong> in size as more data is added to them.</li>
+<li>A growing file will <strong>overwrite</strong> the data of the file next to it.</li>
+<li>Example: if data is added to <code>Todo.txt</code>, there is no room for it without overwriting part of <code>OS.exe</code>.</li>
+</ul>
+</section>
+<section id="modern-file-systems-blocks" class="level2">
+<h2 class="anchored" data-anchor-id="modern-file-systems-blocks">Modern File Systems: Blocks</h2>
+<p>To avoid overwriting the data of other files, modern file systems:</p>
+<ul>
+<li>Store data in <strong>fixed-size blocks</strong>.</li>
+<li>Leave extra space for a file to grow. This extra space is called <strong>slack space</strong>.</li>
+<li>Use the same block size for all file data, which simplifies management.</li>
+<li>Let a file occupy <strong>more than one block</strong> if needed or as it grows.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="_assets/file_systems/img18.png" class="img-fluid figure-img"></p>
+<figcaption>Files stored in fixed-size blocks, with slack space at the end of each block</figcaption>
+</figure>
+</div>
+<p>The directory file keeps track of <strong>each block</strong> occupied by a file:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Created</th>
+<th>Last Modified</th>
+<th>Owner</th>
+<th>Read/Write</th>
+<th>Blocks</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Todo.txt</td>
+<td>11:15 2/2/2017</td>
+<td>10:14 9/26/2019</td>
+<td>Michael</td>
+<td>r/w</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>OS.exe</td>
+<td>14:15 12/1/2015</td>
+<td>14:15 12/1/2015</td>
+<td>admin</td>
+<td>r</td>
+<td>2, 9, 5</td>
+</tr>
+<tr class="odd">
+<td>exam.docx</td>
+<td>22:14 9/20/2019</td>
+<td>10:30 9/26/2019</td>
+<td>Gabriel</td>
+<td>r/w</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>code.c</td>
+<td>10:14 8/26/2021</td>
+<td>14:14 9/14/2021</td>
+<td>Helen</td>
+<td>r/w</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<p>Using blocks:</p>
+<ul>
+<li>Allows files to be broken into chunks and stored across many blocks.</li>
+<li>Lets files easily grow or shrink in size:
+<ul>
+<li><strong>Grow</strong> → needs more space → a new free block is allocated.</li>
+<li><strong>Shrink</strong> → space is no longer needed → the reserved block is deallocated.</li>
+</ul></li>
+<li>A file can grow to occupy as many blocks as needed.</li>
+<li>Blocks might not be located next to each other, or even in order.</li>
+</ul>
+</section>
+<section id="fragmentation" class="level2">
+<h2 class="anchored" data-anchor-id="fragmentation">Fragmentation</h2>
+<p>A file being broken up across storage is called <strong>fragmentation</strong>. It is the result of files being created, deleted and modified.</p>
+<ul>
+<li>Fragmentation occurs when a file is split into multiple parts and stored in different locations on the storage device, instead of in one continuous block.</li>
+<li>This increases the time needed to access the file, especially on <strong>hard disk drives (HDDs)</strong>, which rely on moving mechanical parts to read data.</li>
+<li>Large files spread across many scattered blocks take longer to read, because the disk head must move back and forth to gather all the pieces.</li>
+</ul>
+</section>
+<section id="defragmentation" class="level2">
+<h2 class="anchored" data-anchor-id="defragmentation">Defragmentation</h2>
+<p><strong>Defragmentation</strong> is the process of reorganizing data on a storage device so that each file’s blocks are stored <strong>together and in the correct order</strong>. This reduces fragmentation, allowing the operating system to access files more quickly and improving overall disk performance.</p>
+<p>Modern file systems are designed to minimize the need for defragmentation:</p>
+<ul>
+<li>Larger block sizes create more slack space, reducing the need to allocate additional blocks.</li>
+<li><strong>Scatter allocation</strong>: files may be spread across the disk to leave enough space for growth.</li>
+<li>Defragmentation can run in the background without interrupting normal use.</li>
+</ul>
+<p>Impact of newer storage hardware:</p>
+<ul>
+<li>Modern HDDs are faster and can read fragmented data more efficiently thanks to parallelization.</li>
+<li><strong>SSDs do not benefit from defragmentation</strong>, because their data is not physically separated in a meaningful way. Running defragmentation on an SSD <strong>reduces its lifespan</strong> without improving performance, so it is <strong>not recommended</strong>.</li>
+</ul>
+</section>
+<section id="flat-vs.-hierarchical-file-systems" class="level2">
+<h2 class="anchored" data-anchor-id="flat-vs.-hierarchical-file-systems">Flat vs.&nbsp;Hierarchical File Systems</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 59%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Flat File System</th>
+<th>Hierarchical File System</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>All data is saved on <strong>one level</strong></td>
+<td>Related files can be stored in <strong>directories</strong> (also known as <strong>folders</strong>)</td>
+</tr>
+<tr class="even">
+<td>Similar to the examples above</td>
+<td>Directories can be <strong>nested</strong> inside other directories</td>
+</tr>
+<tr class="odd">
+<td>No notion of directories</td>
+<td>Extra metadata is needed to track what is a file and what is a directory</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>The top directory is known as the <strong>root directory</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="_assets/file_systems/img19.png" class="img-fluid figure-img" width="450"></p>
+<figcaption>A hierarchical file system: directories nested inside directories</figcaption>
+</figure>
+</div>
+<p>To support directories inside directories, the directory file needs an extra column that marks which entries are directories:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="_assets/file_systems/img17.png" class="img-fluid figure-img"></p>
+<figcaption>A directory file with a “Directory” column</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="_assets/file_systems/img16.png" class="img-fluid figure-img" width="450"></p>
+<figcaption>The hierarchical directory structure of a Linux system, starting from the root <code>/</code></figcaption>
+</figure>
+</div>
+</section>
+<section id="activities" class="level2">
+<h2 class="anchored" data-anchor-id="activities">Activities</h2>
+<section id="manipulate-files-using-cmd" class="level3">
+<h3 class="anchored" data-anchor-id="manipulate-files-using-cmd">Manipulate Files Using CMD</h3>
+<ol type="1">
+<li>Open the command prompt (<code>cmd</code>).</li>
+<li>Navigate to the desktop.</li>
+<li>Create a directory called <code>meals</code>.</li>
+<li>Create a file called <code>breakfast</code>.</li>
+<li>Write the line <code>coffee</code> inside the file.</li>
+<li>Write the line <code>toasts</code>.</li>
+<li>Open the file.</li>
+</ol>
+<p>Some useful commands:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bat code-with-copy"><code class="sourceCode dosbat"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> desktop</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">mkdir</span> meals</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> coffee <span class="kw">&gt;</span> breakfast.txt</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span> breakfast.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="view-raw-data-in-hexadecimal" class="level3">
+<h3 class="anchored" data-anchor-id="view-raw-data-in-hexadecimal">View Raw Data in Hexadecimal</h3>
+<p>In PowerShell, you can view the raw bytes of a file in hexadecimal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>format-hex filename</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+</section>
+<section id="deleting-files" class="level1">
+<h1>Deleting Files</h1>
+<section id="how-does-deleting-a-file-work" class="level2">
+<h2 class="anchored" data-anchor-id="how-does-deleting-a-file-work">How Does Deleting a File Work?</h2>
+<ul>
+<li>The user experience varies across operating systems, but the underlying behavior is largely the same.</li>
+<li>Most operating systems provide a <strong>Recycle Bin</strong> (or <strong>Trash</strong>) directory. When you use the default delete command, the file is <strong>moved</strong> to this directory rather than removed immediately.</li>
+<li>The Recycle Bin works like any other folder: files can be recovered simply by moving them out of the bin.</li>
+</ul>
+</section>
+<section id="deleting-a-file-permanently" class="level2">
+<h2 class="anchored" data-anchor-id="deleting-a-file-permanently">Deleting a File Permanently</h2>
+<p>To remove a file permanently, it must be deleted <strong>bypassing the Recycle Bin</strong>, either with a special delete command (e.g., <strong>Shift + Delete</strong> on Windows) or with command-line tools that do not move the file to the bin.</p>
+<p>You might think that clicking “Empty Recycle Bin” actually deletes your files. But how does it really work? Does it move the files to a “Recycle Bin 2”? Not quite. To understand, remember how data is stored: in <strong>blocks</strong> on the storage device.</p>
+<p><strong>Answer:</strong> the OS <strong>removes the file from its directory file</strong>. The operating system no longer “knows” about the file (there is no way to reference it), and its blocks are considered <strong>free space</strong>.</p>
+</section>
+<section id="is-the-data-really-gone" class="level2">
+<h2 class="anchored" data-anchor-id="is-the-data-really-gone">Is the Data Really Gone?</h2>
+<ul>
+<li>Data deleted this way <strong>can still be recovered</strong>!</li>
+<li>Recovery can be very difficult: optimizing data recovery programs is an open field of research.</li>
+<li>In principle, you can view all the bits in free space and recover the data directly.</li>
+<li>The problem: the longer the bits stay in free space, the more likely they will be <strong>overwritten</strong> by a new file or block. Eventually, the data can become unrecoverable in its original form.</li>
+</ul>
+</section>
+</section>
+<section id="topics-for-further-research" class="level1">
+<h1>Topics for Further Research</h1>
+<ul>
+<li>How to view and understand file metadata</li>
+<li>The difference between deleting, recycling, and wiping your data on different operating systems</li>
+<li>How file recovery works</li>
+</ul>
 
 
 </section>
@@ -540,15 +1154,50 @@ ul.task-list li input[type="checkbox"] {
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
     if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const a = window.document.createElement('a');
-      a.classList.add('top-right');
-      a.classList.add('quarto-color-scheme-toggle');
-      a.href = "";
-      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const toggle = window.document.createElement('button');
+      toggle.type = "button";
+      toggle.setAttribute("role", "switch");
+      toggle.setAttribute("aria-checked", "false");
+      toggle.classList.add('top-right');
+      toggle.classList.add('quarto-color-scheme-toggle');
+      toggle.setAttribute("aria-label", "Toggle dark mode");
+      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
       const i = window.document.createElement("i");
       i.classList.add('bi');
-      a.appendChild(i);
-      window.document.body.appendChild(a);
+      toggle.appendChild(i);
+      // Put the toggle in a landmark of its own, so that landmark navigation
+      // can reach it.
+      //
+      // The container is always a fresh direct child of body, and the toggle is
+      // never moved into page furniture that the theme or the author controls.
+      // The toggle is positioned against the page, so any ancestor that
+      // establishes a containing block captures it: a positioned element or a
+      // grid for position: absolute, and transform, filter, will-change or
+      // contain for position: fixed. A direct child of body has none of these
+      // to inherit, and the shift when one appears is silent and visual.
+      //
+      // ARIA says a document should have at most one banner, and axe reports a
+      // duplicate whether or not the banners carry distinct labels. So use a
+      // header when the page has no banner yet, and a named region otherwise.
+      //
+      // A header is a banner wherever it sits, unless it is inside sectioning
+      // content, so this cannot just look at the children of body: a custom
+      // page layout wraps the title block header in a plain div. An explicit
+      // role="banner" always counts.
+      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
+      const hasBanner = Array.from(
+        window.document.querySelectorAll('header:not([role]), [role="banner"]')
+      ).some(function(el) {
+        return el.hasAttribute("role") || el.closest(sectioning) === null;
+      });
+      const container = window.document.createElement(hasBanner ? "div" : "header");
+      if (hasBanner) {
+        container.setAttribute("role", "region");
+        container.setAttribute("aria-label", "Toggle dark mode");
+      }
+      container.classList.add('quarto-color-scheme-toggle-container');
+      container.appendChild(toggle);
+      window.document.body.appendChild(container);
     }
     setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
@@ -627,7 +1276,8 @@ ul.task-list li input[type="checkbox"] {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
       // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
       for (var i=0; i<links.length; i++) {
         const link = links[i];
         if (!isInternal(link.href)) {
@@ -636,8 +1286,69 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+          if (!link.classList.contains('no-external-icon')) {
+          }
         }
       }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
       const config = {
         allowHTML: true,
@@ -651,6 +1362,7 @@ ul.task-list li input[type="checkbox"] {
         interactiveBorder: 10,
         theme: 'quarto',
         placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
       };
       if (contentFn) {
         config.content = contentFn;
@@ -813,44 +1525,54 @@ ul.task-list li input[type="checkbox"] {
           const lineIds = lines.map((line) => {
             return targetCell + "-" + line;
           })
-          let top = null;
-          let height = null;
-          let parent = null;
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
           if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
             }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
             }
+            placeBand(gutterDiv, el, lastEl);
             selectedAnnoteEl = annoteEl;
           }
         };
@@ -949,6 +1671,21 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="../../topics/operating-systems/disk-partitions.html" class="pagination-link" aria-label="Disk Partitions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Disk Partitions</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../topics/operating-systems/permissions_users_registries.pdf" class="pagination-link" aria-label="Permissions, Users and Registries">
+        <span class="nav-page-text">Permissions, Users and Registries</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
