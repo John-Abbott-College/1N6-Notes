@@ -64,8 +64,17 @@ This is no the same thing as **Memory Virtualization** which we learnt about whe
 ## Cons
 *🐢 **Performance trade-off:** Running several virtual machines can slow down the host operating system, especially on lower-end hardware.
 
+# Data Migration 📦
 
+When a new operating system installation is required, user data and settings may need to be **migrated** from the old OS to the new one. Several tools and methods can transfer user accounts, files, and configurations:
 
-
-
-
+1. **Windows User State Migration Tool (USMT)**
+    - Used for large or enterprise deployments.
+    - Transfers user accounts, files, OS settings, and application settings.
+2. **Cloud solutions**
+    - Sync or back up data to cloud storage (e.g., OneDrive, Google Drive).
+    - Convenient for accessing files across devices.
+3. **Physical solutions**
+    - Use external drives or transfer cables to manually copy data.
+4. **Windows Easy Transfer**
+    - An older Microsoft tool for moving data from Windows XP (32-bit) to Windows 7.

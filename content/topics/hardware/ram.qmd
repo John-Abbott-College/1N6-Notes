@@ -169,6 +169,7 @@ Assume your computer has **4 GB of RAM** and several programs installed on your 
 4. Program **D** can now run in the freed space.
 5. Later, if you try to use **B** again, it cannot run from the page file. Another less-used program must swap out, and then **B is swapped back** into RAM.
 
+
 ```{mermaid}
 %%| fig-cap: "Virtual memory swapping. Programs move between RAM and the page file on the hard drive."
 %%| fig-align: center
