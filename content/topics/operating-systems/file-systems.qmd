@@ -2,24 +2,81 @@
 date: 2025-11-16
 title: File Systems
 subtitle: How files are saved in computers
-draft: false
+draft: trueß
 ---
 Adapted from the original [slides](./disk_partitions_file_systems.pdf){target="_blank"} with the help of Claude AI for restructuring.
 
 This page covers how files are organized once a disk has been partitioned and formatted. For partition styles, disk types and volumes, see [Disk Partitions](disk-partitions.qmd).
 
-## File Formats
+# Introduction
+> This section was made by Sandy Bultena for __Programming in Science__ (Fall 2024). All credits and thanks to her. 
 
-- Files are big chunks of related data.
-- There are many types of files: text files, music files, photos and videos.
-- A **file format** defines how data is organized and stored inside a file.
-- When saving a file, the OS or application follows a specific standard format to structure the data correctly.
+Computers only think in terms of 1s and 0s (binary). Every bit of information on your computer is coded in binary and the your computer will translate one set of of 1s and 0s to another when displaying information on your screen.
+
+![](_assets/file_systems/img0.png){width=80%}
+
+## What's a file?
+
+On a computer, you probably have pictures, word documents, saved video games, applications, code, plus a whole lot more. It would be very difficult if every time you opened Word, every document that you ever wrote was all smushed together.
+
+So, to make your life easier, your computer organizes data into discrete elements, called files. Each file has the data for one thing only, for example, one picture, one Word Document, one application, etc.
+
+In the old days, files used to be a document that was printed on paper. Today, most people refer to files as a document of some kind (picture, code, Word, etc) that is stored on your computer.
+
+## Computer file-system
+To make the transition from storing files on paper, in paper folders, in filing cabinets, to storing files on computers easier, the powers that be decided to use the same names, i.e. files and folders.
+
+> NOTE: before computers were used everywhere, folders used to be called directories and the words mean EXACTLY the same thing, so if your teachers forget, and says "directory", remember that they actually mean folder.
+
+So, in a folder you can have files and other folders.
+
+Since folders are not longer physical things, we need a way to envision them.
+
+In short, folders (or directories) are organized into a tree format.
+
+```
+My Documents
+     | --- English
+     |   |-> Assignment 1.docx
+     |   |-> Assignment 2.docx
+     | --- Programming
+     |   | --- Assignment 1
+     |   |   |-> Instructions.pdf
+     |   |   |-> code.py
+     |   |   |-> output.txt
+     |   |   |--- Assignment 2
+     |   |   |   | -> Instructions.pdf
+     |   |   |   | -> code.py
+     |   |   |   | -> output.csv
+```
+
+## What is a File Extension?
+The file extension is defined as the last bit of a file name that follows the last dot (.) Kinda of like a last name. It determines the **file format** of each file.
+
+Example: code.py has a file extension .py. A word document typically has the extension .docx, so the filename is typically assignment 1.docx.
+
+###  Why don’t I see them in File Explorer?
+The developers at Microsoft have designed File Explorer to be easy(?) for non-programmers to use, and so by default they hide the file extension.
+
+But, you are now a programmer, and you absolutely need to know what the file extensions are…
+
+Please follow the instructions in: MS Windows Support - Show file extensions
+
+### Why do we use File Extensions?
+The file extensions give a hint to the operating system (Windows/Linux/Mac) as to what type of data is in the file. So if the extension is .png then the operating system knows that it is a picture, and if you double click the filename in File Explorer, it will call the appropriate program that can show you the picture.
+
+Likewise if the file extension is .docx, double clicking the file in File Explorer will open Microsoft Office which in turn will read the file and display it to you.
+
+## Common file formats
+
+There are many types of files: text files, music files, photos and videos.A **file format** defines how data is organized and stored inside a file. When saving a file, the OS or application follows a specific standard format to structure the data correctly.
+
 - Examples of standard file formats: **JPEG**, **MP4** and **DOCX**.
 - Programmers can also create their own custom formats to store data in a unique way. However, a **non-standard format** can only be read by the applications that created it.
 
 ![Common file formats](_assets/file_systems/img11.jpg){width=350px}
 
-### Text Files
+# Text Files
 
 - Text files are commonly known as **.TXT** files.
 - They are often created and opened using programs like Notepad or TextEdit.
@@ -33,7 +90,7 @@ Here is how the text `Hello World` is stored in binary, using ASCII:
 |-------|---|---|---|---|---|---------|---|---|---|---|---|
 | Binary | 01001000 | 01100101 | 01101100 | 01101100 | 01101111 | 00100000 | 01010111 | 01101111 | 01110010 | 01101100 | 01100100 |
 
-### Text Files vs. Formatted Text Files
+## Text Files vs. Formatted Text Files
 
 | Feature | Text File (.TXT) | Formatted Text File (.DOCX, .PDF) |
 |---------|------------------|-----------------------------------|
@@ -43,7 +100,7 @@ Here is how the text `Hello World` is stored in binary, using ASCII:
 | Readability | Human-readable | May require specific software |
 | Use case | Notes, code, configuration | Reports, documents, presentations |
 
-## File Metadata
+# File Metadata
 
 Some file formats, like videos, images, or documents, need more structure than simple text files. To read these files correctly, computers must store **extra information** about the file. This extra information is called **metadata**, which means "**data about data**."
 
@@ -58,13 +115,13 @@ Metadata helps the operating system or application understand how to open, displ
 
 ![A photo's data and its metadata](_assets/file_systems/img8.png){width=450px}
 
-### Example: Bitmap Photo (BMP)
+## Example: Bitmap Photo (BMP)
 
 A BMP file starts with the letters `BM`, followed by metadata fields such as the file size, offset, header size, photo width and height, planes and color depth. The actual pixel data comes after the metadata.
 
 ![Metadata of a BMP photo. Source and details: [BMP file format](https://en.wikipedia.org/wiki/BMP_file_format){target="_blank"}](_assets/file_systems/img9.png)
 
-### Files and File Formats
+## Files and File Formats
 
 Under the hood, all files are the same: **long lists of numbers**, stored as binary, on a storage device. Every file is made up of two main parts:
 
@@ -75,11 +132,11 @@ The **file format** determines how the data and metadata are organized. Without 
 
 ![The same image stored in two different formats: vector vs. bitmap](_assets/file_systems/img10.png){width=400px}
 
-## File Systems
+# File Systems
 
 A **file system** is the method an operating system uses to **store**, **organize**, and **manage** files on a storage device.
 
-### Saving Files to Storage Devices
+## Saving Files to Storage Devices
 
 When you save a file, the file system decides **where** and **how** the data is stored on the device. It keeps track of:
 
@@ -96,7 +153,7 @@ Common file systems include:
 - **APFS**: used by macOS
 - **EXT4**: used by Linux
 
-### How the File System Manages Files and Directories
+## How the File System Manages Files and Directories
 
 - Organizes data into files with names, types, and sizes.
 - Uses **directories** (folders) to group and arrange files.
@@ -106,7 +163,7 @@ Common file systems include:
 - Controls access with file permissions (read, write, execute).
 - Supports operations like create, open, move, rename, and delete.
 
-### Windows File Systems
+## Windows File Systems
 
 - **NTFS** (New Technology File System)
     - Supports partition sizes up to **16 exabytes** (in theory).
@@ -150,7 +207,7 @@ The directory file also stores **metadata** about each file, including where it 
 
 If a file is added, removed, or renamed, the information in the directory file must be **updated**.
 
-### Main Issue with the Simple File System
+## Main Issue with the Simple File System
 
 Stacking files back-to-back is **not** a proper solution for storing data:
 
@@ -158,7 +215,7 @@ Stacking files back-to-back is **not** a proper solution for storing data:
 - A growing file will **overwrite** the data of the file next to it.
 - Example: if data is added to `Todo.txt`, there is no room for it without overwriting part of `OS.exe`.
 
-### Modern File Systems: Blocks
+## Modern File Systems: Blocks
 
 To avoid overwriting the data of other files, modern file systems:
 
@@ -187,7 +244,7 @@ Using blocks:
 - A file can grow to occupy as many blocks as needed.
 - Blocks might not be located next to each other, or even in order.
 
-### Fragmentation
+## Fragmentation
 
 A file being broken up across storage is called **fragmentation**. It is the result of files being created, deleted and modified.
 
@@ -195,7 +252,7 @@ A file being broken up across storage is called **fragmentation**. It is the res
 - This increases the time needed to access the file, especially on **hard disk drives (HDDs)**, which rely on moving mechanical parts to read data.
 - Large files spread across many scattered blocks take longer to read, because the disk head must move back and forth to gather all the pieces.
 
-### Defragmentation
+## Defragmentation
 
 **Defragmentation** is the process of reorganizing data on a storage device so that each file's blocks are stored **together and in the correct order**. This reduces fragmentation, allowing the operating system to access files more quickly and improving overall disk performance.
 
@@ -210,7 +267,7 @@ Impact of newer storage hardware:
 - Modern HDDs are faster and can read fragmented data more efficiently thanks to parallelization.
 - **SSDs do not benefit from defragmentation**, because their data is not physically separated in a meaningful way. Running defragmentation on an SSD **reduces its lifespan** without improving performance, so it is **not recommended**.
 
-### Flat vs. Hierarchical File Systems
+## Flat vs. Hierarchical File Systems
 
 | Flat File System | Hierarchical File System |
 |------------------|--------------------------|
@@ -256,15 +313,15 @@ In PowerShell, you can view the raw bytes of a file in hexadecimal:
 format-hex filename
 ```
 
-## Deleting Files
+# Deleting Files
 
-### How Does Deleting a File Work?
+## How Does Deleting a File Work?
 
 - The user experience varies across operating systems, but the underlying behavior is largely the same.
 - Most operating systems provide a **Recycle Bin** (or **Trash**) directory. When you use the default delete command, the file is **moved** to this directory rather than removed immediately.
 - The Recycle Bin works like any other folder: files can be recovered simply by moving them out of the bin.
 
-### Deleting a File Permanently
+## Deleting a File Permanently
 
 To remove a file permanently, it must be deleted **bypassing the Recycle Bin**, either with a special delete command (e.g., **Shift + Delete** on Windows) or with command-line tools that do not move the file to the bin.
 
@@ -272,14 +329,14 @@ You might think that clicking "Empty Recycle Bin" actually deletes your files. B
 
 **Answer:** the OS **removes the file from its directory file**. The operating system no longer "knows" about the file (there is no way to reference it), and its blocks are considered **free space**.
 
-### Is the Data Really Gone?
+## Is the Data Really Gone?
 
 - Data deleted this way **can still be recovered**!
 - Recovery can be very difficult: optimizing data recovery programs is an open field of research.
 - In principle, you can view all the bits in free space and recover the data directly.
 - The problem: the longer the bits stay in free space, the more likely they will be **overwritten** by a new file or block. Eventually, the data can become unrecoverable in its original form.
 
-## Topics for Further Research
+# Topics for Further Research
 
 - How to view and understand file metadata
 - The difference between deleting, recycling, and wiping your data on different operating systems
