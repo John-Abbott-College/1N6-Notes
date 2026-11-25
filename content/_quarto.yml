@@ -63,8 +63,7 @@ website:
           - topics/operating-systems/operating-system-install.qmd
           - topics/operating-systems/disk-partitions.qmd
           - topics/operating-systems/file-systems.qmd
-          - href: topics/operating-systems/permissions_users_registries.pdf
-            text: "Permissions, Users and Registries" # This will open the PDF in a new tab/window
+          - topics/operating-systems/users_and_permissions.qmd
           - href: topics/operating-systems/servers_and_raid.pdf
             text: "Servers and RAID" # This will open the PDF in a new tab/window
           - href : topcis/operating-systems/software_licensing.pdf
