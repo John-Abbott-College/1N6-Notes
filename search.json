@@ -2129,105 +2129,195 @@
     "href": "topics/operating-systems/users_and_permissions.html",
     "title": "Permissions and User Profiles",
     "section": "",
-    "text": "Adapted from the original slides with the help of Claude AI for restructuring."
+    "text": "Adapted from the original slides with the help of Claude AI for restructuring.",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Permissions and User Profiles"
+    ]
   },
   {
     "objectID": "topics/operating-systems/users_and_permissions.html#file-properties",
     "href": "topics/operating-systems/users_and_permissions.html#file-properties",
     "title": "Permissions and User Profiles",
     "section": "File properties",
-    "text": "File properties\nThe Properties tab of files and folders in Windows lets you configure permissions for different users or groups of users.\n\n\n\nA folder’s Properties → Security tab"
+    "text": "File properties\nThe Properties tab of files and folders in Windows lets you configure permissions for different users or groups of users.\n\n\n\nA folder’s Properties → Security tab",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Permissions and User Profiles"
+    ]
   },
   {
     "objectID": "topics/operating-systems/users_and_permissions.html#ntfs-permissions",
     "href": "topics/operating-systems/users_and_permissions.html#ntfs-permissions",
     "title": "Permissions and User Profiles",
     "section": "NTFS permissions",
-    "text": "NTFS permissions\nClick Edit to change permissions. These are the NTFS permissions:\n\n\n\nPermission\nWhat it allows\n\n\n\n\nFull Control\nEverything\n\n\nModify\nEverything except taking ownership\n\n\nRead and Execute\nView files and run apps\n\n\nList Folder Contents\nView folders, but not access files\n\n\nRead\nOpen and view files\n\n\nWrite\nCreate folders and files, and edit them\n\n\n\n\n\n\nThe Permissions for … window, opened with Edit"
+    "text": "NTFS permissions\nClick Edit to change permissions. These are the NTFS permissions:\n\n\n\nPermission\nWhat it allows\n\n\n\n\nFull Control\nEverything\n\n\nModify\nEverything except taking ownership\n\n\nRead and Execute\nView files and run apps\n\n\nList Folder Contents\nView folders, but not access files\n\n\nRead\nOpen and view files\n\n\nWrite\nCreate folders and files, and edit them\n\n\n\n\n\n\nThe Permissions for … window, opened with Edit",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Permissions and User Profiles"
+    ]
   },
   {
     "objectID": "topics/operating-systems/users_and_permissions.html#adding-a-user",
     "href": "topics/operating-systems/users_and_permissions.html#adding-a-user",
     "title": "Permissions and User Profiles",
     "section": "Adding a user",
-    "text": "Adding a user\n\nClick the Edit button; this opens a new window.\nClick Add, then type the name of the user (e.g. FrenchUser), or click Advanced → Add to find the user.\n\n\n\n\nThe Select Users, Computers, Service Accounts, or Groups dialog"
+    "text": "Adding a user\n\nClick the Edit button; this opens a new window.\nClick Add, then type the name of the user (e.g. FrenchUser), or click Advanced → Add to find the user.\n\n\n\n\nThe Select Users, Computers, Service Accounts, or Groups dialog",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Permissions and User Profiles"
+    ]
   },
   {
     "objectID": "topics/operating-systems/users_and_permissions.html#what-is-a-user-profile",
     "href": "topics/operating-systems/users_and_permissions.html#what-is-a-user-profile",
     "title": "Permissions and User Profiles",
     "section": "What is a user profile?",
-    "text": "What is a user profile?\n\nA user profile is created the first time a user logs into a computer.\nOn later logins, the system loads the user’s profile and configures the computer environment according to the information stored in it.\n\n\n\n\nTop: the Windows login screen with two user accounts. Bottom: the folders of a user profile in C:\\Users."
+    "text": "What is a user profile?\n\nA user profile is created the first time a user logs into a computer.\nOn later logins, the system loads the user’s profile and configures the computer environment according to the information stored in it.\n\n\n\n\nTop: the Windows login screen with two user accounts. Bottom: the folders of a user profile in C:\\Users.",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Permissions and User Profiles"
+    ]
   },
   {
     "objectID": "topics/operating-systems/users_and_permissions.html#adding-another-user-on-windows-11",
     "href": "topics/operating-systems/users_and_permissions.html#adding-another-user-on-windows-11",
     "title": "Permissions and User Profiles",
     "section": "Adding another user on Windows 11",
-    "text": "Adding another user on Windows 11\nSince Windows 8, Microsoft has favoured Microsoft Cloud accounts over creating local accounts (only existing on the PC). Cloud accounts require a login using an email and password from a valid Microsoft platform such as Outlook.com, Live.com, Hotmail.com or a school/work Microfot 365 account. Altough most editions of Windows 11, push for using a cloud account when first installing Windows (OOBE screen, forcing a login), it’s still possible to create local account:\nOfficially, there are two ways to add a user in Windows 11: with a Microsoft account or without one.\n\n\n\nSettings → Accounts → Other Users\n\n\n\nSource: How to Create a Local or Offline Account in Windows 11 or Windows 10\n\n\nUser account with a Microsoft account\n\nUses features such as synchronization across devices.\nGives access to Microsoft services such as Office 365, OneDrive, etc.\nRequires Internet access.\n\n\n\n\nThe Create account window. Choose Add a user without a Microsoft account to create a local account instead.\n\n\n\n\nLocal user account (without a Microsoft account)\n\nCreates a user account only on this particular machine.\nAll Windows machines have a built-in local administrator account used for troubleshooting.\nThis can also be done via Computer Management (Win + R, type compmgmt.msc).\nOr via the command prompt:\n\nnet user &lt;username&gt; &lt;password&gt; /add\n\n\n\nThe Create a user for this PC window, and Computer Management → Local Users and Groups\n\n\n\n\n\n\n\n\nTipActivity on VM: Adding local user profiles\n\n\n\n\nStart → Control Panel\nUser Accounts → Manage another account\nAdd a user account: French User\n\nUsing a Microsoft account\nWithout a Microsoft account\n\nAdd a second user account: Big Boss\n\nWithout a Microsoft account\n\nSelect the newly created account and change the account type to Local Administrator.\n\n\n\n\n\n\n\n\n\nTipUsing the Command Line Terminal: Adding local user profiles\n\n\n\n\nRun CMD with admin permissions\nType the command above to add a third user."
+    "text": "Adding another user on Windows 11\nSince Windows 8, Microsoft has favoured Microsoft Cloud accounts over creating local accounts (only existing on the PC). Cloud accounts require a login using an email and password from a valid Microsoft platform such as Outlook.com, Live.com, Hotmail.com or a school/work Microfot 365 account. Altough most editions of Windows 11, push for using a cloud account when first installing Windows (OOBE screen, forcing a login), it’s still possible to create local account:\nOfficially, there are two ways to add a user in Windows 11: with a Microsoft account or without one.\n\n\n\nSettings → Accounts → Other Users\n\n\n\nSource: How to Create a Local or Offline Account in Windows 11 or Windows 10\n\n\nUser account with a Microsoft account\n\nUses features such as synchronization across devices.\nGives access to Microsoft services such as Office 365, OneDrive, etc.\nRequires Internet access.\n\n\n\n\nThe Create account window. Choose Add a user without a Microsoft account to create a local account instead.\n\n\n\n\nLocal user account (without a Microsoft account)\n\nCreates a user account only on this particular machine.\nAll Windows machines have a built-in local administrator account used for troubleshooting.\nThis can also be done via Computer Management (Win + R, type compmgmt.msc).\nOr via the command prompt:\n\nnet user &lt;username&gt; &lt;password&gt; /add\n\n\n\nThe Create a user for this PC window, and Computer Management → Local Users and Groups\n\n\n\n\n\n\n\n\nTipActivity on VM: Adding local user profiles\n\n\n\n\nStart → Control Panel\nUser Accounts → Manage another account\nAdd a user account: French User\n\nUsing a Microsoft account\nWithout a Microsoft account\n\nAdd a second user account: Big Boss\n\nWithout a Microsoft account\n\nSelect the newly created account and change the account type to Local Administrator.\n\n\n\n\n\n\n\n\n\nTipUsing the Command Line Terminal: Adding local user profiles\n\n\n\n\nRun CMD with admin permissions\nType the command above to add a third user.",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Permissions and User Profiles"
+    ]
   },
   {
     "objectID": "topics/operating-systems/users_and_permissions.html#user-account-types",
     "href": "topics/operating-systems/users_and_permissions.html#user-account-types",
     "title": "Permissions and User Profiles",
     "section": "User account types",
-    "text": "User account types\n\n\n\n\n\n\n\nAdministrator\nStandard\n\n\n\n\nAdministrators are “super users” with full control of a computer. They can install or modify software and access any file.\nHave partial control over a computer. For example, they can only install apps and software within their local user directory.\n\n\nThey can add other users and change their user types.\nThey cannot install system-wide applications or access other users’ files."
+    "text": "User account types\n\n\n\n\n\n\n\nAdministrator\nStandard\n\n\n\n\nAdministrators are “super users” with full control of a computer. They can install or modify software and access any file.\nHave partial control over a computer. For example, they can only install apps and software within their local user directory.\n\n\nThey can add other users and change their user types.\nThey cannot install system-wide applications or access other users’ files.",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Permissions and User Profiles"
+    ]
   },
   {
     "objectID": "topics/operating-systems/users_and_permissions.html#administrator-account-required",
     "href": "topics/operating-systems/users_and_permissions.html#administrator-account-required",
     "title": "Permissions and User Profiles",
     "section": "Administrator account required",
-    "text": "Administrator account required\n\n\n\n\n\n\nWhen I am an Admin\n\n\n\n\n\n\n\nWhen I am not an Admin: an administrator’s username and password are required"
+    "text": "Administrator account required\n\n\n\n\n\n\nWhen I am an Admin\n\n\n\n\n\n\n\nWhen I am not an Admin: an administrator’s username and password are required",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Permissions and User Profiles"
+    ]
   },
   {
     "objectID": "topics/operating-systems/users_and_permissions.html#what-is-a-user-profile-made-up-of",
     "href": "topics/operating-systems/users_and_permissions.html#what-is-a-user-profile-made-up-of",
     "title": "Permissions and User Profiles",
     "section": "What is a user profile made up of?",
-    "text": "What is a user profile made up of?\nUser profile = Registry hive (HKEY_CURRENT_USER) + a set of folders stored in the file system"
+    "text": "What is a user profile made up of?\nUser profile = Registry hive (HKEY_CURRENT_USER) + a set of folders stored in the file system",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Permissions and User Profiles"
+    ]
   },
   {
     "objectID": "topics/operating-systems/users_and_permissions.html#types-of-user-profiles",
     "href": "topics/operating-systems/users_and_permissions.html#types-of-user-profiles",
     "title": "Permissions and User Profiles",
     "section": "Types of user profiles",
-    "text": "Types of user profiles\n\n\n\n\n\n\n\n\nProfile\nDescription\n\n\n\n\nLocal\nLocalized to this specific machine.\n\n\nRoaming\nDownloads the settings from the main server onto any PC logged into within the network. Example: your John Abbott school account.\n\n\nMandatory\nAdministrators can create mandatory user profiles with settings for users.\n\n\nTemporary\nCreated if an error prevents the user profile from loading. Deleted automatically at the end of each session. Example: an account at a computer in a public library."
+    "text": "Types of user profiles\n\n\n\n\n\n\n\n\nProfile\nDescription\n\n\n\n\nLocal\nLocalized to this specific machine.\n\n\nRoaming\nDownloads the settings from the main server onto any PC logged into within the network. Example: your John Abbott school account.\n\n\nMandatory\nAdministrators can create mandatory user profiles with settings for users.\n\n\nTemporary\nCreated if an error prevents the user profile from loading. Deleted automatically at the end of each session. Example: an account at a computer in a public library.",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Permissions and User Profiles"
+    ]
   },
   {
     "objectID": "topics/operating-systems/users_and_permissions.html#what-is-the-registry",
     "href": "topics/operating-systems/users_and_permissions.html#what-is-the-registry",
     "title": "Permissions and User Profiles",
     "section": "What is the registry?",
-    "text": "What is the registry?\nThe Windows registry is a hierarchical database that stores configuration settings and options for the Microsoft Windows operating system and installed applications.\n\n\n\nThe parts of the Registry: root keys, keys, subkeys and values"
+    "text": "What is the registry?\nThe Windows registry is a hierarchical database that stores configuration settings and options for the Microsoft Windows operating system and installed applications.\n\n\n\nThe parts of the Registry: root keys, keys, subkeys and values",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Permissions and User Profiles"
+    ]
   },
   {
     "objectID": "topics/operating-systems/users_and_permissions.html#windows-registry",
     "href": "topics/operating-systems/users_and_permissions.html#windows-registry",
     "title": "Permissions and User Profiles",
     "section": "Windows Registry",
-    "text": "Windows Registry\nComputer technicians should:\n\nUnderstand basic Registry components,\nKnow how to edit the Registry manually,\nKnow the best way to locate a particular setting."
+    "text": "Windows Registry\nComputer technicians should:\n\nUnderstand basic Registry components,\nKnow how to edit the Registry manually,\nKnow the best way to locate a particular setting.",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Permissions and User Profiles"
+    ]
   },
   {
     "objectID": "topics/operating-systems/users_and_permissions.html#accessing-the-registry",
     "href": "topics/operating-systems/users_and_permissions.html#accessing-the-registry",
     "title": "Permissions and User Profiles",
     "section": "Accessing the Registry",
-    "text": "Accessing the Registry\n\nTo access the Registry, type regedit in the Start (⊞ Win) search bar.\nThe Registry is organized in a tree structure, similar to folders in a file system.\nIt shows keys (or subkeys) on the left and values on the right."
+    "text": "Accessing the Registry\n\nTo access the Registry, type regedit in the Start (⊞ Win) search bar.\nThe Registry is organized in a tree structure, similar to folders in a file system.\nIt shows keys (or subkeys) on the left and values on the right.",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Permissions and User Profiles"
+    ]
   },
   {
     "objectID": "topics/operating-systems/users_and_permissions.html#five-main-root-keys",
     "href": "topics/operating-systems/users_and_permissions.html#five-main-root-keys",
     "title": "Permissions and User Profiles",
     "section": "Five main root keys",
-    "text": "Five main root keys\n\n\n\n\n\n\n\nRoot key\nDescription\n\n\n\n\nHKEY_CLASSES_ROOT\nHistorically defined the standard class objects used by Windows. Now provides backwards compatibility for older applications.\n\n\nHKEY_CURRENT_USER, HKEY_USERS\nStore personalized information for each user with an account on the system, such as desktop colours, screensavers and desktop contents.\n\n\nHKEY_LOCAL_MACHINE\nContains all the data for the system’s non-user-specific configuration. This covers every device and every program on your computer.\n\n\nHKEY_CURRENT_CONFIG\nIf values in HKEY_LOCAL_MACHINE have more than one option (e.g. two different monitors), this root key defines which one is currently being used."
+    "text": "Five main root keys\n\n\n\n\n\n\n\nRoot key\nDescription\n\n\n\n\nHKEY_CLASSES_ROOT\nHistorically defined the standard class objects used by Windows. Now provides backwards compatibility for older applications.\n\n\nHKEY_CURRENT_USER, HKEY_USERS\nStore personalized information for each user with an account on the system, such as desktop colours, screensavers and desktop contents.\n\n\nHKEY_LOCAL_MACHINE\nContains all the data for the system’s non-user-specific configuration. This covers every device and every program on your computer.\n\n\nHKEY_CURRENT_CONFIG\nIf values in HKEY_LOCAL_MACHINE have more than one option (e.g. two different monitors), this root key defines which one is currently being used.",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Permissions and User Profiles"
+    ]
   },
   {
     "objectID": "topics/operating-systems/users_and_permissions.html#using-registry-editor",
     "href": "topics/operating-systems/users_and_permissions.html#using-registry-editor",
     "title": "Permissions and User Profiles",
     "section": "Using Registry Editor",
-    "text": "Using Registry Editor\n\n\n\n\n\n\nWarning\n\n\n\n\nWhen you use the Registry Editor, you risk breaking things.\nApplications might not start, utilities may not work, or your computer may not boot.\nAlways back up the Registry (preferably to a thumb drive) before you change anything. After making the change, reboot to see if it had the desired effect. If not, restore the old settings from your backup.\n\n\n\n\n\n\n\n\n\nTipActivity VM: Backing up and restoring the Registry\n\n\n\n\nTo save a copy of the Registry: export the full registry, or a single key or subkey (with all subkeys and values under it), using File → Export.\nThe backup is saved with the extension .reg.\nTo restore backed-up keys: use File → Import, or right-click the .reg file and select Merge.\n\n\n\n\n\n\nFile → Import… and Export… in the Registry Editor\n\n\n\n\n\nThe Registry Editor showing colour values\n\n\n\n\n\n\n\n\nTipActivity VM: Change the highlight colour\n\n\n\n\nPress Windows key + R to open the Run dialog box.\nType regedit and press Enter to open the Registry Editor.\nNavigate to HKEY_CURRENT_USER\\Control Panel\\Colors.\nFind the Hilight value in the right-hand pane. It controls the highlight colour of selected items.\nDouble-click Hilight to open its properties.\nIn the Value data field, enter the RGB value of the colour you want. For example, for light blue enter 192 217 255.\nClick OK to save the changes.\nClose the Registry Editor.\n\nMore registry hacks: https://www.minitool.com/backup-tips/windows-10-registry-hacks.html"
+    "text": "Using Registry Editor\n\n\n\n\n\n\nWarning\n\n\n\n\nWhen you use the Registry Editor, you risk breaking things.\nApplications might not start, utilities may not work, or your computer may not boot.\nAlways back up the Registry (preferably to a thumb drive) before you change anything. After making the change, reboot to see if it had the desired effect. If not, restore the old settings from your backup.\n\n\n\n\n\n\n\n\n\nTipActivity VM: Backing up and restoring the Registry\n\n\n\n\nTo save a copy of the Registry: export the full registry, or a single key or subkey (with all subkeys and values under it), using File → Export.\nThe backup is saved with the extension .reg.\nTo restore backed-up keys: use File → Import, or right-click the .reg file and select Merge.\n\n\n\n\n\n\nFile → Import… and Export… in the Registry Editor\n\n\n\n\n\nThe Registry Editor showing colour values\n\n\n\n\n\n\n\n\nTipActivity VM: Change the highlight colour\n\n\n\n\nPress Windows key + R to open the Run dialog box.\nType regedit and press Enter to open the Registry Editor.\nNavigate to HKEY_CURRENT_USER\\Control Panel\\Colors.\nFind the Hilight value in the right-hand pane. It controls the highlight colour of selected items.\nDouble-click Hilight to open its properties.\nIn the Value data field, enter the RGB value of the colour you want. For example, for light blue enter 192 217 255.\nClick OK to save the changes.\nClose the Registry Editor.\n\nMore registry hacks: https://www.minitool.com/backup-tips/windows-10-registry-hacks.html",
+    "crumbs": [
+      "Home",
+      "Course Notes",
+      "Operating Systems",
+      "Permissions and User Profiles"
+    ]
   },
   {
     "objectID": "topics/operating-systems/operating-system-intro.htm#loading-the-boot-loader",
