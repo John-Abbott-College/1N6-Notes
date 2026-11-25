@@ -15,6 +15,20 @@ Computers only think in terms of 1s and 0s (binary). Every bit of information on
 
 ![](_assets/file_systems/img0.png){width=80%}
 
+::: {.callout-tip icon="false" title="☆Learning Objectives"}
+
+Upon completing this lesson, you should be able to: 
+
+- **Describe** what is a file type and its file extension.
+- **Recognize** common file formats.
+- **Describe** what is a file metadata, its role and its location on a drive.
+- **Describe** what is a directory file and its role.
+- **Describe** the process of fragmentation and defragmentation.
+- **Describe** the process of deleting a file. 
+- **Predict** which blocks a set of files will occupy on a storage diagram, given the block size and the location of the directory file.
+
+:::
+
 ## What's a file?
 
 On a computer, you probably have pictures, word documents, saved video games, applications, code, plus a whole lot more. It would be very difficult if every time you opened Word, every document that you ever wrote was all smushed together.

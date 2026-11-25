@@ -8,6 +8,16 @@ Adapted from the original [slides](./disk_partitions_file_systems.pdf){target="_
 
 Before an operating system can store files on a disk, the disk must be **partitioned** and each partition **formatted** with a file system. This page covers how disks are prepared. How files are then organized on them is covered in [File Systems](file-systems.qmd).
 
+::: {.callout-tip icon="false" title="☆Learning Objectives"}
+
+Upon completing this lesson, you should be able to: 
+
+- **Describe** what is disk partitioning and why its used.
+- **Differentiate** between the MBR and GPT parition table styles.
+- **Describe** what is a logical drive (or Volume) and the various kinds (simple, spanned, striped)
+- **Use** hard disk management tools (Disk Management) to create paritions and new volumes.
+:::
+
 ## Partitioning
 
 **Partitioning** is the process of dividing a storage device (like a hard drive or SSD) into separate sections called **partitions**.
@@ -38,8 +48,9 @@ Partitions provide flexibility in organizing data on a hard drive.
 
 **Support for multiple operating systems**
 
-As seen earlier, when performing a [dual boot](https://john-abbott-college.github.io/1N6-Notes/topics/operating-systems/operating-system-install.html#dual-boot) installation :
-- Users can install different operating systems (e.g., Windows, Linux) on separate partitions.
+As seen earlier, when performing a [dual boot](https://john-abbott-college.github.io/1N6-Notes/topics/operating-systems/operating-system-install.html#dual-boot) installation:
+
+- Users can install different operating systems (e.g., Windows, Linux) on separate partitions on the same drive.
 - Each partition acts like an independent drive, making it simple to switch between systems safely.
 
 ## Disk Partitions: MBR and GPT
@@ -132,35 +143,34 @@ Dynamic disks are divided into volumes. There are five volume types:
 - Mirrored volume
 - RAID-5 volume
 
+We will discuss all those in details when Servers will be discussed. 
+
 ### Simple Volume
 
 - A portion of a disk, or an entire disk, that is set up as a dynamic disk.
 - Can be extended onto multiple sections of the **same disk**.
 - Can be extended to multiple disks to become part of a spanned or striped volume.
 
-### Spanned Volume
-
-- Combines space from **multiple dynamic disks** into a single large volume.
-- As new disks are added, the spanned volume can be extended to include them.
-- One disk is **filled before** moving on to the space of the next disk.
-- Does **not** increase performance.
-- Does **not** provide fault tolerance.
-
-### Striped Volume (RAID 0)
-
+## Spanned Volume
 - Combines space from multiple dynamic disks into a single large volume.
-- **Cannot be extended** after it is created.
-- Data is written **equally across all disks**.
-- **Increases** disk performance.
-- **No** fault tolerance.
+- As new disks are added, the spanned volume can be extended to include them.
+- One disk is filled before moving on to the space of the next disk.
+- Does not increase performance.
+- Does not provide fault tolerance.
 
-### RAID-5 Volume
+## Striped Volume (RAID 0)
+- Combines space from multiple dynamic disks into a single large volume.
+- Cannot be extended after it is created.
+- Data is written equally across all disks.
+- Increases disk performance.
+- No fault tolerance.
 
-- Requires a minimum of **3 disk drives**.
-- **Parity** information is distributed across each disk.
-- If one disk fails, the information on that disk can be **reconstructed**.
-- Improved **read** performance because of disk striping.
-- Slower **write** performance because of the parity calculations.
+## RAID-5 Volume
+- Requires a minimum of 3 disk drives.
+- Parity information is distributed across each disk.
+- If one disk fails, the information on that disk can be reconstructed.
+- Improved read performance because of disk striping.
+- Slower write performance because of the parity calculations.
 
 ## Formatting
 
@@ -220,3 +230,58 @@ If your hard drive dies:
 
 - You can simply **swap** it with a clone (disk).
 - An image must first be **deployed** on a new disk before you can go back to work.
+
+# OS Maintenance 
+## Preventative Maintenance
+- Disk cleanup
+- Disk defragmentation 
+- Hard drive error checking 
+- Updates to OS (e.g. service packs) and applications.
+- Updates to antivirus and other protective software.
+
+
+## Disk Cleanup
+- Removes unneeded files e.g.
+- - Temporary internet files
+- - Files downloaded to install programs
+- - Files in the recycle bin
+- - Log files
+- - Temporary files
+- - Thumbnails
+- - Admin can also clean up system files.
+
+
+![Disk Cleanup Windows](_assets/file_systems/img20.png){width=400px}
+
+
+## Disk Defragmentation 
+
+If a storage device is [fragmented](https://john-abbott-college.github.io/1N6-Notes/topics/operating-systems/file-systems.html#fragmentation), it can slow down your computer.
+A disk can become fragmented very quickly if it is used heavily and data is written to it often. Disk defragmenter typically runs  on a schedule but you can analyze and defrag manually.
+
+
+![Disk Defragmentation Windows](_assets/file_systems/img21.png){width=400px}
+
+On older versions of Windows, the defragmenter came with a visualization tool..
+
+![Disk Defragmentation Windows](_assets/file_systems/img23.png){width=400px}
+
+## Hard Drive Error Checking
+
+The Disk Check tool in Windows can find and repair file system errors on:
+Local hard drives.
+Removable media such as USB flash drives or memory cards.
+
+On Windows 11: 
+
+1. Open File Explorer:
+
+![File explorer](_assets/file_systems/img24.png){width=400px}
+
+2. Right-click the drive 
+
+3. Select Properties
+
+4. Select the Tools tab > Check:
+
+![Disk Check Tool](_assets/file_systems/img25.png)
