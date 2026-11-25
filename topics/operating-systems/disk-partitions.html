@@ -52,9 +52,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b1528b1cba7e9f63f59baa7408a6f56.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-904f336e53e28b090f5695927510fa6a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-3f2b062867d74b1ee8f7672d8f9694b3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-904f336e53e28b090f5695927510fa6a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dae06bcfb1e01098fb4b4a396769ece0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-65a9894588da54af1982987122b9f685.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-dae06bcfb1e01098fb4b4a396769ece0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -513,16 +513,23 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#volume-types" id="toc-volume-types" class="nav-link" data-scroll-target="#volume-types">Volume Types</a>
   <ul>
   <li><a href="#simple-volume" id="toc-simple-volume" class="nav-link" data-scroll-target="#simple-volume">Simple Volume</a></li>
+  </ul></li>
   <li><a href="#spanned-volume" id="toc-spanned-volume" class="nav-link" data-scroll-target="#spanned-volume">Spanned Volume</a></li>
   <li><a href="#striped-volume-raid-0" id="toc-striped-volume-raid-0" class="nav-link" data-scroll-target="#striped-volume-raid-0">Striped Volume (RAID 0)</a></li>
   <li><a href="#raid-5-volume" id="toc-raid-5-volume" class="nav-link" data-scroll-target="#raid-5-volume">RAID-5 Volume</a></li>
-  </ul></li>
   <li><a href="#formatting" id="toc-formatting" class="nav-link" data-scroll-target="#formatting">Formatting</a></li>
   <li><a href="#disk-imaging-and-cloning" id="toc-disk-imaging-and-cloning" class="nav-link" data-scroll-target="#disk-imaging-and-cloning">Disk Imaging and Cloning</a>
   <ul>
   <li><a href="#disk-image" id="toc-disk-image" class="nav-link" data-scroll-target="#disk-image">Disk Image</a></li>
   <li><a href="#disk-cloning" id="toc-disk-cloning" class="nav-link" data-scroll-target="#disk-cloning">Disk Cloning</a></li>
   <li><a href="#imaging-vs.-cloning" id="toc-imaging-vs.-cloning" class="nav-link" data-scroll-target="#imaging-vs.-cloning">Imaging vs.&nbsp;Cloning</a></li>
+  </ul></li>
+  <li><a href="#os-maintenance" id="toc-os-maintenance" class="nav-link" data-scroll-target="#os-maintenance">OS Maintenance</a>
+  <ul>
+  <li><a href="#preventative-maintenance" id="toc-preventative-maintenance" class="nav-link" data-scroll-target="#preventative-maintenance">Preventative Maintenance</a></li>
+  <li><a href="#disk-cleanup" id="toc-disk-cleanup" class="nav-link" data-scroll-target="#disk-cleanup">Disk Cleanup</a></li>
+  <li><a href="#disk-defragmentation" id="toc-disk-defragmentation" class="nav-link" data-scroll-target="#disk-defragmentation">Disk Defragmentation</a></li>
+  <li><a href="#hard-drive-error-checking" id="toc-hard-drive-error-checking" class="nav-link" data-scroll-target="#hard-drive-error-checking">Hard Drive Error Checking</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -552,7 +559,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">November 16, 2026</p>
+      <p class="date-modified">November 25, 2026</p>
     </div>
   </div>
     
@@ -565,6 +572,25 @@ ul.task-list li input[type="checkbox"] {
 
 <p>Adapted from the original <a href="./disk_partitions_file_systems.pdf" target="_blank">slides</a> with the help of Claude AI for restructuring.</p>
 <p>Before an operating system can store files on a disk, the disk must be <strong>partitioned</strong> and each partition <strong>formatted</strong> with a file system. This page covers how disks are prepared. How files are then organized on them is covered in <a href="../../topics/operating-systems/file-systems.html">File Systems</a>.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>☆Learning Objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Upon completing this lesson, you should be able to:</p>
+<ul>
+<li><strong>Describe</strong> what is disk partitioning and why its used.</li>
+<li><strong>Differentiate</strong> between the MBR and GPT parition table styles.</li>
+<li><strong>Describe</strong> what is a logical drive (or Volume) and the various kinds (simple, spanned, striped)</li>
+<li><strong>Use</strong> hard disk management tools (Disk Management) to create paritions and new volumes.</li>
+</ul>
+</div>
+</div>
 <section id="partitioning" class="level2">
 <h2 class="anchored" data-anchor-id="partitioning">Partitioning</h2>
 <p><strong>Partitioning</strong> is the process of dividing a storage device (like a hard drive or SSD) into separate sections called <strong>partitions</strong>.</p>
@@ -599,7 +625,11 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 <p><strong>Support for multiple operating systems</strong></p>
-<p>As seen earlier, when performing a <a href="https://john-abbott-college.github.io/1N6-Notes/topics/operating-systems/operating-system-install.html#dual-boot">dual boot</a> installation : - Users can install different operating systems (e.g., Windows, Linux) on separate partitions. - Each partition acts like an independent drive, making it simple to switch between systems safely.</p>
+<p>As seen earlier, when performing a <a href="https://john-abbott-college.github.io/1N6-Notes/topics/operating-systems/operating-system-install.html#dual-boot">dual boot</a> installation:</p>
+<ul>
+<li>Users can install different operating systems (e.g., Windows, Linux) on separate partitions on the same drive.</li>
+<li>Each partition acts like an independent drive, making it simple to switch between systems safely.</li>
+</ul>
 </section>
 </section>
 <section id="disk-partitions-mbr-and-gpt" class="level2">
@@ -798,6 +828,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Mirrored volume</li>
 <li>RAID-5 volume</li>
 </ul>
+<p>We will discuss all those in details when Servers will be discussed.</p>
 <section id="simple-volume" class="level3">
 <h3 class="anchored" data-anchor-id="simple-volume">Simple Volume</h3>
 <ul>
@@ -806,36 +837,36 @@ ul.task-list li input[type="checkbox"] {
 <li>Can be extended to multiple disks to become part of a spanned or striped volume.</li>
 </ul>
 </section>
-<section id="spanned-volume" class="level3">
-<h3 class="anchored" data-anchor-id="spanned-volume">Spanned Volume</h3>
-<ul>
-<li>Combines space from <strong>multiple dynamic disks</strong> into a single large volume.</li>
-<li>As new disks are added, the spanned volume can be extended to include them.</li>
-<li>One disk is <strong>filled before</strong> moving on to the space of the next disk.</li>
-<li>Does <strong>not</strong> increase performance.</li>
-<li>Does <strong>not</strong> provide fault tolerance.</li>
-</ul>
 </section>
-<section id="striped-volume-raid-0" class="level3">
-<h3 class="anchored" data-anchor-id="striped-volume-raid-0">Striped Volume (RAID 0)</h3>
+<section id="spanned-volume" class="level2">
+<h2 class="anchored" data-anchor-id="spanned-volume">Spanned Volume</h2>
 <ul>
 <li>Combines space from multiple dynamic disks into a single large volume.</li>
-<li><strong>Cannot be extended</strong> after it is created.</li>
-<li>Data is written <strong>equally across all disks</strong>.</li>
-<li><strong>Increases</strong> disk performance.</li>
-<li><strong>No</strong> fault tolerance.</li>
+<li>As new disks are added, the spanned volume can be extended to include them.</li>
+<li>One disk is filled before moving on to the space of the next disk.</li>
+<li>Does not increase performance.</li>
+<li>Does not provide fault tolerance.</li>
 </ul>
 </section>
-<section id="raid-5-volume" class="level3">
-<h3 class="anchored" data-anchor-id="raid-5-volume">RAID-5 Volume</h3>
+<section id="striped-volume-raid-0" class="level2">
+<h2 class="anchored" data-anchor-id="striped-volume-raid-0">Striped Volume (RAID 0)</h2>
 <ul>
-<li>Requires a minimum of <strong>3 disk drives</strong>.</li>
-<li><strong>Parity</strong> information is distributed across each disk.</li>
-<li>If one disk fails, the information on that disk can be <strong>reconstructed</strong>.</li>
-<li>Improved <strong>read</strong> performance because of disk striping.</li>
-<li>Slower <strong>write</strong> performance because of the parity calculations.</li>
+<li>Combines space from multiple dynamic disks into a single large volume.</li>
+<li>Cannot be extended after it is created.</li>
+<li>Data is written equally across all disks.</li>
+<li>Increases disk performance.</li>
+<li>No fault tolerance.</li>
 </ul>
 </section>
+<section id="raid-5-volume" class="level2">
+<h2 class="anchored" data-anchor-id="raid-5-volume">RAID-5 Volume</h2>
+<ul>
+<li>Requires a minimum of 3 disk drives.</li>
+<li>Parity information is distributed across each disk.</li>
+<li>If one disk fails, the information on that disk can be reconstructed.</li>
+<li>Improved read performance because of disk striping.</li>
+<li>Slower write performance because of the parity calculations.</li>
+</ul>
 </section>
 <section id="formatting" class="level2">
 <h2 class="anchored" data-anchor-id="formatting">Formatting</h2>
@@ -908,6 +939,94 @@ ul.task-list li input[type="checkbox"] {
 <li>You can simply <strong>swap</strong> it with a clone (disk).</li>
 <li>An image must first be <strong>deployed</strong> on a new disk before you can go back to work.</li>
 </ul>
+</section>
+</section>
+<section id="os-maintenance" class="level1">
+<h1>OS Maintenance</h1>
+<section id="preventative-maintenance" class="level2">
+<h2 class="anchored" data-anchor-id="preventative-maintenance">Preventative Maintenance</h2>
+<ul>
+<li>Disk cleanup</li>
+<li>Disk defragmentation</li>
+<li>Hard drive error checking</li>
+<li>Updates to OS (e.g.&nbsp;service packs) and applications.</li>
+<li>Updates to antivirus and other protective software.</li>
+</ul>
+</section>
+<section id="disk-cleanup" class="level2">
+<h2 class="anchored" data-anchor-id="disk-cleanup">Disk Cleanup</h2>
+<ul>
+<li>Removes unneeded files e.g.</li>
+<li><ul>
+<li>Temporary internet files</li>
+</ul></li>
+<li><ul>
+<li>Files downloaded to install programs</li>
+</ul></li>
+<li><ul>
+<li>Files in the recycle bin</li>
+</ul></li>
+<li><ul>
+<li>Log files</li>
+</ul></li>
+<li><ul>
+<li>Temporary files</li>
+</ul></li>
+<li><ul>
+<li>Thumbnails</li>
+</ul></li>
+<li><ul>
+<li>Admin can also clean up system files.</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="_assets/file_systems/img20.png" class="img-fluid figure-img" width="400"></p>
+<figcaption>Disk Cleanup Windows</figcaption>
+</figure>
+</div>
+</section>
+<section id="disk-defragmentation" class="level2">
+<h2 class="anchored" data-anchor-id="disk-defragmentation">Disk Defragmentation</h2>
+<p>If a storage device is <a href="https://john-abbott-college.github.io/1N6-Notes/topics/operating-systems/file-systems.html#fragmentation">fragmented</a>, it can slow down your computer. A disk can become fragmented very quickly if it is used heavily and data is written to it often. Disk defragmenter typically runs on a schedule but you can analyze and defrag manually.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="_assets/file_systems/img21.png" class="img-fluid figure-img" width="400"></p>
+<figcaption>Disk Defragmentation Windows</figcaption>
+</figure>
+</div>
+<p>On older versions of Windows, the defragmenter came with a visualization tool..</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="_assets/file_systems/img23.png" class="img-fluid figure-img" width="400"></p>
+<figcaption>Disk Defragmentation Windows</figcaption>
+</figure>
+</div>
+</section>
+<section id="hard-drive-error-checking" class="level2">
+<h2 class="anchored" data-anchor-id="hard-drive-error-checking">Hard Drive Error Checking</h2>
+<p>The Disk Check tool in Windows can find and repair file system errors on: Local hard drives. Removable media such as USB flash drives or memory cards.</p>
+<p>On Windows 11:</p>
+<ol type="1">
+<li>Open File Explorer:</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="_assets/file_systems/img24.png" class="img-fluid figure-img" width="400"></p>
+<figcaption>File explorer</figcaption>
+</figure>
+</div>
+<ol start="2" type="1">
+<li><p>Right-click the drive</p></li>
+<li><p>Select Properties</p></li>
+<li><p>Select the Tools tab &gt; Check:</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="_assets/file_systems/img25.png" class="img-fluid figure-img"></p>
+<figcaption>Disk Check Tool</figcaption>
+</figure>
+</div>
 
 
 </section>

@@ -148,11 +148,34 @@
 </div>
 
   <p class="date">2025-11-16</p>
+</section><section id="TOC">
+<nav role="doc-toc" aria-labelledby="toc-title">
+<h2 id="toc-title">Table of contents</h2>
+<ul>
+<li><a href="#/os-maintenance" id="/toc-os-maintenance">OS Maintenance</a></li>
+</ul>
+</nav>
 </section>
 <section class="slide level2">
 
 <p>Adapted from the original <a href="./disk_partitions_file_systems.pdf" target="_blank">slides</a> with the help of Claude AI for restructuring.</p>
 <p>Before an operating system can store files on a disk, the disk must be <strong>partitioned</strong> and each partition <strong>formatted</strong> with a file system. This page covers how disks are prepared. How files are then organized on them is covered in <a href="../../topics/operating-systems/file-systems.html">File Systems</a>.</p>
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>☆Learning Objectives</strong></p>
+</div>
+<div class="callout-content">
+<p>Upon completing this lesson, you should be able to:</p>
+<ul>
+<li><strong>Describe</strong> what is disk partitioning and why its used.</li>
+<li><strong>Differentiate</strong> between the MBR and GPT parition table styles.</li>
+<li><strong>Describe</strong> what is a logical drive (or Volume) and the various kinds (simple, spanned, striped)</li>
+<li><strong>Use</strong> hard disk management tools (Disk Management) to create paritions and new volumes.</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="partitioning" class="slide level2">
 <h2>Partitioning</h2>
@@ -182,7 +205,11 @@
 </ul></li>
 </ul>
 <p><strong>Support for multiple operating systems</strong></p>
-<p>As seen earlier, when performing a <a href="https://john-abbott-college.github.io/1N6-Notes/topics/operating-systems/operating-system-install.html#dual-boot">dual boot</a> installation : - Users can install different operating systems (e.g., Windows, Linux) on separate partitions. - Each partition acts like an independent drive, making it simple to switch between systems safely.</p>
+<p>As seen earlier, when performing a <a href="https://john-abbott-college.github.io/1N6-Notes/topics/operating-systems/operating-system-install.html#dual-boot">dual boot</a> installation:</p>
+<ul>
+<li>Users can install different operating systems (e.g., Windows, Linux) on separate partitions on the same drive.</li>
+<li>Each partition acts like an independent drive, making it simple to switch between systems safely.</li>
+</ul>
 </section>
 <section id="disk-partitions-mbr-and-gpt" class="slide level2 scrollable">
 <h2>Disk Partitions: MBR and GPT</h2>
@@ -359,35 +386,42 @@
 <li>Mirrored volume</li>
 <li>RAID-5 volume</li>
 </ul>
+<p>We will discuss all those in details when Servers will be discussed.</p>
 <h3 id="simple-volume">Simple Volume</h3>
 <ul>
 <li>A portion of a disk, or an entire disk, that is set up as a dynamic disk.</li>
 <li>Can be extended onto multiple sections of the <strong>same disk</strong>.</li>
 <li>Can be extended to multiple disks to become part of a spanned or striped volume.</li>
 </ul>
-<h3 id="spanned-volume">Spanned Volume</h3>
-<ul>
-<li>Combines space from <strong>multiple dynamic disks</strong> into a single large volume.</li>
-<li>As new disks are added, the spanned volume can be extended to include them.</li>
-<li>One disk is <strong>filled before</strong> moving on to the space of the next disk.</li>
-<li>Does <strong>not</strong> increase performance.</li>
-<li>Does <strong>not</strong> provide fault tolerance.</li>
-</ul>
-<h3 id="striped-volume-raid-0">Striped Volume (RAID 0)</h3>
+</section>
+<section id="spanned-volume" class="slide level2">
+<h2>Spanned Volume</h2>
 <ul>
 <li>Combines space from multiple dynamic disks into a single large volume.</li>
-<li><strong>Cannot be extended</strong> after it is created.</li>
-<li>Data is written <strong>equally across all disks</strong>.</li>
-<li><strong>Increases</strong> disk performance.</li>
-<li><strong>No</strong> fault tolerance.</li>
+<li>As new disks are added, the spanned volume can be extended to include them.</li>
+<li>One disk is filled before moving on to the space of the next disk.</li>
+<li>Does not increase performance.</li>
+<li>Does not provide fault tolerance.</li>
 </ul>
-<h3 id="raid-5-volume">RAID-5 Volume</h3>
+</section>
+<section id="striped-volume-raid-0" class="slide level2">
+<h2>Striped Volume (RAID 0)</h2>
 <ul>
-<li>Requires a minimum of <strong>3 disk drives</strong>.</li>
-<li><strong>Parity</strong> information is distributed across each disk.</li>
-<li>If one disk fails, the information on that disk can be <strong>reconstructed</strong>.</li>
-<li>Improved <strong>read</strong> performance because of disk striping.</li>
-<li>Slower <strong>write</strong> performance because of the parity calculations.</li>
+<li>Combines space from multiple dynamic disks into a single large volume.</li>
+<li>Cannot be extended after it is created.</li>
+<li>Data is written equally across all disks.</li>
+<li>Increases disk performance.</li>
+<li>No fault tolerance.</li>
+</ul>
+</section>
+<section id="raid-5-volume" class="slide level2">
+<h2>RAID-5 Volume</h2>
+<ul>
+<li>Requires a minimum of 3 disk drives.</li>
+<li>Parity information is distributed across each disk.</li>
+<li>If one disk fails, the information on that disk can be reconstructed.</li>
+<li>Improved read performance because of disk striping.</li>
+<li>Slower write performance because of the parity calculations.</li>
 </ul>
 </section>
 <section id="formatting" class="slide level2">
@@ -451,9 +485,94 @@
 <li>You can simply <strong>swap</strong> it with a clone (disk).</li>
 <li>An image must first be <strong>deployed</strong> on a new disk before you can go back to work.</li>
 </ul>
-
+</section>
+<section>
+<section id="os-maintenance" class="title-slide slide level1 center">
+<h1>OS Maintenance</h1>
 
 </section>
+<section id="preventative-maintenance" class="slide level2">
+<h2>Preventative Maintenance</h2>
+<ul>
+<li>Disk cleanup</li>
+<li>Disk defragmentation</li>
+<li>Hard drive error checking</li>
+<li>Updates to OS (e.g.&nbsp;service packs) and applications.</li>
+<li>Updates to antivirus and other protective software.</li>
+</ul>
+</section>
+<section id="disk-cleanup" class="slide level2">
+<h2>Disk Cleanup</h2>
+<ul>
+<li>Removes unneeded files e.g.</li>
+<li><ul>
+<li>Temporary internet files</li>
+</ul></li>
+<li><ul>
+<li>Files downloaded to install programs</li>
+</ul></li>
+<li><ul>
+<li>Files in the recycle bin</li>
+</ul></li>
+<li><ul>
+<li>Log files</li>
+</ul></li>
+<li><ul>
+<li>Temporary files</li>
+</ul></li>
+<li><ul>
+<li>Thumbnails</li>
+</ul></li>
+<li><ul>
+<li>Admin can also clean up system files.</li>
+</ul></li>
+</ul>
+
+<img data-src="_assets/file_systems/img20.png" width="400" class="r-stretch quarto-figure-center"><p class="caption">Disk Cleanup Windows</p></section>
+<section id="disk-defragmentation" class="slide level2">
+<h2>Disk Defragmentation</h2>
+<p>If a storage device is <a href="https://john-abbott-college.github.io/1N6-Notes/topics/operating-systems/file-systems.html#fragmentation">fragmented</a>, it can slow down your computer. A disk can become fragmented very quickly if it is used heavily and data is written to it often. Disk defragmenter typically runs on a schedule but you can analyze and defrag manually.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_assets/file_systems/img21.png" width="400"></p>
+<figcaption>Disk Defragmentation Windows</figcaption>
+</figure>
+</div>
+<p>On older versions of Windows, the defragmenter came with a visualization tool..</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_assets/file_systems/img23.png" width="400"></p>
+<figcaption>Disk Defragmentation Windows</figcaption>
+</figure>
+</div>
+</section>
+<section id="hard-drive-error-checking" class="slide level2 scrollable">
+<h2>Hard Drive Error Checking</h2>
+<p>The Disk Check tool in Windows can find and repair file system errors on: Local hard drives. Removable media such as USB flash drives or memory cards.</p>
+<p>On Windows 11:</p>
+<ol type="1">
+<li>Open File Explorer:</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_assets/file_systems/img24.png" width="400"></p>
+<figcaption>File explorer</figcaption>
+</figure>
+</div>
+<ol start="2" type="1">
+<li><p>Right-click the drive</p></li>
+<li><p>Select Properties</p></li>
+<li><p>Select the Tools tab &gt; Check:</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_assets/file_systems/img25.png"></p>
+<figcaption>Disk Check Tool</figcaption>
+</figure>
+</div>
+
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
