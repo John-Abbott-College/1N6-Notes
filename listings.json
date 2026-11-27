@@ -13,27 +13,17 @@
     ]
   },
   {
-    "listing": "/topics/data-representation/index.html",
+    "listing": "/topics/hardware/index.html",
     "items": [
-      "/topics/data-representation/introduction-to-binary.html",
-      "/topics/data-representation/binary-math.html",
-      "/topics/data-representation/logic-gates-and-boolean-algebra.html",
-      "/topics/data-representation/hexadecimal-numbers.html",
-      "/topics/data-representation/text-in-computers.html"
+      "/topics/hardware/introduction-to-computers.html",
+      "/topics/hardware/external-components.html",
+      "/topics/hardware/internal-components.html",
+      "/topics/hardware/understanding-cpus.html",
+      "/topics/hardware/chipsets.html",
+      "/topics/hardware/bios_cmos_uefi.html",
+      "/topics/hardware/understanding-cpus2.html",
+      "/topics/hardware/ram.html"
     ]
-  },
-  {
-    "listing": "/topics/index.html",
-    "items": [
-      "/topics/data-representation/index.html",
-      "/topics/hardware/index.html",
-      "/topics/operating-systems/index.html",
-      "/topics/technical-support/index.html"
-    ]
-  },
-  {
-    "listing": "/topics/technical-support/index.html",
-    "items": []
   },
   {
     "listing": "/topics/all-lectures.html",
@@ -53,22 +43,33 @@
       "/topics/operating-systems/operating-system-install.html",
       "/topics/operating-systems/operating-systems-details.html",
       "/topics/operating-systems/disk-partitions.html",
+      "/topics/operating-systems/servers-and-raid.html",
       "/topics/hardware/understanding-cpus2.html",
       "/topics/hardware/ram.html",
       "/topics/operating-systems/users_and_permissions.html"
     ]
   },
   {
-    "listing": "/topics/hardware/index.html",
+    "listing": "/topics/technical-support/index.html",
+    "items": []
+  },
+  {
+    "listing": "/topics/index.html",
     "items": [
-      "/topics/hardware/introduction-to-computers.html",
-      "/topics/hardware/external-components.html",
-      "/topics/hardware/internal-components.html",
-      "/topics/hardware/understanding-cpus.html",
-      "/topics/hardware/chipsets.html",
-      "/topics/hardware/bios_cmos_uefi.html",
-      "/topics/hardware/understanding-cpus2.html",
-      "/topics/hardware/ram.html"
+      "/topics/data-representation/index.html",
+      "/topics/hardware/index.html",
+      "/topics/operating-systems/index.html",
+      "/topics/technical-support/index.html"
+    ]
+  },
+  {
+    "listing": "/topics/data-representation/index.html",
+    "items": [
+      "/topics/data-representation/introduction-to-binary.html",
+      "/topics/data-representation/binary-math.html",
+      "/topics/data-representation/logic-gates-and-boolean-algebra.html",
+      "/topics/data-representation/hexadecimal-numbers.html",
+      "/topics/data-representation/text-in-computers.html"
     ]
   },
   {
@@ -78,6 +79,7 @@
       "/topics/operating-systems/operating-system-install.html",
       "/topics/operating-systems/operating-systems-details.html",
       "/topics/operating-systems/disk-partitions.html",
+      "/topics/operating-systems/servers-and-raid.html",
       "/topics/operating-systems/users_and_permissions.html"
     ]
   },
