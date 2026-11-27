@@ -1,0 +1,260 @@
+---
+title: Software Licensing
+subtitle: EULAs, license types, and free vs. open-source vs. proprietary software
+---
+Adapted from the original [slides](./software_licensing.pdf){target="_blank"} with the help of Claude AI for restructuring.
+
+::: {.callout-tip icon="false" title="☆Learning Objectives"}
+
+Upon completing this lesson, you should be able to:
+
+- **Describe** what a software license and an End User License Agreement (EULA) are
+- **Differentiate** between perpetual and term (subscription) licenses
+- **Explain** volume/site licenses and secondary use rights
+- **Describe** license keys, activation and deactivation
+- **Differentiate** between free, open-source, proprietary, freeware, shareware and public domain software
+- **Explain** copyright, copyleft and the GNU General Public License (GPL)
+:::
+
+# What Is a Software License?
+
+A **software license** is an agreement between you and the owner of a software program. It allows you to do certain things with the program that would otherwise **infringe copyright law**.
+
+A software license usually answers questions such as:
+
+- Where, and how many times, can you install the program?
+- Can you copy, modify or redistribute it?
+- Can you look at the underlying source code?
+
+::: {.callout-note}
+The **price** of the software and any licensing fees are not usually part of the software license. However, the **length of time** you can use the software usually is. This matters when comparing **one-time payments** with **subscription payments**.
+:::
+
+## Why Do We Care?
+
+In a previous assignments, you might have installed a bunch of software with `winget` or `apt`. Or, you might have simply used the `exe` installers. 
+
+
+```powershell
+winget install --id=7zip.7zip -e &&
+winget install --id=cpuid.cpu-z -e &&
+winget install --id=Google.Chrome -e &&
+winget install --id=VideoLAN.VLC -e &&
+winget install --id=Adobe.Acrobat.Reader.32-bit -e &&
+winget install --id=Notepad++.Notepad++ -e &&
+winget install --id=Zoom.Zoom -e
+```
+
+…but were we supposed to pay? Can we share it with friends? Are there any rules? The license of each program answers these questions.
+
+## Key Points
+
+- What the **End User License Agreement (EULA)** is
+- License **term limits**: perpetual vs. term (subscription) licenses
+- **Volume / site licenses** for multiple users or teams
+    - **Secondary** or **home use rights**, for personal use outside of the team
+- What **"free"**, **"open"** and **"proprietary"** mean when talking about software
+
+# End User License Agreement (EULA)
+
+The **EULA** details what you can and cannot do with the software, for example:
+
+- How many copies can you install?
+- What can the software company do with your data?
+- What additional software can the company install on your computer?
+
+EULAs are written in **legal language** and are often hard to understand. Use [tldrlegal.com](https://tldrlegal.com/){target="_blank"} to look up software licenses explained in plain English.
+
+# License Terms
+
+## Perpetual vs. Term (Subscription) Licenses
+
+Sometimes there is a **time limit** on your software license.
+
+- **Perpetual licenses** do not expire.
+- **Term licenses** expire after a specified period of time.
+    - The period is often **one year**.
+    - They must be **renewed** periodically.
+    - They are often called **subscriptions**.
+
+*Can you think of examples of each?*
+
+## Licensing Trends
+
+Businesses are increasingly moving towards subscriptions. In a [McKinsey survey](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/subscription-myth-busters){target="_blank"} of large-enterprise IT decision makers, the share who preferred subscriptions for on-premise software grew every year:
+
+| Year | Respondents | Prefer subscriptions |
+|------|-------------|----------------------|
+| 2013 | 325 | 63% |
+| 2015 | 350 | 72% |
+| 2017 | 300 | 82% |
+
+## Advantages and Disadvantages
+
+| Perpetual license | Subscription |
+|-------------------|--------------|
+| Has **no expiry date**. | **Recurring payment** (monthly, annually, etc.). |
+| Usually **doesn't include** support or updates. | Often **includes** support, updates and upgrades. |
+| May be offset against a **tax benefit**. | **Smaller payments** are easier to handle. |
+
+::: {.callout-note}
+Costs vary for each license type. The **break-even point** is often **3–4 years**: after that, a subscription starts to cost more than a perpetual license would have.
+
+Keep in mind that a perpetual license might not include **version updates** of the software, while a subscription usually does.
+:::
+
+# Licensing for Organizations
+
+## Volume / Site Licenses
+
+Some software developers offer **volume** or **site licenses** to organizations. These often depend on:
+
+- The **size and type** of the organization.
+- The **products** you want to use (and therefore license).
+- The **way** you want to use these products.
+
+For example, Microsoft explains its options in this video on volume licensing:
+
+{{< video https://www.youtube.com/watch?v=rKgeW28BW1I >}}
+
+## Secondary Use Rights
+
+**Secondary use rights** allow a user to use the software on **two devices**. The secondary device may be:
+
+- A **home PC** (*home-use rights*), or
+- A **laptop** (*portable-use rights*).
+
+Some Microsoft applications, such as Microsoft Office, include secondary use rights.
+
+Secondary use rights are also available for some **developer tools**: for each license acquired, a single person may install copies on **any number of computers**, as long as they are the **only person** who uses those copies.
+
+## License Documentation
+
+::: {.callout-important}
+**Always keep a record** of software purchases, activation keys, license dates, etc.
+:::
+
+Tools exist to help track this information. For example, many products have a license management page where you can view and manage license keys (see this [example from a Jira app](https://bigbrassband.com/git-integration-for-jira/documentation/managing-license-key.html){target="_blank"}).
+
+# Installation and Activation
+
+The installation and activation process depends on the product. These key terms will help:
+
+License key
+:   Usually a long string of letters or numbers entered during installation. It ensures that the user complies with copyright restrictions and is **authorized** to use the software.
+
+Activation
+:   The process of entering your license key to **enable the full set of features**.
+
+Deactivation / Transfer
+:   When you want to stop using software on one computer and start using it on another, you may need to **deactivate** the license on the old computer before you **transfer** it to the new one.
+
+# Free and Open-Source Software
+
+## Free Software
+
+**Free software** is software that respects users' **freedom** and community: the freedom to run, copy, distribute, study, change and improve the software. "Free" refers to **freedom**, not price.
+
+A program is free software if its users have the **four essential freedoms**:
+
+0. The freedom to **run** the program as you wish, for any purpose.
+1. The freedom to **study** how the program works and **change** it.
+2. The freedom to **redistribute** copies so you can help others.
+3. The freedom to **distribute copies of your modified versions** to others.
+
+## Open-Source Software
+
+- In **1998**, part of the free software community split off and began campaigning under the name **"open source"**.
+- The name was originally proposed to avoid confusion over the word "free", but it later became associated with different philosophical views from the free software movement. The emphasis moved from **freedom** to **practical benefits** such as security, cost savings and transparency.
+- The [Open Source Initiative (OSI)](http://www.opensource.org/docs/osd){target="_blank"}'s Open Source Definition is based directly on the **Debian Free Software Guidelines**. In practice, the software considered "free" is almost exactly the same as the software considered "open source".
+
+## The Open Source Definition
+
+Open source doesn't only mean **access to the source code**. The distribution terms of open-source software must meet these criteria (see the [Open Source Definition](http://en.wikipedia.org/wiki/Open_source_definition){target="_blank"}):
+
+1. Free redistribution
+2. Source code
+3. Derived works
+4. Integrity of the author's source code
+5. No discrimination against persons or groups
+6. No discrimination against fields of endeavour
+7. Distribution of license
+8. License must not be specific to a product
+9. License must not restrict other software
+10. License must be technology-neutral
+
+## Free vs. Open-Source Software
+
+Confused? What is the difference between free and open-source software?
+
+**Is open-source software free software?** Yes and no. Software released under the GPL generally qualifies as both. If you use a Linux distribution, most of what you get through your package manager meets both sets of requirements. However, **Chrome OS** and **Android** are open-source projects that don't satisfy the four freedoms, so they are not free software. Underneath them, though, is the **Linux kernel**, which is free software.
+
+**Is there free software that is not open source?** Probably not. Each of the four freedoms maps onto criteria from the Open Source Definition.
+
+**Is there open-source software that is not free?** Yes. Apart from requiring access to the source code, the Open Source Definition only covers what a **license** says. Free software requires that it is actually **possible to exercise** the four freedoms. For example, with **tivoization**, software is designed to run on a particular device, and the device prevents modified versions from working, so users can't exercise freedom 1.
+
+In practice, the vast majority of open-source software is also free software.
+
+{{< video https://www.youtube.com/watch?v=a8fHgx9mE5U >}}
+
+## GNU General Public License (GPL)
+
+- A widely used software license for **free software**.
+- Guarantees users the freedom to **run, share, copy and modify** the software.
+- The GPL gives users the rights in the free software definition, and uses **copyleft** to make sure those freedoms are kept whenever the program is modified, added to or distributed. Software under the GPL is both **free and open source**.
+
+{{< video https://www.youtube.com/watch?v=lrcdhzr2qnk >}}
+
+# Copyright and Copyleft
+
+## Copyright
+
+The **Berne Convention for the Protection of Literary and Artistic Works** is the international agreement that governs copyright. It was first accepted in Berne, Switzerland in **1886**.
+
+- Anything written down is **automatically copyrighted**.
+- Copyright exists the moment a work is **"fixed"**; it doesn't need to be registered.
+- Countries must recognize copyrights held by citizens of **all other signatory countries**.
+
+## Copyleft
+
+**Copyleft** is a general method for making a program free. It requires that all **modified and extended versions** of the program are **also free**.
+
+- **Background:** the simplest way to make a program free is to put it in the **public domain**, uncopyrighted. But then uncooperative people can take it and turn it into proprietary software.
+- **Solution:** with copyleft, the program is first **copyrighted**. Distribution terms are then added that give everyone the right to use, modify and redistribute the program's code (or anything derived from it), **as long as the distribution terms stay the same**.
+
+# Other Types of Software Licenses
+
+## Proprietary Software (Licensed)
+
+**Proprietary software** is non-free software for which the publisher or developer keeps the **intellectual property rights**, usually the copyright of the source code.
+
+- Vendors typically distribute proprietary software in **compiled form**, so the source code stays hidden.
+- It may be limited to **specific hardware**. For example, macOS is limited to Apple hardware, by its license and by various design decisions.
+- Some vendors do make the source code available to customers.
+    - This is true for many **web applications**, where customers need the source code to customize them.
+    - The source code is then covered by a **non-disclosure agreement** or a license that allows, for example, studying and modifying it, but **not redistributing** it.
+
+## Freeware
+
+- The software is **free to use**.
+    - Usually free for **personal** use only.
+    - **Business** use may require a fee, so always check the terms and conditions before installing freeware on a business PC.
+- Developers **don't have to publish** the source code.
+- You **can't sell** freeware.
+
+## Shareware
+
+- The software is free on a **trial basis**: try it, then buy it.
+- Users have access to the software for a **limited time** before it expires.
+- Some features may be **unavailable** or **limited**.
+
+## Public Domain Software
+
+- Software that is **not copyrighted**: there is no owner.
+- Public domain software can be modified, distributed or sold **without crediting** anyone.
+
+::: {.callout-note}
+A program can be in the public domain without its source code being available. That is **not** free software, because free software requires access to the source code.
+
+Most free software is **not** in the public domain: it is copyrighted, and the copyright holders have legally given everyone permission to use it freely through a **free software license**.
+:::

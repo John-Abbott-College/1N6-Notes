@@ -65,8 +65,7 @@ website:
           - topics/operating-systems/file-systems.qmd
           - topics/operating-systems/users_and_permissions.qmd
           - topics/operating-systems/servers-and-raid.qmd
-          - href : topcis/operating-systems/software_licensing.pdf
-            text: "Software Licensing" # This will open the PDF in a new tab/window
+          - topics/operating-systems/software-licensing.qmd
             
 
 format:
